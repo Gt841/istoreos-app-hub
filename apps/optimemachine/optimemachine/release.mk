@@ -1,3 +1,0 @@
-# Local candidate archives; not yet published.
-OPTIMEMACHINE_HASH_x86_64:=979de48fe0a9f39750ff6476a4eb82794dc9d2cdd0343b55951fcb94dea14588
-OPTIMEMACHINE_HASH_aarch64:=5bbcd7e2980ec1fe0bcd6285954de2865fef6017a095bd9d5abe68520bee4ca6

@@ -44,6 +44,7 @@
 {"id":"oneapi","type":"docker","depends":["docker-deps","luci-app-oneapi","luci-i18n-oneapi-zh-cn"],"autoconf":true,"istorec":true,"init":false,"config":true,"luci":true}
 {"id":"openclawmgr","type":"docker","depends":["luci-app-openclawmgr","luci-i18n-openclawmgr-zh-cn"],"autoconf":true,"istorec":true,"init":true,"config":true,"luci":true}
 {"id":"openwebui","type":"docker","depends":["docker-deps","luci-app-openwebui","luci-i18n-openwebui-zh-cn"],"autoconf":true,"istorec":true,"init":false,"config":true,"luci":true}
+{"id":"optimemachine","type":"native","depends":["changeguard","luci-app-optimemachine","optimemachine"],"autoconf":false,"istorec":false,"init":false,"config":false,"luci":false}
 {"id":"owntone","type":"docker","depends":["docker-deps","luci-app-owntone","luci-i18n-owntone-zh-cn"],"autoconf":false,"istorec":true,"init":false,"config":true,"luci":true}
 {"id":"penpot","type":"docker","depends":["docker-deps","luci-app-penpot","luci-i18n-penpot-zh-cn"],"autoconf":false,"istorec":true,"init":false,"config":true,"luci":true}
 {"id":"photoprism","type":"docker","depends":["docker-deps","luci-app-photoprism","luci-i18n-photoprism-zh-cn"],"autoconf":true,"istorec":true,"init":false,"config":true,"luci":true}

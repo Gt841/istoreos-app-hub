@@ -9,12 +9,12 @@ include $(TOPDIR)/rules.mk
 KAIPLUS_ARCH_x86_64:=amd64
 KAIPLUS_ARCH_aarch64:=arm64
 KAIPLUS_ARCH:=$(KAIPLUS_ARCH_$(ARCH))
-KAIPLUS_HASH_x86_64:=f6d8302d4808372a51d60c8e968d8ad0f8204ab532baaa2677362fdaf9bbfe89
-KAIPLUS_HASH_aarch64:=c9501440304710a29a3a10f3786dd7f2977003fb8d7ee0854757e45219da64fa
+KAIPLUS_HASH_x86_64:=58c3bed48cb8187765c32cefe67aac15fffdb7bddff8902e492d19694e9e7d13
+KAIPLUS_HASH_aarch64:=d0756d9e2bdb015475b1ed6bfdb31dd7d2f8cef32ab5859721fde71fc1c24f1c
 
 PKG_NAME:=kaiplus
-PKG_VERSION:=1.0.13-rc.4
-PKG_RELEASE:=4
+PKG_VERSION:=1.0.14-cg1
+PKG_RELEASE:=5
 
 KAIPLUS_URL_FILE:=kaiplus-linux-$(KAIPLUS_ARCH)
 KAIPLUS_DOWNLOAD:=$(KAIPLUS_URL_FILE)-$(KAIPLUS_HASH_$(ARCH))
@@ -40,7 +40,7 @@ define Package/$(PKG_NAME)
 	SUBMENU:=
 	TITLE:=KaiPlus
 	URL:=https://github.com/linkease/istore-packages
-	DEPENDS:=@(x86_64||aarch64) +linkease-app-entry +optimemachine
+	DEPENDS:=@(x86_64||aarch64) +linkease-app-entry +changeguard
 endef
 
 define Package/$(PKG_NAME)/description

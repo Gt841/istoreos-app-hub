@@ -1,6 +1,6 @@
 include $(TOPDIR)/rules.mk
 PKG_NAME:=linkspace
-PKG_VERSION:=0.2.0-otm.4
+PKG_VERSION:=0.3.0-cg1
 PKG_RELEASE:=1
 include ./release.mk
 PKG_SOURCE:=linkspace-$(PKG_VERSION)-$(ARCH).tar.gz
@@ -27,6 +27,7 @@ endef
 define Package/linkspace/preinst
 #!/bin/sh
 [ -n "$${IPKG_INSTROOT:-}" ] && exit 0
+if [ -x /usr/libexec/changeguard-package ]; then /usr/libexec/changeguard-package preinst; exit $$?; fi
 if [ -x /usr/sbin/optimemachine_bin ] && [ -f /etc/optimemachine/config.json ]; then
  /usr/sbin/optimemachine_bin maintenance-check >/dev/null || exit 1
  if /etc/init.d/optimemachine enabled; then touch /var/run/optimemachine-package-enable; fi
@@ -38,6 +39,7 @@ endef
 define Package/linkspace/prerm
 #!/bin/sh
 [ -n "$${IPKG_INSTROOT:-}" ] && exit 0
+if [ -x /usr/libexec/changeguard-package ]; then /usr/libexec/changeguard-package preinst; exit $$?; fi
 if [ -x /usr/sbin/optimemachine_bin ] && [ -f /etc/optimemachine/config.json ]; then
  /usr/sbin/optimemachine_bin maintenance-check >/dev/null || exit 1
  if [ -S /var/run/optimemachine.sock ]; then touch /var/run/optimemachine-package-restart; /etc/init.d/optimemachine stop || exit 1; fi
@@ -48,6 +50,7 @@ endef
 define Package/linkspace/postinst
 #!/bin/sh
 [ -n "$${IPKG_INSTROOT:-}" ] && exit 0
+if [ -x /usr/libexec/changeguard-package ]; then /usr/libexec/changeguard-package postinst; exit $$?; fi
 if [ -x /usr/sbin/optimemachine_bin ] && [ -f /etc/optimemachine/config.json ]; then
  if ! /usr/sbin/optimemachine_bin capabilities | grep -q '"backendDescriptorV2":true'; then
   logger -t optimemachine "Linkspace updated; complete coordinated optimemachine upgrade before restarting protection"

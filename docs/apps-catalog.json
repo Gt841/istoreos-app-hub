@@ -12,7 +12,7 @@
     "website": "https://agentflow.geili.ai/",
     "author": "geiliai",
     "version": "0.3.5",
-    "release": "2",
+    "release": "4",
     "depends": "+agentflow +luci-app-agentflow",
     "luci_entry": "/cgi-bin/luci/admin/services/agentflow",
     "meta_dir": "apps/agentflow/app-meta-agentflow"
@@ -80,7 +80,7 @@
     "website": "https://pan.baidu.com",
     "author": "linkease",
     "version": "1.0.6",
-    "release": "3",
+    "release": "6",
     "depends": "+luci-i18n-baidudrive-zh-cn +luci-app-baidudrive +baidudrive",
     "luci_entry": "/cgi-bin/luci/admin/services/baidudrive",
     "meta_dir": "apps/baidudrive/app-meta-baidudrive"
@@ -131,7 +131,7 @@
     "website": "https://coder.com/",
     "author": "Coder Technologies",
     "version": "1.0.2",
-    "release": "2025101",
+    "release": "2025102",
     "depends": "+luci-app-codeserver +luci-i18n-codeserver-zh-cn +docker-deps",
     "luci_entry": "/cgi-bin/luci/admin/services/codeserver",
     "meta_dir": "apps/codeserver/app-meta-codeserver"
@@ -147,8 +147,8 @@
     ],
     "website": "https://www.ddnsto.com/",
     "author": "xiaobao",
-    "version": "4.2.6",
-    "release": "1",
+    "version": "4.2.8",
+    "release": "3",
     "depends": "+ddnsto +luci-app-ddnsto +luci-i18n-ddnsto-zh-cn",
     "luci_entry": "/cgi-bin/luci/admin/services/ddnsto",
     "meta_dir": "apps/ddnsto/app-meta-ddnsto"
@@ -179,8 +179,8 @@
     ],
     "website": "https://github.com/linkease/linkease-docker-manager",
     "author": "linkease",
-    "version": "0.1.1",
-    "release": "4",
+    "version": "0.1.2",
+    "release": "5",
     "depends": "+dockermanager +luci-app-dockermanager",
     "luci_entry": "/cgi-bin/luci/admin/services/dockermanager",
     "meta_dir": "apps/dockermanager/app-meta-dockermanager"
@@ -196,7 +196,7 @@
     "website": "https://github.com/donknap/dpanel",
     "author": "donknap",
     "version": "1.0.0",
-    "release": "20251009",
+    "release": "20251010",
     "depends": "+luci-app-dpanel +luci-i18n-dpanel-zh-cn +docker-deps",
     "luci_entry": "/cgi-bin/luci/admin/services/dpanel",
     "meta_dir": "apps/dpanel/app-meta-dpanel"
@@ -263,8 +263,8 @@
     ],
     "website": "https://www.koolcenter.com/t/topic/9148",
     "author": "xiaobao",
-    "version": "0.7.7",
-    "release": "5",
+    "version": "0.8.9",
+    "release": "21",
     "depends": "+fastnet +luci-app-fastnet +luci-i18n-fastnet-zh-cn",
     "luci_entry": "/cgi-bin/luci/admin/services/fastnet",
     "meta_dir": "apps/fastnet/app-meta-fastnet"
@@ -415,8 +415,8 @@
     ],
     "website": "https://kspeeder.com/",
     "author": "xiaobao",
-    "version": "0.8.3",
-    "release": "1",
+    "version": "0.9.0",
+    "release": "10",
     "depends": "+istoreenhance +luci-app-istoreenhance +luci-i18n-istoreenhance-zh-cn",
     "luci_entry": "/cgi-bin/luci/admin/services/istoreenhance",
     "meta_dir": "apps/istoreenhance/app-meta-istoreenhance"
@@ -516,7 +516,7 @@
     "website": "https://jellyfin.org",
     "author": "Jellyfin/jjm2473",
     "version": "1.2.3",
-    "release": "20260828",
+    "release": "20260829",
     "depends": "+luci-app-jellyfin +luci-i18n-jellyfin-zh-cn +docker-deps",
     "luci_entry": "/cgi-bin/luci/admin/services/jellyfin",
     "meta_dir": "apps/jellyfin/app-meta-jellyfin"
@@ -532,8 +532,8 @@
     ],
     "website": "https://ai.koolcenter.com",
     "author": "koolcenter",
-    "version": "1.0.9",
-    "release": "2",
+    "version": "1.0.14-cg1",
+    "release": "9",
     "depends": "+luci-app-kaiplus +kaiplus",
     "luci_entry": "/cgi-bin/luci/admin/services/kaiplus",
     "meta_dir": "apps/kaiplus/app-meta-kaiplus"
@@ -599,7 +599,7 @@
     ],
     "website": "https://www.linkease.com/",
     "author": "xiaobao",
-    "version": "3.0.22",
+    "version": "3.0.23",
     "release": "3",
     "depends": "+linkease-runtime-transition +linkease +linkeasefull +luci-app-linkeasefull +luci-app-linkeasefull-embed +luci-lib-linkeasefile +luci-i18n-linkeasefull-zh-cn",
     "luci_entry": "/cgi-bin/luci/admin/services/linkeasefull",
@@ -734,7 +734,7 @@
     "website": "https://openai.justsong.cn",
     "author": "songquanpeng",
     "version": "1.0.1",
-    "release": "20250403",
+    "release": "20250404",
     "depends": "+luci-app-oneapi +luci-i18n-oneapi-zh-cn +docker-deps",
     "luci_entry": "/cgi-bin/luci/admin/services/oneapi",
     "meta_dir": "apps/oneapi/app-meta-oneapi"
@@ -750,7 +750,7 @@
     "website": "https://github.com/openclaw/openclaw",
     "author": "xiaobao",
     "version": "0.1.12",
-    "release": "1",
+    "release": "2",
     "depends": "+luci-app-openclawmgr +luci-i18n-openclawmgr-zh-cn",
     "luci_entry": "/cgi-bin/luci/admin/services/openclawmgr",
     "meta_dir": "apps/openclawmgr/app-meta-openclawmgr"
@@ -767,10 +767,25 @@
     "website": "https://openwebui.com/",
     "author": "open-webui",
     "version": "1.0.8",
-    "release": "20250325",
+    "release": "20250326",
     "depends": "+luci-app-openwebui +luci-i18n-openwebui-zh-cn +docker-deps",
     "luci_entry": "/cgi-bin/luci/admin/services/openwebui",
     "meta_dir": "apps/openwebui/app-meta-openwebui"
+  },
+  {
+    "id": "optimemachine",
+    "title": "变更保护",
+    "description": "CLI 设备变更保护；KAI 内查看恢复点、失联回退与审计日志",
+    "description_en": "Incremental backups, historical files, disconnect rollback and recovery audit.",
+    "tags": [
+      "backup",
+      "system"
+    ],
+    "author": "linkease",
+    "version": "0.3.0",
+    "release": "3",
+    "depends": "+changeguard +optimemachine +luci-app-optimemachine",
+    "meta_dir": "apps/optimemachine/app-meta-optimemachine"
   },
   {
     "id": "owntone",
@@ -852,7 +867,7 @@
     "website": "https://pve.proxmox.com/",
     "author": "Proxmox",
     "version": "8.3.2",
-    "release": "20260722",
+    "release": "20260723",
     "depends": "+luci-app-pve +luci-i18n-pve-zh-cn +docker-deps",
     "luci_entry": "/cgi-bin/luci/admin/services/pve",
     "meta_dir": "apps/pve/app-meta-pve"
@@ -970,7 +985,7 @@
     "website": "https://www.kasmweb.com",
     "author": "xiaobao",
     "version": "1.1.0",
-    "release": "20251012",
+    "release": "20251013",
     "depends": "+luci-app-ubuntu2 +luci-i18n-ubuntu2-zh-cn +docker-deps",
     "luci_entry": "/cgi-bin/luci/admin/services/ubuntu2",
     "meta_dir": "apps/ubuntu/app-meta-ubuntu"
@@ -1003,7 +1018,7 @@
     "website": "https://openai.justsong.cn",
     "author": "songquanpeng",
     "version": "1.0.1",
-    "release": "20251011",
+    "release": "20251012",
     "depends": "+luci-app-uptimekuma +luci-i18n-uptimekuma-zh-cn +docker-deps",
     "luci_entry": "/cgi-bin/luci/admin/services/uptimekuma",
     "meta_dir": "apps/uptimekuma/app-meta-uptimekuma"
@@ -1054,7 +1069,7 @@
     "website": "https://webvirt.cloud/",
     "author": "webvirtcloud",
     "version": "0.8.5",
-    "release": "20260722",
+    "release": "20260723",
     "depends": "+luci-app-webvirtcloud +luci-i18n-webvirtcloud-zh-cn +docker-deps",
     "luci_entry": "/cgi-bin/luci/admin/services/webvirtcloud",
     "meta_dir": "apps/webvirtcloud/app-meta-webvirtcloud"

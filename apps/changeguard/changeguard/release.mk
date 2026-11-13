@@ -1,0 +1,3 @@
+# Local candidate; not publicly published.
+CHANGEGUARD_HASH_x86_64:=f43faa19146cf68fc7ca01014e7b667ddf51accc8a289d3e18ff8349969c9d13
+CHANGEGUARD_HASH_aarch64:=627ca0ff06c6c76f0b526c29d871e06ab769fe656da51c26eba95a8b29c2e9d0

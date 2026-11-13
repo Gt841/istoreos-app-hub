@@ -34,8 +34,8 @@ start_service() {
 	chmod 0700 "$data_dir/config" "$data_dir/state"
 
 	logger -t kaiplus "Starting KaiPlus service"
-	if ! pidof optimemachine_bin >/dev/null; then
-		/etc/init.d/optimemachine enable && /etc/init.d/optimemachine start || return 1
+	if ! pidof changeguard_bin >/dev/null; then
+		/etc/init.d/changeguard enable && /etc/init.d/changeguard start || return 1
 	fi
 	procd_open_instance kaiplus
 	procd_set_param env \

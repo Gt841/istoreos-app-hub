@@ -692,3 +692,10 @@ apps:
               remote: openwrt-app-actions/applications/linkspace
         luci: []
         meta: []
+
+    changeguard:
+        services:
+            - local: apps/changeguard/changeguard
+              remote: openwrt-app-actions/applications/changeguard
+        luci: []
+        meta: []
