@@ -55,5 +55,3 @@ def ipk(output, name, version, arch, stage, depends, scripts, conffiles):
     path = output / f"{name}_{version}_{arch}.ipk"
     path.write_bytes(body)
     return {"path": str(path), "sha256": sha(path), "depends": depends}
-
-
