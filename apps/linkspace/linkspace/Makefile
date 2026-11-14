@@ -1,7 +1,7 @@
 include $(TOPDIR)/rules.mk
 PKG_NAME:=linkspace
 PKG_VERSION:=0.3.0-cg1
-PKG_RELEASE:=2
+PKG_RELEASE:=3
 include ./release.mk
 PKG_SOURCE:=linkspace-$(PKG_VERSION)-$(ARCH).tar.gz
 PKG_SOURCE_URL?=https://fw.koolcenter.com/binary/linkspace/releases/
