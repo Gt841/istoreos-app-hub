@@ -95,7 +95,10 @@ def main():
         f"include {mirror}/Makefile\n.PHONY: stage\nstage:\n\t$(call Package/app-meta-optimemachine/install,{stage})\n")
     subprocess.run(["make","--no-print-directory","-f",str(make),"stage"],cwd=mirror,check=True)
     json.loads((stage/"usr/lib/opkg/meta/optimemachine.json").read_text())
-    packages["app-meta-optimemachine"]=ipk(out,"app-meta-optimemachine","0.3.0-3","all",stage,["changeguard","optimemachine","luci-app-optimemachine"],{},[])
+    meta_recipe=(source/"Makefile").read_text()
+    meta_version=re.search(r"^PKG_VERSION:=(\S+)",meta_recipe,re.M).group(1)
+    meta_release=re.search(r"^PKG_RELEASE:=(\S+)",meta_recipe,re.M).group(1)
+    packages["app-meta-optimemachine"]=ipk(out,"app-meta-optimemachine",meta_version+"-"+meta_release,"all",stage,["changeguard","optimemachine","luci-app-optimemachine"],{},[])
     report={"schemaVersion":1,"publiclyPublished":False,"runtimeInstallTargetsExecuted":True,"sdkCompilation":False,"architecture":"x86_64","releases":releases,"packages":packages}
     (out/"packages.json").write_text(json.dumps(report,indent=2)+"\n")
     print(json.dumps({"packages":list(packages),"output":str(out)}))
