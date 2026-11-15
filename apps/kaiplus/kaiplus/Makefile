@@ -14,7 +14,7 @@ KAIPLUS_HASH_aarch64:=4dae55b5c81197d73b287b2b9be5f88993605ff25972ac6ec4cf8c4d56
 
 PKG_NAME:=kaiplus
 PKG_VERSION:=1.0.14-cg1
-PKG_RELEASE:=19
+PKG_RELEASE:=20
 
 KAIPLUS_URL_FILE:=kaiplus-linux-$(KAIPLUS_ARCH)
 KAIPLUS_DOWNLOAD:=$(KAIPLUS_URL_FILE)-$(KAIPLUS_HASH_$(ARCH))
@@ -89,11 +89,12 @@ define Build/Compile
 endef
 
 define Package/$(PKG_NAME)/install
-	$(INSTALL_DIR) $(1)/usr/sbin $(1)/usr/share/kaiplus $(1)/usr/share/linkease/apps.d $(1)/etc/init.d $(1)/etc/config
+	$(INSTALL_DIR) $(1)/usr/sbin $(1)/usr/share/kaiplus $(1)/usr/share/linkease/apps.d $(1)/usr/share/rpcd/acl.d $(1)/etc/init.d $(1)/etc/config
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/kaiplus $(1)/usr/sbin/kaiplus_bin
 	ln -sf kaiplus_bin $(1)/usr/sbin/kaiplus
 	$(INSTALL_DATA) ./files/logo.png $(1)/usr/share/kaiplus/logo.png
 	$(INSTALL_DATA) ./files/kaiplus-plugin.json $(1)/usr/share/kaiplus/kaiplus-plugin.json
+	$(INSTALL_DATA) ./files/kaiplus.json $(1)/usr/share/rpcd/acl.d/kaiplus.json
 	ln -sf /usr/share/kaiplus/kaiplus-plugin.json $(1)/usr/share/linkease/apps.d/00-kaiplus-plugin.json
 	$(INSTALL_BIN) ./files/kaiplus.init $(1)/etc/init.d/kaiplus
 	$(INSTALL_CONF) ./files/kaiplus.config $(1)/etc/config/kaiplus
