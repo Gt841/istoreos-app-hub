@@ -1,7 +1,7 @@
 include $(TOPDIR)/rules.mk
 PKG_NAME:=changeguard
 PKG_VERSION:=0.3.0-cg1
-PKG_RELEASE:=16
+PKG_RELEASE:=17
 include ./release.mk
 PKG_SOURCE:=changeguard-$(PKG_VERSION)-$(ARCH).tar.gz
 PKG_SOURCE_URL?=https://fw.koolcenter.com/binary/changeguard/releases/
