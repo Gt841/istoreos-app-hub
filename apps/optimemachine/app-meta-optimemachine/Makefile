@@ -1,6 +1,6 @@
 include $(TOPDIR)/rules.mk
-PKG_VERSION:=0.3.0
-PKG_RELEASE:=12
+PKG_VERSION:=0.3.1
+PKG_RELEASE:=13
 META_TITLE:=变更保护
 META_TITLE.en:=Device Change Protection
 META_DEPENDS:=+changeguard +optimemachine +luci-app-optimemachine

@@ -1,8 +1,54 @@
-import io,json,os,re,subprocess,tarfile,tempfile,unittest
+import hashlib,io,json,os,re,subprocess,tarfile,tempfile,unittest,urllib.request
 from pathlib import Path
 H=Path(__file__).resolve().parents[3]
 F=Path(__file__).parent/'fixtures'
 class Contract(unittest.TestCase):
+ def test_openwrt_install_recipes_use_tabs(self):
+  for relative,name in [
+   ('apps/changeguard/changeguard/Makefile','changeguard'),
+   ('apps/linkspace/linkspace/Makefile','linkspace'),
+  ]:
+   recipe=(H/relative).read_text()
+   match=re.search(r'^define Package/'+re.escape(name)+r'/install\n(.*?)^endef$',recipe,re.M|re.S)
+   self.assertIsNotNone(match,relative)
+   for line in match.group(1).splitlines():
+    if line.strip():
+     self.assertTrue(line.startswith('\t'),f'{relative}: install recipe must start with a TAB: {line!r}')
+
+ def test_runtime_packages_use_formal_immutable_release(self):
+  for relative,name,tag in [
+   ('apps/changeguard/changeguard/Makefile','changeguard','changeguard-runtime-v$(PKG_VERSION)'),
+   ('apps/linkspace/linkspace/Makefile','linkspace','linkspace-runtime-v$(PKG_VERSION)'),
+  ]:
+   recipe=(H/relative).read_text()
+   self.assertIsNotNone(re.search(r'^PKG_VERSION:=0\.3\.1$',recipe,re.M),relative)
+   self.assertIsNotNone(re.search(r'^PKG_RELEASE:=1$',recipe,re.M),relative)
+   self.assertIn(f'PKG_SOURCE_URL:=https://github.com/istoreos/istoreos-app-hub/releases/download/{tag}/',recipe)
+   self.assertNotIn('-cg1',recipe)
+   hashes=(H/f'apps/{name}/{name}/release.mk').read_text()
+   self.assertNotIn('not publicly published',hashes)
+   self.assertIsNotNone(re.search(rf'^{name.upper()}_HASH_x86_64:=[0-9a-f]{{64}}$',hashes,re.M),relative)
+   self.assertIsNotNone(re.search(rf'^{name.upper()}_HASH_aarch64:=[0-9a-f]{{64}}$',hashes,re.M),relative)
+
+ @unittest.skipUnless(os.environ.get('CG_VERIFY_PUBLIC_RELEASE'),'explicit public release verification required')
+ def test_public_runtime_assets_match_recipe_hashes_and_layout(self):
+  for name,tag,executable in [
+   ('changeguard','changeguard-runtime-v0.3.1','changeguard_bin'),
+   ('linkspace','linkspace-runtime-v0.3.1','linkspace'),
+  ]:
+   hashes=(H/f'apps/{name}/{name}/release.mk').read_text()
+   for arch in ['x86_64','aarch64']:
+    expected=re.search(rf'^{name.upper()}_HASH_{arch}:=([0-9a-f]{{64}})$',hashes,re.M).group(1)
+    url=f'https://github.com/istoreos/istoreos-app-hub/releases/download/{tag}/{name}-0.3.1-{arch}.tar.gz'
+    with urllib.request.urlopen(url,timeout=60) as response:
+     body=response.read()
+     self.assertEqual(response.status,200,url)
+    self.assertEqual(hashlib.sha256(body).hexdigest(),expected,url)
+    with tarfile.open(fileobj=io.BytesIO(body),mode='r:gz') as package:
+     names=package.getnames()
+    self.assertIn(f'./{name}-0.3.1/{executable}',names,url)
+    self.assertEqual(f'./{name}-0.3.1/dependency.json' in names,name=='linkspace',url)
+
  def test_headless_dependencies_and_one_product_identity(self):
   self.assertIn('+linkspace',(H/'apps/changeguard/changeguard/Makefile').read_text())
   self.assertIn('+changeguard',(H/'apps/kaiplus/kaiplus/Makefile').read_text())
