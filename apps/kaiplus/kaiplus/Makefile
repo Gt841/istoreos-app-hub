@@ -9,12 +9,12 @@ include $(TOPDIR)/rules.mk
 KAIPLUS_ARCH_x86_64:=amd64
 KAIPLUS_ARCH_aarch64:=arm64
 KAIPLUS_ARCH:=$(KAIPLUS_ARCH_$(ARCH))
-KAIPLUS_HASH_x86_64:=f047c4d0a701dd457b4f63c726688dfc98bf99c3165d79de53dd6bfca74d3bb1
-KAIPLUS_HASH_aarch64:=4dae55b5c81197d73b287b2b9be5f88993605ff25972ac6ec4cf8c4d565dcb93
+KAIPLUS_HASH_x86_64:=a845ad4b620f4c8329e0253e212fcd4f586729a3cd65579c528da510b102481b
+KAIPLUS_HASH_aarch64:=20fe63810d94a74851c80b2061e7b9aaf48b8b0e5784d383242698c861951a28
 
 PKG_NAME:=kaiplus
-PKG_VERSION:=1.0.14-cg1
-PKG_RELEASE:=20
+PKG_VERSION:=1.0.15-cg1
+PKG_RELEASE:=1
 
 KAIPLUS_URL_FILE:=kaiplus-linux-$(KAIPLUS_ARCH)
 KAIPLUS_DOWNLOAD:=$(KAIPLUS_URL_FILE)-$(KAIPLUS_HASH_$(ARCH))
@@ -28,7 +28,7 @@ RSTRIP:=:
 include $(INCLUDE_DIR)/package.mk
 
 define Download/kaiplus
-	URL:=https://fw.koolcenter.com/binary/kai/releases/build/
+	URL:=https://github.com/istoreos/istoreos-app-hub/releases/download/kaiplus-runtime-v$(PKG_VERSION)/
 	URL_FILE:=$(KAIPLUS_URL_FILE)
 	FILE:=$(KAIPLUS_DOWNLOAD)
 	HASH:=$(KAIPLUS_HASH_$(ARCH))
