@@ -64,11 +64,11 @@ success. Installation and updating share the same task ID to prevent overlap.
 
 ## Package versions and checks
 
-The current package set uses `kaiplus 1.0.17-r1`,
-`luci-app-kaiplus 1.0.11-r4`, and `app-meta-kaiplus 1.0.17-r1`. The runtime
-binaries come from Reasonix commit `18b653d3442f22191775276ea361de89bee379b5`
-and are published by the `kaiplus-runtime-v1.0.17` GitHub release. Device
-protection uses `changeguard 0.3.2-r1` and `linkspace 0.3.2-r1` from their
+The current package set uses `kaiplus 1.0.18-r1`,
+`luci-app-kaiplus 1.0.11-r4`, and `app-meta-kaiplus 1.0.18-r1`. The runtime
+binaries come from Reasonix commit `d1b16edf8b6249f9b6eb006d373d75a20ecff3da`
+and are published by the `kaiplus-runtime-v1.0.18` GitHub release. Device
+protection uses `changeguard 0.3.3-r1` and `linkspace 0.3.2-r1` from their
 matching runtime releases.
 Existing `syncapps.yaml` mappings cover all changed packages.
 
