@@ -64,10 +64,12 @@ success. Installation and updating share the same task ID to prevent overlap.
 
 ## Package versions and checks
 
-The current package set uses `kaiplus 1.0.16-r1`,
-`luci-app-kaiplus 1.0.11-r4`, and `app-meta-kaiplus 1.0.16-r2`. The runtime
-binaries come from Reasonix commit `81abe341c9d008a533ca376735184037d332280f`
-and are published by the `kaiplus-runtime-v1.0.16` GitHub release.
+The current package set uses `kaiplus 1.0.17-r1`,
+`luci-app-kaiplus 1.0.11-r4`, and `app-meta-kaiplus 1.0.17-r1`. The runtime
+binaries come from Reasonix commit `18b653d3442f22191775276ea361de89bee379b5`
+and are published by the `kaiplus-runtime-v1.0.17` GitHub release. Device
+protection uses `changeguard 0.3.2-r1` and `linkspace 0.3.2-r1` from their
+matching runtime releases.
 Existing `syncapps.yaml` mappings cover all changed packages.
 
 Run the focused checks without downloading an OpenWrt SDK:
