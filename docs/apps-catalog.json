@@ -532,8 +532,8 @@
     ],
     "website": "https://ai.koolcenter.com",
     "author": "koolcenter",
-    "version": "1.0.18",
-    "release": "2",
+    "version": "1.0.19",
+    "release": "4",
     "depends": "+luci-app-kaiplus +kaiplus +luci-i18n-kaiplus-zh-cn",
     "luci_entry": "/cgi-bin/luci/admin/services/kaiplus",
     "meta_dir": "apps/kaiplus/app-meta-kaiplus"

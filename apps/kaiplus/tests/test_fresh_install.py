@@ -1,15 +1,46 @@
+import hashlib
+import json
 import os
 from pathlib import Path
 import re
 import subprocess
 import tempfile
 import unittest
+import urllib.request
 
 APP = Path(__file__).resolve().parents[1]
 HUB = APP.parents[1]
 
 
 class FreshInstall(unittest.TestCase):
+    @unittest.skipUnless(os.environ.get("KAI_VERIFY_PUBLIC_RELEASE"), "explicit public release verification required")
+    def test_published_binaries_match_recipe_version_hash_and_source(self):
+        recipe = (APP / "kaiplus/Makefile").read_text()
+        version = re.search(r"^PKG_VERSION:=(.+)$", recipe, re.MULTILINE).group(1)
+        base = f"https://github.com/istoreos/istoreos-app-hub/releases/download/kaiplus-runtime-v{version}/"
+        with urllib.request.urlopen(base + "release.json", timeout=60) as response:
+            manifest = json.load(response)
+        self.assertEqual(manifest["version"], version)
+        artifacts = {item["arch"]: item for item in manifest["artifacts"]}
+        for package_arch, go_arch, machine in [("x86_64", "amd64", 62), ("aarch64", "arm64", 183)]:
+            with self.subTest(arch=package_arch):
+                expected = re.search(rf"^KAIPLUS_HASH_{package_arch}:=([0-9a-f]{{64}})$", recipe, re.MULTILINE).group(1)
+                with urllib.request.urlopen(base + f"kaiplus-linux-{go_arch}", timeout=120) as response:
+                    body = response.read()
+                self.assertEqual(hashlib.sha256(body).hexdigest(), expected)
+                self.assertEqual(artifacts[go_arch]["sha256"], expected)
+                self.assertEqual(body[:6], b"\x7fELF\x02\x01")
+                self.assertEqual(int.from_bytes(body[18:20], "little"), machine)
+                if go_arch == "amd64" and os.uname().machine == "x86_64":
+                    with tempfile.TemporaryDirectory() as directory:
+                        binary = Path(directory) / "kaiplus"
+                        binary.write_bytes(body)
+                        binary.chmod(0o755)
+                        built = json.loads(subprocess.check_output([str(binary), "version", "--json"], text=True, timeout=15))
+                    self.assertEqual(built["version"], version)
+                    self.assertTrue(built["git_commit"])
+                    self.assertTrue(manifest["commit"].startswith(built["git_commit"]))
+
     def test_market_config_sets_home_and_propagates_start_failure(self):
         for dont_start, restart_status in [(False, 0), (True, 0), (False, 1)]:
             with self.subTest(dont_start=dont_start, restart_status=restart_status), tempfile.TemporaryDirectory() as directory:

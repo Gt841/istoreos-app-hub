@@ -64,21 +64,29 @@ success. Installation and updating share the same task ID to prevent overlap.
 
 ## Package versions and checks
 
-The current package set uses `kaiplus 1.0.18-r2`,
-`luci-app-kaiplus 1.0.11-r4`, and `app-meta-kaiplus 1.0.18-r2`. The runtime
-binaries come from Reasonix commit `d1b16edf8b6249f9b6eb006d373d75a20ecff3da`
-and are published by the `kaiplus-runtime-v1.0.18` GitHub release. Device
-protection uses `changeguard 0.3.3-r2` and `linkspace 0.3.2-r2` from their
+The current package set uses `kaiplus 1.0.19-r1`,
+`luci-app-kaiplus 1.0.11-r4`, and `app-meta-kaiplus 1.0.19-r4`. The runtime
+binaries come from Reasonix commit `b64248ed993a5cff9b131b872861126605dee94f`
+and are published by the `kaiplus-runtime-v1.0.19` GitHub release. Device
+protection uses `changeguard 0.3.4-r1` and `linkspace 0.3.2-r2` from their
 matching runtime releases.
 Existing `syncapps.yaml` mappings cover all changed packages.
 
-The KaiPlus runtime requires ChangeGuard >= 0.3.3, and ChangeGuard requires
+The KaiPlus runtime requires ChangeGuard >= 0.3.4, and ChangeGuard requires
 Linkspace >= 0.3.2. These minimum versions belong to runtime package dependencies
 so an installation cannot silently reuse incompatible protection components.
 The market `config.sh` saves the KaiPlus data directory and starts the service;
 KaiPlus owns automatic sibling `TimeMachine` initialization. A service-start
 failure is returned to the installer. The focused first-install check is
 `python3 apps/kaiplus/tests/test_fresh_install.py`.
+
+Verify the published binaries against the recipe (downloads both architectures,
+checks the hashes and ELF targets, and runs the matching native version command):
+
+```sh
+KAI_VERIFY_PUBLIC_RELEASE=1 python3 apps/kaiplus/tests/test_fresh_install.py
+CG_VERIFY_PUBLIC_RELEASE=1 python3 apps/changeguard/tests/test_package_contract.py
+```
 
 Run the focused checks without downloading an OpenWrt SDK:
 
