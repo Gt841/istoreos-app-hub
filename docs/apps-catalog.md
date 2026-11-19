@@ -50,7 +50,6 @@ Auto-generated from `apps/*/app-meta-*/Makefile` via `make apps-catalog`.
 | oneapi | OneAPI | ai net | /cgi-bin/luci/admin/services/oneapi | https://openai.justsong.cn | OneAPI 是LLM API 管理 & 分发系统，支持 OpenAI、Azure、Anthropic Claude、Google Gemini、DeepSeek。 |
 | openclawmgr | OpenClaw Launcher | ai | /cgi-bin/luci/admin/services/openclawmgr | https://github.com/openclaw/openclaw | 在 OpenWrt 上原生安装、启动并管理官方 OpenClaw。 |
 | openwebui | OpenWebUI | ai net | /cgi-bin/luci/admin/services/openwebui | https://openwebui.com/ | Open WebUI 是一款可扩展、自托管的 AI 界面，能够无缝适配您的工作流程，且所有操作均可完全离线运行。 |
-| optimemachine | 变更保护 | backup system |  |  | CLI 设备变更保护；KAI 内查看恢复点、失联回退与审计日志 |
 | owntone | Owntone音乐平台 | multimedia net | /cgi-bin/luci/admin/services/owntone | https://owntone.github.io/owntone-server/ | Owntone是一个支持iTunes, AirPlay, Chromecast等的音乐串流平台。 |
 | penpot | Penpot设计平台 | net tool | /cgi-bin/luci/admin/services/penpot | https://penpot.app/ | Penpot是第一个开源的便于团队协作的在线设计平台。 |
 | photoprism | PhotoPrism相册管理 | multimedia net | /cgi-bin/luci/admin/services/photoprism | https://photoprism.app/ | PhotoPrism是一个AI驱动的相册管理应用。 |
