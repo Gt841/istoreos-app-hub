@@ -16,7 +16,8 @@ define Package/changeguard
  CATEGORY:=System
  TITLE:=Device change protection CLI
  DEPENDS:=@(x86_64||aarch64) +linkspace +block-mount
- EXTRA_DEPENDS:=linkspace (>=0.3.2)
+ # Build matrix: OpenWrt 21.02 OPKG uses -N; 25.12 APK uses -rN.
+ EXTRA_DEPENDS:=linkspace (>=0.3.2-$(if $(CONFIG_USE_APK),r)2)
 endef
 
 define Build/Configure

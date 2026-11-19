@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+import re
 import subprocess
 import tempfile
 import unittest
@@ -37,8 +38,26 @@ class FreshInstall(unittest.TestCase):
                 self.assertNotIn("storage-configure", script)
 
     def test_runtime_minimum_dependencies_prevent_mixed_install(self):
-        self.assertIn("EXTRA_DEPENDS:=changeguard (>=0.3.3)", (APP / "kaiplus/Makefile").read_text())
-        self.assertIn("EXTRA_DEPENDS:=linkspace (>=0.3.2)", (HUB / "apps/changeguard/changeguard/Makefile").read_text())
+        packages = [
+            (APP / "kaiplus/Makefile", "changeguard", HUB / "apps/changeguard/changeguard/Makefile"),
+            (HUB / "apps/changeguard/changeguard/Makefile", "linkspace", HUB / "apps/linkspace/linkspace/Makefile"),
+        ]
+        for consumer, dependency, provider in packages:
+            with self.subTest(consumer=consumer.parent.name, dependency=dependency):
+                consumer_text = consumer.read_text()
+                provider_text = provider.read_text()
+                version = re.search(r"^PKG_VERSION:=(.+)$", provider_text, re.MULTILINE).group(1)
+                release = re.search(r"^PKG_RELEASE:=(.+)$", provider_text, re.MULTILINE).group(1)
+                declared = f"{dependency} (>={version}-$(if $(CONFIG_USE_APK),r){release})"
+                self.assertIn(f"EXTRA_DEPENDS:={declared}", consumer_text)
+                self.assertEqual(
+                    declared.replace("$(if $(CONFIG_USE_APK),r)", ""),
+                    f"{dependency} (>={version}-{release})",
+                )
+                self.assertEqual(
+                    declared.replace("$(if $(CONFIG_USE_APK),r)", "r"),
+                    f"{dependency} (>={version}-r{release})",
+                )
 
 
 if __name__ == "__main__":
