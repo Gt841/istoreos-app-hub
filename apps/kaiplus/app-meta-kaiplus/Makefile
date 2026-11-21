@@ -1,8 +1,8 @@
 # This is free software, licensed under the Apache License, Version 2.0 .
 
 include $(TOPDIR)/rules.mk
-PKG_VERSION:=1.0.19
-PKG_RELEASE:=4
+PKG_VERSION:=1.0.20
+PKG_RELEASE:=5
 META_TITLE:=酷友社KAI
 META_TITLE.en:=KoolCenter KaiPlus
 META_DEPENDS:=+luci-app-kaiplus +kaiplus +luci-i18n-kaiplus-zh-cn

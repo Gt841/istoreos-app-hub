@@ -64,16 +64,16 @@ success. Installation and updating share the same task ID to prevent overlap.
 
 ## Package versions and checks
 
-The current package set uses `kaiplus 1.0.19-r1`,
-`luci-app-kaiplus 1.0.11-r4`, and `app-meta-kaiplus 1.0.19-r4`. The runtime
-binaries come from Reasonix commit `b64248ed993a5cff9b131b872861126605dee94f`
-and are published by the `kaiplus-runtime-v1.0.19` GitHub release. Device
-protection uses `changeguard 0.3.4-r1` and `linkspace 0.3.2-r2` from their
+The current package set uses `kaiplus 1.0.20-r1`,
+`luci-app-kaiplus 1.0.11-r4`, and `app-meta-kaiplus 1.0.20-r5`. The runtime
+binaries come from Reasonix commit `e6587b056df4345cc9aa869f703b37ec07827f78`
+and are published by the `kaiplus-runtime-v1.0.20` GitHub release. Device
+protection uses `changeguard 0.3.5-r1` and `linkspace 0.3.3-r1` from their
 matching runtime releases.
 Existing `syncapps.yaml` mappings cover all changed packages.
 
-The KaiPlus runtime requires ChangeGuard >= 0.3.4, and ChangeGuard requires
-Linkspace >= 0.3.2. These minimum versions belong to runtime package dependencies
+The KaiPlus runtime requires ChangeGuard >= 0.3.5, and ChangeGuard requires
+Linkspace >= 0.3.3. These minimum versions belong to runtime package dependencies
 so an installation cannot silently reuse incompatible protection components.
 The market `config.sh` saves the KaiPlus data directory and starts the service;
 KaiPlus owns automatic sibling `TimeMachine` initialization. A service-start

@@ -16,7 +16,7 @@ HELPER = H / "apps/changeguard/changeguard/files/usr/libexec/changeguard-package
 
 class Contract(unittest.TestCase):
     def test_runtime_recipes_use_tabs_and_immutable_release(self):
-        for name, version, release in [("changeguard", "0.3.4", "1"), ("linkspace", "0.3.2", "2")]:
+        for name, version, release in [("changeguard", "0.3.5", "1"), ("linkspace", "0.3.3", "1")]:
             recipe = (H / f"apps/{name}/{name}/Makefile").read_text()
             self.assertRegex(recipe, rf"(?m)^PKG_VERSION:={re.escape(version)}$")
             self.assertRegex(recipe, rf"(?m)^PKG_RELEASE:={release}$")
@@ -83,7 +83,7 @@ class Contract(unittest.TestCase):
 
     @unittest.skipUnless(os.environ.get("CG_VERIFY_PUBLIC_RELEASE"), "explicit public release verification required")
     def test_public_assets_match_hashes_and_layout(self):
-        for name, version, executable in [("changeguard", "0.3.4", "changeguard_bin"), ("linkspace", "0.3.2", "linkspace")]:
+        for name, version, executable in [("changeguard", "0.3.5", "changeguard_bin"), ("linkspace", "0.3.3", "linkspace")]:
             hashes = (H / f"apps/{name}/{name}/release.mk").read_text()
             for arch in ["x86_64", "aarch64"]:
                 expected = re.search(rf"^{name.upper()}_HASH_{arch}:=([0-9a-f]{{64}})$", hashes, re.M).group(1)
