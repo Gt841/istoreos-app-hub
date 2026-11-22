@@ -7,11 +7,11 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=kaiplus
-PKG_VERSION:=1.0.21
+PKG_VERSION:=1.0.22
 PKG_RELEASE:=1
 
 KAIPLUS_URL_FILE:=kaiplus-binary-$(PKG_VERSION).tar.gz
-KAIPLUS_HASH:=dbfdf2421d2c65ef62bad41047736972c48508fdcd9f7353373de033214692da
+KAIPLUS_HASH:=fdfe76a2f93eb4dfc6fca70c5d2f083cf9b1dfd97a846ee8ae3c23ad7e2ffae8
 KAIPLUS_DOWNLOAD:=$(KAIPLUS_URL_FILE)-$(KAIPLUS_HASH)
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 
@@ -27,6 +27,24 @@ define Download/kaiplus
 	URL_FILE:=$(KAIPLUS_URL_FILE)
 	FILE:=$(KAIPLUS_DOWNLOAD)
 	HASH:=$(KAIPLUS_HASH)
+endef
+
+define Package/kaiplus-sandbox
+	SECTION:=net
+	CATEGORY:=System
+	TITLE:=KaiPlus optional Linux sandbox backend
+	DEPENDS:=@(x86_64||aarch64) +kaiplus +bubblewrap
+endef
+
+define Package/kaiplus-sandbox/description
+  Optional backend for explicitly configured sandbox.bash="enforce".
+  KAIPlus native device management does not require bubblewrap.
+  Installation never rewrites the user's execution or approval preferences.
+endef
+
+define Package/kaiplus-sandbox/install
+	$(INSTALL_DIR) $(1)/usr/share/kaiplus
+	$(INSTALL_DATA) ./files/sandbox-backend.txt $(1)/usr/share/kaiplus/sandbox-backend.txt
 endef
 
 define Package/$(PKG_NAME)
@@ -100,3 +118,4 @@ endef
 
 $(eval $(call Download,kaiplus))
 $(eval $(call BuildPackage,$(PKG_NAME)))
+$(eval $(call BuildPackage,kaiplus-sandbox))
