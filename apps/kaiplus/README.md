@@ -64,13 +64,28 @@ success. Installation and updating share the same task ID to prevent overlap.
 
 ## Package versions and checks
 
-The current package set uses `kaiplus 1.0.20-r1`,
-`luci-app-kaiplus 1.0.11-r4`, and `app-meta-kaiplus 1.0.20-r5`. The runtime
-binaries come from Reasonix commit `e6587b056df4345cc9aa869f703b37ec07827f78`
-and are published by the `kaiplus-runtime-v1.0.20` GitHub release. Device
+The pending package set uses `kaiplus 1.0.21-r1`,
+`luci-app-kaiplus 1.0.11-r4`, and `app-meta-kaiplus 1.0.21-r6`. The runtime
+recipe now consumes `kaiplus-binary-1.0.21.tar.gz` from the
+`kaiplus-runtime-v1.0.21` GitHub release. Its hash currently identifies the
+locally verified candidate built from Reasonix commit
+`bd778dd852dc9101cb377eb73ed37ca365179d6e`. Upload the verified release
+assets before building/publishing feed packages; if the candidate is rebuilt,
+refresh `KAIPLUS_HASH` from the new tarball. This source update does not itself
+publish a GitHub release or feed packages. Device
 protection uses `changeguard 0.3.5-r1` and `linkspace 0.3.3-r1` from their
 matching runtime releases.
 Existing `syncapps.yaml` mappings cover all changed packages.
+
+The runtime tarball carries `kaiplus.x86_64`, `kaiplus.aarch64`, and `kaiplus-web.zip`.
+The package installs only the matching binary and the single web archive at
+`/usr/share/kaiplus/kaiplus-web.zip`; it does not unpack a `www` directory or duplicate
+the web assets inside the binary. The init script passes `--web-zip` explicitly.
+The server uses zipserve to send individually precompressed Brotli entries to
+clients accepting `br`, with streaming identity fallback for other clients.
+HTML stays uncompressed for runtime base-path injection and SPA routing.
+Publish the tarball, `kaiplus-web.zip`, and `release.json` together from the
+same Reasonix release build. Standalone binaries continue to embed the ZIP.
 
 The KaiPlus runtime requires ChangeGuard >= 0.3.5, and ChangeGuard requires
 Linkspace >= 0.3.3. These minimum versions belong to runtime package dependencies
@@ -80,12 +95,19 @@ KaiPlus owns automatic sibling `TimeMachine` initialization. A service-start
 failure is returned to the installer. The focused first-install check is
 `python3 apps/kaiplus/tests/test_fresh_install.py`.
 
-Verify the published binaries against the recipe (downloads both architectures,
+Verify the published runtime archive against the recipe (checks both architectures,
 checks the hashes and ELF targets, and runs the matching native version command):
 
 ```sh
 KAI_VERIFY_PUBLIC_RELEASE=1 python3 apps/kaiplus/tests/test_fresh_install.py
 CG_VERIFY_PUBLIC_RELEASE=1 python3 apps/changeguard/tests/test_package_contract.py
+```
+
+Before upload, verify the exact local candidate instead:
+
+```sh
+KAI_RUNTIME_RELEASE_DIR=/absolute/path/to/reasonix-kai/releases/build \
+  python3 apps/kaiplus/tests/test_fresh_install.py -v
 ```
 
 Run the focused checks without downloading an OpenWrt SDK:

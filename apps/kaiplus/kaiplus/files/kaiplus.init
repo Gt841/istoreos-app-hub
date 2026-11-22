@@ -51,6 +51,7 @@ start_service() {
 	procd_append_param command --addr "0.0.0.0:$port"
 	procd_append_param command --data-dir "$data_dir"
 	procd_append_param command --base-path /apps/kaiplus/
+	procd_append_param command --web-zip /usr/share/kaiplus/kaiplus-web.zip
 	procd_append_param command --system-role istoreos
 	procd_append_param command --release-channel stable
 	procd_set_param stdout 1

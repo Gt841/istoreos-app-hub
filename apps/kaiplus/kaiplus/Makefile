@@ -6,18 +6,13 @@
 
 include $(TOPDIR)/rules.mk
 
-KAIPLUS_ARCH_x86_64:=amd64
-KAIPLUS_ARCH_aarch64:=arm64
-KAIPLUS_ARCH:=$(KAIPLUS_ARCH_$(ARCH))
-KAIPLUS_HASH_x86_64:=e6b202d8b6c6ee47787473eb8c33122cf5a3fca6c73deb110be4b0e52bcd6967
-KAIPLUS_HASH_aarch64:=c5634f44f6202c2e6977cbb5e7ad9d1faf7faa331bac0e945776841a183fb1d0
-
 PKG_NAME:=kaiplus
-PKG_VERSION:=1.0.20
+PKG_VERSION:=1.0.21
 PKG_RELEASE:=1
 
-KAIPLUS_URL_FILE:=kaiplus-linux-$(KAIPLUS_ARCH)
-KAIPLUS_DOWNLOAD:=$(KAIPLUS_URL_FILE)-$(KAIPLUS_HASH_$(ARCH))
+KAIPLUS_URL_FILE:=kaiplus-binary-$(PKG_VERSION).tar.gz
+KAIPLUS_HASH:=dbfdf2421d2c65ef62bad41047736972c48508fdcd9f7353373de033214692da
+KAIPLUS_DOWNLOAD:=$(KAIPLUS_URL_FILE)-$(KAIPLUS_HASH)
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 
 PKG_BUILD_PARALLEL:=1
@@ -31,7 +26,7 @@ define Download/kaiplus
 	URL:=https://github.com/istoreos/istoreos-app-hub/releases/download/kaiplus-runtime-v$(PKG_VERSION)/
 	URL_FILE:=$(KAIPLUS_URL_FILE)
 	FILE:=$(KAIPLUS_DOWNLOAD)
-	HASH:=$(KAIPLUS_HASH_$(ARCH))
+	HASH:=$(KAIPLUS_HASH)
 endef
 
 define Package/$(PKG_NAME)
@@ -81,7 +76,7 @@ endef
 
 define Build/Prepare
 	$(INSTALL_DIR) $(PKG_BUILD_DIR)
-	$(CP) $(DL_DIR)/$(KAIPLUS_DOWNLOAD) $(PKG_BUILD_DIR)/kaiplus
+	tar -xzf $(DL_DIR)/$(KAIPLUS_DOWNLOAD) -C $(PKG_BUILD_DIR) --strip-components=1
 endef
 
 define Build/Configure
@@ -92,7 +87,8 @@ endef
 
 define Package/$(PKG_NAME)/install
 	$(INSTALL_DIR) $(1)/usr/sbin $(1)/usr/share/kaiplus $(1)/usr/share/linkease/apps.d $(1)/usr/share/rpcd/acl.d $(1)/etc/init.d $(1)/etc/config
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/kaiplus $(1)/usr/sbin/kaiplus_bin
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/kaiplus.$(ARCH) $(1)/usr/sbin/kaiplus_bin
+	$(INSTALL_DATA) $(PKG_BUILD_DIR)/kaiplus-web.zip $(1)/usr/share/kaiplus/kaiplus-web.zip
 	ln -sf kaiplus_bin $(1)/usr/sbin/kaiplus
 	$(INSTALL_DATA) ./files/logo.png $(1)/usr/share/kaiplus/logo.png
 	$(INSTALL_DATA) ./files/kaiplus-plugin.json $(1)/usr/share/kaiplus/kaiplus-plugin.json
