@@ -1,0 +1,6 @@
+lua: ...-acceptance-20261123/assets/candidate-controller.lua:348: attempt to call field 'getenv' (a nil value)
+stack traceback:
+	...-acceptance-20261123/assets/candidate-controller.lua:348: in function 'get_host'
+	...-acceptance-20261123/assets/candidate-controller.lua:808: in function 'action_status'
+	stdin:12: in main chunk
+	[C]: ?

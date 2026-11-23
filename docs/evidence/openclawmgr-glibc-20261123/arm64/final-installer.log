@@ -1,0 +1,13 @@
+2026-11-23 14:13:21 [openclawmgr] Installation phase: preparing
+2026-11-23 14:13:56 [openclawmgr] Resolved OpenClaw 2026.3.28 with Node v24.22.1
+2026-11-23 14:13:56 [openclawmgr] Fetching package archive and verifying SHA512
+2026-11-23 14:14:40 [openclawmgr] Installing OpenClaw 2026.3.28 and dependencies
+2026-11-23 14:26:03 [openclawmgr] Checking native modules and required sqlite-vec vector queries
+2026-11-23 14:26:04 [openclawmgr] Checking the candidate CLI in an isolated home
+2026-11-23 14:26:06 [openclawmgr] Installation phase: stopping
+2026-11-23 14:26:06 [openclawmgr] Installation phase: backup-ready
+2026-11-23 14:26:06 [openclawmgr] Installation phase: activated
+2026-11-23 14:28:32 [openclawmgr] Gateway health check failed
+2026-11-23 14:28:32 [openclawmgr] Restoring previous runtime and data snapshot
+2026-11-23 14:28:33 [openclawmgr] Installation phase: restored
+2026-11-23 14:28:39 [openclawmgr] Installation finished (exit=1)

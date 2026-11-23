@@ -1,0 +1,17 @@
+{
+  "scope": "SDK macros stubbed; real Prepare/install with pinned downloads; not an SDK ipk build",
+  "results": [
+    {
+      "arch": "x86_64",
+      "prepare_install_exit": 0,
+      "payload_matches_deployed": true,
+      "manifestSha256": "05878b3941c45bb67f8435b3d3d0b4250a487bcc038b379f3cc8b61c4658c364"
+    },
+    {
+      "arch": "aarch64",
+      "prepare_install_exit": 0,
+      "payload_matches_deployed": true,
+      "manifestSha256": "b3750943e6e0ebca085a1c3a678e6c16bc139a69cb0df2fc8e9e01f9846013c5"
+    }
+  ]
+}

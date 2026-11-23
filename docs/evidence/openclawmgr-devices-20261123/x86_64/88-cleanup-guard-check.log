@@ -1,0 +1,23 @@
+== cleanup guards
+openclawmgr-device-acceptance-20261123
+/mnt/vio4-0/OpenClawMgr-acceptance-20261123
+55003
+== test init
+#!/bin/sh /etc/rc.common
+USE_PROCD=1
+START=99
+start_service() {
+ config_load istoreenhance
+ config_get cache main cache
+ config_get port main port
+ config_get adminport main adminport
+ procd_open_instance
+ procd_set_param command /usr/sbin/iStoreEnhance --localAddr "127.0.0.1:$port" --adminAddr "127.0.0.1:$adminport" --cachePath "$cache"
+ procd_set_param limits nofile="65535 65535"
+ procd_set_param stdout 1
+ procd_set_param stderr 1
+ procd_set_param respawn
+ procd_close_instance
+}
+== backend task
+Failed to parse json data: unexpected end of data

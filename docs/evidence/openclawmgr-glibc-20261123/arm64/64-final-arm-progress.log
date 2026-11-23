@@ -1,0 +1,12 @@
+task=true
+== installer phases
+2026-11-23 14:13:21 [openclawmgr] Installation phase: preparing
+2026-11-23 14:13:56 [openclawmgr] Resolved OpenClaw 2026.3.28 with Node v24.22.1
+2026-11-23 14:13:56 [openclawmgr] Fetching package archive and verifying SHA512
+2026-11-23 14:14:40 [openclawmgr] Installing OpenClaw 2026.3.28 and dependencies
+== command tail
+[1mnpm[22m [32mhttp[39m [94mcache[39m zod@https://dl-npm.linkease.net:5443/zod/-/zod-4.6.7.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @agentclientprotocol/sdk@https://dl-npm.linkease.net:5443/@agentclientprotocol/sdk/-/sdk-0.17.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET https://dl-npm.linkease.net:5443/@napi-rs/canvas-linux-arm64-gnu/-/canvas-linux-arm64-gnu-0.1.100.tgz attempt 1 failed with FETCH_ERROR
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET https://dl-npm.linkease.net:5443/@mariozechner/clipboard-linux-arm64-gnu/-/clipboard-linux-arm64-gnu-0.3.9.tgz attempt 1 failed with FETCH_ERROR
+boot=15109b6a-9070-49ea-88e0-6ba2e17a5545

@@ -1,0 +1,1277 @@
+2026-11-23 13:13:31 [openclawmgr] Installation phase: preparing
+/mnt/vio4-0/OpenClawMgr-glibc-acceptance-20261123/npm-cache/node-24.22.1-x64-glibc.tar.xz: OK
+24.22.1
+11.19.1
+2026-11-23 13:13:47 [openclawmgr] Resolved OpenClaw 2026.3.28 with Node v24.22.1
+2026-11-23 13:13:47 [openclawmgr] Fetching package archive and verifying SHA512
+2026-11-23 13:14:04 [openclawmgr] Installing OpenClaw 2026.3.28 and dependencies
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas 1906ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@agentclientprotocol%2fsdk 578ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@anthropic-ai%2fvertex-sdk 622ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@aws-sdk%2fclient-bedrock 1493ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@clack%2fprompts 245ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@homebridge%2fciao 578ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@line%2fbot-sdk 546ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@lydell%2fnode-pty 542ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@mariozechner%2fpi-agent-core 944ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@mariozechner%2fpi-ai 790ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@mariozechner%2fpi-coding-agent 738ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@mariozechner%2fpi-tui 637ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@modelcontextprotocol%2fsdk 363ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@mozilla%2freadability 327ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@sinclair%2ftypebox 1417ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/ajv 1049ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/chalk 1495ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/chokidar 709ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/cli-highlight 785ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/commander 645ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/croner 1041ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/dotenv 753ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/express 1394ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/file-type 1148ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/gaxios 828ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/hono 1898ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/ipaddr.js 617ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/jiti 821ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/json5 577ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/jszip 366ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/linkedom 1321ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/long 1276ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/markdown-it 1117ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/matrix-js-sdk 2348ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/node-edge-tts 283ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/osc-progress 292ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/pdfjs-dist 2386ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/playwright-core 14176ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/qrcode-terminal 259ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sharp 706ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sqlite-vec 287ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/tar 725ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/tslog 548ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/undici 971ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/uuid 401ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/ws 706ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/yaml 859ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/zod 1916ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@matrix-org%2fmatrix-sdk-crypto-nodejs 4123ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/openshell 258ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@cfworker%2fjson-schema 573ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/canvas 404ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/bufferutil 532ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/utf-8-validate 2504ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@anthropic-ai%2fsdk 2241ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/google-auth-library 3235ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/tslib 1331ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@smithy%2fcore 1953ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@aws-sdk%2fcore 1519ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@smithy%2ftypes 529ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@aws-sdk%2ftypes 1656ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@aws-sdk%2ftoken-providers 2210ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@smithy%2fnode-http-handler 492ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@smithy%2ffetch-http-handler 1000ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@aws-sdk%2fcredential-provider-node 2515ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sisteransi 467ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@clack%2fcore 568ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/fast-wrap-ansi 258ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/fast-string-width 518ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/debug 855ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/tslib 5ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/fast-deep-equal 467ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/source-map-support 851ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@types%2fnode 12773ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/axios 1085ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@lydell%2fnode-pty-linux-x64 560ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@lydell%2fnode-pty-win32-x64 310ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@lydell%2fnode-pty-darwin-x64 299ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@lydell%2fnode-pty-linux-arm64 574ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@lydell%2fnode-pty-win32-arm64 300ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@lydell%2fnode-pty-darwin-arm64 329ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/@mariozechner%2fpi-ai 4ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/ajv 5ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/openai 2021ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/undici 27ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/ajv-formats 561ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/proxy-agent 533ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/partial-json 286ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@google%2fgenai 704ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/@anthropic-ai%2fsdk 22ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/@sinclair%2ftypebox 5ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/zod-to-json-schema 897ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@mistralai%2fmistralai 517ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@aws-sdk%2fclient-bedrock-runtime 1243ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/diff 726ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/glob 962ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/yaml 23ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/chalk 2ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/ignore 759ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/marked 2042ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/file-type 3ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/minimatch 801ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/strip-ansi 311ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/extract-zip 605ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/hosted-git-info 684ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/proper-lockfile 495ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@mariozechner%2fjiti 376ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/@mariozechner%2fpi-tui 3ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@silvia-odwyer%2fphoton-node 244ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@mariozechner%2fclipboard 795ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/mime-types 735ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@types%2fmime-types 547ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/get-east-asian-width 326ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/koffi 3037ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/https-proxy-agent 699ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/node-downloader-helper 1258ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/cors 1070ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/hono 14ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/jose 2460ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/raw-body 471ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/cross-spawn 541ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/eventsource 1202ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/content-type 2271ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/pkce-challenge 369ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@hono%2fnode-server 599ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/json-schema-typed 546ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/eventsource-parser 673ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/express-rate-limit 1303ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/zod-to-json-schema 3ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-darwin-x64 892ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-darwin-arm64 1151ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-android-arm64 1011ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-linux-x64-gnu 1460ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-linux-x64-musl 1915ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-win32-x64-msvc 960ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-linux-arm64-gnu 1179ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-linux-arm64-musl 812ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-win32-arm64-msvc 371ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-linux-riscv64-gnu 588ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@napi-rs%2fcanvas-linux-arm-gnueabihf 1045ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/fast-uri 730ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/json-schema-traverse 425ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/require-from-string 423ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/readdirp 666ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/highlight.js 1172ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/mz 502ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/parse5 858ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/parse5-htmlparser2-tree-adapter 301ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/yargs 1733ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/qs 1902ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/depd 993ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/etag 291ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/once 267ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/send 697ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/vary 243ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/debug 6ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/fresh 240ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/cookie 3378ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/router 1402ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/accepts 434ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/type-is 574ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/parseurl 1291ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/statuses 377ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/encodeurl 1055ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/mime-types 4ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/proxy-addr 741ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/body-parser 1097ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/escape-html 301ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/http-errors 1094ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/on-finished 382ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/content-type 2ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/finalhandler 1181ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/range-parser 837ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/serve-static 1618ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/cookie-signature 634ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/merge-descriptors 333ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/content-disposition 440ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/strtok3 2509ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/token-types 913ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/uint8array-extras 773ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@tokenizer%2finflate 509ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/extend 334ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/node-fetch 3097ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/https-proxy-agent 29ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/lie 555ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/pako 845ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/setimmediate 355ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/readable-stream 1098ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/uhyphen 318ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/cssomnom 631ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/css-select 663ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/htmlparser2 1196ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/html-escaper 1682ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/mdurl 581ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/argparse 4208ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/entities 1355ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/uc.micro 414ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/linkify-it 1103ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/punycode.js 415ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/bs58 457ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/uuid 4ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/p-retry 1193ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/loglevel 1099ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/jwt-decode 1001ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/unhomoglyph 385ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/another-json 314ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sdp-transform 1170ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@babel%2fruntime 5605ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/oidc-client-ts 1009ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/matrix-events-sdk 931ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/matrix-widget-api 1048ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@matrix-org%2fmatrix-sdk-crypto-wasm 864ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/ws 4ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/yargs 7ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/dotenv 5ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/telegraf 3180ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/semver 1148ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fcolour 281ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/detect-libc 373ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-wasm32 488ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-linux-arm 501ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-linux-x64 557ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-win32-x64 931ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-darwin-x64 701ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-win32-ia32 1300ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-linux-arm64 712ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-linux-ppc64 481ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-linux-s390x 814ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-win32-arm64 581ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-darwin-arm64 12812ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-linux-riscv64 525ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-linuxmusl-x64 835ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-linuxmusl-arm64 1042ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-libvips-linux-arm 740ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-libvips-linux-x64 874ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-libvips-darwin-x64 672ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-libvips-linux-arm64 765ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-libvips-linux-ppc64 802ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-libvips-linux-s390x 875ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-libvips-darwin-arm64 918ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-libvips-linux-riscv64 696ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-libvips-linuxmusl-x64 792ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-libvips-linuxmusl-arm64 689ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sqlite-vec-linux-x64 819ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sqlite-vec-darwin-x64 956ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sqlite-vec-linux-arm64 365ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sqlite-vec-windows-x64 1435ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sqlite-vec-darwin-arm64 710ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/chownr 504ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/yallist 425ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/minipass 1856ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/minizlib 646ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@isaacs%2ffs-minipass 313ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/zod 11ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/standardwebhooks 329ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/json-schema-to-ts 1383ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@opentelemetry%2fapi 1423ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/jws 1271ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/gaxios 3ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/gtoken 815ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/base64-js 678ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/gcp-metadata 1130ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/ecdsa-sig-formatter 290ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/@babel%2fruntime 10ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/ts-algebra 842ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/fast-sha256 637ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@stablelib%2fbase64 1146ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/bowser 1000ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@aws-sdk%2fxml-builder 2069ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@smithy%2fsignature-v4 1365ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@aws%2flambda-invoke-store 382ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@aws-sdk%2fcredential-provider-env 2376ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@aws-sdk%2fcredential-provider-ini 3801ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@aws-sdk%2fcredential-provider-sso 4106ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@smithy%2fcredential-provider-imds 789ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@aws-sdk%2fcredential-provider-http 1070ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@aws-sdk%2fcredential-provider-process 2065ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@aws-sdk%2fcredential-provider-web-identity 1670ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@aws-sdk%2fnested-clients 1210ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@aws-sdk%2fcredential-provider-login 1443ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@aws-sdk%2fsignature-v4-multi-region 1289ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/fast-string-truncated-width 291ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/ms 1067ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/buffer-from 271ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/source-map 535ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/undici-types 860ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/form-data 434ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/proxy-from-env 287ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/follow-redirects 792ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/zod 12ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/@modelcontextprotocol%2fsdk 29ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/zod 11ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@aws-sdk%2fmiddleware-websocket 789ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@aws-sdk%2fmiddleware-eventstream 1412ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@aws-sdk%2feventstream-handler-node 1911ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/p-retry 2ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/protobufjs 1021ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/google-auth-library 3ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/lru-cache 1280ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/agent-base 564ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/proxy-from-env 2ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/pac-proxy-agent 528ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/http-proxy-agent 522ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/socks-proxy-agent 677ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/gcp-metadata 3ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/google-logging-utils 309ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/retry 286ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@types%2fretry 258ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@protobufjs%2fpath 249ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@protobufjs%2fpool 634ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@protobufjs%2futf8 467ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@protobufjs%2ffetch 311ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@protobufjs%2ffloat 326ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@protobufjs%2fbase64 562ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@protobufjs%2fcodegen 608ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@protobufjs%2faspromise 487ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@protobufjs%2feventemitter 360ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@mariozechner%2fclipboard-darwin-arm64 349ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@mariozechner%2fclipboard-darwin-universal 410ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@mariozechner%2fclipboard-darwin-x64 359ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@mariozechner%2fclipboard-linux-arm64-gnu 943ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@mariozechner%2fclipboard-linux-arm64-musl 370ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@mariozechner%2fclipboard-linux-riscv64-gnu 534ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@mariozechner%2fclipboard-linux-x64-gnu 1092ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@mariozechner%2fclipboard-linux-x64-musl 625ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@mariozechner%2fclipboard-win32-arm64-msvc 405ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@mariozechner%2fclipboard-win32-x64-msvc 666ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/std-env 2331ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/yoctocolors 612ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/get-stream 1062ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/yauzl 1481ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@types%2fyauzl 434ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/strtok3 4ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/token-types 2ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/uint8array-extras 4ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/minipass 3ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/minimatch 3ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/path-scurry 1574ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/lru-cache 4ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/brace-expansion 1104ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/graceful-fs 1404ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/retry 3ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/signal-exit 615ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/ansi-regex 641ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/mime-db 1227ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/object-assign 475ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/vary 3ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/which 646ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/path-key 562ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/shebang-command 336ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/eventsource-parser 5ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/ip-address 1535ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/bytes 860ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/unpipe 302ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/iconv-lite 1058ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/http-errors 3ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/hasown 334ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/asynckit 635ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/combined-stream 430ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/es-set-tostringtag 341ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/agent-base 3ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/ansi-styles 653ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/supports-color 1383ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/any-promise 368ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/object-assign 3ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/thenify-all 343ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/parse5 3ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/y18n 783ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/cliui 919ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/escalade 572ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/string-width 720ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/yargs-parser 2537ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/get-caller-file 691ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/require-directory 355ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/shebang-regex 317ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/isexe 379ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/negotiator 479ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/qs 16ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/bytes 4ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/iconv-lite 3ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/inherits 1062ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/setprototypeof 333ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/statuses 3ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/toidentifier 338ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/ee-first 828ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/wrappy 545ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/forwarded 594ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/ipaddr.js 3ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/side-channel 930ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/es-define-property 540ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/is-promise 905ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/path-to-regexp 3672ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/media-typer 825ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/safer-buffer 707ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/pump 936ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/fd-slicer 707ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/buffer-crc32 794ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@tokenizer%2ftoken 732ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/ieee754 1165ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@borewit%2ftext-codec 492ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/delayed-stream 478ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/es-errors 532ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/get-intrinsic 869ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/has-tostringtag 554ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/hasown 2ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/function-bind 1073ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/mime-db 6ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/gopd 435ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/get-proto 395ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/has-symbols 499ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/es-object-atoms 441ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/math-intrinsics 427ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/call-bind-apply-helpers 378ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/has-symbols 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/data-uri-to-buffer 1594ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/fetch-blob 2391ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/formdata-polyfill 2060ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/dunder-proto 1027ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/end-of-stream 2257ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/safe-buffer 9901ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/is-stream 1342ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/node-fetch 5ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/json-bigint 3203ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/google-logging-utils 2ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/jwa 569ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/bignumber.js 1449ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/immediate 628ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/isarray 324ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/safe-buffer 3ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/core-util-is 287ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/string_decoder 720ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/util-deprecate 315ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/process-nextick-args 354ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/buffer-equal-constant-time 291ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/boolbase 953ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/css-what 5063ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/domhandler 4698ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/domutils 4385ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/nth-check 1310ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/domutils 2ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/entities 5ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/domhandler 3ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/domelementtype 2298ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/domelementtype 2ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/dom-serializer 2211ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/dom-serializer 2ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/uc.micro 4ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/base-x 1797ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/events 859ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@types%2fevents 440ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/is-network-error 1235ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/balanced-match 876ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/thenify 494ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/cliui 46ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/string-width 3ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/yargs-parser 2ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/node-domexception 406ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/web-streams-polyfill 2220ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/mri 853ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/p-timeout 1218ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/safe-compare 527ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@telegraf%2ftypes 748ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sandwich-stream 656ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/abort-controller 1334ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/get-uri 1058ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/pac-resolver 1005ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@tootallnate%2fquickjs-emscripten 1064ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/socks 1687ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/basic-ftp 3749ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/data-uri-to-buffer 5ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/netmask 561ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/degenerator 1100ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/esprima 931ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/ast-types 3063ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/escodegen 1306ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/estraverse 825ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/esutils 503ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/source-map 3ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/object-inspect 1248ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/side-channel-list 627ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/side-channel-map 355ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/side-channel-weakmap 310ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@emnapi%2fruntime 2072ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/call-bound 1163ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/smart-buffer 965ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/encoding 1113ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/event-target-shim 1121ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/whatwg-url 1986ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/buffer-alloc 610ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/buffer-alloc-unsafe 324ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/buffer-fill 1618ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/wrap-ansi 890ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/strip-ansi 3ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/emoji-regex 1339ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/is-fullwidth-code-point 384ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/ansi-regex 3ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/ansi-styles 2ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/color-convert 874ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/color-name 379ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/pend 548ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/has-flag 410ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/tr46 2386ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/webidl-conversions 795ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m openclaw@file:/mnt/vio4-0/OpenClawMgr-glibc-acceptance-20261123/.install.LEOdAP/openclaw-2026.3.28.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m is-network-error@https://registry.npmjs.org/is-network-error/-/is-network-error-1.3.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m webidl-conversions@https://registry.npmjs.org/webidl-conversions/-/webidl-conversions-3.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m tr46@https://registry.npmjs.org/tr46/-/tr46-0.0.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m whatwg-url@https://registry.npmjs.org/whatwg-url/-/whatwg-url-5.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m is-stream@https://registry.npmjs.org/is-stream/-/is-stream-2.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m has-flag@https://registry.npmjs.org/has-flag/-/has-flag-4.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m supports-color@https://registry.npmjs.org/supports-color/-/supports-color-7.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m pend@https://registry.npmjs.org/pend/-/pend-1.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m fd-slicer@https://registry.npmjs.org/fd-slicer/-/fd-slicer-1.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m buffer-crc32@https://registry.npmjs.org/buffer-crc32/-/buffer-crc32-0.2.13.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m color-name@https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m color-convert@https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ansi-styles@https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m is-fullwidth-code-point@https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m emoji-regex@https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m wrap-ansi@https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ansi-regex@https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m strip-ansi@https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m yargs-parser@https://registry.npmjs.org/yargs-parser/-/yargs-parser-20.2.9.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m y18n@https://registry.npmjs.org/y18n/-/y18n-5.0.8.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m string-width@https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ansi-regex@https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m strip-ansi@https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m get-caller-file@https://registry.npmjs.org/get-caller-file/-/get-caller-file-2.0.5.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m require-directory@https://registry.npmjs.org/require-directory/-/require-directory-2.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m escalade@https://registry.npmjs.org/escalade/-/escalade-3.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m cliui@https://registry.npmjs.org/cliui/-/cliui-7.0.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ansi-regex@https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m strip-ansi@https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m isexe@https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m media-typer@https://registry.npmjs.org/media-typer/-/media-typer-1.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ieee754@https://registry.npmjs.org/ieee754/-/ieee754-1.2.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @borewit/text-codec@https://registry.npmjs.org/@borewit/text-codec/-/text-codec-0.2.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m thenify@https://registry.npmjs.org/thenify/-/thenify-3.3.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m buffer-fill@https://registry.npmjs.org/buffer-fill/-/buffer-fill-1.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m buffer-alloc-unsafe@https://registry.npmjs.org/buffer-alloc-unsafe/-/buffer-alloc-unsafe-1.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m buffer-alloc@https://registry.npmjs.org/buffer-alloc/-/buffer-alloc-1.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m event-target-shim@https://registry.npmjs.org/event-target-shim/-/event-target-shim-5.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m sandwich-stream@https://registry.npmjs.org/sandwich-stream/-/sandwich-stream-2.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m safe-compare@https://registry.npmjs.org/safe-compare/-/safe-compare-1.1.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m p-timeout@https://registry.npmjs.org/p-timeout/-/p-timeout-4.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m mri@https://registry.npmjs.org/mri/-/mri-1.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m abort-controller@https://registry.npmjs.org/abort-controller/-/abort-controller-3.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @telegraf/types@https://registry.npmjs.org/@telegraf/types/-/types-7.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m yallist@https://registry.npmjs.org/yallist/-/yallist-5.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m minizlib@https://registry.npmjs.org/minizlib/-/minizlib-3.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m chownr@https://registry.npmjs.org/chownr/-/chownr-3.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @isaacs/fs-minipass@https://registry.npmjs.org/@isaacs/fs-minipass/-/fs-minipass-4.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @tokenizer/token@https://registry.npmjs.org/@tokenizer/token/-/token-0.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ansi-regex@https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.6.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m fast-sha256@https://registry.npmjs.org/fast-sha256/-/fast-sha256-1.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @stablelib/base64@https://registry.npmjs.org/@stablelib/base64/-/base64-1.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m sqlite-vec-linux-x64@https://registry.npmjs.org/sqlite-vec-linux-x64/-/sqlite-vec-linux-x64-0.1.7.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m buffer-from@https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m smart-buffer@https://registry.npmjs.org/smart-buffer/-/smart-buffer-4.2.0.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m call-bound@https://registry.npmjs.org/call-bound/-/call-bound-1.0.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m side-channel-weakmap@https://registry.npmjs.org/side-channel-weakmap/-/side-channel-weakmap-1.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m side-channel-map@https://registry.npmjs.org/side-channel-map/-/side-channel-map-1.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m side-channel-list@https://registry.npmjs.org/side-channel-list/-/side-channel-list-1.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m object-inspect@https://registry.npmjs.org/object-inspect/-/object-inspect-1.14.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m shebang-regex@https://registry.npmjs.org/shebang-regex/-/shebang-regex-3.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m semver@https://registry.npmjs.org/semver/-/semver-7.8.6.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m detect-libc@https://registry.npmjs.org/detect-libc/-/detect-libc-2.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @img/sharp-linuxmusl-x64@https://registry.npmjs.org/@img/sharp-linuxmusl-x64/-/sharp-linuxmusl-x64-0.34.5.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @img/sharp-libvips-linuxmusl-x64@https://registry.npmjs.org/@img/sharp-libvips-linuxmusl-x64/-/sharp-libvips-linuxmusl-x64-1.2.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @img/colour@https://registry.npmjs.org/@img/colour/-/colour-1.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m path-to-regexp@https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-8.4.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m is-promise@https://registry.npmjs.org/is-promise/-/is-promise-4.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m util-deprecate@https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m string_decoder@https://registry.npmjs.org/string_decoder/-/string_decoder-1.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m safe-buffer@https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m process-nextick-args@https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m isarray@https://registry.npmjs.org/isarray/-/isarray-1.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m core-util-is@https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m unpipe@https://registry.npmjs.org/unpipe/-/unpipe-1.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m side-channel@https://registry.npmjs.org/side-channel/-/side-channel-1.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m end-of-stream@https://registry.npmjs.org/end-of-stream/-/end-of-stream-1.4.5.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m source-map@https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m esutils@https://registry.npmjs.org/esutils/-/esutils-2.0.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m estraverse@https://registry.npmjs.org/estraverse/-/estraverse-5.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m esprima@https://registry.npmjs.org/esprima/-/esprima-4.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m escodegen@https://registry.npmjs.org/escodegen/-/escodegen-2.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ast-types@https://registry.npmjs.org/ast-types/-/ast-types-0.13.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m netmask@https://registry.npmjs.org/netmask/-/netmask-2.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m degenerator@https://registry.npmjs.org/degenerator/-/degenerator-5.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m basic-ftp@https://registry.npmjs.org/basic-ftp/-/basic-ftp-5.3.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m pac-resolver@https://registry.npmjs.org/pac-resolver/-/pac-resolver-7.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m get-uri@https://registry.npmjs.org/get-uri/-/get-uri-6.0.5.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m data-uri-to-buffer@https://registry.npmjs.org/data-uri-to-buffer/-/data-uri-to-buffer-6.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @tootallnate/quickjs-emscripten@https://registry.npmjs.org/@tootallnate/quickjs-emscripten/-/quickjs-emscripten-0.23.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m socks-proxy-agent@https://registry.npmjs.org/socks-proxy-agent/-/socks-proxy-agent-8.0.5.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m pac-proxy-agent@https://registry.npmjs.org/pac-proxy-agent/-/pac-proxy-agent-7.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m http-proxy-agent@https://registry.npmjs.org/http-proxy-agent/-/http-proxy-agent-7.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m forwarded@https://registry.npmjs.org/forwarded/-/forwarded-0.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @protobufjs/utf8@https://registry.npmjs.org/@protobufjs/utf8/-/utf8-1.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @protobufjs/pool@https://registry.npmjs.org/@protobufjs/pool/-/pool-1.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @protobufjs/path@https://registry.npmjs.org/@protobufjs/path/-/path-1.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @protobufjs/float@https://registry.npmjs.org/@protobufjs/float/-/float-1.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @protobufjs/fetch@https://registry.npmjs.org/@protobufjs/fetch/-/fetch-1.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @protobufjs/eventemitter@https://registry.npmjs.org/@protobufjs/eventemitter/-/eventemitter-1.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @protobufjs/codegen@https://registry.npmjs.org/@protobufjs/codegen/-/codegen-2.0.5.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @protobufjs/base64@https://registry.npmjs.org/@protobufjs/base64/-/base64-1.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @protobufjs/aspromise@https://registry.npmjs.org/@protobufjs/aspromise/-/aspromise-1.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m signal-exit@https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.7.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m graceful-fs@https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.12.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m retry@https://registry.npmjs.org/retry/-/retry-0.13.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @types/retry@https://registry.npmjs.org/@types/retry/-/retry-0.12.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m telegraf@https://registry.npmjs.org/telegraf/-/telegraf-4.16.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m node-fetch@https://registry.npmjs.org/node-fetch/-/node-fetch-2.7.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m wrappy@https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ee-first@https://registry.npmjs.org/ee-first/-/ee-first-1.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m web-streams-polyfill@https://registry.npmjs.org/web-streams-polyfill/-/web-streams-polyfill-3.3.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m node-domexception@https://registry.npmjs.org/node-domexception/-/node-domexception-1.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m formdata-polyfill@https://registry.npmjs.org/formdata-polyfill/-/formdata-polyfill-4.0.10.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m fetch-blob@https://registry.npmjs.org/fetch-blob/-/fetch-blob-3.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m thenify-all@https://registry.npmjs.org/thenify-all/-/thenify-all-1.6.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m any-promise@https://registry.npmjs.org/any-promise/-/any-promise-1.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m balanced-match@https://registry.npmjs.org/balanced-match/-/balanced-match-4.0.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m data-uri-to-buffer@https://registry.npmjs.org/data-uri-to-buffer/-/data-uri-to-buffer-4.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-5.0.13.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m mime-db@https://registry.npmjs.org/mime-db/-/mime-db-1.54.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m events@https://registry.npmjs.org/events/-/events-3.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @types/events@https://registry.npmjs.org/@types/events/-/events-3.0.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m base-x@https://registry.npmjs.org/base-x/-/base-x-5.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m unhomoglyph@https://registry.npmjs.org/unhomoglyph/-/unhomoglyph-1.0.6.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m sdp-transform@https://registry.npmjs.org/sdp-transform/-/sdp-transform-3.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m oidc-client-ts@https://registry.npmjs.org/oidc-client-ts/-/oidc-client-ts-3.5.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m matrix-widget-api@https://registry.npmjs.org/matrix-widget-api/-/matrix-widget-api-1.20.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m matrix-events-sdk@https://registry.npmjs.org/matrix-events-sdk/-/matrix-events-sdk-0.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m loglevel@https://registry.npmjs.org/loglevel/-/loglevel-1.9.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m jwt-decode@https://registry.npmjs.org/jwt-decode/-/jwt-decode-4.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m bs58@https://registry.npmjs.org/bs58/-/bs58-6.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m another-json@https://registry.npmjs.org/another-json/-/another-json-0.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @matrix-org/matrix-sdk-crypto-wasm@https://registry.npmjs.org/@matrix-org/matrix-sdk-crypto-wasm/-/matrix-sdk-crypto-wasm-18.9.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m uc.micro@https://registry.npmjs.org/uc.micro/-/uc.micro-2.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m punycode.js@https://registry.npmjs.org/punycode.js/-/punycode.js-2.3.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m mdurl@https://registry.npmjs.org/mdurl/-/mdurl-2.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m linkify-it@https://registry.npmjs.org/linkify-it/-/linkify-it-5.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m argparse@https://registry.npmjs.org/argparse/-/argparse-2.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m entities@https://registry.npmjs.org/entities/-/entities-8.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m dom-serializer@https://registry.npmjs.org/dom-serializer/-/dom-serializer-3.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m domelementtype@https://registry.npmjs.org/domelementtype/-/domelementtype-3.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m nth-check@https://registry.npmjs.org/nth-check/-/nth-check-3.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m domutils@https://registry.npmjs.org/domutils/-/domutils-4.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m domhandler@https://registry.npmjs.org/domhandler/-/domhandler-6.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m css-what@https://registry.npmjs.org/css-what/-/css-what-8.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m boolbase@https://registry.npmjs.org/boolbase/-/boolbase-2.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m uhyphen@https://registry.npmjs.org/uhyphen/-/uhyphen-0.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m htmlparser2@https://registry.npmjs.org/htmlparser2/-/htmlparser2-10.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m dom-serializer@https://registry.npmjs.org/dom-serializer/-/dom-serializer-2.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m entities@https://registry.npmjs.org/entities/-/entities-4.5.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m entities@https://registry.npmjs.org/entities/-/entities-7.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m domutils@https://registry.npmjs.org/domutils/-/domutils-3.2.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m domhandler@https://registry.npmjs.org/domhandler/-/domhandler-5.0.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m domelementtype@https://registry.npmjs.org/domelementtype/-/domelementtype-2.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m html-escaper@https://registry.npmjs.org/html-escaper/-/html-escaper-3.0.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m cssomnom@https://registry.npmjs.org/cssomnom/-/cssomnom-0.1.12.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m css-select@https://registry.npmjs.org/css-select/-/css-select-7.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m immediate@https://registry.npmjs.org/immediate/-/immediate-3.0.6.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m buffer-equal-constant-time@https://registry.npmjs.org/buffer-equal-constant-time/-/buffer-equal-constant-time-1.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m jwa@https://registry.npmjs.org/jwa/-/jwa-2.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m setimmediate@https://registry.npmjs.org/setimmediate/-/setimmediate-1.0.5.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m readable-stream@https://registry.npmjs.org/readable-stream/-/readable-stream-2.3.8.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m safe-buffer@https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m pako@https://registry.npmjs.org/pako/-/pako-1.0.11.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m lie@https://registry.npmjs.org/lie/-/lie-3.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ts-algebra@https://registry.npmjs.org/ts-algebra/-/ts-algebra-2.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @babel/runtime@https://registry.npmjs.org/@babel/runtime/-/runtime-7.29.15.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m bignumber.js@https://registry.npmjs.org/bignumber.js/-/bignumber.js-9.3.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m safer-buffer@https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m agent-base@https://registry.npmjs.org/agent-base/-/agent-base-7.1.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m toidentifier@https://registry.npmjs.org/toidentifier/-/toidentifier-1.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m setprototypeof@https://registry.npmjs.org/setprototypeof/-/setprototypeof-1.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m inherits@https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m lru-cache@https://registry.npmjs.org/lru-cache/-/lru-cache-11.5.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m json-bigint@https://registry.npmjs.org/json-bigint/-/json-bigint-1.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m google-logging-utils@https://registry.npmjs.org/google-logging-utils/-/google-logging-utils-0.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m safe-buffer@https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m jws@https://registry.npmjs.org/jws/-/jws-4.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m gtoken@https://registry.npmjs.org/gtoken/-/gtoken-7.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m uuid@https://registry.npmjs.org/uuid/-/uuid-9.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m node-fetch@https://registry.npmjs.org/node-fetch/-/node-fetch-2.7.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m gaxios@https://registry.npmjs.org/gaxios/-/gaxios-6.7.1.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m gcp-metadata@https://registry.npmjs.org/gcp-metadata/-/gcp-metadata-6.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m uuid@https://registry.npmjs.org/uuid/-/uuid-9.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m node-fetch@https://registry.npmjs.org/node-fetch/-/node-fetch-2.7.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m gaxios@https://registry.npmjs.org/gaxios/-/gaxios-6.7.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ecdsa-sig-formatter@https://registry.npmjs.org/ecdsa-sig-formatter/-/ecdsa-sig-formatter-1.0.11.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m base64-js@https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m path-scurry@https://registry.npmjs.org/path-scurry/-/path-scurry-2.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m minipass@https://registry.npmjs.org/minipass/-/minipass-7.1.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m pump@https://registry.npmjs.org/pump/-/pump-3.0.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m dunder-proto@https://registry.npmjs.org/dunder-proto/-/dunder-proto-1.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m math-intrinsics@https://registry.npmjs.org/math-intrinsics/-/math-intrinsics-1.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m has-symbols@https://registry.npmjs.org/has-symbols/-/has-symbols-1.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m gopd@https://registry.npmjs.org/gopd/-/gopd-1.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m get-proto@https://registry.npmjs.org/get-proto/-/get-proto-1.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m function-bind@https://registry.npmjs.org/function-bind/-/function-bind-1.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m es-object-atoms@https://registry.npmjs.org/es-object-atoms/-/es-object-atoms-1.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m es-define-property@https://registry.npmjs.org/es-define-property/-/es-define-property-1.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m call-bind-apply-helpers@https://registry.npmjs.org/call-bind-apply-helpers/-/call-bind-apply-helpers-1.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m node-fetch@https://registry.npmjs.org/node-fetch/-/node-fetch-3.3.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m extend@https://registry.npmjs.org/extend/-/extend-3.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m has-tostringtag@https://registry.npmjs.org/has-tostringtag/-/has-tostringtag-1.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m get-intrinsic@https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m es-errors@https://registry.npmjs.org/es-errors/-/es-errors-1.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m delayed-stream@https://registry.npmjs.org/delayed-stream/-/delayed-stream-1.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m hasown@https://registry.npmjs.org/hasown/-/hasown-2.0.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m es-set-tostringtag@https://registry.npmjs.org/es-set-tostringtag/-/es-set-tostringtag-2.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m combined-stream@https://registry.npmjs.org/combined-stream/-/combined-stream-1.0.8.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m asynckit@https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m uint8array-extras@https://registry.npmjs.org/uint8array-extras/-/uint8array-extras-1.6.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m token-types@https://registry.npmjs.org/token-types/-/token-types-6.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m strtok3@https://registry.npmjs.org/strtok3/-/strtok3-10.8.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @tokenizer/inflate@https://registry.npmjs.org/@tokenizer/inflate/-/inflate-0.4.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m fast-string-truncated-width@https://registry.npmjs.org/fast-string-truncated-width/-/fast-string-truncated-width-3.0.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m yauzl@https://registry.npmjs.org/yauzl/-/yauzl-2.10.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m get-stream@https://registry.npmjs.org/get-stream/-/get-stream-5.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @types/yauzl@https://registry.npmjs.org/@types/yauzl/-/yauzl-2.10.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ip-address@https://registry.npmjs.org/ip-address/-/ip-address-10.7.6.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m iconv-lite@https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.7.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m bytes@https://registry.npmjs.org/bytes/-/bytes-3.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m negotiator@https://registry.npmjs.org/negotiator/-/negotiator-1.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m content-type@https://registry.npmjs.org/content-type/-/content-type-2.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m type-is@https://registry.npmjs.org/type-is/-/type-is-2.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m content-type@https://registry.npmjs.org/content-type/-/content-type-2.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m statuses@https://registry.npmjs.org/statuses/-/statuses-2.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m serve-static@https://registry.npmjs.org/serve-static/-/serve-static-2.2.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m send@https://registry.npmjs.org/send/-/send-1.2.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m router@https://registry.npmjs.org/router/-/router-2.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m range-parser@https://registry.npmjs.org/range-parser/-/range-parser-1.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m qs@https://registry.npmjs.org/qs/-/qs-6.17.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m proxy-addr@https://registry.npmjs.org/proxy-addr/-/proxy-addr-2.0.8.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ipaddr.js@https://registry.npmjs.org/ipaddr.js/-/ipaddr.js-1.9.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m parseurl@https://registry.npmjs.org/parseurl/-/parseurl-1.3.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m once@https://registry.npmjs.org/once/-/once-1.4.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m on-finished@https://registry.npmjs.org/on-finished/-/on-finished-2.4.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m merge-descriptors@https://registry.npmjs.org/merge-descriptors/-/merge-descriptors-2.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m http-errors@https://registry.npmjs.org/http-errors/-/http-errors-2.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m fresh@https://registry.npmjs.org/fresh/-/fresh-2.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m finalhandler@https://registry.npmjs.org/finalhandler/-/finalhandler-2.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m etag@https://registry.npmjs.org/etag/-/etag-1.8.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m escape-html@https://registry.npmjs.org/escape-html/-/escape-html-1.0.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m encodeurl@https://registry.npmjs.org/encodeurl/-/encodeurl-2.0.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m depd@https://registry.npmjs.org/depd/-/depd-2.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m cookie-signature@https://registry.npmjs.org/cookie-signature/-/cookie-signature-1.2.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m cookie@https://registry.npmjs.org/cookie/-/cookie-0.7.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m content-disposition@https://registry.npmjs.org/content-disposition/-/content-disposition-2.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m body-parser@https://registry.npmjs.org/body-parser/-/body-parser-2.4.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m content-type@https://registry.npmjs.org/content-type/-/content-type-2.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m accepts@https://registry.npmjs.org/accepts/-/accepts-2.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ms@https://registry.npmjs.org/ms/-/ms-2.1.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m which@https://registry.npmjs.org/which/-/which-2.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m shebang-command@https://registry.npmjs.org/shebang-command/-/shebang-command-2.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m path-key@https://registry.npmjs.org/path-key/-/path-key-3.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m vary@https://registry.npmjs.org/vary/-/vary-1.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m object-assign@https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m yargs@https://registry.npmjs.org/yargs/-/yargs-16.2.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m parse5-htmlparser2-tree-adapter@https://registry.npmjs.org/parse5-htmlparser2-tree-adapter/-/parse5-htmlparser2-tree-adapter-6.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m parse5@https://registry.npmjs.org/parse5/-/parse5-6.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m parse5@https://registry.npmjs.org/parse5/-/parse5-5.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m mz@https://registry.npmjs.org/mz/-/mz-2.7.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m highlight.js@https://registry.npmjs.org/highlight.js/-/highlight.js-10.7.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m readdirp@https://registry.npmjs.org/readdirp/-/readdirp-5.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m proxy-from-env@https://registry.npmjs.org/proxy-from-env/-/proxy-from-env-2.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m form-data@https://registry.npmjs.org/form-data/-/form-data-4.0.6.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m mime-db@https://registry.npmjs.org/mime-db/-/mime-db-1.52.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m mime-types@https://registry.npmjs.org/mime-types/-/mime-types-2.1.35.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m follow-redirects@https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.16.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m require-from-string@https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m json-schema-traverse@https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m fast-uri@https://registry.npmjs.org/fast-uri/-/fast-uri-3.1.9.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m undici-types@https://registry.npmjs.org/undici-types/-/undici-types-7.24.6.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @napi-rs/canvas-linux-x64-musl@https://registry.npmjs.org/@napi-rs/canvas-linux-x64-musl/-/canvas-linux-x64-musl-0.1.100.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m raw-body@https://registry.npmjs.org/raw-body/-/raw-body-3.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m pkce-challenge@https://registry.npmjs.org/pkce-challenge/-/pkce-challenge-5.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m json-schema-typed@https://registry.npmjs.org/json-schema-typed/-/json-schema-typed-8.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m jose@https://registry.npmjs.org/jose/-/jose-6.2.18.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m express-rate-limit@https://registry.npmjs.org/express-rate-limit/-/express-rate-limit-8.7.5.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m eventsource-parser@https://registry.npmjs.org/eventsource-parser/-/eventsource-parser-3.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m eventsource@https://registry.npmjs.org/eventsource/-/eventsource-3.0.7.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m cross-spawn@https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.6.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m cors@https://registry.npmjs.org/cors/-/cors-2.8.6.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m content-type@https://registry.npmjs.org/content-type/-/content-type-1.0.5.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @hono/node-server@https://registry.npmjs.org/@hono/node-server/-/node-server-1.19.19.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m node-downloader-helper@https://registry.npmjs.org/node-downloader-helper/-/node-downloader-helper-2.1.11.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https-proxy-agent@https://registry.npmjs.org/https-proxy-agent/-/https-proxy-agent-7.0.6.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m mime-types@https://registry.npmjs.org/mime-types/-/mime-types-3.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m koffi@https://registry.npmjs.org/koffi/-/koffi-2.16.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m get-east-asian-width@https://registry.npmjs.org/get-east-asian-width/-/get-east-asian-width-1.7.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @types/mime-types@https://registry.npmjs.org/@types/mime-types/-/mime-types-2.1.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m yoctocolors@https://registry.npmjs.org/yoctocolors/-/yoctocolors-2.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m std-env@https://registry.npmjs.org/std-env/-/std-env-3.10.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @mariozechner/clipboard-linux-x64-musl@https://registry.npmjs.org/@mariozechner/clipboard-linux-x64-musl/-/clipboard-linux-x64-musl-0.3.9.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m strip-ansi@https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m proper-lockfile@https://registry.npmjs.org/proper-lockfile/-/proper-lockfile-4.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m retry@https://registry.npmjs.org/retry/-/retry-0.12.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m minimatch@https://registry.npmjs.org/minimatch/-/minimatch-10.2.6.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m marked@https://registry.npmjs.org/marked/-/marked-15.0.12.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ignore@https://registry.npmjs.org/ignore/-/ignore-7.0.16.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m hosted-git-info@https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-9.0.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m glob@https://registry.npmjs.org/glob/-/glob-13.0.7.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m extract-zip@https://registry.npmjs.org/extract-zip/-/extract-zip-2.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m diff@https://registry.npmjs.org/diff/-/diff-8.0.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @silvia-odwyer/photon-node@https://registry.npmjs.org/@silvia-odwyer/photon-node/-/photon-node-0.3.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @mariozechner/jiti@https://registry.npmjs.org/@mariozechner/jiti/-/jiti-2.6.5.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @mariozechner/clipboard@https://registry.npmjs.org/@mariozechner/clipboard/-/clipboard-0.3.9.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m protobufjs@https://registry.npmjs.org/protobufjs/-/protobufjs-7.6.6.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m p-retry@https://registry.npmjs.org/p-retry/-/p-retry-4.6.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/middleware-websocket@https://registry.npmjs.org/@aws-sdk/middleware-websocket/-/middleware-websocket-3.972.67.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/middleware-eventstream@https://registry.npmjs.org/@aws-sdk/middleware-eventstream/-/middleware-eventstream-3.972.38.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/eventstream-handler-node@https://registry.npmjs.org/@aws-sdk/eventstream-handler-node/-/eventstream-handler-node-3.972.42.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m zod-to-json-schema@https://registry.npmjs.org/zod-to-json-schema/-/zod-to-json-schema-3.25.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m proxy-agent@https://registry.npmjs.org/proxy-agent/-/proxy-agent-6.5.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m proxy-from-env@https://registry.npmjs.org/proxy-from-env/-/proxy-from-env-1.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m lru-cache@https://registry.npmjs.org/lru-cache/-/lru-cache-7.18.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m partial-json@https://registry.npmjs.org/partial-json/-/partial-json-0.1.7.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m openai@https://registry.npmjs.org/openai/-/openai-6.26.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ajv-formats@https://registry.npmjs.org/ajv-formats/-/ajv-formats-3.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @mistralai/mistralai@https://registry.npmjs.org/@mistralai/mistralai/-/mistralai-1.14.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @google/genai@https://registry.npmjs.org/@google/genai/-/genai-1.52.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m google-logging-utils@https://registry.npmjs.org/google-logging-utils/-/google-logging-utils-1.1.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m gcp-metadata@https://registry.npmjs.org/gcp-metadata/-/gcp-metadata-8.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m google-auth-library@https://registry.npmjs.org/google-auth-library/-/google-auth-library-10.9.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/client-bedrock-runtime@https://registry.npmjs.org/@aws-sdk/client-bedrock-runtime/-/client-bedrock-runtime-3.1175.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @lydell/node-pty-linux-x64@https://registry.npmjs.org/@lydell/node-pty-linux-x64/-/node-pty-linux-x64-1.2.0-beta.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m axios@https://registry.npmjs.org/axios/-/axios-1.21.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m agent-base@https://registry.npmjs.org/agent-base/-/agent-base-6.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https-proxy-agent@https://registry.npmjs.org/https-proxy-agent/-/https-proxy-agent-5.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @types/node@https://registry.npmjs.org/@types/node/-/node-24.19.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m source-map-support@https://registry.npmjs.org/source-map-support/-/source-map-support-0.5.21.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m fast-deep-equal@https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m debug@https://registry.npmjs.org/debug/-/debug-4.4.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m sisteransi@https://registry.npmjs.org/sisteransi/-/sisteransi-2.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m fast-wrap-ansi@https://registry.npmjs.org/fast-wrap-ansi/-/fast-wrap-ansi-0.2.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m fast-string-width@https://registry.npmjs.org/fast-string-width/-/fast-string-width-3.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @clack/core@https://registry.npmjs.org/@clack/core/-/core-1.6.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/signature-v4-multi-region@https://registry.npmjs.org/@aws-sdk/signature-v4-multi-region/-/signature-v4-multi-region-3.996.52.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/nested-clients@https://registry.npmjs.org/@aws-sdk/nested-clients/-/nested-clients-3.998.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/credential-provider-login@https://registry.npmjs.org/@aws-sdk/credential-provider-login/-/credential-provider-login-3.972.93.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @smithy/credential-provider-imds@https://registry.npmjs.org/@smithy/credential-provider-imds/-/credential-provider-imds-4.5.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/credential-provider-web-identity@https://registry.npmjs.org/@aws-sdk/credential-provider-web-identity/-/credential-provider-web-identity-3.972.91.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/credential-provider-sso@https://registry.npmjs.org/@aws-sdk/credential-provider-sso/-/credential-provider-sso-3.973.29.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/credential-provider-process@https://registry.npmjs.org/@aws-sdk/credential-provider-process/-/credential-provider-process-3.972.85.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/credential-provider-ini@https://registry.npmjs.org/@aws-sdk/credential-provider-ini/-/credential-provider-ini-3.973.31.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/credential-provider-http@https://registry.npmjs.org/@aws-sdk/credential-provider-http/-/credential-provider-http-3.972.87.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/credential-provider-env@https://registry.npmjs.org/@aws-sdk/credential-provider-env/-/credential-provider-env-3.972.85.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m bowser@https://registry.npmjs.org/bowser/-/bowser-2.15.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @smithy/signature-v4@https://registry.npmjs.org/@smithy/signature-v4/-/signature-v4-5.7.5.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws/lambda-invoke-store@https://registry.npmjs.org/@aws/lambda-invoke-store/-/lambda-invoke-store-0.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/xml-builder@https://registry.npmjs.org/@aws-sdk/xml-builder/-/xml-builder-3.972.43.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m tslib@https://registry.npmjs.org/tslib/-/tslib-2.9.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @smithy/types@https://registry.npmjs.org/@smithy/types/-/types-4.20.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @smithy/node-http-handler@https://registry.npmjs.org/@smithy/node-http-handler/-/node-http-handler-4.14.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @smithy/fetch-http-handler@https://registry.npmjs.org/@smithy/fetch-http-handler/-/fetch-http-handler-5.8.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @smithy/core@https://registry.npmjs.org/@smithy/core/-/core-3.41.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/types@https://registry.npmjs.org/@aws-sdk/types/-/types-3.975.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/token-providers@https://registry.npmjs.org/@aws-sdk/token-providers/-/token-providers-3.1175.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/credential-provider-node@https://registry.npmjs.org/@aws-sdk/credential-provider-node/-/credential-provider-node-3.972.98.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/core@https://registry.npmjs.org/@aws-sdk/core/-/core-3.981.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m standardwebhooks@https://registry.npmjs.org/standardwebhooks/-/standardwebhooks-1.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m json-schema-to-ts@https://registry.npmjs.org/json-schema-to-ts/-/json-schema-to-ts-3.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @opentelemetry/api@https://registry.npmjs.org/@opentelemetry/api/-/api-1.10.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m google-auth-library@https://registry.npmjs.org/google-auth-library/-/google-auth-library-9.15.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m uuid@https://registry.npmjs.org/uuid/-/uuid-9.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m node-fetch@https://registry.npmjs.org/node-fetch/-/node-fetch-2.7.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m gaxios@https://registry.npmjs.org/gaxios/-/gaxios-6.7.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @anthropic-ai/sdk@https://registry.npmjs.org/@anthropic-ai/sdk/-/sdk-0.137.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m yaml@https://registry.npmjs.org/yaml/-/yaml-2.9.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ws@https://registry.npmjs.org/ws/-/ws-8.23.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m uuid@https://registry.npmjs.org/uuid/-/uuid-13.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m undici@https://registry.npmjs.org/undici/-/undici-7.30.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m tslog@https://registry.npmjs.org/tslog/-/tslog-4.11.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m tar@https://registry.npmjs.org/tar/-/tar-7.5.13.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m sqlite-vec@https://registry.npmjs.org/sqlite-vec/-/sqlite-vec-0.1.7.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m sharp@https://registry.npmjs.org/sharp/-/sharp-0.34.5.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m qrcode-terminal@https://registry.npmjs.org/qrcode-terminal/-/qrcode-terminal-0.12.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m playwright-core@https://registry.npmjs.org/playwright-core/-/playwright-core-1.58.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m pdfjs-dist@https://registry.npmjs.org/pdfjs-dist/-/pdfjs-dist-5.7.284.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m osc-progress@https://registry.npmjs.org/osc-progress/-/osc-progress-0.3.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m openshell@https://registry.npmjs.org/openshell/-/openshell-0.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m dotenv@https://registry.npmjs.org/dotenv/-/dotenv-16.6.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m node-edge-tts@https://registry.npmjs.org/node-edge-tts/-/node-edge-tts-1.2.12.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ansi-regex@https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m strip-ansi@https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m yargs-parser@https://registry.npmjs.org/yargs-parser/-/yargs-parser-21.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m cliui@https://registry.npmjs.org/cliui/-/cliui-8.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m yargs@https://registry.npmjs.org/yargs/-/yargs-17.7.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m matrix-js-sdk@https://registry.npmjs.org/matrix-js-sdk/-/matrix-js-sdk-41.2.0.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m p-retry@https://registry.npmjs.org/p-retry/-/p-retry-7.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m markdown-it@https://registry.npmjs.org/markdown-it/-/markdown-it-14.3.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m entities@https://registry.npmjs.org/entities/-/entities-4.5.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m long@https://registry.npmjs.org/long/-/long-5.3.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m linkedom@https://registry.npmjs.org/linkedom/-/linkedom-0.18.15.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m jszip@https://registry.npmjs.org/jszip/-/jszip-3.10.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m json5@https://registry.npmjs.org/json5/-/json5-2.2.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m jiti@https://registry.npmjs.org/jiti/-/jiti-2.7.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ipaddr.js@https://registry.npmjs.org/ipaddr.js/-/ipaddr.js-2.5.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m hono@https://registry.npmjs.org/hono/-/hono-4.12.9.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m gaxios@https://registry.npmjs.org/gaxios/-/gaxios-7.1.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m file-type@https://registry.npmjs.org/file-type/-/file-type-22.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m express@https://registry.npmjs.org/express/-/express-5.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m content-type@https://registry.npmjs.org/content-type/-/content-type-2.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m dotenv@https://registry.npmjs.org/dotenv/-/dotenv-17.4.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m croner@https://registry.npmjs.org/croner/-/croner-10.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m commander@https://registry.npmjs.org/commander/-/commander-14.0.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m cli-highlight@https://registry.npmjs.org/cli-highlight/-/cli-highlight-2.1.11.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m chalk@https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m chokidar@https://registry.npmjs.org/chokidar/-/chokidar-5.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m chalk@https://registry.npmjs.org/chalk/-/chalk-5.6.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ajv@https://registry.npmjs.org/ajv/-/ajv-8.20.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @sinclair/typebox@https://registry.npmjs.org/@sinclair/typebox/-/typebox-0.34.48.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @napi-rs/canvas@https://registry.npmjs.org/@napi-rs/canvas/-/canvas-0.1.100.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @mozilla/readability@https://registry.npmjs.org/@mozilla/readability/-/readability-0.6.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @modelcontextprotocol/sdk@https://registry.npmjs.org/@modelcontextprotocol/sdk/-/sdk-1.28.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @matrix-org/matrix-sdk-crypto-nodejs@https://registry.npmjs.org/@matrix-org/matrix-sdk-crypto-nodejs/-/matrix-sdk-crypto-nodejs-0.4.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @mariozechner/pi-tui@https://registry.npmjs.org/@mariozechner/pi-tui/-/pi-tui-0.63.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @mariozechner/pi-coding-agent@https://registry.npmjs.org/@mariozechner/pi-coding-agent/-/pi-coding-agent-0.63.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m file-type@https://registry.npmjs.org/file-type/-/file-type-21.3.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @mariozechner/pi-ai@https://registry.npmjs.org/@mariozechner/pi-ai/-/pi-ai-0.63.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @anthropic-ai/sdk@https://registry.npmjs.org/@anthropic-ai/sdk/-/sdk-0.73.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @mariozechner/pi-agent-core@https://registry.npmjs.org/@mariozechner/pi-agent-core/-/pi-agent-core-0.63.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @lydell/node-pty@https://registry.npmjs.org/@lydell/node-pty/-/node-pty-1.2.0-beta.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @line/bot-sdk@https://registry.npmjs.org/@line/bot-sdk/-/bot-sdk-10.8.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @homebridge/ciao@https://registry.npmjs.org/@homebridge/ciao/-/ciao-1.4.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @clack/prompts@https://registry.npmjs.org/@clack/prompts/-/prompts-1.9.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/client-bedrock@https://registry.npmjs.org/@aws-sdk/client-bedrock/-/client-bedrock-3.1175.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @anthropic-ai/vertex-sdk@https://registry.npmjs.org/@anthropic-ai/vertex-sdk/-/vertex-sdk-0.14.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m zod@https://registry.npmjs.org/zod/-/zod-4.6.7.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @agentclientprotocol/sdk@https://registry.npmjs.org/@agentclientprotocol/sdk/-/sdk-0.17.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m socks@https://registry.npmjs.org/socks/-/socks-2.8.11.tgz 0ms (cache hit)
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m @mariozechner/pi-agent-core@0.63.1: please use @earendil-works/pi-agent-core instead going forward
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m node-domexception@1.0.0: Use your platform's native DOMException instead
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m uuid@9.0.1: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m uuid@9.0.1: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m uuid@9.0.1: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m @mariozechner/pi-tui@0.63.1: please use @earendil-works/pi-tui instead going forward
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m @mariozechner/pi-ai@0.63.1: please use @earendil-works/pi-ai instead going forward
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m @mariozechner/pi-coding-agent@0.63.1: please use @earendil-works/pi-coding-agent instead going forward
+
+> @google/genai@1.52.0 preinstall
+> echo 'preinstall: no-op'
+
+preinstall: no-op
+
+> koffi@2.16.4 install
+> node src/cnoke/cnoke.js -P . -D src/koffi --prebuild
+
+
+> sharp@0.34.5 install
+> node install/check.js || npm run build
+
+
+> @matrix-org/matrix-sdk-crypto-nodejs@0.4.0 postinstall
+> node download-lib.js
+
+Downloading lib matrix-sdk-crypto.linux-x64-gnu.node from https://github.com/matrix-org/matrix-rust-sdk-crypto-nodejs/releases/download/v0.4.0/matrix-sdk-crypto.linux-x64-gnu.node
+0 b/s - 0.0% [1.3 kB/21.0 MB]
+126.0 kB/s - 0.6% [126.0 kB/21.0 MB]
+64.0 kB/s - 0.9% [190.0 kB/21.0 MB]
+32.0 kB/s - 1.0% [222.0 kB/21.0 MB]
+64.0 kB/s - 1.3% [286.0 kB/21.0 MB]
+48.0 kB/s - 1.6% [334.0 kB/21.0 MB]
+48.0 kB/s - 1.8% [382.0 kB/21.0 MB]
+48.0 kB/s - 2.0% [430.0 kB/21.0 MB]
+48.0 kB/s - 2.2% [478.0 kB/21.0 MB]
+64.0 kB/s - 2.5% [542.0 kB/21.0 MB]
+48.0 kB/s - 2.7% [590.0 kB/21.0 MB]
+64.0 kB/s - 3.0% [654.0 kB/21.0 MB]
+64.0 kB/s - 3.3% [718.0 kB/21.0 MB]
+48.0 kB/s - 3.6% [766.0 kB/21.0 MB]
+80.0 kB/s - 3.9% [846.0 kB/21.0 MB]
+96.0 kB/s - 4.4% [942.0 kB/21.0 MB]
+80.0 kB/s - 4.8% [1022.0 kB/21.0 MB]
+80.0 kB/s - 5.1% [1.1 MB/21.0 MB]
+64.0 kB/s - 5.4% [1.1 MB/21.0 MB]
+64.0 kB/s - 5.7% [1.2 MB/21.0 MB]
+80.0 kB/s - 6.1% [1.3 MB/21.0 MB]
+64.0 kB/s - 6.4% [1.3 MB/21.0 MB]
+48.0 kB/s - 6.6% [1.4 MB/21.0 MB]
+96.0 kB/s - 7.1% [1.5 MB/21.0 MB]
+48.0 kB/s - 7.3% [1.5 MB/21.0 MB]
+80.0 kB/s - 7.7% [1.6 MB/21.0 MB]
+48.0 kB/s - 7.9% [1.7 MB/21.0 MB]
+80.0 kB/s - 8.2% [1.7 MB/21.0 MB]
+112.0 kB/s - 8.8% [1.8 MB/21.0 MB]
+64.0 kB/s - 9.1% [1.9 MB/21.0 MB]
+32.0 kB/s - 9.2% [1.9 MB/21.0 MB]
+64.0 kB/s - 9.5% [2.0 MB/21.0 MB]
+64.0 kB/s - 9.8% [2.1 MB/21.0 MB]
+48.0 kB/s - 10.0% [2.1 MB/21.0 MB]
+48.0 kB/s - 10.3% [2.2 MB/21.0 MB]
+48.0 kB/s - 10.5% [2.2 MB/21.0 MB]
+64.0 kB/s - 10.8% [2.3 MB/21.0 MB]
+48.0 kB/s - 11.0% [2.3 MB/21.0 MB]
+48.0 kB/s - 11.2% [2.4 MB/21.0 MB]
+64.0 kB/s - 11.5% [2.4 MB/21.0 MB]
+64.0 kB/s - 11.7% [2.5 MB/21.0 MB]
+64.0 kB/s - 11.9% [2.5 MB/21.0 MB]
+96.0 kB/s - 12.3% [2.6 MB/21.0 MB]
+112.0 kB/s - 12.9% [2.7 MB/21.0 MB]
+64.0 kB/s - 13.2% [2.8 MB/21.0 MB]
+64.0 kB/s - 13.5% [2.8 MB/21.0 MB]
+48.0 kB/s - 13.7% [2.9 MB/21.0 MB]
+96.0 kB/s - 14.1% [3.0 MB/21.0 MB]
+64.0 kB/s - 14.4% [3.0 MB/21.0 MB]
+80.0 kB/s - 14.8% [3.1 MB/21.0 MB]
+48.0 kB/s - 15.0% [3.2 MB/21.0 MB]
+48.0 kB/s - 15.2% [3.2 MB/21.0 MB]
+64.0 kB/s - 15.5% [3.3 MB/21.0 MB]
+80.0 kB/s - 15.9% [3.3 MB/21.0 MB]
+80.0 kB/s - 16.3% [3.4 MB/21.0 MB]
+112.0 kB/s - 16.8% [3.5 MB/21.0 MB]
+112.0 kB/s - 17.3% [3.6 MB/21.0 MB]
+96.0 kB/s - 17.8% [3.7 MB/21.0 MB]
+112.0 kB/s - 18.3% [3.8 MB/21.0 MB]
+96.0 kB/s - 18.7% [3.9 MB/21.0 MB]
+80.0 kB/s - 19.1% [4.0 MB/21.0 MB]
+48.0 kB/s - 19.3% [4.1 MB/21.0 MB]
+80.0 kB/s - 19.7% [4.1 MB/21.0 MB]
+48.0 kB/s - 19.9% [4.2 MB/21.0 MB]
+48.0 kB/s - 20.1% [4.2 MB/21.0 MB]
+64.0 kB/s - 20.4% [4.3 MB/21.0 MB]
+48.0 kB/s - 20.7% [4.3 MB/21.0 MB]
+80.0 kB/s - 21.0% [4.4 MB/21.0 MB]
+64.0 kB/s - 21.3% [4.5 MB/21.0 MB]
+96.0 kB/s - 21.8% [4.6 MB/21.0 MB]
+64.0 kB/s - 22.1% [4.6 MB/21.0 MB]
+80.0 kB/s - 22.5% [4.7 MB/21.0 MB]
+48.0 kB/s - 22.7% [4.8 MB/21.0 MB]
+80.0 kB/s - 23.0% [4.8 MB/21.0 MB]
+96.0 kB/s - 23.5% [4.9 MB/21.0 MB]
+32.0 kB/s - 23.6% [5.0 MB/21.0 MB]
+80.0 kB/s - 24.0% [5.0 MB/21.0 MB]
+80.0 kB/s - 24.4% [5.1 MB/21.0 MB]
+64.0 kB/s - 24.7% [5.2 MB/21.0 MB]
+48.0 kB/s - 24.9% [5.2 MB/21.0 MB]
+48.0 kB/s - 25.1% [5.3 MB/21.0 MB]
+64.0 kB/s - 25.4% [5.3 MB/21.0 MB]
+80.0 kB/s - 25.8% [5.4 MB/21.0 MB]
+96.0 kB/s - 26.2% [5.5 MB/21.0 MB]
+48.0 kB/s - 26.5% [5.6 MB/21.0 MB]
+80.0 kB/s - 26.8% [5.6 MB/21.0 MB]
+48.0 kB/s - 27.1% [5.7 MB/21.0 MB]
+64.0 kB/s - 27.4% [5.7 MB/21.0 MB]
+64.0 kB/s - 27.7% [5.8 MB/21.0 MB]
+48.0 kB/s - 27.9% [5.9 MB/21.0 MB]
+48.0 kB/s - 28.1% [5.9 MB/21.0 MB]
+80.0 kB/s - 28.5% [6.0 MB/21.0 MB]
+80.0 kB/s - 28.9% [6.1 MB/21.0 MB]
+80.0 kB/s - 29.2% [6.1 MB/21.0 MB]
+48.0 kB/s - 29.4% [6.2 MB/21.0 MB]
+64.0 kB/s - 29.7% [6.2 MB/21.0 MB]
+64.0 kB/s - 30.0% [6.3 MB/21.0 MB]
+32.0 kB/s - 30.2% [6.3 MB/21.0 MB]
+80.0 kB/s - 30.6% [6.4 MB/21.0 MB]
+80.0 kB/s - 30.9% [6.5 MB/21.0 MB]
+64.0 kB/s - 31.2% [6.6 MB/21.0 MB]
+112.0 kB/s - 31.8% [6.7 MB/21.0 MB]
+64.0 kB/s - 32.0% [6.7 MB/21.0 MB]
+48.0 kB/s - 32.3% [6.8 MB/21.0 MB]
+64.0 kB/s - 32.6% [6.8 MB/21.0 MB]
+48.0 kB/s - 32.8% [6.9 MB/21.0 MB]
+80.0 kB/s - 33.2% [7.0 MB/21.0 MB]
+64.0 kB/s - 33.5% [7.0 MB/21.0 MB]
+80.0 kB/s - 33.8% [7.1 MB/21.0 MB]
+64.0 kB/s - 34.1% [7.2 MB/21.0 MB]
+80.0 kB/s - 34.5% [7.2 MB/21.0 MB]
+96.0 kB/s - 34.9% [7.3 MB/21.0 MB]
+80.0 kB/s - 35.3% [7.4 MB/21.0 MB]
+48.0 kB/s - 35.5% [7.5 MB/21.0 MB]
+64.0 kB/s - 35.8% [7.5 MB/21.0 MB]
+48.0 kB/s - 36.1% [7.6 MB/21.0 MB]
+80.0 kB/s - 36.4% [7.7 MB/21.0 MB]
+96.0 kB/s - 36.9% [7.7 MB/21.0 MB]
+96.0 kB/s - 37.3% [7.8 MB/21.0 MB]
+48.0 kB/s - 37.6% [7.9 MB/21.0 MB]
+48.0 kB/s - 37.8% [7.9 MB/21.0 MB]
+32.0 kB/s - 37.9% [8.0 MB/21.0 MB]
+64.0 kB/s - 38.2% [8.0 MB/21.0 MB]
+64.0 kB/s - 38.5% [8.1 MB/21.0 MB]
+80.0 kB/s - 38.9% [8.2 MB/21.0 MB]
+80.0 kB/s - 39.3% [8.2 MB/21.0 MB]
+64.0 kB/s - 39.6% [8.3 MB/21.0 MB]
+48.0 kB/s - 39.8% [8.4 MB/21.0 MB]
+64.0 kB/s - 40.1% [8.4 MB/21.0 MB]
+64.0 kB/s - 40.4% [8.5 MB/21.0 MB]
+64.0 kB/s - 40.7% [8.5 MB/21.0 MB]
+112.0 kB/s - 41.2% [8.7 MB/21.0 MB]
+80.0 kB/s - 41.6% [8.7 MB/21.0 MB]
+64.0 kB/s - 41.9% [8.8 MB/21.0 MB]
+64.0 kB/s - 42.2% [8.9 MB/21.0 MB]
+64.0 kB/s - 42.5% [8.9 MB/21.0 MB]
+48.0 kB/s - 42.7% [9.0 MB/21.0 MB]
+64.0 kB/s - 43.0% [9.0 MB/21.0 MB]
+96.0 kB/s - 43.4% [9.1 MB/21.0 MB]
+48.0 kB/s - 43.7% [9.2 MB/21.0 MB]
+80.0 kB/s - 44.0% [9.2 MB/21.0 MB]
+48.0 kB/s - 44.2% [9.3 MB/21.0 MB]
+48.0 kB/s - 44.5% [9.3 MB/21.0 MB]
+64.0 kB/s - 44.8% [9.4 MB/21.0 MB]
+80.0 kB/s - 45.1% [9.5 MB/21.0 MB]
+48.0 kB/s - 45.4% [9.5 MB/21.0 MB]
+96.0 kB/s - 45.8% [9.6 MB/21.0 MB]
+96.0 kB/s - 46.3% [9.7 MB/21.0 MB]
+48.0 kB/s - 46.5% [9.8 MB/21.0 MB]
+32.0 kB/s - 46.6% [9.8 MB/21.0 MB]
+64.0 kB/s - 46.9% [9.9 MB/21.0 MB]
+48.0 kB/s - 47.1% [9.9 MB/21.0 MB]
+64.0 kB/s - 47.4% [10.0 MB/21.0 MB]
+48.0 kB/s - 47.7% [10.0 MB/21.0 MB]
+64.0 kB/s - 48.0% [10.1 MB/21.0 MB]
+96.0 kB/s - 48.4% [10.2 MB/21.0 MB]
+96.0 kB/s - 48.9% [10.3 MB/21.0 MB]
+48.0 kB/s - 49.1% [10.3 MB/21.0 MB]
+48.0 kB/s - 49.3% [10.4 MB/21.0 MB]
+64.0 kB/s - 49.6% [10.4 MB/21.0 MB]
+80.0 kB/s - 50.0% [10.5 MB/21.0 MB]
+64.0 kB/s - 50.3% [10.6 MB/21.0 MB]
+64.0 kB/s - 50.6% [10.6 MB/21.0 MB]
+48.0 kB/s - 50.8% [10.7 MB/21.0 MB]
+96.0 kB/s - 51.2% [10.8 MB/21.0 MB]
+64.0 kB/s - 51.5% [10.8 MB/21.0 MB]
+64.0 kB/s - 51.8% [10.9 MB/21.0 MB]
+32.0 kB/s - 52.0% [10.9 MB/21.0 MB]
+48.0 kB/s - 52.2% [11.0 MB/21.0 MB]
+48.0 kB/s - 52.4% [11.0 MB/21.0 MB]
+80.0 kB/s - 52.8% [11.1 MB/21.0 MB]
+112.0 kB/s - 53.3% [11.2 MB/21.0 MB]
+64.0 kB/s - 53.6% [11.3 MB/21.0 MB]
+48.0 kB/s - 53.8% [11.3 MB/21.0 MB]
+48.0 kB/s - 54.1% [11.4 MB/21.0 MB]
+64.0 kB/s - 54.4% [11.4 MB/21.0 MB]
+64.0 kB/s - 54.7% [11.5 MB/21.0 MB]
+96.0 kB/s - 55.1% [11.6 MB/21.0 MB]
+64.0 kB/s - 55.4% [11.6 MB/21.0 MB]
+48.0 kB/s - 55.6% [11.7 MB/21.0 MB]
+64.0 kB/s - 55.9% [11.7 MB/21.0 MB]
+64.0 kB/s - 56.2% [11.8 MB/21.0 MB]
+80.0 kB/s - 56.6% [11.9 MB/21.0 MB]
+48.0 kB/s - 56.8% [11.9 MB/21.0 MB]
+48.0 kB/s - 57.0% [12.0 MB/21.0 MB]
+80.0 kB/s - 57.4% [12.1 MB/21.0 MB]
+48.0 kB/s - 57.6% [12.1 MB/21.0 MB]
+64.0 kB/s - 57.9% [12.2 MB/21.0 MB]
+32.0 kB/s - 58.1% [12.2 MB/21.0 MB]
+48.0 kB/s - 58.3% [12.2 MB/21.0 MB]
+32.0 kB/s - 58.5% [12.3 MB/21.0 MB]
+48.0 kB/s - 58.7% [12.3 MB/21.0 MB]
+48.0 kB/s - 58.9% [12.4 MB/21.0 MB]
+48.0 kB/s - 59.1% [12.4 MB/21.0 MB]
+48.0 kB/s - 59.3% [12.5 MB/21.0 MB]
+80.0 kB/s - 59.7% [12.5 MB/21.0 MB]
+48.0 kB/s - 59.9% [12.6 MB/21.0 MB]
+80.0 kB/s - 60.3% [12.7 MB/21.0 MB]
+96.0 kB/s - 60.8% [12.8 MB/21.0 MB]
+64.0 kB/s - 61.1% [12.8 MB/21.0 MB]
+80.0 kB/s - 61.4% [12.9 MB/21.0 MB]
+64.0 kB/s - 61.7% [13.0 MB/21.0 MB]
+48.0 kB/s - 62.0% [13.0 MB/21.0 MB]
+48.0 kB/s - 62.2% [13.1 MB/21.0 MB]
+96.0 kB/s - 62.6% [13.2 MB/21.0 MB]
+112.0 kB/s - 63.1% [13.3 MB/21.0 MB]
+96.0 kB/s - 63.6% [13.4 MB/21.0 MB]
+48.0 kB/s - 63.8% [13.4 MB/21.0 MB]
+48.0 kB/s - 64.0% [13.5 MB/21.0 MB]
+80.0 kB/s - 64.4% [13.5 MB/21.0 MB]
+112.0 kB/s - 64.9% [13.6 MB/21.0 MB]
+64.0 kB/s - 65.2% [13.7 MB/21.0 MB]
+32.0 kB/s - 65.4% [13.7 MB/21.0 MB]
+16.0 kB/s - 65.4% [13.7 MB/21.0 MB]
+64.0 kB/s - 65.7% [13.8 MB/21.0 MB]
+80.0 kB/s - 66.1% [13.9 MB/21.0 MB]
+112.0 kB/s - 66.6% [14.0 MB/21.0 MB]
+112.0 kB/s - 67.2% [14.1 MB/21.0 MB]
+80.0 kB/s - 67.5% [14.2 MB/21.0 MB]
+80.0 kB/s - 67.9% [14.3 MB/21.0 MB]
+64.0 kB/s - 68.2% [14.3 MB/21.0 MB]
+48.0 kB/s - 68.4% [14.4 MB/21.0 MB]
+64.0 kB/s - 68.7% [14.4 MB/21.0 MB]
+96.0 kB/s - 69.2% [14.5 MB/21.0 MB]
+80.0 kB/s - 69.5% [14.6 MB/21.0 MB]
+80.0 kB/s - 69.9% [14.7 MB/21.0 MB]
+64.0 kB/s - 70.2% [14.7 MB/21.0 MB]
+48.0 kB/s - 70.4% [14.8 MB/21.0 MB]
+48.0 kB/s - 70.7% [14.8 MB/21.0 MB]
+48.0 kB/s - 70.9% [14.9 MB/21.0 MB]
+96.0 kB/s - 71.3% [15.0 MB/21.0 MB]
+64.0 kB/s - 71.6% [15.0 MB/21.0 MB]
+64.0 kB/s - 71.9% [15.1 MB/21.0 MB]
+48.0 kB/s - 72.1% [15.2 MB/21.0 MB]
+96.0 kB/s - 72.6% [15.2 MB/21.0 MB]
+64.0 kB/s - 72.9% [15.3 MB/21.0 MB]
+64.0 kB/s - 73.2% [15.4 MB/21.0 MB]
+64.0 kB/s - 73.5% [15.4 MB/21.0 MB]
+64.0 kB/s - 73.8% [15.5 MB/21.0 MB]
+64.0 kB/s - 74.1% [15.6 MB/21.0 MB]
+80.0 kB/s - 74.4% [15.6 MB/21.0 MB]
+48.0 kB/s - 74.7% [15.7 MB/21.0 MB]
+32.0 kB/s - 74.8% [15.7 MB/21.0 MB]
+96.0 kB/s - 75.3% [15.8 MB/21.0 MB]
+80.0 kB/s - 75.6% [15.9 MB/21.0 MB]
+64.0 kB/s - 75.9% [16.0 MB/21.0 MB]
+128.0 kB/s - 76.5% [16.1 MB/21.0 MB]
+48.0 kB/s - 76.8% [16.1 MB/21.0 MB]
+32.0 kB/s - 76.9% [16.2 MB/21.0 MB]
+48.0 kB/s - 77.1% [16.2 MB/21.0 MB]
+80.0 kB/s - 77.5% [16.3 MB/21.0 MB]
+64.0 kB/s - 77.8% [16.3 MB/21.0 MB]
+64.0 kB/s - 78.1% [16.4 MB/21.0 MB]
+48.0 kB/s - 78.3% [16.5 MB/21.0 MB]
+48.0 kB/s - 78.5% [16.5 MB/21.0 MB]
+48.0 kB/s - 78.8% [16.5 MB/21.0 MB]
+48.0 kB/s - 79.0% [16.6 MB/21.0 MB]
+96.0 kB/s - 79.4% [16.7 MB/21.0 MB]
+80.0 kB/s - 79.8% [16.8 MB/21.0 MB]
+48.0 kB/s - 80.0% [16.8 MB/21.0 MB]
+48.0 kB/s - 80.2% [16.9 MB/21.0 MB]
+48.0 kB/s - 80.5% [16.9 MB/21.0 MB]
+48.0 kB/s - 80.7% [17.0 MB/21.0 MB]
+48.0 kB/s - 80.9% [17.0 MB/21.0 MB]
+48.0 kB/s - 81.1% [17.0 MB/21.0 MB]
+64.0 kB/s - 81.4% [17.1 MB/21.0 MB]
+80.0 kB/s - 81.8% [17.2 MB/21.0 MB]
+64.0 kB/s - 82.1% [17.2 MB/21.0 MB]
+80.0 kB/s - 82.5% [17.3 MB/21.0 MB]
+96.0 kB/s - 82.9% [17.4 MB/21.0 MB]
+96.0 kB/s - 83.4% [17.5 MB/21.0 MB]
+80.0 kB/s - 83.7% [17.6 MB/21.0 MB]
+80.0 kB/s - 84.1% [17.7 MB/21.0 MB]
+80.0 kB/s - 84.5% [17.7 MB/21.0 MB]
+64.0 kB/s - 84.8% [17.8 MB/21.0 MB]
+48.0 kB/s - 85.0% [17.9 MB/21.0 MB]
+80.0 kB/s - 85.4% [17.9 MB/21.0 MB]
+144.0 kB/s - 86.0% [18.1 MB/21.0 MB]
+112.0 kB/s - 86.6% [18.2 MB/21.0 MB]
+80.0 kB/s - 86.9% [18.3 MB/21.0 MB]
+80.0 kB/s - 87.3% [18.3 MB/21.0 MB]
+64.0 kB/s - 87.6% [18.4 MB/21.0 MB]
+112.0 kB/s - 88.1% [18.5 MB/21.0 MB]
+80.0 kB/s - 88.5% [18.6 MB/21.0 MB]
+64.0 kB/s - 88.8% [18.7 MB/21.0 MB]
+48.0 kB/s - 89.0% [18.7 MB/21.0 MB]
+48.0 kB/s - 89.2% [18.7 MB/21.0 MB]
+80.0 kB/s - 89.6% [18.8 MB/21.0 MB]
+48.0 kB/s - 89.8% [18.9 MB/21.0 MB]
+80.0 kB/s - 90.2% [19.0 MB/21.0 MB]
+96.0 kB/s - 90.7% [19.0 MB/21.0 MB]
+80.0 kB/s - 91.0% [19.1 MB/21.0 MB]
+64.0 kB/s - 91.3% [19.2 MB/21.0 MB]
+80.0 kB/s - 91.7% [19.3 MB/21.0 MB]
+80.0 kB/s - 92.1% [19.3 MB/21.0 MB]
+128.0 kB/s - 92.7% [19.5 MB/21.0 MB]
+48.0 kB/s - 92.9% [19.5 MB/21.0 MB]
+48.0 kB/s - 93.1% [19.6 MB/21.0 MB]
+80.0 kB/s - 93.5% [19.6 MB/21.0 MB]
+160.0 kB/s - 94.2% [19.8 MB/21.0 MB]
+128.0 kB/s - 94.8% [19.9 MB/21.0 MB]
+48.0 kB/s - 95.1% [20.0 MB/21.0 MB]
+48.0 kB/s - 95.3% [20.0 MB/21.0 MB]
+64.0 kB/s - 95.6% [20.1 MB/21.0 MB]
+48.0 kB/s - 95.8% [20.1 MB/21.0 MB]
+32.0 kB/s - 95.9% [20.2 MB/21.0 MB]
+64.0 kB/s - 96.2% [20.2 MB/21.0 MB]
+160.0 kB/s - 97.0% [20.4 MB/21.0 MB]
+2026-11-23 13:29:07 [openclawmgr] Installation finished (exit=124)

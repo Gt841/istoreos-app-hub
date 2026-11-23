@@ -1,0 +1,6 @@
+mode=default rc=0 elapsed=2
+2927595 /mnt/vio4-0/Configs/openclawmgr-acceptance-20261123/pack-ab/default/result.json
+mode=no-maglev rc=9 elapsed=0
+0 /mnt/vio4-0/Configs/openclawmgr-acceptance-20261123/pack-ab/no-maglev/result.json
+node: --no-maglev is not allowed in NODE_OPTIONS
+ks-cli: TOOL_EXECUTION_FAILED: cannot run npm: exit status 9

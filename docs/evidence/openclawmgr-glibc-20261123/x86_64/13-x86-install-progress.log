@@ -1,0 +1,14 @@
+task=true
+== install progress
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sqlite-vec-linux-x64 819ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sqlite-vec-darwin-x64 956ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sqlite-vec-linux-arm64 365ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sqlite-vec-windows-x64 1435ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sqlite-vec-darwin-arm64 710ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m sqlite-vec-linux-x64@https://registry.npmjs.org/sqlite-vec-linux-x64/-/sqlite-vec-linux-x64-0.1.7.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m sqlite-vec@https://registry.npmjs.org/sqlite-vec/-/sqlite-vec-0.1.7.tgz 0ms (cache hit)
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m uuid@9.0.1: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m uuid@9.0.1: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m @mariozechner/pi-tui@0.63.1: please use @earendil-works/pi-tui instead going forward
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m @mariozechner/pi-ai@0.63.1: please use @earendil-works/pi-ai instead going forward
+boot=8ebe0f03-3bce-4dd0-a84b-e7d29317c6ed

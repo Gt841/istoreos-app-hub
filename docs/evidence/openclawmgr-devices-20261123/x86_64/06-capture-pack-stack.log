@@ -1,0 +1,9 @@
+capturing_test_cli_pid=8357
+r14    0xee3bc0
+r15    0x1
+rip    0x47d741
+rflags 0x286
+cs     0x33
+fs     0x0
+gs     0x0
+2026-11-23 09:48:29 [openclawmgr] Installation finished (exit=2)

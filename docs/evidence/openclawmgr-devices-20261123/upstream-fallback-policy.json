@@ -1,0 +1,44 @@
+{
+  "openclaw": "2026.3.28",
+  "note": "Exact downloaded npm package was checked against SHA512 metadata. Source review supports these optional capability policies; probes are not end-to-end memory/agent tests.",
+  "files": [
+    {
+      "name": "memory-core-host-engine-storage-C3DUzgCl.js",
+      "sha256": "fecf3aa0d1078d351910e5ab848d13a17db40ddfc40a80c896ccb5db480048e1",
+      "ranges": [
+        {
+          "start": 75,
+          "end": 105,
+          "text": "//#region packages/memory-host-sdk/src/host/sqlite-vec.ts\nasync function loadSqliteVecExtension(params) {\n\ttry {\n\t\tconst sqliteVec = await import(\"sqlite-vec\");\n\t\tconst resolvedPath = params.extensionPath?.trim() ? params.extensionPath.trim() : void 0;\n\t\tconst extensionPath = resolvedPath ?? sqliteVec.getLoadablePath();\n\t\tparams.db.enableLoadExtension(true);\n\t\tif (resolvedPath) params.db.loadExtension(extensionPath);\n\t\telse sqliteVec.load(params.db);\n\t\treturn {\n\t\t\tok: true,\n\t\t\textensionPath\n\t\t};\n\t} catch (err) {\n\t\treturn {\n\t\t\tok: false,\n\t\t\terror: err instanceof Error ? err.message : String(err)\n\t\t};\n\t}\n}\n//#endregion\n//#region packages/memory-host-sdk/src/host/sqlite.ts\nconst require = createRequire(import.meta.url);\nfunction requireNodeSqlite() {\n\tinstallProcessWarningFilter();\n\ttry {\n\t\treturn require(\"node:sqlite\");\n\t} catch (err) {\n\t\tconst message = err instanceof Error ? err.message : String(err);\n\t\tthrow new Error(`SQLite support is unavailable in this Node runtime (missing node:sqlite). ${message}`, { cause: err });\n\t}"
+        }
+      ]
+    },
+    {
+      "name": "manager-DfZJHLNC.js",
+      "sha256": "53349df66d8810f4158557693fdc48723aa4c3540b1a560f57610c7288f6961e",
+      "ranges": [
+        {
+          "start": 750,
+          "end": 800,
+          "text": "\t\tthis.closed = false;\n\t\tthis.dirty = false;\n\t\tthis.sessionsDirty = false;\n\t\tthis.sessionsDirtyFiles = /* @__PURE__ */ new Set();\n\t\tthis.sessionPendingFiles = /* @__PURE__ */ new Set();\n\t\tthis.sessionDeltas = /* @__PURE__ */ new Map();\n\t\tthis.lastMetaSerialized = null;\n\t}\n\tasync ensureVectorReady(dimensions) {\n\t\tif (!this.vector.enabled) return false;\n\t\tif (!this.vectorReady) this.vectorReady = this.withTimeout(this.loadVectorExtension(), VECTOR_LOAD_TIMEOUT_MS, `sqlite-vec load timed out after ${Math.round(VECTOR_LOAD_TIMEOUT_MS / 1e3)}s`);\n\t\tlet ready = false;\n\t\ttry {\n\t\t\tready = await this.vectorReady || false;\n\t\t} catch (err) {\n\t\t\tconst message = err instanceof Error ? err.message : String(err);\n\t\t\tthis.vector.available = false;\n\t\t\tthis.vector.loadError = message;\n\t\t\tthis.vectorReady = null;\n\t\t\tlog$2.warn(`sqlite-vec unavailable: ${message}`);\n\t\t\treturn false;\n\t\t}\n\t\tif (ready && typeof dimensions === \"number\" && dimensions > 0) this.ensureVectorTable(dimensions);\n\t\treturn ready;\n\t}\n\tasync loadVectorExtension() {\n\t\tif (this.vector.available !== null) return this.vector.available;\n\t\tif (!this.vector.enabled) {\n\t\t\tthis.vector.available = false;\n\t\t\treturn false;\n\t\t}\n\t\ttry {\n\t\t\tconst resolvedPath = this.vector.extensionPath?.trim() ? resolveUserPath(this.vector.extensionPath) : void 0;\n\t\t\tconst loaded = await loadSqliteVecExtension({\n\t\t\t\tdb: this.db,\n\t\t\t\textensionPath: resolvedPath\n\t\t\t});\n\t\t\tif (!loaded.ok) throw new Error(loaded.error ?? \"unknown sqlite-vec load error\");\n\t\t\tthis.vector.extensionPath = loaded.extensionPath;\n\t\t\tthis.vector.available = true;\n\t\t\treturn true;\n\t\t} catch (err) {\n\t\t\tconst message = err instanceof Error ? err.message : String(err);\n\t\t\tthis.vector.available = false;\n\t\t\tthis.vector.loadError = message;\n\t\t\tlog$2.warn(`sqlite-vec unavailable: ${message}`);\n\t\t\treturn false;\n\t\t}\n\t}\n\tensureVectorTable(dimensions) {\n\t\tif (this.vector.dims === dimensions) return;"
+        }
+      ]
+    },
+    {
+      "name": "auth-profiles-B5ypC5S-.js",
+      "sha256": "4a13b327b711db58e547b29e859b5e5a29b2fa307e13767674717534105e8586",
+      "ranges": [
+        {
+          "start": 40433,
+          "end": 40442,
+          "text": "const FORCE_KILL_WAIT_FALLBACK_MS = 4e3;\nasync function createPtyAdapter(params) {\n\tconst module = await import(\"@lydell/node-pty\");\n\tconst spawn = module.spawn ?? module.default?.spawn;\n\tif (!spawn) throw new Error(\"PTY support is unavailable (node-pty spawn not found).\");\n\tconst pty = spawn(params.shell, params.args, {\n\t\tcwd: params.cwd,\n\t\tenv: params.env ? toStringEnv(params.env) : void 0,\n\t\tname: params.name ?? process.env.TERM ?? \"xterm-256color\",\n\t\tcols: params.cols ?? 120,"
+        },
+        {
+          "start": 41345,
+          "end": 41370,
+          "text": "\t\t\tstdinMode: spawnSpec.stdinMode\n\t\t});\n\t} catch (err) {\n\t\tif (spawnSpec.mode === \"pty\") {\n\t\t\tconst warning = `Warning: PTY spawn failed (${String(err)}); retrying without PTY for \\`${opts.command}\\`.`;\n\t\t\tlogWarn(`exec: PTY spawn failed (${String(err)}); retrying without PTY for \"${opts.command}\".`);\n\t\t\topts.warnings.push(warning);\n\t\t\tusingPty = false;\n\t\t\ttry {\n\t\t\t\tmanagedRun = await supervisor.spawn({\n\t\t\t\t\trunId: sessionId,\n\t\t\t\t\tsessionId: opts.sessionKey?.trim() || sessionId,\n\t\t\t\t\tbackendId: \"exec-host\",\n\t\t\t\t\tscopeKey: opts.scopeKey,\n\t\t\t\t\tmode: \"child\",\n\t\t\t\t\targv: spawnSpec.childFallbackArgv,\n\t\t\t\t\tcwd: opts.workdir,\n\t\t\t\t\tenv: spawnSpec.env,\n\t\t\t\t\tstdinMode: \"pipe-open\",\n\t\t\t\t\ttimeoutMs,\n\t\t\t\t\tcaptureOutput: false,\n\t\t\t\t\tonStdout: handleStdout,\n\t\t\t\t\tonStderr: handleStderr\n\t\t\t\t});\n\t\t\t} catch (retryErr) {\n\t\t\t\tmarkExited(session, null, null, \"failed\");"
+        }
+      ]
+    }
+  ]
+}

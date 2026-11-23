@@ -1,0 +1,9 @@
+2026-11-23 10:38:59 [openclawmgr] Data snapshot is missing or invalid; preserving runtime, data and journal for manual recovery
+2026-11-23 10:38:59 [openclawmgr] Data snapshot is missing or invalid; preserving runtime, data and journal for manual recovery
+2026-11-23 10:38:59 [openclawmgr] Recovery incomplete; journal retained: /mnt/nvme0n1-1/OpenClawMgr-acceptance-20261123/.install.maOLPJ. Run recover_install before retrying.
+recovery_exit=1
+invalid snapshot refused; current, data and journal preserved
+tar: This does not look like a tar archive
+tar: Exiting with failure status due to previous errors
+tar: This does not look like a tar archive
+tar: Exiting with failure status due to previous errors

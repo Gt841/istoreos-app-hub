@@ -1,0 +1,14 @@
+[
+  {
+    "name": "sqlite-vec",
+    "version": "0.1.7",
+    "filename": "sqlite-vec-0.1.7.tgz",
+    "integrity": "sha512-1Sge9uRc3B6wDKR4J6sGFi/E2ai9SAU5FenDki3OmhdP/a49PO2Juy1U5yQnx2bZP5t+C3BYJTkG+KkDi3q9Xg=="
+  },
+  {
+    "name": "sqlite-vec-linux-arm64",
+    "version": "0.1.7",
+    "filename": "sqlite-vec-linux-arm64-0.1.7.tgz",
+    "integrity": "sha512-V429sYT/gwr9PgtT8rbjQd6ls7CFchFpiS45TKSf7rU7wxt9MBmCVorUcheD4kEZb4VeZ6PnFXXCqPMeaHkaUw=="
+  }
+]

@@ -1,0 +1,2 @@
+vec_file_exists=true
+dlopen_error=Module did not self-register: '/mnt/vio4-0/Configs/openclawmgr-acceptance-20261123/native-probe/package/vec0.so'.

@@ -1,0 +1,13 @@
+task=true
+== installer phases
+2026-11-23 13:44:48 [openclawmgr] Installation finished (exit=1)
+2026-11-23 13:46:34 [openclawmgr] Installation phase: preparing
+2026-11-23 13:46:41 [openclawmgr] Resolved OpenClaw 2026.3.28 with Node v24.22.1
+2026-11-23 13:46:41 [openclawmgr] Fetching package archive and verifying SHA512
+2026-11-23 13:46:46 [openclawmgr] Installing OpenClaw 2026.3.28 and dependencies
+== command tail
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/unhomoglyph 3ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/another-json 3ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sdp-transform 3ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@babel%2fruntime 15ms (cache stale)
+boot=8ebe0f03-3bce-4dd0-a84b-e7d29317c6ed

@@ -1,0 +1,17 @@
+running=true
+http_200_count=162
+http_error_count=0
+== last progress
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/proxy-addr 594ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/body-parser 1289ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/escape-html 261ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/http-errors 557ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/on-finished 540ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://dl-npm.linkease.net:55443/content-type 3ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/finalhandler 522ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/range-parser 341ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/serve-static 703ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/cookie-signature 428ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/merge-descriptors 244ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/content-disposition 411ms (cache miss)
+== committed runtime

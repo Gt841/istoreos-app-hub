@@ -1,0 +1,7 @@
+PING 192.168.30.93 (192.168.30.93): 56 data bytes
+64 bytes from 192.168.30.93: seq=0 ttl=64 time=1.667 ms
+64 bytes from 192.168.30.93: seq=1 ttl=64 time=1.368 ms
+
+--- 192.168.30.93 ping statistics ---
+2 packets transmitted, 2 packets received, 0% packet loss
+round-trip min/avg/max = 1.368/1.517/1.667 ms

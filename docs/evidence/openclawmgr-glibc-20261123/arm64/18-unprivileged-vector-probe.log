@@ -1,0 +1,8 @@
+umask=0022
+755 root:root /mnt/nvme0n1-1/OpenClawMgr-glibc-acceptance-20261123/probe_modules
+755 root:root /mnt/nvme0n1-1/OpenClawMgr-glibc-acceptance-20261123/probe_modules/node_modules
+755 root:root /mnt/nvme0n1-1/OpenClawMgr-glibc-acceptance-20261123/probe_modules/node_modules/sqlite-vec
+700 root:root /mnt/nvme0n1-1/OpenClawMgr-glibc-acceptance-20261123/probe_modules/node_modules/sqlite-vec/package.json
+755 root:root /mnt/nvme0n1-1/OpenClawMgr-glibc-acceptance-20261123/probe-node/bin/node
+644 root:root /mnt/nvme0n1-1/OpenClawMgr-glibc-acceptance-20261123/probe-node/node-loader.cjs
+{"uid":999,"arch":"arm64","glibc":"2.39","vec":"v0.1.7","nearestNeighbor":{"rowid":1,"distance":0.141421377658844}}

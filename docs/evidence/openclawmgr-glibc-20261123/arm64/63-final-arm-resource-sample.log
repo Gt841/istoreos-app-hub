@@ -1,0 +1,24 @@
+ 14:16:50 up 56 min,  load average: 4.24, 3.55, 2.74
+              total        used        free      shared  buff/cache   available
+Mem:        4022024     1299928      281984        9740     2440112     2645728
+Swap:             0           0           0
+== thermal sensors/trips
+/sys/class/thermal/thermal_zone0/temp=85000
+/sys/class/thermal/thermal_zone1/temp=74444
+/sys/class/thermal/thermal_zone0/trip_point_0_temp=70000
+/sys/class/thermal/thermal_zone0/trip_point_1_temp=75000
+/sys/class/thermal/thermal_zone0/trip_point_2_temp=95000
+/sys/class/thermal/thermal_zone1/trip_point_0_temp=70000
+/sys/class/thermal/thermal_zone1/trip_point_1_temp=75000
+/sys/class/thermal/thermal_zone1/trip_point_2_temp=95000
+/sys/class/thermal/thermal_zone0/trip_point_0_type=passive
+/sys/class/thermal/thermal_zone0/trip_point_1_type=passive
+/sys/class/thermal/thermal_zone0/trip_point_2_type=critical
+/sys/class/thermal/thermal_zone1/trip_point_0_type=passive
+/sys/class/thermal/thermal_zone1/trip_point_1_type=passive
+/sys/class/thermal/thermal_zone1/trip_point_2_type=critical
+== owned Node memory
+pid=32250
+Name:	npm install /mn
+State:	R (running)
+VmRSS:	  548908 kB

@@ -1,0 +1,132 @@
+[
+  {
+    "name": "sh:openclawmgr.sh",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "name": "ash:openclawmgr.sh",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "name": "sh:openclawmgr",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "name": "ash:openclawmgr",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "name": "sh:install-runtime.sh",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "name": "ash:install-runtime.sh",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "name": "sh:node-pins.sh",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "name": "ash:node-pins.sh",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "name": "sh:npm-env.sh",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "name": "ash:npm-env.sh",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "name": "sh:npm-git.sh",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "name": "ash:npm-git.sh",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "name": "sh:oc-config.sh",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "name": "ash:oc-config.sh",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "name": "sh:openclawmgr-cli.sh",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "name": "ash:openclawmgr-cli.sh",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "name": "sh:npm",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "name": "ash:npm",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "name": "shellcheck",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "name": "lua:luasrc/controller/openclawmgr.lua",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "name": "lua:luasrc/model/openclawmgr.lua",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "name": "lua:luasrc/model/cbi/openclawmgr/cli.lua",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "name": "embedded-lua:0",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "name": "embedded-lua:1",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "name": "js:runtime-check.cjs",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "name": "whitespace",
+    "exit_code": 0,
+    "stderr": ""
+  }
+]

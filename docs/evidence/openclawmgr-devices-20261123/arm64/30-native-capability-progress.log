@@ -1,0 +1,9 @@
+running=true
+== native/script progress
+2026-11-23 10:10:32 [openclawmgr] Installation phase: preparing
+== tail
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/openshell 1096ms (cache updated)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/undici 12035ms (cache updated)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@cfworker%2fjson-schema 1623ms (cache updated)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/canvas 1081ms (cache updated)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/bufferutil 1370ms (cache updated)

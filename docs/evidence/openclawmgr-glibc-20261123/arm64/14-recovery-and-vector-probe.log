@@ -1,0 +1,5 @@
+2026-11-23 13:23:22 [openclawmgr] Interrupted installation recovered
+2026-11-23 13:23:29 [openclawmgr] Installation finished (exit=0)
+reboot interrupted preparing transaction recovered with normal backend
+/mnt/nvme0n1-1/Configs/openclawmgr-glibc-acceptance-20261123/assets/node-v24.22.1-linux-arm64.tar.xz: OK
+{"arch":"arm64","glibc":"2.39","vec":"v0.1.7","nearestNeighbor":{"rowid":1,"distance":0.141421377658844}}

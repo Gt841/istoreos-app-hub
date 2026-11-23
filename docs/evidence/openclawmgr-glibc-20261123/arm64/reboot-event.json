@@ -1,0 +1,12 @@
+{
+  "before_boot_id": "f039b600-93fd-4760-ac6c-a5c6e9e70867",
+  "after_boot_id": "15109b6a-9070-49ea-88e0-6ba2e17a5545",
+  "observed_at": "2026-11-23 13:21 CST",
+  "phase": "preparing",
+  "command": "real npm install under private glibc 2.39",
+  "panic_on_oom": 0,
+  "reboot_cause": "unconfirmed",
+  "kernel_evidence": "SQUASHFS xz/metadata read errors; pstore has no conclusive panic/OOM termination",
+  "recovery": "normal recover_install exited 0 and removed interrupted preparing transaction",
+  "additional_probe": "standalone real ARM64 Node/glibc/sqlite-vec nearest-neighbor passed; not full OpenClaw installation"
+}

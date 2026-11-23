@@ -1,0 +1,1 @@
+{ "running": false, "command": [ "sh", "-c", "exec \/usr\/libexec\/taskd 'openclawmgr' \"$0\"", "umask 022; exec \/usr\/libexec\/istorec\/openclawmgr.sh install" ], "term_timeout": 5, "exit_code": 143, "data": { "start": "1795398041", "time_wait": "-1" } }

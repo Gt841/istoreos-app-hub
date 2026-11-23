@@ -29,7 +29,9 @@ start_service() {
 	local bind="lan"
 	local token=""
 
-	[ "$enabled" -eq 1 ] || return 0
+	# The installer can preserve a running service while a pending UCI change
+	# has disabled autostart. This override applies only to this start command.
+	[ "$enabled" -eq 1 ] || [ "${OPENCLAWMGR_FORCE_START:-0}" = 1 ] || return 0
 	[ -n "$base_dir" ] || return 1
 
 	local data_dir="${base_dir}/data"
@@ -63,6 +65,17 @@ start_service() {
 	[ -x "$node_bin" ] || return 1
 	[ -n "$entry" ] || return 1
 	[ -n "$token" ] || return 1
+
+	# Managed glibc releases must keep vector support on every service start.
+	# Legacy layouts remain startable so a failed migration can roll back.
+	if [ -f "${base_dir}/node/.openclawmgr-glibc" ]; then
+		(cd "${base_dir}/node/glibc" && sha256sum -c SHA256SUMS) >/dev/null 2>&1 || return 1
+		timeout -k 2 30 "$node_bin" /usr/share/openclawmgr/runtime-check.cjs native \
+			"$global_dir" "${base_dir}/current/receipt.json" >/dev/null || {
+			logger -t openclawmgr "Native/vector checks failed; refusing to start managed glibc release"
+			return 1
+		}
+	fi
 
 	mkdir -p "${data_dir}/.openclaw/workspace" 2>/dev/null
 	if [ -f "$env_file" ]; then

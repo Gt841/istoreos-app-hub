@@ -1,0 +1,14 @@
+[
+  {
+    "name": "default",
+    "exit_code": 0,
+    "seconds": 79.1,
+    "tail": "ty_fallback_capability (__main__.RuntimeChecks.test_verified_stable_records_pty_fallback_capability) ... ok\ntest_wrong_architecture_is_rejected (__main__.RuntimeChecks.test_wrong_architecture_is_rejected) ... ok\ntest_wrong_libc_is_rejected (__main__.RuntimeChecks.test_wrong_libc_is_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 53 tests in 79.049s\n\nOK\n"
+  },
+  {
+    "name": "busybox",
+    "exit_code": 0,
+    "seconds": 93.736,
+    "tail": "ty_fallback_capability (__main__.RuntimeChecks.test_verified_stable_records_pty_fallback_capability) ... ok\ntest_wrong_architecture_is_rejected (__main__.RuntimeChecks.test_wrong_architecture_is_rejected) ... ok\ntest_wrong_libc_is_rejected (__main__.RuntimeChecks.test_wrong_libc_is_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 53 tests in 93.677s\n\nOK\n"
+  }
+]

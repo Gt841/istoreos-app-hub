@@ -1,0 +1,4 @@
+{"ok":true,"task_id":"openclawmgr"}
+{"installed":true,"running":true,"installing":true,"task_op":"upgrade","task_running":true}
+{"ok":true,"canceled":true,"task_id":"openclawmgr"}
+cp: can't stat '/var/log/tasks/openclawmgr.log': No such file or directory

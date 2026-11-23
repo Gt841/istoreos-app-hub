@@ -1,0 +1,6 @@
+2026-11-23 13:13:19 [openclawmgr] Installation phase: preparing
+2026-11-23 13:13:52 [openclawmgr] Resolved OpenClaw 2026.3.28 with Node v24.22.1
+2026-11-23 13:13:52 [openclawmgr] Fetching package archive and verifying SHA512
+2026-11-23 13:14:16 [openclawmgr] Installing OpenClaw 2026.3.28 and dependencies
+2026-11-23 13:23:22 [openclawmgr] Interrupted installation recovered
+2026-11-23 13:23:29 [openclawmgr] Installation finished (exit=0)

@@ -1,0 +1,3 @@
+{"installed":false,"running":false,"installing":true,"task_op":"install","task_running":true}
+{"ok":true,"canceled":true,"task_id":"openclawmgr"}
+controller cancellation cleanup passed

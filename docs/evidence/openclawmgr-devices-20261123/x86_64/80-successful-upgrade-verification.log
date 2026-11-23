@@ -1,0 +1,28 @@
+upgrade passed: new current, old previous, original data and original snapshot
+== task status
+false
+== receipt
+2026.3.28
+x64
+24.22.1
+{ "sharp": { "available": true }, "sqliteVec": { "available": false, "fallback": "openclaw-2026.3.28-built-in", "error": "Error loading shared library \/mnt\/vio4-0\/OpenClawMgr-acceptance-20261123\/.install.PDboEf\/candidate\/global\/lib\/node_modules\/openclaw\/node_modules\/sqlite-vec-linux-x64\/vec0.so.so: No such file or directory" }, "sqliteFts5": { "available": true }, "nodePty": { "available": true } }
+== pointers
+releases/20261123103234-PDboEf
+releases/20261123102511-fIeKBo
+== actual process
+Uid:	998	998	998	998
+== actual Gateway health
+Gateway Health
+OK (0ms)
+== candidate source owner
+0:0 /mnt/vio4-0/OpenClawMgr-acceptance-20261123/node/bin/node
+== final task lines
+
+[?25l[90m│[39m
+[35m◒[39m  [38;5;209mGateway health[39m[1G[J[35m◐[39m  [38;5;209mGateway health[39m[1G[J[35m◓[39m  [38;5;209mGateway health[39m[1G[J[35m◑[39m  [38;5;209mGateway health[39m[1G[J[35m◒[39m  [38;5;209mGateway health[39m[1G[J[35m◐[39m  [38;5;209mGateway health[39m[1G[J[35m◓[39m  [38;5;209mGateway health[39m[1G[J[35m◑[39m  [38;5;209mGateway health[39m[1G[J[35m◒[39m  [38;5;209mGateway health[39m.[1G[J[32m◇[39m  
+[?25h
+[2K[1m[38;5;209mGateway Health[39m[22m
+[38;5;78mOK[39m (0ms)
+2026-11-23 10:45:19 [openclawmgr] Installation phase: committed
+2026-11-23 10:45:19 [openclawmgr] Installation committed: 20261123103234-PDboEf; receipt: /mnt/vio4-0/OpenClawMgr-acceptance-20261123/current/receipt.json
+2026-11-23 10:45:19 [openclawmgr] Installation finished (exit=0)

@@ -1,0 +1,21 @@
+== latest npm install debug
+1285 silly placeDep node_modules/openclaw @aws-sdk/client-bedrock-runtime@3.1175.0 OK for: @mariozechner/pi-ai@0.63.1 want: ^3.983.0
+1286 silly placeDep node_modules/openclaw @google/genai@1.52.0 OK for: @mariozechner/pi-ai@0.63.1 want: ^1.40.0
+1287 silly placeDep node_modules/openclaw @mistralai/mistralai@1.14.1 OK for: @mariozechner/pi-ai@0.63.1 want: 1.14.1
+1288 silly placeDep node_modules/openclaw ajv-formats@3.0.1 OK for: @mariozechner/pi-ai@0.63.1 want: ^3.0.1
+1289 silly placeDep node_modules/openclaw openai@6.26.0 OK for: @mariozechner/pi-ai@0.63.1 want: 6.26.0
+1290 silly placeDep node_modules/openclaw partial-json@0.1.7 OK for: @mariozechner/pi-ai@0.63.1 want: ^0.1.7
+1291 silly placeDep node_modules/openclaw proxy-agent@6.5.0 OK for: @mariozechner/pi-ai@0.63.1 want: ^6.5.0
+1292 silly placeDep node_modules/openclaw zod-to-json-schema@3.25.2 OK for: @mariozechner/pi-ai@0.63.1 want: ^3.24.6
+1293 silly fetch manifest @aws-sdk/middleware-websocket@^3.972.67
+1294 silly packumentCache full:https://dl-npm.linkease.net:55443/@aws-sdk%2fmiddleware-websocket cache-miss
+1295 http fetch GET 200 https://dl-npm.linkease.net:55443/@aws-sdk%2fmiddleware-websocket 766ms (cache miss)
+1296 silly packumentCache full:https://dl-npm.linkease.net:55443/@aws-sdk%2fmiddleware-websocket set size:undefined disposed:false
+1297 silly fetch manifest @aws-sdk/middleware-eventstream@^3.972.38
+1298 silly packumentCache full:https://dl-npm.linkease.net:55443/@aws-sdk%2fmiddleware-eventstream cache-miss
+1299 http fetch GET 200 https://dl-npm.linkease.net:55443/@aws-sdk%2fmiddleware-eventstream 1419ms (cache miss)
+1300 silly packumentCache full:https://dl-npm.linkease.net:55443/@aws-sdk%2fmiddleware-eventstream set size:undefined disposed:false
+1301 silly fetch manifest @aws-sdk/eventstream-handler-node@^3.972.42
+1302 silly packumentCache full:https://dl-npm.linkease.net:55443/@aws-sdk%2feventstream-handler-node cache-miss
+== root task
+true

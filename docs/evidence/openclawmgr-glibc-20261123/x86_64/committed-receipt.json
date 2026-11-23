@@ -1,0 +1,33 @@
+{
+  "version": "2026.3.28",
+  "engines": ">=22.14.0",
+  "integrity": "sha512-n7ZS3zdimB2H/GfnylyG8xWXVrmlsSPHZdNEIEPe54Sl5XYuYD5yxilGYV0DWowgtsM5ysFEQMMMArdC/O77Jw==",
+  "node": "24.22.1",
+  "platform": "linux",
+  "arch": "x64",
+  "npm": "11.19.1",
+  "channel": "stable",
+  "source": "origin",
+  "nodeSource": "https://nodejs.org/dist/v24.22.1/node-v24.22.1-linux-x64.tar.xz",
+  "nodeExecutableSha256": "e32e2d16081cf644f88392934288086e7662529d0d43277c34f7aad2207cfafb",
+  "nodeSha256": "6c172a9ab6718f7b801fb5a7bd486af2ee5e32758086a04b84fcce2aa77095e6",
+  "runtime": {
+    "kind": "isolated-glibc",
+    "glibc": "2.39",
+    "manifestSha256": "05878b3941c45bb67f8435b3d3d0b4250a487bcc038b379f3cc8b61c4658c364"
+  },
+  "installedAt": "2026-11-23T05:59:20.906Z",
+  "nativeChecks": {
+    "sharp": {
+      "available": true
+    },
+    "sqliteVec": {
+      "available": true,
+      "version": "v0.1.7",
+      "nearestNeighbor": true
+    },
+    "nodePty": {
+      "available": true
+    }
+  }
+}

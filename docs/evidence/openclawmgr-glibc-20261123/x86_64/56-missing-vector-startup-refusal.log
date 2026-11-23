@@ -1,0 +1,4 @@
+init_wrapper_exit=0
+Loadble extension for sqlite-vec not found. Was the sqlite-vec-linux-x64 package installed?
+missing sqlite-vec: Gateway refused to start
+original extension bytes restored; service start requested

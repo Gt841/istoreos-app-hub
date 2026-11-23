@@ -1,0 +1,13 @@
+== committed receipt
+2026.3.28
+{ "kind": "isolated-glibc", "glibc": "2.39", "manifestSha256": "05878b3941c45bb67f8435b3d3d0b4250a487bcc038b379f3cc8b61c4658c364" }
+{ "sharp": { "available": true }, "sqliteVec": { "available": true, "version": "v0.1.7", "nearestNeighbor": true }, "nodePty": { "available": true } }
+== previous runtime
+musl
+== actual gateway user
+Uid:	998	998	998	998
+== authenticated health
+Gateway Health
+OK (0ms)
+== OpenClaw own loader under service UID
+{"uid":998,"glibc":"2.39","openclawLoader":true,"vec":"v0.1.7","hit":{"rowid":1,"distance":0.141421377658844}}

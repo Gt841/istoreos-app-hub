@@ -1,0 +1,41 @@
+== preserved tree
+drwxr-xr-x    7 root     root          4096 Nov 23 14:28 .
+drwxr-xr-x   65 root     root          4096 Nov 23 14:20 ..
+drwx------    3 root     root          4096 Nov 23 14:26 backups
+drwxr-xr-x    2 root     root          4096 Nov 23 14:26 data
+drwx------    2 root     root          4096 Nov 23 14:13 log
+drwx------    4 root     root          4096 Nov 23 14:13 npm-cache
+drwxr-xr-x    2 root     root          4096 Nov 23 14:28 releases
+/mnt/nvme0n1-1/Configs/openclawmgr-glibc-acceptance-20261123:
+drwx------    7 root     root          4096 Nov 23 13:30 .
+drwxr-xr-x   15 root     root          4096 Nov 23 13:12 ..
+drwx------    2 root     root          4096 Nov 23 14:13 assets
+drwxr-xr-x    2 root     root          4096 Nov 23 13:23 journal-before-recovery
+drwx------    2 root     root          4096 Nov 23 14:28 logs
+-rw-------    1 root     root            45 Nov 23 13:12 owner
+drwxr-xr-x    8 root     root          4096 Nov 23 13:23 recovered-probe-runtime
+drwx------    2 root     root          4096 Nov 23 14:13 system-backup
+
+/mnt/nvme0n1-1/OpenClawMgr-glibc-acceptance-20261123/releases:
+drwxr-xr-x    2 root     root          4096 Nov 23 14:28 .
+drwxr-xr-x    7 root     root          4096 Nov 23 14:28 ..
+== filtered service log
+Mon Nov 23 14:13:18 2026 authpriv.info groupadd[26246]: group added to /etc/group: name=openclawmgr, GID=999
+Mon Nov 23 14:13:18 2026 authpriv.info groupadd[26246]: new group: name=openclawmgr, GID=999
+Mon Nov 23 14:13:18 2026 authpriv.info useradd[26249]: new user: name=openclawmgr, UID=999, GID=999, home=/home/openclawmgr, shell=/bin/false, from=none
+Mon Nov 23 14:26:32 2026 daemon.info node[17546]: [90m2026-11-23T06:26:32.545+00:00[39m [35m[canvas][39m [36mhost mounted at http://127.0.0.1:19189/__openclaw__/canvas/ (root /mnt/nvme0n1-1/OpenClawMgr-glibc-acceptance-20261123/data/.openclaw/canvas)[39m
+Mon Nov 23 14:26:32 2026 daemon.info node[17546]: [90m2026-11-23T06:26:32.940+00:00[39m [36m[heartbeat][39m [36mstarted[39m
+Mon Nov 23 14:26:32 2026 daemon.info node[17546]: [90m2026-11-23T06:26:32.953+00:00[39m [32m[health-monitor][39m [36mstarted (interval: 300s, startup-grace: 60s, channel-connect-grace: 120s)[39m
+Mon Nov 23 14:26:33 2026 daemon.info node[17546]: [90m2026-11-23T06:26:33.069+00:00[39m [36m[gateway][39m [36magent model: anthropic/claude-sonnet-4-6[39m
+Mon Nov 23 14:26:33 2026 daemon.info node[17546]: [90m2026-11-23T06:26:33.080+00:00[39m [36m[gateway][39m [36mlistening on ws://127.0.0.1:19189, ws://[::1]:19189 (PID 17646)[39m
+Mon Nov 23 14:26:33 2026 daemon.info node[17546]: [90m2026-11-23T06:26:33.093+00:00[39m [36m[gateway][39m [36mlog file: /tmp/openclaw-999/openclaw-2026-11-23.log[39m
+Mon Nov 23 14:26:33 2026 daemon.err node[17546]: [90m2026-11-23T06:26:33.104+00:00[39m [36m[gateway][39m [33msecurity warning: dangerous config flags enabled: gateway.controlUi.allowInsecureAuth=true, gateway.controlUi.dangerouslyDisableDeviceAuth=true. Run `openclaw security audit`.[39m
+Mon Nov 23 14:26:42 2026 daemon.info node[17546]: [90m2026-11-23T06:26:42.605+00:00[39m [31m[agents/model-providers][39m [36m[xai-auth] bootstrap config fallback: no config-backed key found[39m
+Mon Nov 23 14:26:48 2026 daemon.err node[17546]: [90m2026-11-23T06:26:48.068+00:00[39m [31m[bonjour][39m [33mwatchdog detected non-announced service; attempting re-advertise (gateway fqdn=iStoreOS (OpenClaw)._openclaw-gw._tcp.local. host=openclaw.local. port=19189 state=unannounced)[39m
+Mon Nov 23 14:26:48 2026 daemon.err node[17546]: [90m2026-11-23T06:26:48.083+00:00[39m [35m[model-pricing][39m [33mpricing bootstrap failed: TimeoutError: The operation was aborted due to timeout[39m
+Mon Nov 23 14:28:32 2026 daemon.info node[17546]: [90m2026-11-23T06:28:32.504+00:00[39m [36m[gateway][39m [36msignal SIGTERM received[39m
+Mon Nov 23 14:28:32 2026 daemon.info node[17546]: [90m2026-11-23T06:28:32.514+00:00[39m [36m[gateway][39m [36mreceived SIGTERM; shutting down[39m
+Mon Nov 23 14:28:32 2026 daemon.info node[17546]: [90m2026-11-23T06:28:32.546+00:00[39m [34m[gmail-watcher][39m [36mgmail watcher stopped[39m
+== archived diagnostic logs
+-rw-r--r--    1 root     root          1377 Nov 23 14:28 gateway-startup-private.log
+-rw-------    1 root     root           440 Nov 23 13:30 interrupted-and-recovered-installer.log

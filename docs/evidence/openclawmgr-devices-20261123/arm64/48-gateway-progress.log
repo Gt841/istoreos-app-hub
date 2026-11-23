@@ -1,0 +1,11 @@
+running=true
+== native/script progress
+2026-11-23 10:25:11 [openclawmgr] Installation phase: preparing
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/on-finished 62ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mcache[39m on-finished@https://dl-npm.linkease.net:5443/on-finished/-/on-finished-2.4.2.tgz 0ms (cache hit)
+== tail
+[1mnpm[22m [32mhttp[39m [94mcache[39m zod@https://dl-npm.linkease.net:5443/zod/-/zod-4.6.7.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @agentclientprotocol/sdk@https://dl-npm.linkease.net:5443/@agentclientprotocol/sdk/-/sdk-0.17.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m agent-base@https://dl-npm.linkease.net:5443/agent-base/-/agent-base-6.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m @mariozechner/pi-agent-core@0.63.1: please use @earendil-works/pi-agent-core instead going forward
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m node-domexception@1.0.0: Use your platform's native DOMException instead

@@ -1,0 +1,1299 @@
+2026-11-23 14:13:21 [openclawmgr] Installation phase: preparing
+/mnt/nvme0n1-1/OpenClawMgr-glibc-acceptance-20261123/npm-cache/node-24.22.1-arm64-glibc.tar.xz: OK
+24.22.1
+11.19.1
+2026-11-23 14:13:56 [openclawmgr] Resolved OpenClaw 2026.3.28 with Node v24.22.1
+2026-11-23 14:13:56 [openclawmgr] Fetching package archive and verifying SHA512
+2026-11-23 14:14:40 [openclawmgr] Installing OpenClaw 2026.3.28 and dependencies
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@agentclientprotocol%2fsdk 86ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@napi-rs%2fcanvas 131ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@anthropic-ai%2fvertex-sdk 163ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@clack%2fprompts 58ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@aws-sdk%2fclient-bedrock 139ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@homebridge%2fciao 134ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@lydell%2fnode-pty 59ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@line%2fbot-sdk 152ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@mariozechner%2fpi-agent-core 74ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@mariozechner%2fpi-coding-agent 73ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@mariozechner%2fpi-tui 83ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@mariozechner%2fpi-ai 182ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@mozilla%2freadability 51ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@modelcontextprotocol%2fsdk 97ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@sinclair%2ftypebox 55ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/chalk 75ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/chokidar 55ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/ajv 162ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/commander 82ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/cli-highlight 146ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/croner 79ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/express 67ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/dotenv 135ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/file-type 101ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/ipaddr.js 18ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/gaxios 97ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/hono 125ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/json5 281ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/jszip 169ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/jiti 422ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/long 119ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/markdown-it 105ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/linkedom 257ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/node-edge-tts 62ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/osc-progress 35ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/matrix-js-sdk 163ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/pdfjs-dist 153ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/playwright-core 342ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/qrcode-terminal 881ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/sqlite-vec 49ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/sharp 799ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/tar 100ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/tslog 114ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/undici 97ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/ws 95ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/yaml 53ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/uuid 189ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/zod 95ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@matrix-org%2fmatrix-sdk-crypto-nodejs 183ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/openshell 167ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@cfworker%2fjson-schema 23ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/canvas 13ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/bufferutil 8ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/utf-8-validate 12ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@anthropic-ai%2fsdk 31ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/tslib 78ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/google-auth-library 96ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@aws-sdk%2fcore 67ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@smithy%2ftypes 63ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@smithy%2fcore 139ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@aws-sdk%2ftypes 76ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@aws-sdk%2ftoken-providers 91ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@smithy%2fnode-http-handler 103ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@smithy%2ffetch-http-handler 102ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/sisteransi 42ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@aws-sdk%2fcredential-provider-node 84ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/fast-wrap-ansi 172ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@clack%2fcore 195ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/fast-string-width 193ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/fast-deep-equal 81ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/debug 119ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/source-map-support 45ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/axios 49ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@lydell%2fnode-pty-linux-x64 80ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@types%2fnode 181ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@lydell%2fnode-pty-win32-x64 442ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@lydell%2fnode-pty-linux-arm64 83ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@lydell%2fnode-pty-darwin-x64 471ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@lydell%2fnode-pty-darwin-arm64 87ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@lydell%2fnode-pty-win32-arm64 114ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/ajv 95ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/undici 86ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/openai 199ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/ajv-formats 237ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/proxy-agent 170ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/partial-json 55ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@google%2fgenai 60ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@anthropic-ai%2fsdk 85ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@sinclair%2ftypebox 126ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/zod-to-json-schema 119ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@mistralai%2fmistralai 88ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@aws-sdk%2fclient-bedrock-runtime 75ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/diff 125ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/glob 123ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/ignore 85ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/marked 97ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/minimatch 133ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/strip-ansi 148ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/extract-zip 140ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/hosted-git-info 103ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/proper-lockfile 70ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@mariozechner%2fjiti 71ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@mariozechner%2fclipboard 34ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@silvia-odwyer%2fphoton-node 61ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/mime-types 50ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@types%2fmime-types 53ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/get-east-asian-width 49ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/koffi 60ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/https-proxy-agent 80ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/node-downloader-helper 81ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/cors 46ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/jose 41ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/hono 136ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/raw-body 282ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/cross-spawn 254ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/eventsource 60ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/content-type 56ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/pkce-challenge 44ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@hono%2fnode-server 37ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/json-schema-typed 63ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/eventsource-parser 65ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/express-rate-limit 54ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@napi-rs%2fcanvas-darwin-x64 58ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@napi-rs%2fcanvas-darwin-arm64 65ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@napi-rs%2fcanvas-android-arm64 55ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@napi-rs%2fcanvas-linux-x64-gnu 56ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@napi-rs%2fcanvas-linux-x64-musl 63ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@napi-rs%2fcanvas-win32-x64-msvc 62ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@napi-rs%2fcanvas-linux-arm64-gnu 55ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@napi-rs%2fcanvas-win32-arm64-msvc 30ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@napi-rs%2fcanvas-linux-arm64-musl 56ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@napi-rs%2fcanvas-linux-riscv64-gnu 43ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@napi-rs%2fcanvas-linux-arm-gnueabihf 50ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/fast-uri 49ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/json-schema-traverse 58ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/require-from-string 57ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/readdirp 54ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/highlight.js 67ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/mz 97ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/parse5 89ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/parse5-htmlparser2-tree-adapter 45ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/yargs 51ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/qs 85ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/etag 44ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/depd 105ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/once 46ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/vary 41ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/send 64ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/fresh 50ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/cookie 46ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/router 42ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/accepts 42ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/type-is 44ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/parseurl 46ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/statuses 48ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/proxy-addr 24ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/encodeurl 47ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/body-parser 69ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/http-errors 71ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/escape-html 95ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/on-finished 43ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/finalhandler 36ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/range-parser 38ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/serve-static 36ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/merge-descriptors 29ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/cookie-signature 49ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/content-disposition 36ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/token-types 28ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/strtok3 55ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/uint8array-extras 62ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/extend 30ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@tokenizer%2finflate 74ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/node-fetch 57ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/lie 61ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/pako 62ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/setimmediate 39ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/readable-stream 41ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/uhyphen 50ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/cssomnom 50ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/css-select 34ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/htmlparser2 39ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/mdurl 42ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/argparse 33ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/html-escaper 80ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/entities 48ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/linkify-it 39ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/uc.micro 62ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/punycode.js 44ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/p-retry 25ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/bs58 52ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/jwt-decode 25ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/loglevel 48ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/unhomoglyph 39ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/sdp-transform 27ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@babel%2fruntime 51ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/another-json 188ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/matrix-events-sdk 69ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/oidc-client-ts 230ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/matrix-widget-api 148ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/semver 25ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img%2fcolour 9ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@matrix-org%2fmatrix-sdk-crypto-wasm 221ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/telegraf 180ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/detect-libc 66ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img%2fsharp-wasm32 66ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img%2fsharp-linux-arm 42ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img%2fsharp-linux-x64 45ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img%2fsharp-win32-x64 43ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img%2fsharp-darwin-x64 42ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img%2fsharp-win32-ia32 42ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img%2fsharp-linux-ppc64 28ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img%2fsharp-linux-s390x 27ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img%2fsharp-linux-arm64 60ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img%2fsharp-darwin-arm64 27ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img%2fsharp-linux-riscv64 26ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img%2fsharp-win32-arm64 58ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img%2fsharp-linuxmusl-x64 33ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img%2fsharp-linuxmusl-arm64 33ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img%2fsharp-libvips-linux-arm 34ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img%2fsharp-libvips-linux-x64 39ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img%2fsharp-libvips-linux-arm64 33ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img%2fsharp-libvips-darwin-x64 57ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img%2fsharp-libvips-linux-ppc64 44ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img%2fsharp-libvips-linux-s390x 47ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img%2fsharp-libvips-darwin-arm64 46ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img%2fsharp-libvips-linux-riscv64 50ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img%2fsharp-libvips-linuxmusl-x64 49ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img%2fsharp-libvips-linuxmusl-arm64 47ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/sqlite-vec-darwin-x64 23ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/sqlite-vec-linux-x64 51ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/sqlite-vec-linux-arm64 33ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/chownr 17ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/sqlite-vec-windows-x64 45ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/sqlite-vec-darwin-arm64 48ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/yallist 47ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/minipass 47ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/minizlib 51ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@isaacs%2ffs-minipass 44ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/zod 33ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/standardwebhooks 21ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@opentelemetry%2fapi 27ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/json-schema-to-ts 57ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/gtoken 31ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/jws 75ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/base64-js 39ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/ecdsa-sig-formatter 18ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/gcp-metadata 34ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/ts-algebra 23ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/fast-sha256 35ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@babel%2fruntime 89ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@stablelib%2fbase64 346ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/bowser 44ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@smithy%2fsignature-v4 53ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@aws-sdk%2fxml-builder 84ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@aws-sdk%2fcredential-provider-env 62ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@aws%2flambda-invoke-store 128ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@aws-sdk%2fcredential-provider-ini 95ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@aws-sdk%2fcredential-provider-http 29ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@aws-sdk%2fcredential-provider-sso 154ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@smithy%2fcredential-provider-imds 194ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@aws-sdk%2fcredential-provider-web-identity 60ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@aws-sdk%2fnested-clients 82ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@aws-sdk%2fcredential-provider-process 209ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@aws-sdk%2fcredential-provider-login 15ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@aws-sdk%2fsignature-v4-multi-region 17ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/fast-string-truncated-width 11ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/buffer-from 19ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/ms 27ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/source-map 36ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/undici-types 26ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/form-data 44ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/proxy-from-env 59ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/follow-redirects 31ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/zod 34ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/zod 33ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@aws-sdk%2fmiddleware-websocket 22ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@aws-sdk%2feventstream-handler-node 46ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@aws-sdk%2fmiddleware-eventstream 100ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/lru-cache 109ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/protobufjs 306ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/agent-base 269ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/pac-proxy-agent 97ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/http-proxy-agent 45ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/socks-proxy-agent 38ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/google-logging-utils 27ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@types%2fretry 34ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/retry 49ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@protobufjs%2fpath 45ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@protobufjs%2fpool 43ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@protobufjs%2futf8 39ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@protobufjs%2ffetch 30ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@protobufjs%2ffloat 29ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@protobufjs%2fbase64 29ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@protobufjs%2fcodegen 38ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@protobufjs%2faspromise 35ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@protobufjs%2feventemitter 30ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@mariozechner%2fclipboard-darwin-universal 15ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@mariozechner%2fclipboard-darwin-arm64 23ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@mariozechner%2fclipboard-darwin-x64 26ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@mariozechner%2fclipboard-linux-arm64-gnu 25ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@mariozechner%2fclipboard-linux-arm64-musl 25ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@mariozechner%2fclipboard-linux-riscv64-gnu 27ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@mariozechner%2fclipboard-linux-x64-musl 23ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@mariozechner%2fclipboard-linux-x64-gnu 40ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@mariozechner%2fclipboard-win32-arm64-msvc 34ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@mariozechner%2fclipboard-win32-x64-msvc 44ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/yoctocolors 36ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/std-env 52ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@types%2fyauzl 13ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/yauzl 56ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/get-stream 83ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/brace-expansion 24ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/graceful-fs 30ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/path-scurry 70ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/signal-exit 31ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/ansi-regex 27ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/mime-db 23ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/object-assign 27ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/which 34ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/path-key 45ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/shebang-command 42ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/ip-address 34ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/bytes 44ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/unpipe 44ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/iconv-lite 30ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/asynckit 40ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/hasown 52ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/combined-stream 49ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/es-set-tostringtag 22ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/ansi-styles 21ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/any-promise 32ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/supports-color 48ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/thenify-all 43ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/cliui 25ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/y18n 52ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/escalade 43ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/string-width 38ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/yargs-parser 39ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/get-caller-file 38ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/require-directory 33ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/shebang-regex 14ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/isexe 17ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/inherits 23ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/negotiator 75ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/setprototypeof 60ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/toidentifier 53ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/ee-first 31ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/wrappy 36ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/side-channel 35ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/forwarded 60ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/es-define-property 46ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/is-promise 41ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/path-to-regexp 39ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/media-typer 44ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/safer-buffer 8ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/pump 22ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/fd-slicer 26ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/buffer-crc32 30ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@tokenizer%2ftoken 20ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@tokenizer%2ftoken 23ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/ieee754 32ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@borewit%2ftext-codec 21ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/get-intrinsic 15ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/es-errors 28ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/delayed-stream 41ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/has-tostringtag 32ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/function-bind 26ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/get-proto 16ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/has-symbols 22ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/gopd 33ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/es-object-atoms 36ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/math-intrinsics 37ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/call-bind-apply-helpers 33ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/data-uri-to-buffer 23ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/formdata-polyfill 27ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/fetch-blob 39ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/dunder-proto 12ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/end-of-stream 7ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/is-stream 34ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/json-bigint 32ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/safe-buffer 67ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/jwa 29ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/safe-buffer 24ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/bignumber.js 275ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/isarray 27ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/core-util-is 28ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/immediate 48ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/string_decoder 34ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/process-nextick-args 22ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/util-deprecate 40ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/buffer-equal-constant-time 6ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/domhandler 36ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/boolbase 55ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/css-what 62ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/domutils 22ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/domutils 73ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/nth-check 72ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/domelementtype 23ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/dom-serializer 28ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/events 21ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/base-x 35ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@types%2fevents 36ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/is-network-error 21ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/balanced-match 7ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/thenify 8ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/node-domexception 15ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/web-streams-polyfill 19ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/p-timeout 25ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/safe-compare 27ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/mri 48ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@telegraf%2ftypes 41ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/sandwich-stream 38ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/abort-controller 34ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/get-uri 24ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@tootallnate%2fquickjs-emscripten 29ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/pac-resolver 39ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/socks 28ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/netmask 19ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/basic-ftp 32ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/degenerator 44ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/escodegen 18ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/esprima 34ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/ast-types 45ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/esutils 19ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/estraverse 30ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/side-channel-map 19ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/side-channel-list 29ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/object-inspect 36ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/side-channel-weakmap 23ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@emnapi%2fruntime 10ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/call-bound 28ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/call-bound 32ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/smart-buffer 9ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/encoding 35ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/event-target-shim 18ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/buffer-alloc 25ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/whatwg-url 34ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/buffer-fill 25ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/buffer-alloc-unsafe 36ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/wrap-ansi 25ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/emoji-regex 24ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/is-fullwidth-code-point 30ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/color-convert 8ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/color-name 8ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/pend 13ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/has-flag 11ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/tr46 14ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/webidl-conversions 20ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mcache[39m openclaw@file:/mnt/nvme0n1-1/OpenClawMgr-glibc-acceptance-20261123/.install.GBLFjl/openclaw-2026.3.28.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m is-network-error@https://dl-npm.linkease.net:5443/is-network-error/-/is-network-error-1.3.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m webidl-conversions@https://dl-npm.linkease.net:5443/webidl-conversions/-/webidl-conversions-3.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m tr46@https://dl-npm.linkease.net:5443/tr46/-/tr46-0.0.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m whatwg-url@https://dl-npm.linkease.net:5443/whatwg-url/-/whatwg-url-5.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m is-stream@https://dl-npm.linkease.net:5443/is-stream/-/is-stream-2.0.1.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m has-flag@https://dl-npm.linkease.net:5443/has-flag/-/has-flag-4.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m supports-color@https://dl-npm.linkease.net:5443/supports-color/-/supports-color-7.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m pend@https://dl-npm.linkease.net:5443/pend/-/pend-1.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m fd-slicer@https://dl-npm.linkease.net:5443/fd-slicer/-/fd-slicer-1.1.0.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m buffer-crc32@https://dl-npm.linkease.net:5443/buffer-crc32/-/buffer-crc32-0.2.13.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m color-name@https://dl-npm.linkease.net:5443/color-name/-/color-name-1.1.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m color-convert@https://dl-npm.linkease.net:5443/color-convert/-/color-convert-2.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ansi-styles@https://dl-npm.linkease.net:5443/ansi-styles/-/ansi-styles-4.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m is-fullwidth-code-point@https://dl-npm.linkease.net:5443/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m emoji-regex@https://dl-npm.linkease.net:5443/emoji-regex/-/emoji-regex-8.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m wrap-ansi@https://dl-npm.linkease.net:5443/wrap-ansi/-/wrap-ansi-7.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ansi-regex@https://dl-npm.linkease.net:5443/ansi-regex/-/ansi-regex-5.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m strip-ansi@https://dl-npm.linkease.net:5443/strip-ansi/-/strip-ansi-6.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m yargs-parser@https://dl-npm.linkease.net:5443/yargs-parser/-/yargs-parser-20.2.9.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m y18n@https://dl-npm.linkease.net:5443/y18n/-/y18n-5.0.8.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m string-width@https://dl-npm.linkease.net:5443/string-width/-/string-width-4.2.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ansi-regex@https://dl-npm.linkease.net:5443/ansi-regex/-/ansi-regex-5.0.1.tgz 9ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m strip-ansi@https://dl-npm.linkease.net:5443/strip-ansi/-/strip-ansi-6.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m require-directory@https://dl-npm.linkease.net:5443/require-directory/-/require-directory-2.1.1.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m get-caller-file@https://dl-npm.linkease.net:5443/get-caller-file/-/get-caller-file-2.0.5.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m escalade@https://dl-npm.linkease.net:5443/escalade/-/escalade-3.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m cliui@https://dl-npm.linkease.net:5443/cliui/-/cliui-7.0.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ansi-regex@https://dl-npm.linkease.net:5443/ansi-regex/-/ansi-regex-5.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m strip-ansi@https://dl-npm.linkease.net:5443/strip-ansi/-/strip-ansi-6.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m isexe@https://dl-npm.linkease.net:5443/isexe/-/isexe-2.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m media-typer@https://dl-npm.linkease.net:5443/media-typer/-/media-typer-1.1.1.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ieee754@https://dl-npm.linkease.net:5443/ieee754/-/ieee754-1.2.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @borewit/text-codec@https://dl-npm.linkease.net:5443/@borewit/text-codec/-/text-codec-0.2.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m thenify@https://dl-npm.linkease.net:5443/thenify/-/thenify-3.3.1.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m buffer-fill@https://dl-npm.linkease.net:5443/buffer-fill/-/buffer-fill-1.0.0.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m buffer-alloc-unsafe@https://dl-npm.linkease.net:5443/buffer-alloc-unsafe/-/buffer-alloc-unsafe-1.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m buffer-alloc@https://dl-npm.linkease.net:5443/buffer-alloc/-/buffer-alloc-1.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m event-target-shim@https://dl-npm.linkease.net:5443/event-target-shim/-/event-target-shim-5.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m sandwich-stream@https://dl-npm.linkease.net:5443/sandwich-stream/-/sandwich-stream-2.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m safe-compare@https://dl-npm.linkease.net:5443/safe-compare/-/safe-compare-1.1.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m p-timeout@https://dl-npm.linkease.net:5443/p-timeout/-/p-timeout-4.1.0.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m mri@https://dl-npm.linkease.net:5443/mri/-/mri-1.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m abort-controller@https://dl-npm.linkease.net:5443/abort-controller/-/abort-controller-3.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @telegraf/types@https://dl-npm.linkease.net:5443/@telegraf/types/-/types-7.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m yallist@https://dl-npm.linkease.net:5443/yallist/-/yallist-5.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m minizlib@https://dl-npm.linkease.net:5443/minizlib/-/minizlib-3.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m chownr@https://dl-npm.linkease.net:5443/chownr/-/chownr-3.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @isaacs/fs-minipass@https://dl-npm.linkease.net:5443/@isaacs/fs-minipass/-/fs-minipass-4.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @tokenizer/token@https://dl-npm.linkease.net:5443/@tokenizer/token/-/token-0.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ansi-regex@https://dl-npm.linkease.net:5443/ansi-regex/-/ansi-regex-6.6.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m fast-sha256@https://dl-npm.linkease.net:5443/fast-sha256/-/fast-sha256-1.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @stablelib/base64@https://dl-npm.linkease.net:5443/@stablelib/base64/-/base64-1.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m sqlite-vec-linux-arm64@https://dl-npm.linkease.net:5443/sqlite-vec-linux-arm64/-/sqlite-vec-linux-arm64-0.1.7.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m buffer-from@https://dl-npm.linkease.net:5443/buffer-from/-/buffer-from-1.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m smart-buffer@https://dl-npm.linkease.net:5443/smart-buffer/-/smart-buffer-4.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m socks@https://dl-npm.linkease.net:5443/socks/-/socks-2.8.11.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m call-bound@https://dl-npm.linkease.net:5443/call-bound/-/call-bound-1.0.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m side-channel-weakmap@https://dl-npm.linkease.net:5443/side-channel-weakmap/-/side-channel-weakmap-1.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m side-channel-map@https://dl-npm.linkease.net:5443/side-channel-map/-/side-channel-map-1.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m side-channel-list@https://dl-npm.linkease.net:5443/side-channel-list/-/side-channel-list-1.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m object-inspect@https://dl-npm.linkease.net:5443/object-inspect/-/object-inspect-1.14.0.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m shebang-regex@https://dl-npm.linkease.net:5443/shebang-regex/-/shebang-regex-3.0.0.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m semver@https://dl-npm.linkease.net:5443/semver/-/semver-7.8.6.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m detect-libc@https://dl-npm.linkease.net:5443/detect-libc/-/detect-libc-2.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @img/sharp-linux-arm64@https://dl-npm.linkease.net:5443/@img/sharp-linux-arm64/-/sharp-linux-arm64-0.34.5.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @img/sharp-libvips-linux-arm64@https://dl-npm.linkease.net:5443/@img/sharp-libvips-linux-arm64/-/sharp-libvips-linux-arm64-1.2.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @img/colour@https://dl-npm.linkease.net:5443/@img/colour/-/colour-1.1.0.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m path-to-regexp@https://dl-npm.linkease.net:5443/path-to-regexp/-/path-to-regexp-8.4.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m is-promise@https://dl-npm.linkease.net:5443/is-promise/-/is-promise-4.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m util-deprecate@https://dl-npm.linkease.net:5443/util-deprecate/-/util-deprecate-1.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m string_decoder@https://dl-npm.linkease.net:5443/string_decoder/-/string_decoder-1.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m safe-buffer@https://dl-npm.linkease.net:5443/safe-buffer/-/safe-buffer-5.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m process-nextick-args@https://dl-npm.linkease.net:5443/process-nextick-args/-/process-nextick-args-2.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m isarray@https://dl-npm.linkease.net:5443/isarray/-/isarray-1.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m unpipe@https://dl-npm.linkease.net:5443/unpipe/-/unpipe-1.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m core-util-is@https://dl-npm.linkease.net:5443/core-util-is/-/core-util-is-1.0.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m side-channel@https://dl-npm.linkease.net:5443/side-channel/-/side-channel-1.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m end-of-stream@https://dl-npm.linkease.net:5443/end-of-stream/-/end-of-stream-1.4.5.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m source-map@https://dl-npm.linkease.net:5443/source-map/-/source-map-0.6.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m esutils@https://dl-npm.linkease.net:5443/esutils/-/esutils-2.0.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m estraverse@https://dl-npm.linkease.net:5443/estraverse/-/estraverse-5.3.0.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m esprima@https://dl-npm.linkease.net:5443/esprima/-/esprima-4.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m escodegen@https://dl-npm.linkease.net:5443/escodegen/-/escodegen-2.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ast-types@https://dl-npm.linkease.net:5443/ast-types/-/ast-types-0.13.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m netmask@https://dl-npm.linkease.net:5443/netmask/-/netmask-2.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m degenerator@https://dl-npm.linkease.net:5443/degenerator/-/degenerator-5.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m basic-ftp@https://dl-npm.linkease.net:5443/basic-ftp/-/basic-ftp-5.3.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m pac-resolver@https://dl-npm.linkease.net:5443/pac-resolver/-/pac-resolver-7.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m get-uri@https://dl-npm.linkease.net:5443/get-uri/-/get-uri-6.0.5.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m data-uri-to-buffer@https://dl-npm.linkease.net:5443/data-uri-to-buffer/-/data-uri-to-buffer-6.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @tootallnate/quickjs-emscripten@https://dl-npm.linkease.net:5443/@tootallnate/quickjs-emscripten/-/quickjs-emscripten-0.23.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m socks-proxy-agent@https://dl-npm.linkease.net:5443/socks-proxy-agent/-/socks-proxy-agent-8.0.5.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m pac-proxy-agent@https://dl-npm.linkease.net:5443/pac-proxy-agent/-/pac-proxy-agent-7.2.0.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m http-proxy-agent@https://dl-npm.linkease.net:5443/http-proxy-agent/-/http-proxy-agent-7.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m forwarded@https://dl-npm.linkease.net:5443/forwarded/-/forwarded-0.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @protobufjs/utf8@https://dl-npm.linkease.net:5443/@protobufjs/utf8/-/utf8-1.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @protobufjs/pool@https://dl-npm.linkease.net:5443/@protobufjs/pool/-/pool-1.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @protobufjs/path@https://dl-npm.linkease.net:5443/@protobufjs/path/-/path-1.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @protobufjs/float@https://dl-npm.linkease.net:5443/@protobufjs/float/-/float-1.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @protobufjs/fetch@https://dl-npm.linkease.net:5443/@protobufjs/fetch/-/fetch-1.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @protobufjs/eventemitter@https://dl-npm.linkease.net:5443/@protobufjs/eventemitter/-/eventemitter-1.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @protobufjs/codegen@https://dl-npm.linkease.net:5443/@protobufjs/codegen/-/codegen-2.0.5.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @protobufjs/base64@https://dl-npm.linkease.net:5443/@protobufjs/base64/-/base64-1.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @protobufjs/aspromise@https://dl-npm.linkease.net:5443/@protobufjs/aspromise/-/aspromise-1.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m signal-exit@https://dl-npm.linkease.net:5443/signal-exit/-/signal-exit-3.0.7.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m graceful-fs@https://dl-npm.linkease.net:5443/graceful-fs/-/graceful-fs-4.2.12.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m retry@https://dl-npm.linkease.net:5443/retry/-/retry-0.13.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @types/retry@https://dl-npm.linkease.net:5443/@types/retry/-/retry-0.12.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m telegraf@https://dl-npm.linkease.net:5443/telegraf/-/telegraf-4.16.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m wrappy@https://dl-npm.linkease.net:5443/wrappy/-/wrappy-1.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m node-fetch@https://dl-npm.linkease.net:5443/node-fetch/-/node-fetch-2.7.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ee-first@https://dl-npm.linkease.net:5443/ee-first/-/ee-first-1.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m web-streams-polyfill@https://dl-npm.linkease.net:5443/web-streams-polyfill/-/web-streams-polyfill-3.3.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m node-domexception@https://dl-npm.linkease.net:5443/node-domexception/-/node-domexception-1.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m formdata-polyfill@https://dl-npm.linkease.net:5443/formdata-polyfill/-/formdata-polyfill-4.0.10.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m fetch-blob@https://dl-npm.linkease.net:5443/fetch-blob/-/fetch-blob-3.2.0.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m data-uri-to-buffer@https://dl-npm.linkease.net:5443/data-uri-to-buffer/-/data-uri-to-buffer-4.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m thenify-all@https://dl-npm.linkease.net:5443/thenify-all/-/thenify-all-1.6.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m any-promise@https://dl-npm.linkease.net:5443/any-promise/-/any-promise-1.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m balanced-match@https://dl-npm.linkease.net:5443/balanced-match/-/balanced-match-4.0.4.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m brace-expansion@https://dl-npm.linkease.net:5443/brace-expansion/-/brace-expansion-5.0.13.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m mime-db@https://dl-npm.linkease.net:5443/mime-db/-/mime-db-1.54.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m events@https://dl-npm.linkease.net:5443/events/-/events-3.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @types/events@https://dl-npm.linkease.net:5443/@types/events/-/events-3.0.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m base-x@https://dl-npm.linkease.net:5443/base-x/-/base-x-5.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m unhomoglyph@https://dl-npm.linkease.net:5443/unhomoglyph/-/unhomoglyph-1.0.6.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m sdp-transform@https://dl-npm.linkease.net:5443/sdp-transform/-/sdp-transform-3.0.0.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m oidc-client-ts@https://dl-npm.linkease.net:5443/oidc-client-ts/-/oidc-client-ts-3.5.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m matrix-widget-api@https://dl-npm.linkease.net:5443/matrix-widget-api/-/matrix-widget-api-1.20.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m matrix-events-sdk@https://dl-npm.linkease.net:5443/matrix-events-sdk/-/matrix-events-sdk-0.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m loglevel@https://dl-npm.linkease.net:5443/loglevel/-/loglevel-1.9.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m jwt-decode@https://dl-npm.linkease.net:5443/jwt-decode/-/jwt-decode-4.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m bs58@https://dl-npm.linkease.net:5443/bs58/-/bs58-6.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m another-json@https://dl-npm.linkease.net:5443/another-json/-/another-json-0.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @matrix-org/matrix-sdk-crypto-wasm@https://dl-npm.linkease.net:5443/@matrix-org/matrix-sdk-crypto-wasm/-/matrix-sdk-crypto-wasm-18.9.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m uc.micro@https://dl-npm.linkease.net:5443/uc.micro/-/uc.micro-2.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m punycode.js@https://dl-npm.linkease.net:5443/punycode.js/-/punycode.js-2.3.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m mdurl@https://dl-npm.linkease.net:5443/mdurl/-/mdurl-2.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m linkify-it@https://dl-npm.linkease.net:5443/linkify-it/-/linkify-it-5.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m argparse@https://dl-npm.linkease.net:5443/argparse/-/argparse-2.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m entities@https://dl-npm.linkease.net:5443/entities/-/entities-8.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m dom-serializer@https://dl-npm.linkease.net:5443/dom-serializer/-/dom-serializer-3.1.1.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m domelementtype@https://dl-npm.linkease.net:5443/domelementtype/-/domelementtype-3.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m nth-check@https://dl-npm.linkease.net:5443/nth-check/-/nth-check-3.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m domutils@https://dl-npm.linkease.net:5443/domutils/-/domutils-4.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m domhandler@https://dl-npm.linkease.net:5443/domhandler/-/domhandler-6.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m css-what@https://dl-npm.linkease.net:5443/css-what/-/css-what-8.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m boolbase@https://dl-npm.linkease.net:5443/boolbase/-/boolbase-2.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m uhyphen@https://dl-npm.linkease.net:5443/uhyphen/-/uhyphen-0.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m htmlparser2@https://dl-npm.linkease.net:5443/htmlparser2/-/htmlparser2-10.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m dom-serializer@https://dl-npm.linkease.net:5443/dom-serializer/-/dom-serializer-2.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m entities@https://dl-npm.linkease.net:5443/entities/-/entities-4.5.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m entities@https://dl-npm.linkease.net:5443/entities/-/entities-7.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m domutils@https://dl-npm.linkease.net:5443/domutils/-/domutils-3.2.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m domhandler@https://dl-npm.linkease.net:5443/domhandler/-/domhandler-5.0.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m domelementtype@https://dl-npm.linkease.net:5443/domelementtype/-/domelementtype-2.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m html-escaper@https://dl-npm.linkease.net:5443/html-escaper/-/html-escaper-3.0.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m cssomnom@https://dl-npm.linkease.net:5443/cssomnom/-/cssomnom-0.1.12.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m css-select@https://dl-npm.linkease.net:5443/css-select/-/css-select-7.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m immediate@https://dl-npm.linkease.net:5443/immediate/-/immediate-3.0.6.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m buffer-equal-constant-time@https://dl-npm.linkease.net:5443/buffer-equal-constant-time/-/buffer-equal-constant-time-1.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m jwa@https://dl-npm.linkease.net:5443/jwa/-/jwa-2.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m setimmediate@https://dl-npm.linkease.net:5443/setimmediate/-/setimmediate-1.0.5.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m readable-stream@https://dl-npm.linkease.net:5443/readable-stream/-/readable-stream-2.3.8.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m safe-buffer@https://dl-npm.linkease.net:5443/safe-buffer/-/safe-buffer-5.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m pako@https://dl-npm.linkease.net:5443/pako/-/pako-1.0.11.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m lie@https://dl-npm.linkease.net:5443/lie/-/lie-3.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ts-algebra@https://dl-npm.linkease.net:5443/ts-algebra/-/ts-algebra-2.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @babel/runtime@https://dl-npm.linkease.net:5443/@babel/runtime/-/runtime-7.29.15.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m bignumber.js@https://dl-npm.linkease.net:5443/bignumber.js/-/bignumber.js-9.3.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m safer-buffer@https://dl-npm.linkease.net:5443/safer-buffer/-/safer-buffer-2.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m agent-base@https://dl-npm.linkease.net:5443/agent-base/-/agent-base-7.1.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m toidentifier@https://dl-npm.linkease.net:5443/toidentifier/-/toidentifier-1.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m setprototypeof@https://dl-npm.linkease.net:5443/setprototypeof/-/setprototypeof-1.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m inherits@https://dl-npm.linkease.net:5443/inherits/-/inherits-2.0.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m lru-cache@https://dl-npm.linkease.net:5443/lru-cache/-/lru-cache-11.5.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m json-bigint@https://dl-npm.linkease.net:5443/json-bigint/-/json-bigint-1.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m google-logging-utils@https://dl-npm.linkease.net:5443/google-logging-utils/-/google-logging-utils-0.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m safe-buffer@https://dl-npm.linkease.net:5443/safe-buffer/-/safe-buffer-5.2.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m jws@https://dl-npm.linkease.net:5443/jws/-/jws-4.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m gtoken@https://dl-npm.linkease.net:5443/gtoken/-/gtoken-7.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m uuid@https://dl-npm.linkease.net:5443/uuid/-/uuid-9.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m node-fetch@https://dl-npm.linkease.net:5443/node-fetch/-/node-fetch-2.7.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m gaxios@https://dl-npm.linkease.net:5443/gaxios/-/gaxios-6.7.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m gcp-metadata@https://dl-npm.linkease.net:5443/gcp-metadata/-/gcp-metadata-6.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m uuid@https://dl-npm.linkease.net:5443/uuid/-/uuid-9.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m node-fetch@https://dl-npm.linkease.net:5443/node-fetch/-/node-fetch-2.7.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m gaxios@https://dl-npm.linkease.net:5443/gaxios/-/gaxios-6.7.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ecdsa-sig-formatter@https://dl-npm.linkease.net:5443/ecdsa-sig-formatter/-/ecdsa-sig-formatter-1.0.11.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m base64-js@https://dl-npm.linkease.net:5443/base64-js/-/base64-js-1.5.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m path-scurry@https://dl-npm.linkease.net:5443/path-scurry/-/path-scurry-2.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m minipass@https://dl-npm.linkease.net:5443/minipass/-/minipass-7.1.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m pump@https://dl-npm.linkease.net:5443/pump/-/pump-3.0.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m dunder-proto@https://dl-npm.linkease.net:5443/dunder-proto/-/dunder-proto-1.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m math-intrinsics@https://dl-npm.linkease.net:5443/math-intrinsics/-/math-intrinsics-1.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m has-symbols@https://dl-npm.linkease.net:5443/has-symbols/-/has-symbols-1.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m gopd@https://dl-npm.linkease.net:5443/gopd/-/gopd-1.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m get-proto@https://dl-npm.linkease.net:5443/get-proto/-/get-proto-1.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m function-bind@https://dl-npm.linkease.net:5443/function-bind/-/function-bind-1.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m es-object-atoms@https://dl-npm.linkease.net:5443/es-object-atoms/-/es-object-atoms-1.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m es-define-property@https://dl-npm.linkease.net:5443/es-define-property/-/es-define-property-1.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m call-bind-apply-helpers@https://dl-npm.linkease.net:5443/call-bind-apply-helpers/-/call-bind-apply-helpers-1.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m node-fetch@https://dl-npm.linkease.net:5443/node-fetch/-/node-fetch-3.3.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m has-tostringtag@https://dl-npm.linkease.net:5443/has-tostringtag/-/has-tostringtag-1.0.2.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m extend@https://dl-npm.linkease.net:5443/extend/-/extend-3.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m get-intrinsic@https://dl-npm.linkease.net:5443/get-intrinsic/-/get-intrinsic-1.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m es-errors@https://dl-npm.linkease.net:5443/es-errors/-/es-errors-1.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m delayed-stream@https://dl-npm.linkease.net:5443/delayed-stream/-/delayed-stream-1.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m hasown@https://dl-npm.linkease.net:5443/hasown/-/hasown-2.0.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m asynckit@https://dl-npm.linkease.net:5443/asynckit/-/asynckit-0.4.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m es-set-tostringtag@https://dl-npm.linkease.net:5443/es-set-tostringtag/-/es-set-tostringtag-2.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m combined-stream@https://dl-npm.linkease.net:5443/combined-stream/-/combined-stream-1.0.8.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m uint8array-extras@https://dl-npm.linkease.net:5443/uint8array-extras/-/uint8array-extras-1.6.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m token-types@https://dl-npm.linkease.net:5443/token-types/-/token-types-6.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m strtok3@https://dl-npm.linkease.net:5443/strtok3/-/strtok3-10.8.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m fast-string-truncated-width@https://dl-npm.linkease.net:5443/fast-string-truncated-width/-/fast-string-truncated-width-3.0.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @tokenizer/inflate@https://dl-npm.linkease.net:5443/@tokenizer/inflate/-/inflate-0.4.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m yauzl@https://dl-npm.linkease.net:5443/yauzl/-/yauzl-2.10.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m get-stream@https://dl-npm.linkease.net:5443/get-stream/-/get-stream-5.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @types/yauzl@https://dl-npm.linkease.net:5443/@types/yauzl/-/yauzl-2.10.3.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ip-address@https://dl-npm.linkease.net:5443/ip-address/-/ip-address-10.7.6.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m iconv-lite@https://dl-npm.linkease.net:5443/iconv-lite/-/iconv-lite-0.7.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m bytes@https://dl-npm.linkease.net:5443/bytes/-/bytes-3.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m negotiator@https://dl-npm.linkease.net:5443/negotiator/-/negotiator-1.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m content-type@https://dl-npm.linkease.net:5443/content-type/-/content-type-2.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m type-is@https://dl-npm.linkease.net:5443/type-is/-/type-is-2.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m content-type@https://dl-npm.linkease.net:5443/content-type/-/content-type-2.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m statuses@https://dl-npm.linkease.net:5443/statuses/-/statuses-2.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m serve-static@https://dl-npm.linkease.net:5443/serve-static/-/serve-static-2.2.1.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m send@https://dl-npm.linkease.net:5443/send/-/send-1.2.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m router@https://dl-npm.linkease.net:5443/router/-/router-2.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m range-parser@https://dl-npm.linkease.net:5443/range-parser/-/range-parser-1.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m qs@https://dl-npm.linkease.net:5443/qs/-/qs-6.17.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m proxy-addr@https://dl-npm.linkease.net:5443/proxy-addr/-/proxy-addr-2.0.8.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ipaddr.js@https://dl-npm.linkease.net:5443/ipaddr.js/-/ipaddr.js-1.9.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m parseurl@https://dl-npm.linkease.net:5443/parseurl/-/parseurl-1.3.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m once@https://dl-npm.linkease.net:5443/once/-/once-1.4.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m on-finished@https://dl-npm.linkease.net:5443/on-finished/-/on-finished-2.4.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m merge-descriptors@https://dl-npm.linkease.net:5443/merge-descriptors/-/merge-descriptors-2.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m http-errors@https://dl-npm.linkease.net:5443/http-errors/-/http-errors-2.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m fresh@https://dl-npm.linkease.net:5443/fresh/-/fresh-2.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m finalhandler@https://dl-npm.linkease.net:5443/finalhandler/-/finalhandler-2.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m etag@https://dl-npm.linkease.net:5443/etag/-/etag-1.8.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m escape-html@https://dl-npm.linkease.net:5443/escape-html/-/escape-html-1.0.3.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m encodeurl@https://dl-npm.linkease.net:5443/encodeurl/-/encodeurl-2.0.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m depd@https://dl-npm.linkease.net:5443/depd/-/depd-2.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m cookie-signature@https://dl-npm.linkease.net:5443/cookie-signature/-/cookie-signature-1.2.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m cookie@https://dl-npm.linkease.net:5443/cookie/-/cookie-0.7.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m content-disposition@https://dl-npm.linkease.net:5443/content-disposition/-/content-disposition-2.0.1.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m body-parser@https://dl-npm.linkease.net:5443/body-parser/-/body-parser-2.4.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m content-type@https://dl-npm.linkease.net:5443/content-type/-/content-type-2.1.0.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m accepts@https://dl-npm.linkease.net:5443/accepts/-/accepts-2.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ms@https://dl-npm.linkease.net:5443/ms/-/ms-2.1.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m which@https://dl-npm.linkease.net:5443/which/-/which-2.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m shebang-command@https://dl-npm.linkease.net:5443/shebang-command/-/shebang-command-2.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m path-key@https://dl-npm.linkease.net:5443/path-key/-/path-key-3.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m vary@https://dl-npm.linkease.net:5443/vary/-/vary-1.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m object-assign@https://dl-npm.linkease.net:5443/object-assign/-/object-assign-4.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m yargs@https://dl-npm.linkease.net:5443/yargs/-/yargs-16.2.2.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m parse5-htmlparser2-tree-adapter@https://dl-npm.linkease.net:5443/parse5-htmlparser2-tree-adapter/-/parse5-htmlparser2-tree-adapter-6.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m parse5@https://dl-npm.linkease.net:5443/parse5/-/parse5-6.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m parse5@https://dl-npm.linkease.net:5443/parse5/-/parse5-5.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m mz@https://dl-npm.linkease.net:5443/mz/-/mz-2.7.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m highlight.js@https://dl-npm.linkease.net:5443/highlight.js/-/highlight.js-10.7.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m readdirp@https://dl-npm.linkease.net:5443/readdirp/-/readdirp-5.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m proxy-from-env@https://dl-npm.linkease.net:5443/proxy-from-env/-/proxy-from-env-2.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m form-data@https://dl-npm.linkease.net:5443/form-data/-/form-data-4.0.6.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m mime-db@https://dl-npm.linkease.net:5443/mime-db/-/mime-db-1.52.0.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m mime-types@https://dl-npm.linkease.net:5443/mime-types/-/mime-types-2.1.35.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m follow-redirects@https://dl-npm.linkease.net:5443/follow-redirects/-/follow-redirects-1.16.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m require-from-string@https://dl-npm.linkease.net:5443/require-from-string/-/require-from-string-2.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m json-schema-traverse@https://dl-npm.linkease.net:5443/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m fast-uri@https://dl-npm.linkease.net:5443/fast-uri/-/fast-uri-3.1.9.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m undici-types@https://dl-npm.linkease.net:5443/undici-types/-/undici-types-7.24.6.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @napi-rs/canvas-linux-arm64-gnu@https://dl-npm.linkease.net:5443/@napi-rs/canvas-linux-arm64-gnu/-/canvas-linux-arm64-gnu-0.1.100.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m raw-body@https://dl-npm.linkease.net:5443/raw-body/-/raw-body-3.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m pkce-challenge@https://dl-npm.linkease.net:5443/pkce-challenge/-/pkce-challenge-5.0.2.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m json-schema-typed@https://dl-npm.linkease.net:5443/json-schema-typed/-/json-schema-typed-8.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m jose@https://dl-npm.linkease.net:5443/jose/-/jose-6.2.18.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m express-rate-limit@https://dl-npm.linkease.net:5443/express-rate-limit/-/express-rate-limit-8.7.5.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m eventsource-parser@https://dl-npm.linkease.net:5443/eventsource-parser/-/eventsource-parser-3.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m eventsource@https://dl-npm.linkease.net:5443/eventsource/-/eventsource-3.0.7.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m cross-spawn@https://dl-npm.linkease.net:5443/cross-spawn/-/cross-spawn-7.0.6.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m cors@https://dl-npm.linkease.net:5443/cors/-/cors-2.8.6.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m content-type@https://dl-npm.linkease.net:5443/content-type/-/content-type-1.0.5.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @hono/node-server@https://dl-npm.linkease.net:5443/@hono/node-server/-/node-server-1.19.19.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m node-downloader-helper@https://dl-npm.linkease.net:5443/node-downloader-helper/-/node-downloader-helper-2.1.11.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https-proxy-agent@https://dl-npm.linkease.net:5443/https-proxy-agent/-/https-proxy-agent-7.0.6.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m mime-types@https://dl-npm.linkease.net:5443/mime-types/-/mime-types-3.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m koffi@https://dl-npm.linkease.net:5443/koffi/-/koffi-2.16.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m get-east-asian-width@https://dl-npm.linkease.net:5443/get-east-asian-width/-/get-east-asian-width-1.7.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @types/mime-types@https://dl-npm.linkease.net:5443/@types/mime-types/-/mime-types-2.1.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m yoctocolors@https://dl-npm.linkease.net:5443/yoctocolors/-/yoctocolors-2.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m std-env@https://dl-npm.linkease.net:5443/std-env/-/std-env-3.10.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @mariozechner/clipboard-linux-arm64-gnu@https://dl-npm.linkease.net:5443/@mariozechner/clipboard-linux-arm64-gnu/-/clipboard-linux-arm64-gnu-0.3.9.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m strip-ansi@https://dl-npm.linkease.net:5443/strip-ansi/-/strip-ansi-7.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m proper-lockfile@https://dl-npm.linkease.net:5443/proper-lockfile/-/proper-lockfile-4.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m retry@https://dl-npm.linkease.net:5443/retry/-/retry-0.12.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m minimatch@https://dl-npm.linkease.net:5443/minimatch/-/minimatch-10.2.6.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m marked@https://dl-npm.linkease.net:5443/marked/-/marked-15.0.12.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ignore@https://dl-npm.linkease.net:5443/ignore/-/ignore-7.0.16.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m hosted-git-info@https://dl-npm.linkease.net:5443/hosted-git-info/-/hosted-git-info-9.0.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m glob@https://dl-npm.linkease.net:5443/glob/-/glob-13.0.7.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m extract-zip@https://dl-npm.linkease.net:5443/extract-zip/-/extract-zip-2.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m diff@https://dl-npm.linkease.net:5443/diff/-/diff-8.0.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @silvia-odwyer/photon-node@https://dl-npm.linkease.net:5443/@silvia-odwyer/photon-node/-/photon-node-0.3.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @mariozechner/jiti@https://dl-npm.linkease.net:5443/@mariozechner/jiti/-/jiti-2.6.5.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @mariozechner/clipboard@https://dl-npm.linkease.net:5443/@mariozechner/clipboard/-/clipboard-0.3.9.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m protobufjs@https://dl-npm.linkease.net:5443/protobufjs/-/protobufjs-7.6.6.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m p-retry@https://dl-npm.linkease.net:5443/p-retry/-/p-retry-4.6.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/middleware-websocket@https://dl-npm.linkease.net:5443/@aws-sdk/middleware-websocket/-/middleware-websocket-3.972.67.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/middleware-eventstream@https://dl-npm.linkease.net:5443/@aws-sdk/middleware-eventstream/-/middleware-eventstream-3.972.38.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/eventstream-handler-node@https://dl-npm.linkease.net:5443/@aws-sdk/eventstream-handler-node/-/eventstream-handler-node-3.972.42.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m zod-to-json-schema@https://dl-npm.linkease.net:5443/zod-to-json-schema/-/zod-to-json-schema-3.25.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m proxy-agent@https://dl-npm.linkease.net:5443/proxy-agent/-/proxy-agent-6.5.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m proxy-from-env@https://dl-npm.linkease.net:5443/proxy-from-env/-/proxy-from-env-1.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m lru-cache@https://dl-npm.linkease.net:5443/lru-cache/-/lru-cache-7.18.3.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m partial-json@https://dl-npm.linkease.net:5443/partial-json/-/partial-json-0.1.7.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m openai@https://dl-npm.linkease.net:5443/openai/-/openai-6.26.0.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ajv-formats@https://dl-npm.linkease.net:5443/ajv-formats/-/ajv-formats-3.0.1.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @mistralai/mistralai@https://dl-npm.linkease.net:5443/@mistralai/mistralai/-/mistralai-1.14.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @google/genai@https://dl-npm.linkease.net:5443/@google/genai/-/genai-1.52.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m google-logging-utils@https://dl-npm.linkease.net:5443/google-logging-utils/-/google-logging-utils-1.1.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m gcp-metadata@https://dl-npm.linkease.net:5443/gcp-metadata/-/gcp-metadata-8.1.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m google-auth-library@https://dl-npm.linkease.net:5443/google-auth-library/-/google-auth-library-10.9.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/client-bedrock-runtime@https://dl-npm.linkease.net:5443/@aws-sdk/client-bedrock-runtime/-/client-bedrock-runtime-3.1175.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @lydell/node-pty-linux-arm64@https://dl-npm.linkease.net:5443/@lydell/node-pty-linux-arm64/-/node-pty-linux-arm64-1.2.0-beta.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m axios@https://dl-npm.linkease.net:5443/axios/-/axios-1.21.1.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m agent-base@https://dl-npm.linkease.net:5443/agent-base/-/agent-base-6.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https-proxy-agent@https://dl-npm.linkease.net:5443/https-proxy-agent/-/https-proxy-agent-5.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @types/node@https://dl-npm.linkease.net:5443/@types/node/-/node-24.19.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m source-map-support@https://dl-npm.linkease.net:5443/source-map-support/-/source-map-support-0.5.21.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m fast-deep-equal@https://dl-npm.linkease.net:5443/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m debug@https://dl-npm.linkease.net:5443/debug/-/debug-4.4.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m sisteransi@https://dl-npm.linkease.net:5443/sisteransi/-/sisteransi-2.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m fast-wrap-ansi@https://dl-npm.linkease.net:5443/fast-wrap-ansi/-/fast-wrap-ansi-0.2.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m fast-string-width@https://dl-npm.linkease.net:5443/fast-string-width/-/fast-string-width-3.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @clack/core@https://dl-npm.linkease.net:5443/@clack/core/-/core-1.6.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/signature-v4-multi-region@https://dl-npm.linkease.net:5443/@aws-sdk/signature-v4-multi-region/-/signature-v4-multi-region-3.996.52.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/nested-clients@https://dl-npm.linkease.net:5443/@aws-sdk/nested-clients/-/nested-clients-3.998.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/credential-provider-login@https://dl-npm.linkease.net:5443/@aws-sdk/credential-provider-login/-/credential-provider-login-3.972.93.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @smithy/credential-provider-imds@https://dl-npm.linkease.net:5443/@smithy/credential-provider-imds/-/credential-provider-imds-4.5.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/credential-provider-web-identity@https://dl-npm.linkease.net:5443/@aws-sdk/credential-provider-web-identity/-/credential-provider-web-identity-3.972.91.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/credential-provider-sso@https://dl-npm.linkease.net:5443/@aws-sdk/credential-provider-sso/-/credential-provider-sso-3.973.29.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/credential-provider-process@https://dl-npm.linkease.net:5443/@aws-sdk/credential-provider-process/-/credential-provider-process-3.972.85.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/credential-provider-ini@https://dl-npm.linkease.net:5443/@aws-sdk/credential-provider-ini/-/credential-provider-ini-3.973.31.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/credential-provider-http@https://dl-npm.linkease.net:5443/@aws-sdk/credential-provider-http/-/credential-provider-http-3.972.87.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/credential-provider-env@https://dl-npm.linkease.net:5443/@aws-sdk/credential-provider-env/-/credential-provider-env-3.972.85.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m bowser@https://dl-npm.linkease.net:5443/bowser/-/bowser-2.15.1.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @smithy/signature-v4@https://dl-npm.linkease.net:5443/@smithy/signature-v4/-/signature-v4-5.7.5.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws/lambda-invoke-store@https://dl-npm.linkease.net:5443/@aws/lambda-invoke-store/-/lambda-invoke-store-0.3.0.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/xml-builder@https://dl-npm.linkease.net:5443/@aws-sdk/xml-builder/-/xml-builder-3.972.43.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m tslib@https://dl-npm.linkease.net:5443/tslib/-/tslib-2.9.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @smithy/types@https://dl-npm.linkease.net:5443/@smithy/types/-/types-4.20.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @smithy/node-http-handler@https://dl-npm.linkease.net:5443/@smithy/node-http-handler/-/node-http-handler-4.14.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @smithy/fetch-http-handler@https://dl-npm.linkease.net:5443/@smithy/fetch-http-handler/-/fetch-http-handler-5.8.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @smithy/core@https://dl-npm.linkease.net:5443/@smithy/core/-/core-3.41.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/types@https://dl-npm.linkease.net:5443/@aws-sdk/types/-/types-3.975.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/token-providers@https://dl-npm.linkease.net:5443/@aws-sdk/token-providers/-/token-providers-3.1175.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/credential-provider-node@https://dl-npm.linkease.net:5443/@aws-sdk/credential-provider-node/-/credential-provider-node-3.972.98.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/core@https://dl-npm.linkease.net:5443/@aws-sdk/core/-/core-3.981.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m standardwebhooks@https://dl-npm.linkease.net:5443/standardwebhooks/-/standardwebhooks-1.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m json-schema-to-ts@https://dl-npm.linkease.net:5443/json-schema-to-ts/-/json-schema-to-ts-3.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @opentelemetry/api@https://dl-npm.linkease.net:5443/@opentelemetry/api/-/api-1.10.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m google-auth-library@https://dl-npm.linkease.net:5443/google-auth-library/-/google-auth-library-9.15.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m uuid@https://dl-npm.linkease.net:5443/uuid/-/uuid-9.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m node-fetch@https://dl-npm.linkease.net:5443/node-fetch/-/node-fetch-2.7.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m gaxios@https://dl-npm.linkease.net:5443/gaxios/-/gaxios-6.7.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @anthropic-ai/sdk@https://dl-npm.linkease.net:5443/@anthropic-ai/sdk/-/sdk-0.137.0.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m yaml@https://dl-npm.linkease.net:5443/yaml/-/yaml-2.9.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ws@https://dl-npm.linkease.net:5443/ws/-/ws-8.23.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m uuid@https://dl-npm.linkease.net:5443/uuid/-/uuid-13.0.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m undici@https://dl-npm.linkease.net:5443/undici/-/undici-7.30.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m tslog@https://dl-npm.linkease.net:5443/tslog/-/tslog-4.11.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m tar@https://dl-npm.linkease.net:5443/tar/-/tar-7.5.13.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m sqlite-vec@https://dl-npm.linkease.net:5443/sqlite-vec/-/sqlite-vec-0.1.7.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m sharp@https://dl-npm.linkease.net:5443/sharp/-/sharp-0.34.5.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m qrcode-terminal@https://dl-npm.linkease.net:5443/qrcode-terminal/-/qrcode-terminal-0.12.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m playwright-core@https://dl-npm.linkease.net:5443/playwright-core/-/playwright-core-1.58.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m pdfjs-dist@https://dl-npm.linkease.net:5443/pdfjs-dist/-/pdfjs-dist-5.7.284.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m osc-progress@https://dl-npm.linkease.net:5443/osc-progress/-/osc-progress-0.3.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m openshell@https://dl-npm.linkease.net:5443/openshell/-/openshell-0.1.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m dotenv@https://dl-npm.linkease.net:5443/dotenv/-/dotenv-16.6.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m node-edge-tts@https://dl-npm.linkease.net:5443/node-edge-tts/-/node-edge-tts-1.2.12.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ansi-regex@https://dl-npm.linkease.net:5443/ansi-regex/-/ansi-regex-5.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m strip-ansi@https://dl-npm.linkease.net:5443/strip-ansi/-/strip-ansi-6.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m yargs-parser@https://dl-npm.linkease.net:5443/yargs-parser/-/yargs-parser-21.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m cliui@https://dl-npm.linkease.net:5443/cliui/-/cliui-8.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m yargs@https://dl-npm.linkease.net:5443/yargs/-/yargs-17.7.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m matrix-js-sdk@https://dl-npm.linkease.net:5443/matrix-js-sdk/-/matrix-js-sdk-41.2.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m p-retry@https://dl-npm.linkease.net:5443/p-retry/-/p-retry-7.1.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m markdown-it@https://dl-npm.linkease.net:5443/markdown-it/-/markdown-it-14.3.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m entities@https://dl-npm.linkease.net:5443/entities/-/entities-4.5.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m long@https://dl-npm.linkease.net:5443/long/-/long-5.3.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m linkedom@https://dl-npm.linkease.net:5443/linkedom/-/linkedom-0.18.15.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m jszip@https://dl-npm.linkease.net:5443/jszip/-/jszip-3.10.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m json5@https://dl-npm.linkease.net:5443/json5/-/json5-2.2.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m jiti@https://dl-npm.linkease.net:5443/jiti/-/jiti-2.7.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ipaddr.js@https://dl-npm.linkease.net:5443/ipaddr.js/-/ipaddr.js-2.5.0.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m hono@https://dl-npm.linkease.net:5443/hono/-/hono-4.12.9.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m gaxios@https://dl-npm.linkease.net:5443/gaxios/-/gaxios-7.1.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m file-type@https://dl-npm.linkease.net:5443/file-type/-/file-type-22.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m express@https://dl-npm.linkease.net:5443/express/-/express-5.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m content-type@https://dl-npm.linkease.net:5443/content-type/-/content-type-2.1.0.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m dotenv@https://dl-npm.linkease.net:5443/dotenv/-/dotenv-17.4.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m croner@https://dl-npm.linkease.net:5443/croner/-/croner-10.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m commander@https://dl-npm.linkease.net:5443/commander/-/commander-14.0.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m cli-highlight@https://dl-npm.linkease.net:5443/cli-highlight/-/cli-highlight-2.1.11.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m chalk@https://dl-npm.linkease.net:5443/chalk/-/chalk-4.1.2.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m chokidar@https://dl-npm.linkease.net:5443/chokidar/-/chokidar-5.0.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m chalk@https://dl-npm.linkease.net:5443/chalk/-/chalk-5.6.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m ajv@https://dl-npm.linkease.net:5443/ajv/-/ajv-8.20.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @sinclair/typebox@https://dl-npm.linkease.net:5443/@sinclair/typebox/-/typebox-0.34.48.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @napi-rs/canvas@https://dl-npm.linkease.net:5443/@napi-rs/canvas/-/canvas-0.1.100.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @mozilla/readability@https://dl-npm.linkease.net:5443/@mozilla/readability/-/readability-0.6.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @modelcontextprotocol/sdk@https://dl-npm.linkease.net:5443/@modelcontextprotocol/sdk/-/sdk-1.28.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @matrix-org/matrix-sdk-crypto-nodejs@https://dl-npm.linkease.net:5443/@matrix-org/matrix-sdk-crypto-nodejs/-/matrix-sdk-crypto-nodejs-0.4.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @mariozechner/pi-tui@https://dl-npm.linkease.net:5443/@mariozechner/pi-tui/-/pi-tui-0.63.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @mariozechner/pi-coding-agent@https://dl-npm.linkease.net:5443/@mariozechner/pi-coding-agent/-/pi-coding-agent-0.63.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m file-type@https://dl-npm.linkease.net:5443/file-type/-/file-type-21.3.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @mariozechner/pi-ai@https://dl-npm.linkease.net:5443/@mariozechner/pi-ai/-/pi-ai-0.63.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @anthropic-ai/sdk@https://dl-npm.linkease.net:5443/@anthropic-ai/sdk/-/sdk-0.73.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @mariozechner/pi-agent-core@https://dl-npm.linkease.net:5443/@mariozechner/pi-agent-core/-/pi-agent-core-0.63.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @lydell/node-pty@https://dl-npm.linkease.net:5443/@lydell/node-pty/-/node-pty-1.2.0-beta.3.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @line/bot-sdk@https://dl-npm.linkease.net:5443/@line/bot-sdk/-/bot-sdk-10.8.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @homebridge/ciao@https://dl-npm.linkease.net:5443/@homebridge/ciao/-/ciao-1.4.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @clack/prompts@https://dl-npm.linkease.net:5443/@clack/prompts/-/prompts-1.9.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @aws-sdk/client-bedrock@https://dl-npm.linkease.net:5443/@aws-sdk/client-bedrock/-/client-bedrock-3.1175.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @anthropic-ai/vertex-sdk@https://dl-npm.linkease.net:5443/@anthropic-ai/vertex-sdk/-/vertex-sdk-0.14.4.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m zod@https://dl-npm.linkease.net:5443/zod/-/zod-4.6.7.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m @agentclientprotocol/sdk@https://dl-npm.linkease.net:5443/@agentclientprotocol/sdk/-/sdk-0.17.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET https://dl-npm.linkease.net:5443/@napi-rs/canvas-linux-arm64-gnu/-/canvas-linux-arm64-gnu-0.1.100.tgz attempt 1 failed with FETCH_ERROR
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET https://dl-npm.linkease.net:5443/@mariozechner/clipboard-linux-arm64-gnu/-/clipboard-linux-arm64-gnu-0.3.9.tgz attempt 1 failed with FETCH_ERROR
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img/sharp-linux-arm64/-/sharp-linux-arm64-0.34.5.tgz 16244ms (cache miss)
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m @mariozechner/pi-agent-core@0.63.1: please use @earendil-works/pi-agent-core instead going forward
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m node-domexception@1.0.0: Use your platform's native DOMException instead
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m uuid@9.0.1: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m uuid@9.0.1: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m uuid@9.0.1: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@mariozechner/clipboard-linux-arm64-gnu/-/clipboard-linux-arm64-gnu-0.3.9.tgz 23343ms attempt #2 (cache miss)
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m @mariozechner/pi-tui@0.63.1: please use @earendil-works/pi-tui instead going forward
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m @mariozechner/pi-ai@0.63.1: please use @earendil-works/pi-ai instead going forward
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@img/sharp-libvips-linux-arm64/-/sharp-libvips-linux-arm64-1.2.4.tgz 30849ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@napi-rs/canvas-linux-arm64-gnu/-/canvas-linux-arm64-gnu-0.1.100.tgz 36358ms attempt #2 (cache miss)
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m @mariozechner/pi-coding-agent@0.63.1: please use @earendil-works/pi-coding-agent instead going forward
+
+> @google/genai@1.52.0 preinstall
+> echo 'preinstall: no-op'
+
+preinstall: no-op
+
+> koffi@2.16.4 install
+> node src/cnoke/cnoke.js -P . -D src/koffi --prebuild
+
+
+> sharp@0.34.5 install
+> node install/check.js || npm run build
+
+
+> @matrix-org/matrix-sdk-crypto-nodejs@0.4.0 postinstall
+> node download-lib.js
+
+Downloading lib matrix-sdk-crypto.linux-arm64-gnu.node from https://github.com/matrix-org/matrix-rust-sdk-crypto-nodejs/releases/download/v0.4.0/matrix-sdk-crypto.linux-arm64-gnu.node
+0 b/s - 0.0% [1.3 kB/18.9 MB]
+205.7 kB/s - 1.1% [205.7 kB/18.9 MB]
+48.0 kB/s - 1.3% [253.7 kB/18.9 MB]
+48.0 kB/s - 1.6% [301.7 kB/18.9 MB]
+16.0 kB/s - 1.6% [317.7 kB/18.9 MB]
+48.0 kB/s - 1.9% [365.7 kB/18.9 MB]
+48.0 kB/s - 2.1% [413.7 kB/18.9 MB]
+64.0 kB/s - 2.5% [477.7 kB/18.9 MB]
+80.0 kB/s - 2.9% [557.7 kB/18.9 MB]
+48.0 kB/s - 3.1% [605.7 kB/18.9 MB]
+48.0 kB/s - 3.4% [653.7 kB/18.9 MB]
+32.0 kB/s - 3.5% [685.7 kB/18.9 MB]
+64.0 kB/s - 3.9% [749.7 kB/18.9 MB]
+48.0 kB/s - 4.1% [797.7 kB/18.9 MB]
+64.0 kB/s - 4.5% [861.7 kB/18.9 MB]
+32.0 kB/s - 4.6% [893.7 kB/18.9 MB]
+64.0 kB/s - 4.9% [957.7 kB/18.9 MB]
+48.0 kB/s - 5.2% [1005.7 kB/18.9 MB]
+64.0 kB/s - 5.5% [1.0 MB/18.9 MB]
+48.0 kB/s - 5.8% [1.1 MB/18.9 MB]
+48.0 kB/s - 6.0% [1.1 MB/18.9 MB]
+32.0 kB/s - 6.2% [1.2 MB/18.9 MB]
+80.0 kB/s - 6.6% [1.2 MB/18.9 MB]
+32.0 kB/s - 6.8% [1.3 MB/18.9 MB]
+80.0 kB/s - 7.2% [1.4 MB/18.9 MB]
+48.0 kB/s - 7.4% [1.4 MB/18.9 MB]
+80.0 kB/s - 7.8% [1.5 MB/18.9 MB]
+64.0 kB/s - 8.2% [1.5 MB/18.9 MB]
+48.0 kB/s - 8.4% [1.6 MB/18.9 MB]
+64.0 kB/s - 8.8% [1.7 MB/18.9 MB]
+48.0 kB/s - 9.0% [1.7 MB/18.9 MB]
+64.0 kB/s - 9.3% [1.8 MB/18.9 MB]
+32.0 kB/s - 9.5% [1.8 MB/18.9 MB]
+48.0 kB/s - 9.7% [1.8 MB/18.9 MB]
+48.0 kB/s - 10.0% [1.9 MB/18.9 MB]
+48.0 kB/s - 10.2% [1.9 MB/18.9 MB]
+48.0 kB/s - 10.5% [2.0 MB/18.9 MB]
+48.0 kB/s - 10.7% [2.0 MB/18.9 MB]
+48.0 kB/s - 11.0% [2.1 MB/18.9 MB]
+96.0 kB/s - 11.5% [2.2 MB/18.9 MB]
+64.0 kB/s - 11.8% [2.2 MB/18.9 MB]
+64.0 kB/s - 12.1% [2.3 MB/18.9 MB]
+48.0 kB/s - 12.4% [2.3 MB/18.9 MB]
+64.0 kB/s - 12.7% [2.4 MB/18.9 MB]
+96.0 kB/s - 13.2% [2.5 MB/18.9 MB]
+32.0 kB/s - 13.4% [2.5 MB/18.9 MB]
+32.0 kB/s - 13.5% [2.6 MB/18.9 MB]
+48.0 kB/s - 13.8% [2.6 MB/18.9 MB]
+48.0 kB/s - 14.0% [2.7 MB/18.9 MB]
+64.0 kB/s - 14.4% [2.7 MB/18.9 MB]
+64.0 kB/s - 14.7% [2.8 MB/18.9 MB]
+64.0 kB/s - 15.0% [2.8 MB/18.9 MB]
+48.0 kB/s - 15.3% [2.9 MB/18.9 MB]
+64.0 kB/s - 15.6% [3.0 MB/18.9 MB]
+48.0 kB/s - 15.9% [3.0 MB/18.9 MB]
+48.0 kB/s - 16.1% [3.0 MB/18.9 MB]
+48.0 kB/s - 16.4% [3.1 MB/18.9 MB]
+48.0 kB/s - 16.6% [3.1 MB/18.9 MB]
+48.0 kB/s - 16.9% [3.2 MB/18.9 MB]
+64.0 kB/s - 17.2% [3.2 MB/18.9 MB]
+80.0 kB/s - 17.6% [3.3 MB/18.9 MB]
+48.0 kB/s - 17.8% [3.4 MB/18.9 MB]
+64.0 kB/s - 18.2% [3.4 MB/18.9 MB]
+48.0 kB/s - 18.4% [3.5 MB/18.9 MB]
+32.0 kB/s - 18.6% [3.5 MB/18.9 MB]
+48.0 kB/s - 18.8% [3.6 MB/18.9 MB]
+48.0 kB/s - 19.1% [3.6 MB/18.9 MB]
+32.0 kB/s - 19.3% [3.6 MB/18.9 MB]
+48.0 kB/s - 19.5% [3.7 MB/18.9 MB]
+64.0 kB/s - 19.8% [3.7 MB/18.9 MB]
+64.0 kB/s - 20.2% [3.8 MB/18.9 MB]
+32.0 kB/s - 20.3% [3.8 MB/18.9 MB]
+64.0 kB/s - 20.7% [3.9 MB/18.9 MB]
+48.0 kB/s - 20.9% [4.0 MB/18.9 MB]
+48.0 kB/s - 21.2% [4.0 MB/18.9 MB]
+80.0 kB/s - 21.6% [4.1 MB/18.9 MB]
+48.0 kB/s - 21.8% [4.1 MB/18.9 MB]
+48.0 kB/s - 22.1% [4.2 MB/18.9 MB]
+32.0 kB/s - 22.2% [4.2 MB/18.9 MB]
+48.0 kB/s - 22.5% [4.2 MB/18.9 MB]
+80.0 kB/s - 22.9% [4.3 MB/18.9 MB]
+48.0 kB/s - 23.1% [4.4 MB/18.9 MB]
+32.0 kB/s - 23.3% [4.4 MB/18.9 MB]
+48.0 kB/s - 23.5% [4.5 MB/18.9 MB]
+64.0 kB/s - 23.9% [4.5 MB/18.9 MB]
+48.0 kB/s - 24.1% [4.6 MB/18.9 MB]
+32.0 kB/s - 24.3% [4.6 MB/18.9 MB]
+48.0 kB/s - 24.5% [4.6 MB/18.9 MB]
+64.0 kB/s - 24.9% [4.7 MB/18.9 MB]
+64.0 kB/s - 25.2% [4.8 MB/18.9 MB]
+48.0 kB/s - 25.5% [4.8 MB/18.9 MB]
+48.0 kB/s - 25.7% [4.9 MB/18.9 MB]
+48.0 kB/s - 25.9% [4.9 MB/18.9 MB]
+96.0 kB/s - 26.4% [5.0 MB/18.9 MB]
+64.0 kB/s - 26.8% [5.1 MB/18.9 MB]
+80.0 kB/s - 27.2% [5.1 MB/18.9 MB]
+32.0 kB/s - 27.4% [5.2 MB/18.9 MB]
+64.0 kB/s - 27.7% [5.2 MB/18.9 MB]
+64.0 kB/s - 28.0% [5.3 MB/18.9 MB]
+64.0 kB/s - 28.3% [5.4 MB/18.9 MB]
+64.0 kB/s - 28.7% [5.4 MB/18.9 MB]
+64.0 kB/s - 29.0% [5.5 MB/18.9 MB]
+48.0 kB/s - 29.3% [5.5 MB/18.9 MB]
+48.0 kB/s - 29.5% [5.6 MB/18.9 MB]
+64.0 kB/s - 29.8% [5.6 MB/18.9 MB]
+48.0 kB/s - 30.1% [5.7 MB/18.9 MB]
+48.0 kB/s - 30.3% [5.7 MB/18.9 MB]
+48.0 kB/s - 30.6% [5.8 MB/18.9 MB]
+32.0 kB/s - 30.7% [5.8 MB/18.9 MB]
+64.0 kB/s - 31.1% [5.9 MB/18.9 MB]
+48.0 kB/s - 31.3% [5.9 MB/18.9 MB]
+64.0 kB/s - 31.7% [6.0 MB/18.9 MB]
+96.0 kB/s - 32.1% [6.1 MB/18.9 MB]
+64.0 kB/s - 32.5% [6.1 MB/18.9 MB]
+64.0 kB/s - 32.8% [6.2 MB/18.9 MB]
+48.0 kB/s - 33.1% [6.2 MB/18.9 MB]
+80.0 kB/s - 33.5% [6.3 MB/18.9 MB]
+64.0 kB/s - 33.8% [6.4 MB/18.9 MB]
+64.0 kB/s - 34.1% [6.5 MB/18.9 MB]
+48.0 kB/s - 34.4% [6.5 MB/18.9 MB]
+32.0 kB/s - 34.5% [6.5 MB/18.9 MB]
+64.0 kB/s - 34.9% [6.6 MB/18.9 MB]
+64.0 kB/s - 35.2% [6.7 MB/18.9 MB]
+64.0 kB/s - 35.5% [6.7 MB/18.9 MB]
+48.0 kB/s - 35.8% [6.8 MB/18.9 MB]
+48.0 kB/s - 36.0% [6.8 MB/18.9 MB]
+32.0 kB/s - 36.2% [6.8 MB/18.9 MB]
+48.0 kB/s - 36.4% [6.9 MB/18.9 MB]
+80.0 kB/s - 36.9% [7.0 MB/18.9 MB]
+80.0 kB/s - 37.3% [7.0 MB/18.9 MB]
+64.0 kB/s - 37.6% [7.1 MB/18.9 MB]
+48.0 kB/s - 37.9% [7.2 MB/18.9 MB]
+64.0 kB/s - 38.2% [7.2 MB/18.9 MB]
+48.0 kB/s - 38.4% [7.3 MB/18.9 MB]
+32.0 kB/s - 38.6% [7.3 MB/18.9 MB]
+64.0 kB/s - 38.9% [7.4 MB/18.9 MB]
+64.0 kB/s - 39.3% [7.4 MB/18.9 MB]
+48.0 kB/s - 39.5% [7.5 MB/18.9 MB]
+80.0 kB/s - 39.9% [7.5 MB/18.9 MB]
+48.0 kB/s - 40.2% [7.6 MB/18.9 MB]
+48.0 kB/s - 40.4% [7.6 MB/18.9 MB]
+48.0 kB/s - 40.7% [7.7 MB/18.9 MB]
+64.0 kB/s - 41.0% [7.7 MB/18.9 MB]
+48.0 kB/s - 41.2% [7.8 MB/18.9 MB]
+48.0 kB/s - 41.5% [7.8 MB/18.9 MB]
+48.0 kB/s - 41.7% [7.9 MB/18.9 MB]
+64.0 kB/s - 42.1% [8.0 MB/18.9 MB]
+48.0 kB/s - 42.3% [8.0 MB/18.9 MB]
+64.0 kB/s - 42.6% [8.1 MB/18.9 MB]
+64.0 kB/s - 43.0% [8.1 MB/18.9 MB]
+32.0 kB/s - 43.1% [8.2 MB/18.9 MB]
+48.0 kB/s - 43.4% [8.2 MB/18.9 MB]
+48.0 kB/s - 43.6% [8.2 MB/18.9 MB]
+32.0 kB/s - 43.8% [8.3 MB/18.9 MB]
+64.0 kB/s - 44.1% [8.3 MB/18.9 MB]
+80.0 kB/s - 44.5% [8.4 MB/18.9 MB]
+64.0 kB/s - 44.9% [8.5 MB/18.9 MB]
+48.0 kB/s - 45.1% [8.5 MB/18.9 MB]
+48.0 kB/s - 45.4% [8.6 MB/18.9 MB]
+64.0 kB/s - 45.7% [8.6 MB/18.9 MB]
+64.0 kB/s - 46.0% [8.7 MB/18.9 MB]
+64.0 kB/s - 46.4% [8.8 MB/18.9 MB]
+80.0 kB/s - 46.8% [8.8 MB/18.9 MB]
+64.0 kB/s - 47.1% [8.9 MB/18.9 MB]
+64.0 kB/s - 47.4% [9.0 MB/18.9 MB]
+48.0 kB/s - 47.7% [9.0 MB/18.9 MB]
+48.0 kB/s - 47.9% [9.1 MB/18.9 MB]
+64.0 kB/s - 48.3% [9.1 MB/18.9 MB]
+64.0 kB/s - 48.6% [9.2 MB/18.9 MB]
+48.0 kB/s - 48.8% [9.2 MB/18.9 MB]
+48.0 kB/s - 49.1% [9.3 MB/18.9 MB]
+48.0 kB/s - 49.3% [9.3 MB/18.9 MB]
+48.0 kB/s - 49.6% [9.4 MB/18.9 MB]
+64.0 kB/s - 49.9% [9.4 MB/18.9 MB]
+48.0 kB/s - 50.2% [9.5 MB/18.9 MB]
+48.0 kB/s - 50.4% [9.5 MB/18.9 MB]
+64.0 kB/s - 50.7% [9.6 MB/18.9 MB]
+48.0 kB/s - 51.0% [9.6 MB/18.9 MB]
+48.0 kB/s - 51.2% [9.7 MB/18.9 MB]
+48.0 kB/s - 51.5% [9.7 MB/18.9 MB]
+48.0 kB/s - 51.7% [9.8 MB/18.9 MB]
+64.0 kB/s - 52.1% [9.8 MB/18.9 MB]
+32.0 kB/s - 52.2% [9.9 MB/18.9 MB]
+64.0 kB/s - 52.6% [9.9 MB/18.9 MB]
+64.0 kB/s - 52.9% [10.0 MB/18.9 MB]
+64.0 kB/s - 53.2% [10.1 MB/18.9 MB]
+48.0 kB/s - 53.5% [10.1 MB/18.9 MB]
+64.0 kB/s - 53.8% [10.2 MB/18.9 MB]
+32.0 kB/s - 54.0% [10.2 MB/18.9 MB]
+48.0 kB/s - 54.2% [10.2 MB/18.9 MB]
+48.0 kB/s - 54.5% [10.3 MB/18.9 MB]
+30.7 kB/s - 54.6% [10.3 MB/18.9 MB]
+48.0 kB/s - 54.9% [10.4 MB/18.9 MB]
+48.0 kB/s - 55.1% [10.4 MB/18.9 MB]
+64.0 kB/s - 55.5% [10.5 MB/18.9 MB]
+48.0 kB/s - 55.7% [10.5 MB/18.9 MB]
+64.0 kB/s - 56.0% [10.6 MB/18.9 MB]
+48.0 kB/s - 56.3% [10.6 MB/18.9 MB]
+80.0 kB/s - 56.7% [10.7 MB/18.9 MB]
+48.0 kB/s - 56.9% [10.8 MB/18.9 MB]
+48.0 kB/s - 57.2% [10.8 MB/18.9 MB]
+80.0 kB/s - 57.6% [10.9 MB/18.9 MB]
+80.0 kB/s - 58.0% [11.0 MB/18.9 MB]
+96.0 kB/s - 58.5% [11.1 MB/18.9 MB]
+64.0 kB/s - 58.8% [11.1 MB/18.9 MB]
+48.0 kB/s - 59.1% [11.2 MB/18.9 MB]
+64.0 kB/s - 59.4% [11.2 MB/18.9 MB]
+48.0 kB/s - 59.7% [11.3 MB/18.9 MB]
+48.0 kB/s - 59.9% [11.3 MB/18.9 MB]
+48.0 kB/s - 60.2% [11.4 MB/18.9 MB]
+48.0 kB/s - 60.4% [11.4 MB/18.9 MB]
+80.0 kB/s - 60.8% [11.5 MB/18.9 MB]
+64.0 kB/s - 61.2% [11.6 MB/18.9 MB]
+48.0 kB/s - 61.4% [11.6 MB/18.9 MB]
+48.0 kB/s - 61.7% [11.7 MB/18.9 MB]
+64.0 kB/s - 62.0% [11.7 MB/18.9 MB]
+80.0 kB/s - 62.4% [11.8 MB/18.9 MB]
+32.0 kB/s - 62.6% [11.8 MB/18.9 MB]
+32.0 kB/s - 62.7% [11.9 MB/18.9 MB]
+80.0 kB/s - 63.1% [11.9 MB/18.9 MB]
+48.0 kB/s - 63.4% [12.0 MB/18.9 MB]
+48.0 kB/s - 63.6% [12.0 MB/18.9 MB]
+48.0 kB/s - 63.9% [12.1 MB/18.9 MB]
+64.0 kB/s - 64.2% [12.1 MB/18.9 MB]
+64.0 kB/s - 64.5% [12.2 MB/18.9 MB]
+48.0 kB/s - 64.8% [12.2 MB/18.9 MB]
+48.0 kB/s - 65.0% [12.3 MB/18.9 MB]
+48.0 kB/s - 65.3% [12.3 MB/18.9 MB]
+48.0 kB/s - 65.5% [12.4 MB/18.9 MB]
+48.0 kB/s - 65.8% [12.4 MB/18.9 MB]
+80.0 kB/s - 66.2% [12.5 MB/18.9 MB]
+48.0 kB/s - 66.4% [12.6 MB/18.9 MB]
+80.0 kB/s - 66.9% [12.6 MB/18.9 MB]
+64.0 kB/s - 67.2% [12.7 MB/18.9 MB]
+48.0 kB/s - 67.4% [12.7 MB/18.9 MB]
+64.0 kB/s - 67.8% [12.8 MB/18.9 MB]
+48.0 kB/s - 68.0% [12.9 MB/18.9 MB]
+32.0 kB/s - 68.2% [12.9 MB/18.9 MB]
+80.0 kB/s - 68.6% [13.0 MB/18.9 MB]
+48.0 kB/s - 68.8% [13.0 MB/18.9 MB]
+32.0 kB/s - 69.0% [13.0 MB/18.9 MB]
+64.0 kB/s - 69.3% [13.1 MB/18.9 MB]
+80.0 kB/s - 69.8% [13.2 MB/18.9 MB]
+16.0 kB/s - 69.8% [13.2 MB/18.9 MB]
+48.0 kB/s - 70.1% [13.2 MB/18.9 MB]
+32.0 kB/s - 70.3% [13.3 MB/18.9 MB]
+48.0 kB/s - 70.5% [13.3 MB/18.9 MB]
+32.0 kB/s - 70.7% [13.4 MB/18.9 MB]
+48.0 kB/s - 70.9% [13.4 MB/18.9 MB]
+48.0 kB/s - 71.2% [13.4 MB/18.9 MB]
+64.0 kB/s - 71.5% [13.5 MB/18.9 MB]
+64.0 kB/s - 71.8% [13.6 MB/18.9 MB]
+48.0 kB/s - 72.1% [13.6 MB/18.9 MB]
+32.0 kB/s - 72.2% [13.7 MB/18.9 MB]
+48.0 kB/s - 72.5% [13.7 MB/18.9 MB]
+64.0 kB/s - 72.8% [13.8 MB/18.9 MB]
+48.0 kB/s - 73.1% [13.8 MB/18.9 MB]
+80.0 kB/s - 73.5% [13.9 MB/18.9 MB]
+32.0 kB/s - 73.6% [13.9 MB/18.9 MB]
+32.0 kB/s - 73.8% [13.9 MB/18.9 MB]
+64.0 kB/s - 74.1% [14.0 MB/18.9 MB]
+64.0 kB/s - 74.5% [14.1 MB/18.9 MB]
+48.0 kB/s - 74.7% [14.1 MB/18.9 MB]
+48.0 kB/s - 75.0% [14.2 MB/18.9 MB]
+48.0 kB/s - 75.2% [14.2 MB/18.9 MB]
+96.0 kB/s - 75.7% [14.3 MB/18.9 MB]
+48.0 kB/s - 76.0% [14.4 MB/18.9 MB]
+64.0 kB/s - 76.3% [14.4 MB/18.9 MB]
+48.0 kB/s - 76.5% [14.5 MB/18.9 MB]
+48.0 kB/s - 76.8% [14.5 MB/18.9 MB]
+80.0 kB/s - 77.2% [14.6 MB/18.9 MB]
+48.0 kB/s - 77.4% [14.6 MB/18.9 MB]
+64.0 kB/s - 77.8% [14.7 MB/18.9 MB]
+48.0 kB/s - 78.0% [14.7 MB/18.9 MB]
+16.0 kB/s - 78.1% [14.8 MB/18.9 MB]
+48.0 kB/s - 78.4% [14.8 MB/18.9 MB]
+48.0 kB/s - 78.6% [14.9 MB/18.9 MB]
+48.0 kB/s - 78.8% [14.9 MB/18.9 MB]
+48.0 kB/s - 79.1% [14.9 MB/18.9 MB]
+48.0 kB/s - 79.3% [15.0 MB/18.9 MB]
+64.0 kB/s - 79.7% [15.1 MB/18.9 MB]
+48.0 kB/s - 79.9% [15.1 MB/18.9 MB]
+64.0 kB/s - 80.3% [15.2 MB/18.9 MB]
+32.0 kB/s - 80.4% [15.2 MB/18.9 MB]
+48.0 kB/s - 80.7% [15.2 MB/18.9 MB]
+48.0 kB/s - 80.9% [15.3 MB/18.9 MB]
+48.0 kB/s - 81.2% [15.3 MB/18.9 MB]
+80.0 kB/s - 81.6% [15.4 MB/18.9 MB]
+64.0 kB/s - 81.9% [15.5 MB/18.9 MB]
+64.0 kB/s - 82.2% [15.5 MB/18.9 MB]
+48.0 kB/s - 82.5% [15.6 MB/18.9 MB]
+64.0 kB/s - 82.8% [15.7 MB/18.9 MB]
+48.0 kB/s - 83.1% [15.7 MB/18.9 MB]
+64.0 kB/s - 83.4% [15.8 MB/18.9 MB]
+80.0 kB/s - 83.8% [15.8 MB/18.9 MB]
+48.0 kB/s - 84.1% [15.9 MB/18.9 MB]
+16.0 kB/s - 84.1% [15.9 MB/18.9 MB]
+48.0 kB/s - 84.4% [15.9 MB/18.9 MB]
+64.0 kB/s - 84.7% [16.0 MB/18.9 MB]
+48.0 kB/s - 85.0% [16.1 MB/18.9 MB]
+32.0 kB/s - 85.1% [16.1 MB/18.9 MB]
+16.0 kB/s - 85.2% [16.1 MB/18.9 MB]
+32.0 kB/s - 85.4% [16.1 MB/18.9 MB]
+48.0 kB/s - 85.6% [16.2 MB/18.9 MB]
+48.0 kB/s - 85.9% [16.2 MB/18.9 MB]
+64.0 kB/s - 86.2% [16.3 MB/18.9 MB]
+48.0 kB/s - 86.5% [16.3 MB/18.9 MB]
+32.0 kB/s - 86.6% [16.4 MB/18.9 MB]
+64.0 kB/s - 87.0% [16.4 MB/18.9 MB]
+96.0 kB/s - 87.4% [16.5 MB/18.9 MB]
+48.0 kB/s - 87.7% [16.6 MB/18.9 MB]
+48.0 kB/s - 87.9% [16.6 MB/18.9 MB]
+64.0 kB/s - 88.3% [16.7 MB/18.9 MB]
+80.0 kB/s - 88.7% [16.8 MB/18.9 MB]
+64.0 kB/s - 89.0% [16.8 MB/18.9 MB]
+48.0 kB/s - 89.3% [16.9 MB/18.9 MB]
+96.0 kB/s - 89.8% [17.0 MB/18.9 MB]
+32.0 kB/s - 89.9% [17.0 MB/18.9 MB]
+64.0 kB/s - 90.3% [17.1 MB/18.9 MB]
+48.0 kB/s - 90.5% [17.1 MB/18.9 MB]
+32.0 kB/s - 90.7% [17.1 MB/18.9 MB]
+48.0 kB/s - 90.9% [17.2 MB/18.9 MB]
+48.0 kB/s - 91.2% [17.2 MB/18.9 MB]
+64.0 kB/s - 91.5% [17.3 MB/18.9 MB]
+64.0 kB/s - 91.8% [17.4 MB/18.9 MB]
+32.0 kB/s - 92.0% [17.4 MB/18.9 MB]
+80.0 kB/s - 92.4% [17.5 MB/18.9 MB]
+48.0 kB/s - 92.7% [17.5 MB/18.9 MB]
+48.0 kB/s - 92.9% [17.6 MB/18.9 MB]
+32.0 kB/s - 93.1% [17.6 MB/18.9 MB]
+64.0 kB/s - 93.4% [17.7 MB/18.9 MB]
+64.0 kB/s - 93.7% [17.7 MB/18.9 MB]
+128.0 kB/s - 94.4% [17.8 MB/18.9 MB]
+64.0 kB/s - 94.7% [17.9 MB/18.9 MB]
+48.0 kB/s - 95.0% [17.9 MB/18.9 MB]
+48.0 kB/s - 95.2% [18.0 MB/18.9 MB]
+64.0 kB/s - 95.5% [18.1 MB/18.9 MB]
+48.0 kB/s - 95.8% [18.1 MB/18.9 MB]
+48.0 kB/s - 96.0% [18.2 MB/18.9 MB]
+48.0 kB/s - 96.3% [18.2 MB/18.9 MB]
+48.0 kB/s - 96.5% [18.2 MB/18.9 MB]
+64.0 kB/s - 96.9% [18.3 MB/18.9 MB]
+48.0 kB/s - 97.1% [18.4 MB/18.9 MB]
+32.0 kB/s - 97.3% [18.4 MB/18.9 MB]
+32.0 kB/s - 97.4% [18.4 MB/18.9 MB]
+48.0 kB/s - 97.7% [18.5 MB/18.9 MB]
+32.0 kB/s - 97.9% [18.5 MB/18.9 MB]
+48.0 kB/s - 98.1% [18.5 MB/18.9 MB]
+80.0 kB/s - 98.5% [18.6 MB/18.9 MB]
+48.0 kB/s - 98.8% [18.7 MB/18.9 MB]
+80.0 kB/s - 99.2% [18.7 MB/18.9 MB]
+48.0 kB/s - 99.4% [18.8 MB/18.9 MB]
+32.0 kB/s - 99.6% [18.8 MB/18.9 MB]
+48.0 kB/s - 99.8% [18.9 MB/18.9 MB]
+Download Completed
+
+> protobufjs@7.6.6 postinstall
+> node scripts/postinstall
+
+
+added 432 packages in 11m
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m 6 packages have install scripts not yet covered by allowScripts:
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m   openclaw@2026.3.28 (prepare: command -v git >/dev/null 2>&1 && git rev-parse --is-inside-work-tree >/dev/null 2>&1 && git config core.hooksPath git-hooks || exit 0)
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m   @matrix-org/matrix-sdk-crypto-nodejs@0.4.0 (postinstall: node download-lib.js)
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m   sharp@0.34.5 (install: node install/check.js || npm run build)
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m   @google/genai@1.52.0 (preinstall: echo 'preinstall: no-op')
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m   protobufjs@7.6.6 (postinstall: node scripts/postinstall)
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m   koffi@2.16.4 (install: node src/cnoke/cnoke.js -P . -D src/koffi --prebuild)
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m Run `npm install -g --allow-scripts=openclaw,@matrix-org/matrix-sdk-crypto-nodejs,sharp,@google/genai,protobufjs,koffi` to allow these scripts once, or `npm config set allow-scripts=openclaw,@matrix-org/matrix-sdk-crypto-nodejs,sharp,@google/genai,protobufjs,koffi --location=user` to allow them for all global installs.
+2026-11-23 14:26:03 [openclawmgr] Checking native modules and required sqlite-vec vector queries
+2026-11-23 14:26:04 [openclawmgr] Checking the candidate CLI in an isolated home
+2026-11-23 14:26:06 [openclawmgr] Installation phase: stopping
+Command failed: Not found
+2026-11-23 14:26:06 [openclawmgr] Installation phase: backup-ready
+2026-11-23 14:26:06 [openclawmgr] Installation phase: activated
+2026-11-23 14:28:32 [openclawmgr] Gateway health check failed
+2026-11-23 14:28:32 [openclawmgr] Restoring previous runtime and data snapshot
+2026-11-23 14:28:33 [openclawmgr] Installation phase: restored
+2026-11-23 14:28:39 [openclawmgr] Installation finished (exit=1)

@@ -1,0 +1,13 @@
+== recent task log
+2026-11-23 09:43:27 [openclawmgr] Installation phase: preparing
+/mnt/vio4-0/OpenClawMgr-acceptance-20261123/npm-cache/node-24.22.1-x64-musl.tar.xz: OK
+24.22.1
+11.19.1
+2026-11-23 09:43:47 [openclawmgr] Resolved OpenClaw 2026.3.28 with Node v24.22.1
+== package and ownership
+-rw-r--r--    1 root     root       44.2M Nov 23 09:43 /mnt/vio4-0/OpenClawMgr-acceptance-20261123/.install.HjHmhe/openclaw-2026.3.28.tgz
+-rw-r--r--    1 root     root        2.8M Nov 23 09:43 /mnt/vio4-0/OpenClawMgr-acceptance-20261123/.install.HjHmhe/pack.json
+0:0 755 /mnt/vio4-0/OpenClawMgr-acceptance-20261123/.install.HjHmhe/candidate/node
+1000:1000 755 /mnt/vio4-0/OpenClawMgr-acceptance-20261123/.install.HjHmhe/candidate/node/bin/node
+== node gateway state
+true

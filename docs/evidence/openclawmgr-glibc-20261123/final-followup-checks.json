@@ -1,0 +1,22 @@
+[
+  {
+    "name": "sh-final-health",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "ash-final-health",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "shellcheck-final-health",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "whitespace",
+    "exit_code": 0,
+    "output": ""
+  }
+]

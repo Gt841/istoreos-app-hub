@@ -1,0 +1,18 @@
+ 13:21:49 up 1 min,  load average: 2.99, 1.05, 0.37
+15109b6a-9070-49ea-88e0-6ba2e17a5545
+== transaction phases
+.install.HfpkiF
+preparing
+== memory panic policy
+0
+3
+== current reboot errors
+[   20.212639] SQUASHFS error: xz decompression failed, data probably corrupt
+[   20.213292] SQUASHFS error: Failed to read block 0xaabab64: -5
+[   20.213809] SQUASHFS error: Unable to read metadata cache entry [aabab62]
+[   20.214407] SQUASHFS error: Unable to read inode 0xeeac0d3e
+[   22.151802] SQUASHFS error: xz decompression failed, data probably corrupt
+[   22.152431] SQUASHFS error: Failed to read block 0xaabab64: -5
+[   22.152994] SQUASHFS error: Unable to read metadata cache entry [aabab62]
+[   22.153600] SQUASHFS error: Unable to read inode 0xeeac0d3e
+== data and receipt sizes

@@ -1,0 +1,30 @@
+== original npm install debug tail
+log=/mnt/nvme0n1-1/OpenClawMgr-acceptance-20261123/npm-cache/_logs/2026-11-23T01_45_19_999Z-debug-0.log
+314 silly packumentCache full:https://dl-npm.linkease.net:5443/@smithy%2ffetch-http-handler cache-miss
+315 http fetch GET 200 https://dl-npm.linkease.net:5443/@aws-sdk%2ftypes 2431ms (cache miss)
+316 silly packumentCache full:https://dl-npm.linkease.net:5443/@aws-sdk%2ftypes set size:undefined disposed:false
+317 silly fetch manifest @aws-sdk/credential-provider-node@^3.972.98
+318 silly packumentCache full:https://dl-npm.linkease.net:5443/@aws-sdk%2fcredential-provider-node cache-miss
+319 http fetch GET https://dl-npm.linkease.net:5443/@aws-sdk%2fcredential-provider-node attempt 1 failed with ECONNRESET
+320 http fetch GET https://dl-npm.linkease.net:5443/@smithy%2ffetch-http-handler attempt 1 failed with ECONNRESET
+321 silly fetch manifest sisteransi@^2.0.0
+322 silly packumentCache full:https://dl-npm.linkease.net:5443/sisteransi cache-miss
+323 http fetch GET https://dl-npm.linkease.net:5443/sisteransi attempt 1 failed with ECONNREFUSED
+324 http fetch GET https://dl-npm.linkease.net:5443/@aws-sdk%2fcredential-provider-node attempt 2 failed with ECONNREFUSED
+325 http fetch GET https://dl-npm.linkease.net:5443/@smithy%2ffetch-http-handler attempt 2 failed with ECONNREFUSED
+326 http fetch GET https://dl-npm.linkease.net:5443/sisteransi attempt 2 failed with ECONNREFUSED
+327 http fetch GET https://dl-npm.linkease.net:5443/@aws-sdk%2fcredential-provider-node attempt 3 failed with ECONNREFUSED
+328 silly fetch manifest @clack/core@1.6.0
+329 silly packumentCache full:https://dl-npm.linkease.net:5443/@clack%2fcore cache-miss
+330 http fetch GET https://dl-npm.linkease.net:5443/@smithy%2ffetch-http-handler attempt 3 failed with ECONNREFUSED
+331 silly fetch manifest fast-wrap-ansi@^0.2.0
+332 silly packumentCache full:https://dl-npm.linkease.net:5443/fast-wrap-ansi cache-miss
+333 http fetch GET https://dl-npm.linkease.net:5443/@clack%2fcore attempt 1 failed with ECONNREFUSED
+334 http fetch GET https://dl-npm.linkease.net:5443/fast-wrap-ansi attempt 1 failed with ECONNREFUSED
+335 http fetch GET https://dl-npm.linkease.net:5443/sisteransi attempt 3 failed with ECONNREFUSED
+336 silly fetch manifest fast-string-width@^3.0.2
+337 silly packumentCache full:https://dl-npm.linkease.net:5443/fast-string-width cache-miss
+338 http fetch GET https://dl-npm.linkease.net:5443/fast-string-width attempt 1 failed with ECONNREFUSED
+339 http fetch GET https://dl-npm.linkease.net:5443/@clack%2fcore attempt 2 failed with ECONNREFUSED
+340 http fetch GET https://dl-npm.linkease.net:5443/fast-wrap-ansi attempt 2 failed with ECONNREFUSED
+341 http fetch GET https://dl-npm.linkease.net:5443/fast-string-width attempt 2 failed with ECONNREFUSED

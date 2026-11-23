@@ -1,0 +1,13 @@
+task=true
+== installer phases
+2026-11-23 13:29:07 [openclawmgr] Installation finished (exit=124)
+2026-11-23 13:30:42 [openclawmgr] Installation phase: preparing
+2026-11-23 13:30:50 [openclawmgr] Resolved OpenClaw 2026.3.28 with Node v24.22.1
+2026-11-23 13:30:50 [openclawmgr] Fetching package archive and verifying SHA512
+2026-11-23 13:30:53 [openclawmgr] Installing OpenClaw 2026.3.28 and dependencies
+== command tail
+80.0 kB/s - 41.5% [8.7 MB/21.0 MB]
+48.0 kB/s - 41.7% [8.8 MB/21.0 MB]
+48.0 kB/s - 41.9% [8.8 MB/21.0 MB]
+64.0 kB/s - 42.2% [8.9 MB/21.0 MB]
+boot=8ebe0f03-3bce-4dd0-a84b-e7d29317c6ed

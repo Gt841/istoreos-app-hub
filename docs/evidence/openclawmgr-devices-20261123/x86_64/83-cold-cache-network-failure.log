@@ -1,0 +1,2 @@
+{"ok":true,"canceled":true,"task_id":"openclawmgr"}
+Cached requests tolerated broken proxy; retesting with a separate empty cache, original cache retained

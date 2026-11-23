@@ -1,0 +1,21 @@
+running=false
+== native/script progress
+2026-11-23 10:45:05 [openclawmgr] Checking native modules and fallback capabilities
+sqlite-vec unavailable; verified OpenClaw 2026.3.28 built-in/FTS5 fallback. Vector extension acceleration is unavailable.
+2026-11-23 10:45:05 [openclawmgr] sqlite-vec extension unavailable; OpenClaw 2026.3.28 built-in/FTS5 fallback verified (see receipt)
+2026-11-23 10:45:05 [openclawmgr] Checking the candidate CLI in an isolated home
+2026-11-23 10:45:05 [openclawmgr] Installation phase: stopping
+2026-11-23 10:45:06 [openclawmgr] Installation phase: backup-ready
+2026-11-23 10:45:06 [openclawmgr] Installation phase: activated
+2026-11-23 10:45:19 [openclawmgr] Installation phase: committed
+2026-11-23 10:45:19 [openclawmgr] Installation committed: 20261123103234-PDboEf; receipt: /mnt/vio4-0/OpenClawMgr-acceptance-20261123/current/receipt.json
+2026-11-23 10:45:19 [openclawmgr] Installation finished (exit=0)
+== tail
+[?25h
+[2K[1m[38;5;209mGateway Health[39m[22m
+[38;5;78mOK[39m (0ms)
+2026-11-23 10:45:19 [openclawmgr] Installation phase: committed
+2026-11-23 10:45:19 [openclawmgr] Installation committed: 20261123103234-PDboEf; receipt: /mnt/vio4-0/OpenClawMgr-acceptance-20261123/current/receipt.json
+2026-11-23 10:45:19 [openclawmgr] Installation finished (exit=0)
+2026.3.28
+{ "sharp": { "available": true }, "sqliteVec": { "available": false, "fallback": "openclaw-2026.3.28-built-in", "error": "Error loading shared library \/mnt\/vio4-0\/OpenClawMgr-acceptance-20261123\/.install.PDboEf\/candidate\/global\/lib\/node_modules\/openclaw\/node_modules\/sqlite-vec-linux-x64\/vec0.so.so: No such file or directory" }, "sqliteFts5": { "available": true }, "nodePty": { "available": true } }

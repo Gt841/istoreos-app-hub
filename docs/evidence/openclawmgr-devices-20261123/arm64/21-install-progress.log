@@ -1,0 +1,17 @@
+running=true
+http_200_count=418
+http_error_count=0
+== last progress
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/degenerator 1280ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/basic-ftp 1838ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/netmask 4864ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/esprima 955ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/escodegen 987ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/ast-types 3698ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://dl-npm.linkease.net:5443/source-map 32ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/esutils 2307ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/estraverse 2822ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/side-channel-map 838ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/object-inspect 1057ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/side-channel-weakmap 2397ms (cache miss)
+== committed runtime

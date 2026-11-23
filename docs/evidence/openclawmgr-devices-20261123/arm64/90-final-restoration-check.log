@@ -1,0 +1,8 @@
+baseline absence/account/lock/boot-link checks passed
+/etc/config/istoreenhance: OK
+/usr/bin/ks-cli: OK
+/usr/sbin/iStoreEnhance: OK
+0.9.0
+true
+Collected errors:
+ * opkg_conf_load: Could not lock /var/lock/opkg.lock: Resource temporarily unavailable.

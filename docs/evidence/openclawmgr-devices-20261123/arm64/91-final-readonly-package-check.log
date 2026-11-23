@@ -1,0 +1,12 @@
+== dependency package database (read-only)
+Package: coreutils-timeout
+Version: 9.7-r1
+Package: git
+Version: 2.50.2-r1
+Package: git-http
+Version: 2.50.2-r1
+== test port listeners (must be empty)
+== boot stability
+ 10:49:35 up 15 min,  load average: 4.00, 2.29, 1.44
+52367011-c599-415d-81d3-2b3c2c89ef36
+restoration verified; opkg lock was not altered

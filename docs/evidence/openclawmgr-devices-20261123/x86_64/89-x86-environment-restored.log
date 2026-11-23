@@ -1,0 +1,7 @@
+guards passed
+test services stopped
+runtime evidence secured
+x86 temporary files/account removed
+ 10:48:31 up  1:53,  load average: 1.72, 1.46, 1.10
+Command failed: ubus call service delete { "name": "openclawmgr" } (Not found)
+Command failed: ubus call service delete { "name": "istoreenhance" } (Not found)

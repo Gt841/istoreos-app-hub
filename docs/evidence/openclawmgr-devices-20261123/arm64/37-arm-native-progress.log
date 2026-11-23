@@ -1,0 +1,17 @@
+running=false
+== native/script progress
+2026-11-23 10:17:37 [openclawmgr] Installation phase: preparing
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/on-finished 93ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mcache[39m on-finished@https://dl-npm.linkease.net:5443/on-finished/-/on-finished-2.4.2.tgz 0ms (cache hit)
+> @matrix-org/matrix-sdk-crypto-nodejs@0.4.0 postinstall
+> protobufjs@7.6.6 postinstall
+> node scripts/postinstall
+2026-11-23 10:22:54 [openclawmgr] Checking native modules and fallback capabilities
+sqlite-vec unavailable; verified OpenClaw 2026.3.28 built-in/FTS5 fallback. Vector extension acceleration is unavailable.
+2026-11-23 10:23:01 [openclawmgr] Installation finished (exit=1)
+== tail
+- /mnt/nvme0n1-1/OpenClawMgr-acceptance-20261123/.install.HOBgfC/candidate/global/lib/node_modules/openclaw/node_modules/@lydell/node-pty-linux-arm64/lib/utils.js
+- /mnt/nvme0n1-1/OpenClawMgr-acceptance-20261123/.install.HOBgfC/candidate/global/lib/node_modules/openclaw/node_modules/@lydell/node-pty-linux-arm64/lib/index.js
+- /mnt/nvme0n1-1/OpenClawMgr-acceptance-20261123/.install.HOBgfC/candidate/global/lib/node_modules/openclaw/node_modules/@lydell/node-pty/index.js
+- /mnt/nvme0n1-1/OpenClawMgr-acceptance-20261123/.install.HOBgfC/candidate/global/lib/node_modules/openclaw/package.json
+2026-11-23 10:23:01 [openclawmgr] Installation finished (exit=1)

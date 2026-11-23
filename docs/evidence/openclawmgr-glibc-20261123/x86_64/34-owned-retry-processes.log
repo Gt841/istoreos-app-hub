@@ -1,0 +1,13 @@
+pid=11056 exe=/mnt/vio4-0/OpenClawMgr-glibc-acceptance-20261123/.install.JKAFFA/candidate/node/glibc/ld.so
+Name:	MainThread
+State:	S (sleeping)
+VmRSS:	   27484 kB
+command=/mnt/vio4-0/OpenClawMgr-glibc-acceptance-20261123/.install.JKAFFA/candidate/node/glibc/ld.so --library-path /mnt/vio4-0/OpenClawMgr-glibc-acceptance-20261123/.install.JKAFFA/candidate/node/glibc /mnt/vio4-0/OpenClawMgr-glibc-acceptance-20261123/.install.JKAFFA/candidate/node/bin/node.real --require /mnt/vio4-0/OpenClawMgr-glibc-acceptance-20261123/.install.JKAFFA/candidate/node/node-loader.cjs download-lib.js 
+wait=do_epoll_wait
+pid=7937 exe=/mnt/vio4-0/OpenClawMgr-glibc-acceptance-20261123/.install.JKAFFA/candidate/node/glibc/ld.so
+Name:	npm install /mn
+State:	S (sleeping)
+VmRSS:	  881180 kB
+command=/mnt/vio4-0/OpenClawMgr-glibc-acceptance-20261123/.install.JKAFFA/candidate/node/glibc/ld.so --library-path /mnt/vio4-0/OpenClawMgr-glibc-acceptance-20261123/.install.JKAFFA/candidate/node/glibc npm install /mnt/vio4-0/OpenClawMgr-glibc-acceptance-20261123/.install.JKAFFA/openclaw-2026.3.28.tgz                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+wait=do_epoll_wait
+661076	/mnt/vio4-0/OpenClawMgr-glibc-acceptance-20261123/.install.JKAFFA/candidate/global

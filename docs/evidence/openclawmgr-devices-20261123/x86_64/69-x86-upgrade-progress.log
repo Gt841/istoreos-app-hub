@@ -1,0 +1,15 @@
+running=true
+== native/script progress
+2026-11-23 10:32:34 [openclawmgr] Installation phase: preparing
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/on-finished 3ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mcache[39m on-finished@https://dl-npm.linkease.net:55443/on-finished/-/on-finished-2.4.2.tgz 0ms (cache hit)
+> @matrix-org/matrix-sdk-crypto-nodejs@0.4.0 postinstall
+Downloading lib matrix-sdk-crypto.linux-x64-musl.node from https://github.com/matrix-org/matrix-rust-sdk-crypto-nodejs/releases/download/v0.4.0/matrix-sdk-crypto.linux-x64-musl.node
+== tail
+16.0 kB/s - 57.4% [11.2 MB/19.5 MB]
+16.0 kB/s - 57.5% [11.2 MB/19.5 MB]
+16.0 kB/s - 57.6% [11.2 MB/19.5 MB]
+16.0 kB/s - 57.7% [11.2 MB/19.5 MB]
+16.0 kB/s - 57.8% [11.3 MB/19.5 MB]
+2026.3.28
+{ "sharp": { "available": true }, "sqliteVec": { "available": false, "fallback": "openclaw-2026.3.28-built-in", "error": "Error loading shared library \/mnt\/vio4-0\/OpenClawMgr-acceptance-20261123\/.install.fIeKBo\/candidate\/global\/lib\/node_modules\/openclaw\/node_modules\/sqlite-vec-linux-x64\/vec0.so.so: No such file or directory" }, "sqliteFts5": { "available": true }, "nodePty": { "available": true } }

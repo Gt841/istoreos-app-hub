@@ -1,0 +1,30 @@
+== directory safety
+drwxr-xr-x    4 root     root          4096 Nov 23 10:32 /mnt/nvme0n1-1/OpenClawMgr-acceptance-20261123/releases
+drwx------    3 root     root          4096 Nov 23 10:32 /mnt/nvme0n1-1/OpenClawMgr-acceptance-20261123/backups
+drwx------    3 root     root          4096 Nov 23 10:32 /mnt/nvme0n1-1/OpenClawMgr-acceptance-20261123/data
+drwx------    2 root     root          4096 Nov 23 09:40 /mnt/nvme0n1-1/OpenClawMgr-acceptance-20261123/log
+== runtime sources
+    34856 /usr/libexec/istorec/openclawmgr.sh
+    21110 /usr/share/openclawmgr/install-runtime.sh
+     7562 /usr/share/openclawmgr/runtime-check.cjs
+    63528 total
+== journal bytes
+phase
+release
+old-current
+old-previous
+legacy
+was-running
+== recovery trace without secrets
++ OC_SHARE=/usr/share/openclawmgr
++ OC_CHILD= OC_SPAWNING=0 OC_SIGNAL=0 OC_TXN= OC_COMMITTED=0
++ OC_ACTIVATING=0 OC_OLD_CURRENT= OC_OLD_PREVIOUS= OC_LEGACY= OC_RELEASE=
++ OC_WAS_RUNNING=0 OC_BACKUP_READY=0 OC_NODE_URL= OC_NODE_SHA256=
++ OC_DOWNLOAD_PART= OC_LOG_FILE=
++ ACTION=recover_install
+sh: od: not found
+sh: od: not found
+sh: od: not found
+sh: od: not found
+sh: od: not found
+sh: od: not found

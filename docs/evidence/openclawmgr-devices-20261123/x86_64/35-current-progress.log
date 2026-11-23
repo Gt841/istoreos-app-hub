@@ -1,0 +1,20 @@
+running=true
+== native/script progress
+Downloading lib matrix-sdk-crypto.linux-x64-musl.node from https://github.com/matrix-org/matrix-rust-sdk-crypto-nodejs/releases/download/v0.4.0/matrix-sdk-crypto.linux-x64-musl.node
+> protobufjs@7.6.6 postinstall
+> node scripts/postinstall
+2026-11-23 10:22:07 [openclawmgr] Checking native modules and fallback capabilities
+sqlite-vec unavailable; verified OpenClaw 2026.3.28 built-in/FTS5 fallback. Vector extension acceleration is unavailable.
+2026-11-23 10:22:07 [openclawmgr] sqlite-vec extension unavailable; OpenClaw 2026.3.28 built-in/FTS5 fallback verified (see receipt)
+2026-11-23 10:22:07 [openclawmgr] Checking the candidate CLI in an isolated home
+2026-11-23 10:22:08 [openclawmgr] Installation phase: stopping
+2026-11-23 10:22:08 [openclawmgr] Installation phase: backup-ready
+2026-11-23 10:22:08 [openclawmgr] Installation phase: activated
+== tail
+error: unknown option '--no-color'
+error: unknown option '--no-color'
+error: unknown option '--no-color'
+error: unknown option '--no-color'
+error: unknown option '--no-color'
+2026.3.28
+{ "sharp": { "available": true }, "sqliteVec": { "available": false, "fallback": "openclaw-2026.3.28-built-in", "error": "Error loading shared library \/mnt\/vio4-0\/OpenClawMgr-acceptance-20261123\/.install.EBKkfi\/candidate\/global\/lib\/node_modules\/openclaw\/node_modules\/sqlite-vec-linux-x64\/vec0.so.so: No such file or directory" }, "sqliteFts5": { "available": true }, "nodePty": { "available": true } }

@@ -1,0 +1,193 @@
+{
+  "date": "2026-11-23",
+  "result": "partial-device-acceptance",
+  "all_architectures_passed": false,
+  "complete_install_round_limit": 3,
+  "suites": [
+    {
+      "name": "default",
+      "tests": 46,
+      "seconds": 66.222,
+      "passed": true,
+      "log": "final-default.log"
+    },
+    {
+      "name": "busybox",
+      "tests": 46,
+      "seconds": 117.022,
+      "passed": true,
+      "log": "final-busybox.log"
+    }
+  ],
+  "static_checks": [
+    {
+      "name": "sh:openclawmgr.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "ash:openclawmgr.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "sh:openclawmgr",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "ash:openclawmgr",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "sh:install-runtime.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "ash:install-runtime.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "sh:node-pins.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "ash:node-pins.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "sh:npm-env.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "ash:npm-env.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "sh:npm-git.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "ash:npm-git.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "sh:oc-config.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "ash:oc-config.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "sh:openclawmgr-cli.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "ash:openclawmgr-cli.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "sh:npm",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "ash:npm",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "shellcheck",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "lua:luasrc/controller/openclawmgr.lua",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "lua:luasrc/model/openclawmgr.lua",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "lua:luasrc/model/cbi/openclawmgr/cli.lua",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "embedded-lua:0",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "embedded-lua:1",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "js:runtime-check.cjs",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "name": "whitespace",
+      "exit_code": 0,
+      "stderr": ""
+    }
+  ],
+  "devices": {
+    "x86_64": {
+      "host": "192.168.30.7",
+      "fresh_install": "passed",
+      "same_version_upgrade": "passed",
+      "gateway_health": "passed",
+      "procd_uid": 998,
+      "cancel_running_upgrade_preparation": "passed",
+      "sqlite_vec_acceleration": "unavailable",
+      "sqlite_fts5_probe": "passed",
+      "node_pty_load": "passed",
+      "restoration": "passed",
+      "receipt": "x86_64/10-upgrade-receipt.json"
+    },
+    "arm64": {
+      "host": "192.168.30.93",
+      "gateway_acceptance": "failed-after-device-reboot",
+      "installation_preparation_cancel": "passed",
+      "sqlite_vec_acceleration": "unavailable",
+      "sqlite_fts5_probe": "passed-before-reboot",
+      "node_pty_load": "unavailable",
+      "invalid_snapshot_refusal": "passed",
+      "successful_snapshot_recovery": "not-passed",
+      "restoration": "passed",
+      "final_check": "arm64/91-final-readonly-package-check.log"
+    }
+  },
+  "unverified_on_devices": [
+    "SDK ipk packaging and account creation",
+    "browser UI, ACL and CSRF transport",
+    "health-failure/SIGKILL rollback of existing runtime on both architectures",
+    "latest and origin full install paths",
+    "Matrix channel, interactive PTY, vector memory retrieval and model inference"
+  ],
+  "fault_injection_note": "Per-process proxy did not block ks-cli routing, not counted as network failure; tasks canceled and original cache restored.",
+  "node_download_note": "Pinned musl archives pre-seeded from development machine and reverified on device; real ks-cli downloads attempted/canceled, complete accelerated Node download not proven.",
+  "published": false,
+  "committed": false,
+  "bounded_acceptance_finished": true
+}

@@ -1,0 +1,16 @@
+Unknown package 'coreutils-timeout'.
+Collected errors:
+ * opkg_install_cmd: Cannot install package coreutils-timeout.
+ * opkg_install_cmd: Cannot install package git.
+ * opkg_install_cmd: Cannot install package git-http.
+Unknown package 'git'.
+Unknown package 'git-http'.
+Installing coreutils-timeout (9.7-r1) to root...
+Downloading https://mirrors.cernet.edu.cn/openwrt/releases/24.10.8/packages/x86_64/packages/coreutils-timeout_9.7-r1_x86_64.ipk
+Installing git (2.50.2-r1) to root...
+Downloading https://mirrors.cernet.edu.cn/openwrt/releases/24.10.8/packages/x86_64/packages/git_2.50.2-r1_x86_64.ipk
+Installing git-http (2.50.2-r1) to root...
+Downloading https://mirrors.cernet.edu.cn/openwrt/releases/24.10.8/packages/x86_64/packages/git-http_2.50.2-r1_x86_64.ipk
+Configuring coreutils-timeout.
+Configuring git.
+Configuring git-http.

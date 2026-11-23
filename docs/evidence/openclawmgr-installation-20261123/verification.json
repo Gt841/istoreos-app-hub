@@ -1,0 +1,136 @@
+{
+  "round": 3,
+  "suites": [
+    {
+      "name": "round-3-default-shell",
+      "exit_code": 0,
+      "tests": 36,
+      "seconds": 56.396,
+      "log": "round-3-default-shell.log"
+    },
+    {
+      "name": "round-3-busybox-ash",
+      "exit_code": 0,
+      "tests": 36,
+      "seconds": 104.531,
+      "log": "round-3-busybox-ash.log"
+    }
+  ],
+  "checks": [
+    {
+      "name": "sh-syntax-0",
+      "exit_code": 0
+    },
+    {
+      "name": "ash-syntax-0",
+      "exit_code": 0
+    },
+    {
+      "name": "sh-syntax-1",
+      "exit_code": 0
+    },
+    {
+      "name": "ash-syntax-1",
+      "exit_code": 0
+    },
+    {
+      "name": "sh-syntax-2",
+      "exit_code": 0
+    },
+    {
+      "name": "ash-syntax-2",
+      "exit_code": 0
+    },
+    {
+      "name": "sh-syntax-3",
+      "exit_code": 0
+    },
+    {
+      "name": "ash-syntax-3",
+      "exit_code": 0
+    },
+    {
+      "name": "sh-syntax-4",
+      "exit_code": 0
+    },
+    {
+      "name": "ash-syntax-4",
+      "exit_code": 0
+    },
+    {
+      "name": "sh-syntax-5",
+      "exit_code": 0
+    },
+    {
+      "name": "ash-syntax-5",
+      "exit_code": 0
+    },
+    {
+      "name": "sh-syntax-6",
+      "exit_code": 0
+    },
+    {
+      "name": "ash-syntax-6",
+      "exit_code": 0
+    },
+    {
+      "name": "sh-syntax-7",
+      "exit_code": 0
+    },
+    {
+      "name": "ash-syntax-7",
+      "exit_code": 0
+    },
+    {
+      "name": "sh-syntax-8",
+      "exit_code": 0
+    },
+    {
+      "name": "ash-syntax-8",
+      "exit_code": 0
+    },
+    {
+      "name": "shellcheck",
+      "exit_code": 0
+    },
+    {
+      "name": "lua-syntax-0",
+      "exit_code": 0
+    },
+    {
+      "name": "lua-syntax-1",
+      "exit_code": 0
+    },
+    {
+      "name": "lua-syntax-2",
+      "exit_code": 0
+    },
+    {
+      "name": "lua-embedded-0",
+      "exit_code": 0
+    },
+    {
+      "name": "lua-embedded-1",
+      "exit_code": 0
+    },
+    {
+      "name": "js-syntax-0",
+      "exit_code": 0
+    },
+    {
+      "name": "js-syntax-1",
+      "exit_code": 0
+    },
+    {
+      "name": "diff-whitespace",
+      "exit_code": 0
+    }
+  ],
+  "node": "v24.22.1",
+  "busybox": "BusyBox v1.36.1 (Ubuntu 1:1.36.1-6ubuntu3.1) multi-call binary.",
+  "boundaries": [
+    "isolated UCI/procd/network/npm fixtures",
+    "real official x64/glibc Node and SQLite checks",
+    "no real OpenWrt installation/build/publication/device changes"
+  ]
+}

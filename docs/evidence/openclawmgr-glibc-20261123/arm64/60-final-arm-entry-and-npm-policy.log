@@ -1,0 +1,4 @@
+{"arch":"arm64","glibc":"2.39","npmLibc":"glibc"}
+glibc
+{"uid":0,"arch":"arm64","glibc":"2.39","vec":"v0.1.7","nearestNeighbor":{"rowid":1,"distance":0.141421377658844}}
+forkExit=0

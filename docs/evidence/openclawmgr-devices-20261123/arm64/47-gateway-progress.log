@@ -1,0 +1,9 @@
+running=true
+== native/script progress
+2026-11-23 10:25:11 [openclawmgr] Installation phase: preparing
+== tail
+2026-11-23 10:25:37 [openclawmgr] Resolved OpenClaw 2026.3.28 with Node v24.22.1
+2026-11-23 10:25:37 [openclawmgr] Fetching package archive and verifying SHA512
+2026-11-23 10:27:02 [openclawmgr] Installing OpenClaw 2026.3.28 and dependencies
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@anthropic-ai%2fvertex-sdk 84ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@agentclientprotocol%2fsdk 137ms (cache stale)

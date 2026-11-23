@@ -1,0 +1,13 @@
+2026-11-23 14:02:44 [openclawmgr] == restart begin ==
+Gateway Health
+OK (0ms)
+2026-11-23 14:02:54 [openclawmgr] == restart done ==
+== after extension restoration / public manager restart
+{"uid":998,"glibc":"2.39","openclawLoader":true,"vec":"v0.1.7","hit":{"rowid":1,"distance":0.141421377658844}}
+== current process uid
+Uid:	998	998	998	998
+manager restart and vector recheck passed
+Error: gateway closed (1006 abnormal closure (no close frame)): no close reason
+Gateway target: ws://127.0.0.1:19189
+Source: cli --url
+Config: /mnt/vio4-0/OpenClawMgr-glibc-acceptance-20261123/data/.openclaw/openclaw.json

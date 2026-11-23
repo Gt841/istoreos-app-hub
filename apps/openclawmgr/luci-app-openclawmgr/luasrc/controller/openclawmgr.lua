@@ -168,12 +168,12 @@ local function get_task_state(task_id)
 
 	local op = ""
 	for _, candidate in ipairs({ "install", "upgrade", "uninstall_openclaw", "uninstall", "purge", "restart", "start", "stop" }) do
-		if cmd:match("(^|[^%w_])" .. candidate .. "([^%w_]|$)") then
+		if cmd:match("%f[%w_]" .. candidate .. "%f[^%w_]") then
 			op = candidate
 			break
 		end
 		for _, part in ipairs(cmd_parts) do
-			if type(part) == "string" and part:match("(^|[^%w_])" .. candidate .. "([^%w_]|$)") then
+			if type(part) == "string" and part:match("%f[%w_]" .. candidate .. "%f[^%w_]") then
 				op = candidate
 				break
 			end
@@ -666,7 +666,7 @@ local function installer_lock_running()
 			cmdline = (f:read("*a") or ""):gsub("%z", " ")
 			f:close()
 		end
-		if cmdline:match("openclawmgr%.sh") and (cmdline:match(" install([%s]|$)") or cmdline:match(" upgrade([%s]|$)")) then
+		if cmdline:match("openclawmgr%.sh") and (cmdline:match("%f[%w_]install%f[^%w_]") or cmdline:match("%f[%w_]upgrade%f[^%w_]")) then
 			return true, pid
 		end
 	end
@@ -1648,16 +1648,11 @@ function action_op()
 			return
 		end
 
-		local rc = sys.call("/etc/init.d/tasks task_del " .. task_id .. " >/dev/null 2>&1")
-		if rc ~= 0 and task.pid ~= "" then
-			sys.call("kill -TERM " .. util.shellquote(task.pid) .. " >/dev/null 2>&1")
-			sys.call("sleep 1")
-			sys.call("kill -KILL " .. util.shellquote(task.pid) .. " >/dev/null 2>&1")
-			rc = sys.call("/etc/init.d/tasks task_del " .. task_id .. " >/dev/null 2>&1")
-		end
-
-		if rc == 0 or not get_task_state(task_id).running then
-			sys.call("rm -rf /tmp/openclawmgr-installer.lock >/dev/null 2>&1")
+		-- The coordinator owns cancellation, child joins and rollback. task_del
+		-- may kill its process group, so only delete taskd state after cleanup.
+		local rc = sys.call(script_path .. " cancel_install >/dev/null 2>&1")
+		if rc == 0 then
+			sys.call("/etc/init.d/tasks task_del " .. task_id .. " >/dev/null 2>&1")
 			write_json({ ok = true, canceled = true, task_id = task_id })
 			return
 		end

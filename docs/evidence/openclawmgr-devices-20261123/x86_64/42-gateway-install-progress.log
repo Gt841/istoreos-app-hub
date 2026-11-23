@@ -1,0 +1,9 @@
+running=true
+== native/script progress
+2026-11-23 10:25:11 [openclawmgr] Installation phase: preparing
+== tail
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/jszip 3ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/linkedom 6ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/long 4ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/markdown-it 10ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/matrix-js-sdk 12ms (cache stale)

@@ -1,0 +1,14 @@
+== task state
+{"running":true,"pid":7082}
+== recent task log
+2026-11-23 09:43:27 [openclawmgr] Installation phase: preparing
+/mnt/vio4-0/OpenClawMgr-acceptance-20261123/npm-cache/node-24.22.1-x64-musl.tar.xz: OK
+24.22.1
+11.19.1
+2026-11-23 09:43:47 [openclawmgr] Resolved OpenClaw 2026.3.28 with Node v24.22.1
+== node execution
+{"node":"24.22.1","arch":"x64","sqlite":"3.53.4"}
+== state
+preparing
+Filesystem           1024-blocks    Used Available Capacity Mounted on
+/dev/sdc              16337788   2931660  12550884  19% /mnt/vio4-0

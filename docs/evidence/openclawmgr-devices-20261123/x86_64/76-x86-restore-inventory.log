@@ -1,0 +1,18 @@
+== backup inventory
+drwx------    2 root     root          4096 Nov 23 09:40 .
+drwx------   10 root     root          4096 Nov 23 10:02 ..
+-rw-------    1 root     root           191 Nov 23 09:36 absent
+-rw-------    1 root     root         32297 Nov 23 09:36 packages.before
+-rw-------    1 root     root             0 Nov 23 09:36 protected.sha256
+-rw-r--r--    1 root     root             4 Nov 23 09:40 user.created
+== originally absent
+etc/config/openclawmgr
+etc/init.d/openclawmgr
+usr/libexec/istorec/openclawmgr.sh
+usr/share/openclawmgr
+usr/bin/ks-cli
+usr/sbin/iStoreEnhance
+etc/config/istoreenhance
+etc/init.d/istoreenhance
+== test account
+998

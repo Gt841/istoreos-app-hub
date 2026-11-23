@@ -1,0 +1,9 @@
+== native lifecycle events
+2026-11-23 09:52:42 [openclawmgr] Installation phase: preparing
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/http-errors 1296ms (cache miss)
+== latest
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@aws-sdk%2fcredential-provider-login 947ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@aws-sdk%2fsignature-v4-multi-region 2190ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/fast-string-truncated-width 1292ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/source-map 860ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/buffer-from 982ms (cache miss)

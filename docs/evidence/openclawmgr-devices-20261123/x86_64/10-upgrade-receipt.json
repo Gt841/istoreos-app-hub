@@ -1,0 +1,31 @@
+{
+  "version": "2026.3.28",
+  "engines": ">=22.14.0",
+  "integrity": "sha512-n7ZS3zdimB2H/GfnylyG8xWXVrmlsSPHZdNEIEPe54Sl5XYuYD5yxilGYV0DWowgtsM5ysFEQMMMArdC/O77Jw==",
+  "node": "24.22.1",
+  "platform": "linux",
+  "arch": "x64",
+  "npm": "11.19.1",
+  "channel": "stable",
+  "source": "ks-cli",
+  "nodeSource": "reused:/mnt/vio4-0/OpenClawMgr-acceptance-20261123/node",
+  "nodeExecutableSha256": "2b9e69ee0dc0966260806b9f5d2289f9506bd51b167ce2291e40a10783f42516",
+  "nodeSha256": null,
+  "installedAt": "2026-11-23T02:45:05.649Z",
+  "nativeChecks": {
+    "sharp": {
+      "available": true
+    },
+    "sqliteVec": {
+      "available": false,
+      "fallback": "openclaw-2026.3.28-built-in",
+      "error": "Error loading shared library /mnt/vio4-0/OpenClawMgr-acceptance-20261123/.install.PDboEf/candidate/global/lib/node_modules/openclaw/node_modules/sqlite-vec-linux-x64/vec0.so.so: No such file or directory"
+    },
+    "sqliteFts5": {
+      "available": true
+    },
+    "nodePty": {
+      "available": true
+    }
+  }
+}

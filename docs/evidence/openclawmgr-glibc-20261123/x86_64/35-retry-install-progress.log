@@ -1,0 +1,14 @@
+task=true
+== install progress
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sqlite-vec-darwin-x64 3ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sqlite-vec-linux-arm64 2ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sqlite-vec-windows-x64 3ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sqlite-vec-darwin-arm64 3ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mcache[39m sqlite-vec-linux-x64@https://registry.npmjs.org/sqlite-vec-linux-x64/-/sqlite-vec-linux-x64-0.1.7.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m sqlite-vec@https://registry.npmjs.org/sqlite-vec/-/sqlite-vec-0.1.7.tgz 0ms (cache hit)
+Downloading lib matrix-sdk-crypto.linux-x64-gnu.node from https://github.com/matrix-org/matrix-rust-sdk-crypto-nodejs/releases/download/v0.4.0/matrix-sdk-crypto.linux-x64-gnu.node
+48.0 kB/s - 5.9% [1.2 MB/21.0 MB]
+32.0 kB/s - 6.0% [1.3 MB/21.0 MB]
+48.0 kB/s - 6.2% [1.3 MB/21.0 MB]
+48.0 kB/s - 6.5% [1.4 MB/21.0 MB]
+boot=8ebe0f03-3bce-4dd0-a84b-e7d29317c6ed

@@ -1,0 +1,15 @@
+== baseline
+aarch64
+ 13:10:59 up  2:06,  load average: 2.20, 2.82, 2.30
+              total        used        free      shared  buff/cache   available
+Mem:        4022024      794548      132424        5148     3095052     3155860
+Swap:             0           0           0
+ABSENT /etc/config/openclawmgr
+ABSENT /etc/init.d/openclawmgr
+ABSENT /usr/libexec/istorec/openclawmgr.sh
+ABSENT /usr/share/openclawmgr
+ABSENT /usr/share/openclawmgr-glibc
+== acceleration availability
+/usr/bin/ks-cli
+KSpeeder=true
+== test port availability

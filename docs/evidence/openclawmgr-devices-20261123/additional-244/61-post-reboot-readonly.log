@@ -1,0 +1,22 @@
+== time and boot
+2026-11-23T02:35:32Z
+ 10:35:32 up 43 min,  load average: 0.42, 0.31, 0.28
+89c3020f-eb5b-4044-adff-6d0bcc5517f6
+== resources
+              total        used        free      shared  buff/cache   available
+Mem:        1984756      247756     1262928        4964      474072     1666188
+Swap:             0           0           0
+Filesystem                Size      Used Available Use% Mounted on
+overlayfs:/overlay        1.9G      1.6M      1.9G   0% /
+== reboot evidence
+[    0.020541] Calibrating delay loop (skipped) preset value.. 1612.80 BogoMIPS (lpj=8064000)
+[    0.036960] thermal_sys: Registered thermal governor 'step_wise'
+[    0.036960] thermal_sys: Registered thermal governor 'user_space'
+[    0.369620] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    0.369715] ACPI: button: Power Button [PWRF]
+[    0.407788] sd 0:0:0:0: Power-on or device reset occurred
+[    0.407835] sd 1:0:0:1: Power-on or device reset occurred
+[    4.809088] mount_root: overlay: /dev/sda3 marked as RESET, format later
+[  314.514130] clocksource: Long readout interval, skipping watchdog check: cs_nsec: 1546015671 wd_nsec: 499984856
+== recent relevant logs
+Mon Nov 23 09:57:28 2026 kern.warn kernel: [  314.514130] clocksource: Long readout interval, skipping watchdog check: cs_nsec: 1546015671 wd_nsec: 499984856

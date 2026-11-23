@@ -1,0 +1,51 @@
+test_acceleration_uses_ks_cli_and_custom_admin_port (__main__.InstallationTests.test_acceleration_uses_ks_cli_and_custom_admin_port) ... ok
+test_bad_archive_is_rejected_before_extraction (__main__.InstallationTests.test_bad_archive_is_rejected_before_extraction) ... ok
+test_cancellation_joins_npm_children_and_preserves_old_runtime (__main__.InstallationTests.test_cancellation_joins_npm_children_and_preserves_old_runtime) ... ok
+test_cancelled_download_cleans_native_sidecars (__main__.InstallationTests.test_cancelled_download_cleans_native_sidecars) ... ok
+test_configuration_failure_restores_old_runtime (__main__.InstallationTests.test_configuration_failure_restores_old_runtime) ... ok
+test_continuous_upgrades_and_failed_upgrade_preserve_both_pointers (__main__.InstallationTests.test_continuous_upgrades_and_failed_upgrade_preserve_both_pointers) ... ok
+test_corrupt_cached_archive_is_redownloaded (__main__.InstallationTests.test_corrupt_cached_archive_is_redownloaded) ... ok
+test_disabled_accelerator_is_not_started (__main__.InstallationTests.test_disabled_accelerator_is_not_started) ... ok
+test_download_failure_retains_exit_status (__main__.InstallationTests.test_download_failure_retains_exit_status) ... ok
+test_empty_runtime_json_does_not_block_journal_recovery (__main__.InstallationTests.test_empty_runtime_json_does_not_block_journal_recovery) ... ok
+test_engine_failure_preserves_old_runtime (__main__.InstallationTests.test_engine_failure_preserves_old_runtime) ... ok
+test_failed_wrapper_joins_its_remaining_native_child (__main__.InstallationTests.test_failed_wrapper_joins_its_remaining_native_child) ... ok
+test_fresh_install_commits_receipt_and_compatibility_paths (__main__.InstallationTests.test_fresh_install_commits_receipt_and_compatibility_paths) ... ok
+test_hard_interruption_after_activation_recovers_snapshot (__main__.InstallationTests.test_hard_interruption_after_activation_recovers_snapshot) ... ok
+test_health_failure_restores_legacy_runtime_and_snapshot (__main__.InstallationTests.test_health_failure_restores_legacy_runtime_and_snapshot) ... ok
+test_install_is_idempotent (__main__.InstallationTests.test_install_is_idempotent) ... ok
+test_insufficient_inodes_fails_before_network (__main__.InstallationTests.test_insufficient_inodes_fails_before_network) ... ok
+test_insufficient_space_fails_before_network (__main__.InstallationTests.test_insufficient_space_fails_before_network) ... ok
+test_interactive_npm_shim_survives_exec_without_recursion (__main__.InstallationTests.test_interactive_npm_shim_survives_exec_without_recursion) ... ok
+test_invalid_runtime_and_missing_integrity_prevent_activation (__main__.InstallationTests.test_invalid_runtime_and_missing_integrity_prevent_activation) ... ok
+test_invalid_snapshot_refuses_recovery_without_moving_live_data (__main__.InstallationTests.test_invalid_snapshot_refuses_recovery_without_moving_live_data) ... ok
+test_latest_is_resolved_once_and_pack_uses_exact_version (__main__.InstallationTests.test_latest_is_resolved_once_and_pack_uses_exact_version) ... ok
+test_missing_required_native_module_prevents_activation (__main__.InstallationTests.test_missing_required_native_module_prevents_activation) ... ok
+test_npm_failure_preserves_old_runtime_and_service (__main__.InstallationTests.test_npm_failure_preserves_old_runtime_and_service) ... ok
+test_npm_git_dependencies_use_explicit_adapter (__main__.InstallationTests.test_npm_git_dependencies_use_explicit_adapter) ... ok
+test_openwrt_df_without_inode_option_uses_stat (__main__.InstallationTests.test_openwrt_df_without_inode_option_uses_stat) ... ok
+test_pack_tampering_preserves_old_runtime (__main__.InstallationTests.test_pack_tampering_preserves_old_runtime) ... ok
+test_paths_with_spaces (__main__.InstallationTests.test_paths_with_spaces) ... ok
+test_platform_urls (__main__.InstallationTests.test_platform_urls) ... ok
+test_recovery_can_be_retried_after_service_restore_failure (__main__.InstallationTests.test_recovery_can_be_retried_after_service_restore_failure) ... ok
+test_reused_node_that_fails_engines_falls_back_to_pinned_node (__main__.InstallationTests.test_reused_node_that_fails_engines_falls_back_to_pinned_node) ... ok
+test_snapshot_permissions (__main__.InstallationTests.test_snapshot_permissions) ... ok
+test_start_and_apply_propagate_failures (__main__.InstallationTests.test_start_and_apply_propagate_failures) ... ok
+test_successful_legacy_upgrade_keeps_previous_and_data_backup (__main__.InstallationTests.test_successful_legacy_upgrade_keeps_previous_and_data_backup) ... ok
+test_uninstall_removes_managed_runtime_but_retains_data (__main__.InstallationTests.test_uninstall_removes_managed_runtime_but_retains_data) ... ok
+test_unsupported_architecture_fails_before_network (__main__.InstallationTests.test_unsupported_architecture_fails_before_network) ... ok
+test_wrong_cli_version_prevents_activation (__main__.InstallationTests.test_wrong_cli_version_prevents_activation) ... ok
+test_new_npm_receives_allow_scripts_without_disabling_other_scripts (__main__.RuntimeChecks.test_new_npm_receives_allow_scripts_without_disabling_other_scripts) ... ok
+test_openwrt_package_contract (__main__.RuntimeChecks.test_openwrt_package_contract) ... ok
+test_real_node_sqlite_round_trip (__main__.RuntimeChecks.test_real_node_sqlite_round_trip) ... ok
+test_unreviewed_version_cannot_silently_skip_pty (__main__.RuntimeChecks.test_unreviewed_version_cannot_silently_skip_pty) ... ok
+test_unreviewed_version_cannot_silently_skip_sqlite_vec (__main__.RuntimeChecks.test_unreviewed_version_cannot_silently_skip_sqlite_vec) ... ok
+test_verified_stable_records_pty_fallback_capability (__main__.RuntimeChecks.test_verified_stable_records_pty_fallback_capability) ... ok
+test_verified_stable_records_sqlite_vec_fallback_capability (__main__.RuntimeChecks.test_verified_stable_records_sqlite_vec_fallback_capability) ... ok
+test_wrong_architecture_is_rejected (__main__.RuntimeChecks.test_wrong_architecture_is_rejected) ... ok
+test_wrong_libc_is_rejected (__main__.RuntimeChecks.test_wrong_libc_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 46 tests in 117.022s
+
+OK

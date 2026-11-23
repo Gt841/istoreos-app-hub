@@ -1,0 +1,45 @@
+[90m    at TLSSocket.socketOnEnd (node:_http_client:798:25)[39m
+[90m    at TLSSocket.emit (node:events:526:24)[39m
+[90m    at endReadableNT (node:internal/streams/readable:1783:12)[39m
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)[39m {
+  code: [32m'ECONNRESET'[39m
+}
+
+> protobufjs@7.6.6 postinstall
+> node scripts/postinstall
+
+
+added 432 packages in 2m
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m 6 packages have install scripts not yet covered by allowScripts:
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m   openclaw@2026.3.28 (prepare: command -v git >/dev/null 2>&1 && git rev-parse --is-inside-work-tree >/dev/null 2>&1 && git config core.hooksPath git-hooks || exit 0)
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m   @matrix-org/matrix-sdk-crypto-nodejs@0.4.0 (postinstall: node download-lib.js)
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m   sharp@0.34.5 (install: node install/check.js || npm run build)
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m   @google/genai@1.52.0 (preinstall: echo 'preinstall: no-op')
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m   protobufjs@7.6.6 (postinstall: node scripts/postinstall)
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m   koffi@2.16.4 (install: node src/cnoke/cnoke.js -P . -D src/koffi --prebuild)
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m Run `npm install -g --allow-scripts=openclaw,@matrix-org/matrix-sdk-crypto-nodejs,sharp,@google/genai,protobufjs,koffi` to allow these scripts once, or `npm config set allow-scripts=openclaw,@matrix-org/matrix-sdk-crypto-nodejs,sharp,@google/genai,protobufjs,koffi --location=user` to allow them for all global installs.
+2026-11-23 10:22:07 [openclawmgr] Checking native modules and fallback capabilities
+sqlite-vec unavailable; verified OpenClaw 2026.3.28 built-in/FTS5 fallback. Vector extension acceleration is unavailable.
+2026-11-23 10:22:07 [openclawmgr] sqlite-vec extension unavailable; OpenClaw 2026.3.28 built-in/FTS5 fallback verified (see receipt)
+2026-11-23 10:22:07 [openclawmgr] Checking the candidate CLI in an isolated home
+2026-11-23 10:22:08 [openclawmgr] Installation phase: stopping
+Command failed: Not found
+2026-11-23 10:22:08 [openclawmgr] Installation phase: backup-ready
+2026-11-23 10:22:08 [openclawmgr] Installation phase: activated
+error: unknown option '--no-color'
+error: unknown option '--no-color'
+error: unknown option '--no-color'
+error: unknown option '--no-color'
+error: unknown option '--no-color'
+error: unknown option '--no-color'
+error: unknown option '--no-color'
+error: unknown option '--no-color'
+error: unknown option '--no-color'
+error: unknown option '--no-color'
+error: unknown option '--no-color'
+error: unknown option '--no-color'
+2026-11-23 10:23:11 [openclawmgr] Gateway health check failed
+2026-11-23 10:23:11 [openclawmgr] Restoring previous runtime and data snapshot
+2026-11-23 10:23:12 [openclawmgr] Installation phase: restored
+2026-11-23 10:23:14 [openclawmgr] Installation finished (exit=1)
