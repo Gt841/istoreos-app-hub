@@ -25,10 +25,6 @@ start_service() {
 		logger -t kaiplus "data_dir is empty; please set option data_dir in /etc/config/kaiplus"
 		return 1
 	fi
-	if [ -z "$backup_dir" ]; then
-		backup_dir="$(dirname "$(dirname "$data_dir")")/TimeMachine"
-	fi
-
 	mkdir_p "$data_dir"
 	umask 077
 	mkdir_p "$data_dir/workspace"

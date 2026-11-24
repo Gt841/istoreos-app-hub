@@ -87,6 +87,7 @@ class FreshInstall(unittest.TestCase):
                 installed_init = (dest / "etc/init.d/kaiplus").read_text()
                 self.assertIn("--web-zip /usr/share/kaiplus/kaiplus-web.zip", installed_init)
                 self.assertIn('KAIPLUS_BACKUP_DIR="$backup_dir"', installed_init)
+                self.assertNotIn('backup_dir="$(dirname', installed_init)
 
     def test_market_config_sets_home_and_propagates_start_failure(self):
         for dont_start, restart_status in [(False, 0), (True, 0), (False, 1)]:
