@@ -84,7 +84,9 @@ class FreshInstall(unittest.TestCase):
                 self.assertEqual((dest / "usr/sbin/kaiplus_bin").read_bytes(), f"{arch} executable".encode())
                 self.assertEqual((dest / "usr/share/kaiplus/kaiplus-web.zip").read_bytes(), b"opaque web ZIP")
                 self.assertFalse((dest / "usr/share/kaiplus/www").exists())
-                self.assertIn("--web-zip /usr/share/kaiplus/kaiplus-web.zip", (dest / "etc/init.d/kaiplus").read_text())
+                installed_init = (dest / "etc/init.d/kaiplus").read_text()
+                self.assertIn("--web-zip /usr/share/kaiplus/kaiplus-web.zip", installed_init)
+                self.assertIn('KAIPLUS_BACKUP_DIR="$backup_dir"', installed_init)
 
     def test_market_config_sets_home_and_propagates_start_failure(self):
         for dont_start, restart_status in [(False, 0), (True, 0), (False, 1)]:
@@ -108,6 +110,7 @@ class FreshInstall(unittest.TestCase):
                 self.assertEqual(result.returncode, restart_status, result.stderr)
                 config = (root / "uci-input").read_text()
                 self.assertIn(f'set kaiplus.@kaiplus[0].data_dir="{root}/Configs/KAIPlus"', config)
+                self.assertIn(f'set kaiplus.@kaiplus[0].backup_dir="{root}/TimeMachine"', config)
                 self.assertIn(f"set kaiplus.@kaiplus[0].enabled={0 if dont_start else 1}", config)
                 self.assertEqual((root / "service-input").read_text(), "restart")
                 self.assertTrue((root / "Configs/KAIPlus").is_dir())

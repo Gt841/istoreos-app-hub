@@ -90,9 +90,10 @@ same Reasonix release build. Standalone binaries continue to embed the ZIP.
 The KaiPlus runtime requires ChangeGuard >= 0.3.5, and ChangeGuard requires
 Linkspace >= 0.3.3. These minimum versions belong to runtime package dependencies
 so an installation cannot silently reuse incompatible protection components.
-The market `config.sh` saves the KaiPlus data directory and starts the service;
-KaiPlus owns automatic sibling `TimeMachine` initialization. A service-start
-failure is returned to the installer. The focused first-install check is
+The market `config.sh` saves the KaiPlus data and backup directories and starts
+the service. The default backup directory is the disk-root `TimeMachine`
+folder beside `Configs`; KaiPlus applies that global value to ChangeGuard. A
+service-start failure is returned to the installer. The focused first-install check is
 `python3 apps/kaiplus/tests/test_fresh_install.py`.
 
 Verify the published runtime archive against the recipe (checks both architectures,
