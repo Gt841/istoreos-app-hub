@@ -1,0 +1,39 @@
+{
+  "passed": false,
+  "results": [
+    {
+      "profile": "mise-runtime-x64",
+      "enabled_feeds": [
+        "base",
+        "istore_actions",
+        "istore_meta",
+        "luci",
+        "packages"
+      ],
+      "mirror_without_feed": [
+        "istore",
+        "nas",
+        "nas_luci"
+      ],
+      "passed": false,
+      "reason": "seed_feed_checkouts rejects any mirror entry whose feed is not enabled"
+    },
+    {
+      "profile": "mise-runtime-arm64",
+      "enabled_feeds": [
+        "base",
+        "istore_actions",
+        "istore_meta",
+        "luci",
+        "packages"
+      ],
+      "mirror_without_feed": [
+        "istore",
+        "nas",
+        "nas_luci"
+      ],
+      "passed": false,
+      "reason": "seed_feed_checkouts rejects any mirror entry whose feed is not enabled"
+    }
+  ]
+}

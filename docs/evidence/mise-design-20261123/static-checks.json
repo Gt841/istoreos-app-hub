@@ -1,0 +1,37 @@
+[
+  {
+    "name": "shellcheck:scripts/ui-design.sh",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "bash:scripts/ui-design.sh",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "shellcheck:scripts/ui-design-prepare.sh",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "bash:scripts/ui-design-prepare.sh",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "node:scripts/ui-design-server.cjs",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "node:scripts/ui-design-prepare.cjs",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "new-text-whitespace",
+    "exit_code": 0,
+    "output": "source/doc files checked"
+  }
+]

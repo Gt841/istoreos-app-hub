@@ -1,0 +1,40 @@
+{
+  "artifact_set": "bd248d9f17853dc2352b545c82c15ee9ec396d69082629a028a4a78c2fb0b37a",
+  "entry": {
+    "abi": "native",
+    "arch": "aarch64",
+    "artifact_set": "bd248d9f17853dc2352b545c82c15ee9ec396d69082629a028a4a78c2fb0b37a",
+    "artifacts": [
+      {
+        "bytes": 52977364,
+        "format": "tar.xz",
+        "sha256": "a1546d5646eb184437918d6635ca6b762a0e889eac09cef720ee7a1ed3fe7795",
+        "strip": 1,
+        "url": "https://ziglang.org/download/0.17.1/zig-aarch64-linux-0.17.1.tar.xz"
+      }
+    ],
+    "availability": "available",
+    "build": "upstream1",
+    "id": "zig-0.17.1-aarch64-native-upstream1",
+    "layout": "zig",
+    "source": "https://ziglang.org/download/index.json",
+    "tool": "zig",
+    "version": "0.17.1"
+  },
+  "installed_at": 1795514444,
+  "instance": "zig-0.17.1-aarch64-native-upstream1-bd248d9f17853dc2352b545c82c15ee9ec396d69082629a028a4a78c2fb0b37a",
+  "mise_key": "istore-zig-0.17.1-aarch64-native-upstream1-bd248d9f17853dc2352b545c82c15ee9ec396d69082629a028a4a78c2fb0b37a",
+  "probes": {
+    "abi": "passed",
+    "arch": "passed",
+    "compile": "passed",
+    "complete_library": "passed",
+    "environment": "passed",
+    "execute": "passed",
+    "launcher": "passed",
+    "version": "passed"
+  },
+  "root": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live",
+  "schema_version": 1,
+  "verified": true
+}

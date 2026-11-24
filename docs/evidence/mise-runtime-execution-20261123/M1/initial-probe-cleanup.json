@@ -1,0 +1,5 @@
+{
+  "exit": 0,
+  "stdout": "joining-initial-probe-pid=11664 comm=sh\njoining-initial-probe-pid=12000 comm=mise\njoining-initial-probe-pid=12507 comm=rustup-init\njoining-initial-probe-pid=12574 comm=curl\n/usr/sbin/iStoreEnhance: OK\n/usr/bin/ks-cli: OK\n/usr/sbin/agentflow: OK\n/etc/config/mise: OK\n/lib/functions/mise.sh: OK\n10046 7047\n",
+  "stderr": ""
+}

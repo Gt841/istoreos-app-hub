@@ -1,0 +1,26 @@
+[
+  {
+    "major": 21,
+    "arch": "x64",
+    "source": "https://api.adoptium.net/v3/assets/latest/21/hotspot?architecture=x64&image_type=jdk&os=linux&vendor=eclipse",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "major": 21,
+    "arch": "aarch64",
+    "source": "https://api.adoptium.net/v3/assets/latest/21/hotspot?architecture=aarch64&image_type=jdk&os=linux&vendor=eclipse",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "major": 25,
+    "arch": "x64",
+    "source": "https://api.adoptium.net/v3/assets/latest/25/hotspot?architecture=x64&image_type=jdk&os=linux&vendor=eclipse",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "major": 25,
+    "arch": "aarch64",
+    "source": "https://api.adoptium.net/v3/assets/latest/25/hotspot?architecture=aarch64&image_type=jdk&os=linux&vendor=eclipse",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]

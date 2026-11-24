@@ -1,0 +1,8 @@
+{
+  "exit": 0,
+  "source": "/mnt/nvme0n1-1/Configs/openclawmgr-glibc-acceptance-20261123/final-rolled-back-runtime/npm-cache/_cacache",
+  "target": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M5/OpenClawMgr/npm-cache",
+  "stdout": "322956\t/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M5/OpenClawMgr/npm-cache\n",
+  "stderr": "",
+  "scope": "content-addressed npm cache only; no SDK, global modules, config, npmrc or debug logs copied; npm integrity verification retained"
+}

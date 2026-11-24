@@ -1,0 +1,30 @@
+
+> istore-mise-web@0.1.0 typecheck
+> vue-tsc --noEmit
+
+
+> istore-mise-web@0.1.0 test
+> node --test tests/model.test.ts
+
+✔ first use requires persistent storage; invalid and temporary paths rejected (3.479259ms)
+✔ version/architecture/libc identities are distinct and existing environments rejected (0.27725ms)
+✔ npm must be compatible with chosen Node (0.163185ms)
+✔ install completion does not alter application bindings (0.85564ms)
+✔ double submit and parallel plans cannot start duplicate tasks (0.201053ms)
+✔ expired or revised plans cannot submit (0.212519ms)
+✔ referenced runtime and glibc library cannot be removed (0.218411ms)
+✔ OpenClaw disallows musl while generic Node consumer allows it (0.206374ms)
+✔ failed native and integrity checks never commit candidates (0.330722ms)
+✔ application failure restores original binding and running state (0.280457ms)
+✔ successful application switch keeps old environment and stopped state (0.206229ms)
+✔ cancel cleans candidate; interrupted task requires explicit recovery (0.266949ms)
+✔ offline storage prevents mutation and required acceleration can fall back explicitly (0.144632ms)
+✔ storage switch cannot pretend to migrate existing environments (0.111074ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 84.817329

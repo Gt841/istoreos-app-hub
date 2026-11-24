@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "arch": "aarch64_generic",
+  "packages": {
+    "ks-cli": {
+      "file": "../openwrt-sdk-builder/artifacts/mise-m4final-arm64-20261124023813Z/ipk/istore_actions/ks-cli_0.9.1-r1_aarch64_generic.ipk",
+      "sha256": "8b85ad0e4f450ecf0102633286dd13253131813a3abdce17cd222dea52a26a6b",
+      "metadata": {
+        "Package": "ks-cli",
+        "Version": "0.9.1-r1",
+        "Depends": "libc",
+        "Source": "feeds/istore_actions/applications/ks-cli",
+        "SourceName": "ks-cli",
+        "Section": "net",
+        "SourceDateEpoch": "1784877710",
+        "URL": "https://www.kspeeder.com/",
+        "Architecture": "aarch64_generic",
+        "Installed-Size": "10700800",
+        "Description": " Command-line client for KSpeeder downloads, diagnostics and service control."
+      },
+      "files": 4
+    },
+    "luci-app-mise": {
+      "file": "../openwrt-sdk-builder/artifacts/mise-m4final-arm64-20261124023813Z/ipk/istore_actions/luci-app-mise_0.1.0-r1_all.ipk",
+      "sha256": "8ab6492fcb2d670d19af1177cde5bf8c762a3fe7b10ee11d481fea61b91b8fc0",
+      "metadata": {
+        "Package": "luci-app-mise",
+        "Version": "0.1.0-r1",
+        "Depends": "libc, luci-base, luci-compat, mise-runtime, luci-lua-runtime",
+        "Source": "feeds/istore_actions/applications/luci-app-mise",
+        "SourceName": "luci-app-mise",
+        "Section": "luci",
+        "SourceDateEpoch": "1784877710",
+        "URL": "https://github.com/openwrt/luci",
+        "Maintainer": "OpenWrt LuCI community",
+        "Architecture": "all",
+        "Installed-Size": "163840",
+        "Description": " Persistent runtime environments"
+      },
+      "files": 32
+    },
+    "mise-runtime": {
+      "file": "../openwrt-sdk-builder/artifacts/mise-m4final-arm64-20261124023813Z/ipk/istore_actions/mise-runtime_0.1.0-r1_aarch64_generic.ipk",
+      "sha256": "b5c55d66883d7d807f66664e40969b0a9e6664fd37b649567e8f8addcde0857d",
+      "metadata": {
+        "Package": "mise-runtime",
+        "Version": "0.1.0-r1",
+        "Depends": "libc, mise, lua, luci-lib-jsonc, luci-lib-nixio, curl, ca-bundle, tar, xz-utils, zstd, ks-cli, coreutils-stat, libstdcpp6, block-mount",
+        "Source": "feeds/istore_actions/applications/mise-runtime",
+        "SourceName": "mise-runtime",
+        "License": "GPL-3.0-only",
+        "Section": "utils",
+        "SourceDateEpoch": "1784877710",
+        "Architecture": "aarch64_generic",
+        "Installed-Size": "215040",
+        "Description": " Persistent iStoreOS language runtimes"
+      },
+      "files": 33
+    },
+    "mise": {
+      "file": "../openwrt-sdk-builder/artifacts/mise-m4final-arm64-20261124023813Z/ipk/istore_actions/mise_2026.8.14-r26_aarch64_generic.ipk",
+      "sha256": "fc18cf4a0a6d26845c4611c7a3ef6f2c66648e093f416c2f4a7a433e7888fb1c",
+      "metadata": {
+        "Package": "mise",
+        "Version": "2026.8.14-r26",
+        "Depends": "libc",
+        "Source": "feeds/istore_actions/applications/mise",
+        "SourceName": "mise",
+        "Section": "utils",
+        "SourceDateEpoch": "1795226013",
+        "URL": "https://mise.jdx.dev",
+        "Architecture": "aarch64_generic",
+        "Installed-Size": "86241280",
+        "Description": " mise manages development tool versions, environment variables, and tasks."
+      },
+      "files": 15
+    },
+    "app-meta-mise": {
+      "file": "../openwrt-sdk-builder/artifacts/mise-m4final-arm64-20261124023813Z/ipk/istore_meta/app-meta-mise_0.1.0-r1_all.ipk",
+      "sha256": "443c40a0cf407946651100213acc588f15487e70ff7ce0b120af44cc084d305e",
+      "metadata": {
+        "Package": "app-meta-mise",
+        "Version": "0.1.0-r1",
+        "Depends": "libc, mise-runtime, luci-app-mise",
+        "Source": "feeds/istore_meta/applications/app-meta-mise",
+        "SourceName": "app-meta-mise",
+        "Section": "meta",
+        "SourceDateEpoch": "1784877710",
+        "Maintainer": "LinkEase",
+        "Architecture": "all",
+        "Installed-Size": "10240",
+        "Description": " Metadata for mise"
+      },
+      "files": 14
+    }
+  }
+}

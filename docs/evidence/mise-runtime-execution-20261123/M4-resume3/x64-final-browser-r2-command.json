@@ -1,0 +1,5 @@
+{
+  "exit": 0,
+  "stdout": "PASS final installed package authentication/ACL/CSRF reject side effects\nthree raw archives verified and reused; no installed payload copied\nPASS final UI installs a second ABI through a fixed, verified archive cache\n",
+  "stderr": ""
+}

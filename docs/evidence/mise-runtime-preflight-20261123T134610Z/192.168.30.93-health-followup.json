@@ -1,0 +1,6 @@
+{
+  "host": "192.168.30.93",
+  "exit": 0,
+  "stdout": "[time]\nMon Nov 23 13:48:33 UTC 2026\n15109b6a-9070-49ea-88e0-6ba2e17a5545\n[kernel-alerts]\n[   20.212639] SQUASHFS error: xz decompression failed, data probably corrupt\n[   20.213292] SQUASHFS error: Failed to read block 0xaabab64: -5\n[   20.213809] SQUASHFS error: Unable to read metadata cache entry [aabab62]\n[   20.214407] SQUASHFS error: Unable to read inode 0xeeac0d3e\n[   22.151802] SQUASHFS error: xz decompression failed, data probably corrupt\n[   22.152431] SQUASHFS error: Failed to read block 0xaabab64: -5\n[   22.152994] SQUASHFS error: Unable to read metadata cache entry [aabab62]\n[   22.153600] SQUASHFS error: Unable to read inode 0xeeac0d3e\nmatched_lines=8\n[physical-block-capacity]\n/sys/block/sda/size sectors=121110528\n/sys/block/nvme0n1/size sectors=250069680\n/sys/block/mmcblk1/size sectors=30777344\n/sys/block/mmcblk1boot0/size sectors=8192\n/sys/block/mmcblk1boot1/size sectors=8192\n[load-and-memory]\n 21:48:33 up  8:28,  load average: 1.68, 1.75, 1.77\nMemAvailable:    3072332 kB\nSwapTotal:             0 kB\n",
+  "stderr": ""
+}

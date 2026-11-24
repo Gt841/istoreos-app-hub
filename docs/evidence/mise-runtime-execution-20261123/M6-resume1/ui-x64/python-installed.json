@@ -1,0 +1,46 @@
+{
+  "artifact_set": "e9f316056f3efb9bd18467f472377cce25eeca0a238be45dd02761ea27d3f49a",
+  "entry": {
+    "abi": "musl",
+    "arch": "x86_64",
+    "artifact_set": "e9f316056f3efb9bd18467f472377cce25eeca0a238be45dd02761ea27d3f49a",
+    "artifacts": [
+      {
+        "bytes": 27932517,
+        "format": "tar.gz",
+        "sha256": "a75bf409606303deed964d4769544f98b74e7b53d4efb44f4a95cb38e86ff403",
+        "strip": 1,
+        "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.13.18%2B20261110-x86_64-unknown-linux-musl-install_only_stripped.tar.gz"
+      }
+    ],
+    "availability": "available",
+    "build": "20261110",
+    "id": "python-3.13.18-x86_64-musl-20261110",
+    "layout": "python",
+    "source": "https://api.github.com/repos/astral-sh/python-build-standalone/releases/tags/20261110",
+    "tool": "python",
+    "version": "3.13.18"
+  },
+  "installed_at": 1795508404,
+  "instance": "python-3.13.18-x86_64-musl-20261110-e9f316056f3efb9bd18467f472377cce25eeca0a238be45dd02761ea27d3f49a",
+  "mise_key": "istore-python-3.13.18-x86_64-musl-20261110-e9f316056f3efb9bd18467f472377cce25eeca0a238be45dd02761ea27d3f49a",
+  "probes": {
+    "abi": "passed",
+    "arch": "passed",
+    "ctypes": "passed",
+    "ensurepip_version": "26.3",
+    "launcher": "passed",
+    "pip": "passed",
+    "pip_source": "bundled-ensurepip",
+    "pip_version": "26.3",
+    "sqlite": "passed",
+    "ssl": "passed",
+    "subprocess": "passed",
+    "venv": "passed",
+    "version": "passed",
+    "wheel_abi": "musllinux"
+  },
+  "root": "/mnt/mise-runtime/Runtime-live",
+  "schema_version": 1,
+  "verified": true
+}

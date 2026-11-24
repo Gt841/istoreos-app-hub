@@ -1,0 +1,14 @@
+{
+  "command": [
+    "unsquashfs",
+    "-processors",
+    "2",
+    "-no-progress",
+    "-pf",
+    "/var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/mise-environment/active-rom.pseudo",
+    "/var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/mise-environment/mmcblk1p2.img"
+  ],
+  "exit": 0,
+  "stdout": "",
+  "stderr": ""
+}

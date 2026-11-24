@@ -1,0 +1,7 @@
+{
+  "host": "192.168.30.93",
+  "exit": 0,
+  "stdout": "/usr/sbin/iStoreEnhance: OK\n/usr/bin/ks-cli: OK\n/usr/sbin/agentflow: OK\n/etc/config/mise: OK\n/lib/functions/mise.sh: OK\n9766 6852\n0.3.3-20260923-2ad19a3b\n-rw-------    1 root     root           141 Nov 18 10:19 /etc/config/istoreenhance\n",
+  "stderr": "",
+  "scope": "protected baseline after cleanup"
+}

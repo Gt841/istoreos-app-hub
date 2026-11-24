@@ -1,0 +1,6 @@
+{
+  "host": "192.168.30.93",
+  "exit": 0,
+  "stdout": "e3eba56b-888b-44bf-a282-99e059afc7b5\nFilesystem           1K-blocks      Used Available Use% Mounted on\n/dev/nvme0n1p1       122471024  65726984  50476700  57% /mnt/nvme0n1-1\ntcp        0      0 :::5443                 :::*                    LISTEN      \ntcp        0      0 :::5003                 :::*                    LISTEN      \n9766 6852\n",
+  "stderr": ""
+}

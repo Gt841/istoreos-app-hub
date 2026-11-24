@@ -1,0 +1,53 @@
+{
+  "host": "192.168.30.93",
+  "checks": [
+    {
+      "case": "online",
+      "exit": 0,
+      "elapsed": 1.663,
+      "stderr": "",
+      "summary": {
+        "arch": "aarch64",
+        "online": true,
+        "path": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime",
+        "free_bytes": 51689246720,
+        "cache_bytes": 167953933
+      },
+      "runtimes": 5,
+      "tasks": 8,
+      "arrays_and_nulls_valid": true
+    },
+    {
+      "case": "unconfigured",
+      "exit": 0,
+      "elapsed": 0.148,
+      "stderr": "",
+      "summary": {
+        "arch": "aarch64",
+        "online": false,
+        "path": "",
+        "free_bytes": null,
+        "cache_bytes": null
+      },
+      "runtimes": 0,
+      "tasks": 0,
+      "arrays_and_nulls_valid": true
+    },
+    {
+      "case": "offline",
+      "exit": 0,
+      "elapsed": 0.174,
+      "stderr": "",
+      "summary": {
+        "arch": "aarch64",
+        "online": false,
+        "path": "/mnt/mise-unmounted-m4/Runtime",
+        "free_bytes": null,
+        "cache_bytes": null
+      },
+      "runtimes": 0,
+      "tasks": 0,
+      "arrays_and_nulls_valid": true
+    }
+  ]
+}

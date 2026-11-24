@@ -1,0 +1,34 @@
+{
+  "boot_id": "290c4092-c9f2-45bc-98ac-addb6dd920dc",
+  "recovery_exit": 0,
+  "arch": "x86_64",
+  "owned_session": {
+    "state": "S",
+    "pid": 5766,
+    "boot": "290c4092-c9f2-45bc-98ac-addb6dd920dc",
+    "parent": 5090,
+    "start": "1854580",
+    "session": 5766,
+    "group": 5766
+  },
+  "passed": false,
+  "checks": [
+    {
+      "name": "public recovery succeeds",
+      "passed": true
+    },
+    {
+      "name": "recovery reaps actual orphan npm session",
+      "passed": false
+    },
+    {
+      "name": "old release remains selected",
+      "passed": true
+    },
+    {
+      "name": "old authentication/config unchanged",
+      "passed": true
+    }
+  ],
+  "test_cleanup": "Test reaped only its recorded orphan session after failing; not a production recovery pass."
+}

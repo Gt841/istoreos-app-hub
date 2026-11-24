@@ -1,0 +1,8 @@
+{
+  "host": "192.168.30.7",
+  "command": "lua /mnt/mise-runtime/acceptance/M3/node-compatibility.lua /mnt/mise-runtime/acceptance/M3/share /mnt/mise-runtime/Runtime /mnt/mise-runtime/bootstrap/mise/bin/mise /mnt/mise-runtime/acceptance/M3",
+  "exit": 0,
+  "stdout": "PASS five actual SDK registrations and mise exec use the same installations\nPASS ordinary UID can read the managed mise registry and execute an exact key\nPASS actual installed SDK selected as a default is protected; isolated config restored\nPASS explicit nondefault uninstall removes SDK, wrap and all owned aliases\nNOTE caller must reinstall the removed npm variant with node-install.lua all\n",
+  "stderr": "",
+  "round": "resume optimization 1 ARM loopback forwarding"
+}

@@ -1,0 +1,132 @@
+{
+  "status": "passed-design-preview",
+  "max_rounds": 3,
+  "rounds_used": 3,
+  "rounds": [
+    {
+      "round": 1,
+      "checks": 14,
+      "passed": 7,
+      "failed": [
+        "A2 安装复核、取消不写入、刷新后后台续看及不自动绑定",
+        "A4 应用兼容性、复核及成功切换保留旧环境",
+        "A5 摘要失败不提交、明确重试后可完成",
+        "A5 原生模块失败与安全取消不改原有环境",
+        "A7 加速故障可显式使用源站、离线目录禁止安装",
+        "A2 ARM64 未提供组合显示原因",
+        "A8 桌面与手机深浅主题、四页无横向溢出及截图"
+      ]
+    },
+    {
+      "round": 2,
+      "checks": 14,
+      "passed": 12,
+      "failed": [
+        "A1 首次存储引导、非法目录和有效目录",
+        "A2 安装复核、取消不写入、刷新后后台续看及不自动绑定"
+      ]
+    },
+    {
+      "round": 3,
+      "checks": 14,
+      "passed": 14,
+      "failed": []
+    }
+  ],
+  "model_tests": 17,
+  "browser_groups": 14,
+  "manager_checks": 9,
+  "static_checks": [
+    {
+      "name": "shellcheck:scripts/ui-design.sh",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "bash:scripts/ui-design.sh",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "shellcheck:scripts/ui-design-prepare.sh",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "bash:scripts/ui-design-prepare.sh",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "node:scripts/ui-design-server.cjs",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "node:scripts/ui-design-prepare.cjs",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "new-text-whitespace",
+      "exit_code": 0,
+      "output": "source/doc files checked"
+    }
+  ],
+  "screenshots": 20,
+  "mobile_visual_followup": [
+    {
+      "theme": "light",
+      "rows": [
+        {
+          "nameWidth": 200,
+          "usageOwnRow": true
+        },
+        {
+          "nameWidth": 200,
+          "usageOwnRow": true
+        },
+        {
+          "nameWidth": 200,
+          "usageOwnRow": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "theme": "dark",
+      "rows": [
+        {
+          "nameWidth": 200,
+          "usageOwnRow": true
+        },
+        {
+          "nameWidth": 200,
+          "usageOwnRow": true
+        },
+        {
+          "nameWidth": 200,
+          "usageOwnRow": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "preview_url": "http://127.0.0.1:5180/mise",
+  "dependency_root": "/var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/mise-web-deps/node_modules",
+  "scope": {
+    "real_runtime_install": false,
+    "ks_cli_calls": false,
+    "device_deployment": false,
+    "luci_package": false,
+    "git_commit": false
+  },
+  "browser": "existing Chromium headless shell 1200; Playwright 1.56.1",
+  "notes": [
+    "Normal Chromium executable SIGTRAP during initial harness setup; used existing headless shell.",
+    "Browser scene/state seeding races and accessible names were corrected.",
+    "Final mobile usage row flex basis adjustment has targeted light/dark browser layout verification."
+  ],
+  "initial_acceptance_preview_url": "http://127.0.0.1:5181/mise",
+  "port_migration": "port-migration.json"
+}

@@ -1,0 +1,49 @@
+{
+  "arch": "aarch64",
+  "agentflow_health": true,
+  "passed": true,
+  "runtime": {
+    "storage_root": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live",
+    "instance": "node-24.22.1-aarch64-glibc-upstream1-npm11.19.1-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-09859876de3be52d3b45b3b9e22bbbc9e8a8876b2409e20635ee7aabda81c489",
+    "schema_version": 1,
+    "library_manifest_sha256": "bd86e6ced8b3097347b11c82dcfa9ce0d5b78212660136bd90ba6cef89af6bc6",
+    "library": "glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64",
+    "tool": "node",
+    "provider": "mise-runtime",
+    "artifact_set": "09859876de3be52d3b45b3b9e22bbbc9e8a8876b2409e20635ee7aabda81c489",
+    "node": "24.22.1",
+    "npm": "11.19.1"
+  },
+  "boot_id": "698dba48-268f-4da1-b629-c6d7a51ff9da",
+  "legacy_default": {
+    "/mnt/nvme0n1-1/Configs/Runtime/home/.config/mise/config.toml": "9a87c0e43270885e848c0c836cc5b6af22344aa7aec7beac70bae4ed7569e713"
+  },
+  "configuration_sha256": {
+    "agentflow": "3f2e6ba1d3b44cfda11e458b2aefbde804e2f10ad0ae34d9e6fab38f02760548",
+    "openclawmgr": "2ebd06e98fbc996b02cfe95629514ca4bc9c39e9772cee7daa80d3be476c6242",
+    "istoreenhance": "b582d00c458adca175864ed0c31aa244d63b7828ce6d76bd634775cd3e64b6eb",
+    "mise": "7704196d4d42658e6e0898a041e6de309ee2df46143ab083383fbbbded5f350e"
+  },
+  "root_filesystem": {
+    "mount": {
+      "device": "/dev/nvme0n1p1",
+      "kind": "ext4",
+      "point": "/mnt/nvme0n1-1",
+      "options": "rw,relatime"
+    },
+    "free_inodes": 7267877,
+    "free_bytes": 45387464704,
+    "device": 66305
+  },
+  "binary_sha256": {
+    "/usr/bin/mise": "abea0353ee821d5c4d45b24925c238f3d68fe9569cf8e0dddac49009f23ebf14",
+    "/usr/sbin/agentflow": "b9962724dd27932def98ef642a2618ea32e9c9dd583a8f7dc1d66a68f8594a65",
+    "/usr/sbin/iStoreEnhance": "5dc95153d16fc4d0aa9519153e07e2b24bf4e3730a48dbea616eefb5aa12bd82"
+  },
+  "openclaw": {
+    "enabled": "1",
+    "port": "",
+    "bind": "",
+    "base_dir": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M5/OpenClawMgr"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "status": "passed-design-preview",
+  "date": "2026-11-23T10:35:34.292814+00:00",
+  "modelAndWrapTests": 58,
+  "browserChecks": 45,
+  "browserReportFiles": [
+    "round-1/browser.json",
+    "round-1/compilers-browser.json",
+    "round-1/java-browser.json",
+    "round-1/host-browser.json",
+    "round-2/python-packaging-browser.json"
+  ],
+  "rounds": 2,
+  "pageErrors": [],
+  "localCPythonSmoke": "3.12.3, isolated offline wheel install/import/console-entry, fixed SDK re-entry, child/shell/stdin, failure cleanup",
+  "preview": "http://127.0.0.1:5180/mise",
+  "limitations": [
+    "No production runtime installer, real pip/venv device probe or deployment",
+    "SDK launcher shim forwards to local system CPython; no private GNU runtime or ARM firmware tested",
+    "Product pip 25.0.1 and venv verification are explicitly marked design fixtures"
+  ]
+}

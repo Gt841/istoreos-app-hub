@@ -1,0 +1,9 @@
+{
+  "command": [
+    "/var/cache/build-cache/run.sh",
+    "--status"
+  ],
+  "exit": 0,
+  "stdout": "{\n  \"ssd_backing_device\": \"/dev/nvme0n1p4\",\n  \"free_gib\": 219.1,\n  \"minimum_free_gib\": 25.0,\n  \"environment\": {\n    \"npm_config_cache\": \"/var/cache/build-cache/users/911/npm\",\n    \"GOCACHE\": \"/var/cache/build-cache/users/911/go/build\",\n    \"GOMODCACHE\": \"/var/cache/build-cache/users/911/go/mod\",\n    \"GOTMPDIR\": \"/var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/tmp/go\",\n    \"TMPDIR\": \"/var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/tmp/common\",\n    \"CARGO_HOME\": \"/var/cache/build-cache/users/911/cargo/d925b2bc92e7\",\n    \"CARGO_TARGET_DIR\": \"/var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/cargo-target\",\n    \"ZIG_GLOBAL_CACHE_DIR\": \"/var/cache/build-cache/users/911/zig/global\",\n    \"ZIG_LOCAL_CACHE_DIR\": \"/var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/zig-cache\",\n    \"BUILD_CACHE_ZIG_OUT_DIR\": \"/var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/zig-out\",\n    \"BUILD_CACHE_WORK_DIR\": \"/var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work\",\n    \"BUILD_CACHE_ROOT\": \"/var/cache/build-cache\",\n    \"BUILD_CACHE_USER_DIR\": \"/var/cache/build-cache/users/911\",\n    \"BUILD_CACHE_PROJECT_ROOT\": \"/projects/workspace-linkease-ubuntu/openwrt-apps/istoreos-app-hub\",\n    \"BUILD_CACHE_PROJECT_ID\": \"istoreos-app-hub-84579ea4b917\",\n    \"BUILD_CACHE_CARGO_CONFIG_HOME\": \"/config/.cargo\"\n  }\n}\n",
+  "stderr": ""
+}

@@ -1,0 +1,8 @@
+{
+  "host": "192.168.30.93",
+  "command": "lua /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M3/node-command-status.lua /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M3/share /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime /usr/bin/ks-cli",
+  "exit": 0,
+  "stdout": "PASS origin Git literal path and Git/npm native exit codes\nPASS ks-cli Git literal path and Git/npm native exit codes\n",
+  "stderr": "",
+  "round": "optimization 3 Git arguments and native status acceptance"
+}

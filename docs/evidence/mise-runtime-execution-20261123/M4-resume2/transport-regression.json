@@ -1,0 +1,22 @@
+{
+  "symptom": "tiny valid JSON reported Request too large only through real LuCI",
+  "minimal_red_command": "lua /mnt/mise-runtime/acceptance/M4/luci-transport.lua 0<&- (original extracted real module)",
+  "minimal_red_exit": 1,
+  "minimal_red_error": "real LuCI transport lost request input; backend INVALID_INPUT Request too large",
+  "cause": "pipe reused closed fd0; dup2 on the same descriptor followed by close discarded stdin (and a same-descriptor dup does not clear close-on-exec)",
+  "fix": "copy through a distinct descriptor before redirecting to a matching standard descriptor",
+  "green": {
+    "192.168.30.7": {
+      "stdin_open": true,
+      "stdin_closed": true,
+      "real_http_read": 200
+    },
+    "192.168.30.93": {
+      "stdin_open": true,
+      "stdin_closed": true,
+      "real_http_read": 200
+    }
+  },
+  "seam": "test calls the production luci.model.mise.transport module and actual installed CLI, not a mock backend",
+  "deployment": "temporary source overlay until new SDK package rebuild and reinstall"
+}

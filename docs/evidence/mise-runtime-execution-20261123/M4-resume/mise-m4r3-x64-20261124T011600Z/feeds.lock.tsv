@@ -1,0 +1,5 @@
+ipk	base	97f7026b3dc97aff135da1ef3575c44cddcf8fb5	https://git.openwrt.org/openwrt/openwrt.git
+ipk	luci	2ac26e56cc55102cb10e7b0867c2b78e0f6d5fd8	https://git.openwrt.org/project/luci.git
+ipk	packages	d8cd30f4e281d6853b3de134c4f147a807583e43	https://git.openwrt.org/feed/packages.git
+ipk	istore_actions	582d70db42a4ebd78a9f253b3262bd9ba6c66b53	https://github.com/linkease/openwrt-app-actions.git
+ipk	istore_meta	07c4f21cf5c7daa77464f478440664c8d81f0189	https://github.com/linkease/openwrt-app-meta.git

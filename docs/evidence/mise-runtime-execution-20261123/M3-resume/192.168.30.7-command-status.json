@@ -1,0 +1,8 @@
+{
+  "host": "192.168.30.7",
+  "command": "lua /mnt/mise-runtime/acceptance/M3/node-command-status.lua /mnt/mise-runtime/acceptance/M3/share /mnt/mise-runtime/Runtime /mnt/mise-runtime/bootstrap/ks-cli-binary-0.9.1/ks-cli.x86_64",
+  "exit": 0,
+  "stdout": "PASS origin Git literal path and Git/npm native exit codes\nPASS ks-cli Git literal path and Git/npm native exit codes\n",
+  "stderr": "",
+  "round": "resume optimization 1 ARM loopback forwarding"
+}

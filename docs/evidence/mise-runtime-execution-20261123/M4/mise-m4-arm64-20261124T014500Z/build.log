@@ -1,0 +1,3 @@
+[sdk-builder/container] preparing ipk SDK: openwrt-sdk-24.10.8-rockchip-armv8_gcc-13.3.0_musl.Linux-x86_64
+[sdk-builder/container] seeding full feed base from a shallow canonical checkout
+Cloning into '/build-work/sdk-ipk/feeds/base'...

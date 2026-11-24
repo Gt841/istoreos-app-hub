@@ -1,0 +1,13 @@
+{
+  "command": [
+    "env",
+    "BUILD_ID=mise-m4ks-arm64-20261124040156Z",
+    "FETCH_ROOT=artifacts",
+    "make",
+    "fetch"
+  ],
+  "exit": 0,
+  "seconds": 0.483,
+  "stdout": "./build.env: OK\n./feeds.lock.tsv: OK\n./input/arm64-rockchip.env: OK\n./input/mise-runtime-arm64.conf: OK\n./input/mise-runtime-arm64.env: OK\n./input/mise-runtime-arm64.tsv: OK\n./input/openwrt-app-actions.env: OK\n./input/profile-patches/mise-runtime-candidate.patch: OK\n./ipk/istore_actions/ks-cli_0.9.1-r1_aarch64_generic.ipk: OK\n./ipk/istore_actions/luci-app-mise_0.1.0-r1_all.ipk: OK\n./ipk/istore_actions/mise-runtime_0.1.0-r1_aarch64_generic.ipk: OK\n./ipk/istore_actions/mise_2026.8.14-r26_aarch64_generic.ipk: OK\n./ipk/istore_meta/app-meta-mise_0.1.0-r1_all.ipk: OK\n[sdk-builder] fetched mise-m4ks-arm64-20261124040156Z to /projects/workspace-linkease-ubuntu/openwrt-apps/openwrt-sdk-builder/artifacts/mise-m4ks-arm64-20261124040156Z\n",
+  "stderr": ""
+}

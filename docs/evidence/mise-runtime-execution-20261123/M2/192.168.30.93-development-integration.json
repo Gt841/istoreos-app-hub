@@ -1,0 +1,7 @@
+{
+  "host": "192.168.30.93",
+  "exit": 1,
+  "command": "setsid timeout -k 10 600 lua /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M2/integration.lua /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M2/share /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M2/selfcheck-initial /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M2/fixture.json /usr/bin/mise /usr/bin/ks-cli http://127.0.0.1:5003",
+  "stdout": "PASS 1 unmounted path has no side effect\nPASS 2 uninitialized root cannot open implicitly\nPASS 3 explicit persistent storage initialization\nPASS 4 argument-preserving process execution\nPASS 5 reject symlink root\nPASS 6 insufficient byte budget\nPASS 7 insufficient inode budget\nPASS 8 state atomic write and revision\nPASS 9 lock mutual exclusion and ownership\nPASS 10 UUID mismatch refuses initialized root\nPASS 11 isolated bind mount rejects noexec\nPASS 12 isolated bind mount rejects ro\nPASS 13 real origin artifact download and SHA256\nPASS 14 corrupt cache is refetched\nPASS 15 real accelerated artifact equals origin\nPASS 16 incorrect pin never commits cache\nPASS 17 verified archive extracts\nPASS 18 reject corrupt archive before extraction\nPASS 19 reject traversal listing\nPASS 20 reject absolute path listing\nPASS 21 reject escaping symlink listing\nPASS 22 accept internal SDK symlink\nPASS 23 reject hardlinks and special nodes\n",
+  "stderr": "FAIL private GNU library from pinned source inputs {\"message\":\"Artifact download failed\",\"code\":\"INTEGRITY\"}\n"
+}

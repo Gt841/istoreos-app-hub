@@ -1,0 +1,9 @@
+{
+  "time_utc": "2026-11-24T03:06:21.368975+00:00",
+  "host": "192.168.30.7",
+  "command": "set -e\ncat /proc/sys/kernel/random/boot_id\ndf -k /overlay /mnt/mise-runtime\nls -la /mnt/mise-runtime/Runtime-live/environments /mnt/mise-runtime/Runtime-live/work\ntest ! -e /mnt/mise-runtime/Runtime-live/.lock\nsha256sum /lib/functions/mise.sh\nopkg list-installed | grep -E '^(mise|mise-runtime|luci-app-mise|app-meta-mise|ks-cli) '\n",
+  "exit": 0,
+  "stdout": "290c4092-c9f2-45bc-98ac-addb6dd920dc\nFilesystem           1K-blocks      Used Available Use% Mounted on\n/dev/sda3              1992552     45024   1927048   2% /overlay\n/dev/sdd              65478188   1980868  62809848   3% /mnt/mise-runtime\n/mnt/mise-runtime/Runtime-live/environments:\ndrwxr-xr-x    3 root     root          4096 Nov 24 10:33 .\ndrwxr-xr-x   12 root     root          4096 Nov 24 10:56 ..\ndrwxr-xr-x    7 root     root          4096 Nov 24 10:21 node-24.21.0-x86_64-glibc-upstream1-npm11.19.0-glibc-2.39-ubuntu8-gcc12-legal1-r1-x86_64-3c978e5d25a3a081a1b08f661b79fe92eb2c95f10b625b981a43b56b40eb4463\n\n/mnt/mise-runtime/Runtime-live/work:\ndrwx------    2 root     root          4096 Nov 24 10:33 .\ndrwxr-xr-x   12 root     root          4096 Nov 24 10:56 ..\nbaa98d69361d5773258288cab390a75dbc3e5f5680b085d5b2911ebf352a442c  /lib/functions/mise.sh\napp-meta-mise - 0.1.0-r1\nks-cli - 0.9.1-r1\nluci-app-mise - 0.1.0-r1\nmise - 2026.8.14-r26\nmise-runtime - 0.1.0-r1\n",
+  "stderr": "",
+  "scope": "read-only final state; ARM original helper restored, other candidate files retained"
+}

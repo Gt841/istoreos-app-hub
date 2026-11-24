@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "name": "Python x86_64 配套 pip/venv 复核、验证、详情只读及使用方法",
+      "passed": true
+    },
+    {
+      "name": "Python aarch64 配套 pip/venv 复核、验证、详情只读及使用方法",
+      "passed": true
+    },
+    {
+      "name": "未知工具状态不伪造版本或验证通过",
+      "passed": true
+    },
+    {
+      "name": "pip/venv 失败不提交候选，重试后可完成",
+      "passed": true
+    },
+    {
+      "name": "独立 pip 版本 API 被拒绝",
+      "passed": true
+    },
+    {
+      "name": "虚拟环境目录校验、四条命令、引用转义、复制与脚本下载",
+      "passed": true
+    },
+    {
+      "name": "npm 默认配套版本、高级选项收起、兼容选择与语言/版本重置",
+      "passed": true
+    },
+    {
+      "name": "Python 虚拟环境与 npm 高级选项桌面/320/390 手机深浅主题",
+      "passed": true
+    }
+  ],
+  "pageErrors": []
+}

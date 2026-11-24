@@ -1,0 +1,31 @@
+{
+  "algorithm": "SHA256",
+  "files": {
+    "apps/mise/mise-runtime/Makefile": "8c8dbd65a6eea3e08de804d689dd78b42017796b48992194b79d4352fe6f5c25",
+    "apps/mise/mise-runtime/files/catalog.json": "29997741136cf298e8ef9346a410fe697fef9bedfab8fedcdfbf74a445af78c5",
+    "apps/mise/mise-runtime/files/lib/artifacts.lua": "2b11b00217e1e592bbd6d669d5514308a39b7202a68f1b7b32672052c3f0fb07",
+    "apps/mise/mise-runtime/files/lib/contract.lua": "0cdc2f047ade34988f146b8de70e6a997e8ddc725437d6c44a210e9c4c3d19a8",
+    "apps/mise/mise-runtime/files/lib/defaults.lua": "5d693ea945117e39bc24ee37fe83e9e08f5367f5a72757a9d7ec6f1b41091235",
+    "apps/mise/mise-runtime/files/lib/libraries.lua": "0bf2649859ac7bea035294a74cd65d3cbe38636ea90ebc5bce94a0350327e883",
+    "apps/mise/mise-runtime/files/lib/registration.lua": "eaee7c2a8c9f6556d2b85db94d7123acb04c108eb99aefa73b7633fd521e7801",
+    "apps/mise/mise-runtime/files/lib/store.lua": "fe9cfc5c6e8345c52169cf09dbb66e68a1c1737bca5e8bd78f11d29eeaf7c4fa",
+    "apps/mise/mise-runtime/files/lib/system.lua": "2309cfc44e946bed902c6e343a6254574d9f57e98d52eeced9718ebb1bfc1fcb",
+    "apps/mise/mise-runtime/files/lib/tasks.lua": "0df4e9eb2063a52960ed68f2d1bd549928b3a8fcff784a2d6b0fdb0c49bff855",
+    "apps/mise/mise-runtime/files/licenses/GCC-exception-3.1.txt": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+    "apps/mise/mise-runtime/files/licenses/GPL-3.0.txt": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "apps/mise/mise-runtime/files/licenses/LGPL-2.1.txt": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+    "apps/mise/mise-runtime/files/licenses/sources.json": "fa86560429f6f53d271cf7519dfcccd07de7ae316e14f6b25db93eaba18b0ef3",
+    "apps/mise/mise-runtime/files/main.lua": "1b5ceb4d769044cf1a9eaae5d834b2a35a94868e8ffc6ca18a3d6c3049e63260",
+    "apps/mise/mise-runtime/files/mise-runtime": "fef1cef5d5a255c8405d22a120c22d17ccfbfb6a0eadcf589652cd40126f1f19",
+    "apps/mise/tests/administration.lua": "dd4c51633024e38a50fea607487aa2ff8f6caae4a5d05fd9a458d6cca6e16061",
+    "apps/mise/tests/artifact-fixture.json": "a36c207808ba2fca5b96ee6fc649b8effbf700a2895828b487a78c2a4d964da1",
+    "apps/mise/tests/check-catalog.lua": "b49f71daa647d0c0b9fb7905a9323152f223c352b27a81680cce3620d3e2071b",
+    "apps/mise/tests/contract.lua": "f4fe4edb205914976ca2e7c7a8ee61e14787738faece775fd5207c1c69b99c4a",
+    "apps/mise/tests/process-lifecycle.lua": "9d71911c5e9eb935d4fbbd10599a0bce6311e53898821671d79b2e15817e1072",
+    "apps/mise/tests/reboot-interruption.lua": "adb6c9b4bd3f0d644c136415c9d3ceba9543a53bd63a1d00ce0da8e1429e83dd",
+    "apps/mise/tests/registration-probe.sh": "e9c6938197e26b0cffd009854405e215a0077e9fdd4886c08cb7d06741b964dc",
+    "apps/mise/tests/storage-transactions.lua": "e4a7c8e1fa28cf80a18d120b75e51be33be5532b69517859402ba31e4ca90d97",
+    "apps/mise/tests/timeout-cancel.lua": "87a70594dae2ee07ed26051e6418a5c1bd51d3da4f95d250d16a9a994f5894a3",
+    "apps/mise/tests/transaction-faults.lua": "cf34ba5be2184efd9c3c412b41657710f8299c87d55328676444cd5d882f3073"
+  }
+}

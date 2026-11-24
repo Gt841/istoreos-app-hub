@@ -1,0 +1,35 @@
+{
+  "status": "passed-design-revision",
+  "rounds_used": 2,
+  "model_and_wrap_tests": 23,
+  "browser_groups": 15,
+  "style_source_checks": 9,
+  "static": [
+    {
+      "name": "wrap-shellcheck",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "wrap-sh-syntax",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "style-sync-python-syntax",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "url": "http://127.0.0.1:5180/mise",
+  "semantics": {
+    "global_default": "read-only",
+    "application_versions": "application-owned, read-only",
+    "per_version_wrap": "copy commands and download sample; persistent HOME/cache/mise; no host install"
+  },
+  "scope": {
+    "real_runtime_installed": false,
+    "device_deployed": false,
+    "git_committed": false
+  }
+}

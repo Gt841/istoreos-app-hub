@@ -1,0 +1,42 @@
+{
+  "boot_id": "e3eba56b-888b-44bf-a282-99e059afc7b5",
+  "additional_instance": "node-24.22.1-aarch64-glibc-upstream1-npm11.12.1-npm11.12.1-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-831e05c4c82171394d7b2ec4e2ccecf36f4ef415297d3ae9b2854e66d69cae0b",
+  "arch": "aarch64",
+  "checks": [
+    {
+      "name": "public application cancel succeeds",
+      "passed": true
+    },
+    {
+      "name": "coordinator exits without app success",
+      "passed": true
+    },
+    {
+      "name": "owned detached SDK task canceled and cleaned",
+      "passed": true
+    },
+    {
+      "name": "owned worker session reaped",
+      "passed": true
+    },
+    {
+      "name": "owned incomplete SDK removed",
+      "passed": true
+    },
+    {
+      "name": "public manager lock released",
+      "passed": true
+    },
+    {
+      "name": "existing release remains selected",
+      "passed": true
+    },
+    {
+      "name": "existing shared SDK unchanged",
+      "passed": true
+    }
+  ],
+  "task_status": "canceled",
+  "passed": true,
+  "task": "task-1795502826-7ea7ded9850f6f886f83adad"
+}

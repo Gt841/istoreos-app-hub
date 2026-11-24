@@ -1,0 +1,19 @@
+{
+  "scope": "verified raw archives only; fresh package-managed SDK and library installation still required",
+  "target": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live",
+  "source": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime",
+  "artifacts": [
+    {
+      "sha256": "04d7cb73e608b41713b63ef915577f7f5d75e95b1b33174e82e05687fdb6cfaf",
+      "bytes": 2774086
+    },
+    {
+      "sha256": "2cc12327dbe08f0b9906c6213e7f14c0cdc09cae5a5c64e353639e7bd3d34a01",
+      "bytes": 32114713
+    },
+    {
+      "sha256": "dbabf7a1cbf947e6059ffad2c27b80041db97dea1e553b62afdee7f13fca336e",
+      "bytes": 30978868
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "status": "passed-design-preview",
+  "date": "2026-11-23T09:02:31.265674+00:00",
+  "modelWrapTests": 28,
+  "productBrowserChecks": 17,
+  "hostBrowserChecks": 6,
+  "browserRounds": 2,
+  "pageErrors": [],
+  "scope": "Node/Python/Go interactive preview, fixed wrap samples, no application usage feature",
+  "limits": [
+    "No actual runtime install or ks-cli invocation",
+    "No real Go compilation or device validation",
+    "Wrapper tests execute fake interpreters in SSD sandbox, including both Go architecture identities"
+  ]
+}

@@ -1,0 +1,1424 @@
+{
+  "schema_version": 1,
+  "mode": "direct-file-development",
+  "host": "192.168.30.93",
+  "arch": "aarch64",
+  "stage": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/direct-deploy/M5-direct-r2-20261124",
+  "label": "M5-direct-r2-20261124",
+  "files": [
+    {
+      "source": "apps/mise/mise-runtime/files/catalog.json",
+      "target": "/usr/share/mise-runtime/catalog.json",
+      "mode": 420,
+      "config": false,
+      "sha256": "3f3db4afd3acfa28ae9138fad8003c6ecbb00a339464fb4d33b343f1eb749db9",
+      "key": "0000"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/execute.lua",
+      "target": "/usr/share/mise-runtime/execute.lua",
+      "mode": 493,
+      "config": false,
+      "sha256": "506527c6a9e023e360d4bbdc64a62504f1376fb832cb6e50ba7cfeb9a44c29f9",
+      "key": "0001"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/adapters.lua",
+      "target": "/usr/share/mise-runtime/lib/adapters.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "60f20ae7226ba0ab41c1e89e6d8b3f598cee3ba3fbbc52a9709ec8e5562a4423",
+      "key": "0002"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/artifacts.lua",
+      "target": "/usr/share/mise-runtime/lib/artifacts.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "2b11b00217e1e592bbd6d669d5514308a39b7202a68f1b7b32672052c3f0fb07",
+      "key": "0003"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/contract.lua",
+      "target": "/usr/share/mise-runtime/lib/contract.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "62a1f88a8faad2532cbe0b2195f1008d0aaf943ec2c2d118b9961e6caa6a60c0",
+      "key": "0004"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/defaults.lua",
+      "target": "/usr/share/mise-runtime/lib/defaults.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "5d693ea945117e39bc24ee37fe83e9e08f5367f5a72757a9d7ec6f1b41091235",
+      "key": "0005"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/execution.lua",
+      "target": "/usr/share/mise-runtime/lib/execution.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "af03822b7436a09148b87564ee15ef0ff957173d515d477413f14f4f80c67c5b",
+      "key": "0006"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/libraries.lua",
+      "target": "/usr/share/mise-runtime/lib/libraries.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "0bf2649859ac7bea035294a74cd65d3cbe38636ea90ebc5bce94a0350327e883",
+      "key": "0007"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/network.lua",
+      "target": "/usr/share/mise-runtime/lib/network.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "f1f3af7242de4f3e205367b6fe89c51bdc1bbea135616c62532fdad57c3ec896",
+      "key": "0008"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/registration.lua",
+      "target": "/usr/share/mise-runtime/lib/registration.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "fb89bce8e8cce6ad4b1468d10a9da759d8b623c6d889394f561b6787912f4121",
+      "key": "0009"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/status.lua",
+      "target": "/usr/share/mise-runtime/lib/status.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "fd0c5ff355ef54be203180da586d569d8b8636af366edc65358d248542af8a41",
+      "key": "0010"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/store.lua",
+      "target": "/usr/share/mise-runtime/lib/store.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "64d4dfdffc410b660505cb00e7ab95806964515e5af875f57c07e51e81a03076",
+      "key": "0011"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/system.lua",
+      "target": "/usr/share/mise-runtime/lib/system.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "2309cfc44e946bed902c6e343a6254574d9f57e98d52eeced9718ebb1bfc1fcb",
+      "key": "0012"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/tasks.lua",
+      "target": "/usr/share/mise-runtime/lib/tasks.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "353b48b589a09a3b5a5d709686b2321744692e18f4d614e0a3f843ecfdb78707",
+      "key": "0013"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/wire.lua",
+      "target": "/usr/share/mise-runtime/lib/wire.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "cdec9de747339a5e12ea099fba215222e35406cab01dbfb4d930bd0fe057f027",
+      "key": "0014"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/licenses/GCC-exception-3.1.txt",
+      "target": "/usr/share/mise-runtime/licenses/GCC-exception-3.1.txt",
+      "mode": 420,
+      "config": false,
+      "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+      "key": "0015"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/licenses/GPL-3.0.txt",
+      "target": "/usr/share/mise-runtime/licenses/GPL-3.0.txt",
+      "mode": 420,
+      "config": false,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "key": "0016"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/licenses/LGPL-2.1.txt",
+      "target": "/usr/share/mise-runtime/licenses/LGPL-2.1.txt",
+      "mode": 420,
+      "config": false,
+      "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+      "key": "0017"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/licenses/sources.json",
+      "target": "/usr/share/mise-runtime/licenses/sources.json",
+      "mode": 420,
+      "config": false,
+      "sha256": "fa86560429f6f53d271cf7519dfcccd07de7ae316e14f6b25db93eaba18b0ef3",
+      "key": "0018"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/main.lua",
+      "target": "/usr/share/mise-runtime/main.lua",
+      "mode": 493,
+      "config": false,
+      "sha256": "4b8346e4f2e489747bd8b8eafcba057ff6b8a573e1ed759b5d0a1c86e93ebdcb",
+      "key": "0019"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/mise-runtime",
+      "target": "/usr/sbin/mise-runtime",
+      "mode": 493,
+      "config": false,
+      "sha256": "fef1cef5d5a255c8405d22a120c22d17ccfbfb6a0eadcf589652cd40126f1f19",
+      "key": "0020"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/native/bin/uci",
+      "target": "/usr/share/mise-runtime/native/bin/uci",
+      "mode": 493,
+      "config": false,
+      "sha256": "26d9afd173a478d1384cfdd7b9c04f0921f9b8559ec7f89956626289c471a5e7",
+      "key": "0021"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/node-loader.cjs",
+      "target": "/usr/share/mise-runtime/node-loader.cjs",
+      "mode": 420,
+      "config": false,
+      "sha256": "ddbc638299deb8f87d286ca929378302f812b957bd486ef60e3450cbef4a4e7b",
+      "key": "0022"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/npm.json",
+      "target": "/usr/share/mise-runtime/npm.json",
+      "mode": 420,
+      "config": false,
+      "sha256": "33757f6f8bed04dfc5c891ea43bb85cd5d25b23e8a1eda3f5329f47ba6789c92",
+      "key": "0023"
+    },
+    {
+      "source": "/var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/mise-direct/exec-user-arm64",
+      "target": "/usr/share/mise-runtime/native/bin/exec-user",
+      "mode": 493,
+      "config": false,
+      "sha256": "112c8d038e9ec5cb73baf8b407b8e189321d383edc9fff799ec28767c7582ee9",
+      "key": "0024"
+    },
+    {
+      "source": "apps/mise/luci-app-mise/luasrc/controller/mise.lua",
+      "target": "/usr/lib/lua/luci/controller/mise.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "cd8e9dc062f76ceb036162c9549ba664040ca6184f99b12d4f7a72739eb0d178",
+      "key": "0025"
+    },
+    {
+      "source": "apps/mise/luci-app-mise/luasrc/model/mise/transport.lua",
+      "target": "/usr/lib/lua/luci/model/mise/transport.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "f58a0493a2f19b14767c44cb667f637e49d95739e336106137c3d5b1834a4ce7",
+      "key": "0026"
+    },
+    {
+      "source": "apps/mise/luci-app-mise/luasrc/view/mise/index.htm",
+      "target": "/usr/lib/lua/luci/view/mise/index.htm",
+      "mode": 420,
+      "config": false,
+      "sha256": "888cce5cf166aca481583a88bd6321d7fe07b746c1e2d1fa5fe0e8a03669bb11",
+      "key": "0027"
+    },
+    {
+      "source": "apps/mise/luci-app-mise/htdocs/luci-static/resources/mise/LICENSE.quickstart",
+      "target": "/www/luci-static/resources/mise/LICENSE.quickstart",
+      "mode": 420,
+      "config": false,
+      "sha256": "526e92dfd56626d744ded5ba7189f9a875d2384209335225631749662eca4b74",
+      "key": "0028"
+    },
+    {
+      "source": "apps/mise/luci-app-mise/htdocs/luci-static/resources/mise/LICENSE.vue",
+      "target": "/www/luci-static/resources/mise/LICENSE.vue",
+      "mode": 420,
+      "config": false,
+      "sha256": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+      "key": "0029"
+    },
+    {
+      "source": "apps/mise/luci-app-mise/htdocs/luci-static/resources/mise/app.js",
+      "target": "/www/luci-static/resources/mise/app.js",
+      "mode": 420,
+      "config": false,
+      "sha256": "33155bf080e2de80defff84929d8e046877491fa4f6c5ee30cffd16522c2d6f7",
+      "key": "0030"
+    },
+    {
+      "source": "apps/mise/luci-app-mise/htdocs/luci-static/resources/mise/logo.svg",
+      "target": "/www/luci-static/resources/mise/logo.svg",
+      "mode": 420,
+      "config": false,
+      "sha256": "4ccb1ea4bf6b206cd7d43860109f02167ff986d41bbbc8409ddb1802e92910da",
+      "key": "0031"
+    },
+    {
+      "source": "apps/mise/luci-app-mise/htdocs/luci-static/resources/mise/style.css",
+      "target": "/www/luci-static/resources/mise/style.css",
+      "mode": 420,
+      "config": false,
+      "sha256": "ca0ce9f9cfc20436bdd10d5e1db795438e0d7201881f1a0e0a7a899c84cdb91e",
+      "key": "0032"
+    },
+    {
+      "source": "apps/mise/luci-app-mise/root/usr/share/mise/mise-plugin.json",
+      "target": "/usr/share/mise/mise-plugin.json",
+      "mode": 436,
+      "config": false,
+      "sha256": "eb8c622aa873d76bc8cda8e3423773d391c7f52978bb067842ee3655c9e1a26d",
+      "key": "0033"
+    },
+    {
+      "source": "apps/mise/luci-app-mise/root/usr/share/mise/register-desktop.sh",
+      "target": "/usr/share/mise/register-desktop.sh",
+      "mode": 493,
+      "config": false,
+      "sha256": "fde7e358778369db3358328a9c14324b51b8b6fe93564285976d2e645909eb65",
+      "key": "0034"
+    },
+    {
+      "source": "apps/mise/luci-app-mise/root/usr/share/rpcd/acl.d/luci-app-mise.json",
+      "target": "/usr/share/rpcd/acl.d/luci-app-mise.json",
+      "mode": 436,
+      "config": false,
+      "sha256": "29df44f8a596df973581b548360c2ad6def5341c63740522a4c2cf91580aeb14",
+      "key": "0035"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/luasrc/controller/openclawmgr.lua",
+      "target": "/usr/lib/lua/luci/controller/openclawmgr.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "f104e41b628ba4a1118473da2fe966030d1b25ee8076c3072adebeaaae6cc73f",
+      "key": "0036"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/luasrc/model/cbi/openclawmgr/cli.lua",
+      "target": "/usr/lib/lua/luci/model/cbi/openclawmgr/cli.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "1805975959d93e85915b960fb58bfe50c72af0ebfad327b15202c1278e11d110",
+      "key": "0037"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/luasrc/model/openclawmgr.lua",
+      "target": "/usr/lib/lua/luci/model/openclawmgr.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "c4814c08f9839cb1e8a364f2078e435a40f352e48545c80c22a5a3fe202eb715",
+      "key": "0038"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/luasrc/view/openclawmgr/app.htm",
+      "target": "/usr/lib/lua/luci/view/openclawmgr/app.htm",
+      "mode": 420,
+      "config": false,
+      "sha256": "6e3410aa6ee004a619cb23aca8d26fee0682e6adf1e0abfb6e1628b9a99b248e",
+      "key": "0039"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/luasrc/view/openclawmgr/cli.htm",
+      "target": "/usr/lib/lua/luci/view/openclawmgr/cli.htm",
+      "mode": 420,
+      "config": false,
+      "sha256": "cde6dc8b4ca1030a2383e6cffe6a5bb7980f0b3af74539c96728cac5b71381dc",
+      "key": "0040"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/luasrc/view/openclawmgr/diag.htm",
+      "target": "/usr/lib/lua/luci/view/openclawmgr/diag.htm",
+      "mode": 420,
+      "config": false,
+      "sha256": "d104eece20bcd572865dfcb0bdc4c70cc87c212e8083a2eef3b2a056e144619c",
+      "key": "0041"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/luasrc/view/openclawmgr/logs.htm",
+      "target": "/usr/lib/lua/luci/view/openclawmgr/logs.htm",
+      "mode": 420,
+      "config": false,
+      "sha256": "b9369b64d20f193c8707ec938a6608df0f6ad2fcf944ff2cafaf9afa96c2a6b7",
+      "key": "0042"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/htdocs/luci-static/resources/openclawmgr/app.css",
+      "target": "/www/luci-static/resources/openclawmgr/app.css",
+      "mode": 420,
+      "config": false,
+      "sha256": "4c0cdb394832b46a1a31648d2f0e96115089ce0ce6a66f58c9a5a7b63bbcfd74",
+      "key": "0043"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/htdocs/luci-static/resources/openclawmgr/app.js",
+      "target": "/www/luci-static/resources/openclawmgr/app.js",
+      "mode": 420,
+      "config": false,
+      "sha256": "1f85e2f2cb1e0fda83495ea057356d358213c0298a5b2edbd4fca659c88c43fd",
+      "key": "0044"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/htdocs/luci-static/resources/openclawmgr/openclaw.svg",
+      "target": "/www/luci-static/resources/openclawmgr/openclaw.svg",
+      "mode": 420,
+      "config": false,
+      "sha256": "bbfcece86e045163109085df7bcfbb488753f1c24037e1fd21769f2262ebcd35",
+      "key": "0045"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/root/etc/config/openclawmgr",
+      "target": "/etc/config/openclawmgr",
+      "mode": 384,
+      "config": true,
+      "sha256": "64a47b608f0f8cda4967ac1a282c7f96790f6b3e8b2d31ebee7f522dd5154f2a",
+      "key": "0046"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/root/etc/init.d/openclawmgr",
+      "target": "/etc/init.d/openclawmgr",
+      "mode": 509,
+      "config": false,
+      "sha256": "944245afbf8bcac37cc39b1122e7e1c1c4bb3754664fdc4f305ec4722f0f08cf",
+      "key": "0047"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/root/usr/libexec/istorec/openclawmgr.sh",
+      "target": "/usr/libexec/istorec/openclawmgr.sh",
+      "mode": 509,
+      "config": false,
+      "sha256": "e6bf37eb4a790b1f7b396dc05e02d287606ae30ef085fc2c136e9cbfdee6ee9a",
+      "key": "0048"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/root/usr/share/openclawmgr/cli-bin/npm",
+      "target": "/usr/share/openclawmgr/cli-bin/npm",
+      "mode": 493,
+      "config": false,
+      "sha256": "776e7c9897d6cb707413583f72e629f4b060b9eb24dc733929ae2202529b931b",
+      "key": "0049"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/root/usr/share/openclawmgr/env-value.lua",
+      "target": "/usr/share/openclawmgr/env-value.lua",
+      "mode": 436,
+      "config": false,
+      "sha256": "fb2e1203c3baa521469cd07c97152c0fae3ead2818f0a315f99b88ec8e46dd1e",
+      "key": "0050"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/root/usr/share/openclawmgr/gateway.sh",
+      "target": "/usr/share/openclawmgr/gateway.sh",
+      "mode": 493,
+      "config": false,
+      "sha256": "74efe7ca59b6475ebaf33a90334fd2b23c11909c74a5ca3124faa761caebf078",
+      "key": "0051"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/root/usr/share/openclawmgr/glibc-node.sh",
+      "target": "/usr/share/openclawmgr/glibc-node.sh",
+      "mode": 493,
+      "config": false,
+      "sha256": "59ccbcaffa86693be67db659c4c8129bab14ef932dd19550e9ef96333a0cf602",
+      "key": "0052"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/root/usr/share/openclawmgr/install-runtime.sh",
+      "target": "/usr/share/openclawmgr/install-runtime.sh",
+      "mode": 436,
+      "config": false,
+      "sha256": "929e15cfa61b9d870508b9e55e6b88ef829eb86eb6f3998cdf12e93496834be4",
+      "key": "0053"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/root/usr/share/openclawmgr/node-loader.cjs",
+      "target": "/usr/share/openclawmgr/node-loader.cjs",
+      "mode": 436,
+      "config": false,
+      "sha256": "8d8f617a26702d50366923a0f2432f0ee65cc6133daba0c24e6568f7be0d36f8",
+      "key": "0054"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/root/usr/share/openclawmgr/node-pins.sh",
+      "target": "/usr/share/openclawmgr/node-pins.sh",
+      "mode": 436,
+      "config": false,
+      "sha256": "1dc96b283e20fb402a8894a110a26a3f2c418029fe93a1831e103b492e07d764",
+      "key": "0055"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/root/usr/share/openclawmgr/npm-env.sh",
+      "target": "/usr/share/openclawmgr/npm-env.sh",
+      "mode": 436,
+      "config": false,
+      "sha256": "8ae2a9b2ddd75fcdea58c58da750325942894808591131df55f5740ab6b6fcf2",
+      "key": "0056"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/root/usr/share/openclawmgr/npm-git.sh",
+      "target": "/usr/share/openclawmgr/npm-git.sh",
+      "mode": 493,
+      "config": false,
+      "sha256": "19163cab10b33a6fc1c8481f15dc0e21aaf944c3580ccf8222501aa0f3ab77fd",
+      "key": "0057"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/root/usr/share/openclawmgr/oc-config.sh",
+      "target": "/usr/share/openclawmgr/oc-config.sh",
+      "mode": 436,
+      "config": false,
+      "sha256": "fb3cb8225e89dcb2626adc3f3d6d06f3d7d205792d7bbc3458f9c28cf175762e",
+      "key": "0058"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/root/usr/share/openclawmgr/openclawmgr-cli.sh",
+      "target": "/usr/share/openclawmgr/openclawmgr-cli.sh",
+      "mode": 436,
+      "config": false,
+      "sha256": "612fb443e98bb19baaafefcc25d9b909416a45199da4dc413ae01bacf9e97cb1",
+      "key": "0059"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/root/usr/share/openclawmgr/runtime-check.cjs",
+      "target": "/usr/share/openclawmgr/runtime-check.cjs",
+      "mode": 436,
+      "config": false,
+      "sha256": "5f0374ad901f3f4aa9219b55d3b1db496140fda64fabbc742f744e38757c227b",
+      "key": "0060"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/root/usr/share/openclawmgr/runtime-policy.json",
+      "target": "/usr/share/openclawmgr/runtime-policy.json",
+      "mode": 436,
+      "config": false,
+      "sha256": "0692c28913c3d75bd79cb46e0ee133da5c61b607accaf4cb0a4cdbfeeb301007",
+      "key": "0061"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/root/usr/share/openclawmgr/shared-runtime.lua",
+      "target": "/usr/share/openclawmgr/shared-runtime.lua",
+      "mode": 436,
+      "config": false,
+      "sha256": "469bc7bb2b81eac05474bbfd6771cce0cefc5719d17ca974d75316eb8515d4d7",
+      "key": "0062"
+    },
+    {
+      "source": "apps/openclawmgr/luci-app-openclawmgr/root/usr/share/rpcd/acl.d/luci-app-openclawmgr.json",
+      "target": "/usr/share/rpcd/acl.d/luci-app-openclawmgr.json",
+      "mode": 436,
+      "config": false,
+      "sha256": "91e42f0b8e44a5a4cda922f1e0ea78091578038b7bcfa4239bf3a150dc5d3beb",
+      "key": "0063"
+    }
+  ],
+  "package_database_modified": false,
+  "SDK_or_application_data_copied": false,
+  "result": {
+    "files": [
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "3f3db4afd3acfa28ae9138fad8003c6ecbb00a339464fb4d33b343f1eb749db9",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0000",
+        "target": "/usr/share/mise-runtime/catalog.json",
+        "mode": 420,
+        "sha256": "3f3db4afd3acfa28ae9138fad8003c6ecbb00a339464fb4d33b343f1eb749db9",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 755,
+          "sha256": "506527c6a9e023e360d4bbdc64a62504f1376fb832cb6e50ba7cfeb9a44c29f9",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0001",
+        "target": "/usr/share/mise-runtime/execute.lua",
+        "mode": 493,
+        "sha256": "506527c6a9e023e360d4bbdc64a62504f1376fb832cb6e50ba7cfeb9a44c29f9",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "60f20ae7226ba0ab41c1e89e6d8b3f598cee3ba3fbbc52a9709ec8e5562a4423",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0002",
+        "target": "/usr/share/mise-runtime/lib/adapters.lua",
+        "mode": 420,
+        "sha256": "60f20ae7226ba0ab41c1e89e6d8b3f598cee3ba3fbbc52a9709ec8e5562a4423",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "2b11b00217e1e592bbd6d669d5514308a39b7202a68f1b7b32672052c3f0fb07",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0003",
+        "target": "/usr/share/mise-runtime/lib/artifacts.lua",
+        "mode": 420,
+        "sha256": "2b11b00217e1e592bbd6d669d5514308a39b7202a68f1b7b32672052c3f0fb07",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "62a1f88a8faad2532cbe0b2195f1008d0aaf943ec2c2d118b9961e6caa6a60c0",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0004",
+        "target": "/usr/share/mise-runtime/lib/contract.lua",
+        "mode": 420,
+        "sha256": "62a1f88a8faad2532cbe0b2195f1008d0aaf943ec2c2d118b9961e6caa6a60c0",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "5d693ea945117e39bc24ee37fe83e9e08f5367f5a72757a9d7ec6f1b41091235",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0005",
+        "target": "/usr/share/mise-runtime/lib/defaults.lua",
+        "mode": 420,
+        "sha256": "5d693ea945117e39bc24ee37fe83e9e08f5367f5a72757a9d7ec6f1b41091235",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "af03822b7436a09148b87564ee15ef0ff957173d515d477413f14f4f80c67c5b",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0006",
+        "target": "/usr/share/mise-runtime/lib/execution.lua",
+        "mode": 420,
+        "sha256": "af03822b7436a09148b87564ee15ef0ff957173d515d477413f14f4f80c67c5b",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "0bf2649859ac7bea035294a74cd65d3cbe38636ea90ebc5bce94a0350327e883",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0007",
+        "target": "/usr/share/mise-runtime/lib/libraries.lua",
+        "mode": 420,
+        "sha256": "0bf2649859ac7bea035294a74cd65d3cbe38636ea90ebc5bce94a0350327e883",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "f1f3af7242de4f3e205367b6fe89c51bdc1bbea135616c62532fdad57c3ec896",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0008",
+        "target": "/usr/share/mise-runtime/lib/network.lua",
+        "mode": 420,
+        "sha256": "f1f3af7242de4f3e205367b6fe89c51bdc1bbea135616c62532fdad57c3ec896",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "fb89bce8e8cce6ad4b1468d10a9da759d8b623c6d889394f561b6787912f4121",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0009",
+        "target": "/usr/share/mise-runtime/lib/registration.lua",
+        "mode": 420,
+        "sha256": "fb89bce8e8cce6ad4b1468d10a9da759d8b623c6d889394f561b6787912f4121",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "fd0c5ff355ef54be203180da586d569d8b8636af366edc65358d248542af8a41",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0010",
+        "target": "/usr/share/mise-runtime/lib/status.lua",
+        "mode": 420,
+        "sha256": "fd0c5ff355ef54be203180da586d569d8b8636af366edc65358d248542af8a41",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "64d4dfdffc410b660505cb00e7ab95806964515e5af875f57c07e51e81a03076",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0011",
+        "target": "/usr/share/mise-runtime/lib/store.lua",
+        "mode": 420,
+        "sha256": "64d4dfdffc410b660505cb00e7ab95806964515e5af875f57c07e51e81a03076",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "2309cfc44e946bed902c6e343a6254574d9f57e98d52eeced9718ebb1bfc1fcb",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0012",
+        "target": "/usr/share/mise-runtime/lib/system.lua",
+        "mode": 420,
+        "sha256": "2309cfc44e946bed902c6e343a6254574d9f57e98d52eeced9718ebb1bfc1fcb",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "353b48b589a09a3b5a5d709686b2321744692e18f4d614e0a3f843ecfdb78707",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0013",
+        "target": "/usr/share/mise-runtime/lib/tasks.lua",
+        "mode": 420,
+        "sha256": "353b48b589a09a3b5a5d709686b2321744692e18f4d614e0a3f843ecfdb78707",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "cdec9de747339a5e12ea099fba215222e35406cab01dbfb4d930bd0fe057f027",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0014",
+        "target": "/usr/share/mise-runtime/lib/wire.lua",
+        "mode": 420,
+        "sha256": "cdec9de747339a5e12ea099fba215222e35406cab01dbfb4d930bd0fe057f027",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0015",
+        "target": "/usr/share/mise-runtime/licenses/GCC-exception-3.1.txt",
+        "mode": 420,
+        "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0016",
+        "target": "/usr/share/mise-runtime/licenses/GPL-3.0.txt",
+        "mode": 420,
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0017",
+        "target": "/usr/share/mise-runtime/licenses/LGPL-2.1.txt",
+        "mode": 420,
+        "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "fa86560429f6f53d271cf7519dfcccd07de7ae316e14f6b25db93eaba18b0ef3",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0018",
+        "target": "/usr/share/mise-runtime/licenses/sources.json",
+        "mode": 420,
+        "sha256": "fa86560429f6f53d271cf7519dfcccd07de7ae316e14f6b25db93eaba18b0ef3",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 755,
+          "sha256": "4b8346e4f2e489747bd8b8eafcba057ff6b8a573e1ed759b5d0a1c86e93ebdcb",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0019",
+        "target": "/usr/share/mise-runtime/main.lua",
+        "mode": 493,
+        "sha256": "4b8346e4f2e489747bd8b8eafcba057ff6b8a573e1ed759b5d0a1c86e93ebdcb",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 755,
+          "sha256": "fef1cef5d5a255c8405d22a120c22d17ccfbfb6a0eadcf589652cd40126f1f19",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0020",
+        "target": "/usr/sbin/mise-runtime",
+        "mode": 493,
+        "sha256": "fef1cef5d5a255c8405d22a120c22d17ccfbfb6a0eadcf589652cd40126f1f19",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 755,
+          "sha256": "26d9afd173a478d1384cfdd7b9c04f0921f9b8559ec7f89956626289c471a5e7",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0021",
+        "target": "/usr/share/mise-runtime/native/bin/uci",
+        "mode": 493,
+        "sha256": "26d9afd173a478d1384cfdd7b9c04f0921f9b8559ec7f89956626289c471a5e7",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "ddbc638299deb8f87d286ca929378302f812b957bd486ef60e3450cbef4a4e7b",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0022",
+        "target": "/usr/share/mise-runtime/node-loader.cjs",
+        "mode": 420,
+        "sha256": "ddbc638299deb8f87d286ca929378302f812b957bd486ef60e3450cbef4a4e7b",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "33757f6f8bed04dfc5c891ea43bb85cd5d25b23e8a1eda3f5329f47ba6789c92",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0023",
+        "target": "/usr/share/mise-runtime/npm.json",
+        "mode": 420,
+        "sha256": "33757f6f8bed04dfc5c891ea43bb85cd5d25b23e8a1eda3f5329f47ba6789c92",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 755,
+          "sha256": "112c8d038e9ec5cb73baf8b407b8e189321d383edc9fff799ec28767c7582ee9",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0024",
+        "target": "/usr/share/mise-runtime/native/bin/exec-user",
+        "mode": 493,
+        "sha256": "112c8d038e9ec5cb73baf8b407b8e189321d383edc9fff799ec28767c7582ee9",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "cd8e9dc062f76ceb036162c9549ba664040ca6184f99b12d4f7a72739eb0d178",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0025",
+        "target": "/usr/lib/lua/luci/controller/mise.lua",
+        "mode": 420,
+        "sha256": "cd8e9dc062f76ceb036162c9549ba664040ca6184f99b12d4f7a72739eb0d178",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "f58a0493a2f19b14767c44cb667f637e49d95739e336106137c3d5b1834a4ce7",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0026",
+        "target": "/usr/lib/lua/luci/model/mise/transport.lua",
+        "mode": 420,
+        "sha256": "f58a0493a2f19b14767c44cb667f637e49d95739e336106137c3d5b1834a4ce7",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "888cce5cf166aca481583a88bd6321d7fe07b746c1e2d1fa5fe0e8a03669bb11",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0027",
+        "target": "/usr/lib/lua/luci/view/mise/index.htm",
+        "mode": 420,
+        "sha256": "888cce5cf166aca481583a88bd6321d7fe07b746c1e2d1fa5fe0e8a03669bb11",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "526e92dfd56626d744ded5ba7189f9a875d2384209335225631749662eca4b74",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0028",
+        "target": "/www/luci-static/resources/mise/LICENSE.quickstart",
+        "mode": 420,
+        "sha256": "526e92dfd56626d744ded5ba7189f9a875d2384209335225631749662eca4b74",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0029",
+        "target": "/www/luci-static/resources/mise/LICENSE.vue",
+        "mode": 420,
+        "sha256": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "33155bf080e2de80defff84929d8e046877491fa4f6c5ee30cffd16522c2d6f7",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0030",
+        "target": "/www/luci-static/resources/mise/app.js",
+        "mode": 420,
+        "sha256": "33155bf080e2de80defff84929d8e046877491fa4f6c5ee30cffd16522c2d6f7",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "4ccb1ea4bf6b206cd7d43860109f02167ff986d41bbbc8409ddb1802e92910da",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0031",
+        "target": "/www/luci-static/resources/mise/logo.svg",
+        "mode": 420,
+        "sha256": "4ccb1ea4bf6b206cd7d43860109f02167ff986d41bbbc8409ddb1802e92910da",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "ca0ce9f9cfc20436bdd10d5e1db795438e0d7201881f1a0e0a7a899c84cdb91e",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0032",
+        "target": "/www/luci-static/resources/mise/style.css",
+        "mode": 420,
+        "sha256": "ca0ce9f9cfc20436bdd10d5e1db795438e0d7201881f1a0e0a7a899c84cdb91e",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 664,
+          "sha256": "eb8c622aa873d76bc8cda8e3423773d391c7f52978bb067842ee3655c9e1a26d",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0033",
+        "target": "/usr/share/mise/mise-plugin.json",
+        "mode": 436,
+        "sha256": "eb8c622aa873d76bc8cda8e3423773d391c7f52978bb067842ee3655c9e1a26d",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 755,
+          "sha256": "fde7e358778369db3358328a9c14324b51b8b6fe93564285976d2e645909eb65",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0034",
+        "target": "/usr/share/mise/register-desktop.sh",
+        "mode": 493,
+        "sha256": "fde7e358778369db3358328a9c14324b51b8b6fe93564285976d2e645909eb65",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 664,
+          "sha256": "29df44f8a596df973581b548360c2ad6def5341c63740522a4c2cf91580aeb14",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0035",
+        "target": "/usr/share/rpcd/acl.d/luci-app-mise.json",
+        "mode": 436,
+        "sha256": "29df44f8a596df973581b548360c2ad6def5341c63740522a4c2cf91580aeb14",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "f104e41b628ba4a1118473da2fe966030d1b25ee8076c3072adebeaaae6cc73f",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0036",
+        "target": "/usr/lib/lua/luci/controller/openclawmgr.lua",
+        "mode": 420,
+        "sha256": "f104e41b628ba4a1118473da2fe966030d1b25ee8076c3072adebeaaae6cc73f",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "1805975959d93e85915b960fb58bfe50c72af0ebfad327b15202c1278e11d110",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0037",
+        "target": "/usr/lib/lua/luci/model/cbi/openclawmgr/cli.lua",
+        "mode": 420,
+        "sha256": "1805975959d93e85915b960fb58bfe50c72af0ebfad327b15202c1278e11d110",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "c4814c08f9839cb1e8a364f2078e435a40f352e48545c80c22a5a3fe202eb715",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0038",
+        "target": "/usr/lib/lua/luci/model/openclawmgr.lua",
+        "mode": 420,
+        "sha256": "c4814c08f9839cb1e8a364f2078e435a40f352e48545c80c22a5a3fe202eb715",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "6e3410aa6ee004a619cb23aca8d26fee0682e6adf1e0abfb6e1628b9a99b248e",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0039",
+        "target": "/usr/lib/lua/luci/view/openclawmgr/app.htm",
+        "mode": 420,
+        "sha256": "6e3410aa6ee004a619cb23aca8d26fee0682e6adf1e0abfb6e1628b9a99b248e",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "cde6dc8b4ca1030a2383e6cffe6a5bb7980f0b3af74539c96728cac5b71381dc",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0040",
+        "target": "/usr/lib/lua/luci/view/openclawmgr/cli.htm",
+        "mode": 420,
+        "sha256": "cde6dc8b4ca1030a2383e6cffe6a5bb7980f0b3af74539c96728cac5b71381dc",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "d104eece20bcd572865dfcb0bdc4c70cc87c212e8083a2eef3b2a056e144619c",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0041",
+        "target": "/usr/lib/lua/luci/view/openclawmgr/diag.htm",
+        "mode": 420,
+        "sha256": "d104eece20bcd572865dfcb0bdc4c70cc87c212e8083a2eef3b2a056e144619c",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "b9369b64d20f193c8707ec938a6608df0f6ad2fcf944ff2cafaf9afa96c2a6b7",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0042",
+        "target": "/usr/lib/lua/luci/view/openclawmgr/logs.htm",
+        "mode": 420,
+        "sha256": "b9369b64d20f193c8707ec938a6608df0f6ad2fcf944ff2cafaf9afa96c2a6b7",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "4c0cdb394832b46a1a31648d2f0e96115089ce0ce6a66f58c9a5a7b63bbcfd74",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0043",
+        "target": "/www/luci-static/resources/openclawmgr/app.css",
+        "mode": 420,
+        "sha256": "4c0cdb394832b46a1a31648d2f0e96115089ce0ce6a66f58c9a5a7b63bbcfd74",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "1f85e2f2cb1e0fda83495ea057356d358213c0298a5b2edbd4fca659c88c43fd",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0044",
+        "target": "/www/luci-static/resources/openclawmgr/app.js",
+        "mode": 420,
+        "sha256": "1f85e2f2cb1e0fda83495ea057356d358213c0298a5b2edbd4fca659c88c43fd",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "bbfcece86e045163109085df7bcfbb488753f1c24037e1fd21769f2262ebcd35",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0045",
+        "target": "/www/luci-static/resources/openclawmgr/openclaw.svg",
+        "mode": 420,
+        "sha256": "bbfcece86e045163109085df7bcfbb488753f1c24037e1fd21769f2262ebcd35",
+        "action": "unchanged"
+      },
+      {
+        "config": true,
+        "key": "0046",
+        "target": "/etc/config/openclawmgr",
+        "mode": 384,
+        "sha256": "64a47b608f0f8cda4967ac1a282c7f96790f6b3e8b2d31ebee7f522dd5154f2a",
+        "action": "preserve-config"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 775,
+          "sha256": "944245afbf8bcac37cc39b1122e7e1c1c4bb3754664fdc4f305ec4722f0f08cf",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0047",
+        "target": "/etc/init.d/openclawmgr",
+        "mode": 509,
+        "sha256": "944245afbf8bcac37cc39b1122e7e1c1c4bb3754664fdc4f305ec4722f0f08cf",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 775,
+          "sha256": "e6bf37eb4a790b1f7b396dc05e02d287606ae30ef085fc2c136e9cbfdee6ee9a",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0048",
+        "target": "/usr/libexec/istorec/openclawmgr.sh",
+        "mode": 509,
+        "sha256": "e6bf37eb4a790b1f7b396dc05e02d287606ae30ef085fc2c136e9cbfdee6ee9a",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 755,
+          "sha256": "776e7c9897d6cb707413583f72e629f4b060b9eb24dc733929ae2202529b931b",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0049",
+        "target": "/usr/share/openclawmgr/cli-bin/npm",
+        "mode": 493,
+        "sha256": "776e7c9897d6cb707413583f72e629f4b060b9eb24dc733929ae2202529b931b",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 664,
+          "sha256": "fb2e1203c3baa521469cd07c97152c0fae3ead2818f0a315f99b88ec8e46dd1e",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0050",
+        "target": "/usr/share/openclawmgr/env-value.lua",
+        "mode": 436,
+        "sha256": "fb2e1203c3baa521469cd07c97152c0fae3ead2818f0a315f99b88ec8e46dd1e",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 755,
+          "sha256": "6379df3ed887213394328b7f7a04ea1d8fa80f8c175fd192d5ab9dc87939f579",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0051",
+        "target": "/usr/share/openclawmgr/gateway.sh",
+        "mode": 493,
+        "sha256": "74efe7ca59b6475ebaf33a90334fd2b23c11909c74a5ca3124faa761caebf078",
+        "action": "update"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 755,
+          "sha256": "59ccbcaffa86693be67db659c4c8129bab14ef932dd19550e9ef96333a0cf602",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0052",
+        "target": "/usr/share/openclawmgr/glibc-node.sh",
+        "mode": 493,
+        "sha256": "59ccbcaffa86693be67db659c4c8129bab14ef932dd19550e9ef96333a0cf602",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 664,
+          "sha256": "929e15cfa61b9d870508b9e55e6b88ef829eb86eb6f3998cdf12e93496834be4",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0053",
+        "target": "/usr/share/openclawmgr/install-runtime.sh",
+        "mode": 436,
+        "sha256": "929e15cfa61b9d870508b9e55e6b88ef829eb86eb6f3998cdf12e93496834be4",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 664,
+          "sha256": "8d8f617a26702d50366923a0f2432f0ee65cc6133daba0c24e6568f7be0d36f8",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0054",
+        "target": "/usr/share/openclawmgr/node-loader.cjs",
+        "mode": 436,
+        "sha256": "8d8f617a26702d50366923a0f2432f0ee65cc6133daba0c24e6568f7be0d36f8",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 664,
+          "sha256": "1dc96b283e20fb402a8894a110a26a3f2c418029fe93a1831e103b492e07d764",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0055",
+        "target": "/usr/share/openclawmgr/node-pins.sh",
+        "mode": 436,
+        "sha256": "1dc96b283e20fb402a8894a110a26a3f2c418029fe93a1831e103b492e07d764",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 664,
+          "sha256": "8ae2a9b2ddd75fcdea58c58da750325942894808591131df55f5740ab6b6fcf2",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0056",
+        "target": "/usr/share/openclawmgr/npm-env.sh",
+        "mode": 436,
+        "sha256": "8ae2a9b2ddd75fcdea58c58da750325942894808591131df55f5740ab6b6fcf2",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 755,
+          "sha256": "19163cab10b33a6fc1c8481f15dc0e21aaf944c3580ccf8222501aa0f3ab77fd",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0057",
+        "target": "/usr/share/openclawmgr/npm-git.sh",
+        "mode": 493,
+        "sha256": "19163cab10b33a6fc1c8481f15dc0e21aaf944c3580ccf8222501aa0f3ab77fd",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 664,
+          "sha256": "fb3cb8225e89dcb2626adc3f3d6d06f3d7d205792d7bbc3458f9c28cf175762e",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0058",
+        "target": "/usr/share/openclawmgr/oc-config.sh",
+        "mode": 436,
+        "sha256": "fb3cb8225e89dcb2626adc3f3d6d06f3d7d205792d7bbc3458f9c28cf175762e",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 664,
+          "sha256": "612fb443e98bb19baaafefcc25d9b909416a45199da4dc413ae01bacf9e97cb1",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0059",
+        "target": "/usr/share/openclawmgr/openclawmgr-cli.sh",
+        "mode": 436,
+        "sha256": "612fb443e98bb19baaafefcc25d9b909416a45199da4dc413ae01bacf9e97cb1",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 664,
+          "sha256": "5f0374ad901f3f4aa9219b55d3b1db496140fda64fabbc742f744e38757c227b",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0060",
+        "target": "/usr/share/openclawmgr/runtime-check.cjs",
+        "mode": 436,
+        "sha256": "5f0374ad901f3f4aa9219b55d3b1db496140fda64fabbc742f744e38757c227b",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 664,
+          "sha256": "0692c28913c3d75bd79cb46e0ee133da5c61b607accaf4cb0a4cdbfeeb301007",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0061",
+        "target": "/usr/share/openclawmgr/runtime-policy.json",
+        "mode": 436,
+        "sha256": "0692c28913c3d75bd79cb46e0ee133da5c61b607accaf4cb0a4cdbfeeb301007",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 664,
+          "sha256": "f0264ad313e0a51fb2f12b251b7380b4d2abd2a777aaddebcf96fb93c5d34438",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0062",
+        "target": "/usr/share/openclawmgr/shared-runtime.lua",
+        "mode": 436,
+        "sha256": "469bc7bb2b81eac05474bbfd6771cce0cefc5719d17ca974d75316eb8515d4d7",
+        "action": "update"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 664,
+          "sha256": "91e42f0b8e44a5a4cda922f1e0ea78091578038b7bcfa4239bf3a150dc5d3beb",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0063",
+        "target": "/usr/share/rpcd/acl.d/luci-app-openclawmgr.json",
+        "mode": 436,
+        "sha256": "91e42f0b8e44a5a4cda922f1e0ea78091578038b7bcfa4239bf3a150dc5d3beb",
+        "action": "unchanged"
+      }
+    ],
+    "boot_id": "e3eba56b-888b-44bf-a282-99e059afc7b5",
+    "schema_version": 1,
+    "applied": true
+  },
+  "rollback": "lua /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/direct-deploy/M5-direct-r2-20261124/apply.lua restore /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/direct-deploy/M5-direct-r2-20261124",
+  "account_bootstrap_exit": 0,
+  "completed": true
+}

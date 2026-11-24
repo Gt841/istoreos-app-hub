@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "optimization": 1,
+  "goal": "Fix actual pip site configuration isolation on both devices, then complete M6 acceptance",
+  "task_tree": [
+    "reproduce on both real devices",
+    "compare config keys, venv identity and exit propagation",
+    "replace shape-dependent iteration with pip get_value",
+    "regress forbidden and permitted config with actual pip",
+    "complete outstanding M6 validation"
+  ],
+  "acceptance": [
+    "original target escape refuses install without creating target",
+    "GNU/musl and both Python versions pass",
+    "normal config and origin/ks-cli pip remain usable",
+    "existing OpenClaw Gateway/vector checks pass"
+  ],
+  "diagnosis": "pip26.3 Configuration.items returns filename/nested options; get_value normalizes both layouts; exit23 and actual venv identity passed",
+  "package_policy": "direct files/binary/frontend only; IPK/APK deferred to human",
+  "pip_isolation": "passed on both real devices; x64 53 and arm64 55 checks",
+  "full_application": "64 checks passed on each host after fix",
+  "older_pip_compatibility": "local actual pip24.0: 3 tests passed",
+  "remaining": [],
+  "evidence": "verification.md",
+  "reboot": "both actual devices passed all comparisons, fixed Python and original Gateway/vector; ARM AgentFlow healthy"
+}

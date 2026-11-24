@@ -1,0 +1,10 @@
+{
+  "command": [
+    "ssh",
+    "root@192.168.30.7",
+    "lua /mnt/mise-runtime/acceptance/M5/shared-runtime.lua inspect /mnt/mise-runtime/acceptance/M5/bridge-fixture/releases/test/runtime.json"
+  ],
+  "exit": 1,
+  "stdout": "",
+  "stderr": "RUNTIME_BINDING: Application parent must be a protected root-owned directory: /mnt\n"
+}

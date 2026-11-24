@@ -1,0 +1,5 @@
+{
+  "exit_code": 0,
+  "stdout": "{\"passed\":true,\"checks\":[{\"name\":\"real native SDK receipt shown by production LuCI\",\"passed\":true},{\"name\":\"actual native wrap and language-specific commands\",\"passed\":true},{\"name\":\"explicit test SDK removal preserves application data and other runtimes\",\"passed\":true},{\"name\":\"real native UI install has no libc/npm/pip selectors and compiles a real program\",\"passed\":true},{\"name\":\"refreshed native page keeps QuickStart mobile and theme layout\",\"passed\":true}]}\n",
+  "stderr": ""
+}

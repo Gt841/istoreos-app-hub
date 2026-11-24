@@ -1,0 +1,10 @@
+{
+  "exit_code": 1,
+  "report": {
+    "local_istoreenhance_healthy": true,
+    "public_request_exit": 0,
+    "passed": false,
+    "gateway": false
+  },
+  "stderr": "lua: ...ntime-acceptance-20261123/M7/acceleration-status.lua:14: Healthy local service reported unavailable by runtime\nstack traceback:\n\t[C]: in function 'assert'\n\t...ntime-acceptance-20261123/M7/acceleration-status.lua:14: in main chunk\n\t[C]: ?\n"
+}

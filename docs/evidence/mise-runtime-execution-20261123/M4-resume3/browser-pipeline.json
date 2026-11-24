@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "arch": "x64",
+      "passed": true,
+      "followup": "x64-final-browser-r2 and x64-host-r2 passed"
+    },
+    {
+      "arch": "arm64",
+      "passed": true
+    }
+  ],
+  "session_cleanup": "final destroy confirmations passed both devices"
+}

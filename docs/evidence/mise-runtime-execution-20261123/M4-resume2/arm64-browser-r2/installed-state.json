@@ -1,0 +1,249 @@
+{
+  "acceleration": false,
+  "arch": "aarch64",
+  "cache_bytes": 65731803,
+  "capabilities": {
+    "go": {
+      "enabled": false,
+      "reason": "此语言的设备适配尚未启用"
+    },
+    "java": {
+      "enabled": false,
+      "reason": "此语言的设备适配尚未启用"
+    },
+    "node": {
+      "enabled": true
+    },
+    "python": {
+      "enabled": false,
+      "reason": "此语言的设备适配尚未启用"
+    },
+    "rust": {
+      "enabled": false,
+      "reason": "此语言的设备适配尚未启用"
+    },
+    "zig": {
+      "enabled": false,
+      "reason": "此语言的设备适配尚未启用"
+    }
+  },
+  "catalog_revision": "e690f3de941c47d42c76ff360b19bc96cbd8435f386b6dcbc8e9da3d3892237a",
+  "default_library": "glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64",
+  "default_paths": {
+    "/mnt/nvme0n1-1/Configs/Runtime/home/.local/share/mise/installs/node/24.20.0": true
+  },
+  "default_pins": {
+    "node": {
+      "24.20.0": true
+    }
+  },
+  "defaults": {
+    "go": null,
+    "java": null,
+    "node": "24.20.0",
+    "python": null,
+    "rust": null,
+    "zig": null
+  },
+  "defaults_known": {
+    "go": true,
+    "java": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "zig": true
+  },
+  "free_bytes": 51009740800,
+  "free_inodes": 7465042,
+  "gateway": false,
+  "libraries": [
+    {
+      "arch": "aarch64",
+      "id": "glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64",
+      "manifest_sha256": "bd86e6ced8b3097347b11c82dcfa9ce0d5b78212660136bd90ba6cef89af6bc6",
+      "revision": "r1",
+      "schema_version": 1,
+      "source": "https://ports.ubuntu.com/ubuntu-ports/pool/main/g/glibc/libc6_2.39-0ubuntu8_arm64.deb",
+      "verified": true,
+      "version": "2.39"
+    }
+  ],
+  "library_references": {
+    "glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64": 1
+  },
+  "measurements": {
+    "node-24.21.0-aarch64-glibc-upstream1-npm11.19.0-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-c5381d67a2fc8268ee973d2262f592fd3e53262d5950bd8a9c65bdd766346544": {
+      "size_bytes": 197663748
+    }
+  },
+  "online": true,
+  "path": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live",
+  "revision": 1,
+  "runtimes": [
+    {
+      "artifact_set": "c5381d67a2fc8268ee973d2262f592fd3e53262d5950bd8a9c65bdd766346544",
+      "entry": {
+        "abi": "glibc",
+        "arch": "aarch64",
+        "artifact_set": "c5381d67a2fc8268ee973d2262f592fd3e53262d5950bd8a9c65bdd766346544",
+        "artifacts": [
+          {
+            "format": "tar.xz",
+            "sha256": "6ad1325edbdb5649c379b75a237147a666c95d4f9ae8d340fef2d1575d289ad2",
+            "strip": 1,
+            "url": "https://nodejs.org/dist/v24.21.0/node-v24.21.0-linux-arm64.tar.xz"
+          }
+        ],
+        "availability": "available",
+        "build": "upstream1",
+        "id": "node-24.21.0-aarch64-glibc-upstream1",
+        "layout": "standard",
+        "npm": "11.19.0",
+        "source": "https://nodejs.org/dist/v24.21.0/SHASUMS256.txt",
+        "tool": "node",
+        "version": "24.21.0"
+      },
+      "installed_at": 1795486897,
+      "instance": "node-24.21.0-aarch64-glibc-upstream1-npm11.19.0-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-c5381d67a2fc8268ee973d2262f592fd3e53262d5950bd8a9c65bdd766346544",
+      "library": "glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64",
+      "mise_key": "istore-node-24.21.0-aarch64-glibc-upstream1-npm11.19.0-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-c5381d67a2fc8268ee973d2262f592fd3e53262d5950bd8a9c65bdd766346544",
+      "npm": "11.19.0",
+      "probes": {
+        "abi": "passed",
+        "arch": "passed",
+        "engines": "passed",
+        "launcher": "passed",
+        "npm": "passed",
+        "version": "passed"
+      },
+      "root": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live",
+      "schema_version": 1,
+      "verified": true
+    }
+  ],
+  "schema_version": 1,
+  "tasks": [
+    {
+      "cleaned": true,
+      "final_status": "success",
+      "finished": 1795486899,
+      "id": "task-1795486870-9eb6fff011648451a472f418",
+      "kind": "install",
+      "logs": [
+        "2026-11-24T02:21:10Z library\n2026-11-24T02:21:20Z download\n2026-11-24T02:21:21Z extract\n2026-11-24T02:21:37Z probe\n2026-11-24T02:21:38Z registration\n2026-11-24T02:21:39Z committed\n"
+      ],
+      "owner": {
+        "boot": "e3eba56b-888b-44bf-a282-99e059afc7b5",
+        "group": 23870,
+        "id": "task-1795486870-9eb6fff011648451a472f418",
+        "parent": 23864,
+        "pid": 23870,
+        "session": 23870,
+        "start": "4068535",
+        "state": "R"
+      },
+      "pending_environment": {
+        "id": "node-24.21.0-aarch64-glibc-upstream1-npm11.19.0-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-c5381d67a2fc8268ee973d2262f592fd3e53262d5950bd8a9c65bdd766346544",
+        "inode": 3148323
+      },
+      "phase": "committed",
+      "plan": {
+        "catalog_revision": "e690f3de941c47d42c76ff360b19bc96cbd8435f386b6dcbc8e9da3d3892237a",
+        "created": 1795486870,
+        "entry": "node-24.21.0-aarch64-glibc-upstream1",
+        "expires": 1795487170,
+        "id": "plan-1795486870-2e201a396a7611fa195bfd0f",
+        "instance": "node-24.21.0-aarch64-glibc-upstream1-npm11.19.0-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-c5381d67a2fc8268ee973d2262f592fd3e53262d5950bd8a9c65bdd766346544",
+        "path": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live",
+        "revision": 0,
+        "schema_version": 1,
+        "source": "origin"
+      },
+      "publication": {
+        "instance": "node-24.21.0-aarch64-glibc-upstream1-npm11.19.0-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-c5381d67a2fc8268ee973d2262f592fd3e53262d5950bd8a9c65bdd766346544",
+        "wrap": "#!/bin/sh\nset -eu\numask 077\nexec /usr/bin/lua '/usr/share/mise-runtime/execute.lua' '/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live' 'node-24.21.0-aarch64-glibc-upstream1-npm11.19.0-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-c5381d67a2fc8268ee973d2262f592fd3e53262d5950bd8a9c65bdd766346544' \"$@\"\n"
+      },
+      "result": {
+        "artifact_set": "c5381d67a2fc8268ee973d2262f592fd3e53262d5950bd8a9c65bdd766346544",
+        "entry": {
+          "abi": "glibc",
+          "arch": "aarch64",
+          "artifact_set": "c5381d67a2fc8268ee973d2262f592fd3e53262d5950bd8a9c65bdd766346544",
+          "artifacts": [
+            {
+              "format": "tar.xz",
+              "sha256": "6ad1325edbdb5649c379b75a237147a666c95d4f9ae8d340fef2d1575d289ad2",
+              "strip": 1,
+              "url": "https://nodejs.org/dist/v24.21.0/node-v24.21.0-linux-arm64.tar.xz"
+            }
+          ],
+          "availability": "available",
+          "build": "upstream1",
+          "id": "node-24.21.0-aarch64-glibc-upstream1",
+          "layout": "standard",
+          "npm": "11.19.0",
+          "source": "https://nodejs.org/dist/v24.21.0/SHASUMS256.txt",
+          "tool": "node",
+          "version": "24.21.0"
+        },
+        "installed_at": 1795486897,
+        "instance": "node-24.21.0-aarch64-glibc-upstream1-npm11.19.0-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-c5381d67a2fc8268ee973d2262f592fd3e53262d5950bd8a9c65bdd766346544",
+        "library": "glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64",
+        "mise_key": "istore-node-24.21.0-aarch64-glibc-upstream1-npm11.19.0-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-c5381d67a2fc8268ee973d2262f592fd3e53262d5950bd8a9c65bdd766346544",
+        "npm": "11.19.0",
+        "probes": {
+          "abi": "passed",
+          "arch": "passed",
+          "engines": "passed",
+          "launcher": "passed",
+          "npm": "passed",
+          "version": "passed"
+        },
+        "root": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live",
+        "schema_version": 1,
+        "verified": true
+      },
+      "schema_version": 1,
+      "started": 1795486870,
+      "status": "success"
+    },
+    {
+      "cleaned": true,
+      "final_status": "canceled",
+      "finished": 1795486865,
+      "id": "task-1795486864-4c22728ad12b6430b408db9d",
+      "kind": "install",
+      "logs": [
+        "2026-11-24T02:21:04Z library\n  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current\n                                 Dload  Upload  Total   Spent   Left   Speed\n\r  0      0   0      0   0      0      0      0                              0"
+      ],
+      "owner": {
+        "boot": "e3eba56b-888b-44bf-a282-99e059afc7b5",
+        "group": 23329,
+        "id": "task-1795486864-4c22728ad12b6430b408db9d",
+        "parent": 23319,
+        "pid": 23329,
+        "session": 23329,
+        "start": "4067931",
+        "state": "R"
+      },
+      "phase": "library",
+      "plan": {
+        "catalog_revision": "e690f3de941c47d42c76ff360b19bc96cbd8435f386b6dcbc8e9da3d3892237a",
+        "created": 1795486864,
+        "entry": "node-24.21.0-aarch64-glibc-upstream1",
+        "expires": 1795487164,
+        "id": "plan-1795486864-e1536caaf17f4281f20688c0",
+        "instance": "node-24.21.0-aarch64-glibc-upstream1-npm11.19.0-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-c5381d67a2fc8268ee973d2262f592fd3e53262d5950bd8a9c65bdd766346544",
+        "path": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live",
+        "revision": 0,
+        "schema_version": 1,
+        "source": "origin"
+      },
+      "result": "Canceled and cleaned",
+      "schema_version": 1,
+      "started": 1795486864,
+      "status": "canceled"
+    }
+  ],
+  "warnings": []
+}

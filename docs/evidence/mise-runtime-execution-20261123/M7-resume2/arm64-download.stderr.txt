@@ -1,0 +1,24 @@
+# get https://dl-golang.linkease.net:5443/github.com/google/uuid/@v/v1.6.0.info
+# get https://dl-golang.linkease.net:5443/github.com/google/uuid/@v/v1.6.0.info: 200 OK (0.147s)
+# get https://dl-golang.linkease.net:5443/github.com/google/uuid/@v/v1.6.0.mod
+# get https://dl-golang.linkease.net:5443/github.com/google/uuid/@v/v1.6.0.mod: 200 OK (0.067s)
+# get https://dl-golang.linkease.net:5443/sumdb/sum.golang.org/supported
+# get https://dl-golang.linkease.net:5443/sumdb/sum.golang.org/supported: 200 OK (0.074s)
+# get https://dl-golang.linkease.net:5443/sumdb/sum.golang.org/lookup/github.com/google/uuid@v1.6.0
+# get https://dl-golang.linkease.net:5443/sumdb/sum.golang.org/lookup/github.com/google/uuid@v1.6.0: 200 OK (0.081s)
+# get https://dl-golang.linkease.net:5443/sumdb/sum.golang.org/tile/8/0/x086/534
+# get https://dl-golang.linkease.net:5443/sumdb/sum.golang.org/tile/8/1/338
+# get https://dl-golang.linkease.net:5443/sumdb/sum.golang.org/tile/8/1/x001/098.p/187
+# get https://dl-golang.linkease.net:5443/sumdb/sum.golang.org/tile/8/0/x281/275.p/178
+# get https://dl-golang.linkease.net:5443/sumdb/sum.golang.org/tile/8/3/000.p/4
+# get https://dl-golang.linkease.net:5443/sumdb/sum.golang.org/tile/8/2/001
+# get https://dl-golang.linkease.net:5443/sumdb/sum.golang.org/tile/8/2/004.p/74
+# get https://dl-golang.linkease.net:5443/sumdb/sum.golang.org/tile/8/0/x086/534: 200 OK (0.086s)
+# get https://dl-golang.linkease.net:5443/sumdb/sum.golang.org/tile/8/2/001: 200 OK (0.113s)
+# get https://dl-golang.linkease.net:5443/sumdb/sum.golang.org/tile/8/1/338: 200 OK (0.114s)
+# get https://dl-golang.linkease.net:5443/sumdb/sum.golang.org/tile/8/0/x281/275.p/178: 200 OK (0.119s)
+# get https://dl-golang.linkease.net:5443/sumdb/sum.golang.org/tile/8/3/000.p/4: 200 OK (0.119s)
+# get https://dl-golang.linkease.net:5443/sumdb/sum.golang.org/tile/8/2/004.p/74: 200 OK (0.118s)
+# get https://dl-golang.linkease.net:5443/sumdb/sum.golang.org/tile/8/1/x001/098.p/187: 200 OK (0.123s)
+# get https://dl-golang.linkease.net:5443/github.com/google/uuid/@v/v1.6.0.zip
+# get https://dl-golang.linkease.net:5443/github.com/google/uuid/@v/v1.6.0.zip: 200 OK (0.061s)

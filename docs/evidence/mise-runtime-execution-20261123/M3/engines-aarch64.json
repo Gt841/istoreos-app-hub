@@ -1,0 +1,29 @@
+{
+  "id": "node-engines-negative-aarch64",
+  "tool": "node",
+  "version": "24.21.0",
+  "arch": "aarch64",
+  "abi": "glibc",
+  "build": "engines-negative-fixture",
+  "source": "https://nodejs.org/dist/v24.21.0/SHASUMS256.txt",
+  "availability": "available",
+  "layout": "standard",
+  "artifacts": [
+    {
+      "url": "https://nodejs.org/dist/v24.21.0/node-v24.21.0-linux-arm64.tar.xz",
+      "sha256": "6ad1325edbdb5649c379b75a237147a666c95d4f9ae8d340fef2d1575d289ad2",
+      "format": "tar.xz",
+      "strip": 1
+    },
+    {
+      "url": "https://registry.npmjs.org/npm/-/npm-11.12.1.tgz",
+      "sha256": "6683a8ed3a6128c0829643e604679432b344c2dbd9f4fb321cc2f845e4824186",
+      "format": "tar.gz",
+      "strip": 1,
+      "bytes": 2827515,
+      "component": "npm"
+    }
+  ],
+  "artifact_set": "2b8e2675ea4533f0d17f23a4153abcae8ca1e9006cebdd6e0785b31c1357e66d",
+  "npm": "11.12.1"
+}

@@ -1,0 +1,45 @@
+{
+  "scope": "task-owned temporary forwarding; ARM target is loopback",
+  "ports": [
+    42519,
+    33351
+  ],
+  "processes": [
+    {
+      "pid": 16178,
+      "command": [
+        "ssh",
+        "-N",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ExitOnForwardFailure=yes",
+        "-o",
+        "ServerAliveInterval=15",
+        "-L",
+        "127.0.0.1:42519:127.0.0.1:5003",
+        "-L",
+        "127.0.0.1:33351:127.0.0.1:5443",
+        "root@192.168.30.93"
+      ]
+    },
+    {
+      "pid": 16179,
+      "command": [
+        "ssh",
+        "-N",
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ExitOnForwardFailure=yes",
+        "-o",
+        "ServerAliveInterval=15",
+        "-R",
+        "127.0.0.1:5003:127.0.0.1:42519",
+        "-R",
+        "127.0.0.1:5443:127.0.0.1:33351",
+        "root@192.168.30.7"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "checks": [
+    {
+      "name": "stop before dependency fault",
+      "passed": true
+    },
+    {
+      "name": "missing vector extension refuses public start",
+      "passed": true
+    },
+    {
+      "name": "missing vector extension has no running Gateway",
+      "passed": true
+    },
+    {
+      "name": "restored extension passes public restart and health",
+      "passed": true
+    },
+    {
+      "name": "stop before SDK fault",
+      "passed": true
+    },
+    {
+      "name": "missing exact SDK reports runtime-missing",
+      "passed": true
+    },
+    {
+      "name": "missing exact SDK refuses start instead of fallback",
+      "passed": true
+    }
+  ],
+  "passed": false,
+  "limitation": "Test orchestration overlap interrupted final health restart; superseded by serial r2. Not a product pass."
+}

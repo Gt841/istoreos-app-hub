@@ -1,0 +1,9 @@
+{
+  "prepare_exit": 0,
+  "prepare_stdout": "prepared owner=13800\n",
+  "prepare_stderr": "",
+  "health": null,
+  "elapsed": 35.94,
+  "cleanup_exit": 0,
+  "scope": "isolated data and loopback port, actual installed AgentFlow binary under candidate legacy HOME/PATH; original service not restarted"
+}

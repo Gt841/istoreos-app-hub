@@ -1,0 +1,11 @@
+{
+  "scope": "final IPK authentication only; no SDK install attempted",
+  "passed": true,
+  "results": [
+    {
+      "name": "final installed package authentication/ACL/CSRF reject side effects",
+      "passed": true
+    }
+  ],
+  "pageErrors": []
+}

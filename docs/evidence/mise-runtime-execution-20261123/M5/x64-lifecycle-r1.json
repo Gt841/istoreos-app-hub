@@ -1,0 +1,41 @@
+{
+  "asset": {
+    "bytes": 22027000,
+    "sha256": "7078d4dd987128f79afd192c4f621f64adece37e43f2a8756f1d0a9f034de718",
+    "filename": "matrix-sdk-crypto.linux-x64-gnu.node"
+  },
+  "arch": "x86_64",
+  "upstream": "https://api.github.com/repos/matrix-org/matrix-rust-sdk-crypto-nodejs/releases/tags/v0.4.0",
+  "corrupt_cache_call_exit": 124,
+  "passed": true,
+  "checks": [
+    {
+      "name": "ordinary shell command exit code retained",
+      "passed": true
+    },
+    {
+      "name": "ordinary command preserves quoting",
+      "passed": true
+    },
+    {
+      "name": "known postinstall reuses verified cache",
+      "passed": true
+    },
+    {
+      "name": "installed native artifact matches official size and SHA256",
+      "passed": true
+    },
+    {
+      "name": "changed upstream script is rejected before replacement",
+      "passed": true
+    },
+    {
+      "name": "corrupt cached bytes are rejected, never copied",
+      "passed": true
+    },
+    {
+      "name": "actual reusable app cache remains verified",
+      "passed": true
+    }
+  ]
+}

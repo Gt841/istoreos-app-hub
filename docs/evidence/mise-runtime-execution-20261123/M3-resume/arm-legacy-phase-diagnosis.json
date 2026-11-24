@@ -1,0 +1,6 @@
+{
+  "host": "192.168.30.93",
+  "exit": 0,
+  "stdout": "{\"phase_log\":\"[DEBUG-mise-compat] before-env\\n\\/mnt\\/nvme0n1-1\\/Configs\\/mise-runtime-acceptance-20261123\\/M3\\/agentflow-compat-resume\\/phase-probe.sh: \\/lib\\/functions.sh: line 560: IPKG_INSTROOT: parameter not set\\n\",\"processes\":[]}\n",
+  "stderr": ""
+}

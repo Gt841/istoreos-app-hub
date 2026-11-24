@@ -1,0 +1,14 @@
+{
+  "scope": "real writes under caller umask077; explicit shared modes and private default",
+  "expected": {
+    "private": 600,
+    "directory": 755,
+    "public": 644
+  },
+  "passed": true,
+  "actual": {
+    "private": 600,
+    "directory": 755,
+    "public": 644
+  }
+}

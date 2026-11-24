@@ -1,0 +1,28 @@
+{
+  "filesystem": {
+    "mount": {
+      "device": "/dev/sdd",
+      "kind": "ext4",
+      "point": "/mnt/mise-runtime",
+      "options": "rw,noatime"
+    },
+    "free_inodes": 3825215,
+    "free_bytes": 57287057408,
+    "device": 2096
+  },
+  "uuid": "f371c867-d169-436f-b560-58dc3f4f482d",
+  "services": {
+    "istoreenhance": {
+      "instance1": {
+        "pid": 12785,
+        "running": true
+      }
+    },
+    "openclawmgr": {
+      "gateway": {
+        "pid": 13462,
+        "running": true
+      }
+    }
+  }
+}

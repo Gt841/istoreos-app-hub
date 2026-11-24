@@ -1,0 +1,21 @@
+{
+  "prepare_exit": 0,
+  "scope": "actual procd-style helper semantics, isolated data, checked loopback listener owner",
+  "health": {
+    "success": true,
+    "data": {
+      "status": "ok"
+    },
+    "error_data": null,
+    "message": null
+  },
+  "elapsed": 3.63,
+  "listener": "candidate_pid=25518\ntcp        0      0 127.0.0.1:19003         0.0.0.0:*               LISTEN      25518/agentflow\n",
+  "listener_owned": true,
+  "cleanup": {
+    "exit": 0,
+    "stdout": "isolated-server-stopped\n",
+    "stderr": ""
+  },
+  "round": "resume optimization 2 probe fixture matches existing init semantics"
+}

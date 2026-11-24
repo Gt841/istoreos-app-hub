@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-23T09:13:50.683056+00:00",
+  "status": "passed-design-preview",
+  "tools": [
+    "node",
+    "python",
+    "go",
+    "rust",
+    "zig"
+  ],
+  "modelWrapTests": 41,
+  "browserChecks": 31,
+  "productBrowserChecks": 17,
+  "hostBrowserChecks": 6,
+  "compilerBrowserChecks": 8,
+  "rounds": 2,
+  "pageErrors": [],
+  "scope": "Rust minimal and Zig version/wrap interactive prototype; no real installation or device build validation"
+}

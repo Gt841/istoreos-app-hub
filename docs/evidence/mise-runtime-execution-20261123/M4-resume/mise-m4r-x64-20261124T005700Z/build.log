@@ -1,0 +1,284 @@
+[sdk-builder/container] preparing ipk SDK: openwrt-sdk-24.10.1-x86-64_gcc-13.3.0_musl.Linux-x86_64
+[sdk-builder/container] seeding feed base from local object mirror
+Cloning into '/build-work/sdk-ipk/feeds/base'...
+Reset branch 'openwrt-24.10'
+[sdk-builder/container] seeding feed luci from local object mirror
+Cloning into '/build-work/sdk-ipk/feeds/luci'...
+done.
+HEAD is now at 2ac26e56cc luci-proto-wireguard: fixed incorrect peer name detection
+Updating feed 'base' from 'https://git.openwrt.org/openwrt/openwrt.git;openwrt-24.10' ...
+From https://git.openwrt.org/openwrt/openwrt
+   97f7026b3d..34fa4b1af5  openwrt-24.10           -> origin/openwrt-24.10
+ * [new branch]            atlas                   -> origin/atlas
+ * [new branch]            fix/uline-buffer-bounds -> origin/fix/uline-buffer-bounds
+ * [new branch]            lede-17.01              -> origin/lede-17.01
+ * [new branch]            main                    -> origin/main
+ * [new branch]            master                  -> origin/master
+ * [new branch]            openwrt-18.06           -> origin/openwrt-18.06
+ * [new branch]            openwrt-19.07           -> origin/openwrt-19.07
+ * [new branch]            openwrt-21.02           -> origin/openwrt-21.02
+ * [new branch]            openwrt-22.03           -> origin/openwrt-22.03
+ * [new branch]            openwrt-23.05           -> origin/openwrt-23.05
+ * [new branch]            openwrt-25.12           -> origin/openwrt-25.12
+ * [new tag]               reboot                  -> reboot
+ * [new tag]               v17.01.2                -> v17.01.2
+ * [new tag]               v17.01.3                -> v17.01.3
+ * [new tag]               v17.01.4                -> v17.01.4
+ * [new tag]               v17.01.5                -> v17.01.5
+ * [new tag]               v17.01.6                -> v17.01.6
+ * [new tag]               v17.01.7                -> v17.01.7
+ * [new tag]               v18.06.0                -> v18.06.0
+ * [new tag]               v18.06.0-rc1            -> v18.06.0-rc1
+ * [new tag]               v18.06.0-rc2            -> v18.06.0-rc2
+ * [new tag]               v18.06.1                -> v18.06.1
+ * [new tag]               v18.06.2                -> v18.06.2
+ * [new tag]               v18.06.3                -> v18.06.3
+ * [new tag]               v18.06.4                -> v18.06.4
+ * [new tag]               v18.06.5                -> v18.06.5
+ * [new tag]               v18.06.6                -> v18.06.6
+ * [new tag]               v18.06.7                -> v18.06.7
+ * [new tag]               v18.06.8                -> v18.06.8
+ * [new tag]               v18.06.9                -> v18.06.9
+ * [new tag]               v19.07.0                -> v19.07.0
+ * [new tag]               v19.07.0-rc1            -> v19.07.0-rc1
+ * [new tag]               v19.07.0-rc2            -> v19.07.0-rc2
+ * [new tag]               v19.07.1                -> v19.07.1
+ * [new tag]               v19.07.10               -> v19.07.10
+ * [new tag]               v19.07.2                -> v19.07.2
+ * [new tag]               v19.07.3                -> v19.07.3
+ * [new tag]               v19.07.4                -> v19.07.4
+ * [new tag]               v19.07.5                -> v19.07.5
+ * [new tag]               v19.07.6                -> v19.07.6
+ * [new tag]               v19.07.7                -> v19.07.7
+ * [new tag]               v19.07.8                -> v19.07.8
+ * [new tag]               v19.07.9                -> v19.07.9
+ * [new tag]               v21.02.0                -> v21.02.0
+ * [new tag]               v21.02.0-rc1            -> v21.02.0-rc1
+ * [new tag]               v21.02.0-rc2            -> v21.02.0-rc2
+ * [new tag]               v21.02.0-rc3            -> v21.02.0-rc3
+ * [new tag]               v21.02.0-rc4            -> v21.02.0-rc4
+ * [new tag]               v21.02.1                -> v21.02.1
+ * [new tag]               v21.02.2                -> v21.02.2
+ * [new tag]               v21.02.3                -> v21.02.3
+ * [new tag]               v21.02.4                -> v21.02.4
+ * [new tag]               v21.02.5                -> v21.02.5
+ * [new tag]               v21.02.6                -> v21.02.6
+ * [new tag]               v21.02.7                -> v21.02.7
+ * [new tag]               v22.03.0                -> v22.03.0
+ * [new tag]               v22.03.0-rc1            -> v22.03.0-rc1
+ * [new tag]               v22.03.0-rc2            -> v22.03.0-rc2
+ * [new tag]               v22.03.0-rc3            -> v22.03.0-rc3
+ * [new tag]               v22.03.0-rc4            -> v22.03.0-rc4
+ * [new tag]               v22.03.0-rc5            -> v22.03.0-rc5
+ * [new tag]               v22.03.0-rc6            -> v22.03.0-rc6
+ * [new tag]               v22.03.1                -> v22.03.1
+ * [new tag]               v22.03.2                -> v22.03.2
+ * [new tag]               v22.03.3                -> v22.03.3
+ * [new tag]               v22.03.4                -> v22.03.4
+ * [new tag]               v22.03.5                -> v22.03.5
+ * [new tag]               v22.03.6                -> v22.03.6
+ * [new tag]               v22.03.7                -> v22.03.7
+ * [new tag]               v23.05.0                -> v23.05.0
+ * [new tag]               v23.05.0-rc1            -> v23.05.0-rc1
+ * [new tag]               v23.05.0-rc2            -> v23.05.0-rc2
+ * [new tag]               v23.05.0-rc3            -> v23.05.0-rc3
+ * [new tag]               v23.05.0-rc4            -> v23.05.0-rc4
+ * [new tag]               v23.05.1                -> v23.05.1
+ * [new tag]               v23.05.2                -> v23.05.2
+ * [new tag]               v23.05.3                -> v23.05.3
+ * [new tag]               v23.05.4                -> v23.05.4
+ * [new tag]               v23.05.5                -> v23.05.5
+ * [new tag]               v23.05.6                -> v23.05.6
+ * [new tag]               v25.12.0                -> v25.12.0
+ * [new tag]               v25.12.0-rc1            -> v25.12.0-rc1
+ * [new tag]               v25.12.0-rc2            -> v25.12.0-rc2
+ * [new tag]               v25.12.0-rc3            -> v25.12.0-rc3
+ * [new tag]               v25.12.0-rc4            -> v25.12.0-rc4
+ * [new tag]               v25.12.0-rc5            -> v25.12.0-rc5
+ * [new tag]               v25.12.1                -> v25.12.1
+ * [new tag]               v25.12.2                -> v25.12.2
+ * [new tag]               v25.12.3                -> v25.12.3
+ * [new tag]               v25.12.4                -> v25.12.4
+ * [new tag]               v25.12.5                -> v25.12.5
+ * [new tag]               v25.12.6                -> v25.12.6
+Updating 97f7026b3d..34fa4b1af5
+Fast-forward
+ include/image-commands.mk                          |   4 +-
+ include/kernel-6.6                                 |   4 +-
+ package/boot/uboot-envtools/files/mediatek_filogic |   1 +
+ package/devel/strace/Makefile                      |   4 +-
+ package/devel/valgrind/Makefile                    |   4 +-
+ package/firmware/linux-firmware/qca_ath12k.mk      |   8 ++
+ package/kernel/mac80211/Makefile                   |   2 +-
+ ...rt-with-long-timeout-for-non-PCIE-devices.patch |  59 +++++++++
+ package/kernel/mt76/Makefile                       |   2 +-
+ ...escribe-usb-wfsys-reset-with-a-descriptor.patch |  88 ++++++++++++++
+ ...i-mt76-mt792x-fix-mt7925u-USB-WFSYS-reset.patch |  68 +++++++++++
+ package/libs/wolfssl/Makefile                      |   4 +-
+ .../patches/100-disable-hardening-check.patch      |   2 +-
+ package/network/services/dropbear/Makefile         |   2 +-
+ .../patches/017-scp-don-t-use-reallocarray.patch   |  29 +++++
+ .../018-scp-fix-recursive-overwrite-check.patch    |  38 ++++++
+ package/network/utils/wireguard-tools/Makefile     |   6 +-
+ package/system/ca-certificates/Makefile            |   2 +-
+ .../patches/0002-blacklist-certs.patch             |  24 ++++
+ package/utils/ucode/Makefile                       |   2 +-
+ .../101-lib-fs-fix-return-value-for-flush.patch    |  21 ++++
+ .../patches-6.6/105-uart-add-en7523-support.patch  |   2 +-
+ ...st-add-ARCH_AIROHA-in-XHCI-MTK-dependency.patch |  25 ----
+ .../etc/hotplug.d/firmware/11-ath10k-caldata       |  23 ++++
+ .../patches-6.6/900-unaligned_access_hacks.patch   |  11 --
+ ...-lan78xx-Enable-LEDs-and-auto-negotiation.patch |   8 +-
+ ...-for-all-the-downstream-rpi-sound-card-dr.patch |   2 +-
+ ...0-lan78xx-Read-initial-EEE-status-from-DT.patch |   2 +-
+ ...78xx-Disable-TCP-Segmentation-Offload-TSO.patch |   2 +-
+ ...x-Move-enabling-of-EEE-into-PHY-init-code.patch |   2 +-
+ ...bounce-link-events-to-minimize-poll-storm.patch |   2 +-
+ ...enet-Better-coalescing-parameter-defaults.patch |   6 +-
+ ...ent-xhci_fixup_endpoint-for-interval-adju.patch |   4 +-
+ ...op-and-add-the-endpoint-context-in-xhci_f.patch |   2 +-
+ ...-device-quirks-for-Freeway-Airmouse-T3-an.patch |   4 +-
+ ...mgenet-Workaround-2-for-Pi4-Ethernet-fail.patch |   2 +-
+ ...197-of-overlay-Correct-symbol-path-fixups.patch |   2 +-
+ ...orce-CS_HIGH-if-GPIO-descriptors-are-used.patch |   4 +-
+ ...ng-fbtft-Add-support-for-display-variants.patch |   6 +-
+ ...imple-Add-a-timing-for-the-Raspberry-Pi-7.patch |   4 +-
+ ...rm-panel-simple-add-Geekworm-MZP280-Panel.patch |   4 +-
+ ...400-net-bcmgenet-Add-eee-module-parameter.patch |   2 +-
+ ...el-simple-Add-Innolux-AT056tN53V1-5.6-VGA.patch |   4 +-
+ ...-xhci-quirks-add-link-TRB-quirk-for-VL805.patch |   2 +-
+ ...84-usb-xhci-add-VLI_SS_BULK_OUT_BUG-quirk.patch |   2 +-
+ ...0-0485-usb-xhci-add-XHCI_VLI_HUB_TT_QUIRK.patch |   8 +-
+ ...-0518-net-macb-Also-set-DMA-coherent-mask.patch |   4 +-
+ ...imple-Alter-the-timing-for-the-Pi-7-DSI-d.patch |   2 +-
+ .../950-0757-drm-panel-add-panel-dsi.patch         |   4 +-
+ ...-0923-drm-Add-DRM_MODE_TV_MODE_MONOCHROME.patch |   2 +-
+ ...-platform-Avoid-trampling-with-zero-lengt.patch |   2 +-
+ ...mbing-for-updating-interrupt-endpoint-int.patch |   2 +-
+ ...imple-Fix-7inch-panel-mode-for-misalignme.patch |   2 +-
+ ...imple-Increase-pixel-clock-on-Pi-7inch-pa.patch |   2 +-
+ ...x-memory-corruption-when-page_size-change.patch |   2 +-
+ ...-1144-dmaengine-dw-axi-dmac-Fixes-for-RP1.patch |  22 ++--
+ ...fixup-dmaengine-dw-axi-dmac-Fixes-for-RP1.patch |  12 +-
+ ...engine-dw-axi-dmac-Honour-snps-block-size.patch |   4 +-
+ ...t-posted-write-counts-for-SD-cards-in-CQ-.patch |   6 +-
+ ...estrict-posted-write-counts-for-SD-cards-.patch |   2 +-
+ ...w-Save-bandwidth-with-the-TMOD_RO-feature.patch |   8 +-
+ ...axi-dmac-make-more-sensible-choices-about.patch |   6 +-
+ ...ine-dw-axi-dmac-Allow-client-chosen-width.patch |   2 +-
+ ...i-dw-Let-the-DMAC-set-the-transfer-widths.patch |   4 +-
+ ...-xhci-set-HID-bit-in-streaming-endpoint-c.patch |   2 +-
+ .../950-1530-spi-dw-Wait-for-idle-after-TX.patch   |   2 +-
+ ...-1534-fixup-spi-dw-Wait-for-idle-after-TX.patch |   2 +-
+ .../bcm47xx/base-files/etc/board.d/01_network      |   2 +-
+ .../bcm47xx/base-files/lib/preinit/01_sysinfo      |  11 +-
+ target/linux/bcm47xx/image/mips74k.mk              |  39 +++---
+ ...-add-support-for-performing-fake-doorbell.patch |   6 +-
+ ...ernet-cortina-Rename-adjust-link-callback.patch |   4 +-
+ ...hernet-cortina-Use-negotiated-TX-RX-pause.patch |   4 +-
+ ...thernet-cortina-Implement-.set_pauseparam.patch |   4 +-
+ ...conditional-threaded-NAPI-wakeup-based-on.patch |   6 +-
+ ...Allow-to-use-SMP-threads-for-backlog-NAPI.patch |  22 ++--
+ ...e-backlog-NAPI-to-clean-up-the-defer_list.patch |   6 +-
+ ...v6.10-net-Rename-rps_lock-to-backlog_lock.patch |  18 +--
+ ...v6.11-net-Make-USO-depend-on-CSUM-offload.patch |   6 +-
+ ...stats64-if-device-if-driver-is-configured.patch |   2 +-
+ ...-L4-checksum-as-usual-when-not-segmenting.patch |  59 +++++++++
+ ...0-net-create-a-dummy-net_device-allocator.patch | 135 ---------------------
+ ...-phy-motorcomm-prepare-for-yt8821-support.patch |   2 +-
+ ...6.12-net-phy-motorcomm-add-yt8821-support.patch |   6 +-
+ ...t-mediatek-split-tx-and-rx-fields-in-mtk_.patch |  18 +--
+ ...t-mediatek-use-QDMA-instead-of-ADMAv2-on-.patch |   4 +-
+ ...t-mtk_eth_soc-handle-dma-buffer-size-soc-.patch |  26 ++--
+ ...t-mtk_eth_soc-ppe-add-support-for-multipl.patch |  36 +++---
+ ...t-mtk_eth_soc-implement-.-get-set-_pausep.patch |   4 +-
+ ....7-net-introduce-napi_is_scheduled-helper.patch |   4 +-
+ ...stmmac-move-TX-timer-arm-after-DMA-enable.patch |  12 +-
+ ...-quirks-for-Hisense-and-HSGQ-GPON-ONT-SFP.patch |  56 +++++++++
+ ....3-net-usb-qmi_wwan-add-Quectel-EG120K-EA.patch |  60 +++++++++
+ ...a8k-add-support-for-bridge-port-isolation.patch |   2 +-
+ ...8e6xxx-rename-mv88e6xxx_g2_scratch_gpio_s.patch |   2 +-
+ ...8e6xxx-add-Amethyst-specific-SMI-GPIO-fun.patch |   2 +-
+ ....11-net-free_netdev-exit-earlier-if-dummy.patch |   2 +-
+ ....13-net-dsa-mv88e6xxx-Support-LED-control.patch |  10 +-
+ .../linux/generic/hack-6.6/204-module_strip.patch  |  10 +-
+ .../650-netfilter-add-xt_FLOWOFFLOAD-target.patch  |   4 +-
+ ...1-net-dsa-mv88e6xxx-disable-ATU-violation.patch |   2 +-
+ .../hack-6.6/721-net-add-packet-mangeling.patch    |   6 +-
+ .../780-usb-net-MeigLink_modem_support.patch       |   2 +-
+ .../hack-6.6/790-SFP-GE-T-ignore-TX_FAULT.patch    |   6 +-
+ .../linux/generic/hack-6.6/902-debloat_proc.patch  |   6 +-
+ ...rt-Revert-driver-core-Set-fw_devlink-on-b.patch |   2 +-
+ .../pending-6.6/630-packet_socket_type.patch       |  16 +--
+ ...jecting-with-source-address-failed-policy.patch |  24 ++--
+ ...NETIF_F_GSO_FRAGLIST-from-NETIF_F_GSO_SOF.patch |   6 +-
+ ...ft_flow_offload-handle-netdevice-events-f.patch |   8 +-
+ ...f_tables-ignore-EOPNOTSUPP-on-flowtable-d.patch |   2 +-
+ ...ethernet-mtk_eth_soc-enable-threaded-NAPI.patch |  16 +--
+ ...ge-add-knob-for-filtering-rx-tx-BPDU-pack.patch |   6 +-
+ ...t-dsa-qca8k-implement-lag_fdb_add-del-ops.patch |   4 +-
+ ...sa-qca8k-enable-flooding-to-both-CPU-port.patch |   2 +-
+ ...-qca8k-add-support-for-port_change_master.patch |   4 +-
+ ...ca8k-enable-assisted-learning-on-CPU-port.patch |   6 +-
+ ...ieee80211_ptr-even-with-no-CFG82111-suppo.patch |   2 +-
+ ...t-mtk_eth_soc-add-paths-and-SerDes-modes-.patch |  14 +--
+ ...mtk_eth_soc-reduce-rx-ring-size-for-older.patch |  16 +--
+ ...t-mtk_eth_soc-do-not-enable-page-pool-sta.patch |   4 +-
+ ...al-tmon-Fix-compilation-warning-for-wrong.patch |  51 --------
+ target/linux/imx/image/common.mk                   |   2 +-
+ target/linux/imx/image/cortexa9.mk                 |  10 +-
+ ...-net-dsa-add-out-of-band-tagging-protocol.patch |   2 +-
+ ...qca8k-add-IPQ4019-built-in-switch-support.patch |   6 +-
+ .../999-atm-mpoa-intel-dsl-phy-support.patch       |   2 +-
+ target/linux/layerscape/image/armv8_64b.mk         |   6 +-
+ .../base-files/lib/preinit/05_set_preinit_iface    |   2 +
+ .../mediatek/dts/mt7981b-glinet-gl-mt2500-v1.dts   |   5 +
+ .../mediatek/dts/mt7981b-glinet-gl-mt2500-v2.dts   |   5 +
+ .../mediatek/dts/mt7981b-glinet-gl-mt2500.dtsi     |   3 -
+ .../filogic/base-files/etc/board.d/02_network      |   1 +
+ .../filogic/base-files/lib/upgrade/platform.sh     |   2 +
+ .../patches-6.6/410-bt-mtk-serial-fix.patch        |   2 +-
+ ...s-spi-Add-support-for-dynamic-calibration.patch |   6 +-
+ ...t-add-negotiation-of-in-band-capabilities.patch |   4 +-
+ target/linux/mpc85xx/image/p1020.mk                |   4 +-
+ ...e-wrapper-address-of-simple-image-devices.patch |  10 ++
+ .../100-powerpc-85xx-tl-wdr4900-v1-support.patch   |  17 +--
+ .../101-powerpc-85xx-hiveap-330-support.patch      |  10 --
+ .../106-powerpc-85xx-ws-ap3710i-support.patch      |  12 --
+ .../107-powerpc-85xx-add-ws-ap3825i-support.patch  |  14 ++-
+ .../110-powerpc-85xx-br200-wp-support.patch        |  10 --
+ .../701-mvpp2-read-mac-address-from-nvmem.patch    |   2 +-
+ target/linux/ramips/image/mt7621.mk                |   2 +-
+ ...-phy-sfp-re-probe-modules-on-DEV_UP-event.patch |   2 +-
+ .../714-net-phy-sfp-add-support-for-SMBus.patch    |   6 +-
+ ...-rockchip-naneng-combphy-Fix-TX-detect-RX.patch |  82 +++++++++++++
+ ...6-uart-8250-Add-dw-auto-flow-ctrl-support.patch |   2 +-
+ ...ine-dw-axi-dmac-Drop-unused-print-message.patch |   2 +-
+ ...091-workqueue-Enable-flush_scheduled_work.patch |   4 +-
+ ...-improve-performance-usb-using-lowmem-for.patch |  24 ++--
+ ...ing-dma_alloc_noncoherent-to-alloc-low-me.patch |  10 +-
+ ...w-axi-dmac-Handle-xfer-start-while-non-id.patch |   2 +-
+ ...e-dw-axi-dmac-Add-StarFive-JH7100-support.patch |   6 +-
+ .../1009-net-stmmac-use-GFP_DMA32.patch            |   2 +-
+ tools/7z/Makefile                                  |   4 +-
+ tools/7z/patches/7-zip-musl.patch                  |   4 +-
+ 159 files changed, 1033 insertions(+), 648 deletions(-)
+ create mode 100644 package/kernel/mac80211/patches/rtl/054-wifi-rtw88-TX-report-with-long-timeout-for-non-PCIE-devices.patch
+ create mode 100644 package/kernel/mt76/patches/400-wifi-mt76-mt792x-describe-usb-wfsys-reset-with-a-descriptor.patch
+ create mode 100644 package/kernel/mt76/patches/401-wifi-mt76-mt792x-fix-mt7925u-USB-WFSYS-reset.patch
+ create mode 100644 package/network/services/dropbear/patches/017-scp-don-t-use-reallocarray.patch
+ create mode 100644 package/network/services/dropbear/patches/018-scp-fix-recursive-overwrite-check.patch
+ create mode 100644 package/system/ca-certificates/patches/0002-blacklist-certs.patch
+ create mode 100644 package/utils/ucode/patches/101-lib-fs-fix-return-value-for-flush.patch
+ delete mode 100644 target/linux/airoha/patches-6.6/220-08-usb-host-add-ARCH_AIROHA-in-XHCI-MTK-dependency.patch
+ create mode 100644 target/linux/ath79/nand/base-files/etc/hotplug.d/firmware/11-ath10k-caldata
+ create mode 100644 target/linux/generic/backport-6.6/613-v6.12-udp-Compute-L4-checksum-as-usual-when-not-segmenting.patch
+ delete mode 100644 target/linux/generic/backport-6.6/700-v6.10-net-create-a-dummy-net_device-allocator.patch
+ create mode 100644 target/linux/generic/backport-6.6/785-06-v7.0-net-sfp-add-quirks-for-Hisense-and-HSGQ-GPON-ONT-SFP.patch
+ create mode 100644 target/linux/generic/backport-6.6/787-v7.3-net-usb-qmi_wwan-add-Quectel-EG120K-EA.patch
+ delete mode 100644 target/linux/generic/pending-6.6/980-tools-thermal-tmon-Fix-compilation-warning-for-wrong.patch
+ create mode 100644 target/linux/mpc85xx/patches-6.6/099-mpc85xx-p1010-change-wrapper-address-of-simple-image-devices.patch
+ create mode 100644 target/linux/rockchip/patches-6.6/032-07-v7.4-phy-rockchip-naneng-combphy-Fix-TX-detect-RX.patch
+Updating feed 'luci' from 'https://git.openwrt.org/project/luci.git^2ac26e56cc55102cb10e7b0867c2b78e0f6d5fd8' ...
+Updating feed 'packages' from 'https://git.openwrt.org/feed/packages.git^d8cd30f4e281d6853b3de134c4f147a807583e43' ...
+Cloning into './feeds/packages'...

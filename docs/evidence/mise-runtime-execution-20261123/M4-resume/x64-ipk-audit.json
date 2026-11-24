@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "arch": "x86_64",
+  "packages": {
+    "ks-cli": {
+      "file": "../openwrt-sdk-builder/artifacts/mise-m4r3-x64-20261124T011600Z/ipk/istore_actions/ks-cli_0.9.1-r1_x86_64.ipk",
+      "sha256": "725e87ed5782ddc6e7671fc298bf4ff9fa11cf62ba926187d2f1c600cb835dd9",
+      "metadata": {
+        "Package": "ks-cli",
+        "Version": "0.9.1-r1",
+        "Depends": "libc",
+        "Source": "feeds/istore_actions/applications/ks-cli",
+        "SourceName": "ks-cli",
+        "Section": "net",
+        "SourceDateEpoch": "1744562312",
+        "URL": "https://www.kspeeder.com/",
+        "Architecture": "x86_64",
+        "Installed-Size": "11417600",
+        "Description": " Command-line client for KSpeeder downloads, diagnostics and service control."
+      },
+      "files": 4
+    },
+    "luci-app-mise": {
+      "file": "../openwrt-sdk-builder/artifacts/mise-m4r3-x64-20261124T011600Z/ipk/istore_actions/luci-app-mise_0.1.0-r1_all.ipk",
+      "sha256": "193918608791324ba68d5f9969ed4516f928a6391f08e136d94070978fe2b8ca",
+      "metadata": {
+        "Package": "luci-app-mise",
+        "Version": "0.1.0-r1",
+        "Depends": "libc, luci-base, luci-compat, mise-runtime, luci-lua-runtime",
+        "Source": "feeds/istore_actions/applications/luci-app-mise",
+        "SourceName": "luci-app-mise",
+        "Section": "luci",
+        "SourceDateEpoch": "1744562312",
+        "URL": "https://github.com/openwrt/luci",
+        "Maintainer": "OpenWrt LuCI community",
+        "Architecture": "all",
+        "Installed-Size": "163840",
+        "Description": " Persistent runtime environments"
+      },
+      "files": 29
+    },
+    "mise-runtime": {
+      "file": "../openwrt-sdk-builder/artifacts/mise-m4r3-x64-20261124T011600Z/ipk/istore_actions/mise-runtime_0.1.0-r1_x86_64.ipk",
+      "sha256": "066f867e4e49b51827509ab8b4ef283bff92dfe8819cace3ecfff06609f2005f",
+      "metadata": {
+        "Package": "mise-runtime",
+        "Version": "0.1.0-r1",
+        "Depends": "libc, mise, lua, luci-lib-jsonc, luci-lib-nixio, curl, ca-bundle, tar, xz-utils, zstd, ks-cli, coreutils-stat, libstdcpp6, block-mount",
+        "Source": "feeds/istore_actions/applications/mise-runtime",
+        "SourceName": "mise-runtime",
+        "License": "GPL-3.0-only",
+        "Section": "utils",
+        "SourceDateEpoch": "1744562312",
+        "Architecture": "x86_64",
+        "Installed-Size": "215040",
+        "Description": " Persistent iStoreOS language runtimes"
+      },
+      "files": 33
+    },
+    "mise": {
+      "file": "../openwrt-sdk-builder/artifacts/mise-m4r3-x64-20261124T011600Z/ipk/istore_actions/mise_2026.8.14-r26_x86_64.ipk",
+      "sha256": "8894bec774c9bca3ca84ed336eb81190e7d8552ca0181c5781d26b852eab1974",
+      "metadata": {
+        "Package": "mise",
+        "Version": "2026.8.14-r26",
+        "Depends": "libc",
+        "Source": "feeds/istore_actions/applications/mise",
+        "SourceName": "mise",
+        "Section": "utils",
+        "SourceDateEpoch": "1795226013",
+        "URL": "https://mise.jdx.dev",
+        "Architecture": "x86_64",
+        "Installed-Size": "88238080",
+        "Description": " mise manages development tool versions, environment variables, and tasks."
+      },
+      "files": 15
+    },
+    "app-meta-mise": {
+      "file": "../openwrt-sdk-builder/artifacts/mise-m4r3-x64-20261124T011600Z/ipk/istore_meta/app-meta-mise_0.1.0-r1_all.ipk",
+      "sha256": "498c6228005da93acfea4355e6b0c38b1270ac9820b7dd46b7b2e458e4679d37",
+      "metadata": {
+        "Package": "app-meta-mise",
+        "Version": "0.1.0-r1",
+        "Depends": "libc, mise-runtime, luci-app-mise",
+        "Source": "feeds/istore_meta/applications/app-meta-mise",
+        "SourceName": "app-meta-mise",
+        "Section": "meta",
+        "SourceDateEpoch": "1744562312",
+        "Maintainer": "LinkEase",
+        "Architecture": "all",
+        "Installed-Size": "10240",
+        "Description": " Metadata for mise"
+      },
+      "files": 14
+    }
+  }
+}

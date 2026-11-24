@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "name": "Java x86_64 版本/发行版、复核、刷新续看、四个 wrap 命令、清理与默认保护",
+      "passed": true
+    },
+    {
+      "name": "Java aarch64 版本/发行版、复核、刷新续看、四个 wrap 命令、清理与默认保护",
+      "passed": true
+    },
+    {
+      "name": "首次安装 Java 同时准备 glibc，完成后可用且不更改全局默认",
+      "passed": true
+    },
+    {
+      "name": "Java 校验失败不提交、明确重试后成功",
+      "passed": true
+    },
+    {
+      "name": "Java 拒绝不支持的 musl/发行版/浮动版本；六种语言切换正确重置字段",
+      "passed": true
+    },
+    {
+      "name": "Java 与六种语言在桌面、320/390 手机深浅主题下无溢出",
+      "passed": true
+    }
+  ],
+  "pageErrors": []
+}

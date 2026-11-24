@@ -1,0 +1,35 @@
+{
+  "passed": false,
+  "results": [
+    {
+      "name": "authenticated real LuCI bootstrap and unconfigured status",
+      "passed": true
+    },
+    {
+      "name": "ACL, CSRF and fixed operation boundary",
+      "passed": true
+    },
+    {
+      "name": "first persistent storage configuration through production UI",
+      "passed": true
+    },
+    {
+      "name": "real cancel and retry UI retains durable task record",
+      "passed": true
+    },
+    {
+      "name": "production install completes after page reload and creates measured receipt",
+      "passed": true
+    },
+    {
+      "name": "actual wrap download, library reference protection and fixed storage",
+      "passed": true
+    },
+    {
+      "name": "desktop and mobile QuickStart styles, theme, dialog focus and browser errors",
+      "passed": false,
+      "error": "locator.waitFor: Error: strict mode violation: getByRole('dialog') resolved to 2 elements:\n    1) <dialog open=\"\" role=\"dialog\" data-v-52124332=\"\" data-v-27ad71be=\"\" class=\"mise-dialog\" aria-labelledby=\"v-1\">…</dialog> aka getByRole('dialog', { name: '使用 Node.js 24.21.0 · glibc' })\n    2) <div class=\"modal\" role=\"dialog\" aria-modal=\"true\"></div> aka getByRole('dialog').filter({ hasText: /^$/ })\n\nCall log:\n\u001b[2m  - waiting for getByRole('dialog') to be visible\u001b[22m\n"
+    }
+  ],
+  "pageErrors": []
+}

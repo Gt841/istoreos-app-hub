@@ -1,0 +1,6 @@
+{
+  "pip_version": "24.0",
+  "scope": "actual installed older pip against shipped policy; target wrappers tested separately",
+  "rc": 0,
+  "output": "test_destination_options_in_both_sections_are_rejected (__main__.PipConfigurationPolicy.test_destination_options_in_both_sections_are_rejected) ... ok\ntest_normal_private_index_and_user_false_are_preserved (__main__.PipConfigurationPolicy.test_normal_private_index_and_user_false_are_preserved) ... ok\ntest_omitted_destination_options_are_allowed (__main__.PipConfigurationPolicy.test_omitted_destination_options_are_allowed) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 2.179s\n\nOK\n"
+}

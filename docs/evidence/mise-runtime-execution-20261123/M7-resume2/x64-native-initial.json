@@ -1,0 +1,331 @@
+{
+  "exit_code": 0,
+  "elapsed_seconds": 64.78,
+  "report": {
+    "boot_id": "8c08d91f-949e-45b5-b277-e21c4575fec3",
+    "arch": "x86_64",
+    "scope": "real nonroot Go/Zig compilation, fixed policies and cache ownership",
+    "passed": true,
+    "checks": [
+      {
+        "name": "prepare UID 65001",
+        "passed": true
+      },
+      {
+        "name": "prepare UID 65002",
+        "passed": true
+      },
+      {
+        "details": {
+          "GOTOOLCHAIN": "local",
+          "CGO_ENABLED": "0",
+          "GOMODCACHE": "/mnt/mise-runtime/Runtime-live/users/65001/home/.cache/go/mod",
+          "GOTMPDIR": "/mnt/mise-runtime/Runtime-live/users/65001/home/.cache/go/go-1.26.10-x86_64-native-upstream1-d0421aa2fa11b520c016df6c286638afbdc2228f93742e0f54fcf5000ce10861/tmp",
+          "GOENV": "",
+          "GOCACHE": "/mnt/mise-runtime/Runtime-live/users/65001/home/.cache/go/go-1.26.10-x86_64-native-upstream1-d0421aa2fa11b520c016df6c286638afbdc2228f93742e0f54fcf5000ce10861/build",
+          "GOPATH": "/mnt/mise-runtime/Runtime-live/users/65001/home/.local/go/go-1.26.10-x86_64-native-upstream1-d0421aa2fa11b520c016df6c286638afbdc2228f93742e0f54fcf5000ce10861",
+          "GOBIN": "/mnt/mise-runtime/Runtime-live/users/65001/home/.local/go/go-1.26.10-x86_64-native-upstream1-d0421aa2fa11b520c016df6c286638afbdc2228f93742e0f54fcf5000ce10861/bin",
+          "GOROOT": "/mnt/mise-runtime/Runtime-live/environments/go-1.26.10-x86_64-native-upstream1-d0421aa2fa11b520c016df6c286638afbdc2228f93742e0f54fcf5000ce10861"
+        },
+        "name": "go-1.26.10 fixed Go environment",
+        "passed": true
+      },
+      {
+        "name": "go-1.26.10 persistent GOPATH",
+        "passed": true
+      },
+      {
+        "name": "go-1.26.10 persistent GOBIN",
+        "passed": true
+      },
+      {
+        "name": "go-1.26.10 persistent GOCACHE",
+        "passed": true
+      },
+      {
+        "name": "go-1.26.10 persistent GOMODCACHE",
+        "passed": true
+      },
+      {
+        "name": "go-1.26.10 persistent GOTMPDIR",
+        "passed": true
+      },
+      {
+        "name": "go-1.26.10 explicit CGO=1 preserved",
+        "passed": true
+      },
+      {
+        "name": "go-1.26.10 projects share UID/version build and UID module cache",
+        "passed": true
+      },
+      {
+        "name": "go-1.26.10 other UID caches isolated",
+        "passed": true
+      },
+      {
+        "details": "",
+        "name": "go-1.26.10 gofmt works",
+        "passed": true
+      },
+      {
+        "details": "",
+        "name": "go-1.26.10 real user Go compilation",
+        "passed": true
+      },
+      {
+        "details": "",
+        "name": "go-1.26.10 explicit project output retained",
+        "passed": true
+      },
+      {
+        "details": "go: go.mod requires go >= 99.0.0 (running go 1.26.10; GOTOOLCHAIN=local)\n",
+        "name": "go-1.26.10 higher toolchain refuses auto download",
+        "passed": true
+      },
+      {
+        "details": "Fixed runtime uses GOENV=off; set process environment instead of writing user-wide Go configuration\n",
+        "name": "go-1.26.10 global Go env writes disabled",
+        "passed": true
+      },
+      {
+        "details": "{\n\t\"Path\": \"github.com/google/uuid\",\n\t\"Version\": \"v1.6.0\",\n\t\"Info\": \"/mnt/mise-runtime/Runtime-live/users/65001/home/.cache/go/mod/cache/download/github.com/google/uuid/@v/v1.6.0.info\",\n\t\"GoMod\": \"/mnt/mise-runtime/Runtime-live/users/65001/home/.cache/go/mod/cache/download/github.com/google/uuid/@v/v1.6.0.mod\",\n\t\"Zip\": \"/mnt/mise-runtime/Runtime-live/users/65001/home/.cache/go/mod/cache/download/github.com/google/uuid/@v/v1.6.0.zip\",\n\t\"Dir\": \"/mnt/mise-runtime/Runtime-live/users/65001/home/.cache/go/mod/github.com/google/uuid@v1.6.0\",\n\t\"Sum\": \"h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=\",\n\t\"GoModSum\": \"h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=\",\n\t\"Origin\": {\n\t\t\"VCS\": \"git\",\n\t\t\"URL\": \"https://github.com/google/uuid\",\n\t\t\"Hash\": \"0f11ee6918f41a04c201eceeadf612a377bc7fbc\",\n\t\t\"Ref\": \"refs/tags/v1.6.0\"\n\t}\n}\n",
+        "name": "go-1.26.10 pinned module acquisition ks-cli",
+        "passed": true
+      },
+      {
+        "details": "# runtime/cgo\ncgo: C compiler \"/missing/explicit-c-compiler\" not found: exec: \"/missing/explicit-c-compiler\": stat /missing/explicit-c-compiler: no such file or directory\n",
+        "name": "go-1.26.10 missing explicit CGO compiler errors clearly",
+        "passed": true
+      },
+      {
+        "details": {
+          "uid": 65001,
+          "home": "/mnt/mise-runtime/Runtime-live/users/65001/home",
+          "args": [
+            "space and $literal",
+            "quote'"
+          ],
+          "version": "go version go1.26.10 linux/amd64",
+          "stdin": "stdin $literal\n",
+          "tmp": "/mnt/mise-runtime/Runtime-live/users/65001/home/.cache/runtime/go-1.26.10-x86_64-native-upstream1-d0421aa2fa11b520c016df6c286638afbdc2228f93742e0f54fcf5000ce10861/tmp"
+        },
+        "name": "go-1.26.10 program UID/stdin/args/fixed go child",
+        "passed": true
+      },
+      {
+        "details": {
+          "GOTOOLCHAIN": "local",
+          "CGO_ENABLED": "0",
+          "GOMODCACHE": "/mnt/mise-runtime/Runtime-live/users/65001/home/.cache/go/mod",
+          "GOTMPDIR": "/mnt/mise-runtime/Runtime-live/users/65001/home/.cache/go/go-1.27.4-x86_64-native-upstream1-51d304294ca856b1bd2349f1a4e5f6967fa34546b5fa82405d72cacfb75a56e1/tmp",
+          "GOENV": "",
+          "GOCACHE": "/mnt/mise-runtime/Runtime-live/users/65001/home/.cache/go/go-1.27.4-x86_64-native-upstream1-51d304294ca856b1bd2349f1a4e5f6967fa34546b5fa82405d72cacfb75a56e1/build",
+          "GOPATH": "/mnt/mise-runtime/Runtime-live/users/65001/home/.local/go/go-1.27.4-x86_64-native-upstream1-51d304294ca856b1bd2349f1a4e5f6967fa34546b5fa82405d72cacfb75a56e1",
+          "GOBIN": "/mnt/mise-runtime/Runtime-live/users/65001/home/.local/go/go-1.27.4-x86_64-native-upstream1-51d304294ca856b1bd2349f1a4e5f6967fa34546b5fa82405d72cacfb75a56e1/bin",
+          "GOROOT": "/mnt/mise-runtime/Runtime-live/environments/go-1.27.4-x86_64-native-upstream1-51d304294ca856b1bd2349f1a4e5f6967fa34546b5fa82405d72cacfb75a56e1"
+        },
+        "name": "go-1.27.4 fixed Go environment",
+        "passed": true
+      },
+      {
+        "name": "go-1.27.4 persistent GOPATH",
+        "passed": true
+      },
+      {
+        "name": "go-1.27.4 persistent GOBIN",
+        "passed": true
+      },
+      {
+        "name": "go-1.27.4 persistent GOCACHE",
+        "passed": true
+      },
+      {
+        "name": "go-1.27.4 persistent GOMODCACHE",
+        "passed": true
+      },
+      {
+        "name": "go-1.27.4 persistent GOTMPDIR",
+        "passed": true
+      },
+      {
+        "name": "go-1.27.4 explicit CGO=1 preserved",
+        "passed": true
+      },
+      {
+        "name": "go-1.27.4 projects share UID/version build and UID module cache",
+        "passed": true
+      },
+      {
+        "name": "go-1.27.4 other UID caches isolated",
+        "passed": true
+      },
+      {
+        "details": "",
+        "name": "go-1.27.4 gofmt works",
+        "passed": true
+      },
+      {
+        "details": "",
+        "name": "go-1.27.4 real user Go compilation",
+        "passed": true
+      },
+      {
+        "details": "",
+        "name": "go-1.27.4 explicit project output retained",
+        "passed": true
+      },
+      {
+        "details": "go: go.mod requires go >= 99.0.0 (running go 1.27.4; GOTOOLCHAIN=local)\n",
+        "name": "go-1.27.4 higher toolchain refuses auto download",
+        "passed": true
+      },
+      {
+        "details": "Fixed runtime uses GOENV=off; set process environment instead of writing user-wide Go configuration\n",
+        "name": "go-1.27.4 global Go env writes disabled",
+        "passed": true
+      },
+      {
+        "details": "{\n\t\"Path\": \"github.com/google/uuid\",\n\t\"Version\": \"v1.6.0\",\n\t\"Info\": \"/mnt/mise-runtime/Runtime-live/users/65001/home/.cache/go/mod/cache/download/github.com/google/uuid/@v/v1.6.0.info\",\n\t\"GoMod\": \"/mnt/mise-runtime/Runtime-live/users/65001/home/.cache/go/mod/cache/download/github.com/google/uuid/@v/v1.6.0.mod\",\n\t\"Zip\": \"/mnt/mise-runtime/Runtime-live/users/65001/home/.cache/go/mod/cache/download/github.com/google/uuid/@v/v1.6.0.zip\",\n\t\"Dir\": \"/mnt/mise-runtime/Runtime-live/users/65001/home/.cache/go/mod/github.com/google/uuid@v1.6.0\",\n\t\"Sum\": \"h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=\",\n\t\"GoModSum\": \"h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=\",\n\t\"Origin\": {\n\t\t\"VCS\": \"git\",\n\t\t\"URL\": \"https://github.com/google/uuid\",\n\t\t\"Hash\": \"0f11ee6918f41a04c201eceeadf612a377bc7fbc\",\n\t\t\"Ref\": \"refs/tags/v1.6.0\"\n\t}\n}\n",
+        "name": "go-1.27.4 pinned module acquisition ks-cli",
+        "passed": true
+      },
+      {
+        "details": "# runtime/cgo\ncgo: C compiler \"/missing/explicit-c-compiler\" not found: exec: \"/missing/explicit-c-compiler\": stat /missing/explicit-c-compiler: no such file or directory\n",
+        "name": "go-1.27.4 missing explicit CGO compiler errors clearly",
+        "passed": true
+      },
+      {
+        "details": {
+          "uid": 65001,
+          "home": "/mnt/mise-runtime/Runtime-live/users/65001/home",
+          "args": [
+            "space and $literal",
+            "quote'"
+          ],
+          "version": "go version go1.27.4 linux/amd64",
+          "stdin": "stdin $literal\n",
+          "tmp": "/mnt/mise-runtime/Runtime-live/users/65001/home/.cache/runtime/go-1.27.4-x86_64-native-upstream1-51d304294ca856b1bd2349f1a4e5f6967fa34546b5fa82405d72cacfb75a56e1/tmp"
+        },
+        "name": "go-1.27.4 program UID/stdin/args/fixed go child",
+        "passed": true
+      },
+      {
+        "name": "zig-0.15.2 complete Zig and persistent caches",
+        "passed": true
+      },
+      {
+        "name": "zig-0.15.2 project local cache isolated",
+        "passed": true
+      },
+      {
+        "name": "zig-0.15.2 other UID cache isolated",
+        "passed": true
+      },
+      {
+        "details": "",
+        "name": "zig-0.15.2 real user Zig default output",
+        "passed": true
+      },
+      {
+        "details": "",
+        "name": "zig-0.15.2 explicit output/cache arguments preserved",
+        "passed": true
+      },
+      {
+        "details": "",
+        "name": "zig-0.15.2 Zig C compilation",
+        "passed": true
+      },
+      {
+        "details": "",
+        "name": "zig-0.15.2 Zig C++ compilation",
+        "passed": true
+      },
+      {
+        "details": "",
+        "name": "zig-0.15.2 execute hello",
+        "passed": true
+      },
+      {
+        "details": "",
+        "name": "zig-0.15.2 execute c-app",
+        "passed": true
+      },
+      {
+        "details": "",
+        "name": "zig-0.15.2 execute cxx-app",
+        "passed": true
+      },
+      {
+        "details": "",
+        "name": "zig-0.15.2 execute explicit-output",
+        "passed": true
+      },
+      {
+        "name": "zig-0.17.1 complete Zig and persistent caches",
+        "passed": true
+      },
+      {
+        "name": "zig-0.17.1 project local cache isolated",
+        "passed": true
+      },
+      {
+        "name": "zig-0.17.1 other UID cache isolated",
+        "passed": true
+      },
+      {
+        "details": "",
+        "name": "zig-0.17.1 real user Zig default output",
+        "passed": true
+      },
+      {
+        "details": "",
+        "name": "zig-0.17.1 explicit output/cache arguments preserved",
+        "passed": true
+      },
+      {
+        "details": "",
+        "name": "zig-0.17.1 Zig C compilation",
+        "passed": true
+      },
+      {
+        "details": "",
+        "name": "zig-0.17.1 Zig C++ compilation",
+        "passed": true
+      },
+      {
+        "details": "",
+        "name": "zig-0.17.1 execute hello",
+        "passed": true
+      },
+      {
+        "details": "",
+        "name": "zig-0.17.1 execute c-app",
+        "passed": true
+      },
+      {
+        "details": "",
+        "name": "zig-0.17.1 execute cxx-app",
+        "passed": true
+      },
+      {
+        "details": "",
+        "name": "zig-0.17.1 execute explicit-output",
+        "passed": true
+      },
+      {
+        "name": "two Go and two Zig instances tested",
+        "passed": true
+      },
+      {
+        "name": "Go versions isolate build cache and share UID module cache",
+        "passed": true
+      },
+      {
+        "name": "Zig versions isolate caches",
+        "passed": true
+      }
+    ]
+  },
+  "stderr": ""
+}

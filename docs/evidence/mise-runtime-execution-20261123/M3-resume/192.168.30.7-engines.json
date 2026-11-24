@@ -1,0 +1,8 @@
+{
+  "host": "192.168.30.7",
+  "command": "lua /mnt/mise-runtime/acceptance/M3/node-engines.lua /mnt/mise-runtime/acceptance/M3/share /mnt/mise-runtime/Runtime /mnt/mise-runtime/bootstrap/mise/bin/mise /mnt/mise-runtime/acceptance/M3/engines-entry.json",
+  "exit": 0,
+  "stdout": "PASS incompatible actual npm engines rejects candidate and preserves existing Node, state and lock\n",
+  "stderr": "",
+  "round": "resume optimization 1 ARM loopback forwarding"
+}

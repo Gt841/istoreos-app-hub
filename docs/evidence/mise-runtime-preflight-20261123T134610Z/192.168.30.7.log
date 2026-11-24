@@ -1,0 +1,142 @@
+[identity]
+Mon Nov 23 13:46:10 UTC 2026
+Linux iStoreOS 6.6.144 #0 SMP Thu Oct 15 14:35:40 2026 x86_64 GNU/Linux
+DISTRIB_ID='iStoreOS'
+DISTRIB_RELEASE='24.10.8'
+DISTRIB_REVISION='2026101823'
+DISTRIB_TARGET='x86/64'
+DISTRIB_ARCH='x86_64'
+DISTRIB_DESCRIPTION='iStoreOS 24.10.8 2026101823'
+DISTRIB_TAINTS='busybox'
+0c198f00-4a81-411b-b49b-8caf83f2c6ae
+ 21:46:10 up  3:14,  load average: 1.74, 1.16, 1.18
+[memory]
+MemTotal:        2009332 kB
+MemAvailable:    1435248 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+[storage-config]
+mise.main.runtime_dir=
+quickstart.main.conf_dir=
+quickstart.main.main_dir=
+openclawmgr.main.base_dir=
+agentflow.main.data_dir=
+[mounts]
+/dev/sda3 /overlay ext4 rw,relatime
+/dev/sdb1 /ext_overlay ext4 rw,relatime
+overlayfs:/overlay / overlay rw,noatime,lowerdir=/overlay/upper:/,upperdir=/ext_overlay/upper,workdir=/ext_overlay/work,xino=off
+/dev/sdc /mnt/vio4-0 ext4 rw,relatime
+/dev/loop29p1 /mnt/m05-3d0a-purpose-layout-512 ext4 rw,relatime
+/dev/loop30p2 /mnt/m05-3d0a-purpose-scoped-512 ext4 rw,relatime
+/dev/loop31p1 /mnt/m05-3d0a-purpose-layout-4k ext4 rw,relatime
+/dev/loop34p3 /mnt/m05-3d0a-purpose-free-4k ext4 rw,relatime
+/dev/loop35p1 /mnt/m05-3d0a-purpose-layout-verified-4k ext4 rw,relatime
+/dev/loop36p1 /mnt/quickstart-m07-3d0a ext4 rw,relatime
+/dev/loop37p1 /mnt/quickstart-m07-3d0a-files ext4 rw,relatime
+/dev/loop4p1 /mnt/quickstart-m03-3d0a-smoke ext4 rw,relatime
+[disk-kib]
+Filesystem           1024-blocks    Used Available Capacity Mounted on
+/dev/root               260096    260096         0 100% /rom
+efivars                    256        66       185  26% /sys/firmware/efi/efivars
+tmpfs                  1004664      5100    999564   1% /tmp
+/dev/sda3              1992552     45024   1927048   2% /overlay
+/dev/sdb1             16386940   3559428  11973088  23% /ext_overlay
+overlayfs:/overlay    16386940   3559428  11973088  23% /
+tmpfs                     4096         0      4096   0% /mnt
+/dev/sda1               130798      8848    121950   7% /boot
+/dev/sda1               130798      8848    121950   7% /boot
+tmpfs                      512         0       512   0% /dev
+/dev/sdc              16337788   7457276   8025268  48% /mnt/vio4-0
+/dev/loop29p1            57300      3280     49436   6% /mnt/m05-3d0a-purpose-layout-512
+/dev/loop30p2            57300      3288     49428   6% /mnt/m05-3d0a-purpose-scoped-512
+/dev/loop31p1            57300      3288     49428   6% /mnt/m05-3d0a-purpose-layout-4k
+/dev/loop34p3            57300     27148     25568  51% /mnt/m05-3d0a-purpose-free-4k
+/dev/loop35p1            57300      3288     49428   6% /mnt/m05-3d0a-purpose-layout-verified-4k
+/dev/loop36p1          4044512    413904   3404612  11% /mnt/quickstart-m07-3d0a
+/dev/loop37p1           498900       152    462052   0% /mnt/quickstart-m07-3d0a-files
+/dev/loop4p1            115283       110    106142   0% /mnt/quickstart-m03-3d0a-smoke
+tmpfs                    51200         0     51200   0% /mnt/quickstart-m07-3d0a/lighthost/state/devices
+tmpfs                      100         0       100   0% /mnt/quickstart-m07-3d0a/lighthost/state/shmounts
+tmpfs                      100         0       100   0% /mnt/quickstart-m07-3d0a/lighthost/state/guestapi
+/dev/dm-41              996780      4384    923584   0% /mnt/quickstart-m07-3d0a/lighthost/state/storage-pools/qs_host_8912884757e627c3/containers/lh-01a2074526c176a382821c9274c1776a
+/dev/dm-42              996780      4404    923564   0% /mnt/quickstart-m07-3d0a/lighthost/state/storage-pools/qs_host_8912884757e627c3/containers/lh-01a20529bd297ff0a52e2ee036c1812b
+overlay                  57300     27148     25568  51% /mnt/m05-3d0a-purpose-free-4k/docker ui handoff/overlay2/afe8f23e482fb32c541fd4faee3670e0e8a9a1a81059399c00650fb608f14cfc/merged
+[inode-stat]
+path=/ type=overlayfs block=4096 total=4096735 free=2993272 inodes=1048576 free_inodes=1047041
+access-writable=yes
+path=/overlay type=ext2/ext3 block=4096 total=498138 free=481762 inodes=131072 free_inodes=130813
+access-writable=yes
+path=/mnt/vio4-0 type=ext2/ext3 block=4096 total=4084447 free=2006317 inodes=1048576 free_inodes=766513
+access-writable=yes
+[tools]
+/bin/opkg
+missing=apk
+/bin/ubus
+/sbin/uci
+/usr/bin/jsonfilter
+/usr/bin/jshn
+/usr/bin/lua
+/usr/sbin/curl
+/usr/bin/wget
+/bin/tar
+/usr/bin/xz
+missing=zstd
+/usr/bin/sha256sum
+/usr/bin/timeout
+/bin/stat
+/usr/bin/setsid
+/usr/bin/git
+missing=ks-cli
+missing=mise
+missing=node
+missing=npm
+missing=python3
+missing=gcc
+missing=cc
+missing=readelf
+[package-versions]
+ca-bundle - 20260601-r1
+coreutils-stat - 9.7-r1
+coreutils-timeout - 9.7-r1
+curl - 8.19.0-r2
+git - 2.50.2-r1
+git-http - 2.50.2-r1
+jshn - 2025.07.23~49056d17-r1
+jsonfilter - 2025.04.18~8a86fb78-r1
+lua - 5.1.5-r11
+luci-lib-taskd - 1.0.26
+tar - 1.35-r1
+xz-utils - 5.6.2-r2
+[service-presence]
+kspeeder=not-running
+iStoreEnhance=not-running
+agentflow=not-running
+openclawmgr=not-running
+uhttpd=9139
+rpcd=5166
+dockerd=13565
+incusd=12503 12240 11283
+[installer-locks]
+absent=/tmp/openclawmgr-installer.lock
+absent=/tmp/mise-runtime.lock
+[configured-storage-summary]
+[prior-acceptance-directories]
+drwx------   12 root     root          4096 Nov 23 10:48 /mnt/vio4-0/Configs/openclawmgr-acceptance-20261123
+2535532	/mnt/vio4-0/Configs/openclawmgr-acceptance-20261123
+drwx------    6 root     root          4096 Nov 23 14:06 /mnt/vio4-0/Configs/openclawmgr-glibc-acceptance-20261123
+2385532	/mnt/vio4-0/Configs/openclawmgr-glibc-acceptance-20261123
+[kernel-alert-counts]
+matched_lines=0
+[network-head]
+url=https://nodejs.org/dist/index.json http=200 verify=0 seconds=0.745985
+curl-exit=0
+url=https://registry.npmjs.org/openclaw http=200 verify=0 seconds=0.713804
+curl-exit=0
+url=https://github.com/jdx/mise/releases http=200 verify=0 seconds=2.865407
+curl-exit=0
+url=https://go.dev/dl/ http=405 verify=0 seconds=2.010999
+curl-exit=0
+[ks-cli-version]
+[ks-cli-capability]
+
+[stderr]

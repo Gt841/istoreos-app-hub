@@ -1,0 +1,37 @@
+{
+  "boot_id": "290c4092-c9f2-45bc-98ac-addb6dd920dc",
+  "additional_instance": "node-24.21.0-x86_64-glibc-upstream1-npm11.12.1-npm11.12.1-glibc-2.39-ubuntu8-gcc12-legal1-r1-x86_64-c52b848b52f1a7edd508540b368a79e267d4fc47bdbdf1bbcfca5201f2584135",
+  "arch": "x86_64",
+  "checks": [
+    {
+      "name": "additional Node version executes",
+      "passed": true
+    },
+    {
+      "name": "independent npm version executes",
+      "passed": true
+    },
+    {
+      "name": "additional library revision verified",
+      "passed": true
+    },
+    {
+      "name": "Gateway fixed binding unchanged",
+      "passed": true
+    },
+    {
+      "name": "global mise configuration unchanged",
+      "passed": true
+    },
+    {
+      "name": "existing Gateway process continues",
+      "passed": true
+    },
+    {
+      "name": "fixed application OpenClaw vector query remains available",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "additional_library": "glibc-2.39-ubuntu8-gcc12-legal1-r2-x86_64"
+}

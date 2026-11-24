@@ -1,0 +1,16 @@
+{
+  "command": [
+    "ssh",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "ConnectTimeout=8",
+    "root@192.168.30.93",
+    "date -u; cat /proc/sys/kernel/random/boot_id; dmesg | awk '/SQUASHFS.*[Ee]rror|I\\/O error|Out of memory|oom-kill/{n++;if(n<=12)print}END{print \\\"matched_lines=\\\" n+0}'; curl -sS --max-time 5 -o /dev/null -w 'gateway-routes-http=%{http_code}\\n' http://127.0.0.1:5003/api/download-gateway/routes"
+  ],
+  "exit": 0,
+  "stdout": "Mon Nov 23 13:48:08 UTC 2026\n15109b6a-9070-49ea-88e0-6ba2e17a5545\ngateway-routes-http=200\n",
+  "stderr": "awk: cmd. line:1: Unexpected token\n"
+}

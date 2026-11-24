@@ -1,0 +1,33 @@
+{
+  "status": "failed-after-three-optimizations",
+  "round": 3,
+  "fix": "dedicated architecture-specific mirror configurations; regression checks only enabled feed names",
+  "builder_commit": "72adc1b9efc989d83f55e0ee3f0326f538458b7f",
+  "builder_tests": 16,
+  "build_ids": [
+    "mise-m4r3-x64-20261124T011600Z",
+    "mise-m4r3-arm64-20261124T011600Z"
+  ],
+  "real_package_installation": false,
+  "published": false,
+  "round1_result": "mirror error fixed; ARM detached tag git pull failed; both builds intentionally stopped before compilation",
+  "round2_fix": "optional BASE_FEED_COMMIT pins only mise profiles; regression tests branch/tag/invalid/unset; verified read-only packages seed",
+  "round2_result": "Both real builds failed: new LuCI and metadata recipes lack OpenWrt scan signature",
+  "round3_fix": "Add BuildPackage scan signatures; disable SDK second minification as QuickStart; scanner regression test",
+  "failure": "x64 metadata feed actual HEAD differs from pinned commit after interrupted clone retry",
+  "sdk_compile": {
+    "x64": "success",
+    "arm64": "success"
+  },
+  "ipk_payload_audit": {
+    "x64": "five packages passed",
+    "arm64": "five packages passed"
+  },
+  "source_gate": {
+    "x64": "failed: istore_meta expected 4ead788a91cf95c23ff47396f6f81923142d9907, actual 07c4f21cf5c7daa77464f478440664c8d81f0189",
+    "arm64": "passed"
+  },
+  "real_luci_browser": "prepared, not run",
+  "known_ephemeral_sessions": "three per device destroyed",
+  "next_fix": "Enforce and verify pinned feed checkout after retry and before applying patches/compilation; verify again before collecting artifacts; add interrupted-clone regression test"
+}

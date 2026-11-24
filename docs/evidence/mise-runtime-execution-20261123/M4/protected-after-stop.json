@@ -1,0 +1,4 @@
+{
+  "192.168.30.7": "6d49212a-fe54-4478-8075-2d5d10fcabd4\ncandidate_not_installed\nlive_root_not_created\n",
+  "192.168.30.93": "/usr/sbin/iStoreEnhance: OK\n/usr/bin/ks-cli: OK\n/usr/sbin/agentflow: OK\n/etc/config/mise: OK\n/lib/functions/mise.sh: OK\ne3eba56b-888b-44bf-a282-99e059afc7b5\n{\"success\":true,\"data\":{\"status\":\"ok\"},\"error_data\":null,\"message\":null}\nlive_root_not_created\n"
+}

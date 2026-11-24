@@ -1,0 +1,8 @@
+[
+  "-rw-r--r-- 0/0             399 2026-10-20 06:20:36 go/src/cmd/go/testdata/mod/rsc.io_!c!g!o_v1.0.0.txt",
+  "-rw-r--r-- 0/0            1839 2026-10-20 06:20:36 go/src/cmd/go/testdata/mod/rsc.io_!q!u!o!t!e_v1.5.2.txt",
+  "-rw-r--r-- 0/0            1854 2026-10-20 06:20:36 go/src/cmd/go/testdata/mod/rsc.io_!q!u!o!t!e_v1.5.3-!p!r!e.txt",
+  "drwxr-xr-x 0/0               0 2026-10-20 06:20:36 go/test/fixedbugs/issue27836.dir/",
+  "-rw-r--r-- 0/0             352 2026-10-20 06:20:36 go/test/fixedbugs/issue27836.dir/Þfoo.go",
+  "-rw-r--r-- 0/0             363 2026-10-20 06:20:36 go/test/fixedbugs/issue27836.dir/Þmain.go"
+]

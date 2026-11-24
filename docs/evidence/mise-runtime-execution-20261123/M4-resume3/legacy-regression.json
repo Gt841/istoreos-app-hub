@@ -1,0 +1,7 @@
+{
+  "red_source_package": "openwrt-sdk-builder/artifacts/mise-m4final-x64-20261124023813Z/ipk/istore_actions/mise_2026.8.14-r26_x86_64.ipk",
+  "red_source_sha256": "baa98d69361d5773258288cab390a75dbc3e5f5680b085d5b2911ebf352a442c",
+  "red": "optional probe blocks >1s",
+  "green_source_sha256": "40022def3ec421028d09f2851231b8dec5dee3699ec6301888abc09e13a78083",
+  "green": "six real-helper tests passed; network blocked by fixture"
+}

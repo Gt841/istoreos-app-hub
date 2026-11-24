@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "build_id": "mise-m4final-x64-20261124023813Z",
+  "checks": [
+    {
+      "name": "packages",
+      "expected": {
+        "origin": "https://git.openwrt.org/feed/packages.git",
+        "commit": "d8cd30f4e281d6853b3de134c4f147a807583e43"
+      },
+      "actual": {
+        "commit": "d8cd30f4e281d6853b3de134c4f147a807583e43",
+        "origin": "https://git.openwrt.org/feed/packages.git"
+      },
+      "passed": true
+    },
+    {
+      "name": "istore_actions",
+      "expected": {
+        "origin": "https://github.com/linkease/openwrt-app-actions.git",
+        "commit": "582d70db42a4ebd78a9f253b3262bd9ba6c66b53"
+      },
+      "actual": {
+        "commit": "582d70db42a4ebd78a9f253b3262bd9ba6c66b53",
+        "origin": "https://github.com/linkease/openwrt-app-actions.git"
+      },
+      "passed": true
+    },
+    {
+      "name": "istore_meta",
+      "expected": {
+        "origin": "https://github.com/linkease/openwrt-app-meta.git",
+        "commit": "4ead788a91cf95c23ff47396f6f81923142d9907"
+      },
+      "actual": {
+        "commit": "4ead788a91cf95c23ff47396f6f81923142d9907",
+        "origin": "https://github.com/linkease/openwrt-app-meta.git"
+      },
+      "passed": true
+    },
+    {
+      "name": "base",
+      "expected": {
+        "origin": "https://git.openwrt.org/openwrt/openwrt.git",
+        "commit": "97f7026b3dc97aff135da1ef3575c44cddcf8fb5"
+      },
+      "actual": {
+        "commit": "97f7026b3dc97aff135da1ef3575c44cddcf8fb5",
+        "origin": "https://git.openwrt.org/openwrt/openwrt.git"
+      },
+      "passed": true
+    },
+    {
+      "name": "luci",
+      "expected": {
+        "origin": "https://git.openwrt.org/project/luci.git",
+        "commit": "2ac26e56cc55102cb10e7b0867c2b78e0f6d5fd8"
+      },
+      "actual": {
+        "commit": "2ac26e56cc55102cb10e7b0867c2b78e0f6d5fd8",
+        "origin": "https://git.openwrt.org/project/luci.git"
+      },
+      "passed": true
+    },
+    {
+      "name": "feed-set",
+      "passed": true
+    },
+    {
+      "name": "successful build",
+      "passed": true
+    },
+    {
+      "name": "SDK and architecture",
+      "passed": true
+    },
+    {
+      "name": "package selection",
+      "passed": true
+    },
+    {
+      "name": "candidate patch",
+      "passed": true
+    }
+  ]
+}

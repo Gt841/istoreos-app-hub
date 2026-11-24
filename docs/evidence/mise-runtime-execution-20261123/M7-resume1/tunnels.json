@@ -1,0 +1,9 @@
+{
+  "scope": "temporary authenticated loopback-only reuse of existing ARM service",
+  "started": true,
+  "passed": true,
+  "all_owned_tunnels_stopped": true,
+  "developer_ports_released": true,
+  "x64_forwarded_ports_released": true,
+  "ARM_existing_service_still_healthy": true
+}

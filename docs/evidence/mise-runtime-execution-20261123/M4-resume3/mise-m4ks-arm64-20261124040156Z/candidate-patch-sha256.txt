@@ -1,0 +1,1 @@
+07e15dbe563be846ebd990241000f673ed1c9820ad4a0a6854428e82d3803e52  input/profile-patches/mise-runtime-candidate.patch

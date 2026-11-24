@@ -1,0 +1,76 @@
+
+$ npm --prefix apps/mise/web run typecheck
+
+> istore-mise-web@0.1.0 typecheck
+> vue-tsc --noEmit
+
+
+$ npm --prefix apps/mise/web test
+
+> istore-mise-web@0.1.0 test
+> node --test tests/model.test.ts tests/wrap.test.ts
+
+✔ first use requires persistent storage; invalid and temporary paths rejected (3.958838ms)
+✔ version/architecture/libc identities are distinct and existing environments rejected (0.318785ms)
+✔ npm must be compatible with chosen Node (0.164098ms)
+✔ install completion preserves defaults without tracking application usage (0.849381ms)
+✔ double submit and parallel plans cannot start duplicate tasks (0.228277ms)
+✔ expired or revised plans cannot submit (0.236393ms)
+✔ non-default runtime may be removed; glibc library remains protected by installed environments (0.184399ms)
+✔ failed native and integrity checks never commit candidates (0.347675ms)
+✔ cancel cleans candidate; interrupted task requires explicit recovery (0.333334ms)
+✔ offline storage prevents mutation and required acceleration can fall back explicitly (0.24853ms)
+✔ storage switch cannot pretend to migrate existing environments (0.151547ms)
+✔ unreferenced library can be cleaned after its environments are removed (0.153114ms)
+✔ failure injection is one shot and retry requires a new plan (0.190521ms)
+✔ application/default switches are not supported and defaults stay read-only (0.200013ms)
+✔ global defaults of every supported tool are protected (0.1663ms)
+✔ Go installs as one standard toolchain on x86_64 without glibc (0.170771ms)
+✔ Go installs as one standard toolchain on aarch64 without glibc (0.124574ms)
+✔ tool-specific ABI validation rejects fabricated combinations and unknown tools (0.305222ms)
+✔ rust musl on x86_64 shares install lifecycle and accurate library references (0.214956ms)
+✔ rust glibc on x86_64 shares install lifecycle and accurate library references (0.118029ms)
+✔ zig native on x86_64 shares install lifecycle and accurate library references (0.070046ms)
+✔ rust musl on aarch64 shares install lifecycle and accurate library references (0.083618ms)
+✔ rust glibc on aarch64 shares install lifecycle and accurate library references (0.087017ms)
+✔ zig native on aarch64 shares install lifecycle and accurate library references (0.059979ms)
+✔ wrap rejects non-persistent/injected paths and malformed environment IDs (1.269634ms)
+✔ fixed node-24.21.0-x86_64-glibc wrapper routes tools and persists HOME/cache without changing caller (322.662749ms)
+✔ fixed node-24.22.1-x86_64-glibc wrapper routes tools and persists HOME/cache without changing caller (313.445922ms)
+✔ fixed node-24.21.0-x86_64-musl wrapper routes tools and persists HOME/cache without changing caller (318.32101ms)
+✔ fixed python-3.12.10-x86_64-musl wrapper routes tools and persists HOME/cache without changing caller (315.641291ms)
+✔ fixed python-3.13.3-x86_64-glibc wrapper routes tools and persists HOME/cache without changing caller (319.07626ms)
+✔ fixed go-1.27.4-x86_64-native wrapper routes tools and persists HOME/cache without changing caller (398.124014ms)
+✔ fixed rust-1.91.1-x86_64-musl wrapper routes tools and persists HOME/cache without changing caller (391.723149ms)
+✔ fixed zig-0.17.1-x86_64-native wrapper routes tools and persists HOME/cache without changing caller (474.243863ms)
+✔ fixed rust-1.91.1-x86_64-glibc wrapper routes tools and persists HOME/cache without changing caller (392.900388ms)
+✔ fixed rust-1.91.1-aarch64-glibc wrapper routes tools and persists HOME/cache without changing caller (397.272108ms)
+✔ fixed go-1.27.4-aarch64-native wrapper routes tools and persists HOME/cache without changing caller (393.976648ms)
+✔ fixed rust-1.91.1-aarch64-musl wrapper routes tools and persists HOME/cache without changing caller (395.352298ms)
+✔ fixed zig-0.17.1-aarch64-native wrapper routes tools and persists HOME/cache without changing caller (474.868215ms)
+✔ missing runtime fails before creating the requested HOME (1.625389ms)
+✔ wrap validates complete identity and language-specific ABI (0.262776ms)
+✔ Rust/Zig usage commands select fixed tools instead of package managers from other languages (0.227957ms)
+ℹ tests 41
+ℹ suites 0
+ℹ pass 41
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5004.563118
+
+$ npm --prefix apps/mise/web run build
+
+> istore-mise-web@0.1.0 build
+> vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 50 modules transformed.
+rendering chunks...
+computing gzip size...
+../../../../../../../var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/mise-design-dist/index.html                   0.42 kB │ gzip:  0.32 kB
+../../../../../../../var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/mise-design-dist/assets/index-Dt_YInNB.css   56.33 kB │ gzip: 11.11 kB
+../../../../../../../var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/mise-design-dist/assets/index-1LUdOOjc.js   140.72 kB │ gzip: 53.97 kB
+✓ built in 766ms

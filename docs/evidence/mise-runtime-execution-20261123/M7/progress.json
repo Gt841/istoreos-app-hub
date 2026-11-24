@@ -1,0 +1,29 @@
+{
+  "status": "failed-after-three-optimizations",
+  "optimization": 3,
+  "task_tree": [
+    "fixed official Go/Zig SDK adapters",
+    "wrap, persistent caches, go toolchain policy",
+    "actual production UI and bounded acceleration",
+    "dual-arch two-version compilation, isolation and reboot"
+  ],
+  "acceptance": "M7 in runtime-milestones.md",
+  "validation_mode": "direct deployment; IPK/APK deferred to human",
+  "initial_failure": "Go official archive uses ! and UTF-8 filenames rejected by narrow ASCII allowlist; both candidates cleaned",
+  "fix": "allow ! and high bytes while preserving all ASCII control/path/link checks",
+  "archive_regression": "both devices:18 checks passed including complete official Go archives and malicious path controls",
+  "current": "stopped per user rule",
+  "second_failure": "Go env reports GOENV=off as empty env-file path; overstrict probe expected off",
+  "second_fix": "accept empty/off reporting and verify actual go env -w is refused",
+  "third_failure": "GOENV=off disables reads but go env -w still explicitly writes config; actual rc0 plus warning, prior behavior assertion invalid",
+  "third_fix": "fixed wrapper refuses env -w/-u including -C command forms; ordinary process settings preserved",
+  "blocker": "x64 actual Go module verification at sum.golang.org times out; third optimization still lacks full acceptance",
+  "SDK_matrix": "both hosts installed all 4 Go/Zig SDKs with actual compile/execute probes passed",
+  "remaining": [
+    "x64 official checksum database connectivity",
+    "ARM nonroot full native toolchain checks",
+    "remaining x64 nonroot Go/Zig/C/C++/cache checks",
+    "production native LuCI install and usage",
+    "M7 reboot acceptance"
+  ]
+}

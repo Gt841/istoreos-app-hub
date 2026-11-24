@@ -1,0 +1,9 @@
+{
+  "url": "https://github.com/matrix-org/matrix-rust-sdk-crypto-nodejs/releases/download/v0.4.0/matrix-sdk-crypto.linux-x64-gnu.node",
+  "sha256": "7078d4dd987128f79afd192c4f621f64adece37e43f2a8756f1d0a9f034de718",
+  "bytes": 22027000,
+  "upstream_digest_verified": true,
+  "cache": "/mnt/mise-runtime/acceptance/M5/OpenClawMgr/npm-cache/native/7078d4dd987128f79afd192c4f621f64adece37e43f2a8756f1d0a9f034de718",
+  "method": "download on developer host then transfer verified raw artifact; not a ks-cli network success claim",
+  "existing_app_native_asset_added": "/mnt/mise-runtime/acceptance/M5/OpenClawMgr/global/lib/node_modules/openclaw/node_modules/@matrix-org/matrix-sdk-crypto-nodejs/matrix-sdk-crypto.linux-x64-gnu.node"
+}

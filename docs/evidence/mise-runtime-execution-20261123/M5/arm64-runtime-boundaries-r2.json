@@ -1,0 +1,44 @@
+{
+  "boot_id": "e3eba56b-888b-44bf-a282-99e059afc7b5",
+  "arch": "aarch64",
+  "instance": "node-24.22.1-aarch64-glibc-upstream1-npm11.19.1-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-09859876de3be52d3b45b3b9e22bbbc9e8a8876b2409e20635ee7aabda81c489",
+  "passed": true,
+  "checks": [
+    {
+      "name": "stop before dependency fault",
+      "passed": true
+    },
+    {
+      "name": "missing vector extension refuses public start",
+      "passed": true
+    },
+    {
+      "name": "missing vector extension has no running Gateway",
+      "passed": true
+    },
+    {
+      "name": "restored extension passes public restart and health",
+      "passed": true
+    },
+    {
+      "name": "stop before SDK fault",
+      "passed": true
+    },
+    {
+      "name": "missing exact SDK reports runtime-missing",
+      "passed": true
+    },
+    {
+      "name": "missing exact SDK refuses start instead of fallback",
+      "passed": true
+    },
+    {
+      "name": "restored exact SDK restarts with health",
+      "passed": true
+    },
+    {
+      "name": "dependency failures preserve exact application binding",
+      "passed": true
+    }
+  ]
+}

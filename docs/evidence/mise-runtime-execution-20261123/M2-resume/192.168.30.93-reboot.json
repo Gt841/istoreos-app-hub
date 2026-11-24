@@ -1,0 +1,19 @@
+{
+  "host": "192.168.30.93",
+  "prepare": {
+    "exit": 0,
+    "stdout": "{\"boot\":\"15109b6a-9070-49ea-88e0-6ba2e17a5545\",\"prepared\":true,\"task\":\"task-1795446170-9f35b21dc84c9bb1781bd2a8\"}\n",
+    "stderr": ""
+  },
+  "reboot_command": {
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "recovery": {
+    "exit": 0,
+    "stdout": "{\"before_boot\":\"15109b6a-9070-49ea-88e0-6ba2e17a5545\",\"old_data_preserved\":true,\"status\":\"canceled\",\"after_boot\":\"e3eba56b-888b-44bf-a282-99e059afc7b5\",\"passed\":true,\"task\":\"task-1795446170-9f35b21dc84c9bb1781bd2a8\"}\n",
+    "stderr": ""
+  },
+  "elapsed_seconds": 49.42
+}

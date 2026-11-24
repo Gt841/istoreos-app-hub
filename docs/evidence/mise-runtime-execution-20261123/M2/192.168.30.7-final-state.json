@@ -1,0 +1,7 @@
+{
+  "host": "192.168.30.7",
+  "exit": 0,
+  "stdout": "BOOT_ID\n0c198f00-4a81-411b-b49b-8caf83f2c6ae\nCAPACITY\nFilesystem           1K-blocks      Used Available Use% Mounted on\n/dev/sdd              65478188    380660  64410056   1% /mnt/mise-runtime\nREGRESSION_PIDS\n29503 absent\n29504 absent\n29505 absent\nTEST_PROCESS_MATCHES\nTEST_MOUNTS\nPERSISTENT_TEST_ROOT\ndrwxr-xr-x   15 root     root          4096 Nov 23 22:47 /mnt/mise-runtime/acceptance/M2/selfcheck-opt3\n",
+  "stderr": "",
+  "scope": "read-only cleanup and baseline check after retry limit"
+}

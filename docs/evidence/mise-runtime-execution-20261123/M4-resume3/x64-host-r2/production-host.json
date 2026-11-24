@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "name": "real stale-plan error uses QuickStart semantic colors in the native host",
+      "passed": true
+    },
+    {
+      "name": "fresh desktop and mobile host initialization; theme, full content width and focus",
+      "passed": true
+    }
+  ],
+  "pageErrors": []
+}

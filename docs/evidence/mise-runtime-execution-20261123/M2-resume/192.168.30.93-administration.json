@@ -1,0 +1,8 @@
+{
+  "host": "192.168.30.93",
+  "command": "lua /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M2/administration.lua /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M2/share /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M2/administration-resume1 /usr/bin/mise /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M2/malicious",
+  "exit": 0,
+  "stdout": "PASS 1 read shows unverified fixture without enabling unsupported adapters\nPASS 2 unknown JSON command rejected without state change\nPASS 3 library reference blocks removal\nPASS 4 installed environment blocks storage root change\nPASS 5 concurrent maintenance rejected while lock held\nPASS 6 expired and stale public submissions rejected before worker\nPASS 7 public remove protects actual mise default\nPASS 8 public cache clear preserves SDK library and recovery material\nPASS 9 explicit nondefault remove unregisters only owned SDK links\nPASS 10 unreferenced library can be explicitly removed\nPASS 11 real malicious tar rejected: traversal\nPASS 12 real malicious tar rejected: absolute\nPASS 13 real malicious tar rejected: symlink-parent\nPASS 14 real malicious tar rejected: symlink-chain\nPASS 15 real malicious tar rejected: hardlink\nPASS 16 real malicious tar rejected: fifo\npassed=16\n",
+  "stderr": "",
+  "round": "resume optimization 1 extended CLI/archive acceptance"
+}

@@ -1,0 +1,84 @@
+
+$ npm --prefix apps/mise/web run typecheck
+
+> istore-mise-web@0.1.0 typecheck
+> vue-tsc --noEmit
+
+
+$ npm --prefix apps/mise/web test
+
+> istore-mise-web@0.1.0 test
+> node --test tests/model.test.ts tests/wrap.test.ts
+
+✔ first use requires persistent storage; invalid and temporary paths rejected (3.618862ms)
+✔ version/architecture/libc identities are distinct and existing environments rejected (0.280981ms)
+✔ npm must be compatible with chosen Node (0.158369ms)
+✔ install completion preserves defaults without tracking application usage (0.807369ms)
+✔ double submit and parallel plans cannot start duplicate tasks (0.205985ms)
+✔ expired or revised plans cannot submit (0.208236ms)
+✔ non-default runtime may be removed; glibc library remains protected by installed environments (0.187841ms)
+✔ failed native and integrity checks never commit candidates (0.334534ms)
+✔ cancel cleans candidate; interrupted task requires explicit recovery (0.344073ms)
+✔ offline storage prevents mutation and required acceleration can fall back explicitly (0.228548ms)
+✔ storage switch cannot pretend to migrate existing environments (0.153894ms)
+✔ unreferenced library can be cleaned after its environments are removed (0.141365ms)
+✔ failure injection is one shot and retry requires a new plan (0.177106ms)
+✔ application/default switches are not supported and defaults stay read-only (0.254487ms)
+✔ global defaults of every supported tool are protected (0.164426ms)
+✔ Go installs as one standard toolchain on x86_64 without glibc (0.197904ms)
+✔ Go installs as one standard toolchain on aarch64 without glibc (0.241883ms)
+✔ tool-specific ABI validation rejects fabricated combinations and unknown tools (0.383554ms)
+✔ rust musl on x86_64 shares install lifecycle and accurate library references (0.249864ms)
+✔ rust glibc on x86_64 shares install lifecycle and accurate library references (0.113474ms)
+✔ zig native on x86_64 shares install lifecycle and accurate library references (0.111148ms)
+✔ rust musl on aarch64 shares install lifecycle and accurate library references (0.080334ms)
+✔ rust glibc on aarch64 shares install lifecycle and accurate library references (0.087522ms)
+✔ zig native on aarch64 shares install lifecycle and accurate library references (0.058213ms)
+✔ Java x86_64 pins Temurin build and protects glibc while preserving defaults (0.363559ms)
+✔ Java aarch64 pins Temurin build and protects glibc while preserving defaults (0.109518ms)
+✔ Java rejects unsupported ABI, vendors, unpinned aliases and build substitutions (0.215134ms)
+✔ wrap rejects non-persistent/injected paths and malformed environment IDs (1.191239ms)
+✔ fixed node-24.21.0-x86_64-glibc wrapper routes tools and persists HOME/cache without changing caller (310.208814ms)
+✔ fixed node-24.22.1-x86_64-glibc wrapper routes tools and persists HOME/cache without changing caller (301.065341ms)
+✔ fixed node-24.21.0-x86_64-musl wrapper routes tools and persists HOME/cache without changing caller (301.240098ms)
+✔ fixed python-3.12.10-x86_64-musl wrapper routes tools and persists HOME/cache without changing caller (305.244928ms)
+✔ fixed python-3.13.3-x86_64-glibc wrapper routes tools and persists HOME/cache without changing caller (304.797749ms)
+✔ fixed go-1.27.4-x86_64-native wrapper routes tools and persists HOME/cache without changing caller (380.485072ms)
+✔ fixed rust-1.91.1-x86_64-musl wrapper routes tools and persists HOME/cache without changing caller (385.188121ms)
+✔ fixed zig-0.17.1-x86_64-native wrapper routes tools and persists HOME/cache without changing caller (460.151505ms)
+✔ fixed java-temurin-21.0.9+10-x86_64-glibc wrapper routes tools and persists HOME/cache without changing caller (461.745254ms)
+✔ fixed java-temurin-25.0.1+8-x86_64-glibc wrapper routes tools and persists HOME/cache without changing caller (458.680676ms)
+✔ fixed rust-1.91.1-x86_64-glibc wrapper routes tools and persists HOME/cache without changing caller (382.429961ms)
+✔ fixed java-temurin-25.0.1+8-aarch64-glibc wrapper routes tools and persists HOME/cache without changing caller (457.356384ms)
+✔ fixed rust-1.91.1-aarch64-glibc wrapper routes tools and persists HOME/cache without changing caller (382.604494ms)
+✔ fixed go-1.27.4-aarch64-native wrapper routes tools and persists HOME/cache without changing caller (381.977597ms)
+✔ fixed rust-1.91.1-aarch64-musl wrapper routes tools and persists HOME/cache without changing caller (386.405792ms)
+✔ fixed zig-0.17.1-aarch64-native wrapper routes tools and persists HOME/cache without changing caller (477.267966ms)
+✔ fixed java-temurin-21.0.9+10-aarch64-glibc wrapper routes tools and persists HOME/cache without changing caller (465.02711ms)
+✔ missing runtime fails before creating the requested HOME (1.31627ms)
+✔ wrap validates complete identity and language-specific ABI (0.250326ms)
+✔ Rust/Zig usage commands select fixed tools instead of package managers from other languages (0.164083ms)
+✔ Java wrap has four fixed commands and rejects ambiguous or injected version identities (0.192485ms)
+ℹ tests 49
+ℹ suites 0
+ℹ pass 49
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6694.066785
+
+$ npm --prefix apps/mise/web run build
+
+> istore-mise-web@0.1.0 build
+> vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 50 modules transformed.
+rendering chunks...
+computing gzip size...
+../../../../../../../var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/mise-design-dist/index.html                   0.42 kB │ gzip:  0.32 kB
+../../../../../../../var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/mise-design-dist/assets/index-DHS7qr1_.css   56.33 kB │ gzip: 11.11 kB
+../../../../../../../var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/mise-design-dist/assets/index-Md6mBFMU.js   142.65 kB │ gzip: 54.61 kB
+✓ built in 757ms

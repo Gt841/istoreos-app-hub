@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "host": "192.168.30.93",
+  "arch": "aarch64",
+  "target": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live",
+  "tools": [
+    "python"
+  ],
+  "catalog_sha256": "3f3db4afd3acfa28ae9138fad8003c6ecbb00a339464fb4d33b343f1eb749db9",
+  "scope": "developer-origin download and verified raw archive transfer only; SDK installation and target network acceptance separate",
+  "artifacts": [
+    {
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.12.16%2B20261110-aarch64-unknown-linux-musl-install_only_stripped.tar.gz",
+      "sha256": "64bb304e59d5d6ed5eaae24e95e743a2420a8897d2f6c854b1438ff9cb47e432",
+      "format": "tar.gz",
+      "strip": 1,
+      "bytes": 28552582,
+      "entries": [
+        "python-3.12.16-aarch64-musl-20261110"
+      ],
+      "developer_cache_reused": true,
+      "target_verified": true
+    },
+    {
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.12.16%2B20261110-aarch64-unknown-linux-gnu-install_only_stripped.tar.gz",
+      "sha256": "b6a41defec4975d94b4ff1950236e7383e5c02ba40ea48c9ec33c66087a35aab",
+      "format": "tar.gz",
+      "strip": 1,
+      "bytes": 29440910,
+      "entries": [
+        "python-3.12.16-aarch64-glibc-20261110"
+      ],
+      "developer_cache_reused": true,
+      "target_verified": true
+    },
+    {
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.13.18%2B20261110-aarch64-unknown-linux-musl-install_only_stripped.tar.gz",
+      "sha256": "5616ed1d426cb12cc135e5998b42bfd665cf2f9e3f3f9f6c77c73f0ae26f7d03",
+      "format": "tar.gz",
+      "strip": 1,
+      "bytes": 28163240,
+      "entries": [
+        "python-3.13.18-aarch64-musl-20261110"
+      ],
+      "developer_cache_reused": true,
+      "target_verified": true
+    },
+    {
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.13.18%2B20261110-aarch64-unknown-linux-gnu-install_only_stripped.tar.gz",
+      "sha256": "55c00325f7c1fddf325dfc621aabdfbbac4dc54adda224af88ec411dc12db239",
+      "format": "tar.gz",
+      "strip": 1,
+      "bytes": 29683231,
+      "entries": [
+        "python-3.13.18-aarch64-glibc-20261110"
+      ],
+      "developer_cache_reused": true,
+      "target_verified": true
+    }
+  ],
+  "passed": true
+}

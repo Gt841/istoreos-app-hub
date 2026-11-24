@@ -1,0 +1,11 @@
+{
+  "exit_code": 0,
+  "elapsed_seconds": 4.312,
+  "report": {
+    "local_istoreenhance_healthy": true,
+    "public_request_exit": 0,
+    "passed": true,
+    "gateway": true
+  },
+  "stderr": ""
+}

@@ -1,0 +1,6 @@
+{
+  "host": "192.168.30.7",
+  "exit": 0,
+  "stdout": "6d49212a-fe54-4478-8075-2d5d10fcabd4\nFilesystem           1K-blocks      Used Available Use% Mounted on\n/dev/sdd              65478188   1689108  63101608   3% /mnt/mise-runtime\n",
+  "stderr": ""
+}

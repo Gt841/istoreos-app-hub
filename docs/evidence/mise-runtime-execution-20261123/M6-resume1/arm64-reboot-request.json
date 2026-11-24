@@ -1,0 +1,6 @@
+{
+  "host": "192.168.30.93",
+  "old_boot_id": "6dda18fd-f437-4407-8630-b5427cd41570",
+  "ssh_exit": 0,
+  "scope": "normal authorized test reboot; no package build or user config edit"
+}

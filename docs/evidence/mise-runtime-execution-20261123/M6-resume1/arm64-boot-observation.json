@@ -1,0 +1,2 @@
+{"boot_id":"698dba48-268f-4da1-b629-c6d7a51ff9da","root_mount":"overlayfs:\/overlay \/ overlay rw,noatime,lowerdir=\/,upperdir=\/overlay\/upper,workdir=\/overlay\/work 0 0","init":"procd\n"}
+

@@ -1,0 +1,6 @@
+{
+  "host": "192.168.30.93",
+  "exit": 0,
+  "stdout": "BOOT_ID\ne3eba56b-888b-44bf-a282-99e059afc7b5\nSTORAGE\nFilesystem           1K-blocks      Used Available Use% Mounted on\n/dev/nvme0n1p1       122471024  64456356  51747328  55% /mnt/nvme0n1-1\nKERNEL_ALERTS\nBASELINE_SERVICES\n9766 6852\nM2_REMAINING_PROCESSES\n/usr/sbin/iStoreEnhance: OK\n/usr/bin/ks-cli: OK\n/usr/sbin/agentflow: OK\n/etc/config/mise: OK\n/lib/functions/mise.sh: OK\nprivate-library-post-reboot=passed\n",
+  "stderr": ""
+}

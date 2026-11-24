@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "host": "192.168.30.7",
+  "arch": "x86_64",
+  "target": "/mnt/mise-runtime/Runtime-live",
+  "tools": [
+    "go",
+    "zig"
+  ],
+  "catalog_sha256": "3f3db4afd3acfa28ae9138fad8003c6ecbb00a339464fb4d33b343f1eb749db9",
+  "scope": "developer-origin download and verified raw archive transfer only; SDK installation and target network acceptance separate",
+  "artifacts": [
+    {
+      "url": "https://dl.google.com/go/go1.26.10.linux-amd64.tar.gz",
+      "sha256": "ccfe7ae822d2c2f41f4fe7c956199967a4dac22d0ee0d2b2bfdb440aab3b20c5",
+      "format": "tar.gz",
+      "strip": 1,
+      "bytes": 66936659,
+      "entries": [
+        "go-1.26.10-x86_64-native-upstream1"
+      ],
+      "developer_cache_reused": false,
+      "target_verified": true
+    },
+    {
+      "url": "https://dl.google.com/go/go1.27.4.linux-amd64.tar.gz",
+      "sha256": "7226736c2339719cda28fbf3a54d71aa63bcefe376e98cef00034268dab24840",
+      "format": "tar.gz",
+      "strip": 1,
+      "bytes": 70680823,
+      "entries": [
+        "go-1.27.4-x86_64-native-upstream1"
+      ],
+      "developer_cache_reused": false,
+      "target_verified": true
+    },
+    {
+      "url": "https://ziglang.org/download/0.15.2/zig-x86_64-linux-0.15.2.tar.xz",
+      "sha256": "02aa270f183da276e5b5920b1dac44a63f1a49e55050ebde3aecc9eb82f93239",
+      "format": "tar.xz",
+      "strip": 1,
+      "bytes": 53733924,
+      "entries": [
+        "zig-0.15.2-x86_64-native-upstream1"
+      ],
+      "developer_cache_reused": false,
+      "target_verified": true
+    },
+    {
+      "url": "https://ziglang.org/download/0.17.1/zig-x86_64-linux-0.17.1.tar.xz",
+      "sha256": "3581863e3cbcfd0fce0efc682ce7e9e93da96668a977791d356a26d2a7e9b17a",
+      "format": "tar.xz",
+      "strip": 1,
+      "bytes": 57411036,
+      "entries": [
+        "zig-0.17.1-x86_64-native-upstream1"
+      ],
+      "developer_cache_reused": false,
+      "target_verified": true
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "name": "copied desktop host complete menu, current service, dimensions and no old chrome",
+      "passed": true
+    },
+    {
+      "name": "real copied menu search, fold, module selection and destination boundary",
+      "passed": true
+    },
+    {
+      "name": "copied theme icon, menu, persistence and live system theme",
+      "passed": true
+    },
+    {
+      "name": "copied mobile navigation opens, traps focus, closes by Escape and returns focus",
+      "passed": true
+    },
+    {
+      "name": "native mise dialog locks copied host controls, closes and preserves wrap functionality",
+      "passed": true
+    },
+    {
+      "name": "home URL resolves to mise, only mock API and no browser errors",
+      "passed": true
+    }
+  ],
+  "pageErrors": []
+}

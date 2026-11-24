@@ -1,0 +1,4 @@
+{
+  "192.168.30.7": "Tue Nov 24 01:40:24 UTC 2026\n3123.71 4379.82\n290c4092-c9f2-45bc-98ac-addb6dd920dc\n/dev/sdd /mnt/mise-runtime ext4 rw,noatime 0 0\nFilesystem                Size      Used Available Use% Mounted on\n/dev/sda3                 1.9G     44.0M      1.8G   2% /overlay\n/dev/sdd                 62.4G      1.6G     60.2G   3% /mnt/mise-runtime\ncandidate_not_installed\nlive_root_absent\n",
+  "192.168.30.93": "/usr/sbin/iStoreEnhance: OK\n/usr/bin/ks-cli: OK\n/usr/sbin/agentflow: OK\n/etc/config/mise: OK\n/lib/functions/mise.sh: OK\ne3eba56b-888b-44bf-a282-99e059afc7b5\n{\"success\":true,\"data\":{\"status\":\"ok\"},\"error_data\":null,\"message\":null}\nlive_root_absent\n"
+}

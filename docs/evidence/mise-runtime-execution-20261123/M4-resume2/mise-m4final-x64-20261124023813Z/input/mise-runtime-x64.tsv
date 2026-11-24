@@ -1,0 +1,6 @@
+# Read-only canonical object seeds; no unrelated product feeds.
+base	/shared/git-mirrors/mise-runtime-20261124/openwrt-x64.git	https://git.openwrt.org/openwrt/openwrt.git
+luci	/shared/git-mirrors/github.com/jjm2473/luci.git	https://git.openwrt.org/project/luci.git
+packages	/shared/git-mirrors/mise-runtime-20261124/packages.git	https://git.openwrt.org/feed/packages.git
+istore_actions	/shared/git-mirrors/mise-runtime-20261124/istore-actions.git	https://github.com/linkease/openwrt-app-actions.git
+istore_meta	/shared/git-mirrors/mise-runtime-20261124/istore-meta.git	https://github.com/linkease/openwrt-app-meta.git

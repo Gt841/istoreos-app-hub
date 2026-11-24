@@ -1,0 +1,41 @@
+{
+  "artifact_set": "51d304294ca856b1bd2349f1a4e5f6967fa34546b5fa82405d72cacfb75a56e1",
+  "entry": {
+    "abi": "native",
+    "arch": "x86_64",
+    "artifact_set": "51d304294ca856b1bd2349f1a4e5f6967fa34546b5fa82405d72cacfb75a56e1",
+    "artifacts": [
+      {
+        "bytes": 70680823,
+        "format": "tar.gz",
+        "sha256": "7226736c2339719cda28fbf3a54d71aa63bcefe376e98cef00034268dab24840",
+        "strip": 1,
+        "url": "https://dl.google.com/go/go1.27.4.linux-amd64.tar.gz"
+      }
+    ],
+    "availability": "available",
+    "build": "upstream1",
+    "id": "go-1.27.4-x86_64-native-upstream1",
+    "layout": "standard",
+    "source": "https://go.dev/dl/?mode=json&include=all",
+    "tool": "go",
+    "version": "1.27.4"
+  },
+  "installed_at": 1795514360,
+  "instance": "go-1.27.4-x86_64-native-upstream1-51d304294ca856b1bd2349f1a4e5f6967fa34546b5fa82405d72cacfb75a56e1",
+  "mise_key": "istore-go-1.27.4-x86_64-native-upstream1-51d304294ca856b1bd2349f1a4e5f6967fa34546b5fa82405d72cacfb75a56e1",
+  "probes": {
+    "abi": "passed",
+    "arch": "passed",
+    "compile": "passed",
+    "environment": "passed",
+    "execute": "passed",
+    "gofmt": "passed",
+    "launcher": "passed",
+    "toolchain": "fixed-local",
+    "version": "passed"
+  },
+  "root": "/mnt/mise-runtime/Runtime-live",
+  "schema_version": 1,
+  "verified": true
+}

@@ -1,0 +1,8 @@
+{
+  "host": "192.168.30.7",
+  "command": "lua /mnt/mise-runtime/acceptance/M3/node-install.lua /mnt/mise-runtime/acceptance/M3/share /mnt/mise-runtime/Runtime /mnt/mise-runtime/bootstrap/mise/bin/mise /mnt/mise-runtime/bootstrap/ks-cli-binary-0.9.1/ks-cli.x86_64 http://192.168.30.93:5003 all",
+  "exit": 0,
+  "stdout": "REUSE node-24.21.0-x86_64-glibc-upstream1\nREUSE node-24.21.0-x86_64-glibc-upstream1-npm11.12.1\nSTART node-24.21.0-x86_64-musl-upstream1 task-1795447756-8d04cf74033140fa172a449c\nPASS node-24.21.0-x86_64-musl-upstream1\nSTART node-24.22.1-x86_64-glibc-upstream1 task-1795447765-441cc0eba4a65b45bcc632f0\nPASS node-24.22.1-x86_64-glibc-upstream1\nSTART node-24.22.1-x86_64-musl-upstream1 task-1795448338-ebfa33c7eb5297dd83e0b98a\nPASS node-24.22.1-x86_64-musl-upstream1\ninstalled=5\n",
+  "stderr": "",
+  "round": "optimization 2 matrix with locally verified musl cache preparation"
+}

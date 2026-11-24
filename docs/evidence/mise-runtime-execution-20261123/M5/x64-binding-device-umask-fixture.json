@@ -1,0 +1,7 @@
+{
+  "command": "lua /mnt/mise-runtime/acceptance/M5/shared-binding-device.lua /mnt/mise-runtime/acceptance/M5/shared-runtime.lua /mnt/mise-runtime/Runtime-live /mnt/mise-runtime/acceptance/M5",
+  "exit": 1,
+  "stdout": "",
+  "stderr": "lua: ...mise-runtime/acceptance/M5/shared-binding-device.lua:11: reject group/world writable binding: {\"storage_root\":\"\\/mnt\\/mise-runtime\\/Runtime-live\",\"instance\":\"node-24.21.0-x86_64-glibc-upstream1-npm11.19.0-glibc-2.39-ubuntu8-gcc12-legal1-r1-x86_64-3c978e5d25a3a081a1b08f661b79fe92eb2c95f10b625b981a43b56b40eb4463\",\"schema_version\":1,\"npm\":\"11.19.0\",\"library\":\"glibc-2.39-ubuntu8-gcc12-legal1-r1-x86_64\",\"node\":\"24.21.0\",\"library_manifest_sha256\":\"bccfb584fffe23459376035a9032ba02af3961165cabb83d3c417a20bdc1fa25\",\"artifact_set\":\"3c978e5d25a3a081a1b08f661b79fe92eb2c95f10b625b981a43b56b40eb4463\",\"tool\":\"node\",\"provider\":\"mise-runtime\"}\n\nstack traceback:\n\t[C]: in function 'assert'\n\t...mise-runtime/acceptance/M5/shared-binding-device.lua:11: in function 'probe'\n\t...mise-runtime/acceptance/M5/shared-binding-device.lua:20: in main chunk\n\t[C]: ?\n",
+  "scope": "real installed SDK and libraries; staged application binding module; no OpenClaw deployment yet"
+}

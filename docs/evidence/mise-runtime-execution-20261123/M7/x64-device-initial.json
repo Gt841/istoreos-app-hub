@@ -1,0 +1,94 @@
+{
+  "boot_id": "8c08d91f-949e-45b5-b277-e21c4575fec3",
+  "arch": "x86_64",
+  "scope": "real nonroot Go/Zig compilation, fixed policies and cache ownership",
+  "error": "/mnt/mise-runtime/acceptance/M7/native-device.lua:7: go-1.26.10 pinned module acquisition origin",
+  "passed": false,
+  "checks": [
+    {
+      "name": "prepare UID 65001",
+      "passed": true
+    },
+    {
+      "name": "prepare UID 65002",
+      "passed": true
+    },
+    {
+      "details": {
+        "GOTOOLCHAIN": "local",
+        "CGO_ENABLED": "0",
+        "GOMODCACHE": "/mnt/mise-runtime/Runtime-live/users/65001/home/.cache/go/mod",
+        "GOTMPDIR": "/mnt/mise-runtime/Runtime-live/users/65001/home/.cache/go/go-1.26.10-x86_64-native-upstream1-d0421aa2fa11b520c016df6c286638afbdc2228f93742e0f54fcf5000ce10861/tmp",
+        "GOENV": "",
+        "GOCACHE": "/mnt/mise-runtime/Runtime-live/users/65001/home/.cache/go/go-1.26.10-x86_64-native-upstream1-d0421aa2fa11b520c016df6c286638afbdc2228f93742e0f54fcf5000ce10861/build",
+        "GOPATH": "/mnt/mise-runtime/Runtime-live/users/65001/home/.local/go/go-1.26.10-x86_64-native-upstream1-d0421aa2fa11b520c016df6c286638afbdc2228f93742e0f54fcf5000ce10861",
+        "GOBIN": "/mnt/mise-runtime/Runtime-live/users/65001/home/.local/go/go-1.26.10-x86_64-native-upstream1-d0421aa2fa11b520c016df6c286638afbdc2228f93742e0f54fcf5000ce10861/bin",
+        "GOROOT": "/mnt/mise-runtime/Runtime-live/environments/go-1.26.10-x86_64-native-upstream1-d0421aa2fa11b520c016df6c286638afbdc2228f93742e0f54fcf5000ce10861"
+      },
+      "name": "go-1.26.10 fixed Go environment",
+      "passed": true
+    },
+    {
+      "name": "go-1.26.10 persistent GOPATH",
+      "passed": true
+    },
+    {
+      "name": "go-1.26.10 persistent GOBIN",
+      "passed": true
+    },
+    {
+      "name": "go-1.26.10 persistent GOCACHE",
+      "passed": true
+    },
+    {
+      "name": "go-1.26.10 persistent GOMODCACHE",
+      "passed": true
+    },
+    {
+      "name": "go-1.26.10 persistent GOTMPDIR",
+      "passed": true
+    },
+    {
+      "name": "go-1.26.10 explicit CGO=1 preserved",
+      "passed": true
+    },
+    {
+      "name": "go-1.26.10 projects share UID/version build and UID module cache",
+      "passed": true
+    },
+    {
+      "name": "go-1.26.10 other UID caches isolated",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "go-1.26.10 gofmt works",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "go-1.26.10 real user Go compilation",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "go-1.26.10 explicit project output retained",
+      "passed": true
+    },
+    {
+      "details": "go: go.mod requires go >= 99.0.0 (running go 1.26.10; GOTOOLCHAIN=local)\n",
+      "name": "go-1.26.10 higher toolchain refuses auto download",
+      "passed": true
+    },
+    {
+      "details": "Fixed runtime uses GOENV=off; set process environment instead of writing user-wide Go configuration\n",
+      "name": "go-1.26.10 global Go env writes disabled",
+      "passed": true
+    },
+    {
+      "details": "{\n\t\"Path\": \"github.com/google/uuid\",\n\t\"Version\": \"v1.6.0\",\n\t\"Error\": \"github.com/google/uuid@v1.6.0: verifying go.mod: github.com/google/uuid@v1.6.0/go.mod: Get \\\"https://sum.golang.org/lookup/github.com/google/uuid@v1.6.0\\\": dial tcp 142.251.34.209:443: i/o timeout\",\n\t\"Info\": \"/mnt/mise-runtime/Runtime-live/users/65001/home/.cache/go/mod/cache/download/github.com/google/uuid/@v/v1.6.0.info\",\n\t\"Origin\": {\n\t\t\"VCS\": \"git\",\n\t\t\"URL\": \"https://github.com/google/uuid\",\n\t\t\"Hash\": \"0f11ee6918f41a04c201eceeadf612a377bc7fbc\",\n\t\t\"Ref\": \"refs/tags/v1.6.0\"\n\t}\n}\n",
+      "name": "go-1.26.10 pinned module acquisition origin",
+      "passed": false
+    }
+  ]
+}

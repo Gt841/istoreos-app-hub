@@ -1,0 +1,26 @@
+{
+  "compiler": "shared Zig 0.15.2",
+  "source_sha256": "d7749a923472878d6ff1be01f27304d6347d84ede05983fd1b565be8337043e5",
+  "flags": [
+    "-Os",
+    "-static",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-s"
+  ],
+  "outputs": {
+    "x64": {
+      "target": "x86_64-linux-musl",
+      "path": "/var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/mise-direct/exec-user-x64",
+      "sha256": "a225989b034be356a0ed65a3a2d2ab33ece51769e95c5ccb5908e9ace464969f",
+      "bytes": 15808
+    },
+    "arm64": {
+      "target": "aarch64-linux-musl",
+      "path": "/var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/mise-direct/exec-user-arm64",
+      "sha256": "112c8d038e9ec5cb73baf8b407b8e189321d383edc9fff799ec28767c7582ee9",
+      "bytes": 17104
+    }
+  }
+}

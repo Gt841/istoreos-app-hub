@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "scope": "normal reboot after source-direct Python fix; both real devices",
+  "devices": [
+    {
+      "arch": "x64",
+      "passed": true,
+      "before_boot": "7c32b9b6-0a31-4cf4-9142-276a9e89a8b8",
+      "after_boot": "8c08d91f-949e-45b5-b277-e21c4575fec3",
+      "checks": {
+        "boot_id_changed": true,
+        "configs_unchanged": true,
+        "binaries_unchanged": true,
+        "legacy_default_unchanged": true,
+        "OpenClaw_binding_unchanged": true,
+        "same_persistent_mount": true,
+        "AgentFlow_health_preserved": true,
+        "Python_four_fixed_venvs_passed": true,
+        "pip_site_config_still_blocked": true,
+        "Gateway_nonroot_vec_passed": true
+      }
+    },
+    {
+      "arch": "arm64",
+      "passed": true,
+      "before_boot": "6dda18fd-f437-4407-8630-b5427cd41570",
+      "after_boot": "698dba48-268f-4da1-b629-c6d7a51ff9da",
+      "checks": {
+        "boot_id_changed": true,
+        "configs_unchanged": true,
+        "binaries_unchanged": true,
+        "legacy_default_unchanged": true,
+        "OpenClaw_binding_unchanged": true,
+        "same_persistent_mount": true,
+        "AgentFlow_health_preserved": true,
+        "Python_four_fixed_venvs_passed": true,
+        "pip_site_config_still_blocked": true,
+        "Gateway_nonroot_vec_passed": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "pid": 5833,
+  "command": [
+    "ssh",
+    "-N",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "ExitOnForwardFailure=yes",
+    "-o",
+    "ServerAliveInterval=15",
+    "-R",
+    "127.0.0.1:5003:192.168.30.93:5003",
+    "-R",
+    "127.0.0.1:5443:192.168.30.93:5443",
+    "root@192.168.30.7"
+  ],
+  "purpose": "Temporary test-only loopback forwarding to the existing ARM KSpeeder; no extra service installed",
+  "running": true
+}

@@ -1,0 +1,18 @@
+{
+  "status": "passed-copied-quickstart-host",
+  "url": "http://127.0.0.1:5180/mise",
+  "copiedSourceFiles": 7,
+  "byteIdenticalFiles": 6,
+  "hostNavigationEdits": 3,
+  "modelWrapTests": 23,
+  "miseBrowserGroups": 15,
+  "hostBrowserGroups": 6,
+  "browserErrors": [],
+  "provenance": "provenance.json",
+  "sourceCommit": "ae57186b79ccb3d039fa3bf9f1f473772165c2a3",
+  "scope": {
+    "realDeviceOperations": false,
+    "published": false,
+    "committed": false
+  }
+}

@@ -1,0 +1,113 @@
+[sdk-builder/container] preparing ipk SDK: openwrt-sdk-24.10.8-rockchip-armv8_gcc-13.3.0_musl.Linux-x86_64
+[sdk-builder/container] seeding feed base from local object mirror
+Cloning into '/build-work/sdk-ipk/feeds/base'...
+HEAD is now at 0b795ce OpenWrt v24.10.8: adjust config defaults
+[sdk-builder/container] seeding feed luci from local object mirror
+Cloning into '/build-work/sdk-ipk/feeds/luci'...
+done.
+HEAD is now at cac97ed67c rpcd: fix file ACLs for symlinked /proc paths
+Updating feed 'base' from 'https://git.openwrt.org/openwrt/openwrt.git;v24.10.8' ...
+From https://git.openwrt.org/openwrt/openwrt
+ * [new branch]            atlas                   -> origin/atlas
+ * [new branch]            fix/uline-buffer-bounds -> origin/fix/uline-buffer-bounds
+ * [new branch]            lede-17.01              -> origin/lede-17.01
+ * [new branch]            main                    -> origin/main
+ * [new branch]            master                  -> origin/master
+ * [new branch]            openwrt-18.06           -> origin/openwrt-18.06
+ * [new branch]            openwrt-19.07           -> origin/openwrt-19.07
+ * [new branch]            openwrt-21.02           -> origin/openwrt-21.02
+ * [new branch]            openwrt-22.03           -> origin/openwrt-22.03
+ * [new branch]            openwrt-23.05           -> origin/openwrt-23.05
+ * [new branch]            openwrt-24.10           -> origin/openwrt-24.10
+ * [new branch]            openwrt-25.12           -> origin/openwrt-25.12
+ * [new tag]               reboot                  -> reboot
+ * [new tag]               v17.01.2                -> v17.01.2
+ * [new tag]               v17.01.3                -> v17.01.3
+ * [new tag]               v17.01.4                -> v17.01.4
+ * [new tag]               v17.01.5                -> v17.01.5
+ * [new tag]               v17.01.6                -> v17.01.6
+ * [new tag]               v17.01.7                -> v17.01.7
+ * [new tag]               v18.06.0                -> v18.06.0
+ * [new tag]               v18.06.0-rc1            -> v18.06.0-rc1
+ * [new tag]               v18.06.0-rc2            -> v18.06.0-rc2
+ * [new tag]               v18.06.1                -> v18.06.1
+ * [new tag]               v18.06.2                -> v18.06.2
+ * [new tag]               v18.06.3                -> v18.06.3
+ * [new tag]               v18.06.4                -> v18.06.4
+ * [new tag]               v18.06.5                -> v18.06.5
+ * [new tag]               v18.06.6                -> v18.06.6
+ * [new tag]               v18.06.7                -> v18.06.7
+ * [new tag]               v18.06.8                -> v18.06.8
+ * [new tag]               v18.06.9                -> v18.06.9
+ * [new tag]               v19.07.0                -> v19.07.0
+ * [new tag]               v19.07.0-rc1            -> v19.07.0-rc1
+ * [new tag]               v19.07.0-rc2            -> v19.07.0-rc2
+ * [new tag]               v19.07.1                -> v19.07.1
+ * [new tag]               v19.07.10               -> v19.07.10
+ * [new tag]               v19.07.2                -> v19.07.2
+ * [new tag]               v19.07.3                -> v19.07.3
+ * [new tag]               v19.07.4                -> v19.07.4
+ * [new tag]               v19.07.5                -> v19.07.5
+ * [new tag]               v19.07.6                -> v19.07.6
+ * [new tag]               v19.07.7                -> v19.07.7
+ * [new tag]               v19.07.8                -> v19.07.8
+ * [new tag]               v19.07.9                -> v19.07.9
+ * [new tag]               v21.02.0                -> v21.02.0
+ * [new tag]               v21.02.0-rc1            -> v21.02.0-rc1
+ * [new tag]               v21.02.0-rc2            -> v21.02.0-rc2
+ * [new tag]               v21.02.0-rc3            -> v21.02.0-rc3
+ * [new tag]               v21.02.0-rc4            -> v21.02.0-rc4
+ * [new tag]               v21.02.1                -> v21.02.1
+ * [new tag]               v21.02.2                -> v21.02.2
+ * [new tag]               v21.02.3                -> v21.02.3
+ * [new tag]               v21.02.4                -> v21.02.4
+ * [new tag]               v21.02.5                -> v21.02.5
+ * [new tag]               v21.02.6                -> v21.02.6
+ * [new tag]               v21.02.7                -> v21.02.7
+ * [new tag]               v22.03.0                -> v22.03.0
+ * [new tag]               v22.03.0-rc1            -> v22.03.0-rc1
+ * [new tag]               v22.03.0-rc2            -> v22.03.0-rc2
+ * [new tag]               v22.03.0-rc3            -> v22.03.0-rc3
+ * [new tag]               v22.03.0-rc4            -> v22.03.0-rc4
+ * [new tag]               v22.03.0-rc5            -> v22.03.0-rc5
+ * [new tag]               v22.03.0-rc6            -> v22.03.0-rc6
+ * [new tag]               v22.03.1                -> v22.03.1
+ * [new tag]               v22.03.2                -> v22.03.2
+ * [new tag]               v22.03.3                -> v22.03.3
+ * [new tag]               v22.03.4                -> v22.03.4
+ * [new tag]               v22.03.5                -> v22.03.5
+ * [new tag]               v22.03.6                -> v22.03.6
+ * [new tag]               v22.03.7                -> v22.03.7
+ * [new tag]               v23.05.0                -> v23.05.0
+ * [new tag]               v23.05.0-rc1            -> v23.05.0-rc1
+ * [new tag]               v23.05.0-rc2            -> v23.05.0-rc2
+ * [new tag]               v23.05.0-rc3            -> v23.05.0-rc3
+ * [new tag]               v23.05.0-rc4            -> v23.05.0-rc4
+ * [new tag]               v23.05.1                -> v23.05.1
+ * [new tag]               v23.05.2                -> v23.05.2
+ * [new tag]               v23.05.3                -> v23.05.3
+ * [new tag]               v23.05.4                -> v23.05.4
+ * [new tag]               v23.05.5                -> v23.05.5
+ * [new tag]               v23.05.6                -> v23.05.6
+ * [new tag]               v25.12.0                -> v25.12.0
+ * [new tag]               v25.12.0-rc1            -> v25.12.0-rc1
+ * [new tag]               v25.12.0-rc2            -> v25.12.0-rc2
+ * [new tag]               v25.12.0-rc3            -> v25.12.0-rc3
+ * [new tag]               v25.12.0-rc4            -> v25.12.0-rc4
+ * [new tag]               v25.12.0-rc5            -> v25.12.0-rc5
+ * [new tag]               v25.12.1                -> v25.12.1
+ * [new tag]               v25.12.2                -> v25.12.2
+ * [new tag]               v25.12.3                -> v25.12.3
+ * [new tag]               v25.12.4                -> v25.12.4
+ * [new tag]               v25.12.5                -> v25.12.5
+ * [new tag]               v25.12.6                -> v25.12.6
+You are not currently on a branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+failed.
+Updating feed 'luci' from 'https://git.openwrt.org/project/luci.git^cac97ed67cfbcad90db49f5f3b1245c2c4cbfae5' ...
+Updating feed 'packages' from 'https://git.openwrt.org/feed/packages.git^23abaa6f3b0fdfd76b570031107e5718476ff0c8' ...
+Cloning into './feeds/packages'...

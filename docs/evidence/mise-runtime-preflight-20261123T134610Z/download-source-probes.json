@@ -1,0 +1,92 @@
+[
+  {
+    "host": "192.168.30.7",
+    "name": "go-get",
+    "method": "GET",
+    "url": "https://go.dev/dl/?mode=json",
+    "exit": 28,
+    "result": "http=000,verify=1,seconds=5.002133",
+    "stderr": "curl: (28) Connection timed out after 5002 milliseconds\n"
+  },
+  {
+    "host": "192.168.30.7",
+    "name": "python-pypi",
+    "method": "HEAD",
+    "url": "https://pypi.org/simple/pip/",
+    "exit": 0,
+    "result": "http=200,verify=0,seconds=0.199192",
+    "stderr": ""
+  },
+  {
+    "host": "192.168.30.7",
+    "name": "rust",
+    "method": "HEAD",
+    "url": "https://static.rust-lang.org/dist/channel-rust-stable.toml",
+    "exit": 0,
+    "result": "http=200,verify=0,seconds=0.274353",
+    "stderr": ""
+  },
+  {
+    "host": "192.168.30.7",
+    "name": "zig",
+    "method": "HEAD",
+    "url": "https://ziglang.org/download/index.json",
+    "exit": 0,
+    "result": "http=200,verify=0,seconds=0.775302",
+    "stderr": ""
+  },
+  {
+    "host": "192.168.30.7",
+    "name": "java",
+    "method": "HEAD",
+    "url": "https://api.github.com/repos/adoptium/temurin21-binaries/releases/latest",
+    "exit": 0,
+    "result": "http=200,verify=0,seconds=0.754416",
+    "stderr": ""
+  },
+  {
+    "host": "192.168.30.93",
+    "name": "go-get",
+    "method": "GET",
+    "url": "https://go.dev/dl/?mode=json",
+    "exit": 28,
+    "result": "http=000,verify=1,seconds=5.001789",
+    "stderr": "curl: (28) Connection timed out after 5001 milliseconds\n"
+  },
+  {
+    "host": "192.168.30.93",
+    "name": "python-pypi",
+    "method": "HEAD",
+    "url": "https://pypi.org/simple/pip/",
+    "exit": 0,
+    "result": "http=200,verify=0,seconds=0.299859",
+    "stderr": ""
+  },
+  {
+    "host": "192.168.30.93",
+    "name": "rust",
+    "method": "HEAD",
+    "url": "https://static.rust-lang.org/dist/channel-rust-stable.toml",
+    "exit": 28,
+    "result": "http=000,verify=0,seconds=5.002129",
+    "stderr": "curl: (28) Connection timed out after 5002 milliseconds\n"
+  },
+  {
+    "host": "192.168.30.93",
+    "name": "zig",
+    "method": "HEAD",
+    "url": "https://ziglang.org/download/index.json",
+    "exit": 0,
+    "result": "http=200,verify=0,seconds=1.857078",
+    "stderr": ""
+  },
+  {
+    "host": "192.168.30.93",
+    "name": "java",
+    "method": "HEAD",
+    "url": "https://api.github.com/repos/adoptium/temurin21-binaries/releases/latest",
+    "exit": 0,
+    "result": "http=200,verify=0,seconds=0.426577",
+    "stderr": ""
+  }
+]

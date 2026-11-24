@@ -1,0 +1,5 @@
+{
+  "exit": 0,
+  "stdout": "PASS real stale-plan error uses QuickStart semantic colors in the native host\nPASS fresh desktop and mobile host initialization; theme, full content width and focus\n",
+  "stderr": ""
+}

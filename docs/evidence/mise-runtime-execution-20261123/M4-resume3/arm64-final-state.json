@@ -1,0 +1,8 @@
+{
+  "command": "set -e\ncat /proc/sys/kernel/random/boot_id\nsha256sum /lib/functions/mise.sh\ndf -k /overlay /mnt/nvme0n1-1\ntest ! -e /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/.lock\nls -la /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/work\nopkg list-installed | grep -E \"^(mise|mise-runtime|luci-app-mise|app-meta-mise|ks-cli) \"",
+  "exit": 0,
+  "stdout": "e3eba56b-888b-44bf-a282-99e059afc7b5\n40022def3ec421028d09f2851231b8dec5dee3699ec6301888abc09e13a78083  /lib/functions/mise.sh\nFilesystem           1K-blocks      Used Available Use% Mounted on\n/dev/mmcblk1p3         1992552   1507232    464840  76% /overlay\n/dev/nvme0n1p1       122471024  66495788  49707896  57% /mnt/nvme0n1-1\ndrwx------    2 root     root          4096 Nov 24 12:19 .\ndrwxr-xr-x   12 root     root          4096 Nov 24 12:19 ..\napp-meta-mise - 0.1.0-r1\nks-cli - 0.9.1-r1\nluci-app-mise - 0.1.0-r1\nmise - 2026.8.14-r26\nmise-runtime - 0.1.0-r1\n",
+  "stderr": "",
+  "candidate_helper_sha256": "40022def3ec421028d09f2851231b8dec5dee3699ec6301888abc09e13a78083",
+  "helper_rollback_active": false
+}

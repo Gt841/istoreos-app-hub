@@ -1,0 +1,5 @@
+{
+  "exit": 0,
+  "stdout": "eed181adf5a685b1ecffd943d5170c5ecc74c93aff33b5a70a52f0f31e19c079  /etc/config/mise\ne34daa2ae450f044c58d42be3707ab5ee425aa84ce3bd24bb6f1586c17aeecde  /lib/functions/mise.sh\n9a87c0e43270885e848c0c836cc5b6af22344aa7aec7beac70bae4ed7569e713  /mnt/nvme0n1-1/Configs/Runtime/home/.config/mise/config.toml\n",
+  "stderr": ""
+}

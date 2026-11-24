@@ -1,0 +1,57 @@
+{
+  "boot_id": "290c4092-c9f2-45bc-98ac-addb6dd920dc",
+  "arch": "x86_64",
+  "fixture": "/mnt/mise-runtime/acceptance/M5/OpenClawMgr-legacy",
+  "checks": [
+    {
+      "name": "real private GNU Node legacy layout starts with authenticated health",
+      "passed": true
+    },
+    {
+      "name": "legacy upgrade binds same exact public SDK",
+      "passed": true
+    },
+    {
+      "name": "private old Node retained in previous release",
+      "passed": true
+    },
+    {
+      "name": "new release contains only Node wrappers",
+      "passed": true
+    },
+    {
+      "name": "legacy data survives migration",
+      "passed": true
+    },
+    {
+      "name": "legacy authentication/config retained",
+      "passed": true
+    },
+    {
+      "name": "migrated service UID uses OpenClaw vector loader",
+      "passed": true
+    },
+    {
+      "name": "application uninstall removes its runtime files",
+      "passed": true
+    },
+    {
+      "name": "application uninstall retains its data",
+      "passed": true
+    },
+    {
+      "name": "uninstall preserves shared SDK and independent application",
+      "passed": true
+    },
+    {
+      "name": "second caller still executes exact shared Node",
+      "passed": true
+    },
+    {
+      "name": "original application restored with authenticated health",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "fixture_source": "verified actual GNU Node and library plus actual installed OpenClaw; private copy only for legacy test"
+}
