@@ -1,0 +1,51 @@
+/* QuickStart device/index.vue scoped style; selectors adapted for mise. */
+.runtime-product { width: 100%; margin: 0; color: var(--device-text); font-size: 14px; }
+.breadcrumbs { display: flex; align-items: center; gap: 7px; margin-bottom: 24px; padding-top: 4px; font-size: 13px; }
+.breadcrumbs a { color: var(--breadcrumbs-tit-color); text-decoration: none; }
+.breadcrumbs span:last-child { color: var(--breadcrumbs-tit-color1); }
+.device-workspace { max-width: 1640px; margin: 0 auto; }
+.device-workspace.has-network-nav { display: grid; grid-template-columns: 208px minmax(0, 1fr); gap: 20px; align-items: start; }
+.network-sidebar { position: sticky; top: 24px; padding: 22px 12px 16px; color: var(--device-text); background: var(--device-panel); border: 1px solid var(--device-line); border-radius: 12px; }
+.network-sidebar h2 { margin: 0 12px 18px; padding: 0; color: var(--device-muted); background: none; border: 0; box-shadow: none; text-align: left; font-size: 12px; font-weight: 500; }
+.network-navigation { display: grid; gap: 6px; }
+.network-navigation button { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 66px; margin: 0; padding: 12px; text-align: left; color: var(--device-text); background: transparent; border: 0; border-radius: 9px; cursor: pointer; }
+.network-navigation button:hover { background: var(--device-soft); }
+.network-navigation button[aria-current="true"] { color: var(--device-accent); background: var(--device-accent-soft); }
+.network-navigation svg { flex: none; width: 21px; height: 21px; }
+.network-navigation button > span { display: grid; gap: 5px; min-width: 0; }
+.network-navigation strong { font-size: 14px; font-weight: 600; overflow-wrap: anywhere; }
+.network-navigation small { color: var(--device-muted); font-size: 11px; overflow-wrap: anywhere; }
+.network-divider { height: 1px; margin: 8px 12px; background: var(--device-line); }
+.network-sidebar > p { margin: 28px 12px 0; padding-top: 16px; color: var(--device-muted); border-top: 1px solid var(--device-line); font-size: 11px; line-height: 1.8; }
+.workspace-panel { min-width: 0; background: var(--device-panel); border: 1px solid var(--device-line); border-radius: 12px; }
+.page-heading { padding: 26px 26px 14px; }
+.page-heading h1 { margin: 0; padding: 0; color: var(--device-text); background: none; border: 0; box-shadow: none; text-align: left; font-size: 25px; font-weight: 650; line-height: 1.4; letter-spacing: -.5px; }
+.page-heading p { margin: 7px 0 0; color: var(--device-muted); font-size: 13px; }
+.tabs { display: flex; gap: 24px; margin: 0 26px; border-bottom: 1px solid var(--device-line); }
+.tabs button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; margin: 0; padding: 10px 2px; color: var(--device-muted); background: transparent; border: 0; border-bottom: 2px solid transparent; cursor: pointer; }
+.tabs button svg { width: 17px; height: 17px; flex: none; }
+.tabs button.selected { color: var(--device-accent); border-bottom-color: var(--device-accent); font-weight: 600; }
+.tabs button:focus-visible, .network-navigation button:focus-visible { outline: 2px solid var(--device-accent); outline-offset: 2px; }
+.primary-content { min-height: 58vh; padding: 24px 26px; }
+.scope-notice { margin: 0 0 18px; padding: 12px 16px; color: var(--device-muted); background: var(--device-soft); border-radius: 8px; font-size: 13px; line-height: 1.6; }
+.scope-placeholder { margin: 0; padding: 70px 18px; color: var(--device-muted); text-align: center; line-height: 1.8; }
+.lan-selector { display: none; }
+@media(max-width:900px) {
+    .device-workspace.has-network-nav { display: block; }
+    .network-sidebar { display: none; }
+    .lan-selector { display: flex; align-items: center; gap: 10px; margin: 18px 22px 0; color: var(--device-muted); font-size: 12px; }
+    .lan-selector select { flex: 1; min-width: 0; min-height: 44px; padding: 8px 12px; color: var(--device-text); background: var(--device-soft); border: 1px solid var(--device-line); border-radius: 7px; font: inherit; }
+    .page-heading { padding: 20px 22px 12px; }
+    .tabs { margin: 0 22px; }
+    .primary-content { padding: 20px 22px; }
+}
+@media(max-width:420px) {
+    .breadcrumbs { margin-bottom: 18px; }
+    .page-heading { padding: 18px 16px 8px; }
+    .page-heading h1 { font-size: 22px; }
+    .lan-selector { margin: 16px 16px 0; }
+    .tabs { gap: 8px; margin: 0 16px; }
+    .tabs button { flex: 1; min-width: 0; gap: 5px; padding: 8px 0; font-size: 12px; white-space: normal; }
+    .tabs button svg { display: none; }
+    .primary-content { padding: 18px 14px; }
+}

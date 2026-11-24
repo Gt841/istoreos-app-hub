@@ -1,0 +1,62 @@
+{
+  "source": "quickstart/web/src",
+  "policy": "Full files copied. Host Vue only adds mise to service navigation; CSS/theme code is unchanged.",
+  "files": [
+    {
+      "path": "design/IStoreHostShellPrototype.vue",
+      "sourceSha256": "c5712048e4bd46c7d654450782417331eee7abb825b86ca00cda566a8b927539",
+      "copiedSha256": "5e1ab61e5dc97d8ad42d9c00b77bcfc4b564a56daa9265dfef00e3f87f2eed0c",
+      "adaptations": [
+        {
+          "before": "current:item.id==='storage'&&storagePage",
+          "after": "current:(item.id==='storage'&&storagePage)||(item.id==='services'&&route.path==='/mise')"
+        },
+        {
+          "before": "children:[{label:'服务设置',path:'/design/system/services'}]",
+          "after": "children:[{label:'运行时环境',path:'/mise'},{label:'服务设置',path:'/design/system/services'}]"
+        },
+        {
+          "before": "watch(()=>route.path,path=>{",
+          "after": "watch(()=>route.path,path=>{if(path==='/mise'&&!expanded.value.includes('services'))expanded.value.push('services');"
+        }
+      ]
+    },
+    {
+      "path": "design/istoreHostShellPrototype.css",
+      "sourceSha256": "40b4a6c3543f28060cee1e0f500392f26e14b8fe04df333386291ecdccba6f09",
+      "copiedSha256": "40b4a6c3543f28060cee1e0f500392f26e14b8fe04df333386291ecdccba6f09",
+      "adaptations": []
+    },
+    {
+      "path": "design/shell.css",
+      "sourceSha256": "25495ae87ed5f6b044377268b71bd8c91f8b3b24278e423f76d4a420cf12dd33",
+      "copiedSha256": "25495ae87ed5f6b044377268b71bd8c91f8b3b24278e423f76d4a420cf12dd33",
+      "adaptations": []
+    },
+    {
+      "path": "home/ThemeSelector.vue",
+      "sourceSha256": "85083e405fcdce29419a629ae30fba338578fc7f27b044ee9d79c8b11949cd60",
+      "copiedSha256": "85083e405fcdce29419a629ae30fba338578fc7f27b044ee9d79c8b11949cd60",
+      "adaptations": []
+    },
+    {
+      "path": "utils/theme.ts",
+      "sourceSha256": "e966b81f10cfb477e8f2e9453e088ef3c48d6b1b01bbc4b1c7d6c6dbd77ce3df",
+      "copiedSha256": "e966b81f10cfb477e8f2e9453e088ef3c48d6b1b01bbc4b1c7d6c6dbd77ce3df",
+      "adaptations": []
+    },
+    {
+      "path": "home/homeSemanticColors.css",
+      "sourceSha256": "a072474a8efa3f8bdb7f42889346b912e04a91f3949c8f5885a945f314d8e95f",
+      "copiedSha256": "a072474a8efa3f8bdb7f42889346b912e04a91f3949c8f5885a945f314d8e95f",
+      "adaptations": []
+    },
+    {
+      "path": "home/homeTypography.css",
+      "sourceSha256": "df1420f0248b42c5c2c4cf95dd0546f39daee3a8935768c2e226dc720137df93",
+      "copiedSha256": "df1420f0248b42c5c2c4cf95dd0546f39daee3a8935768c2e226dc720137df93",
+      "adaptations": []
+    }
+  ],
+  "sourceCommit": "ae57186b79ccb3d039fa3bf9f1f473772165c2a3"
+}

@@ -1,0 +1,3 @@
+/* Exact deviceCenterList declarations; semantic variables mapped to the same palette. */
+.mise-surface button{ min-height: 44px; padding: 6px 10px; color: var(--device-text); background: var(--device-panel); border: 1px solid var(--device-line); border-radius: 7px; cursor: pointer; white-space: nowrap; }
+.mise-surface button.primary{ min-height:44px;padding:7px 11px;color:var(--device-primary-text);background:var(--device-primary-bg);border:1px solid var(--device-primary-bg);border-radius:7px;cursor:pointer;white-space:nowrap }

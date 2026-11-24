@@ -2,11 +2,16 @@
 include $(TOPDIR)/rules.mk
 
 PKG_VERSION:=0.1.12
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 LUCI_TITLE:=LuCI support for OpenClaw Launcher
 LUCI_PKGARCH:=all
-LUCI_DEPENDS:=+luci-base +luci-compat +luci-lib-taskd +curl +ca-bundle +tar +xz-utils +jsonfilter +git +git-http +ttyd +ks-cli +openclawmgr-glibc +coreutils-timeout +coreutils-stat +libstdcpp +libatomic
+LUCI_DEPENDS:=+luci-base +luci-compat +luci-lib-taskd +curl +ca-bundle +tar +xz-utils +jsonfilter +git +git-http +ttyd +ks-cli +mise-runtime +coreutils-timeout +coreutils-stat +libstdcpp +libatomic
+
+define Build/Prepare/luci-app-openclawmgr
+	chmod 0755 $(PKG_BUILD_DIR)/root/usr/share/openclawmgr/gateway.sh
+	chmod 0755 $(PKG_BUILD_DIR)/root/usr/share/openclawmgr/npm-lifecycle.sh
+endef
 
 define Package/luci-app-openclawmgr/conffiles
 /etc/config/openclawmgr

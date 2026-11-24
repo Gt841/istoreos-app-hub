@@ -41,6 +41,7 @@ Auto-generated from `apps/*/app-meta-*/Makefile` via `make apps-catalog`.
 | linkease | 易有云 | nas service | /cgi-bin/luci/admin/services/linkease | https://www.linkease.com/ | 易有云提供远程访问、文件管理、相册备份、文件同步和备份仓库能力。 |
 | linkeasefull | 易有云完整版 | nas service | /cgi-bin/luci/admin/services/linkeasefull | https://www.linkease.com/ | 易有云完整版提供本地 Web 桌面、内置 OpenWrt 管理和 8897 兼容入口，复用独立的易有云文件管理入口，运行时会停用标准版易有云。 |
 | memos | Memos知识管理 | net tool | /cgi-bin/luci/admin/services/memos | https://usememos.com/ | 开源的极简的碎片化知识管理工具。 |
+| mise | 运行时环境 | development | /cgi-bin/luci/admin/services/mise | https://mise.jdx.dev/ | 在持久磁盘管理多个固定版本的开发运行时及私有运行库。 |
 | mtphotos | MTPhotos相册 | net tool | /cgi-bin/luci/admin/services/mtphotos | https://mtmt.tech/ | MTPhotos是一款简单、好用的照片管理系统。 |
 | multiaccountdial | 多账号多拨 | net tool | /cgi-bin/luci/admin/network/multiaccountdial | https://github.com/linkease/openwrt-app-actions/tree/main/applications/luci-app-multiaccountdial | 支持多账号的多拨插件 |
 | mymind | MyMind思维导图 | net tool | /cgi-bin/luci/admin/services/mymind | https://github.com/ondras/my-mind | MyMind 是一个在线思维导图编辑器。 |

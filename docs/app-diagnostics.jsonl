@@ -35,6 +35,7 @@
 {"id":"linkease","type":"native","depends":["linkease","linkease-runtime-transition","luci-app-linkease","luci-i18n-linkease-zh-cn","luci-lib-linkeasefile"],"autoconf":true,"istorec":false,"init":false,"config":false,"luci":true}
 {"id":"linkeasefull","type":"native","depends":["linkease","linkease-runtime-transition","linkeasefull","luci-app-linkeasefull","luci-app-linkeasefull-embed","luci-i18n-linkeasefull-zh-cn","luci-lib-linkeasefile"],"autoconf":true,"istorec":false,"init":false,"config":false,"luci":true}
 {"id":"memos","type":"docker","depends":["docker-deps","luci-app-memos","luci-i18n-memos-zh-cn"],"autoconf":false,"istorec":true,"init":false,"config":true,"luci":true}
+{"id":"mise","type":"native","depends":["mise-runtime"],"autoconf":true,"istorec":false,"init":false,"config":false,"luci":true}
 {"id":"mtphotos","type":"docker","depends":["docker-deps","luci-app-mtphotos","luci-i18n-mtphotos-zh-cn"],"autoconf":false,"istorec":true,"init":false,"config":true,"luci":true}
 {"id":"multiaccountdial","type":"native","depends":["luci-app-multiaccountdial","mwan3-deps"],"autoconf":false,"istorec":false,"init":false,"config":true,"luci":true}
 {"id":"mymind","type":"docker","depends":["docker-deps","luci-app-mymind","luci-i18n-mymind-zh-cn"],"autoconf":false,"istorec":false,"init":false,"config":false,"luci":true}

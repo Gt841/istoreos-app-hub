@@ -109,7 +109,7 @@ ensure_dirs() {
 fix_data_permissions() {
 	# When running under procd as user "openclawmgr", OpenClaw needs write access to data/.openclaw/*
 	if ! id openclawmgr >/dev/null 2>&1; then
-		return 0
+		return 1
 	fi
 	chown -R openclawmgr:openclawmgr "$DATA_DIR" || return 1
 	chmod -R u+rwX "$DATA_DIR" || return 1
@@ -248,6 +248,10 @@ openclaw_bin() {
 }
 
 openclaw_cmd() {
+	if [ -f "$NODE_DIR/.mise-runtime" ]; then
+		/usr/bin/lua /usr/share/openclawmgr/shared-runtime.lua as-app "$BASE_DIR" cli "$@"
+		return $?
+	fi
 	local b
 	b="$(openclaw_bin 2>/dev/null || true)"
 	[ -n "$b" ] || return 127
@@ -291,7 +295,7 @@ latest_openclaw_version() {
 		return 0
 	fi
 	[ -x "$NPM_BIN" ] || return 1
-	if [ "$INSTALL_ACCELERATED" = 1 ]; then set -- ks-cli npm; else set -- "$NPM_BIN"; fi
+	if [ "$INSTALL_ACCELERATED" = 1 ] && [ ! -f "$NODE_DIR/.mise-runtime" ]; then set -- ks-cli npm; else set -- "$NPM_BIN"; fi
 	HOME="$DATA_DIR" npm_config_cache="$BASE_DIR/npm-cache" npm_config_registry=https://registry.npmjs.org \
 		PATH="${NODE_DIR}/bin:/usr/sbin:/usr/bin:/sbin:/bin" \
 		timeout -k 5 30 "$@" view openclaw version
@@ -307,6 +311,9 @@ target_openclaw_package() {
 
 have_openclaw_runtime() {
 	[ -x "$NODE_BIN" ] || return 1
+	if [ -f "$NODE_DIR/.mise-runtime" ]; then
+		/usr/bin/lua /usr/share/openclawmgr/shared-runtime.lua inspect "$BASE_DIR/current/runtime.json" >/dev/null 2>&1 || return 1
+	fi
 	find_entry >/dev/null 2>&1 || return 1
 	return 0
 }
@@ -939,6 +946,10 @@ do_status() {
 	local entry
 	entry="$(find_entry 2>/dev/null || true)"
 	[ -n "$entry" ] || return 0
+	if [ -f "$NODE_DIR/.mise-runtime" ] && ! /usr/bin/lua /usr/share/openclawmgr/shared-runtime.lua inspect "$BASE_DIR/current/runtime.json" >/dev/null 2>&1; then
+		echo "runtime-missing"
+		return 0
+	fi
 	local pid=""
 	pid="$(ubus call service list "{\"name\":\"openclawmgr\"}" 2>/dev/null | jsonfilter -e '$.openclawmgr.instances.gateway.pid' 2>/dev/null || true)"
 	if [ -n "$pid" ] && kill -0 "$pid" 2>/dev/null; then
@@ -1121,8 +1132,13 @@ require_base_dir() {
 	fi
 	if ! validate_base_dir "$BASE_DIR"; then
 		write_installer_log "Refusing to operate on unsafe base_dir: $BASE_DIR"
-		write_installer_log "Fix: choose a dedicated directory like /root/Configs/OpenClawMgr or /mnt/.../OpenClawMgr"
+		write_installer_log "Fix: choose a dedicated persistent directory like /mnt/.../OpenClawMgr"
 		exit 2
+	fi
+	# Stop remains available when a disk is offline. Every filesystem mutation
+	# requires the real data mount and separation from shared SDK storage.
+	if [ "$ACTION" != stop ]; then
+		/usr/bin/lua /usr/share/openclawmgr/shared-runtime.lua preflight "$BASE_DIR" || exit 2
 	fi
 }
 
@@ -1206,6 +1222,9 @@ case "$ACTION" in
 	status)
 		[ -n "$BASE_DIR" ] || exit 0
 		do_status
+		;;
+	runtime_ready)
+		have_openclaw_runtime
 		;;
 	port)
 		do_port

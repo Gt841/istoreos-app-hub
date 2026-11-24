@@ -380,8 +380,14 @@ apps:
         services:
             - local: apps/mise/mise
               remote: openwrt-app-actions/applications/mise
-        luci: []
-        meta: []
+            - local: apps/mise/mise-runtime
+              remote: openwrt-app-actions/applications/mise-runtime
+        luci:
+            - local: apps/mise/luci-app-mise
+              remote: openwrt-app-actions/applications/luci-app-mise
+        meta:
+            - local: apps/mise/app-meta-mise
+              remote: openwrt-app-meta/applications/app-meta-mise
     mtphotos:
         services: []
         luci:

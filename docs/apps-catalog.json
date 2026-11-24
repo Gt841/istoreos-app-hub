@@ -623,6 +623,22 @@
     "meta_dir": "apps/memos/app-meta-memos"
   },
   {
+    "id": "mise",
+    "title": "运行时环境",
+    "description": "在持久磁盘管理多个固定版本的开发运行时及私有运行库。",
+    "description_en": "Persistent versioned language runtimes and private runtime libraries.",
+    "tags": [
+      "development"
+    ],
+    "website": "https://mise.jdx.dev/",
+    "author": "LinkEase",
+    "version": "0.1.0",
+    "release": "1",
+    "depends": "+mise-runtime +luci-app-mise",
+    "luci_entry": "/cgi-bin/luci/admin/services/mise",
+    "meta_dir": "apps/mise/app-meta-mise"
+  },
+  {
     "id": "mtphotos",
     "title": "MTPhotos相册",
     "description": "MTPhotos是一款简单、好用的照片管理系统。",
@@ -750,7 +766,7 @@
     "website": "https://github.com/openclaw/openclaw",
     "author": "xiaobao",
     "version": "0.1.12",
-    "release": "2",
+    "release": "4",
     "depends": "+luci-app-openclawmgr +luci-i18n-openclawmgr-zh-cn",
     "luci_entry": "/cgi-bin/luci/admin/services/openclawmgr",
     "meta_dir": "apps/openclawmgr/app-meta-openclawmgr"

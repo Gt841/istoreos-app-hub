@@ -41,6 +41,7 @@ Format: `id — title — description`
 - linkease — 易有云 — 易有云提供远程访问、文件管理、相册备份、文件同步和备份仓库能力。
 - linkeasefull — 易有云完整版 — 易有云完整版提供本地 Web 桌面、内置 OpenWrt 管理和 8897 兼容入口，复用独立的易有云文件管理入口，运行时会停用标准版易有云。
 - memos — Memos知识管理 — 开源的极简的碎片化知识管理工具。
+- mise — 运行时环境 — 在持久磁盘管理多个固定版本的开发运行时及私有运行库。
 - mtphotos — MTPhotos相册 — MTPhotos是一款简单、好用的照片管理系统。
 - multiaccountdial — 多账号多拨 — 支持多账号的多拨插件
 - mymind — MyMind思维导图 — MyMind 是一个在线思维导图编辑器。

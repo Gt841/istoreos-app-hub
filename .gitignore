@@ -1,4 +1,5 @@
 bin/
+!apps/mise/mise-runtime/files/native/bin/
 .sync-state/
 .syncapps-ignore
 .it-runner/logs/
@@ -9,3 +10,10 @@ bin/
 .it-runner/tasks/**/task.local.yaml
 tmp
 __pycache__
+/var/cache/
+# Keep reports and selected referenced screenshots; retain bulky local captures.
+/docs/evidence/mise*/**/*.png
+/docs/evidence/mise*/**/*.tar.gz
+/docs/evidence/mise*/**/*.tgz
+/docs/evidence/mise*/**/*.bin
+/docs/evidence/mise*/**/*.env

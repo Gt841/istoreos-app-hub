@@ -1,7 +1,5 @@
 # Sourced by openclawmgr.sh. All mutating children belong to one coordinator.
 OC_SHARE=/usr/share/openclawmgr
-OC_GLIBC_SOURCE=/usr/share/openclawmgr-glibc
-. "$OC_SHARE/node-pins.sh"
 . "$OC_SHARE/npm-env.sh"
 OC_CHILD='' OC_SPAWNING=0 OC_SIGNAL=0 OC_TXN='' OC_COMMITTED=0
 OC_ACTIVATING=0 OC_OLD_CURRENT='' OC_OLD_PREVIOUS='' OC_LEGACY='' OC_RELEASE=''
@@ -24,9 +22,19 @@ oc_join_child() {
 }
 
 oc_run() {
-	local rc=0
+	local rc=0 scope='' deadline="${OC_COMMAND_TIMEOUT:-900}"
+	case "$deadline" in ''|*[!0-9]*) return 1 ;; esac
+	[ "$deadline" -ge 1 ] && [ "$deadline" -le 3600 ] || return 1
+	if [ -n "$OC_TXN" ]; then
+		scope="$(mktemp -d "$OC_TXN/commands.XXXXXX")" || return 1
+		chmod 700 "$scope" || return 1
+	fi
 	OC_SPAWNING=1
-	setsid timeout -k 10 900 "$@" &
+	if [ -n "$scope" ]; then
+		setsid timeout -k 10 "$((deadline + 10))" /usr/bin/lua "$OC_SHARE/processes.lua" run "$scope" "$deadline" "$@" &
+	else
+		setsid timeout -k 10 "$deadline" "$@" &
+	fi
 	OC_CHILD=$!
 	OC_SPAWNING=0
 	[ "$OC_SIGNAL" = 0 ] || exit "$OC_SIGNAL"
@@ -38,35 +46,22 @@ oc_run() {
 }
 
 oc_npm() {
-	if [ "$INSTALL_ACCELERATED" = 1 ]; then set -- ks-cli npm "$@"; else set -- "$NPM_BIN" "$@"; fi
-	oc_run env HOME="$OC_TXN/npm-home" PATH="${NODE_DIR}/bin:/usr/sbin:/usr/bin:/sbin:/bin" \
+	# The release-local npm entry resolves the exact shared SDK and its ks-cli
+	# adapter. Explicit CLI cache/prefix options survive the common wrapper.
+	local deadline=900
+	# npm's registry/git traffic uses ks-cli when selected. Third-party
+	# lifecycle HTTPS downloads retain their own destinations and can be much
+	# slower. Give only dependency installation a bounded hour; cancellation
+	# and durable process recovery remain active throughout.
+	[ "${1:-}" != install ] || deadline=3600
+	OC_COMMAND_TIMEOUT="$deadline" oc_run env HOME="$OC_TXN/npm-home" \
+		OPENCLAWMGR_BASE_DIR="$BASE_DIR" OPENCLAWMGR_TXN="$OC_TXN" \
+		PATH="${NODE_DIR}/bin:/usr/sbin:/usr/bin:/sbin:/bin" \
 		OPENCLAWMGR_ACCELERATED="$INSTALL_ACCELERATED" npm_config_git="$OC_SHARE/npm-git.sh" \
-		npm_config_cache="$BASE_DIR/npm-cache" npm_config_registry=https://registry.npmjs.org \
-		npm_config_audit=false npm_config_fund=false npm_config_progress=false \
-		npm_config_update_notifier=false npm_config_ignore_scripts=false npm_config_umask=0022 "$@"
-}
-
-download() {
-	local url="$1" out="$2" rc=0 work
-	# Native downloaders may create sidecars (ks-cli uses .syn). Keep all
-	# partial files inside the transaction so cancellation removes them too.
-	work="$(mktemp -d "$OC_TXN/download.XXXXXX")" || return 1
-	OC_DOWNLOAD_PART="$work/payload"
-	write_installer_log "Downloading: $url"
-	if [ "$INSTALL_ACCELERATED" = 1 ]; then
-		local ap
-		ap="$(uci -q get 'istoreenhance.@istoreenhance[0].adminport' 2>/dev/null || echo 5003)"
-		case "$ap" in ''|*[!0-9]*) return 2 ;; esac
-		oc_run ks-cli download --mode auto --admin-url "http://127.0.0.1:$ap" \
-			--timeout 600s --progress plain -O "$OC_DOWNLOAD_PART" "$url" || rc=$?
-	else
-		oc_run curl -fSL --proto '=https' --proto-redir '=https' --retry 2 \
-			--connect-timeout 15 --max-time 600 -o "$OC_DOWNLOAD_PART" "$url" || rc=$?
-	fi
-	if [ "$rc" -ne 0 ]; then rm -rf "$work"; OC_DOWNLOAD_PART=; return "$rc"; fi
-	mv -f "$OC_DOWNLOAD_PART" "$out" || return 1
-	rm -rf "$work"
-	OC_DOWNLOAD_PART=
+		npm_config_script_shell="$OC_SHARE/npm-lifecycle.sh" \
+		npm_config_registry=https://registry.npmjs.org npm_config_audit=false npm_config_fund=false \
+		npm_config_progress=false npm_config_update_notifier=false npm_config_ignore_scripts=false \
+		npm_config_umask=0022 "$NPM_BIN" --cache "$BASE_DIR/npm-cache" "$@"
 }
 
 oc_check() { oc_run "$NODE_BIN" "$OC_SHARE/runtime-check.cjs" "$@"; }
@@ -100,7 +95,7 @@ oc_log_open() {
 
 oc_preflight() {
 	local resolved fs_type free_inodes total_inodes inode_info data_kb=0
-	for command in curl sha256sum tar xz readlink setsid timeout stat; do
+	for command in curl sha256sum tar xz readlink setsid timeout stat lua mise-runtime; do
 		command -v "$command" >/dev/null 2>&1 || { write_installer_log "Required command missing: $command"; return 1; }
 	done
 	if [ "$INSTALL_ACCELERATED" = 1 ]; then
@@ -109,6 +104,8 @@ oc_preflight() {
 			write_installer_log "KSpeeder is disabled/missing; enable iStore enhancement or disable accelerated installation"; return 1;
 		}
 	fi
+	oc_run /usr/bin/lua "$OC_SHARE/shared-runtime.lua" preflight "$BASE_DIR" || return $?
+	id openclawmgr >/dev/null 2>&1 || { write_installer_log "Missing dedicated openclawmgr account; reinstall the plugin defaults"; return 1; }
 	mkdir -p "$BASE_DIR" || return 1
 	resolved="$(readlink -f "$BASE_DIR")" || return 1
 	validate_base_dir "$resolved" || return 1
@@ -126,8 +123,6 @@ OC_INODES
 	case "$total_inodes:$free_inodes" in :*|*:|*[!0-9:]*) write_installer_log "Cannot inspect free inodes"; return 1 ;; esac
 	[ "$total_inodes" = 0 ] || [ "$free_inodes" -ge 30000 ] || { write_installer_log "Need at least 30000 free inodes"; return 1; }
 	case "$(uname -m)" in x86_64) OC_ARCH=x64 ;; aarch64) OC_ARCH=arm64 ;; *) write_installer_log "Unsupported architecture"; return 1 ;; esac
-	# Node and native addons use our glibc runtime on both musl and glibc hosts.
-	oc_glibc_check "$OC_GLIBC_SOURCE" || { write_installer_log "Missing/invalid private glibc runtime; install openclawmgr-glibc"; return 1; }
 	for name in releases backups npm-cache data; do [ ! -L "$BASE_DIR/$name" ] || return 1; done
 	for name in current previous; do
 		if [ -e "$BASE_DIR/$name" ] || [ -L "$BASE_DIR/$name" ]; then
@@ -142,73 +137,21 @@ OC_INODES
 	chmod 700 "$BASE_DIR/backups" "$BASE_DIR/npm-cache" || return 1
 }
 
-oc_glibc_check() {
-	[ -x "$1/ld.so" ] && [ -f "$1/SHA256SUMS" ] || return 1
-	(cd "$1" && sha256sum -c SHA256SUMS) >/dev/null 2>&1
-}
-
-oc_node_launcher() {
-	[ -f "$NODE_DIR/bin/node.real" ] || mv "$NODE_BIN" "$NODE_DIR/bin/node.real" || return 1
-	cp "$OC_SHARE/glibc-node.sh" "$NODE_BIN" || return 1
-	cp "$OC_SHARE/node-loader.cjs" "$NODE_DIR/node-loader.cjs" || return 1
-	chmod 755 "$NODE_BIN" || return 1
-	printf '%s\n' 1 > "$NODE_DIR/.openclawmgr-glibc"
-}
-
 install_node() {
-	local archive old_node="$NODE_DIR"
 	NODE_DIR="$OC_TXN/candidate/node"; NODE_BIN="$NODE_DIR/bin/node"; NPM_BIN="$NODE_DIR/bin/npm"
-	if [ "${1:-}" = pinned ]; then rm -rf "$NODE_DIR"; fi
-	mkdir -p "$NODE_DIR"
-	# Reuse only a self-contained managed glibc runtime, never a system or
-	# previous musl Node. Each release owns its loader/libraries for rollback.
-	if [ "${1:-}" != pinned ] && [ -f "$old_node/.openclawmgr-glibc" ] &&
-		oc_glibc_check "$old_node/glibc" &&
-		timeout -k 5 30 "$old_node/bin/node" "$OC_SHARE/runtime-check.cjs" node "$OC_ARCH" glibc >/dev/null 2>&1; then
-		oc_run cp -a "$old_node/." "$NODE_DIR/" || return $?
-		oc_run chown -hR "$(id -u):$(id -g)" "$NODE_DIR" || return $?
-		# A runtime-package update must reach the candidate even if the Node
-		# executable is reusable. Previous releases keep their own old libraries.
-		rm -rf "$NODE_DIR/glibc"
-		mkdir -p "$NODE_DIR/glibc" || return 1
-		oc_run cp -a "$OC_GLIBC_SOURCE/." "$NODE_DIR/glibc/" || return $?
-		oc_node_launcher || return 1
-		OC_NODE_URL="reused:$old_node"; OC_NODE_SHA256=
-		oc_check node "$OC_ARCH" glibc || return $?
-		oc_run env PATH="$NODE_DIR/bin:/usr/sbin:/usr/bin:/sbin:/bin" "$NPM_BIN" --version
-		return $?
-	fi
-	oc_node_pin "$OC_ARCH" glibc || return 1
-	archive="$BASE_DIR/npm-cache/node-${NODE_VERSION}-${OC_ARCH}-glibc.tar.xz"
-	if ! printf '%s  %s\n' "$OC_NODE_SHA256" "$archive" | sha256sum -c - >/dev/null 2>&1; then
-		rm -f "$archive"
-		download "$OC_NODE_URL" "$archive" || return $?
-	fi
-	printf '%s  %s\n' "$OC_NODE_SHA256" "$archive" | sha256sum -c - || return 1
-	oc_run xz -t "$archive" || return $?
-	oc_run tar -xJf "$archive" -C "$NODE_DIR" --strip-components=1 --no-same-owner || return $?
-	mkdir -p "$NODE_DIR/glibc" || return 1
-	oc_run cp -a "$OC_GLIBC_SOURCE/." "$NODE_DIR/glibc/" || return $?
-	oc_node_launcher || return 1
+	local source=origin
+	[ "$INSTALL_ACCELERATED" != 1 ] || source=ks-cli
+	oc_run /usr/bin/lua "$OC_SHARE/shared-runtime.lua" ensure "$OC_TXN" "$source" || return $?
+	OC_NODE_URL="mise-runtime:$(jsonfilter -i "$OC_TXN/candidate/runtime.json" -e '@.instance')"
+	OC_NODE_SHA256=
 	oc_check node "$OC_ARCH" glibc || return $?
-	oc_run env PATH="$NODE_DIR/bin:/usr/sbin:/usr/bin:/sbin:/bin" "$NPM_BIN" --version
+	oc_run "$NPM_BIN" --version
 }
 
 install_openclaw() {
 	local version tarball npm_version script_flag rc
 	oc_npm view "$(target_openclaw_package)" --json > "$OC_TXN/metadata.json" || return $?
-	if oc_check metadata "$OC_TXN/metadata.json" "$NPM_BIN" "$OC_TXN/resolved.json" > "$OC_TXN/version"; then :
-	else
-		rc=$?
-		case "$rc:$OC_NODE_URL" in
-			61:reused:*)
-				write_installer_log "Existing Node does not satisfy target engines; trying the pinned runtime"
-				install_node pinned || return $?
-				oc_check metadata "$OC_TXN/metadata.json" "$NPM_BIN" "$OC_TXN/resolved.json" > "$OC_TXN/version" || return $?
-				;;
-			*) return "$rc" ;;
-		esac
-	fi
+	oc_check metadata "$OC_TXN/metadata.json" "$NPM_BIN" "$OC_TXN/resolved.json" > "$OC_TXN/version" || return $?
 	version="$(cat "$OC_TXN/version")"
 	write_installer_log "Resolved OpenClaw $version with Node $("$NODE_BIN" --version)"
 	write_installer_log "Fetching package archive and verifying SHA512"
@@ -249,7 +192,10 @@ oc_health() {
 	# Cold OpenClaw CLI imports on ARM can exceed ten seconds even while the
 	# Gateway is already listening. Allow CLI startup within each bounded try.
 	while [ "$n" -lt 3 ]; do
-		if oc_run env HOME="$DATA_DIR" OPENCLAW_HOME="$DATA_DIR" OPENCLAW_STATE_DIR="$DATA_DIR/.openclaw" \
+		if [ -f "$NODE_DIR/.mise-runtime" ]; then
+			if oc_run timeout -k 2 60 /usr/bin/lua "$OC_SHARE/shared-runtime.lua" as-app "$BASE_DIR" cli gateway health \
+				--url "ws://127.0.0.1:$PORT" --token "$TOKEN"; then return 0; fi
+		elif oc_run env HOME="$DATA_DIR" OPENCLAW_HOME="$DATA_DIR" OPENCLAW_STATE_DIR="$DATA_DIR/.openclaw" \
 			OPENCLAW_CONFIG_PATH="$DATA_DIR/.openclaw/openclaw.json" PATH="$NODE_DIR/bin:$GLOBAL_DIR/bin:/usr/sbin:/usr/bin:/sbin:/bin" \
 			timeout -k 2 60 "$NODE_BIN" "$(find_entry)" gateway health \
 			--url "ws://127.0.0.1:$PORT" --token "$TOKEN"; then return 0; fi
@@ -318,7 +264,18 @@ oc_exit() {
 	trap - EXIT
 	trap '' HUP INT TERM
 	oc_join_child
-	[ -z "$OC_DOWNLOAD_PART" ] || rm -f "$OC_DOWNLOAD_PART"
+	if [ -n "$OC_TXN" ] && [ -d "$OC_TXN" ]; then
+		if ! /usr/bin/lua "$OC_SHARE/processes.lua" stop "$OC_TXN"; then
+			write_installer_log "Owned command recovery incomplete; retaining transaction and lock"
+			exit 1
+		fi
+	fi
+	if [ -n "$OC_TXN" ] && [ -f "$OC_TXN/runtime-task.json" ]; then
+		if ! /usr/bin/lua "$OC_SHARE/shared-runtime.lua" cancel "$OC_TXN"; then
+			write_installer_log "Shared runtime task recovery incomplete; retaining transaction and lock"
+			exit 1
+		fi
+	fi
 	# The durable commit marker is authoritative even if a signal arrived
 	# immediately before the in-memory flag was assigned.
 	if [ -n "$OC_TXN" ] && [ "$(cat "$OC_TXN/phase" 2>/dev/null || true)" = committed ]; then OC_COMMITTED=1; fi
@@ -372,6 +329,10 @@ do_install() {
 	oc_phase preparing || return 1
 	install_node || return $?
 	install_openclaw || return $?
+	# Candidate code/binding is public and root-owned; HOME, caches, data and
+	# journals remain private outside it. Honor service UID access even when
+	# the administrator/task runner uses a restrictive umask.
+	oc_run chmod -R a+rX,go-w "$OC_TXN/candidate" || return $?
 	NODE_DIR="$BASE_DIR/node"; NODE_BIN="$NODE_DIR/bin/node"; NPM_BIN="$NODE_DIR/bin/npm"; GLOBAL_DIR="$BASE_DIR/global"
 	# Journal is written before any live mutation, including service stop.
 	oc_phase stopping || return 1
@@ -394,6 +355,7 @@ do_install() {
 		[ -L "$BASE_DIR/$name" ] || ln -s "current/$name" "$BASE_DIR/$name" || return 1
 	done
 	mv "$OC_TXN/candidate" "$BASE_DIR/releases/$OC_RELEASE" || return 1
+	chmod 755 "$BASE_DIR" "$BASE_DIR/releases" "$BASE_DIR/releases/$OC_RELEASE" || return 1
 	oc_switch current "releases/$OC_RELEASE" || return 1
 	oc_phase activated || return 1
 	chmod 700 "$DATA_DIR" || return 1
@@ -405,6 +367,15 @@ do_install() {
 		if [ "$ENABLED" = 1 ]; then oc_run /etc/init.d/openclawmgr enable || return $?; fi
 		oc_run env OPENCLAWMGR_FORCE_START=1 /etc/init.d/openclawmgr start || return $?
 		oc_health || return 1
+	else
+		# Keep the final disabled/stopped state while still requiring an
+		# authenticated Gateway check before committing any new release.
+		write_installer_log "Checking candidate Gateway on loopback; final service state remains stopped"
+		ensure_safe_port_for_start || return 1
+		oc_run env OPENCLAWMGR_FORCE_START=1 OPENCLAWMGR_HEALTH_PROBE=1 /etc/init.d/openclawmgr start || return $?
+		oc_health || return 1
+		oc_run /etc/init.d/openclawmgr stop || return $?
+		oc_wait_stopped || return 1
 	fi
 	local previous="$OC_OLD_CURRENT"
 	[ -n "$previous" ] || previous="$OC_LEGACY"
@@ -469,6 +440,7 @@ do_recover_install() {
 	trap 'oc_signal 129' HUP
 	trap 'oc_signal 130' INT
 	trap 'oc_signal 143' TERM
+	/usr/bin/lua "$OC_SHARE/processes.lua" stop "$OC_TXN" || return 1
 	oc_restore || return 1
 	OC_ACTIVATING=0
 	[ "$phase" != committed ] || OC_COMMITTED=1

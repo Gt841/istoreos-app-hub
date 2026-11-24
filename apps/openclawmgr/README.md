@@ -34,7 +34,7 @@
 
 - `luci-lib-taskd`（含 `luci-lib-xterm` 与 `taskd`）、curl/CA、tar/xz、jsonfilter、Git HTTPS、ttyd。
 - `ks-cli` 使用现有 OpenWrt 软件包；不运行普通 Linux 的 ks-cli/zsetup 安装器。
-- `openclawmgr-glibc` 提供私有 GNU libc 2.39；`coreutils-timeout`、`coreutils-stat`（读取 inode）及现有 libstdcpp/libatomic；系统 BusyBox 需提供 `setsid`。
+- `mise-runtime` 提供持久磁盘中的公共固定 Node/npm、GNU loader/C++ 库及普通 UID 执行入口；`coreutils-timeout`、`coreutils-stat`（读取 inode）及现有 libstdcpp/libatomic；系统 BusyBox 需提供 `setsid`。先在运行时环境页面配置持久存储。新版本不依赖 `openclawmgr-glibc` 包。
 - 开启安装加速时需要已启用的 `istoreenhance`；缺少或关闭时明确报错，可关闭安装加速后使用源站。
 
 ## 安装事务
@@ -44,21 +44,22 @@
 
 1. 安装和升级都检查持久目录、架构、libc、空间和 inode。默认预留 2 GiB 工作空间，
    另外计算现有 data 快照所需空间；至少需要 30000 个可用 inode（不报告 inode 总量的文件系统除外）。
-2. Node 固定为官方 24.22.1，覆盖 x64/arm64，URL 和 SHA256 维护在 `node-pins.sh`。
-   两种固件都使用私有 glibc 2.39：`openclawmgr-glibc` 安装基础库到
-   `/usr/share/openclawmgr-glibc`，安装器校验清单后复制到候选 Node 目录；每个 release 独立保留库。
-   不复用系统 Node 或旧 musl Node。已有管理器 glibc Node 必须通过清单、版本、平台和 SQLite 检查
-   才可复用；不满足 engines 时尝试固定 Node，仍不满足则保留原安装并报错。
+2. `runtime-policy.json` 声明固定 Node 24.22.1/npm 11.19.1、GNU ABI 和库修订。
+   安装器通过公共 `mise-runtime request` 计划、安装或复用确切实例；SDK 和库只保存在公共存储。
+   每个应用 release 的 `runtime.json` 固定存储根、实例、库和清单摘要，Node 目录仅提供小型入口脚本。
+   不跟随全局默认，不复制共享 SDK，不原地升级其 npm；engines 不满足时保留原应用并报错。
 3. stable 仍是 `openclaw@2026.3.28`；latest 只解析一次。校验目标 engines，
    按精确版本 `npm pack`，再独立核对包名、版本及 SHA512，随后安装本地 tarball。
    依赖包仍由 npm 使用其完整性元数据验证；不声称仅锁定顶层版本就锁定了整个依赖树。
 4. 候选在 `${base_dir}/.install.*/candidate` 安装，使用独立 HOME 做 CLI smoke。
-   sharp（目标包声明时）执行基本功能检查；sqlite-vec 必须加载成功，实际执行 `vec_version()`、
+   sharp（目标包声明时）执行基本功能检查；通过已安装 OpenClaw 的 memory-host SDK 加载入口检查 sqlite-vec，实际执行 `vec_version()`、
    建立 vec0 表、插入向量并验证最近邻查询。缺少扩展不再允许降级通过安装。
    node-pty 执行加载检查；已核对的 2026.3.28 仍允许其普通子进程回退，并明确记录 PTY 不可用。
+   可选 Matrix 原生集成另外记录真实可用性，不把 Gateway 健康当成频道验收。
    Gateway 健康不等同于 Matrix 频道、PTY 交互或模型推理的端到端验证。
 5. 候选验证期间旧服务继续运行。切换前先停止服务并确认停止，完整备份 data 到
-   `backups/事务ID/data.tar`。然后切换 `current`，生成配置，按需启动并检查 gateway health。
+   `backups/事务ID/data.tar`。然后切换 `current`，生成配置，检查认证 gateway health。
+   默认 disabled 的新安装也会临时在 loopback 启动、关闭频道等集成做健康检查，通过后停止，保持最终未启用状态。
    health CLI 为慢设备冷加载预留每次 60 秒、最多 3 次，失败仍回退。
 6. 失败时恢复旧入口和 data 快照，失败候选写入的数据保存在同一备份目录的
    `failed-data`。回退失败保留事务日志和锁；恢复可再次尝试。成功升级保留 `previous`。
@@ -72,9 +73,9 @@ OpenClawMgr/
   previous -> releases/上一个事务ID
   node -> current/node
   global -> current/global
-  releases/事务ID/{node,global,receipt.json}
-  # node/bin/node 为入口；node/bin/node.real 为官方 ELF
-  # node/glibc/ 保存该 release 独立的 loader、库和校验清单
+  releases/事务ID/{node,global,runtime.json,receipt.json}
+  # node/bin/{node,npm,npx,git} 解析该 release 的固定公共实例
+  # 共享 SDK 和库位于 mise 的持久 storage_root，应用 release 不持有副本
   data/
   npm-cache/
   backups/事务ID/{data.tar,failed-data/}
@@ -82,46 +83,46 @@ OpenClawMgr/
 
 旧版本的 node/global 实体目录在停服后迁入独立 legacy release，继续通过原路径使用。
 记录 `current/receipt.json` 包含精确版本、engines、npm、平台、包完整性、Node 来源/摘要、
-原生模块能力及安装时间；`runtime` 记录 isolated-glibc、实际 glibc 版本和库清单 SHA256。复用 Node 时记录实际可执行文件 SHA256，不把它说成重新验证了原始归档。
+原生模块能力及安装时间；`runtime.kind=mise-runtime` 记录确切实例、存储根、实际 glibc 版本和库清单 SHA256。Node 摘要来自实际执行的共享二进制；原始归档校验由公共管理器维护。
 历史 releases 和成功备份不自动删除，需运维确认后清理；卸载运行时保留 data 和备份。
 “清理（含数据）”会删除这些内容。
 
-## glibc 启动链路
+## 固定公共运行时与 glibc 启动链路
 
-已有 musl 安装在更新插件后，需要在界面执行一次“升级”来迁移运行时。单独更新插件或运行库包
-不会重写正在使用的 Node；每次运行时升级才会将当前包内的库复制到新 release。
+已有私有/musl 安装更新插件后，执行一次“升级”迁移。旧实体目录迁入 legacy release，旧 Node/库保留以支持失败回退；仅更新插件不搬移 SDK 或改变运行中的应用。
 
-参考 baidudrive/open-drive 的私有 loader 方案，不修改系统 `/lib` 或 loader 链接。
-`node/bin/node` 通过该 release 的 `glibc/ld.so --library-path ...` 执行 `node.real`。
-预加载的 `node-loader.cjs` 让 `process.execPath` 指向同一入口，npm 生命周期脚本、
-`child_process.fork`、终端 CLI 与 procd 因而使用同一 glibc Node。不给宿主 sh/git/ks-cli
-设置全局 LD_LIBRARY_PATH。npm 自身优先读取宿主 `/usr/bin/ldd`；入口与进程级策略
-显式设置 `npm_config_libc=glibc`，保证 Sharp 等 optionalDependencies 选择 glibc 产物。
+应用的 `shared-runtime.lua` 验证 release 绑定与公共收据，再使用 `mise-runtime exec`。
+公共 GNU Node 以固定库实例的 `ld.so --library-path` 启动，`process.execPath`/fork 仍回到同一入口。
+宿主 sh/git/ks-cli 保持原环境；npm 平台选择明确为 glibc。库来源和完整性由公共管理器负责，
+不修改系统 `/lib`，不需要设备 apt/Docker 或系统 C 工具链。
 
-`openclawmgr-glibc` 的下载源及 SHA256 固定在其 Makefile：Ubuntu libc6 2.39-0ubuntu8
-（按架构下载），加上已发布 baidudrive-runtime-v1.0.6 中的 GCC C++ 库；只安装运行库，不安装 SDK。
-包的 Prepare/install 命令可独立核对；无需设备运行 apt 或 Docker。
-启动新的管理器 glibc release 时，procd init 再次检查运行库清单和向量功能，失败则拒绝启动。
-旧 musl/legacy 布局保持可启动，以支持升级失败回退。
+procd 必须使用专用非 root 账户，HOME/用户名/缓存明确落在应用持久 data 中。
+root 管理命令通过 `exec-user` 清除附加组、设置 UID/GID，再执行同一公共入口。
+启动前校验公共库及实际向量查询，Gateway 自身再以服务 UID 校验并保存
+`data/.openclaw/runtime-native.json`。读取凭证 env 文件按字面解析，禁止作为 root shell 执行。
+
+SDK 被用户明确删除后显示“固定运行时缺失”并拒绝启动；恢复该实例或执行应用升级重新准备。
+卸载应用只删除其 release/wrap，保留公共 SDK、库和其他调用方；保留 data 的原有卸载语义不变。
 
 ## 加速与脚本策略
 
-- Node 下载使用 `ks-cli download --mode auto`，管理端口读取 OpenWrt UCI；关闭加速走 HTTPS 源站。
-  下载及其 sidecar 放在事务私有目录，取消一并清除；解压不继承归档中的用户 ID。
-- npm 的查询、打包和安装显式使用 `ks-cli npm`，服务 readiness、能力和 TLS 端口由 ks-cli 处理。
+- 公共 Node/库的下载、摘要、缓存和安装任务由 mise-runtime 负责；应用只持有自己提交的计划身份，取消不会删除已成功的共享实例。
+- npm 的查询、打包和安装经固定实例适配器调用 `ks-cli npm`，服务 readiness、能力和 TLS 端口由 ks-cli 处理。
   依赖安装使用 prefer-offline 复用持久缓存，缺失内容仍联网获取；版本解析和独立完整性校验照常执行。
 - npm 的 Git 子进程通过 `npm-git.sh` 显式调用 `ks-cli git`，关闭加速则调用原生 Git。
   支持的 GitHub HTTPS 读取由 ks-cli 加速；SSH、私有源和其他平台保留 ks-cli 的原生语义，
-  不写用户 Git 配置、不擅自改写 SSH 鉴权方式。生命周期脚本自发的 HTTP 下载不保证被覆盖。
+  不写用户 Git 配置、不擅自改写 SSH 鉴权方式。
+- 固定 Matrix 0.4.0 的下载脚本通过标准 npm script-shell 适配：只匹配版本、工作目录、命令和脚本 SHA256，按官方 asset SHA256/大小复验 `npm-cache/native`；缺缓存按选择使用 ks-cli download 或 HTTPS 源站。下载临时文件放事务目录，取消会清理。其他生命周期脚本保留原行为；任意 HTTP 下载不保证加速。
+- 依赖安装上限 3600 秒，其他命令一般为 900 秒；具体 health/native 检查有更短时限。均可取消并恢复所属进程。
 - 不再因 musl 全局设置 ignore-scripts。npm 11.16+ 对顶层 OpenClaw 显式添加 allow-scripts；
   必要原生模块仍须通过实际检查。缺少平台产物时失败并保留旧服务，不自动在路由器安装编译工具链。
-- LuCI 交互终端通过 npm shim 复用上述进程级策略；shim 在交给 ks-cli 前移除自身 PATH，避免递归。
+- LuCI 交互终端通过 release npm shim 复用固定实例和进程级策略；由公共适配器选择原生 npm，避免递归包装。
   用户手动升级 OpenClaw 会绕过管理器事务，并可能因收据版本不一致而被启动检查拒绝；
   使用界面“升级”可保持收据一致并获得回退保护。
 
 ## 取消与恢复
 
-取消先给安装协调进程发送 TERM，协调者终止并等待自己的子进程组，再回退和清理。
+取消先给安装协调进程发送 TERM。外部命令在 exec 前经过持久进程握手，记录 boot ID/PID/start/session；协调者回收自己及子命令的会话后才回退和清理。SIGKILL 后恢复会先原子关闭登记目录、回收已记录的所属进程，随后恢复应用事务。
 LuCI 仅在协调者清理完成后删除 taskd 状态；不强杀协调者，也不提前移除锁。
 有异常中断的事务时，后续安装会要求先恢复：
 
@@ -154,3 +155,13 @@ glibc 改造与后续设备结果见 `docs/evidence/openclawmgr-glibc-20261123/`
 
 - `UCI` 仅保留 `enabled`、`base_dir`、`install_accelerated` 这类外层管理配置。
 - OpenClaw 运行配置统一以 `${base_dir}/data/.openclaw/openclaw.json` 为准，包括 `port`、`bind`、`token` 以及模型/鉴权相关设置；LuCI、安装脚本与 init 脚本均优先读取该文件。
+
+
+## 当前开发测试方式
+
+M5 起按用户要求直接同步脚本、必要二进制与正式前端到 x86_64/ARM64 测试机，逐批保存文件摘要与回滚备份。
+入口及使用方法见 [直接部署说明](../mise/tools/README.md)。同一设备的完整 M5 场景使用
+`tests/with-device-lease.lua` 串行运行，防止多个场景在各自的服务操作之间互相干扰。
+
+当前逐项结果以 [M5 执行记录](../../docs/evidence/mise-runtime-execution-20261123/M5/progress.json) 为准。
+源码直部署的功能通过不代表包依赖、包归属或安装/升级钩子通过；IPK/APK 编译和包验收留待人工确认后人工进行。

@@ -86,6 +86,10 @@ find_openclaw_entry() {
 }
 
 openclaw_cmd() {
+	if [ -f "$NODE_DIR/.mise-runtime" ]; then
+		/usr/bin/lua /usr/share/openclawmgr/shared-runtime.lua as-app "$BASE_DIR" cli "$@"
+		return $?
+	fi
 	if [ -x "$OPENCLAW_BIN" ]; then
 		"$OPENCLAW_BIN" "$@"
 		return $?

@@ -155,6 +155,7 @@
   function statusText(status) {
     if (status.installing) return status.task_op === "upgrade" ? "更新中" : "安装中";
     if (!status || !status.installed) return "未安装";
+    if (status.runtime_missing) return "固定运行时缺失";
     if (status.running) return "运行中";
     if (status.reachable) return "运行中（未托管）";
     return "已停止";
@@ -162,6 +163,7 @@
 
   function statusDotClass(status) {
     if (status && status.installing) return "";
+    if (status && status.runtime_missing) return "is-danger";
     if (status && status.running) return "is-success";
     if (status && status.reachable) return "";
     return "is-danger";
@@ -964,7 +966,7 @@
         '</div>' +
         '</div>';
     }).join("");
-    var canStartService = !status.running && !status.reachable;
+    var canStartService = !status.running && !status.reachable && !status.runtime_missing;
     var canStopService = !!status.running;
 
     root.innerHTML =
@@ -1233,7 +1235,7 @@
     var btnStop = byId("oclm-btn-stop");
     var btnRestart = byId("oclm-btn-restart");
     var showServiceActions = !!(status.installed && !status.installing);
-    var canStartService = !!(!status.running && !status.reachable);
+    var canStartService = !!(!status.running && !status.reachable && !status.runtime_missing);
     var canStopService = !!status.running;
 
     if (svcWrap) {

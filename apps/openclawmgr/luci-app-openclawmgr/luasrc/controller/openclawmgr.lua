@@ -773,10 +773,13 @@ function action_status()
 
 	local running = false
 	local installed = false
+	local runtime_missing = false
 	if base_dir ~= "" then
 		local st = sys.exec("/usr/libexec/istorec/openclawmgr.sh status 2>/dev/null"):gsub("%s+$", "")
 		running = (st == "running")
-		installed = (st == "running" or st == "stopped")
+		runtime_missing = (st == "runtime-missing")
+		installed = (st == "running" or st == "stopped" or runtime_missing)
+		if runtime_missing then running = get_running_pid() ~= "" end
 	end
 
 	local reachable, reachable_code, reachable_url = false, "", ""
@@ -816,6 +819,7 @@ function action_status()
 		ok = true,
 		enabled = enabled,
 		installed = installed,
+		runtime_missing = runtime_missing,
 		running = running,
 		reachable = reachable,
 		reachable_http_code = reachable_code,
@@ -886,7 +890,11 @@ function action_check_update()
 	end
 
 	local st = trim(sys.exec("/usr/libexec/istorec/openclawmgr.sh status 2>/dev/null"))
-	local installed = (st == "running" or st == "stopped")
+	local installed = (st == "running" or st == "stopped" or st == "runtime-missing")
+	if st == "runtime-missing" then
+		write_json({ ok = false, error = "固定运行时缺失，请在运行时环境恢复对应实例，或执行升级重新准备。", installed = true, runtime_missing = true })
+		return
+	end
 	if not installed then
 		write_json({ ok = false, error = "OpenClaw 尚未安装", installed = false })
 		return
@@ -1641,7 +1649,7 @@ function action_op()
 
 		local task = get_task_state(task_id)
 		local st = sys.exec("/usr/libexec/istorec/openclawmgr.sh status 2>/dev/null"):gsub("%s+$", "")
-		local installed = (st == "running" or st == "stopped")
+		local installed = (st == "running" or st == "stopped" or st == "runtime-missing")
 		local install_like = task.running and (task.op == "install" or task.op == "upgrade" or not installed)
 		if not install_like then
 			write_json({ ok = false, error = i18n.translate("No install task is running") })
@@ -1736,7 +1744,7 @@ function action_diag_info()
 	local has_openclaw = false
 	local has_config = false
 	if base_dir ~= "" then
-		has_node = sys.call("[ -x " .. util.shellquote(base_dir .. "/node/bin/node") .. " ] >/dev/null 2>&1") == 0
+		has_node = sys.call("/usr/libexec/istorec/openclawmgr.sh runtime_ready >/dev/null 2>&1") == 0
 		has_openclaw = sys.call("[ -x " .. util.shellquote(base_dir .. "/global/bin/openclaw") .. " ] >/dev/null 2>&1") == 0
 		has_config = sys.call("[ -f " .. util.shellquote(base_dir .. "/data/.openclaw/openclaw.json") .. " ] >/dev/null 2>&1") == 0
 	end

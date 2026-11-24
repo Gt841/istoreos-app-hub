@@ -56,9 +56,12 @@ elif name == 'df':
  print('mockdisk 10000000 1000 %s 1%% /' % ('1' if flag('NO_SPACE') else '8000000'))
 elif name == 'stat': print('1000000 '+('1' if flag('NO_INODES') else '900000'))
 elif name == 'id':
- if args==['-u']: print(os.getuid())
- elif args==['-g']: print(os.getgid())
+ if args[0]=='-u': print(os.getuid())
+ elif args[0]=='-g': print(os.getgid())
+ elif args[-1]=='openclawmgr': finish()
  else: finish(1)
+elif name == 'chown': finish()
+elif name == 'mise-runtime': finish()
 elif name == 'ip': print('default via 192.0.2.254 dev eth0')
 elif name == 'sleep': time.sleep(0.02)
 elif name == 'ubus':
@@ -71,6 +74,44 @@ elif name == 'jsonfilter':
   print(str(data).lower() if isinstance(data,bool) else data)
  except Exception: pass
 elif name == 'lua':
+ if args and args[0].endswith('processes.lua'):
+  # This suite tests shell transactions with fixture provisioning. Durable
+  # nixio process ownership is exercised by interruption-device.lua on device.
+  if args[1]=='run': os.execvp(args[4],args[4:])
+  finish()
+ if args and args[0].endswith('shared-runtime.lua'):
+  action=args[1]
+  event('runtime-client',args[1:])
+  if action in ('preflight','inspect','check'): finish()
+  if action=='cancel':
+   journal=Path(args[2])/'runtime-task.json'
+   if journal.exists(): event('runtime-cancel',json.loads(journal.read_text()))
+   finish()
+  if action=='as-app':
+   entry=base/'global/lib/node_modules/openclaw/openclaw.mjs'
+   env=os.environ
+   env.update(HOME=str(base/'data'),OPENCLAW_HOME=str(base/'data'),OPENCLAW_STATE_DIR=str(base/'data/.openclaw'))
+   os.execv(str(base/'node/bin/node'),[str(base/'node/bin/node'),str(entry)]+args[4:])
+  if action=='ensure':
+   txn=Path(args[2]); policy=json.loads((Path(args[0]).parent/'runtime-policy.json').read_text())
+   event('runtime-plan',{'source':args[3],'version':policy['version'],'abi':policy['abi']})
+   if flag('DOWNLOAD_FAIL'): finish(7)
+   if flag('BAD_ARCHIVE'): finish(8)
+   (txn/'runtime-task.json').write_text(json.dumps({'root':str(root/'SharedRuntime'),'plan':'fixture-plan'}))
+   if flag('BLOCK_DOWNLOAD'):
+    (txn/'payload.syn').write_bytes(b'partial')
+    (root/'blocked-download').write_text(str(os.getpid()));time.sleep(120)
+   shared=root/'SharedRuntime'; sdk=shared/'environments/fixture-sdk'
+   if not sdk.exists():
+    shutil.copytree(root/'node-package/node-v24.22.1',sdk,symlinks=True)
+    shutil.copyfile(sdk/'bin/node',sdk/'bin/node.real')
+   candidate=txn/'candidate'; node=candidate/'node';(node/'bin').mkdir(parents=True)
+   shutil.copyfile(sdk/'bin/node',node/'bin/node');(node/'bin/node').chmod(0o755)
+   (node/'bin/npm').symlink_to(sdk/'bin/npm')
+   (node/'.mise-runtime').write_text('1')
+   (candidate/'runtime.json').write_text(json.dumps({'schema_version':1,'provider':'mise-runtime','tool':'node','storage_root':str(shared),'instance':'fixture-sdk','library':'fixture-library','library_manifest_sha256':'a'*64,'artifact_set':'b'*64,'node':'24.22.1','npm':'11.12.1'}))
+   finish()
+  raise Exception('unexpected runtime action '+action)
  sys.stdin.read()
  if flag('CONFIG_FAIL'): finish(14)
  if os.environ.get('CFG_PATH'):
@@ -84,6 +125,14 @@ elif name == 'openclawmgr':
   if flag('START_FAIL'): finish(17)
   (root/'running').write_text('running')
 elif name in ('node','node.real'):
+ ref=Path(sys.argv[0]).resolve().parents[2]/'runtime.json'
+ if ref.exists():
+  binding=json.loads(ref.read_text());os.environ['ISTORE_RUNTIME_STORAGE']=binding['storage_root'];os.environ['ISTORE_RUNTIME_ID']=binding['instance']
+ shared=os.environ.get('ISTORE_RUNTIME_STORAGE'); instance=os.environ.get('ISTORE_RUNTIME_ID')
+ if shared and instance:
+  os.environ['npm_config_libc']='glibc'
+  preload=str(Path(shared)/'environments'/instance/'node-loader.cjs')
+ else: preload=None
  if args[:1]==['--require']: args=args[2:]
  if args==['--version']: print('v24.22.1'); finish()
  if args and args[0].endswith('runtime-check.cjs') and args[1]=='node':
@@ -91,8 +140,10 @@ elif name in ('node','node.real'):
   print('24.22.1'); finish()
  if args and args[0].endswith('runtime-check.cjs') and args[1]=='metadata' and flag('REUSE_ENGINE_FAIL') and (Path(sys.argv[0]).parent/'reused').exists(): finish(61)
  actual_args=sys.argv[1:] if sys.argv[1:2]==['--require'] else args
- os.execv(os.environ['MOCK_REAL_NODE'],[os.environ['MOCK_REAL_NODE']]+actual_args)
+ os.execv(os.environ['MOCK_REAL_NODE'],[os.environ['MOCK_REAL_NODE']]+(['--require',preload] if preload and actual_args[:1]!=['--require'] else [])+actual_args)
 elif name == 'npm':
+ event('npm-raw',args)
+ if args[:1]==['--cache']: args=args[2:]
  event('npm',args)
  event('npm-libc',os.environ.get('npm_config_libc'))
  if args==['--version']: print('11.12.1'); finish()
@@ -186,7 +237,7 @@ class Device:
         self.env = {**os.environ, 'MOCK_ROOT':str(self.root), 'MOCK_REAL_NODE':str(REAL_NODE),
                     'MOCK_BASE':str(self.base),
                     'MOCK_ALIVE_PID':str(os.getpid()), 'PATH':str(self.bin)+':'+os.environ['PATH']}
-        for name in ['uci','uname','ldd','df','stat','id','ip','sleep','ubus','jsonfilter','lua','curl','ks-cli','openclawmgr']:
+        for name in ['uci','uname','ldd','df','stat','id','ip','sleep','ubus','jsonfilter','lua','curl','ks-cli','openclawmgr','chown','mise-runtime']:
             self.exe(self.bin/name, MOCK)
         if os.environ.get('OPENCLAWMGR_TEST_BUSYBOX'):
             for name in ['mv','cp','ln','readlink','setsid']:
@@ -198,6 +249,7 @@ class Device:
         (node_tree/'bin/npm').symlink_to('../lib/node_modules/npm/bin/npm-cli.js')
         (npm.parent.parent/'node_modules').mkdir()
         (npm.parent.parent/'node_modules/semver').symlink_to(SEMVER)
+        shutil.copyfile(APP.parent/'mise/mise-runtime/files/node-loader.cjs',node_tree/'node-loader.cjs')
         with tarfile.open(self.root/'node.tar.xz','w:xz') as tar:
             tar.add(node_tree,arcname=node_tree.name)
         digest = hashlib.sha256((self.root/'node.tar.xz').read_bytes()).hexdigest()
@@ -213,6 +265,7 @@ class Device:
         for file in [self.entry, self.share/'install-runtime.sh', self.share/'openclawmgr-cli.sh', self.share/'cli-bin/npm', self.share/'npm-env.sh']:
             text=file.read_text().replace('/usr/share/openclawmgr-glibc',str(self.glibc)).replace('/usr/share/openclawmgr',str(self.share))
             text=text.replace('/etc/init.d/openclawmgr',str(self.bin/'openclawmgr'))
+            text=text.replace('/usr/bin/lua',str(self.bin/'lua'))
             text=text.replace('/tmp/openclawmgr-installer.lock',str(self.root/'lock'))
             text=text.replace(':/usr/sbin:/usr/bin:/sbin:/bin',f':{self.bin}:/usr/sbin:/usr/bin:/sbin:/bin')
             text=text.replace('for source in "$old_node" /usr;', 'for source in "$old_node" /nonexistent-system-node;')
@@ -295,6 +348,19 @@ class InstallationTests(unittest.TestCase):
         self.assertTrue(txn.exists())
         self.assertFalse((backup/'failed-data').exists())
 
+    def test_disabled_install_checks_gateway_and_finishes_stopped(self):
+        d=self.device; self.ok(d.run())
+        self.assertFalse((d.root/'running').exists())
+        self.assertTrue(any(k=='runtime-client' and v[:3]==['as-app',str(d.base),'cli'] for k,v in d.events()))
+        self.assertFalse(any(k=='service' and v==['enable'] for k,v in d.events()))
+
+    def test_disabled_install_cannot_commit_an_unhealthy_gateway(self):
+        d=self.device; result=d.run(HEALTH_FAIL=1)
+        self.assertNotEqual(result.returncode,0)
+        self.assertFalse((d.base/'current').exists())
+        self.assertFalse((d.root/'running').exists())
+        self.assertTrue((d.root/'SharedRuntime/environments/fixture-sdk').is_dir())
+
     def test_install_is_idempotent(self):
         d=self.device; self.ok(d.run()); current=(d.base/'current').readlink()
         self.ok(d.run()); self.assertEqual((d.base/'current').readlink(),current)
@@ -316,33 +382,27 @@ class InstallationTests(unittest.TestCase):
         d=self.device; self.assertNotEqual(d.run(BAD_ARCHIVE=1).returncode,0)
         self.assertFalse((d.base/'current').exists())
 
-    def test_corrupt_cached_archive_is_redownloaded(self):
+    def test_legacy_node_cache_is_not_used_to_provision_shared_sdk(self):
         d=self.device; cache=d.base/'npm-cache'; cache.mkdir()
         (cache/'node-24.22.1-x64-glibc.tar.xz').write_bytes(b'old-invalid-cache')
-        self.ok(d.run()); self.assertTrue(any(k=='curl' for k,v in d.events()))
+        self.ok(d.run()); self.assertFalse(any(k=='curl' for k,v in d.events()))
+        self.assertTrue(any(k=='runtime-plan' for k,v in d.events()))
 
-    def test_platform_urls(self):
-        for arch, musl, artifact, host in [
-            ('aarch64',1,'linux-arm64.tar.xz','nodejs.org'),
-            ('aarch64',0,'linux-arm64.tar.xz','nodejs.org'),
-            ('x86_64',1,'linux-x64.tar.xz','nodejs.org'),
-            ('x86_64',0,'linux-x64.tar.xz','nodejs.org')]:
-            with self.subTest(arch=arch,musl=musl):
-                d=Device(); self.addCleanup(d.close); self.ok(d.run(ARCH=arch,MUSL=musl))
-                urls=[v[-1] for k,v in d.events() if k=='curl']
-                self.assertIn(artifact,urls[0]); self.assertIn(host,urls[0])
+    def test_platforms_use_the_public_runtime_policy(self):
+        for arch in ('aarch64','x86_64'):
+            with self.subTest(arch=arch):
+                d=Device(); self.addCleanup(d.close); self.ok(d.run(ARCH=arch,MUSL=1))
+                plans=[v for k,v in d.events() if k=='runtime-plan']
+                self.assertEqual(plans,[{'source':'origin','version':'24.22.1','abi':'glibc'}])
+                self.assertFalse(any(k=='curl' for k,v in d.events()))
 
-    def test_missing_glibc_package_fails_before_network(self):
-        d=self.device; shutil.rmtree(d.glibc)
-        result=d.run()
-        self.assertNotEqual(result.returncode,0)
-        self.assertIn('private glibc runtime',result.stdout)
-        self.assertFalse(d.events())
+    def test_private_glibc_package_is_no_longer_required(self):
+        d=self.device; shutil.rmtree(d.glibc); self.ok(d.run())
+        self.assertTrue((d.base/'current/runtime.json').is_file())
 
-    def test_corrupt_glibc_package_fails_before_network(self):
-        d=self.device; (d.glibc/'SOURCE').write_text('corrupt')
-        self.assertNotEqual(d.run().returncode,0)
-        self.assertFalse(d.events())
+    def test_corrupt_retired_private_library_does_not_replace_public_library(self):
+        d=self.device; (d.glibc/'SOURCE').write_text('corrupt'); self.ok(d.run())
+        self.assertEqual(json.loads((d.base/'current/runtime.json').read_text())['library'],'fixture-library')
 
     def test_committed_node_wrapper_survives_relocation_and_fork(self):
         d=self.device; self.ok(d.run())
@@ -353,17 +413,16 @@ class InstallationTests(unittest.TestCase):
         code="const c=require('node:child_process').fork(process.argv[1],[],{stdio:['ignore','inherit','inherit','ipc']});c.on('message',m=>console.log(m));c.on('exit',n=>{process.exitCode=n;});"
         r=subprocess.run([str(node),'-e',code,str(child)],env=env,text=True,capture_output=True,timeout=10)
         self.ok(r)
-        self.assertIn('/releases/',r.stdout)
+        self.assertIn('/SharedRuntime/',r.stdout)
         self.assertNotIn('/.install.',r.stdout)
 
-    def test_runtime_package_update_keeps_previous_glibc_isolated(self):
-        d=self.device; self.ok(d.run())
-        (d.glibc/'SOURCE').write_text('fixture-glibc-updated')
-        manifest=''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+p.name+'\n' for p in sorted(d.glibc.iterdir()) if p.name!='SHA256SUMS')
-        (d.glibc/'SHA256SUMS').write_text(manifest)
+    def test_upgrade_preserves_exact_public_binding_without_copying_sdk(self):
+        d=self.device; self.ok(d.run()); before=(d.base/'current/runtime.json').read_bytes()
         self.ok(d.run('upgrade'))
-        self.assertEqual((d.base/'current/node/glibc/SOURCE').read_text(),'fixture-glibc-updated')
-        self.assertEqual((d.base/'previous/node/glibc/SOURCE').read_text(),'fixture-glibc')
+        self.assertEqual((d.base/'current/runtime.json').read_bytes(),before)
+        self.assertEqual((d.base/'previous/runtime.json').read_bytes(),before)
+        self.assertFalse((d.base/'node/bin/node.real').exists())
+        self.assertTrue((d.root/'SharedRuntime/environments/fixture-sdk/bin/node.real').is_file())
 
     def test_musl_host_forces_glibc_optional_dependencies(self):
         d=self.device; self.ok(d.run(MUSL=1))
@@ -375,29 +434,29 @@ class InstallationTests(unittest.TestCase):
 
     def test_unsupported_architecture_fails_before_network(self):
         d=self.device; self.assertNotEqual(d.run(ARCH='mips').returncode,0)
-        self.assertFalse(d.events())
+        self.assertFalse(any(k in ('curl','ks-cli','npm','runtime-plan','service') for k,v in d.events()))
 
     def test_insufficient_space_fails_before_network(self):
         d=self.device; self.assertNotEqual(d.run(NO_SPACE=1).returncode,0)
-        self.assertFalse(d.events())
+        self.assertFalse(any(k in ('curl','ks-cli','npm','runtime-plan','service') for k,v in d.events()))
 
     def test_openwrt_df_without_inode_option_uses_stat(self):
         self.ok(self.device.run(NO_DF_INODES=1))
 
     def test_insufficient_inodes_fails_before_network(self):
         d=self.device; self.assertNotEqual(d.run(NO_INODES=1).returncode,0)
-        self.assertFalse(d.events())
+        self.assertFalse(any(k in ('curl','ks-cli','npm','runtime-plan','service') for k,v in d.events()))
 
-    def test_acceleration_uses_ks_cli_and_custom_admin_port(self):
+    def test_acceleration_delegates_acquisition_to_public_runtime(self):
         d=self.device; self.ok(d.run(ACCELERATED=1))
         calls=[v for k,v in d.events() if k=='ks-cli']
-        self.assertTrue(any(v[0]=='download' and 'http://127.0.0.1:54321' in v for v in calls))
-        self.assertTrue(any(v[:2]==['npm','install'] for v in calls))
+        self.assertIn({'source':'ks-cli','version':'24.22.1','abi':'glibc'},[v for k,v in d.events() if k=='runtime-plan'])
+        self.assertTrue(any(k=='npm'and v[0]=='install'for k,v in d.events()))
         self.assertFalse(any(k=='curl' for k,v in d.events()))
 
     def test_disabled_accelerator_is_not_started(self):
         d=self.device; self.assertNotEqual(d.run(ACCELERATED=1,KS_ENABLED=0).returncode,0)
-        self.assertFalse(d.events())
+        self.assertFalse(any(k in ('curl','ks-cli','npm','runtime-plan','service') for k,v in d.events()))
 
     def test_npm_failure_preserves_old_runtime_and_service(self):
         d=self.device; d.legacy(running=True); result=d.run('upgrade',NPM_FAIL=1)
@@ -463,11 +522,11 @@ class InstallationTests(unittest.TestCase):
         self.assertEqual((d.base/'previous').readlink(),first)
         self.assertFalse(list(d.base.glob('.install.*')))
 
-    def test_reused_node_that_fails_engines_falls_back_to_pinned_node(self):
-        d=self.device; self.ok(d.run()); (d.base/'node/bin/reused').write_text('older-node'); (d.root/'events').unlink()
-        self.ok(d.run('upgrade',REUSE_ENGINE_FAIL=1))
-        self.assertFalse((d.base/'node/bin/reused').exists())
-        self.assertEqual(len([v for k,v in d.events() if k=='npm' and v[0]=='view']),1)
+    def test_engine_failure_does_not_substitute_another_runtime(self):
+        d=self.device; self.ok(d.run()); before=(d.base/'current/runtime.json').read_bytes()
+        self.assertNotEqual(d.run('upgrade',BAD_ENGINES=1).returncode,0)
+        self.assertEqual((d.base/'current/runtime.json').read_bytes(),before)
+        self.assertTrue((d.root/'SharedRuntime/environments/fixture-sdk').is_dir())
 
     def test_invalid_runtime_and_missing_integrity_prevent_activation(self):
         d=self.device
@@ -494,7 +553,7 @@ class InstallationTests(unittest.TestCase):
         result=subprocess.run([*TEST_SHELL,str(d.share/'openclawmgr-cli.sh'),'cli-env'],
             env={**d.env,'MOCK_ACCELERATED':'1'},input='npm --version\nexit\n',capture_output=True,text=True,timeout=12)
         self.ok(result)
-        self.assertIn(['ks-cli',['npm','--version']],d.events())
+        self.assertTrue(any(k=='npm'and v==['--version']for k,v in d.events()))
         self.assertFalse((d.base/'data/.gitconfig').exists())
 
     def test_npm_git_dependencies_use_explicit_adapter(self):
@@ -532,7 +591,9 @@ class InstallationTests(unittest.TestCase):
     def test_uninstall_removes_managed_runtime_but_retains_data(self):
         d=self.device; self.ok(d.run()); self.ok(d.run('uninstall'))
         self.assertFalse((d.base/'releases').exists())
+
         self.assertTrue((d.base/'data').exists())
+        self.assertTrue((d.root/'SharedRuntime/environments/fixture-sdk').is_dir())
 
     def test_cancellation_joins_npm_children_and_preserves_old_runtime(self):
         d=self.device; d.legacy(running=True)
@@ -591,6 +652,41 @@ class RuntimeChecks(unittest.TestCase):
     def test_wrong_libc_is_rejected(self):
         self.assertNotEqual(self.check('node','x64','musl').returncode,0)
 
+    def shared_fixture(self):
+        temporary=tempfile.TemporaryDirectory(prefix='openclawmgr-shared-')
+        self.addCleanup(temporary.cleanup)
+        root=Path(temporary.name); storage=root/'Runtime'; sdk=storage/'environments/fixed-sdk'
+        (sdk/'bin').mkdir(parents=True); (sdk/'bin/node.real').symlink_to(REAL_NODE)
+        (sdk/'lib/node_modules').mkdir(parents=True)
+        (sdk/'lib/node_modules/npm').symlink_to(REAL_NPM.resolve().parent.parent)
+        release=root/'release'; release.mkdir()
+        (release/'runtime.json').write_text(json.dumps({'provider':'mise-runtime','instance':'fixed-sdk',
+            'storage_root':str(storage),'library':'fixed-lib','library_manifest_sha256':'a'*64}))
+        env={**os.environ,'ISTORE_RUNTIME_STORAGE':str(storage),'ISTORE_RUNTIME_ID':'fixed-sdk'}
+        return root,release,env
+
+    def test_metadata_uses_shared_npm_semver_even_when_app_npm_is_a_shell_wrap(self):
+        root,release,env=self.shared_fixture()
+        wrapper=root/'npm-wrap'; wrapper.write_text('#!/bin/sh\nexit 99\n')
+        metadata=root/'metadata.json'; metadata.write_text(json.dumps({'name':'openclaw','version':'2026.3.28',
+            'engines':{'node':'>=24'},'dist':{'integrity':'sha512-YQ=='}}))
+        r=subprocess.run([str(REAL_NODE),str(SHARE/'runtime-check.cjs'),'metadata',str(metadata),str(wrapper),str(root/'resolved.json')],env=env,capture_output=True,text=True)
+        self.assertEqual(r.returncode,0,r.stderr)
+        self.assertEqual(json.loads((root/'resolved.json').read_text())['version'],'2026.3.28')
+
+    def test_receipt_records_exact_shared_binding_and_rejects_other_instance(self):
+        root,release,env=self.shared_fixture()
+        metadata=root/'metadata.json'; metadata.write_text(json.dumps({'version':'2026.3.28'}))
+        native=root/'native.json'; native.write_text('{}')
+        output=release/'receipt.json'
+        command=[str(REAL_NODE),str(SHARE/'runtime-check.cjs'),'receipt',str(metadata),'11.19.1','stable','origin','mise-runtime:fixed-sdk','',str(output),str(native)]
+        r=subprocess.run(command,env=env,capture_output=True,text=True);self.assertEqual(r.returncode,0,r.stderr)
+        receipt=json.loads(output.read_text());self.assertEqual(receipt['runtime']['kind'],'mise-runtime')
+        self.assertEqual(receipt['runtime']['instance'],'fixed-sdk');self.assertEqual(output.stat().st_mode&0o777,0o644)
+        ref=json.loads((release/'runtime.json').read_text());ref['instance']='other-sdk';(release/'runtime.json').write_text(json.dumps(ref))
+        output.unlink();r=subprocess.run(command,env=env,capture_output=True,text=True)
+        self.assertNotEqual(r.returncode,0);self.assertFalse(output.exists())
+
     def sqlite_vec_fixture(self, version):
         temporary=tempfile.TemporaryDirectory(prefix='openclawmgr-native-')
         self.addCleanup(temporary.cleanup)
@@ -614,6 +710,17 @@ class RuntimeChecks(unittest.TestCase):
         self.assertNotEqual(result.returncode,0)
         self.assertIn('unsupported native symbol',result.stderr)
 
+    def test_gateway_loader_failure_is_not_hidden_by_direct_extension_loading(self):
+        global_dir,metadata=self.sqlite_vec_fixture('2026.3.28')
+        pkg=global_dir/'lib/node_modules/openclaw'
+        manifest=json.loads((pkg/'package.json').read_text())
+        manifest['exports']={'./plugin-sdk/memory-core-host-engine-storage':'./memory-host.mjs'}
+        (pkg/'package.json').write_text(json.dumps(manifest))
+        (pkg/'memory-host.mjs').write_text("export async function loadSqliteVecExtension() { return {ok:false,error:'fixture Gateway loader refused extension'}; }")
+        result=self.check('native',global_dir,metadata)
+        self.assertNotEqual(result.returncode,0)
+        self.assertIn('fixture Gateway loader refused extension',result.stderr)
+
     def pty_fixture(self, version):
         global_dir,metadata=self.sqlite_vec_fixture(version)
         pkg=global_dir/'lib/node_modules/openclaw'
@@ -629,6 +736,18 @@ class RuntimeChecks(unittest.TestCase):
         capabilities=json.loads(result.stdout)
         self.assertFalse(capabilities['nodePty']['available'])
         self.assertTrue(capabilities['childProcess']['available'])
+
+    def test_transitive_matrix_native_failure_is_reported_as_optional(self):
+        global_dir,metadata=self.sqlite_vec_fixture('2026.3.28')
+        pkg=global_dir/'lib/node_modules/openclaw'
+        (pkg/'package.json').write_text(json.dumps({'name':'openclaw','version':'2026.3.28','dependencies':{}}))
+        module=pkg/'node_modules/@matrix-org/matrix-sdk-crypto-nodejs'; module.mkdir(parents=True)
+        (module/'index.js').write_text("throw new Error('fixture missing Matrix native artifact');")
+        result=self.check('native',global_dir,metadata)
+        self.assertEqual(result.returncode,0,result.stderr)
+        capability=json.loads(result.stdout)['matrix']
+        self.assertFalse(capability['available'])
+        self.assertIn('fixture missing Matrix native artifact',capability['error'])
 
     def test_unreviewed_version_cannot_silently_skip_pty(self):
         global_dir,metadata=self.pty_fixture('2099.1.1')
@@ -654,9 +773,10 @@ class RuntimeChecks(unittest.TestCase):
 
     def test_openwrt_package_contract(self):
         recipe=(APP/'luci-app-openclawmgr/Makefile').read_text()
-        for dep in ['+openclawmgr-glibc','+ks-cli','+coreutils-timeout','+coreutils-stat','+libstdcpp','+libatomic','+git-http']:
+        for dep in ['+mise-runtime','+ks-cli','+coreutils-timeout','+coreutils-stat','+libstdcpp','+libatomic','+git-http']:
             self.assertIn(dep,recipe)
-        self.assertIn('PKG_RELEASE:=3',(APP/'app-meta-openclawmgr/Makefile').read_text())
+        self.assertIn('PKG_RELEASE:=4',(APP/'app-meta-openclawmgr/Makefile').read_text())
+        self.assertNotIn('+openclawmgr-glibc',recipe)
         self.assertTrue(os.access(SHARE/'cli-bin/npm',os.X_OK))
         self.assertTrue(os.access(SHARE/'npm-git.sh',os.X_OK))
 
