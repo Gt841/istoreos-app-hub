@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "opencode",
+  "name": "OpenCode",
+  "icon": "logo.svg",
+  "staticRoot": "/usr/share/opencode/www",
+  "desktop": {
+    "mode": "iframe",
+    "target": {
+      "scheme": "http",
+      "hostMode": "request-host",
+      "port": {
+        "default": 7685,
+        "keys": { "uci": "opencode.main.terminal_port" }
+      },
+      "path": "/apps/opencode/"
+    },
+    "access": {
+      "scope": "lan",
+      "blockedTitle": "请在局域网内打开 OpenCode",
+      "blockedMessage": "OpenCode 终端只通过设备的认证应用网关提供。"
+    }
+  },
+  "standalone": {
+    "basePath": "/apps/opencode/",
+    "externalOpen": {
+      "enabled": true,
+      "label": "打开 OpenCode 终端"
+    }
+  },
+  "auth": { "mode": "default" },
+  "backend": {
+    "type": "http",
+    "scheme": "http",
+    "host": "127.0.0.1",
+    "portFromUci": "opencode.main.terminal_port",
+    "defaultPort": 7685,
+    "upstreamBasePath": "/apps/opencode/",
+    "pathMode": "preserve",
+    "proxyMode": "app-base"
+  },
+  "window": { "width": 1180, "height": 760, "singleton": true },
+  "capabilities": ["coding-agent", "terminal", "development"],
+  "categories": ["development", "ai"]
+}

@@ -96,7 +96,7 @@ implementations:
 | Application ID | Runtime package | LuCI package | Notes |
 | --- | --- | --- | --- |
 | `kai` | `kai` | `luci-app-kaiplus` classic tab | optional classic runtime; `kai` also directly uses `luci-lib-linkeaseauth` for its LuCI authentication middleware; standalone `luci-app-kai` is retired |
-| `dockermanager` | `dockermanager` | `luci-app-dockermanager` | Unix-first; direct TCP fallback is user-controlled |
+| `dockermanager` | `dockermanager` | `luci-app-dockermanager` | Unix-only; no application TCP listener or fallback |
 | `fastnet` | `fastnet` | `luci-app-fastnet` | browser-direct target still uses shared launch/auth resolution |
 | `kspeeder` | `istoreenhance` | `luci-app-istoreenhance` | package names are historical; manifest application ID remains `kspeeder` |
 | `agentflow` | `agentflow` | `luci-app-agentflow` | app-base service using the common launch route |
@@ -188,29 +188,30 @@ IDs are lower-case letters, digits, `_`, or `-`, begin with a letter or digit,
 and are at most 64 characters. The manifest supplies the standalone `/apps`
 path and backend transport data. No central controller switch is required.
 
-For Unix-first applications with an optional TCP fallback, declare UCI-backed
-values:
+New managed applications can use a Unix-only backend. Docker Manager does so:
 
 ```json
 {
   "schemaVersion": 1,
-  "id": "example",
-  "standalone": { "basePath": "/apps/example/" },
+  "id": "dockermanager",
+  "standalone": { "basePath": "/apps/dockermanager/" },
   "backend": {
+    "type": "http",
     "transport": "unix",
     "values": {
-      "externalPortEnabled": {
-        "default": false,
-        "keys": { "uci": "example.@example[0].external_port_enabled" }
-      },
-      "port": {
-        "default": 8080,
-        "keys": { "uci": "example.@example[0].port" }
+      "socketPath": {
+        "default": "/var/run/dockermanager.sock",
+        "keys": { "uci": "dockermanager.@dockermanager[0].socket_path" }
       }
     }
   }
 }
 ```
+
+Docker Manager's OpenWrt init always selects `unix`; old `listen_mode`,
+`external_port_enabled`, `port`, and `bind_addr` settings have no effect and
+are removed during package upgrade. LuCI exposes no TCP settings. Its Open
+button uses `linkease_apps/open?id=dockermanager`; it never constructs a URL.
 
 Legacy TCP applications may use `portFromUci` and `defaultPort`. If their
 direct listener serves a different path from the `/apps` route, they declare
@@ -232,8 +233,34 @@ The decision order is fixed:
 
 1. use `/apps/<id>/` when uhttpd proxy support, its mapping, and the active
    entry worker are available;
-2. otherwise use an explicitly enabled external port;
-3. otherwise report the registered application as unavailable.
+2. otherwise use `http://<request-host>:<shared-port>/apps/<id>/` when the
+   running supervisor reports a LAN-capable listener (normally port 19290);
+3. otherwise use an application's explicitly supported external listener;
+4. otherwise report the registered application as unavailable.
+
+Both shared entry paths retain `mode=apps`. `transport=proxy` or `transport=lan`
+explains the chosen route. The running state `listen` is authoritative, not a
+pending UCI value. Old workers without that field cannot advertise LAN access.
+Default-protected and passthrough authentication retain their existing owners.
+Docker Manager has no external listener and never falls back to port 8192.
+
+The package default is `0.0.0.0:19290`, accessible under the device's LAN firewall
+policy; installation adds no WAN firewall allowance. Upgrades migrate only the
+old shipped `127.0.0.1:19290` default; custom loopback binds remain private.
+Ordinary uhttpd needs no proxy patch. The defaults script installs the `/apps`
+mapping only when proxy support is present.
+
+Direct entry workers resolve the LuCI login port from committed uhttpd
+`listen_http`/`listen_https` settings, preserving the browser hostname. An
+optional `linkease_app_entry.main.luci_origin` overrides it for an explicit
+public deployment origin. Relative LuCI links from passthrough apps are
+navigation redirects, with an absolute Apps return URL; the entry does not
+proxy LuCI or submit passwords. A same-host login bridge retains `/apps` cookies
+across ports. Different hostnames need an explicit authentication integration.
+The direct entry currently serves HTTP; HTTPS LuCI can be used for top-level
+login navigation, but that does not make the application listener HTTPS.
+Remote tunnels must explicitly expose the shared entry; a LuCI-only tunnel
+cannot reach an unpublished LAN port.
 
 `open` and `status` are read-only. A GET never changes UCI, enables a port,
 starts an application, or switches a worker. Browser launch passes through the

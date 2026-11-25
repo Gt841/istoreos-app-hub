@@ -68,6 +68,16 @@ apps:
         meta:
             - local: apps/chinesesubfinder/app-meta-chinesesubfinder
               remote: openwrt-app-meta/applications/app-meta-chinesesubfinder
+    claude-code:
+        services:
+            - local: apps/claude-code/claude-code
+              remote: openwrt-app-actions/applications/claude-code
+        luci:
+            - local: apps/claude-code/luci-app-claude-code
+              remote: openwrt-app-actions/applications/luci-app-claude-code
+        meta:
+            - local: apps/claude-code/app-meta-claude-code
+              remote: openwrt-app-meta/applications/app-meta-claude-code
     clouddrive2:
         services: []
         luci:
@@ -84,6 +94,36 @@ apps:
         meta:
             - local: apps/codeserver/app-meta-codeserver
               remote: openwrt-app-meta/applications/app-meta-codeserver
+    codex:
+        services:
+            - local: apps/codex/codex
+              remote: openwrt-app-actions/applications/codex
+        luci:
+            - local: apps/codex/luci-app-codex
+              remote: openwrt-app-actions/applications/luci-app-codex
+        meta:
+            - local: apps/codex/app-meta-codex
+              remote: openwrt-app-meta/applications/app-meta-codex
+    kimi:
+        services:
+            - local: apps/kimi/kimi
+              remote: openwrt-app-actions/applications/kimi
+        luci:
+            - local: apps/kimi/luci-app-kimi
+              remote: openwrt-app-actions/applications/luci-app-kimi
+        meta:
+            - local: apps/kimi/app-meta-kimi
+              remote: openwrt-app-meta/applications/app-meta-kimi
+    opencode:
+        services:
+            - local: apps/opencode/opencode
+              remote: openwrt-app-actions/applications/opencode
+        luci:
+            - local: apps/opencode/luci-app-opencode
+              remote: openwrt-app-actions/applications/luci-app-opencode
+        meta:
+            - local: apps/opencode/app-meta-opencode
+              remote: openwrt-app-meta/applications/app-meta-opencode
     ddnsto:
         services:
             - local: apps/ddnsto/ddnsto

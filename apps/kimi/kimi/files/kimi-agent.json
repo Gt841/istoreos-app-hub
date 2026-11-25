@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "kimi",
+  "name": "Moonshot AI Kimi Code",
+  "kind": "cli",
+  "command": "/usr/bin/kimi",
+  "statusCommand": ["/usr/libexec/kimi-runtime", "status"],
+  "ownerPackage": "kimi",
+  "workspaceMode": "explicit",
+  "capabilities": ["interactive", "exec", "resume"]
+}

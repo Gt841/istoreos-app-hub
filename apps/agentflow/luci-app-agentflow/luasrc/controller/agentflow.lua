@@ -10,6 +10,13 @@ local AGENTS = {
 	{ id = "reasonix", package = "reasonix", command = "reasonix" }
 }
 
+local EXTERNAL_AGENTS = {
+	codexcli = { helper = "/usr/libexec/codex-runtime", name = "Codex" },
+	["claude-code"] = { helper = "/usr/libexec/claude-runtime", name = "Claude Code" },
+	opencode = { helper = "/usr/libexec/opencode-runtime", name = "OpenCode" },
+	kimi = { helper = "/usr/libexec/kimi-runtime", name = "Kimi Code" }
+}
+
 function index()
 	local status = entry({"admin", "services", "agentflow_status"}, call("agentflow_status"))
 	status.acl_depends = { "luci-app-agentflow" }
@@ -115,6 +122,11 @@ function agentflow_agent_install()
 	local agent = http.formvalue("agent") or ""
 	if not supported_agents[agent] then
 		write_json({ ok = false, error = "unsupported agent" })
+		return
+	end
+	local external = EXTERNAL_AGENTS[agent]
+	if external and fs.access(external.helper, "x") then
+		write_json({ ok = false, error = "Install or manage " .. external.name .. " from its independent plugin" })
 		return
 	end
 	if not fs.access("/etc/init.d/tasks") then

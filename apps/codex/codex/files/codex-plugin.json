@@ -28,7 +28,7 @@
       "label": "打开 Codex 终端"
     }
   },
-  "auth": { "mode": "passthrough" },
+  "auth": { "mode": "default" },
   "backend": {
     "type": "http",
     "scheme": "http",

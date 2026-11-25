@@ -12,7 +12,7 @@
     "website": "https://agentflow.geili.ai/",
     "author": "geiliai",
     "version": "0.3.5",
-    "release": "5",
+    "release": "7",
     "depends": "+agentflow +luci-app-agentflow",
     "luci_entry": "/cgi-bin/luci/admin/services/agentflow",
     "meta_dir": "apps/agentflow/app-meta-agentflow"
@@ -103,6 +103,23 @@
     "meta_dir": "apps/chinesesubfinder/app-meta-chinesesubfinder"
   },
   {
+    "id": "claude-code",
+    "title": "Claude Code",
+    "description": "在 iStoreOS 上安装并通过浏览器终端运行 Anthropic Claude Code 编码代理。",
+    "description_en": "Install and run Anthropic Claude Code on iStoreOS with a protected browser terminal.",
+    "tags": [
+      "ai",
+      "development"
+    ],
+    "website": "https://code.claude.com/docs/",
+    "author": "LinkEase",
+    "version": "2.1.326",
+    "release": "1",
+    "depends": "+claude-code +luci-app-claude-code +luci-app-mise",
+    "luci_entry": "/cgi-bin/luci/admin/services/claude",
+    "meta_dir": "apps/claude-code/app-meta-claude-code"
+  },
+  {
     "id": "clouddrive2",
     "title": "CloudDrive2",
     "description": "CloudDrive 是一个强大的多云盘管理工具，为用户提供包含云盘本地挂载的一站式的多云盘解决方案。",
@@ -135,6 +152,23 @@
     "depends": "+luci-app-codeserver +luci-i18n-codeserver-zh-cn +docker-deps",
     "luci_entry": "/cgi-bin/luci/admin/services/codeserver",
     "meta_dir": "apps/codeserver/app-meta-codeserver"
+  },
+  {
+    "id": "codex",
+    "title": "Codex",
+    "description": "在 iStoreOS 上安装并通过浏览器终端运行 OpenAI Codex 编码代理。",
+    "description_en": "Install and run OpenAI Codex on iStoreOS with a protected browser terminal.",
+    "tags": [
+      "ai",
+      "development"
+    ],
+    "website": "https://developers.openai.com/codex/cli",
+    "author": "LinkEase",
+    "version": "0.172.0",
+    "release": "1",
+    "depends": "+codex +luci-app-codex +luci-app-mise",
+    "luci_entry": "/cgi-bin/luci/admin/services/codex",
+    "meta_dir": "apps/codex/app-meta-codex"
   },
   {
     "id": "ddnsto",
@@ -180,7 +214,7 @@
     "website": "https://github.com/linkease/linkease-docker-manager",
     "author": "linkease",
     "version": "0.1.2",
-    "release": "5",
+    "release": "6",
     "depends": "+dockermanager +luci-app-dockermanager",
     "luci_entry": "/cgi-bin/luci/admin/services/dockermanager",
     "meta_dir": "apps/dockermanager/app-meta-dockermanager"
@@ -264,7 +298,7 @@
     "website": "https://www.koolcenter.com/t/topic/9148",
     "author": "xiaobao",
     "version": "0.8.10",
-    "release": "22",
+    "release": "24",
     "depends": "+fastnet +luci-app-fastnet +luci-i18n-fastnet-zh-cn",
     "luci_entry": "/cgi-bin/luci/admin/services/fastnet",
     "meta_dir": "apps/fastnet/app-meta-fastnet"
@@ -533,10 +567,27 @@
     "website": "https://ai.koolcenter.com",
     "author": "koolcenter",
     "version": "1.0.22",
-    "release": "7",
+    "release": "11",
     "depends": "+luci-app-kaiplus +kaiplus +luci-i18n-kaiplus-zh-cn",
     "luci_entry": "/cgi-bin/luci/admin/services/kaiplus",
     "meta_dir": "apps/kaiplus/app-meta-kaiplus"
+  },
+  {
+    "id": "kimi",
+    "title": "Kimi Code",
+    "description": "在 iStoreOS 上安装并通过浏览器终端运行 Moonshot AI Kimi Code 编码代理。",
+    "description_en": "Install and run Moonshot AI Kimi Code on iStoreOS with a protected browser terminal.",
+    "tags": [
+      "ai",
+      "development"
+    ],
+    "website": "https://www.kimi.com/code/docs/en/",
+    "author": "LinkEase",
+    "version": "2.7.3",
+    "release": "1",
+    "depends": "+kimi +luci-app-kimi +luci-app-mise",
+    "luci_entry": "/cgi-bin/luci/admin/services/kimi",
+    "meta_dir": "apps/kimi/app-meta-kimi"
   },
   {
     "id": "kodexplorer",
@@ -600,7 +651,7 @@
     "website": "https://www.linkease.com/",
     "author": "xiaobao",
     "version": "3.0.23",
-    "release": "3",
+    "release": "5",
     "depends": "+linkease-runtime-transition +linkease +linkeasefull +luci-app-linkeasefull +luci-app-linkeasefull-embed +luci-lib-linkeasefile +luci-i18n-linkeasefull-zh-cn",
     "luci_entry": "/cgi-bin/luci/admin/services/linkeasefull",
     "meta_dir": "apps/linkeasefull/app-meta-linkeasefull"
@@ -770,6 +821,23 @@
     "depends": "+luci-app-openclawmgr +luci-i18n-openclawmgr-zh-cn",
     "luci_entry": "/cgi-bin/luci/admin/services/openclawmgr",
     "meta_dir": "apps/openclawmgr/app-meta-openclawmgr"
+  },
+  {
+    "id": "opencode",
+    "title": "OpenCode",
+    "description": "在 iStoreOS 上安装并通过浏览器终端运行 OpenCode 编码代理。",
+    "description_en": "Install and run OpenCode on iStoreOS with a protected browser terminal.",
+    "tags": [
+      "ai",
+      "development"
+    ],
+    "website": "https://opencode.ai/docs/",
+    "author": "LinkEase",
+    "version": "2.4.1",
+    "release": "1",
+    "depends": "+opencode +luci-app-opencode +luci-app-mise",
+    "luci_entry": "/cgi-bin/luci/admin/services/opencode",
+    "meta_dir": "apps/opencode/app-meta-opencode"
   },
   {
     "id": "openwebui",

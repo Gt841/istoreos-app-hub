@@ -16,6 +16,9 @@ local calls,writes={},{}
 local status,response
 local form={agent='codexcli',token='fixture-token'}
 if scenario=='invalid-agent'then form.agent='codexcli; touch unexpected'end
+if scenario=='external-claude'then form.agent='claude-code'end
+if scenario=='external-opencode'then form.agent='opencode'end
+if scenario=='external-kimi'then form.agent='kimi'end
 if scenario=='bad-token'then form.token='bad'end
 if scenario=='recover'then form.operation='recover'end
 package.loaded['luci.http']={
@@ -30,7 +33,14 @@ package.loaded['luci.util']={
  shellquote=function(v)return "'"..v:gsub("'","'\\''").."'"end
 }
 package.loaded['nixio.fs']={
- access=function()return true end,lstat=function()return scenario=='existing-script'and{}or nil end,
+ access=function(path)
+  if path=='/usr/libexec/codex-runtime'then return scenario=='external-codex'end
+  if path=='/usr/libexec/claude-runtime'then return scenario=='external-claude'end
+  if path=='/usr/libexec/opencode-runtime'then return scenario=='external-opencode'end
+  if path=='/usr/libexec/kimi-runtime'then return scenario=='external-kimi'end
+  return true
+ end,
+ lstat=function()return scenario=='existing-script'and{}or nil end,
  writefile=function(path,data)writes[#writes+1]={path=path,data=data};return true end,unlink=function()end
 }
 package.loaded.nixio={getpid=function()return 4312 end}
@@ -67,6 +77,22 @@ class ControllerBoundary(unittest.TestCase):
         self.assertFalse(value["response"]["ok"])
         self.assertFalse(value["calls"])
         self.assertFalse(value["writes"])
+
+    def test_independent_codex_plugin_owns_codex_install(self):
+        value=self.run_case("external-codex")
+        self.assertFalse(value["response"]["ok"])
+        self.assertIn("Codex from its independent plugin", value["response"]["error"])
+        self.assertFalse(value["calls"])
+        self.assertFalse(value["writes"])
+
+    def test_each_independent_plugin_owns_its_agent_install(self):
+        for scenario, name in (("external-claude", "Claude Code"), ("external-opencode", "OpenCode"), ("external-kimi", "Kimi Code")):
+            with self.subTest(scenario=scenario):
+                value = self.run_case(scenario)
+                self.assertFalse(value["response"]["ok"])
+                self.assertIn(name + " from its independent plugin", value["response"]["error"])
+                self.assertFalse(value["calls"])
+                self.assertFalse(value["writes"])
 
     def test_busy_task_does_not_overwrite_its_script(self):
         value=self.run_case("busy")

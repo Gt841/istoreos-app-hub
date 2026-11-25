@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "opencode",
+  "name": "OpenCode",
+  "kind": "cli",
+  "command": "/usr/bin/opencode",
+  "statusCommand": ["/usr/libexec/opencode-runtime", "status"],
+  "ownerPackage": "opencode",
+  "workspaceMode": "explicit",
+  "capabilities": ["interactive", "exec", "resume"]
+}

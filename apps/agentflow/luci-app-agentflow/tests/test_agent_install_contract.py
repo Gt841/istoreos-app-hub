@@ -49,6 +49,9 @@ class AgentInstallContractTest(unittest.TestCase):
         self.assertIn("runtime = state.runtime", controller)
         self.assertIn("st.agents_available", status)
         self.assertIn("item.installed === true", status)
+        self.assertIn("agentflowExternalUrls", status)
+        for route in ("codex", "claude", "opencode", "kimi"):
+            self.assertIn(f'url("admin/services/{route}")', status)
         self.assertIn("agentflow-runtime-status", status)
         self.assertIn("runtime.glibc", status)
         self.assertIn("runtime.home", status)

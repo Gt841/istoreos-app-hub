@@ -200,10 +200,26 @@ function M.status(base)
  else result.runtime.error=type(b)=='table'and b.message or tostring(b)end
  local owner=s.decode(base..'/.runtime/.install-lock/owner.json')
  result.runtime.interrupted=owner and owner.process and not R.alive(owner.process)or false
+ local external_runtimes={
+  codexcli={helper='/usr/libexec/codex-runtime',provider='codex'},
+  ['claude-code']={helper='/usr/libexec/claude-runtime',provider='claude-code'},
+  opencode={helper='/usr/libexec/opencode-runtime',provider='opencode'},
+  kimi={helper='/usr/libexec/kimi-runtime',provider='kimi'}
+ }
  for _,agent in ipairs(R.agents)do
   local item={id=agent.id,installed=false}
+  local external_runtime=external_runtimes[agent.id]
+  if external_runtime and fs.access(external_runtime.helper,'x')then
+   local rc,out=s.pipe_capture({external_runtime.helper,'status'})
+   local parsed,external=pcall(s.json.parse,out)
+   if rc~=0 or not parsed then external=nil end
+   if external then
+    item.provider=external_runtime.provider
+    if external.installed and type(external.version)=='string'then item.installed=true;item.version=external.version end
+   end
+  end
   local ok,dir,receipt=pcall(M.current,base,agent)
-  if ok then
+  if ok and not item.installed then
    local work=base..'/.runtime/work';local out=work..'/version-'..agent.id..'-'..n.getpid()
    local rc=s.run({R.helper,'exec',base,agent.id,'--version'},{output=out,timeout=5})
    local version=s.read(out)or'';fs.unlink(out)

@@ -22,7 +22,7 @@ class AgentFlowLuciOpenContractTest(unittest.TestCase):
 
         self.assertIn("+luci-lib-linkeaseauth", makefile)
         self.assertIn("+linkease-app-entry", makefile)
-        self.assertIn("PKG_RELEASE:=6", meta)
+        self.assertIn("PKG_RELEASE:=7", meta)
         self.assertIn("META_LUCI_ENTRY:=/cgi-bin/luci/admin/services/agentflow", meta)
         self.assertIn('entry({"admin", "services", "agentflow", "open"}', controller)
         self.assertIn("open.sysauth = false", controller)

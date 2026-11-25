@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=linkease-app-entry
 # This lightweight runtime is released independently from the full desktop.
 PKG_VERSION:=3.0.23
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 ARCH_HEXCODE:=
 ifeq ($(ARCH),x86_64)

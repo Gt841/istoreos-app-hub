@@ -10,8 +10,10 @@ Format: `id — title — description`
 - arcadia — Arcadia 一站式代码自动化运维平台 — 写脚本、跑定时任务、服务托管、消息聚合、AI Agent 运行基座，一个面板搞定全流程
 - baidudrive — 百度网盘 — 百度网盘 iStoreOS 版
 - chinesesubfinder — ChineseSubFinder中文字幕 — ChineseSubFinder是一个中文字幕平台。
+- claude-code — Claude Code — 在 iStoreOS 上安装并通过浏览器终端运行 Anthropic Claude Code 编码代理。
 - clouddrive2 — CloudDrive2 — CloudDrive 是一个强大的多云盘管理工具，为用户提供包含云盘本地挂载的一站式的多云盘解决方案。
 - codeserver — CodeServer — 一个在线版本的VSCode，可以在线开发。
+- codex — Codex — 在 iStoreOS 上安装并通过浏览器终端运行 OpenAI Codex 编码代理。
 - ddnsto — DDNSTO路由远程 — DDNSTO内网穿透，可以外网远程你的路由器
 - demon — 容器魔王 — 【魔王现世】为 iStoreOS 特制，收益更高。每月至高可赚「千元」，现在上线秒领「30天20%收益加成」，挂机托管自动赚米，拿到手软！替代网心云的「容器魔方」。
 - dockermanager — Docker管理 — 更简单专业的 Docker 管理器，加速更快更方便.
@@ -36,6 +38,7 @@ Format: `id — title — description`
 - jackett — Jackett — Jackett 是维护索引器抓取和翻译逻辑的单一存储库 - 消除了其他应用程序的负担。
 - jellyfin — Jellyfin私有影院 — Jellyfin是一个免费自由的媒体系统软件，可以让您方便地管理和串流您的媒体。部分机型无需配置即可支持硬件转码：Easepi ARS2；RK35xx 系列。
 - kaiplus — 酷友社KAI — 酷友社KAI 解决各种问题，加速软件安装
+- kimi — Kimi Code — 在 iStoreOS 上安装并通过浏览器终端运行 Moonshot AI Kimi Code 编码代理。
 - kodexplorer — 可道云 — 一款快捷高效的私有云和在线文档管理系统，为个人网站、企业私有云部署、网络存储、在线文档管理、在线办公等提供安全可控，简便易用、可高度定制的私有云产品。采用windows风格界面、操作习惯，无需适应即可快速上手，支持几百种常用文件格式的在线预览，可扩展易定制。
 - lanraragi — LANraragi电子书 — LANraragi是一个开源的电子书、漫画管理平台。
 - linkease — 易有云 — 易有云提供远程访问、文件管理、相册备份、文件同步和备份仓库能力。
@@ -50,6 +53,7 @@ Format: `id — title — description`
 - nextcloud — nextcloud — 数据的安全之家。根据您的设置，从任何设备访问和共享您的文件、日历、联系人、邮件等
 - oneapi — OneAPI — OneAPI 是LLM API 管理 & 分发系统，支持 OpenAI、Azure、Anthropic Claude、Google Gemini、DeepSeek。
 - openclawmgr — OpenClaw Launcher — 在 OpenWrt 上原生安装、启动并管理官方 OpenClaw。
+- opencode — OpenCode — 在 iStoreOS 上安装并通过浏览器终端运行 OpenCode 编码代理。
 - openwebui — OpenWebUI — Open WebUI 是一款可扩展、自托管的 AI 界面，能够无缝适配您的工作流程，且所有操作均可完全离线运行。
 - owntone — Owntone音乐平台 — Owntone是一个支持iTunes, AirPlay, Chromecast等的音乐串流平台。
 - penpot — Penpot设计平台 — Penpot是第一个开源的便于团队协作的在线设计平台。

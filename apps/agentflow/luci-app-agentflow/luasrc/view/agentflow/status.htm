@@ -253,6 +253,12 @@ body[theme="dark"] .agentflow-section-mark { background:rgba(93, 136, 255, .14);
 var agentflowOpenUrl = '<%=url("admin/services/agentflow/open")%>';
 var agentflowStatusUrl = '<%=url("admin/services/agentflow_status")%>';
 var agentflowAgentInstallUrl = '<%=url("admin/services/agentflow/agent_install")%>';
+var agentflowExternalUrls = {
+	codexcli: '<%=url("admin/services/codex")%>',
+	'claude-code': '<%=url("admin/services/claude")%>',
+	opencode: '<%=url("admin/services/opencode")%>',
+	kimi: '<%=url("admin/services/kimi")%>'
+};
 var agentflowCsrfToken = (window.taskd && window.taskd.csrfToken) || '';
 var agentflowSelectedAgent = '';
 var agentflowAgentNames = {
@@ -315,12 +321,16 @@ function agentflowRenderStatus(st) {
 		var item = statuses[i];
 		var available = st.agents_available !== false && !!item;
 		var installed = available && item.installed === true;
+		var externalUrl = item && item.provider && agentflowExternalUrls[i];
 		if (card) card.setAttribute('data-state', installed ? 'installed' : (available ? 'available' : 'unknown'));
 		if (state) state.textContent = installed ? agentflowLabels.installed : (available ? agentflowLabels.notInstalled : agentflowLabels.unknown);
 		if (version) version.textContent = installed && item.version ? item.version : '-';
 		if (installButton) {
-			installButton.disabled = !available || installed;
-			installButton.value = installed ? agentflowLabels.installed : agentflowLabels.install;
+			installButton.disabled = !available || (installed && !externalUrl);
+			installButton.value = externalUrl ? '<%:Manage%> ' + agentflowAgentNames[i] : (installed ? agentflowLabels.installed : agentflowLabels.install);
+			installButton.onclick = externalUrl
+				? (function(url) { return function() { window.location.href = url; }; })(externalUrl)
+				: (function(agent) { return function() { agentflowAgentDialog(true, agent); }; })(i);
 		}
 	}
 }

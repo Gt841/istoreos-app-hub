@@ -4,8 +4,10 @@
 {"id":"arcadia","type":"docker","depends":["docker-deps","luci-app-arcadia","luci-i18n-arcadia-zh-cn"],"autoconf":false,"istorec":true,"init":false,"config":true,"luci":true}
 {"id":"baidudrive","type":"native","depends":["baidudrive","luci-app-baidudrive","luci-i18n-baidudrive-zh-cn"],"autoconf":true,"istorec":false,"init":false,"config":false,"luci":true}
 {"id":"chinesesubfinder","type":"docker","depends":["docker-deps","luci-app-chinesesubfinder","luci-i18n-chinesesubfinder-zh-cn"],"autoconf":true,"istorec":true,"init":false,"config":true,"luci":true}
+{"id":"claude-code","type":"native","depends":["claude-code","luci-app-claude-code","luci-app-mise"],"autoconf":true,"istorec":false,"init":false,"config":false,"luci":true}
 {"id":"clouddrive2","type":"docker","depends":["docker-deps","luci-app-clouddrive2","luci-i18n-clouddrive2-zh-cn"],"autoconf":false,"istorec":true,"init":true,"config":true,"luci":true}
 {"id":"codeserver","type":"docker","depends":["docker-deps","luci-app-codeserver","luci-i18n-codeserver-zh-cn"],"autoconf":true,"istorec":true,"init":false,"config":true,"luci":true}
+{"id":"codex","type":"native","depends":["codex","luci-app-codex","luci-app-mise"],"autoconf":true,"istorec":false,"init":false,"config":false,"luci":true}
 {"id":"ddnsto","type":"native","depends":["ddnsto","luci-app-ddnsto","luci-i18n-ddnsto-zh-cn"],"autoconf":false,"istorec":false,"init":false,"config":false,"luci":true}
 {"id":"demon","type":"docker","depends":["docker-deps","luci-app-demon","luci-i18n-demon-zh-cn"],"autoconf":true,"istorec":true,"init":false,"config":true,"luci":true}
 {"id":"dockermanager","type":"native","depends":["dockermanager","luci-app-dockermanager"],"autoconf":true,"istorec":false,"init":false,"config":false,"luci":true}
@@ -30,12 +32,13 @@
 {"id":"jackett","type":"docker","depends":["docker-deps","luci-app-jackett","luci-i18n-jackett-zh-cn"],"autoconf":false,"istorec":true,"init":false,"config":true,"luci":true}
 {"id":"jellyfin","type":"docker","depends":["docker-deps","luci-app-jellyfin","luci-i18n-jellyfin-zh-cn"],"autoconf":true,"istorec":true,"init":false,"config":true,"luci":true}
 {"id":"kaiplus","type":"native","depends":["kaiplus","luci-app-kaiplus","luci-i18n-kaiplus-zh-cn"],"autoconf":true,"istorec":false,"init":false,"config":false,"luci":true}
+{"id":"kimi","type":"native","depends":["kimi","luci-app-kimi","luci-app-mise"],"autoconf":true,"istorec":false,"init":false,"config":false,"luci":true}
 {"id":"kodexplorer","type":"docker","depends":["docker-deps","luci-app-kodexplorer","luci-i18n-kodexplorer-zh-cn"],"autoconf":true,"istorec":true,"init":false,"config":true,"luci":true}
 {"id":"lanraragi","type":"docker","depends":["docker-deps","luci-app-lanraragi","luci-i18n-lanraragi-zh-cn"],"autoconf":true,"istorec":true,"init":false,"config":true,"luci":true}
 {"id":"linkease","type":"native","depends":["linkease","linkease-runtime-transition","luci-app-linkease","luci-i18n-linkease-zh-cn","luci-lib-linkeasefile"],"autoconf":true,"istorec":false,"init":false,"config":false,"luci":true}
 {"id":"linkeasefull","type":"native","depends":["linkease","linkease-runtime-transition","linkeasefull","luci-app-linkeasefull","luci-app-linkeasefull-embed","luci-i18n-linkeasefull-zh-cn","luci-lib-linkeasefile"],"autoconf":true,"istorec":false,"init":false,"config":false,"luci":true}
 {"id":"memos","type":"docker","depends":["docker-deps","luci-app-memos","luci-i18n-memos-zh-cn"],"autoconf":false,"istorec":true,"init":false,"config":true,"luci":true}
-{"id":"mise","type":"native","depends":["mise-runtime"],"autoconf":true,"istorec":false,"init":false,"config":false,"luci":true}
+{"id":"mise","type":"native","depends":["luci-app-mise","mise-runtime"],"autoconf":true,"istorec":false,"init":false,"config":false,"luci":true}
 {"id":"mtphotos","type":"docker","depends":["docker-deps","luci-app-mtphotos","luci-i18n-mtphotos-zh-cn"],"autoconf":false,"istorec":true,"init":false,"config":true,"luci":true}
 {"id":"multiaccountdial","type":"native","depends":["luci-app-multiaccountdial","mwan3-deps"],"autoconf":false,"istorec":false,"init":false,"config":true,"luci":true}
 {"id":"mymind","type":"docker","depends":["docker-deps","luci-app-mymind","luci-i18n-mymind-zh-cn"],"autoconf":false,"istorec":false,"init":false,"config":false,"luci":true}
@@ -44,6 +47,7 @@
 {"id":"nextcloud","type":"docker","depends":["docker-deps","luci-app-nextcloud","luci-i18n-nextcloud-zh-cn"],"autoconf":true,"istorec":true,"init":false,"config":true,"luci":true}
 {"id":"oneapi","type":"docker","depends":["docker-deps","luci-app-oneapi","luci-i18n-oneapi-zh-cn"],"autoconf":true,"istorec":true,"init":false,"config":true,"luci":true}
 {"id":"openclawmgr","type":"docker","depends":["luci-app-openclawmgr","luci-i18n-openclawmgr-zh-cn"],"autoconf":true,"istorec":true,"init":true,"config":true,"luci":true}
+{"id":"opencode","type":"native","depends":["luci-app-mise","luci-app-opencode","opencode"],"autoconf":true,"istorec":false,"init":false,"config":false,"luci":true}
 {"id":"openwebui","type":"docker","depends":["docker-deps","luci-app-openwebui","luci-i18n-openwebui-zh-cn"],"autoconf":true,"istorec":true,"init":false,"config":true,"luci":true}
 {"id":"owntone","type":"docker","depends":["docker-deps","luci-app-owntone","luci-i18n-owntone-zh-cn"],"autoconf":false,"istorec":true,"init":false,"config":true,"luci":true}
 {"id":"penpot","type":"docker","depends":["docker-deps","luci-app-penpot","luci-i18n-penpot-zh-cn"],"autoconf":false,"istorec":true,"init":false,"config":true,"luci":true}
