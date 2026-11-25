@@ -50,9 +50,10 @@ local function dispatch(request)
     local st=sys.fs.lstat(dir);sys.need(st.uid==0 or st.uid==request.uid,'INTEGRITY','User directory ownership differs')
     sys.need(sys.fs.chown(dir,request.uid,request.gid or request.uid),'OFFLINE','Cannot prepare UID directory')
     sys.need(sys.fs.chmod(dir,'700'),'OFFLINE','Cannot protect UID directory')
-    sys.mkdir(dir..'/home',448)
-    sys.need(sys.fs.chown(dir..'/home',request.uid,request.gid or request.uid),'OFFLINE','Cannot prepare UID HOME')
-    return {home=dir..'/home'}
+    local home=request.uid==0 and root..'/home'or dir..'/home'
+    sys.mkdir(home,448)
+    sys.need(sys.fs.chown(home,request.uid,request.gid or request.uid),'OFFLINE','Cannot prepare UID HOME')
+    return {home=home}
   elseif request.op=='cancel' or request.op=='recover'then
     return tasks.recover(ctx,request.id,request.op=='cancel')
   elseif request.op=='inspect' or request.op=='wrap'then

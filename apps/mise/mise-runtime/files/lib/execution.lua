@@ -7,7 +7,7 @@ local share=arg[0]:match('^(.*)/[^/]+$')or'/usr/share/mise-runtime'
 function M.home(root)
   local uid=n.getuid()
   local home=os.getenv('ISTORE_RUNTIME_HOME')
-  if not home or home==''then home=root..'/users/'..uid..'/home'end
+  if not home or home==''then home=uid==0 and root..'/home'or root..'/users/'..uid..'/home'end
   sys.need(home:sub(1,5)=='/mnt/'and not home:find('[%c:]')and not home:find('//',1,true)and home:sub(-1)~='/','INVALID_INPUT','HOME must be a normalized persistent /mnt path')
   local current=''
   for part in home:gmatch('[^/]+')do
@@ -22,7 +22,10 @@ function M.home(root)
       sys.need(not writable or protected_sticky,'INVALID_INPUT','HOME parent is writable by another user')
     end
   end
-  sys.need(home:sub(1,#root+1)~=root..'/'or home:sub(1,#(root..'/users/'..uid..'/'))==root..'/users/'..uid..'/','INVALID_INPUT','HOME cannot use shared SDK or manager directories')
+  local inside=home==root or home:sub(1,#root+1)==root..'/'
+  local own=home:sub(1,#(root..'/users/'..uid..'/'))==root..'/users/'..uid..'/'
+    or uid==0 and(home==root..'/home'or home:sub(1,#root+6)==root..'/home/')
+  sys.need(not inside or own,'INVALID_INPUT','HOME cannot use shared SDK or manager directories')
   local nearest=home
   while not fs.lstat(nearest)do nearest=assert(nearest:match('^(.*)/[^/]+$'))end
   sys.need(fs.realpath(nearest)==nearest,'INVALID_INPUT','HOME path is not canonical')

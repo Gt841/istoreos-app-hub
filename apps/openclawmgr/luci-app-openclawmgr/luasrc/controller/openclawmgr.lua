@@ -795,9 +795,14 @@ function action_status()
 	local node_ver = ""
 	local oc_ver = ""
 	local target_oc_ver = ""
+	local runtime_info
 	if base_dir ~= "" then
 		node_ver = sys.exec("/usr/libexec/istorec/openclawmgr.sh node_version 2>/dev/null"):gsub("%s+$", "")
 		oc_ver = sys.exec("/usr/libexec/istorec/openclawmgr.sh openclaw_version 2>/dev/null"):gsub("%s+$", "")
+		-- Describe only a validated app-owned binding. A version string alone
+		-- cannot distinguish a musl executable from a private glibc runtime.
+		local raw = sys.exec("/usr/bin/lua /usr/share/openclawmgr/shared-runtime.lua describe " .. require("luci.util").shellquote(base_dir .. "/current/runtime.json") .. " 2>/dev/null")
+		runtime_info = require("luci.jsonc").parse(raw)
 	end
 	target_oc_ver = sys.exec("/usr/libexec/istorec/openclawmgr.sh latest_openclaw_version 2>/dev/null"):gsub("%s+$", "")
 	local pid = running and get_running_pid() or ""
@@ -832,6 +837,7 @@ function action_status()
 		base_dir = base_dir,
 		token = token,
 		node_version = node_ver,
+		runtime_info = runtime_info,
 		openclaw_version = oc_ver,
 		target_openclaw_version = target_oc_ver,
 		pid = pid,

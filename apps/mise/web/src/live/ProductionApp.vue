@@ -28,7 +28,17 @@
     <article v-for="t in state.tasks" :key="t.id" class="task-row"><div><h3>{{t.title}}</h3><p>{{t.result||t.phases[Math.min(t.phase,t.phases.length-1)]}}</p></div><span class="badge" :class="{good:t.status==='success',bad:t.status==='failed',warning:t.status==='interrupted'}">{{taskLabel[t.status]}}</span><button @click="showTask(t)">查看任务</button></article>
    </section>
    <section v-else class="storage-layout">
-    <section class="panel"><div class="section-heading"><div><h2>存储与下载</h2><p>统一保存运行环境，应用仍保留自己的数据目录。</p></div></div><form class="settings-form" @submit.prevent="saveSettings"><label>运行环境存放位置<input aria-label="运行环境存放位置" v-model="settingsPath" placeholder="/mnt/data/Configs/Runtime" :readonly="!!state.runtimes.length" required><small>{{state.runtimes.length?'已有环境时保持当前目录，目录迁移在后续版本提供。':'选择 /mnt 下已持久挂载的目录。'}}</small></label><label class="checkbox-label"><input type="checkbox" v-model="settingsAcceleration">通过 KSpeeder 加速下载</label><p class="muted">{{state.gateway?'加速保持源站完整性校验，不改变运行时平台选择。':'KSpeeder 当前不可用。安装时可选择源站，或在恢复服务后使用加速。'}}</p><button class="primary" :disabled="!writable||busy||interrupted">保存设置</button></form></section>
+    <section class="panel"><div class="section-heading"><div><h2>存储与下载</h2><p>统一保存运行环境，应用仍保留自己的数据目录。</p></div></div><form class="settings-form" @submit.prevent="saveSettings"><label>运行环境存放位置
+     <select aria-label="运行环境存放位置" v-model="settingsChoice" :disabled="!writable||state.storageLocked||busy||interrupted" required>
+      <option value="" disabled>请选择硬盘目录</option>
+      <option v-for="path in storagePaths" :key="path" :value="path">{{path===state.path?'当前目录 · ':''}}{{path}}</option>
+      <option value="__custom__">自定义目录…</option>
+     </select>
+     <small>{{state.storageLocked?'已有固定运行环境或存储离线，当前目录已锁定；更换硬盘需要迁移环境及应用引用。':'每块已挂载硬盘提供 Configs/Runtime 目录，也可自定义文件夹名。保存后才创建目录。'}}</small>
+    </label>
+    <label v-if="settingsCustom">自定义存放目录<input aria-label="自定义存放目录" v-model="settingsPath" placeholder="/mnt/data/Configs/Runtime" :readonly="!writable||state.storageLocked" required><small>例如 /mnt/data/Runtime；请选择持久硬盘上的目录。</small></label>
+    <p v-if="settingsPath" class="storage-home muted">mise 管理 HOME：<span>{{settingsPath}}/home</span>。启动脚本会显式设置 HOME。</p>
+    <details v-if="state.storageLocked&&storagePaths.some(p=>p!==state?.path)" class="storage-options"><summary>查看其他硬盘目录</summary><ul><li v-for="path in storagePaths.filter(p=>p!==state?.path)" :key="path">{{path}}</li></ul></details><label class="checkbox-label"><input type="checkbox" v-model="settingsAcceleration">通过 KSpeeder 加速下载</label><p class="muted">{{state.gateway?'加速保持源站完整性校验，不改变运行时平台选择。':'KSpeeder 当前不可用。安装时可选择源站，或在恢复服务后使用加速。'}}</p><button class="primary" :disabled="!writable||busy||interrupted">保存设置</button></form></section>
     <section class="panel"><div class="section-heading"><div><h2>公共运行库</h2><p>按修订保存，环境固定引用具体的库。</p></div></div><article v-for="lib in state.libraries" :key="lib.id" class="library-row"><div><h3>glibc {{lib.version}} <span class="badge">{{lib.arch}} · {{lib.revision}}</span></h3><p>{{lib.references}} 个环境引用 · {{lib.verified?'安装验证通过':'尚未验证'}}</p><small class="mono">{{lib.id}}</small></div><button :disabled="blocked||lib.references>0" @click="confirmAction={kind:'library',id:lib.id,title:'清理闲置运行库',text:`清理 ${lib.id}。后端会再次检查环境引用。`}">清理</button></article><p v-if="!state.libraries.length" class="quiet-empty">尚无私有运行库；安装 glibc 环境时一并准备。</p></section>
     <section class="panel"><div class="section-heading"><div><h2>下载缓存</h2><p>缓存用于复用下载，与已安装环境和应用数据分开。</p></div><strong>{{sizeLabel(state.cache)}}</strong></div><div class="panel-actions"><button :disabled="blocked||!state.cache" @click="confirmAction={kind:'cache',title:'清理下载缓存',text:`将释放 ${sizeLabel(state.cache)} 缓存空间，不删除已安装环境或应用数据。`}">清理缓存</button></div></section>
    </section>
@@ -47,7 +57,7 @@
    <p class="dialog-intro">通过固定版本 wrap 启动，自动设置硬盘上的 HOME、缓存和 mise 目录；无需修改 /root 或全局默认版本。</p>
    <div class="usage-commands"><label v-for="(line,i) in usageCommands(state!.path,usage)" :key="line">{{tools[usage.language].usageLabels[i]||'进入该版本环境'}}<div class="copy-line"><input :aria-label="`使用命令 ${i+1}`" :value="line" readonly><button @click="copy(line)">复制</button></div></label></div>
    <section v-if="usage.language==='python'" class="python-project"><h3>应用虚拟环境</h3><p>为每个应用创建独立环境，再安装依赖。下列为命令示例，网页不会创建目录或安装包。</p><label>虚拟环境目录<input aria-label="虚拟环境目录" v-model="projectPath" placeholder="/mnt/data/my-app/.venv"><small>请选择当前用户拥有的持久分区新目录；已有目录不会覆盖。requirements.txt 和 app.py 按你的项目替换。</small></label><p v-if="projectPathError" class="notice warning" role="alert">{{projectPathError}}</p><div v-else class="usage-commands"><label v-for="(line,i) in projectCommands" :key="line">{{['创建虚拟环境（含 pip）','安装应用依赖','运行应用','进入虚拟环境'][i]}}<div class="copy-line"><input :aria-label="`虚拟环境命令 ${i+1}`" :value="line" readonly><button @click="copy(line)">复制</button></div></label></div><p class="hint">共享 pip 入口仅用于查询版本。指定虚拟环境后，pip、Python 和子进程沿用该固定运行时；外来、归属不匹配或未验证的虚拟环境会明确报错。需要特殊 pip 版本时，在应用自己的环境中升级。</p></section>
-   <p class="hint">默认 HOME：{{state!.path}}/users/&lt;用户 ID&gt;/home。应用可用 ISTORE_RUNTIME_HOME 指向自己的持久数据目录；其余用户的 HOME 和全局默认保持不变。</p>
+   <p class="hint">root 默认 HOME：{{state!.path}}/home；其他用户：{{state!.path}}/users/&lt;用户 ID&gt;/home。wrap 会显式设置 HOME；应用可用 ISTORE_RUNTIME_HOME 指向自己的持久数据目录。</p>
    <p v-if="['go','rust','zig','java'].includes(usage.language)" class="hint">{{tools[usage.language].hint}}<template v-if="usage.language==='go'"> 固定 GOTOOLCHAIN=local，不会自动下载其他版本。</template><template v-if="usage.language==='rust'"> 固定调用此工具链的 rustc/cargo；不提供 rustup 管理入口。</template></p><details><summary>wrap 脚本与目录约定</summary><p>正式安装时随环境生成入口。以下脚本来自所选实例的实际入口。</p><pre>{{wrapText||'正在读取实际入口…'}}</pre><p>glibc 环境调用该环境的私有 loader 启动入口，不向系统命令设置全局 LD_LIBRARY_PATH。</p></details>
    <p v-if="copyMessage" role="status" class="copy-result">{{copyMessage}}</p>
    <template #footer><button @click="usage=null">完成</button><button @click="downloadWrap">下载 wrap 脚本</button></template>
@@ -71,7 +81,11 @@ const tabs=[{id:'runtimes',title:'运行环境'},{id:'tasks',title:'任务记录
 const activeTask=computed(()=>state.value?.tasks.find(t=>t.status==='running')),busy=computed(()=>!!activeTask.value),interrupted=computed(()=>!!state.value?.tasks.some(t=>t.status==='interrupted')),blocked=computed(()=>!writable||busy.value||interrupted.value||!state.value?.online||!state.value?.path)
 const filtered=computed(()=>state.value?.runtimes.filter(r=>r.language===language.value)||[])
 const detail=ref<Runtime|null>(null),installOpen=ref(false),plan=ref<Plan|null>(null),usage=ref<Runtime|null>(null),copyMessage=ref(''),taskId=ref(''),taskDetail=computed(()=>state.value?.tasks.find(t=>t.id===taskId.value)),settingsPath=ref(''),settingsAcceleration=ref(true),wrapText=ref('')
-const projectPath=ref(''),npmAdvanced=ref(false)
+const projectPath=ref(''),npmAdvanced=ref(false),settingsCustom=ref(false)
+const storagePaths=computed(()=>[...new Set([state.value?.path,...(state.value?.storagePaths||[])].filter((p):p is string=>!!p))])
+const settingsChoice=computed({get:()=>settingsCustom.value?'__custom__':settingsPath.value,set:(path:string)=>{settingsCustom.value=path==='__custom__';if(!settingsCustom.value)settingsPath.value=path}})
+function resetSettings(s:State){settingsPath.value=s.path||s.storageDefault;settingsAcceleration.value=s.acceleration;settingsCustom.value=!settingsPath.value&&!s.storagePaths.length}
+
 const projectPathError=computed(()=>state.value?venvPathError(state.value.path,projectPath.value):'')
 const projectCommands=computed(()=>usage.value&&state.value?pythonProjectCommands(state.value.path,usage.value,projectPath.value):[])
 watch(usage,async r=>{
@@ -90,9 +104,9 @@ const alreadyInstalled=computed(()=>!!selectedEntry.value&&state.value?.runtimes
 const unsupported=computed(()=>!state.value?.capabilities[install.value.language]?.enabled?(state.value?.capabilities[install.value.language]?.reason||'当前语言尚未启用'):!selectedEntry.value?'目录没有提供此版本、架构、运行库或 npm 组合。':'')
 const confirmAction=ref<{kind:string;id?:string;title:string;text:string}|null>(null)
 const taskLabel={running:'进行中',success:'已完成',failed:'失败',canceled:'已取消',interrupted:'需要恢复'}
-function apply(s:State,settings=false){if(state.value&&s.stamp<state.value.stamp)return;state.value=s;if(settings){settingsPath.value=s.path;settingsAcceleration.value=s.acceleration}}
+function apply(s:State,settings=false){if(state.value&&s.stamp<state.value.stamp)return;state.value=s;if(settings)resetSettings(s)}
 async function refresh(settings=false){try{apply(await props.service.read(),settings||!state.value);error.value=''}catch(e){error.value=(e as Error).message}}
-function changeTab(id:string){tab.value=id;notice.value='';if(id==='storage'&&state.value){settingsPath.value=state.value.path;settingsAcceleration.value=state.value.acceleration}}
+function changeTab(id:string){tab.value=id;notice.value='';if(id==='storage'&&state.value)resetSettings(state.value)}
 function openInstall(){npmAdvanced.value=false;dialogError.value='';notice.value='';plan.value=null;install.value={language:language.value,version:versions.value[language.value][0]||'',libc:tools[language.value].defaultAbi,npm:'',source:state.value?.acceleration&&state.value.gateway?'ks-cli':'origin'};resetNpm();installOpen.value=true}
 function closeInstall(){installOpen.value=false;plan.value=null;dialogError.value=''}
 function resetVersion(){npmAdvanced.value=false;install.value.version=versions.value[install.value.language][0]||'';install.value.libc=tools[install.value.language].defaultAbi;resetNpm()}

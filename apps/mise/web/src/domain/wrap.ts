@@ -55,7 +55,8 @@ store=${quote(store)}
 runtime=${quote(store+'/environments/'+r.id)}
 if [ ! -d "$store" ] || [ ! -x "$runtime/bin/${tool}" ]; then echo '运行环境未安装或磁盘未挂载，尚未创建 HOME。' >&2; exit 1; fi
 uid="$(id -u)"
-runtime_home="\${ISTORE_RUNTIME_HOME:-$store/users/$uid/home}"
+if [ "$uid" = 0 ]; then default_home="$store/home"; else default_home="$store/users/$uid/home"; fi
+runtime_home="\${ISTORE_RUNTIME_HOME:-$default_home}"
 case "$runtime_home" in /mnt/*) ;; *) echo 'HOME 必须位于持久磁盘 /mnt 下' >&2; exit 1 ;; esac
 case "$runtime_home" in */../*|*/..|*/./*|*/.) echo 'HOME 路径无效' >&2; exit 1 ;; esac
 export HOME="$runtime_home"

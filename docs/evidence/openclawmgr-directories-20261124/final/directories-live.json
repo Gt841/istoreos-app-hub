@@ -1,0 +1,33 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "name": "actual mounted disks provide standard Configs paths",
+      "passed": true
+    },
+    {
+      "name": "data directory exposes an explicit disk dropdown",
+      "passed": true
+    },
+    {
+      "name": "selecting another disk edits the form without migrating data",
+      "passed": true
+    },
+    {
+      "name": "custom directory entry remains available",
+      "passed": true
+    },
+    {
+      "name": "directory dropdown stays inside the mobile workspace",
+      "passed": true
+    }
+  ],
+  "error": "locator.screenshot: Element is not attached to the DOM\nCall log:\n\u001b[2m  - taking element screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n",
+  "paths": [
+    "/mnt/mise-runtime/acceptance/M5/OpenClawMgr",
+    "/ext_overlay/Configs/OpenClawMgr",
+    "/mnt/vio4-0/Configs/OpenClawMgr",
+    "/mnt/mise-runtime/Configs/OpenClawMgr"
+  ],
+  "current": "/mnt/mise-runtime/acceptance/M5/OpenClawMgr"
+}

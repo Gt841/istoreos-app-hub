@@ -1,0 +1,6 @@
+{
+  "system_configuration_unchanged": true,
+  "error": "stdin:15: AgentFlow environment helper explicitly replaces inherited HOME failed with exit 1",
+  "passed": false,
+  "checks": []
+}

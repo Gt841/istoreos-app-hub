@@ -1,0 +1,29 @@
+{
+  "binding": {
+    "storage_root": "/mnt/mise-runtime/Runtime-live",
+    "instance": "node-24.22.1-x86_64-glibc-upstream1-npm11.19.1-glibc-2.39-ubuntu8-gcc12-legal1-r1-x86_64-0d690d21c67e40c7f93503fcc295185cc357f5d09916918abb48ea6c02d37a56",
+    "schema_version": 1,
+    "library_manifest_sha256": "bccfb584fffe23459376035a9032ba02af3961165cabb83d3c417a20bdc1fa25",
+    "library": "glibc-2.39-ubuntu8-gcc12-legal1-r1-x86_64",
+    "tool": "node",
+    "provider": "mise-runtime",
+    "artifact_set": "0d690d21c67e40c7f93503fcc295185cc357f5d09916918abb48ea6c02d37a56",
+    "node": "24.22.1",
+    "npm": "11.19.1"
+  },
+  "executed_runtime": {
+    "arch": "x64",
+    "node": "v24.22.1",
+    "glibc": "2.39"
+  },
+  "processes": [
+    {
+      "private_glibc_loaded": true,
+      "uid": 32771,
+      "pid": 31443,
+      "exact_sdk_loaded": true
+    }
+  ],
+  "node_engines": ">=22.14.0",
+  "openclaw": "2026.3.28"
+}

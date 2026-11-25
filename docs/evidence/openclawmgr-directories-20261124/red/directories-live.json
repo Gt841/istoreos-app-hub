@@ -1,0 +1,17 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "name": "actual mounted disks provide standard Configs paths",
+      "passed": true
+    }
+  ],
+  "error": "Data directory must expose selectable disk choices\n\n'INPUT' !== 'SELECT'\n",
+  "paths": [
+    "/mnt/mise-runtime/acceptance/M5/OpenClawMgr",
+    "/ext_overlay/Configs/OpenClawMgr",
+    "/mnt/vio4-0/Configs/OpenClawMgr",
+    "/mnt/mise-runtime/Configs/OpenClawMgr"
+  ],
+  "current": "/mnt/mise-runtime/acceptance/M5/OpenClawMgr"
+}

@@ -1,0 +1,25 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "name": "actual mounted disks provide standard Configs paths",
+      "passed": true
+    },
+    {
+      "name": "data directory exposes an explicit disk dropdown",
+      "passed": true
+    },
+    {
+      "name": "selecting another disk edits the form without migrating data",
+      "passed": true
+    }
+  ],
+  "error": "page.waitForFunction: Timeout 30000ms exceeded.",
+  "paths": [
+    "/mnt/mise-runtime/acceptance/M5/OpenClawMgr",
+    "/ext_overlay/Configs/OpenClawMgr",
+    "/mnt/vio4-0/Configs/OpenClawMgr",
+    "/mnt/mise-runtime/Configs/OpenClawMgr"
+  ],
+  "current": "/mnt/mise-runtime/acceptance/M5/OpenClawMgr"
+}

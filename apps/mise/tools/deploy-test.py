@@ -51,6 +51,11 @@ for name,source in [('exec-user',a.exec_user),('python-launch-musl',a.python_lau
  elf=source.read_bytes()
  assert elf[:4]==b'\x7fELF'and int.from_bytes(elf[18:20],'little')==(62 if arch=='x86_64'else 183),'wrong helper ELF architecture: '+name
  add(source,'/usr/share/mise-runtime/native/bin/'+name,0o755)
+legacy=HUB/'apps/mise/mise/files'
+for name,target,mode in [('mise.sh','/lib/functions/mise.sh',0o644),
+                         ('mise-istore','/usr/sbin/mise-istore',0o755),
+                         ('mise-exec','/usr/sbin/mise-exec',0o755)]:
+ add(legacy/name,target,mode)
 apps=['mise']+(['openclawmgr']if a.with_openclaw else [])
 for app in apps:
  package=HUB/'apps'/app/('luci-app-'+app)

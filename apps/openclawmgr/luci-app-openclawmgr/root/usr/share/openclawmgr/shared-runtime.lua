@@ -185,6 +185,12 @@ local function main()
   elseif action=='exec'then local args={};for i=4,#arg do args[#args+1]=arg[i]end;execute(arg[2],arg[3],args)
   elseif action=='as-app'then local args={};for i=4,#arg do args[#args+1]=arg[i]end;as_app(arg[2],arg[3],args)
   elseif action=='inspect'then local b=binding(arg[2]);print(sys.json.stringify(b))
+  elseif action=='describe'then
+    local b,r=binding(arg[2])
+    local lib=sys.decode(b.storage_root..'/libraries/'..b.library..'/receipt.json')
+    print(sys.json.stringify({provider=b.provider,instance=b.instance,tool=b.tool,
+      node=b.node,npm=b.npm,abi=r.entry.abi,arch=r.entry.arch,verified=true,
+      libc={name='glibc',version=lib.version,id=b.library}}))
   elseif action=='check'then
     local b=binding(arg[2]);local work=arg[3];app_path(work);sys.mkdir(work,448)
     require('libraries').check({root=b.storage_root},b.library,work)

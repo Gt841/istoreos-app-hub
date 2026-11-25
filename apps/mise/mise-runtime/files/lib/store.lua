@@ -46,6 +46,10 @@ function M.open(root,initialize)
     sys.need(existing.uuid==uuid and existing.mount==storage.mount.point,'OFFLINE','Mounted disk identity changed')
   end
   sys.mkdir(root,493)
+  -- Only explicit initialization creates the compatible administrator HOME.
+  -- Existing installations create it on execution; read-only discovery does
+  -- not silently move or adopt their previous users/0/home contents.
+  if initialize then sys.mkdir(root..'/home',448)end
   for _,name in ipairs({'environments','libraries','wrap','mise','users'})do sys.mkdir(root..'/'..name,493)end
   for _,name in ipairs({'tasks','plans','cache','work'})do sys.mkdir(root..'/'..name,448)end
   if not existing then sys.write(marker,{schema_version=1,uuid=uuid,mount=storage.mount.point,source=storage.mount.device})end

@@ -25,6 +25,7 @@ export interface LibraryReceipt{
 export interface RuntimeState{
  schema_version:1;revision:number;catalog_revision:string;arch:RuntimeArchitecture
  path:string;online:boolean;free_bytes:number|null;free_inodes:number|null;cache_bytes:number|null
+ storage_paths:string[];storage_default:string;storage_locked:boolean
  acceleration:boolean;gateway:boolean;runtimes:RuntimeReceipt[];libraries:LibraryReceipt[]
  defaults:Record<RuntimeTool,string|null>
  capabilities:Partial<Record<RuntimeTool,{enabled:boolean;reason?:string}>>

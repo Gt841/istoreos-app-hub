@@ -15,5 +15,12 @@ function trap(e:KeyboardEvent){if(e.key!=='Tab')return;const list=Array.from(ele
 
 <style scoped src="../styles/quickstart/dialog.css"></style>
 
-<!-- Upstream shade has 16px padding; native dialog needs the equivalent viewport limit. -->
-<style scoped>.mise-dialog{max-width:calc(100vw - 32px)}</style>
+<!-- Keep the copied QuickStart visuals; isolate native modal mechanics from
+     the LuCI host's universal margin reset and global header/footer rules. -->
+<style scoped>
+.mise-dialog{position:fixed;inset:0;margin:auto;max-width:calc(100vw - 32px);max-height:calc(100dvh - 32px);overflow:hidden}
+.mise-dialog>header,.mise-dialog>footer{position:relative;inset:auto;flex:none;color:inherit}
+.mise-dialog>header::before,.mise-dialog>header::after{content:none;display:none}
+.mise-dialog>footer{white-space:normal}
+.dialog-body{min-width:0;overflow:auto;overscroll-behavior:contain}
+</style>

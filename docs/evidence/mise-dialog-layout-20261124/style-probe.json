@@ -1,0 +1,327 @@
+[
+  {
+    "selector": "dialog",
+    "computed": {
+      "position": "fixed",
+      "margin": "0px",
+      "inset": "0px",
+      "width": "560px",
+      "height": "719px",
+      "minHeight": "0px",
+      "padding": "0px",
+      "display": "flex",
+      "boxSizing": "border-box",
+      "flexShrink": "1",
+      "overflowX": "auto",
+      "backgroundColor": "rgb(255, 255, 255)"
+    },
+    "rules": [
+      {
+        "href": "/luci-static/argon/css/cascade.css",
+        "selector": "*",
+        "css": "margin: 0px; padding: 0px; box-sizing: border-box;"
+      },
+      {
+        "href": "/luci-static/argon/css/cascade.css",
+        "selector": "*",
+        "css": "box-sizing: border-box; margin: 0px; padding: 0px;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-dialog[data-v-52124332]",
+        "css": "width: 560px; min-width: 0px; max-width: 100%; max-height: calc(-32px + 100vh); background: var(--c-panel,var(--card-bg-color)); border: 1px solid var(--c-line,var(--border-color)); border-radius: 18px; box-shadow: rgba(0, 0, 0, 0.2) 0px 24px 80px; display: flex; flex-direction: column; outline: none; box-sizing: border-box;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-dialog[data-v-52124332]",
+        "css": "max-width: calc(-32px + 100vw);"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-surface *",
+        "css": "box-sizing: border-box;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-dialog",
+        "css": "color: var(--m-text); background: var(--m-panel); padding: 0px; border: 1px solid var(--m-line); border-radius: 12px; box-shadow: var(--m-shadow); width: min(560px, -32px + 100vw); max-height: calc(-40px + 100dvh); overflow: auto;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-dialog",
+        "css": "max-height: calc(-24px + 100dvh); width: calc(-24px + 100vw);"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-surface *",
+        "css": "animation: auto ease 0s 1 normal none running none !important; scroll-behavior: auto !important;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-dialog",
+        "css": "width: 560px; max-width: calc(-32px + 100vw);"
+      }
+    ]
+  },
+  {
+    "selector": "dialog>header",
+    "computed": {
+      "position": "sticky",
+      "margin": "0px",
+      "inset": "0px auto auto",
+      "width": "558px",
+      "height": "93px",
+      "minHeight": "auto",
+      "padding": "22px 24px 18px",
+      "display": "flex",
+      "boxSizing": "border-box",
+      "flexShrink": "1",
+      "overflowX": "visible",
+      "backgroundColor": "rgb(255, 255, 255)"
+    },
+    "rules": [
+      {
+        "href": "/luci-static/argon/css/cascade.css",
+        "selector": "*",
+        "css": "margin: 0px; padding: 0px; box-sizing: border-box;"
+      },
+      {
+        "href": "/luci-static/argon/css/cascade.css",
+        "selector": "*",
+        "css": "box-sizing: border-box; margin: 0px; padding: 0px;"
+      },
+      {
+        "href": "/luci-static/argon/css/cascade.css",
+        "selector": "header, .main",
+        "css": "width: 100%;"
+      },
+      {
+        "href": "/luci-static/argon/css/cascade.css",
+        "selector": "header",
+        "css": "color: var(--header-color); padding: 0px; position: relative;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-dialog > header[data-v-52124332]",
+        "css": "display: flex; align-items: center; justify-content: space-between; padding: 22px 24px 18px; gap: 12px; border-bottom: 1px solid var(--c-line,var(--border-color));"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-dialog > header[data-v-52124332]",
+        "css": "padding: 18px;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-surface *",
+        "css": "box-sizing: border-box;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-dialog > header",
+        "css": "position: sticky; top: 0px; z-index: 1; background: var(--m-panel); padding: 18px 22px; border-bottom: 1px solid var(--m-line); display: flex; align-items: center; justify-content: space-between; gap: 16px;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-dialog > header",
+        "css": "padding: 14px 16px;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-surface *",
+        "css": "animation: auto ease 0s 1 normal none running none !important; scroll-behavior: auto !important;"
+      }
+    ]
+  },
+  {
+    "selector": "dialog h2",
+    "computed": {
+      "position": "static",
+      "margin": "4px 0px 0px",
+      "inset": "auto",
+      "width": "111.609px",
+      "height": "18.6875px",
+      "minHeight": "auto",
+      "padding": "0px",
+      "display": "block",
+      "boxSizing": "border-box",
+      "flexShrink": "1",
+      "overflowX": "visible",
+      "backgroundColor": "rgba(0, 0, 0, 0)"
+    },
+    "rules": [
+      {
+        "href": "/luci-static/argon/css/cascade.css",
+        "selector": "*",
+        "css": "margin: 0px; padding: 0px; box-sizing: border-box;"
+      },
+      {
+        "href": "/luci-static/argon/css/cascade.css",
+        "selector": "*",
+        "css": "box-sizing: border-box; margin: 0px; padding: 0px;"
+      },
+      {
+        "href": "/luci-static/argon/css/cascade.css",
+        "selector": ".h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6",
+        "css": "font-family: inherit; font-weight: normal; color: inherit; line-height: 1.1 !important;"
+      },
+      {
+        "href": "/luci-static/argon/css/cascade.css",
+        "selector": "h2",
+        "css": "margin: 0px 0px 1rem; font-size: 1.25rem; letter-spacing: 0.1rem; padding: 1rem 1.25rem; color: rgb(50, 50, 93); border-radius: 0.375rem; background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.03) 0px 4px 8px; font-weight: bold;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-dialog h2[data-v-52124332]",
+        "css": "font-size: 17px; background: none; margin: 4px 0px 0px; padding: 0px; color: inherit; line-height: 1.4;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-surface *",
+        "css": "box-sizing: border-box;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-surface h1, .mise-surface h2, .mise-surface h3, .mise-surface p",
+        "css": "padding: 0px; border: 0px; background: none; margin: 0px;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-surface h2",
+        "css": "font-size: 17px; font-weight: 620;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-dialog h2",
+        "css": "font-size: 18px;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-surface *",
+        "css": "animation: auto ease 0s 1 normal none running none !important; scroll-behavior: auto !important;"
+      }
+    ]
+  },
+  {
+    "selector": "dialog .dialog-body",
+    "computed": {
+      "position": "static",
+      "margin": "0px",
+      "inset": "auto",
+      "width": "558px",
+      "height": "537.891px",
+      "minHeight": "0px",
+      "padding": "20px 24px",
+      "display": "grid",
+      "boxSizing": "border-box",
+      "flexShrink": "1",
+      "overflowX": "auto",
+      "backgroundColor": "rgba(0, 0, 0, 0)"
+    },
+    "rules": [
+      {
+        "href": "/luci-static/argon/css/cascade.css",
+        "selector": "*",
+        "css": "margin: 0px; padding: 0px; box-sizing: border-box;"
+      },
+      {
+        "href": "/luci-static/argon/css/cascade.css",
+        "selector": "*",
+        "css": "box-sizing: border-box; margin: 0px; padding: 0px;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".dialog-body[data-v-52124332]",
+        "css": "padding: 20px 24px; overflow: auto; min-height: 0px; font-size: 13px;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".dialog-body[data-v-52124332]",
+        "css": "padding: 16px 18px;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-surface *",
+        "css": "box-sizing: border-box;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".dialog-body",
+        "css": "padding: 22px; display: grid; gap: 18px; min-width: 0px;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".dialog-body",
+        "css": "padding: 18px 16px;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-surface *",
+        "css": "animation: auto ease 0s 1 normal none running none !important; scroll-behavior: auto !important;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-dialog .dialog-body",
+        "css": "display: grid; gap: 18px;"
+      }
+    ]
+  },
+  {
+    "selector": "dialog>footer",
+    "computed": {
+      "position": "sticky",
+      "margin": "0px",
+      "inset": "auto auto 0px",
+      "width": "558px",
+      "height": "86.1094px",
+      "minHeight": "auto",
+      "padding": "18px 24px",
+      "display": "flex",
+      "boxSizing": "border-box",
+      "flexShrink": "1",
+      "overflowX": "hidden",
+      "backgroundColor": "rgb(255, 255, 255)"
+    },
+    "rules": [
+      {
+        "href": "/luci-static/argon/css/cascade.css",
+        "selector": "*",
+        "css": "margin: 0px; padding: 0px; box-sizing: border-box;"
+      },
+      {
+        "href": "/luci-static/argon/css/cascade.css",
+        "selector": "*",
+        "css": "box-sizing: border-box; margin: 0px; padding: 0px;"
+      },
+      {
+        "href": "/luci-static/argon/css/cascade.css",
+        "selector": "footer",
+        "css": "font-size: 0.8rem; overflow: hidden; padding: 1rem; text-align: right; white-space: nowrap; color: rgb(170, 170, 170);"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-surface *",
+        "css": "box-sizing: border-box;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-dialog > footer",
+        "css": "position: sticky; bottom: 0px; background: var(--m-panel); border-top: 1px solid var(--m-line); padding: 16px 22px; display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-dialog > footer",
+        "css": "padding: 14px 16px;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-surface *",
+        "css": "animation: auto ease 0s 1 normal none running none !important; scroll-behavior: auto !important;"
+      },
+      {
+        "href": "/luci-static/resources/mise/style.css",
+        "selector": ".mise-dialog > footer",
+        "css": "padding: 18px 24px; border-top: 1px solid var(--m-line);"
+      }
+    ]
+  }
+]

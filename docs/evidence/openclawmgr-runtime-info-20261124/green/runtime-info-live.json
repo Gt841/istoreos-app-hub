@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "status describes the verified fixed GNU Node binding",
+      "passed": true
+    },
+    {
+      "name": "service card visibly distinguishes glibc from the Node version",
+      "passed": true
+    },
+    {
+      "name": "missing runtime metadata never claims glibc",
+      "passed": true
+    },
+    {
+      "name": "real runtime badges fit the mobile service card",
+      "passed": true
+    }
+  ],
+  "runtime_info": {
+    "arch": "x86_64",
+    "instance": "node-24.22.1-x86_64-glibc-upstream1-npm11.19.1-glibc-2.39-ubuntu8-gcc12-legal1-r1-x86_64-0d690d21c67e40c7f93503fcc295185cc357f5d09916918abb48ea6c02d37a56",
+    "libc": {
+      "id": "glibc-2.39-ubuntu8-gcc12-legal1-r1-x86_64",
+      "name": "glibc",
+      "version": "2.39"
+    },
+    "node": "24.22.1",
+    "npm": "11.19.1",
+    "provider": "mise-runtime",
+    "verified": true,
+    "tool": "node",
+    "abi": "glibc"
+  }
+}

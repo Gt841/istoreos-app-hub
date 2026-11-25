@@ -1,0 +1,7 @@
+{
+  "host": "192.168.30.7",
+  "label": "run-x64-20261124T125316Z",
+  "evidence": "/projects/workspace-linkease-ubuntu/openwrt-apps/istoreos-app-hub/docs/evidence/mise-runtime-execution-20261123/run-x64-20261124T125316Z",
+  "stage": "/mnt/mise-runtime/acceptance/direct-deploy/run-x64-20261124T125316Z",
+  "source_commit": "755ddd86585944bee730fb76b2cc2875faf02169"
+}

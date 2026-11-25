@@ -9,7 +9,9 @@ local function uci(key)
   return rc==0 and value:gsub('%s+$','')or''
 end
 function M.empty(catalog,path)
+  local paths,recommended=require('storage-paths').discover(path,uci('quickstart.@main[0].conf_dir'))
   local r={schema_version=1,revision=0,catalog_revision=catalog.revision,arch=sys.nixio.uname().machine,path=path or'',online=false,
+    storage_paths=paths,storage_default=recommended,storage_locked=path~=nil and path~='',
     runtimes=wire.array(),libraries=wire.array(),tasks=wire.array(),warnings=wire.array(),defaults={},defaults_known={},default_pins={},default_paths={},capabilities={},
     free_bytes=wire.null,free_inodes=wire.null,cache_bytes=wire.null,measurements={},library_references={},acceleration=uci('mise.main.acceleration')~='0',gateway=false}
   local ok,adapters=pcall(require,'adapters')
@@ -43,6 +45,7 @@ end
 function M.read(ctx,catalog)
   local r=M.empty(catalog,ctx.root)
   r.online=true;r.revision=store.state(ctx).revision;r.free_bytes=ctx.storage.free_bytes;r.free_inodes=ctx.storage.free_inodes
+  r.storage_locked=#store.list(ctx.root..'/environments')>0
   local policy=sys.decode(ctx.root..'/network/settings.json');if policy then r.acceleration=policy.acceleration end
   local d=require('defaults').read(ctx);r.defaults_known=d.known;r.default_pins=d.pins;r.default_paths=d.paths
   for tool in pairs(contract.tools)do r.defaults[tool]=d.values[tool]or wire.null end

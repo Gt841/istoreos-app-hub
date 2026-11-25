@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "exit": 0,
+      "seconds": 0.16036391258239746,
+      "name": "local exec with accelerator installed and unresponsive",
+      "passed": true,
+      "output": "v24.21.0\n"
+    },
+    {
+      "exit": 37,
+      "seconds": 0.10849595069885254,
+      "name": "native child exit status",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "exit": 0,
+      "seconds": 0.058030128479003906,
+      "name": "interactive shell startup and nested exact SDK execution",
+      "passed": true,
+      "output": "v24.21.0\n"
+    },
+    {
+      "exit": 0,
+      "seconds": 0.05862689018249512,
+      "name": "local mise version",
+      "passed": true,
+      "output": "2026.8.14 linux-x64 (2026-08-26)\n"
+    },
+    {
+      "exit": 0,
+      "seconds": 0.058402061462402344,
+      "name": "acquisition delegates to actual ks-cli plan without service mutation",
+      "passed": true,
+      "output": "{\n  \"schema_version\": 1,\n  \"command\": [\n    \"mise\",\n    \"install\",\n    \"node@24.22.1\"\n  ],\n  \"service_requirement\": \"network_operations\",\n  \"environment\": {\n    \"MISE_GO_DOWNLOAD_MIRROR\": \"https://dl-go-sdk.linkease.net:5443\",\n    \"MISE_URL_REPLACEMENTS\": \"{\\\"regex:^https://nodejs\\\\\\\\.org/dist/(.+)$\\\":\\\"https://dl-nodejs-org.linkease.net:5443/dist/$1\\\",\\\"regex:^https://unofficial-builds\\\\\\\\.nodejs\\\\\\\\.org/download/release/(.+)$\\\":\\\"https://dl-node-unofficial.linkease.net:5443/$1\\\",\\\"regex:^https://github\\\\\\\\.com/(.+/.+/releases/download/.+)$\\\":\\\"https://dl-github.linkease.net:5443/$1\\\",\\\"regex:^https://mise-versions\\\\\\\\.jdx\\\\\\\\.dev/tools/(.+)$\\\":\\\"https://dl-mise-versions.linkease.net:5443/tools/$1\\\",\\\"regex:^https://mise-versions\\\\\\\\.jdx\\\\\\\\.dev/data/(.+)$\\\":\\\"https://dl-mise-versions.linkease.net:5443/data/$1\\\",\\\"regex:^https://api\\\\\\\\.github\\\\\\\\.com(?:/(.*))?$\\\":\\\"https://dl-github-api.linkease.net:5443/$1\\\",\\\"regex:^https://tuf-repo-cdn\\\\\\\\.sigstore\\\\\\\\.dev(?:/(.*))?$\\\":\\\"https://dl-sigstore-tuf.linkease.net:5443/$1\\\"}\"\n  },\n  \"url_replacements\": [\n    {\n      \"source\": \"https://nodejs.org/dist/<tail>\",\n      \"target\": \"https://dl-nodejs-org.linkease.net:5443/dist/<tail>\"\n    },\n    {\n      \"source\": \"https://unofficial-builds.nodejs.org/download/release/<tail>\",\n      \"target\": \"https://dl-node-unofficial.linkease.net:5443/<tail>\"\n    },\n    {\n      \"source\": \"https://github.com/<owner>/<repo>/releases/download/<tail>\",\n      \"target\": \"https://dl-github.linkease.net:5443/<owner>/<repo>/releases/download/<tail>\"\n    },\n    {\n      \"source\": \"https://mise-versions.jdx.dev/tools/<tail>\",\n      \"target\": \"https://dl-mise-versions.linkease.net:5443/tools/<tail>\"\n    },\n    {\n      \"source\": \"https://mise-versions.jdx.dev/data/<tail>\",\n      \"target\": \"https://dl-mise-versions.linkease.net:5443/data/<tail>\"\n    },\n    {\n      \"source\": \"https://api.github.com\",\n      \"target\": \"https://dl-github-api.linkease.net:5443\"\n    },\n    {\n      \"source\": \"https://tuf-repo-cdn.sigstore.dev\",\n      \"target\": \"https://dl-sigstore-tuf.linkease.net:5443\"\n    }\n  ],\n  \"integrity_verification\": \"sha256_preserved\",\n  \"next_action\": \"ks-cli mise install node@24.22.1\",\n  \"next_command\": [\n    \"ks-cli\",\n    \"mise\",\n    \"install\",\n    \"node@24.22.1\"\n  ],\n  \"policy\": \"accelerated_network\",\n  \"stages\": [\n    \"tool_version\",\n    \"service_health\",\n    \"service_capabilities\",\n    \"execute\"\n  ]\n}\n"
+    }
+  ]
+}

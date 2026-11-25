@@ -17,14 +17,19 @@ istore_runtime_quickstart_conf_dir() {
 }
 
 istore_runtime_set_runtime_dir() {
-	local conf_dir runtime_dir
+	local conf_dir runtime_dir storage_root
 
 	config_load mise >/dev/null 2>&1 || return 1
 	config_get runtime_dir main runtime_dir ""
 	[ -z "$runtime_dir" ] || return 0
+	config_get storage_root main storage_root ""
 
-	conf_dir="$(istore_runtime_quickstart_conf_dir)" || return 1
-	runtime_dir="$conf_dir/Runtime/home"
+	if [ -n "$storage_root" ]; then
+		runtime_dir="$storage_root/home"
+	else
+		conf_dir="$(istore_runtime_quickstart_conf_dir)" || return 1
+		runtime_dir="$conf_dir/Runtime/home"
+	fi
 
 	uci -q set "mise.main.runtime_dir=$runtime_dir" >/dev/null 2>&1 || return 1
 	uci -q commit mise >/dev/null 2>&1
@@ -39,10 +44,16 @@ istore_runtime_init() {
 }
 
 istore_runtime_env() {
-	local runtime_dir nearest
+	local runtime_dir storage_root nearest
 
 	config_load mise >/dev/null 2>&1 || return 1
 	config_get runtime_dir main runtime_dir ""
+	# Keep explicitly configured legacy HOME values. New installations use the
+	# selected shared root; resolving HOME does not write UCI or contact network.
+	if [ -z "$runtime_dir" ]; then
+		config_get storage_root main storage_root ""
+		[ -z "$storage_root" ] || runtime_dir="$storage_root/home"
+	fi
 	[ -n "$runtime_dir" ] || { logger -t mise 'Configure a persistent runtime_dir; HOME fallback is disabled'; return 1; }
 	case "$runtime_dir" in /mnt/*) ;; *) return 1 ;; esac
 	case "$runtime_dir" in *[!a-zA-Z0-9_./-]*|*/../*|*/..|*/./*|*/.|*//*|*/) return 1 ;; esac
@@ -60,6 +71,7 @@ istore_runtime_env() {
 
 	export HOME="$runtime_dir"
 	export XDG_CONFIG_HOME="$HOME/.config" XDG_CACHE_HOME="$HOME/.cache" XDG_DATA_HOME="$HOME/.local/share"
+	export XDG_STATE_HOME="$HOME/.local/state"
 	export PATH="$HOME/.local/share/mise/shims${PATH:+:$PATH}"
 	# Local SDK execution and shell startup must never depend on the network.
 	return 0

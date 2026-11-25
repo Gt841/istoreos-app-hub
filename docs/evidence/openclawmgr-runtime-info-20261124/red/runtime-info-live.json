@@ -1,0 +1,5 @@
+{
+  "passed": false,
+  "checks": [],
+  "error": "Runtime status must expose the verified runtime binding and ABI"
+}

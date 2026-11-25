@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "exit_code": 1,
+  "metadata_returned": false,
+  "expected": "no ABI claim when binding unavailable"
+}

@@ -14,7 +14,7 @@ import unittest
 SOURCE = Path(os.environ.get("MISE_LEGACY_HELPER", Path(__file__).resolve().parents[1] / "mise/files/mise.sh"))
 
 class LegacyEntry(unittest.TestCase):
-    def run_helper(self, body, *, acceleration="1", ks_cli=True, extra_env=None):
+    def run_helper(self, body, *, acceleration="1", ks_cli=True, extra_env=None, runtime_dir="/mnt/legacy-fixture", storage_root=""):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             bindir = root / "bin"
@@ -28,7 +28,8 @@ class LegacyEntry(unittest.TestCase):
 config_load() { return 0; }
 config_get() {
  case "$3" in
-  runtime_dir) eval "$1=/mnt/legacy-fixture" ;;
+  runtime_dir) eval "$1=\$FIXTURE_RUNTIME_DIR" ;;
+  storage_root) eval "$1=\$FIXTURE_STORAGE_ROOT" ;;
   acceleration) eval "$1=$ACCELERATION" ;;
  esac
 }
@@ -38,7 +39,8 @@ awk() { return 0; }
 mkdir() { return 0; }
 exec() { printf 'EXEC'; printf '<%s>' "$@"; printf '\n'; cat; exit 37; }
 """
-            env = dict(os.environ, PATH=str(bindir)+":/usr/bin:/bin", TRACE=str(root/"trace"), ACCELERATION=acceleration)
+            env = dict(os.environ, PATH=str(bindir)+":/usr/bin:/bin", TRACE=str(root/"trace"), ACCELERATION=acceleration,
+                       FIXTURE_RUNTIME_DIR=runtime_dir,FIXTURE_STORAGE_ROOT=storage_root)
             for name in ("MISE_NODE_MIRROR_URL", "MISE_GO_DOWNLOAD_MIRROR", "MISE_URL_REPLACEMENTS"):
                 env.pop(name, None)
             env.update(extra_env or {})
@@ -57,6 +59,27 @@ exec() { printf 'EXEC'; printf '<%s>' "$@"; printf '\n'; cat; exit 37; }
         r = self.run_helper('istore_runtime_env; printf "HOME=%s\n" "$HOME"')
         self.assertEqual(r.returncode, 0, r.stderr)
         self.assertIn("HOME=/mnt/legacy-fixture", r.stdout)
+
+    def test_selected_storage_root_supplies_home_without_legacy_config(self):
+        r = self.run_helper('istore_runtime_env && printf "HOME=%s\\nXDG=%s\\n" "$HOME" "$XDG_DATA_HOME"',
+                            runtime_dir="",storage_root="/mnt/disk/Configs/Runtime",extra_env={"HOME":"/root"})
+        self.assertEqual(r.returncode,0,r.stderr)
+        self.assertIn("HOME=/mnt/disk/Configs/Runtime/home",r.stdout)
+        self.assertIn("XDG=/mnt/disk/Configs/Runtime/home/.local/share",r.stdout)
+
+    def test_explicit_legacy_home_is_preserved_when_new_storage_is_configured(self):
+        r = self.run_helper('istore_runtime_env && printf "HOME=%s\\n" "$HOME"',storage_root="/mnt/disk/Configs/Runtime")
+        self.assertEqual(r.returncode,0,r.stderr)
+        self.assertIn("HOME=/mnt/legacy-fixture",r.stdout)
+
+    def test_missing_both_settings_does_not_use_inherited_root_home(self):
+        r = self.run_helper('istore_runtime_env',runtime_dir="",extra_env={"HOME":"/root"})
+        self.assertNotEqual(r.returncode,0)
+
+    def test_unmounted_storage_is_rejected_before_creating_home(self):
+        r = self.run_helper('awk() { return 1; }; mkdir() { printf mkdir-called; }; istore_runtime_env',runtime_dir="",storage_root="/mnt/missing/Configs/Runtime")
+        self.assertNotEqual(r.returncode,0)
+        self.assertNotIn('mkdir-called',r.stdout)
 
     def test_enabled_entry_delegates_to_ks_cli_preserving_arguments_stdin_exit(self):
         r = self.run_helper('istore_runtime_env && istore_runtime_mise_exec install "node@two words"')

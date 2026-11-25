@@ -4,7 +4,7 @@ local M={}
 function M.scope(ctx,entry)
   local arch=sys.nixio.uname().machine
   sys.need(entry.arch==arch,'UNSUPPORTED','Registration architecture differs from host')
-  return {home=ctx.root..'/users/0/home',data=ctx.root..'/mise/'..arch..'-'..entry.abi,
+  return {home=ctx.root..'/home',data=ctx.root..'/mise/'..arch..'-'..entry.abi,
     config=ctx.root..'/users/0/mise/'..arch..'-'..entry.abi..'/config',cache=ctx.root..'/users/0/cache/mise',state=ctx.root..'/users/0/state/mise'}
 end
 function M.register(ctx,receipt,work,log)

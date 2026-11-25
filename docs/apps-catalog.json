@@ -633,7 +633,7 @@
     "website": "https://mise.jdx.dev/",
     "author": "LinkEase",
     "version": "0.1.0",
-    "release": "1",
+    "release": "2",
     "depends": "+mise-runtime +luci-app-mise",
     "luci_entry": "/cgi-bin/luci/admin/services/mise",
     "meta_dir": "apps/mise/app-meta-mise"
@@ -766,7 +766,7 @@
     "website": "https://github.com/openclaw/openclaw",
     "author": "xiaobao",
     "version": "0.1.12",
-    "release": "4",
+    "release": "5",
     "depends": "+luci-app-openclawmgr +luci-i18n-openclawmgr-zh-cn",
     "luci_entry": "/cgi-bin/luci/admin/services/openclawmgr",
     "meta_dir": "apps/openclawmgr/app-meta-openclawmgr"

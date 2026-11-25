@@ -23,7 +23,7 @@ rtk proxy python3 apps/mise/tools/deploy-test.py 192.168.30.93 \
   --with-openclaw --evidence /path/to/arm64-deployment.json
 ```
 
-每次使用新 label。部署前检查持久磁盘、路径和文件类型；先备份全部待修改文件，再逐文件原子写入并复验 SHA256/权限。设备端脚本统一 0755、普通资源 0644、新配置 0600，不照搬开发目录的组写权限。保留已有 UCI 配置。脚本初始化 OpenClaw 专用用户、刷新 LuCI/rpcd；应用服务的安装、重启及健康检查单独执行并记录。公共 SDK、应用数据、模型密钥和包缓存不随代码部署复制。
+每次使用新 label。部署前检查持久磁盘、路径和文件类型；先备份全部待修改文件，再逐文件原子写入并复验 SHA256/权限。设备端脚本统一 0755、普通资源 0644、新配置 0600，不照搬开发目录的组写权限。保留已有 UCI 配置。同步核心、前端及 `mise-istore`/`mise-exec` 和 `/lib/functions/mise.sh`，使 AgentFlow 与新管理器的 HOME 规则一致。脚本初始化 OpenClaw 专用用户、刷新 LuCI/rpcd；应用服务的安装、重启及健康检查单独执行并记录。公共 SDK、应用数据、模型密钥和包缓存不随代码部署复制。
 
 命令输出和 evidence 中有该批次的 `rollback` 命令，在对应设备执行即可恢复这次代码变更。备份留在设备私有目录；回滚会拒绝覆盖部署后又被修改的文件。回滚保留账户、配置、公共 SDK 和应用数据，应用事务恢复仍使用 OpenClaw 的 `recover_install`。
 

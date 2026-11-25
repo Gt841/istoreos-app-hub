@@ -34,7 +34,7 @@ for _,r in ipairs(receipts)do
   if r.entry.abi=='glibc'and r.entry.version=='24.21.0'and r.npm~='11.12.1'then first=r end
   test(r.entry.id..' fixed node with conflicting HOME PATH and Node options',function()
     local rc,out=run(r,'node',{'-e','console.log(JSON.stringify({version:process.version,home:process.env.HOME,prefix:process.env.npm_config_prefix,tmp:process.env.TMPDIR,state:process.env.XDG_STATE_HOME,miseState:process.env.MISE_STATE_DIR,glibc:process.report.getReport().header.glibcVersionRuntime||null}))'})
-    assert(rc==0,out);local v=sys.json.parse(out);assert(v.version=='v'..r.entry.version and v.home==root..'/users/0/home')
+    assert(rc==0,out);local v=sys.json.parse(out);assert(v.version=='v'..r.entry.version and v.home==root..'/home')
     assert(v.prefix==v.home..'/.local/npm/'..r.instance and v.tmp:sub(1,#v.home)==v.home)
     assert(v.state==v.home..'/.local/state'and v.miseState==v.home..'/.local/state/mise')
     assert((r.entry.abi=='glibc')==(v.glibc~=nil))

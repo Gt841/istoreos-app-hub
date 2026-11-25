@@ -155,6 +155,8 @@ glibc 改造与后续设备结果见 `docs/evidence/openclawmgr-glibc-20261123/`
 
 - `UCI` 仅保留 `enabled`、`base_dir`、`install_accelerated` 这类外层管理配置。
 - OpenClaw 运行配置统一以 `${base_dir}/data/.openclaw/openclaw.json` 为准，包括 `port`、`bind`、`token` 以及模型/鉴权相关设置；LuCI、安装脚本与 init 脚本均优先读取该文件。
+- 数据目录用下拉框列出各挂载盘的 `Configs/OpenClawMgr` 候选，同时保留当前目录及自定义路径输入。选择其他目录只编辑表单，保存前不会修改配置；更换目录不会自动迁移已有安装和数据。
+- 服务状态同时展示 Node 版本、绑定的 libc/版本及 mise 来源；点击运行时标签进入公共运行时页面，标签提示显示固定实例。ABI 信息来自验证后的 SDK/库收据，未能验证绑定时显示未知，不从 Node 版本号推断 glibc。
 
 
 ## 当前开发测试方式

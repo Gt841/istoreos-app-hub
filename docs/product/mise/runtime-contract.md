@@ -14,15 +14,18 @@ Lua JSON 库是宿主工具依赖，不意味着核心依赖新的 Vue 页面。
 
 ## 配置与布局
 
-旧 `/etc/config/mise` 的 `runtime_dir` 永远保持 HOME 含义。新增 `storage_root` 表示公共管理器根目录，不能把旧 HOME 当根再追加 home。用户显式配置新根后，只建立新目录；不自动搬移、修改、接管或清理旧 SDK。旧 HOME 未配置时给出持久目录配置动作，不回退 `/root`。旧 AgentFlow 的调用协议继续兼容。
+旧 `/etc/config/mise` 的 `runtime_dir` 永远保持 HOME 含义。新增 `storage_root` 表示公共管理器根目录，不能把旧 HOME 当根再追加 home。`mise-istore`、`mise-exec` 和 AgentFlow 使用的 `istore_runtime_env` 优先保留显式 `runtime_dir`；未配置时使用 `<storage_root>/home`，两者都没有时拒绝执行，不回退继承的 `/root`。首次旧入口初始化仍可参考 QuickStart 的 Configs 目录，默认 `Configs/Runtime/home`。用户显式配置新根后，只建立新目录；不自动搬移、修改、接管或清理旧 SDK/HOME。
+
+存储选项统一为 `/mnt/<硬盘>/Configs/Runtime`，与 AgentFlow 原有 Runtime 目录兼容；可自定义其他规范目录。`read` 的 `storage_paths` 枚举直接挂载在 `/mnt` 下、可读写且可执行的持久块设备，保留当前自定义根；`storage_default` 优先参考 QuickStart 的 `conf_dir`，不回退系统 `/root`。枚举不创建目录。`storage_locked` 表示已有环境或当前根离线，不允许直接改路径；固定 wrap 和应用绑定含绝对路径，不提供自动迁移。目录尚未配置时，建议值只填入表单，用户保存后才初始化。
 
 ```text
 <storage_root>/
+  home/                        mise 管理及 root 默认 HOME（显式传入子进程）
   libraries/<library-id>/        私有 loader、C/C++ 库、摘要和来源
   environments/<instance-id>/  不可变 SDK、私有启动器、receipt.json
   wrap/<instance-id>           管理器生成的真实固定使用入口
   mise/<arch>-<abi>/           管理器专有登记；链接到同一个 SDK
-  users/<uid>/                用户 HOME/XDG/缓存、各实例 npm/Cargo 等前缀
+  users/<uid>/                非 root 用户 HOME/XDG/缓存；管理器按 ABI 隔离的配置
   tasks/<task-id>/             持久阶段日志与恢复记录
   plans/<plan-id>.json         绑定状态修订与精确产物的短期计划
   cache/                      可重下、可校验的归档
@@ -60,7 +63,7 @@ Lua JSON 库是宿主工具依赖，不意味着核心依赖新的 Vue 页面。
 
 每个操作拒绝未知字段；不接受全局默认切换、应用版本修改、pip 版本选择或任意下载 URL。执行入口使用 `exec <id> <工具> [argv...]` 或安装后的固定 wrap，工具按语言白名单分派，不走 JSON command 字符串。前端响应按动作区分 state/plan/task/receipt/text/error，移除原型中把所有 value 误约束为 Plan 的类型。
 
-普通 UID 的默认目录由管理员先通过 prepare-user 预置；应用也可提供自己拥有的 ISTORE_RUNTIME_HOME。HOME/XDG/state/npm 前缀/cache/TMP 都位于持久分区。可访问项目工作目录保持不变，仅在继承了无法访问的工作目录时转入自身 HOME。
+mise 管理的 link/where/默认查询和 root 默认 wrap 显式使用 `<storage_root>/home`；mise 数据及配置继续按架构/ABI 隔离，避免原有全局工具与固定 SDK 混用。普通 UID 的默认目录由管理员先通过 prepare-user 预置在 `users/<uid>/home`；应用也可提供自己拥有的 ISTORE_RUNTIME_HOME。普通 UID 和 OpenClaw 不共用管理员 HOME。HOME/XDG/state/npm 前缀/cache/TMP 都位于持久分区。可访问项目工作目录保持不变，仅在继承了无法访问的工作目录时转入自身 HOME。旧 `users/0/home` 的内容不会自动搬移或删除；显式引用它的应用仍可继续使用。
 
 旧 ks-cli 的非秘密端口配置保存在管理器 network/uci 目录，只有其五个只读查询使用该视图；原系统 UCI 权限、其他查询和修改操作不变。保存运行时设置会刷新此配置；不复制 KSpeeder 凭证，不提高调用者权限。
 

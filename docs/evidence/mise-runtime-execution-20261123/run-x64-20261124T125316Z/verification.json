@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "host": "192.168.30.7",
+  "source_commit": "755ddd86585944bee730fb76b2cc2875faf02169",
+  "deployment": "current committed files already matched; direct manifest refreshed, 74 nonconfig files audited; 1 configuration preserved during deployment",
+  "configuration_changes": {
+    "mise.main.acceleration": {
+      "before": "0",
+      "after": "1"
+    },
+    "openclawmgr.main.install_accelerated": {
+      "before": "0",
+      "after": "1"
+    }
+  },
+  "config_backup": "/mnt/mise-runtime/acceptance/direct-deploy/run-x64-20261124T125316Z/configuration-before",
+  "application_binding_preserved": true,
+  "application_data_config_unchanged": true,
+  "global_defaults_unchanged": true,
+  "gateway": {
+    "running": true,
+    "version": "2026.3.28",
+    "node": "24.22.1",
+    "bind": "loopback",
+    "port": 18793,
+    "uid": 32771,
+    "sqlite_vec": true
+  },
+  "runtime_default_acceleration": "ks-cli via local istoreenhance; real fresh-UID module/sumdb probe 11 checks passed without acceleration override",
+  "LuCI": "4 browser checks passed; ephemeral sessions destroyed",
+  "model_provider_count": 0,
+  "package_builds": false,
+  "ARM_operations": false
+}
