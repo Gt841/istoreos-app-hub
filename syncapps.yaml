@@ -356,6 +356,8 @@ apps:
         services:
             - local: apps/linkeasefull/linkeasefull
               remote: nas-packages/network/services/linkeasefull
+            - local: apps/linkeasefull/linkeasefull-web
+              remote: nas-packages/network/services/linkeasefull-web
             - local: apps/linkeasefull/linkease-app-entry
               remote: nas-packages/network/services/linkease-app-entry
         luci:

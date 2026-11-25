@@ -10,13 +10,13 @@ AGENTFLOW_ARCH_x86_64:=amd64
 AGENTFLOW_ARCH_aarch64:=arm64
 AGENTFLOW_ARCH:=$(AGENTFLOW_ARCH_$(ARCH))
 
-# Official build/version.json: 0.3.5-20261019-101caed9
-AGENTFLOW_HASH_x86_64:=213d44adfde5537eada6ed24bc1d90dfc6e955f103d3650d3d6876d644dfbb48
-AGENTFLOW_HASH_aarch64:=70ed6061ad7d324df58d7262580da83ec23b5af3a45370ee10f97387fdec45da
+# Official release: 0.3.5-20261123-bbd3dcf5
+AGENTFLOW_HASH_x86_64:=50dfe6d463487c38da2b85e52e1fa9bbe812fa10295672f8c1a5fc166a93fc1a
+AGENTFLOW_HASH_aarch64:=e852bbd388b3b66e65bfa7a62f093ce2ad65997a3bf045ccfab4026b5dcf167b
 
 PKG_NAME:=agentflow
 PKG_VERSION:=0.3.5
-PKG_RELEASE:=4
+PKG_RELEASE:=5
 
 AGENTFLOW_URL_FILE:=agentflow-linux-$(AGENTFLOW_ARCH)
 AGENTFLOW_DOWNLOAD:=$(AGENTFLOW_URL_FILE)-$(AGENTFLOW_HASH_$(ARCH))
@@ -30,7 +30,7 @@ RSTRIP:=:
 include $(INCLUDE_DIR)/package.mk
 
 define Download/agentflow
-	URL:=https://fw.koolcenter.com/binary/geili/agentflow/build/
+	URL:=https://fw.koolcenter.com/binary/geili/agentflow/releases/server/0.3.5-20261123-bbd3dcf5/
 	URL_FILE:=$(AGENTFLOW_URL_FILE)
 	FILE:=$(AGENTFLOW_DOWNLOAD)
 	HASH:=$(AGENTFLOW_HASH_$(ARCH))

@@ -1,5 +1,7 @@
 # 运行时仓库与依赖准备
 
+软件中心与桌面共用 `app-meta-mise/logo.png`，安装到 `/www/luci-static/resources/app-icons/mise.png`；LuCI 包提供 `logo.png` 软链接，桌面清单通过原 staticRoot 读取 `/apps/mise/logo.png`。不增加 LuCI 到元包的反向依赖。只安装 LuCI 包而未安装元包时可使用桌面的通用图标。原 `logo.svg` 保留兼容既有链接，也是 PNG 的矢量来源。
+
 默认持久仓库 `/mnt/<硬盘>/Configs/Runtime`，管理员默认 HOME 为 `<仓库>/home`。应用可显式指定自己的持久 HOME；旧兼容 `runtime_dir` 的实际管理 HOME 在设置页显示。
 
 ## 切换仓库

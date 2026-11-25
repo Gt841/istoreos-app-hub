@@ -59,13 +59,13 @@ GNU 原生程序使用当前绑定私有 glibc 的 loader，不向系统导出�
 | mise | 2026.8.14-r28 |
 | mise-runtime / luci-app-mise / app-meta-mise | 0.1.1-r1 |
 | luci-app-openclawmgr / app-meta-openclawmgr | 0.1.13-r1 |
-| agentflow | 0.3.5-r4 |
+| agentflow | 0.3.5-r5 |
 | luci-app-agentflow | 1.0.1-r6 |
-| app-meta-agentflow | 0.3.5-r5 |
+| app-meta-agentflow | 0.3.5-r6 |
 
 先编译并安装 mise/runtime，再安装 AgentFlow 相关包。运行包声明最低 runtime 依赖，兼顾 IPK/APK 的 release 格式；元包不增加最低版本约束。
 
-AgentFlow 二进制固定到官方 `build/version.json` 中的 `0.3.5-20261019-101caed9` 构建，x86_64 和 ARM64 摘要已同步。固定下载名包含摘要；若上游再次覆盖 build URL，校验会失败，需要重新核对正式构建，不能禁用校验。
+AgentFlow 二进制固定到官方发布目录中的 `0.3.5-20261123-bbd3dcf5` 构建，x86_64 和 ARM64 摘要已同步。固定下载名包含摘要；若上游覆盖发布文件，校验会失败，需要重新核对正式构建，不能禁用校验。
 
 本轮没有编译 IPK/APK。x86_64 直接文件测试、五个代理命令、回滚/恢复和 AgentFlow 健康检查见 [验证记录](../../docs/evidence/agentflow-shared-runtime-20261125/verification.md)。代理模型调用、ARM64 实机及最终软件包安装仍需后续验收。
 

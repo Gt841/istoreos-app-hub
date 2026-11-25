@@ -17,6 +17,8 @@
 
 应用清单的 `name` 与 `icon` 是桌面身份的权威，软件中心元数据不得覆盖。`icon` 使用相对资源名，配合 `staticRoot` 由桌面或网关提供 `/apps/<id>/<icon>`。没有声明时使用通用图标。FastNet 保留 `"icon":"logo.png"` 和 `"staticRoot":"/usr/share/fastnet/www"`，其中 `logo.png` 链接到元包的 `fastnet.png`；KaiPlus 的 `/usr/share/kaiplus/logo.png` 同理链接到 `kaiplus.png`。Desktop 继续按清单读取，无须推断软件中心图标路径。其他应用现有资源保持原归属，后续按此方式迁移。
 
+Mise 同样复用元包图标：`luci-app-mise` 保持清单与入口归属，在原 staticRoot `/www/luci-static/resources/mise` 下提供 `logo.png` 链接，指向元包持有的 `app-icons/mise.png`。原 `logo.svg` 保留兼容旧清单与缓存链接；软件中心与新桌面入口读取同一 PNG。
+
 ## 现有包的归属
 
 | ID | 唯一所属包 | 登记文件 |

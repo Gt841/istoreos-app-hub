@@ -8,8 +8,8 @@
 | --- | --- | --- | --- |
 | mise | mise | 2026.8.14 | 28 |
 | mise | mise-runtime | 0.1.1 | 2 |
-| mise | luci-app-mise | 0.1.1 | 1 |
-| mise | app-meta-mise | 0.1.1 | 2 |
+| mise | luci-app-mise | 0.1.1 | 2 |
+| mise | app-meta-mise | 0.1.1 | 3 |
 | openclawmgr | luci-app-openclawmgr | 0.1.13 | 2 |
 | openclawmgr | app-meta-openclawmgr | 0.1.13 | 2 |
 | agentflow | agentflow | 0.3.5 | 4 |
@@ -17,6 +17,8 @@
 | agentflow | app-meta-agentflow | 0.3.5 | 5 |
 
 上述版本覆盖运行时切换、AgentFlow 接入及最新 UI 修复。后续修复 root 后台准备任务继承应用 HOME 的问题，mise-runtime 与 app-meta-mise 继续提升至 release 2；OpenClaw 增加安装前端口冲突检查，界面包与元包继续提升至 release 2。其他包沿用各自原修订号。三个 app-meta 均已更新，软件中心可识别升级。
+
+随后补齐软件中心与桌面共用的 Mise 图标：`luci-app-mise` 提升至 release 2，`app-meta-mise` 提升至 release 3。人工编译、安装时同时更新这两个包；元包提供 PNG，LuCI 包提供指向它的桌面图标链接，原 SVG 兼容地址保留。
 
 ## 编译与安装范围
 
