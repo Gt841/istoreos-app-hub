@@ -28,4 +28,6 @@ glibc 使用固定来源与 SHA256 配方，在仓库的 `libraries/<库ID>` 私
 
 root 读取私有 UCI；需要非 root 检查当前仓库的入口使用 `active-root.current()`。设置保存及应用准备时发布 `/var/run/mise-runtime-root.json`，该公开文件只有仓库路径，不暴露 UCI 内容或登录凭据。
 
+后台管理任务在其子进程中明确使用当前仓库的 `home`。即使应用通过 procd 以 root 准备依赖，并继承了应用账号的 HOME，也不会将安装与探测写入应用目录。调用方的 HOME 不变，应用运行时仍使用自己的持久 HOME 和专用 UID。
+
 目标、任务树及验收记录见 [实施计划](../../docs/plans/runtime-repository-switch.md) 和 [验收记录](../../docs/evidence/runtime-switch-20261125/verification.md)。不自动重启任意业务，也不扫描或登记应用使用情况。

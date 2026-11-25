@@ -83,6 +83,10 @@ elif name == 'lua':
   action=args[1]
   event('runtime-client',args[1:])
   if action in ('preflight','inspect','check'): finish()
+  if action=='port-check':
+   if flag('PORT_BUSY'):
+    print('PORT_IN_USE: Gateway port is already used outside this application instance',file=sys.stderr);finish(1)
+   finish()
   if action=='cancel':
    journal=Path(args[2])/'runtime-task.json'
    if journal.exists(): event('runtime-cancel',json.loads(journal.read_text()))
@@ -440,6 +444,12 @@ class InstallationTests(unittest.TestCase):
         d=self.device; self.assertNotEqual(d.run(NO_SPACE=1).returncode,0)
         self.assertFalse(any(k in ('curl','ks-cli','npm','runtime-plan','service') for k,v in d.events()))
 
+    def test_occupied_port_fails_before_dependency_download_or_service_stop(self):
+        d=self.device;result=d.run(PORT_BUSY=1)
+        self.assertNotEqual(result.returncode,0)
+        self.assertIn('PORT_IN_USE',result.stdout+result.stderr)
+        self.assertFalse(any(k in ('curl','ks-cli','npm','runtime-plan','service') for k,v in d.events()))
+
     def test_openwrt_df_without_inode_option_uses_stat(self):
         self.ok(self.device.run(NO_DF_INODES=1))
 
@@ -775,8 +785,11 @@ class RuntimeChecks(unittest.TestCase):
         recipe=(APP/'luci-app-openclawmgr/Makefile').read_text()
         for dep in ['+mise-runtime','+ks-cli','+coreutils-timeout','+coreutils-stat','+libstdcpp','+libatomic','+git-http']:
             self.assertIn(dep,recipe)
-        self.assertIn('PKG_VERSION:=0.1.13',(APP/'app-meta-openclawmgr/Makefile').read_text())
-        self.assertIn('PKG_RELEASE:=1',(APP/'app-meta-openclawmgr/Makefile').read_text())
+        meta=(APP/'app-meta-openclawmgr/Makefile').read_text()
+        field=lambda source,name:re.search(r'^'+name+r':=(\S+)$',source,re.M).group(1)
+        self.assertEqual(field(meta,'PKG_VERSION'),field(recipe,'PKG_VERSION'))
+        self.assertGreaterEqual(int(field(meta,'PKG_RELEASE')),int(field(recipe,'PKG_RELEASE')))
+        self.assertIn('mise-runtime (>=0.1.1-$(if $(CONFIG_USE_APK),r)2)',recipe)
         self.assertNotIn('+openclawmgr-glibc',recipe)
         self.assertTrue(os.access(SHARE/'cli-bin/npm',os.X_OK))
         self.assertTrue(os.access(SHARE/'npm-git.sh',os.X_OK))

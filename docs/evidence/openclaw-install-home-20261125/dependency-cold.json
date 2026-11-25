@@ -1,0 +1,13 @@
+{
+  "installed_before": false,
+  "passed": true,
+  "checks": {
+    "fixed_sdk_verified": true,
+    "application_home_owner_preserved": true,
+    "root_cannot_execute_in_application_home": true,
+    "ensure_success": true,
+    "caller_home_preserved": true,
+    "uci_preserved": true,
+    "receipt_preserved": true
+  }
+}

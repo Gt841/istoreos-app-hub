@@ -1,0 +1,11 @@
+{
+  "installed_before": true,
+  "error": "Installed SDK cannot execute",
+  "passed": false,
+  "checks": {
+    "uci_preserved": true,
+    "ensure_success": false,
+    "application_home_owner_preserved": true,
+    "caller_home_preserved": true
+  }
+}

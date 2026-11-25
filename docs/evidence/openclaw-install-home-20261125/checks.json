@@ -1,0 +1,52 @@
+{
+  "device": "192.168.30.7",
+  "installed": true,
+  "packages": [
+    {
+      "package": "mise-runtime",
+      "version": "0.1.1",
+      "release": "2"
+    },
+    {
+      "package": "app-meta-mise",
+      "version": "0.1.1",
+      "release": "2"
+    },
+    {
+      "package": "luci-app-openclawmgr",
+      "version": "0.1.13",
+      "release": "2"
+    },
+    {
+      "package": "app-meta-openclawmgr",
+      "version": "0.1.13",
+      "release": "2"
+    }
+  ],
+  "dependencies": [
+    {
+      "format": "ipk",
+      "minimum": "mise-runtime (>=0.1.1-2)"
+    },
+    {
+      "format": "apk",
+      "minimum": "mise-runtime (>=0.1.1-r2)"
+    }
+  ],
+  "runtime_contract": 52,
+  "agentflow_tests": 20,
+  "openclaw_tests": {
+    "total": 60,
+    "passed": 59,
+    "skipped": 1,
+    "note": "Metadata assertion corrected and rerun after release increment"
+  },
+  "port_guard_cases": 14,
+  "formal_service_checks": 7,
+  "browser_checks": 4,
+  "direct_deployment_files": 83,
+  "configs_preserved": 1,
+  "ipk_apk_built": false,
+  "arm64_tested": false,
+  "verification_stage": "before_commit"
+}

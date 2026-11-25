@@ -1,0 +1,12 @@
+{
+  "port": 18793,
+  "previous_pid": 31443,
+  "previous_uid": 32771,
+  "previous_home": "/mnt/mise-runtime/acceptance/M5/OpenClawMgr/data",
+  "configured_base": "/mnt/vio4-0/Configs/OpenClawMgr",
+  "procd_managed": false,
+  "health_failure": "unauthorized: gateway token mismatch",
+  "new_guard": "PORT_IN_USE",
+  "verified_process_stopped": true,
+  "old_data_retained": true
+}

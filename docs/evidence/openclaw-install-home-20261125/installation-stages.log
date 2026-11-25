@@ -1,0 +1,15 @@
+2026-11-25 12:10:21 [openclawmgr] Restoring previous runtime and data snapshot
+2026-11-25 12:10:21 [openclawmgr] Installation phase: restored
+2026-11-25 12:10:23 [openclawmgr] Installation finished (exit=1)
+2026-11-25 12:15:00 [openclawmgr] Installation phase: preparing
+2026-11-25 12:15:04 [openclawmgr] Resolved OpenClaw 2026.3.28 with Node v24.22.1
+2026-11-25 12:15:04 [openclawmgr] Fetching package archive and verifying SHA512
+2026-11-25 12:15:18 [openclawmgr] Installing OpenClaw 2026.3.28 and dependencies
+2026-11-25 12:16:15 [openclawmgr] Checking native modules and required sqlite-vec vector queries
+2026-11-25 12:16:16 [openclawmgr] Checking the candidate CLI in an isolated home
+2026-11-25 12:16:17 [openclawmgr] Installation phase: stopping
+2026-11-25 12:16:18 [openclawmgr] Installation phase: backup-ready
+2026-11-25 12:16:18 [openclawmgr] Installation phase: activated
+2026-11-25 12:16:31 [openclawmgr] Installation phase: committed
+2026-11-25 12:16:31 [openclawmgr] Installation committed: 20261125121500-iMDcKF; receipt: /mnt/vio4-0/Configs/OpenClawMgr/current/receipt.json
+2026-11-25 12:16:31 [openclawmgr] Installation finished (exit=0)

@@ -137,6 +137,8 @@ LuCI 仅在协调者清理完成后删除 taskd 状态；不强杀协调者，�
 
 ## 本地验证与设备验收
 
+安装及升级会在下载前检查 Gateway 端口；只允许当前数据目录对应的受托管 Gateway 占用该端口。旧目录中的残留 Gateway 或其他服务占用时返回 `PORT_IN_USE`，先停止旧实例或在配置页选择其他端口。服务停止后、候选版本激活前还会再检查一次，不把其他实例的响应当作新版本健康状态。
+
 ```sh
 /var/cache/build-cache/run.sh -- env OPENCLAWMGR_TEST_NODE=/path/to/node-24.22.1/bin/node \
   python3 -B apps/openclawmgr/tests/test_installation.py

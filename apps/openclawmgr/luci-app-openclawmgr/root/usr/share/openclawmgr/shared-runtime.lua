@@ -208,6 +208,10 @@ end
 local function main()
   local action=arg[1]
   if action=='preflight'then preflight(arg[2])
+  elseif action=='port-check'then
+    app_path(arg[2])
+    local result=assert(loadfile(share..'/port-check.lua'))().check(arg[2],arg[3],arg[4])
+    print(sys.json.stringify(result))
   elseif action=='ensure'then ensure(arg[2],arg[3])
   elseif action=='cancel'then cancel(arg[2])
   elseif action=='exec'then local args={};for i=4,#arg do args[#args+1]=arg[i]end;execute(arg[2],arg[3],args)

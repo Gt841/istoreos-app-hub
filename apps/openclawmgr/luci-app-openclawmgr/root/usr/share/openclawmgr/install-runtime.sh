@@ -105,6 +105,7 @@ oc_preflight() {
 		}
 	fi
 	oc_run /usr/bin/lua "$OC_SHARE/shared-runtime.lua" preflight "$BASE_DIR" || return $?
+	oc_run /usr/bin/lua "$OC_SHARE/shared-runtime.lua" port-check "$BASE_DIR" "$PORT" "$(get_running_pid)" || return $?
 	id openclawmgr >/dev/null 2>&1 || { write_installer_log "Missing dedicated openclawmgr account; reinstall the plugin defaults"; return 1; }
 	mkdir -p "$BASE_DIR" || return 1
 	resolved="$(readlink -f "$BASE_DIR")" || return 1
@@ -339,6 +340,7 @@ do_install() {
 	OC_ACTIVATING=1
 	oc_run /etc/init.d/openclawmgr stop || return $?
 	oc_wait_stopped || return 1
+	oc_run /usr/bin/lua "$OC_SHARE/shared-runtime.lua" port-check "$BASE_DIR" "$PORT" || return $?
 	mkdir -p "$DATA_DIR" "$BASE_DIR/backups/$OC_RELEASE"
 	chmod 700 "$BASE_DIR/backups/$OC_RELEASE"
 	oc_run tar -cf "$BASE_DIR/backups/$OC_RELEASE/data.tar.part" -C "$DATA_DIR" . || return $?
