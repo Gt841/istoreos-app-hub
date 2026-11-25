@@ -8,7 +8,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=kaiplus
 PKG_VERSION:=1.0.22
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 KAIPLUS_URL_FILE:=kaiplus-binary-$(PKG_VERSION).tar.gz
 KAIPLUS_HASH:=ded5ee7d0dea8e83a68933f3fcbd2cd8bf5da995c5e12e2583e09d9156f4e6e8
@@ -55,7 +55,7 @@ define Package/$(PKG_NAME)
 	URL:=https://github.com/linkease/istore-packages
 	DEPENDS:=@(x86_64||aarch64) +linkease-app-entry +changeguard
 	# Build matrix: OpenWrt 21.02 OPKG uses -N; 25.12 APK uses -rN.
-	EXTRA_DEPENDS:=changeguard (>=0.3.5-$(if $(CONFIG_USE_APK),r)1)
+	EXTRA_DEPENDS:=changeguard (>=0.3.5-$(if $(CONFIG_USE_APK),r)2)
 endef
 
 define Package/$(PKG_NAME)/description

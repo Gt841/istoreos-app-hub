@@ -16,7 +16,7 @@ HELPER = H / "apps/changeguard/changeguard/files/usr/libexec/changeguard-package
 
 class Contract(unittest.TestCase):
     def test_runtime_recipes_use_tabs_and_immutable_release(self):
-        for name, version, release in [("changeguard", "0.3.5", "1"), ("linkspace", "0.3.3", "1")]:
+        for name, version, release in [("changeguard", "0.3.5", "2"), ("linkspace", "0.3.3", "2")]:
             recipe = (H / f"apps/{name}/{name}/Makefile").read_text()
             self.assertRegex(recipe, rf"(?m)^PKG_VERSION:={re.escape(version)}$")
             self.assertRegex(recipe, rf"(?m)^PKG_RELEASE:={release}$")

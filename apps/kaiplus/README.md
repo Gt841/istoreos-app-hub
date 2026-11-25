@@ -64,16 +64,15 @@ success. Installation and updating share the same task ID to prevent overlap.
 
 ## Package versions and checks
 
-The pending package set uses `kaiplus 1.0.21-r1`,
-`luci-app-kaiplus 1.0.11-r4`, and `app-meta-kaiplus 1.0.21-r6`. The runtime
-recipe now consumes `kaiplus-binary-1.0.21.tar.gz` from the
-`kaiplus-runtime-v1.0.21` GitHub release. Its hash currently identifies the
-locally verified candidate built from Reasonix commit
-`bd778dd852dc9101cb377eb73ed37ca365179d6e`. Upload the verified release
-assets before building/publishing feed packages; if the candidate is rebuilt,
+The pending package set uses `kaiplus 1.0.22-r2`,
+`luci-app-kaiplus 1.0.11-r4`, and `app-meta-kaiplus 1.0.22-r10`. The runtime
+recipe consumes `kaiplus-binary-1.0.22.tar.gz` from the
+`kaiplus-runtime-v1.0.22` GitHub release. This revision increment retains the
+existing runtime archive URLs and hashes. New runtime binaries must be built
+and released separately; if the candidate is rebuilt,
 refresh `KAIPLUS_HASH` from the new tarball. This source update does not itself
 publish a GitHub release or feed packages. Device
-protection uses `changeguard 0.3.5-r1` and `linkspace 0.3.3-r1` from their
+protection uses `changeguard 0.3.5-r2` and `linkspace 0.3.3-r2` from their
 matching runtime releases.
 Existing `syncapps.yaml` mappings cover all changed packages.
 
@@ -87,9 +86,10 @@ HTML stays uncompressed for runtime base-path injection and SPA routing.
 Publish the tarball, `kaiplus-web.zip`, and `release.json` together from the
 same Reasonix release build. Standalone binaries continue to embed the ZIP.
 
-The KaiPlus runtime requires ChangeGuard >= 0.3.5, and ChangeGuard requires
-Linkspace >= 0.3.3. These minimum versions belong to runtime package dependencies
-so an installation cannot silently reuse incompatible protection components.
+The KaiPlus runtime requires ChangeGuard >= 0.3.5-r2, and ChangeGuard requires
+Linkspace >= 0.3.3-r2 (OPKG uses the equivalent `-2` suffix). These minimum
+versions belong to runtime package dependencies so an installation cannot
+silently reuse incompatible protection components.
 The market `config.sh` saves the KaiPlus data and backup directories and starts
 the service. The default backup directory is the disk-root `TimeMachine`
 folder beside `Configs`; KaiPlus applies that global value to ChangeGuard. A
