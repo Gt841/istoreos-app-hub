@@ -17,20 +17,7 @@ local function dispatch(request)
   if request.op=='catalog'then return catalog end
   local root=os.getenv('MISE_RUNTIME_ROOT')or uci('mise.main.storage_root')
   if request.op=='settings'then
-    if root~='' then
-      store.open(root)
-      sys.need(not sys.fs.lstat(root..'/.lock'),'BUSY','Finish or recover the current task before changing settings')
-    end
-    local old=root~='' and sys.fs.stat(root..'/environments') and store.list(root..'/environments')or{}
-    sys.need(#old==0 or root==request.path,'BUSY','Installed environments prevent changing storage root')
-    store.open(request.path,true)
-    if not os.getenv('MISE_RUNTIME_ROOT')then
-      sys.need(sys.run({'/sbin/uci','set','mise.main.storage_root='..request.path})==0,'OFFLINE','Cannot save storage root')
-      sys.need(sys.run({'/sbin/uci','set','mise.main.acceleration='..(request.acceleration and'1'or'0')})==0,'OFFLINE','Cannot save acceleration')
-      sys.need(sys.run({'/sbin/uci','commit','mise'})==0,'OFFLINE','Cannot commit configuration')
-    end
-    root=request.path
-    require('network').refresh({root=root},request.acceleration)
+    root=require('settings').save(root,request)
   end
   if root==''then sys.need(request.op=='read','OFFLINE','Configure persistent storage first');return status.empty(catalog)end
   local opened,ctx=pcall(store.open,root)
@@ -44,6 +31,8 @@ local function dispatch(request)
   local state=store.state(ctx)
   if request.op=='read' or request.op=='settings'then
     return status.read(ctx,catalog)
+  elseif request.op=='ensure'or request.op=='library-repair'then
+    return require('dependencies').ensure(ctx,request)
   elseif request.op=='prepare-user'then
     require('network').refresh(ctx)
     local dir=root..'/users/'..request.uid;sys.mkdir(dir,448)

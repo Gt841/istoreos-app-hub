@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "device": "192.168.30.7",
+  "main_device": {
+    "file": "round-3.json",
+    "passed": true,
+    "checks": 14
+  },
+  "final_smoke": {
+    "file": "final-smoke.json",
+    "passed": true,
+    "checks": 5
+  },
+  "agentflow_runtime": {
+    "file": "agentflow-runtime.json",
+    "passed": true,
+    "checks": 11
+  },
+  "browser": {
+    "file": "browser/browser.json",
+    "passed": true,
+    "checks": 7
+  },
+  "local_observed_runs": {
+    "contract": 52,
+    "frontend": 60,
+    "agentflow": 20,
+    "openclaw": {
+      "total": 59,
+      "passed": 58,
+      "skipped": 1
+    }
+  },
+  "packages_built": false,
+  "arm64_executed": false,
+  "model_calls_tested": false,
+  "deployment": {
+    "source_audit_passed": true,
+    "program_files": 92,
+    "configs_preserved": 2
+  },
+  "adapter_matrix": {
+    "file": "adapter-matrix.json",
+    "passed": true,
+    "checks": 5,
+    "skipped": [
+      "node/musl: no installed fixture"
+    ]
+  }
+}

@@ -84,12 +84,17 @@ local actions={
   read={op=true},catalog={op=true},['cache-clear']={op=true},['prepare-user']={op=true,uid=true,gid=true},
   ['library-remove']={op=true,id=true},settings={op=true,path=true,acceleration=true}
 }
+actions.ensure={op=true,entry=true,source=true,library=true}
+actions['library-repair']={op=true,id=true,source=true}
 function M.request(r)
   demand(type(r)=='table' and actions[r.op],'unsupported operation')
   object(r,actions[r.op])
-  if r.op=='plan' then
+  if r.op=='plan'or r.op=='ensure' then
     M.key(r.entry);demand(r.source=='origin' or r.source=='ks-cli','explicit download source required')
     if r.npm~=nil then M.version(r.npm) end
+    if r.library~=nil then M.key(r.library)end
+  elseif r.op=='library-repair'then
+    M.key(r.id);demand(r.source=='origin'or r.source=='ks-cli','explicit download source required')
   elseif r.op=='prepare-user'then
     demand(type(r.uid)=='number'and r.uid>=0 and r.uid<2147483647 and r.uid%1==0,'invalid UID')
     demand(r.gid==nil or(type(r.gid)=='number'and r.gid>=0 and r.gid<2147483647 and r.gid%1==0),'invalid GID')

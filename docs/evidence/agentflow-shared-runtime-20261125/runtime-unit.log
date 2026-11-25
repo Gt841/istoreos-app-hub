@@ -1,0 +1,18 @@
+test_desktop_entry_matches_manifest_contract (test_desktop_manifest_contract.DesktopManifestContractTest.test_desktop_entry_matches_manifest_contract) ... ok
+test_manifest_uses_agentflow_app_base_proxy (test_desktop_manifest_contract.DesktopManifestContractTest.test_manifest_uses_agentflow_app_base_proxy) ... ok
+test_busy_task_does_not_overwrite_its_script (test_shared_runtime.ControllerBoundary.test_busy_task_does_not_overwrite_its_script) ... ok
+test_csrf_method_and_readonly_reject_before_side_effects (test_shared_runtime.ControllerBoundary.test_csrf_method_and_readonly_reject_before_side_effects) ... ok
+test_prepare_failure_or_old_task_file_prevents_submission (test_shared_runtime.ControllerBoundary.test_prepare_failure_or_old_task_file_prevents_submission) ... ok
+test_recovery_uses_fixed_helper_and_no_arbitrary_task_script (test_shared_runtime.ControllerBoundary.test_recovery_uses_fixed_helper_and_no_arbitrary_task_script) ... ok
+test_unknown_agent_cannot_reach_a_shell (test_shared_runtime.ControllerBoundary.test_unknown_agent_cannot_reach_a_shell) ... ok
+test_valid_install_submits_local_task_using_protected_application_path (test_shared_runtime.ControllerBoundary.test_valid_install_submits_local_task_using_protected_application_path) ... ok
+test_corrupt_program_headers_fail_closed (test_shared_runtime.NativeInterpreter.test_corrupt_program_headers_fail_closed) ... ok
+test_install_owner_need_not_be_a_session_leader (test_shared_runtime.NativeInterpreter.test_install_owner_need_not_be_a_session_leader) ... ok
+test_opencode_chooses_installed_gnu_baseline_without_host_libc_detection (test_shared_runtime.NativeInterpreter.test_opencode_chooses_installed_gnu_baseline_without_host_libc_detection) ... ok
+test_recognizes_gnu_and_musl_interpreters (test_shared_runtime.NativeInterpreter.test_recognizes_gnu_and_musl_interpreters) ... ok
+test_static_files_and_scripts_are_not_native_loader_candidates (test_shared_runtime.NativeInterpreter.test_static_files_and_scripts_are_not_native_loader_candidates) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.025s
+
+OK

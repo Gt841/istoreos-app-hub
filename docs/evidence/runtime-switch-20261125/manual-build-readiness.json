@@ -1,0 +1,99 @@
+{
+  "date": "2026-11-25",
+  "versions": {
+    "apps/mise/mise/Makefile": {
+      "version": "2026.8.14",
+      "release": "28"
+    },
+    "apps/mise/mise-runtime/Makefile": {
+      "version": "0.1.1",
+      "release": "1"
+    },
+    "apps/mise/luci-app-mise/Makefile": {
+      "version": "0.1.1",
+      "release": "1"
+    },
+    "apps/mise/app-meta-mise/Makefile": {
+      "version": "0.1.1",
+      "release": "1"
+    },
+    "apps/openclawmgr/luci-app-openclawmgr/Makefile": {
+      "version": "0.1.13",
+      "release": "1"
+    },
+    "apps/openclawmgr/app-meta-openclawmgr/Makefile": {
+      "version": "0.1.13",
+      "release": "1"
+    },
+    "apps/agentflow/agentflow/Makefile": {
+      "version": "0.3.5",
+      "release": "4"
+    },
+    "apps/agentflow/luci-app-agentflow/Makefile": {
+      "version": "1.0.1-r6",
+      "release": ""
+    },
+    "apps/agentflow/app-meta-agentflow/Makefile": {
+      "version": "0.3.5",
+      "release": "5"
+    }
+  },
+  "catalog_matches": true,
+  "dependency_expansion": [
+    {
+      "package": "mise-runtime",
+      "format": "ipk",
+      "dependency": "mise (>=2026.8.14-28)"
+    },
+    {
+      "package": "mise-runtime",
+      "format": "apk",
+      "dependency": "mise (>=2026.8.14-r28)"
+    },
+    {
+      "package": "luci-app-mise",
+      "format": "ipk",
+      "dependency": "mise-runtime (>=0.1.1-1)"
+    },
+    {
+      "package": "luci-app-mise",
+      "format": "apk",
+      "dependency": "mise-runtime (>=0.1.1-r1)"
+    },
+    {
+      "package": "luci-app-openclawmgr",
+      "format": "ipk",
+      "dependency": "mise-runtime (>=0.1.1-1)"
+    },
+    {
+      "package": "luci-app-openclawmgr",
+      "format": "apk",
+      "dependency": "mise-runtime (>=0.1.1-r1)"
+    },
+    {
+      "package": "agentflow",
+      "format": "ipk",
+      "dependency": "mise-runtime (>=0.1.1-1)"
+    },
+    {
+      "package": "agentflow",
+      "format": "apk",
+      "dependency": "mise-runtime (>=0.1.1-r1)"
+    }
+  ],
+  "lua_syntax_files": 26,
+  "shell_syntax_files": 4,
+  "local_tests": {
+    "runtime_contract": 52,
+    "agentflow": 20,
+    "frontend": 60,
+    "openclaw": {
+      "total": 59,
+      "passed": 58,
+      "skipped": 1
+    }
+  },
+  "typecheck": true,
+  "production_frontend_build": true,
+  "packages_built": false
+}

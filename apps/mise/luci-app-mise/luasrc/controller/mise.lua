@@ -35,7 +35,7 @@ function request()
   if type(raw)~='string'or #raw>32768 then return failure(400,'INVALID_INPUT','Invalid request size')end
   local r=json.parse(raw)
   local read={read=true,catalog=true,inspect=true,wrap=true}
-  local write={plan=true,submit=true,settings=true,remove=true,['library-remove']=true,['cache-clear']=true,cancel=true,recover=true}
+  local write={plan=true,submit=true,settings=true,remove=true,['library-remove']=true,['library-repair']=true,['cache-clear']=true,cancel=true,recover=true}
   if type(r)~='table'or not(read[r.op]or write[r.op])then return failure(400,'INVALID_INPUT','Unsupported operation')end
   if not permitted(read[r.op]and'read'or'write')then return failure(403,'FORBIDDEN','Permission denied')end
   -- Fixed executable and stdin JSON. No shell, user command or filename is accepted.

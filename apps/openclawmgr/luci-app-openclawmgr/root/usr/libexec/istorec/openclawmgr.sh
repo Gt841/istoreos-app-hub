@@ -890,7 +890,11 @@ do_start() {
 	/etc/init.d/openclawmgr enable >/dev/null 2>&1 || return 1
 	uci -q set "${UCI_NS}.main.enabled=1" && uci -q commit "$UCI_NS" || return 1
 	/etc/init.d/openclawmgr restart >/dev/null 2>&1 || return 1
-	oc_health || return 1
+	if [ -f "$NODE_DIR/.mise-runtime" ]; then
+		write_installer_log "Background startup submitted; inspect Runtime Environments tasks while fixed dependencies are prepared."
+	else
+		oc_health || return 1
+	fi
 	write_installer_log "== start done =="
 }
 
@@ -911,7 +915,11 @@ do_restart() {
 	ensure_token
 	ensure_safe_port_for_start || exit 1
 	/etc/init.d/openclawmgr restart >/dev/null 2>&1 || return 1
-	oc_health || return 1
+	if [ -f "$NODE_DIR/.mise-runtime" ]; then
+		write_installer_log "Background startup submitted; inspect Runtime Environments tasks while fixed dependencies are prepared."
+	else
+		oc_health || return 1
+	fi
 	write_installer_log "== restart done =="
 }
 

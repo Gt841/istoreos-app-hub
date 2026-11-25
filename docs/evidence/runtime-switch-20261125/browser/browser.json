@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "existing environments allow changing the selected repository",
+      "passed": true
+    },
+    {
+      "name": "switch confirmation preserves the old selection on cancel and explains HOME/restart",
+      "passed": true
+    },
+    {
+      "name": "confirmed switch submits one settings request and displays an empty new repository",
+      "passed": true
+    },
+    {
+      "name": "repair submits a version-pinned library task and renders progress",
+      "passed": true
+    },
+    {
+      "name": "maintenance lock blocks switching even without a visible install task",
+      "passed": true
+    },
+    {
+      "name": "offline old storage permits a new selection; mobile dialog remains inside viewport",
+      "passed": true
+    },
+    {
+      "name": "read-only sessions cannot switch storage or repair libraries",
+      "passed": true
+    }
+  ],
+  "pageErrors": [],
+  "mutations": "browser-intercepted; real read-only denial checked"
+}

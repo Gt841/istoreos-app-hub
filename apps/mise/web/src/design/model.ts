@@ -46,6 +46,7 @@ export function tick(s:State,now=Date.now(),step=1200){
    if(failed){t.status='failed';t.failedPhase=t.phase-1;t.logs[t.logs.length-1]=`${t.phases[t.phase-1]}：失败（模拟）`;t.result=t.failure==='python-tools'?'配套 pip/venv 验证失败，候选已清理，未提交环境。':t.failure==='integrity'?'包摘要不匹配，候选已清除，原有环境保持不变。':'原生模块检查失败，候选已清除，原有环境保持不变。';t.logs.push(t.result);t.finished=now;s.revision++;break}
    if(t.phase===t.phases.length){
     if(t.runtime){t.runtime.verified=true;if(t.runtime.language==='python')t.runtime.pythonTools={pipVersion:'25.0.1',venv:'passed',source:'design'};s.runtimes.push(t.runtime);s.free-=t.runtime.size;if(t.runtime.libc==='glibc')s.glibc=true}
+    if(t.kind==='library-repair')s.glibc=true
     t.status='success';t.result='环境已安装并验证，专属 wrap 已准备；全局默认和应用配置保持不变。';t.logs.push(t.result);t.finished=now;s.revision++
    }
   }
@@ -59,14 +60,23 @@ export function command(s:State,action:string,input:Record<string,unknown>,now=D
   case 'recover':{const t=s.tasks.find(t=>t.id===input.id);demand(t?.status==='interrupted','任务无需恢复');t.status='canceled';t.finished=now;t.result='中断候选已清理，可以重新安装；未自动重放任务。';t.logs.push(t.result);s.revision++;return t}
   case 'remove':{available(s);const r=s.runtimes.find(r=>r.id===input.id);demand(r,'环境不存在');demand(!isDefault(s,r.id),'该环境是 mise 全局默认，不能清理；此页不修改全局默认');s.runtimes=s.runtimes.filter(x=>x.id!==r.id);s.free+=r.size;s.revision++;return null}
   case 'library-remove':available(s);demand(!s.runtimes.some(r=>r.libc==='glibc'),'仍有 glibc 环境引用此运行库');s.glibc=false;s.revision++;return null
+  case 'library-repair':{
+   available(s);const t:Task={id:crypto.randomUUID(),kind:'library-repair',title:'检查 / 修复 glibc 运行库',status:'running',phase:0,phases:['检查引用','准备固定来源','完整性校验','验证运行库','提交'],started:now,logs:['设计样例：按固定版本恢复公共库。'],result:'',failure:''}
+   s.tasks.unshift(t);s.revision++;return t
+  }
   case 'cache-clear':available(s);s.free+=s.cache;s.cache=0;s.revision++;return null
   case 'settings':{
    availableSettings(s);const path=String(input.path||'').replace(/\/$/,'')
    demand(/^\/mnt\/[A-Za-z0-9_./-]+$/.test(path)&&!path.split('/').some(x=>x==='..'||x==='.'),'请选择 /mnt 下的持久目录，不支持空格、回退路径或临时目录')
-   demand(!s.runtimes.length||path===s.path,'已有环境时不能直接改存储位置；迁移需在后续正式版本中执行')
+   if(path!==s.path){
+    const repositories=s.repositories||(s.repositories={})
+    if(s.path)repositories[s.path]=structuredClone({runtimes:s.runtimes,defaults:s.defaults,tasks:s.tasks,cache:s.cache,glibc:s.glibc,free:s.free})
+    Object.assign(s,structuredClone(repositories[path]||{runtimes:[],defaults:{node:null,python:null,go:null,rust:null,zig:null,java:null},tasks:[],cache:0,glibc:false,free:8192}))
+    s.plans=[];s.online=true
+   }
    s.path=path;s.acceleration=input.acceleration===true;s.revision++;return null
   }
   default:throw Error('不支持的预览操作')
  }
 }
-function availableSettings(s:State){demand(s.online,'运行时目录离线，请先恢复挂载');demand(!s.tasks.some(t=>['running','interrupted'].includes(t.status)),'请先处理当前任务')}
+function availableSettings(s:State){demand(!s.tasks.some(t=>['running','interrupted'].includes(t.status)),'请先处理当前任务')}

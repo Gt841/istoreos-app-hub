@@ -1,12 +1,13 @@
 include $(TOPDIR)/rules.mk
 
-PKG_VERSION:=0.1.0
-PKG_RELEASE:=2
+PKG_VERSION:=0.1.1
+PKG_RELEASE:=1
 LUCI_TITLE:=Persistent runtime environments
 LUCI_PKGARCH:=all
 LUCI_MINIFY_JS:=0
 LUCI_MINIFY_CSS:=0
 LUCI_DEPENDS:=+luci-base +luci-compat +mise-runtime
+LUCI_EXTRA_DEPENDS:=mise-runtime (>=0.1.1-$(if $(CONFIG_USE_APK),r)1)
 
 define Build/Prepare/luci-app-mise
 	$(INSTALL_DIR) $(PKG_BUILD_DIR)/root/usr/share/linkease/apps.d

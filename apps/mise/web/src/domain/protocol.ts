@@ -20,7 +20,7 @@ export interface AppRuntimeBinding{
 }
 export interface LibraryReceipt{
  schema_version:1;id:string;arch:RuntimeArchitecture;version:string;revision:string
- manifest_sha256:string;source:string;verified:boolean
+ manifest_sha256:string;source:string;verified:boolean;missing?:boolean
 }
 export interface RuntimeState{
  schema_version:1;revision:number;catalog_revision:string;arch:RuntimeArchitecture
@@ -36,6 +36,8 @@ export type RuntimeRequest=
  |{op:'plan';entry:string;npm?:string;source:'origin'|'ks-cli'}
  |{op:'submit'|'inspect'|'remove'|'cancel'|'recover'|'wrap'|'library-remove';id:string}
  |{op:'settings';path:string;acceleration:boolean}
+ |{op:'library-repair';id:string;source:'origin'|'ks-cli'}
+ |{op:'ensure';entry:string;library?:string;source:'origin'|'ks-cli'}
  |{op:'prepare-user';uid:number;gid?:number}
 export type RuntimeErrorCode='INVALID_INPUT'|'UNSUPPORTED'|'OFFLINE'|'NO_SPACE'|'BUSY'|'STALE_PLAN'|'INTEGRITY'|'PROBE_FAILED'|'INTERRUPTED'
 export type RuntimeResponse<T>=

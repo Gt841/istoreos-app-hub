@@ -153,6 +153,8 @@
   }
 
   function statusText(status) {
+    if (status.runtime_preparation && status.runtime_preparation.status === "preparing" && status.running) return "准备运行环境";
+    if (status.runtime_preparation && status.runtime_preparation.status === "failed") return "运行时准备失败，可重启重试";
     if (status.installing) return status.task_op === "upgrade" ? "更新中" : "安装中";
     if (!status || !status.installed) return "未安装";
     if (status.runtime_missing) return "固定运行时缺失";
@@ -162,6 +164,7 @@
   }
 
   function statusDotClass(status) {
+    if (status && status.runtime_preparation && status.runtime_preparation.status === "failed") return "is-danger";
     if (status && status.installing) return "";
     if (status && status.runtime_missing) return "is-danger";
     if (status && status.running) return "is-success";
@@ -972,7 +975,7 @@
         '</div>' +
         '</div>';
     }).join("");
-    var canStartService = !status.running && !status.reachable && !status.runtime_missing;
+    var canStartService = !status.running && !status.reachable;
     var canStopService = !!status.running;
 
     root.innerHTML =
@@ -996,8 +999,8 @@
       '<div><div class="oclm-meta-label">目录</div><div id="oclm-status-base-dir">' + escapeHtml(status.base_dir || "-") + '</div></div>' +
       '<div><div class="oclm-meta-label">版本</div><div class="oclm-version-tags"><a class="oclm-tag oclm-tag-link" href="https://github.com/openclaw/openclaw/releases" target="_blank" rel="noreferrer">OpenClaw <strong id="oclm-openclaw-version">' + escapeHtml(status.openclaw_version || "-") + '</strong></a><span class="oclm-tag">Node <strong id="oclm-node-version">' + escapeHtml(status.node_version || "-") + '</strong></span>' +
       '<span id="oclm-runtime-abi" class="oclm-tag' + (runtimeInfo ? '' : ' oclm-hidden') + '">' + escapeHtml(runtimeAbi) + '</span>' +
-      '<a id="oclm-runtime-source" class="oclm-tag oclm-tag-link' + (runtimeInfo ? '' : ' oclm-hidden') + '" href="' + escapeAttr(config.runtimeUrl || '/cgi-bin/luci/admin/services/mise') + '" title="' + escapeAttr(runtimeInfo && runtimeInfo.instance || '') + '">mise 固定运行时</a>' +
-      '<span id="oclm-runtime-unknown" class="oclm-tag' + (!runtimeInfo && status.installed ? '' : ' oclm-hidden') + '">运行时信息待检测</span></div></div>' +
+      '<a id="oclm-runtime-source" class="oclm-tag oclm-tag-link" href="' + escapeAttr(config.runtimeUrl || '/cgi-bin/luci/admin/services/mise') + '" title="' + escapeAttr(runtimeInfo && runtimeInfo.instance || '') + '">mise 固定运行时</a>' +
+      '<span id="oclm-runtime-unknown" class="oclm-tag' + (!runtimeInfo && status.installed ? '' : ' oclm-hidden') + '">运行时需检查；可重启服务准备依赖</span></div></div>' +
       '<div></div>' +
       '</div>' +
       '<div id="oclm-status-actions" class="oclm-status-actions">' +
@@ -1210,10 +1213,14 @@
       abiEl.textContent = runtimeInfo ? String(runtimeInfo.abi || "") + (runtimeInfo.libc && runtimeInfo.libc.version ? " " + runtimeInfo.libc.version : "") : "";
     }
     if (sourceEl) {
-      sourceEl.classList.toggle("oclm-hidden", !runtimeInfo);
+      sourceEl.classList.remove("oclm-hidden");
       sourceEl.title = String(runtimeInfo && runtimeInfo.instance || "");
     }
-    if (unknownEl) unknownEl.classList.toggle("oclm-hidden", !!runtimeInfo || !status.installed);
+    if (unknownEl) {
+      var preparation = status.runtime_preparation;
+      unknownEl.classList.toggle("oclm-hidden", !!runtimeInfo && !(preparation && preparation.status === "failed") || !status.installed);
+      unknownEl.textContent = preparation && preparation.error ? String(preparation.error) : "运行时需检查；可重启服务准备依赖";
+    }
 
     var installInline = byId("oclm-install-inline");
     var installBtn = byId("oclm-install-btn");
@@ -1261,7 +1268,7 @@
     var btnStop = byId("oclm-btn-stop");
     var btnRestart = byId("oclm-btn-restart");
     var showServiceActions = !!(status.installed && !status.installing);
-    var canStartService = !!(!status.running && !status.reachable && !status.runtime_missing);
+    var canStartService = !!(!status.running && !status.reachable);
     var canStopService = !!status.running;
 
     if (svcWrap) {

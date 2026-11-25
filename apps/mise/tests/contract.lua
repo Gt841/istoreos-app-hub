@@ -43,4 +43,8 @@ test('receipt cannot alter digest',function()local r=clone(receipt);r.artifact_s
 test('receipt cannot set registry alias',function()local r=clone(receipt);r.mise_key='latest';rejects(function()contract.receipt(r)end)end)
 test('unverified receipt records unknown probe',function()local r=clone(receipt);r.verified=false;r.probes.launcher='unknown';assert(contract.receipt(r))end)
 test('Rust registration bypasses rustup backend',function()assert(contract.registration_tool('rust')=='http:istore-rust');assert(contract.registration_tool('node')=='node')end)
+
+
+test('ensure requires exact entry and explicit network source',function()assert(contract.request({op='ensure',entry=e.id,source='ks-cli',library='glibc-2.39-r1'}));rejects(function()contract.request({op='ensure',entry=e.id})end)end)
+test('library repair accepts only fixed identifiers and explicit source',function()assert(contract.request({op='library-repair',id='glibc-2.39-r1',source='origin'}));rejects(function()contract.request({op='library-repair',id='../other',source='origin'})end);rejects(function()contract.request({op='library-repair',id='g1',source='proxy'})end)end)
 print('passed='..n)

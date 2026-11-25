@@ -97,7 +97,9 @@ function M.install(ctx,t,entry,work,log)
   local tasks=require('tasks');local artifacts=require('artifacts');local libraries=require('libraries')
   local library
   if entry.abi=='glibc'then
-    tasks.phase(ctx,t,'library');library=libraries.ensure(ctx,libraries.definition(entry.arch),t.plan.source,work,log,ctx.download_options).id
+    tasks.phase(ctx,t,'library')
+    local definition=t.plan.library and require('dependencies').library(t.plan.library,entry.arch)or libraries.definition(entry.arch)
+    library=libraries.ensure(ctx,definition,t.plan.source,work,log,ctx.download_options).id
   end
   local id=contract.instance_id(entry,nil,library);need(id==t.plan.instance,'Python plan identity changed')
   local sdk=ctx.root..'/environments/'..id;need(not fs.lstat(sdk),'Python SDK already exists')

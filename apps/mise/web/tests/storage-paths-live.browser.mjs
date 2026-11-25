@@ -1,4 +1,4 @@
-// Actual LuCI storage discovery and guarded existing installation; new-install
+// Actual LuCI storage discovery and existing installation with selectable repositories; new-install
 // rendering uses intercepted read responses and never changes device settings.
 import {chromium} from 'playwright'
 import fs from 'node:fs'
@@ -23,19 +23,17 @@ try{
   assert.ok(Array.isArray(before.storage_paths),'Storage read must expose disk choices')
   for(const p of ['/mnt/vio4-0/Configs/Runtime','/mnt/mise-runtime/Configs/Runtime',before.path])assert.ok(before.storage_paths.includes(p),p)
   assert.equal(before.storage_paths.length,3);assert.equal(new Set(before.storage_paths).size,3)
-  assert.equal(before.storage_locked,true);assert.ok(before.runtimes.length>0)
+  assert.equal(before.storage_locked,false);assert.ok(before.runtimes.length>0)
  })
- await check('current real installation is selected and protected; other disks are visible',async()=>{
+ await check('current real installation is selected and other repositories can be chosen',async()=>{
   await storage();const select=page.getByLabel('运行环境存放位置',{exact:true})
-  assert.equal(await select.evaluate(e=>e.tagName),'SELECT');assert.equal(await select.inputValue(),before.path);assert.equal(await select.isDisabled(),true);assert.ok((await page.locator('.storage-home').textContent()).includes(before.path+'/home'))
+  assert.equal(await select.evaluate(e=>e.tagName),'SELECT');assert.equal(await select.inputValue(),before.path);assert.equal(await select.isDisabled(),false);assert.ok((await page.locator('.storage-home').textContent()).includes(before.path+'/home'))
   await page.getByText('查看其他硬盘目录',{exact:true}).click()
   await page.locator('.storage-options').getByText('/mnt/vio4-0/Configs/Runtime',{exact:true}).waitFor()
   await page.screenshot({path:path.join(out,'installed-storage.png'),fullPage:true})
  })
- await check('backend refuses moving existing SDKs without changing the active storage root',async()=>{
-  const rejected=await request({op:'settings',path:'/mnt/vio4-0/Configs/Runtime',acceleration:before.acceleration})
-  assert.equal(rejected.ok,false);assert.equal(rejected.error.code,'BUSY')
- })
+ // Real switching and rollback are covered by repository-switch-device.lua.
+ // Never submit a real settings change from this read-only browser check.
  snapshot={...before,path:'',online:false,storage_locked:false,runtimes:[],libraries:[],tasks:[],warnings:[],storage_paths:before.storage_paths.filter(p=>p!==before.path)}
  // Never forward a settings save while displaying simulated first-use state.
  await page.route('**/mise/request',async route=>{
@@ -49,12 +47,13 @@ try{
   assert.equal(await select.isDisabled(),false);assert.equal(await select.inputValue(),snapshot.storage_default)
   for(const p of snapshot.storage_paths){await select.selectOption(p);assert.equal(await select.inputValue(),p);assert.ok((await page.locator('.storage-home').textContent()).includes(p+'/home'))}
   const chosen='/mnt/vio4-0/Configs/Runtime';await select.selectOption(chosen)
-  await page.getByRole('button',{name:'保存设置',exact:true}).click();await page.getByRole('alert').waitFor();assert.equal(captured.path,chosen)
+  await page.getByRole('button',{name:'保存设置',exact:true}).click();await page.getByRole('button',{name:'确认切换',exact:true}).click();await page.getByRole('alert').waitFor();assert.equal(captured.path,chosen)
  })
  await check('custom folder name is serialized as its actual path (save intercepted)',async()=>{
+  await page.getByRole('dialog').getByRole('button',{name:'取消',exact:true}).click()
   await page.getByLabel('运行环境存放位置',{exact:true}).selectOption('__custom__')
   const chosen='/mnt/vio4-0/MyRuntime';await page.getByLabel('自定义存放目录',{exact:true}).fill(chosen)
-  captured=undefined;await page.getByRole('button',{name:'保存设置',exact:true}).click();for(let i=0;i<50&&!captured;i++)await page.waitForTimeout(50);assert.equal(captured?.path,chosen)
+  captured=undefined;await page.getByRole('button',{name:'保存设置',exact:true}).click();await page.getByRole('button',{name:'确认切换',exact:true}).click();for(let i=0;i<50&&!captured;i++)await page.waitForTimeout(50);assert.equal(captured?.path,chosen)
  })
  await check('mobile custom-path form fits and no-disk state never defaults to /root',async()=>{
   await page.setViewportSize({width:390,height:900});await storage()

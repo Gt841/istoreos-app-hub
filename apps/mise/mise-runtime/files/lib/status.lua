@@ -10,8 +10,8 @@ local function uci(key)
 end
 function M.empty(catalog,path)
   local paths,recommended=require('storage-paths').discover(path,uci('quickstart.@main[0].conf_dir'))
-  local r={schema_version=1,revision=0,catalog_revision=catalog.revision,arch=sys.nixio.uname().machine,path=path or'',online=false,
-    storage_paths=paths,storage_default=recommended,storage_locked=path~=nil and path~='',
+  local r={schema_version=1,revision=0,catalog_revision=catalog.revision,arch=sys.nixio.uname().machine,path=path or'',managed_home=uci('mise.main.runtime_dir')~=''and uci('mise.main.runtime_dir')or(path and path~=''and path..'/home'or''),online=false,
+    storage_paths=paths,storage_default=recommended,storage_locked=false,
     runtimes=wire.array(),libraries=wire.array(),tasks=wire.array(),warnings=wire.array(),defaults={},defaults_known={},default_pins={},default_paths={},capabilities={},
     free_bytes=wire.null,free_inodes=wire.null,cache_bytes=wire.null,measurements={},library_references={},acceleration=uci('mise.main.acceleration')~='0',gateway=false}
   local ok,adapters=pcall(require,'adapters')
@@ -45,7 +45,7 @@ end
 function M.read(ctx,catalog)
   local r=M.empty(catalog,ctx.root)
   r.online=true;r.revision=store.state(ctx).revision;r.free_bytes=ctx.storage.free_bytes;r.free_inodes=ctx.storage.free_inodes
-  r.storage_locked=#store.list(ctx.root..'/environments')>0
+  r.storage_locked=sys.fs.lstat(ctx.root..'/.lock')~=nil
   local policy=sys.decode(ctx.root..'/network/settings.json');if policy then r.acceleration=policy.acceleration end
   local d=require('defaults').read(ctx);r.defaults_known=d.known;r.default_pins=d.pins;r.default_paths=d.paths
   for tool in pairs(contract.tools)do r.defaults[tool]=d.values[tool]or wire.null end
@@ -62,6 +62,11 @@ function M.read(ctx,catalog)
     local ok,receipt=pcall(sys.decode,ctx.root..'/libraries/'..id..'/receipt.json')
     if ok and receipt then r.libraries[#r.libraries+1]=receipt end
   end
+  local present={};for _,lib in ipairs(r.libraries)do present[lib.id]=true end
+  for id in pairs(r.library_references)do if not present[id]then
+    local ok,d=pcall(require('dependencies').library,id,r.arch)
+    if ok then r.libraries[#r.libraries+1]={schema_version=1,id=id,arch=d.arch,version=d.version,revision=d.revision,verified=false,missing=true}end
+  end end
   local ids=store.list(ctx.root..'/tasks');local all={}
   for _,id in ipairs(ids)do
     local ok,t=pcall(tasks.get,ctx,id)

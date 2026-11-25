@@ -1,0 +1,178 @@
+{
+  "passed": false,
+  "checks": [],
+  "measurements": [
+    {
+      "width": 2048,
+      "surface": {
+        "x": 260,
+        "y": 57.59375,
+        "width": 1768,
+        "height": 883.203125
+      },
+      "content": {
+        "x": 260,
+        "y": 57.59375,
+        "width": 1768,
+        "height": 883.203125
+      },
+      "panel": {
+        "x": 324,
+        "y": 120.390625,
+        "width": 1640,
+        "height": 772.40625
+      },
+      "ancestors": [
+        {
+          "tag": "DIV",
+          "class": "mise-surface",
+          "box": {
+            "x": 260,
+            "y": 57.59375,
+            "width": 1768,
+            "height": 883.203125
+          }
+        },
+        {
+          "tag": "DIV",
+          "class": "container",
+          "box": {
+            "x": 260,
+            "y": 57.59375,
+            "width": 1768,
+            "height": 883.203125
+          }
+        },
+        {
+          "tag": "DIV",
+          "class": "",
+          "box": {
+            "x": 240,
+            "y": 57.59375,
+            "width": 1808,
+            "height": 945.90625
+          }
+        },
+        {
+          "tag": "DIV",
+          "class": "main-right",
+          "box": {
+            "x": 240,
+            "y": 0,
+            "width": 1808,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "DIV",
+          "class": "main",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 2048,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BODY",
+          "class": "lang_en  logged-in",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 2048,
+            "height": 1000
+          }
+        }
+      ],
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "运行时环境",
+          "shadow": "none",
+          "after": {
+            "content": "none",
+            "display": "inline"
+          }
+        },
+        {
+          "tag": "H2",
+          "text": "存储与下载",
+          "shadow": "none",
+          "after": {
+            "content": "none",
+            "display": "inline"
+          }
+        },
+        {
+          "tag": "H2",
+          "text": "公共运行库",
+          "shadow": "none",
+          "after": {
+            "content": "none",
+            "display": "inline"
+          }
+        },
+        {
+          "tag": "H3",
+          "text": "glibc 2.39 x86_64 · r1",
+          "shadow": "none",
+          "after": {
+            "content": "none",
+            "display": "inline"
+          }
+        },
+        {
+          "tag": "H3",
+          "text": "glibc 2.39 x86_64 · r2",
+          "shadow": "none",
+          "after": {
+            "content": "none",
+            "display": "inline"
+          }
+        },
+        {
+          "tag": "H2",
+          "text": "下载缓存",
+          "shadow": "none",
+          "after": {
+            "content": "none",
+            "display": "inline"
+          }
+        }
+      ],
+      "libraryRows": [
+        {
+          "description": {
+            "x": 1295.609375,
+            "y": 490.265625,
+            "width": 437.359375,
+            "height": 19.1875
+          },
+          "code": {
+            "x": 1295.609375,
+            "y": 500.453125,
+            "width": 324.21875,
+            "height": 42
+          }
+        },
+        {
+          "description": {
+            "x": 1295.609375,
+            "y": 573.9375,
+            "width": 437.359375,
+            "height": 19.1875
+          },
+          "code": {
+            "x": 1295.609375,
+            "y": 584.125,
+            "width": 324.21875,
+            "height": 42
+          }
+        }
+      ],
+      "overflow": false
+    }
+  ],
+  "error": "Runtime library description overlaps its code block",
+  "pageErrors": []
+}

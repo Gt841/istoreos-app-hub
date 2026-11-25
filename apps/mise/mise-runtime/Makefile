@@ -1,8 +1,8 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=mise-runtime
-PKG_VERSION:=0.1.0
-PKG_RELEASE:=2
+PKG_VERSION:=0.1.1
+PKG_RELEASE:=1
 PKG_LICENSE:=GPL-3.0-only
 
 include $(INCLUDE_DIR)/package.mk
@@ -11,7 +11,8 @@ define Package/mise-runtime
   SECTION:=utils
   CATEGORY:=Utilities
   TITLE:=Persistent iStoreOS language runtimes
-  DEPENDS:=@(x86_64||aarch64) +mise +lua +luci-lib-jsonc +luci-lib-nixio +curl +ca-bundle +tar +xz-utils +zstd +ks-cli +coreutils-stat +libstdcpp +block-mount
+  DEPENDS:=@(x86_64||aarch64) +mise +lua +libuci-lua +luci-lib-jsonc +luci-lib-nixio +curl +ca-bundle +tar +xz-utils +zstd +ks-cli +coreutils-stat +libstdcpp +block-mount
+  EXTRA_DEPENDS:=mise (>=2026.8.14-$(if $(CONFIG_USE_APK),r)28)
 endef
 
 define Build/Compile

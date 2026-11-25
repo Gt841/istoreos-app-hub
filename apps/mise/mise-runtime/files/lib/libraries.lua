@@ -60,7 +60,8 @@ local function member(archive,name,target,log)
 end
 function M.ensure(ctx,definition,source,work,log,options)
   local id=contract.key(definition.id);local final=ctx.root..'/libraries/'..id
-  if sys.fs.lstat(final)then return M.check(ctx,id,work)end
+  options=options or{}
+  if sys.fs.lstat(final)and not options.repair then return M.check(ctx,id,work)end
   store.validate(ctx.root,128*1024*1024,100)
   local libc=artifacts.download(ctx,definition.libc,source,work,log,options)
   local base=artifacts.download(ctx,definition.gcc,source,work,log,options)
@@ -106,7 +107,28 @@ function M.ensure(ctx,definition,source,work,log,options)
   sys.write(candidate..'/receipt.json',receipt,420)
   sys.need(sys.run({'chmod','-R','a+rX,go-w',candidate},{output=log,append=true})==0,'OFFLINE','Cannot set shared library permissions')
   store.validate(ctx.root)
+  if options.repair then
+    local t=options.task;sys.need(t,'INVALID_INPUT','Library repair requires an owned task')
+    local st=sys.fs.lstat(final)
+    sys.need(not st or st.type=='dir','INTEGRITY','Library path is not a real directory')
+    t.library_publication={id=id,old_inode=st and st.ino,new_inode=sys.fs.lstat(candidate).ino}
+    require('tasks').save(ctx,t)
+    if st then sys.need(sys.fs.rename(final,work..'/library-backup'),'OFFLINE','Cannot preserve the previous library')end
+  end
   sys.need(sys.fs.rename(candidate,final),'OFFLINE','Cannot commit private library')
   return M.check(ctx,id,work)
+end
+function M.recover(ctx,t)
+  local p=t.library_publication;if not p or t.phase=='committed'then return end
+  local final=ctx.root..'/libraries/'..contract.key(p.id)
+  local backup=ctx.root..'/work/'..contract.key(t.id)..'/library-backup'
+  local old=sys.fs.lstat(backup);local current=sys.fs.lstat(final)
+  if current and current.ino==p.old_inode and not old then return end
+  sys.need(not current or current.ino==p.new_inode,'INTEGRITY','Library repair ownership changed; preserving files')
+  if p.old_inode then
+    sys.need(old and old.ino==p.old_inode,'INTEGRITY','Previous library backup changed')
+    if current then sys.remove(final)end
+    sys.need(sys.fs.rename(backup,final),'OFFLINE','Cannot restore the previous library')
+  elseif current then sys.remove(final)end
 end
 return M

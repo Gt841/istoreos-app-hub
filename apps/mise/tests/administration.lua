@@ -33,7 +33,7 @@ test('read shows unverified fixture without enabling unsupported adapters',funct
 end)
 test('unknown JSON command rejected without state change',function()cli({op='shell',command='touch injected'},'INVALID_INPUT');assert(store.state(ctx).revision==0)end)
 test('library reference blocks removal',function()cli({op='library-remove',id=library},'BUSY');assert(sys.read(root..'/libraries/'..library..'/marker')=='preserve')end)
-test('installed environment blocks storage root change',function()cli({op='settings',path=root..'-changed',acceleration=false},'BUSY');assert(not sys.fs.lstat(root..'-changed'))end)
+test('installed environments allow switching without copying SDKs',function()local result=cli({op='settings',path=root..'-changed',acceleration=false});assert(result.path==root..'-changed'and #result.runtimes==0);assert(sys.fs.lstat(sdk));sys.remove(root..'-changed')end)
 test('concurrent maintenance rejected while lock held',function()
   store.lock(ctx,{id='held'});cli({op='cache-clear'},'BUSY');store.unlock(ctx,'held')
 end)

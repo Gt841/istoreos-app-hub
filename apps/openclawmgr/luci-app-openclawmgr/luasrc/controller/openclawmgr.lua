@@ -796,6 +796,7 @@ function action_status()
 	local oc_ver = ""
 	local target_oc_ver = ""
 	local runtime_info
+	local runtime_preparation
 	if base_dir ~= "" then
 		node_ver = sys.exec("/usr/libexec/istorec/openclawmgr.sh node_version 2>/dev/null"):gsub("%s+$", "")
 		oc_ver = sys.exec("/usr/libexec/istorec/openclawmgr.sh openclaw_version 2>/dev/null"):gsub("%s+$", "")
@@ -803,6 +804,11 @@ function action_status()
 		-- cannot distinguish a musl executable from a private glibc runtime.
 		local raw = sys.exec("/usr/bin/lua /usr/share/openclawmgr/shared-runtime.lua describe " .. require("luci.util").shellquote(base_dir .. "/current/runtime.json") .. " 2>/dev/null")
 		runtime_info = require("luci.jsonc").parse(raw)
+		local prep_raw = require("nixio.fs").readfile(base_dir .. "/log/runtime-prepare/status.json")
+		local prep = prep_raw and require("luci.jsonc").parse(prep_raw)
+		if type(prep) == "table" and prep.storage_root == uci:get("mise", "main", "storage_root") then
+			runtime_preparation = { status = prep.status, error = prep.error }
+		end
 	end
 	target_oc_ver = sys.exec("/usr/libexec/istorec/openclawmgr.sh latest_openclaw_version 2>/dev/null"):gsub("%s+$", "")
 	local pid = running and get_running_pid() or ""
@@ -838,6 +844,7 @@ function action_status()
 		token = token,
 		node_version = node_ver,
 		runtime_info = runtime_info,
+		runtime_preparation = runtime_preparation,
 		openclaw_version = oc_ver,
 		target_openclaw_version = target_oc_ver,
 		pid = pid,

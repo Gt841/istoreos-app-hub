@@ -1,7 +1,7 @@
 import type {CatalogEntry,LibraryReceipt,RuntimeReceipt,RuntimeRequest,RuntimeResponse} from '../domain/protocol'
 import {tools,abiLabel,versionLabel} from './labels'
 import type {State,Runtime,RawTask,Plan,Language} from './model'
-type WireState={schema_version:1;revision:number;arch:State['arch'];path:string;storage_paths?:string[];storage_default?:string;storage_locked?:boolean;online:boolean;storage_error?:string;free_bytes:number|null;cache_bytes:number|null;acceleration:boolean;gateway:boolean;runtimes:RuntimeReceipt[];libraries:LibraryReceipt[];measurements:Record<string,{size_bytes:number|null}>;library_references:Record<string,number>;defaults:Record<string,string|null>;defaults_known:State['defaultsKnown'];default_pins:Record<string,Record<string,boolean>>;default_paths:Record<string,boolean>;default_library:string;capabilities:State['capabilities'];tasks:RawTask[];warnings:string[]}
+type WireState={schema_version:1;revision:number;arch:State['arch'];path:string;managed_home?:string;storage_paths?:string[];storage_default?:string;storage_locked?:boolean;online:boolean;storage_error?:string;free_bytes:number|null;cache_bytes:number|null;acceleration:boolean;gateway:boolean;runtimes:RuntimeReceipt[];libraries:LibraryReceipt[];measurements:Record<string,{size_bytes:number|null}>;library_references:Record<string,number>;defaults:Record<string,string|null>;defaults_known:State['defaultsKnown'];default_pins:Record<string,Record<string,boolean>>;default_paths:Record<string,boolean>;default_library:string;capabilities:State['capabilities'];tasks:RawTask[];warnings:string[]}
 const messages:Record<string,string>={BUSY:'当前操作受保护或有任务未完成',STALE_PLAN:'安装计划已过期，请重新检查',NO_SPACE:'磁盘空间或 inode 不足',OFFLINE:'存储或后端不可用',UNSUPPORTED:'当前组合尚不支持',INTEGRITY:'完整性检查未通过',PROBE_FAILED:'环境验证未通过',FORBIDDEN:'没有操作权限'}
 export class LiveService{
  readonly writable:boolean
@@ -34,9 +34,9 @@ export class LiveService{
    const e=catalog.find(e=>e.id===t.plan?.entry),phase=Math.max(0,phases.indexOf(t.phase))
    const result=t.result,installed=result&&typeof result==='object'?runtimes.find(r=>r.id===result.instance):undefined
    const candidate=e&&t.plan?{id:t.plan.instance,entryId:e.id,language:e.tool,version:e.version,libc:e.abi,arch:e.arch,npm:e.npm||'',size:null,verified:false,default:false,probes:{},installed:0}as Runtime:undefined
-   return{id:t.id,title:e?`安装 ${tools[e.tool].name} ${versionLabel(e.tool,e.version)}`:'安装任务',status:t.status,phase,failedPhase:t.status==='failed'?phase:undefined,phases:labels,started:t.started,logs:Array.isArray(t.logs)?t.logs:[],result:t.error?.message||(t.status==='success'?'安装完成':t.status==='canceled'?'任务已取消，候选已清理':''),runtime:installed||candidate}
+   return{id:t.id,title:t.plan?.kind==='library-repair'?'检查 / 修复 glibc 运行库':e?`${t.plan?.kind==='ensure'?'准备':'安装'} ${tools[e.tool].name} ${versionLabel(e.tool,e.version)}`:'安装任务',status:t.status,phase,failedPhase:t.status==='failed'?phase:undefined,phases:labels,started:t.started,logs:Array.isArray(t.logs)?t.logs:[],result:t.error?.message||(t.status==='success'?(t.plan?.kind==='library-repair'?'运行库检查 / 修复完成，请重启相关应用':'安装完成'):t.status==='canceled'?'任务已取消，候选已清理':''),library:t.plan?.kind==='library-repair'?t.plan.library:undefined,runtime:installed||candidate}
   })
-  return{stamp,revision:raw.revision,arch:raw.arch,path:raw.path,storagePaths:Array.isArray(raw.storage_paths)?raw.storage_paths.filter(p=>typeof p==="string"):[],storageDefault:raw.storage_default||"",storageLocked:raw.storage_locked??(raw.runtimes.length>0||!raw.online&&!!raw.path),online:raw.online,storageError:raw.storage_error,acceleration:raw.acceleration,gateway:raw.gateway,free:raw.free_bytes===null?null:raw.free_bytes/1048576,cache:raw.cache_bytes===null?null:raw.cache_bytes/1048576,catalog,runtimes,libraries:raw.libraries.map(l=>({...l,references:raw.library_references[l.id]||0})),defaults,defaultLabels,defaultsKnown:raw.defaults_known,defaultLibrary:raw.default_library,capabilities:raw.capabilities,tasks,warnings:raw.warnings||[]}
+  return{stamp,revision:raw.revision,arch:raw.arch,path:raw.path,managedHome:raw.managed_home,storagePaths:Array.isArray(raw.storage_paths)?raw.storage_paths.filter(p=>typeof p==="string"):[],storageDefault:raw.storage_default||"",storageLocked:raw.storage_locked??false,online:raw.online,storageError:raw.storage_error,acceleration:raw.acceleration,gateway:raw.gateway,free:raw.free_bytes===null?null:raw.free_bytes/1048576,cache:raw.cache_bytes===null?null:raw.cache_bytes/1048576,catalog,runtimes,libraries:raw.libraries.map(l=>({...l,references:raw.library_references[l.id]||0})),defaults,defaultLabels,defaultsKnown:raw.defaults_known,defaultLibrary:raw.default_library,capabilities:raw.capabilities,tasks,warnings:raw.warnings||[]}
  }
  async plan(entry:CatalogEntry,source:'origin'|'ks-cli'):Promise<Plan>{
   const p=await this.request<{id:string;instance:string}>({op:'plan',entry:entry.id,source})
@@ -45,6 +45,7 @@ export class LiveService{
  async act(op:'submit'|'remove'|'cancel'|'recover'|'library-remove'|'cache-clear',id?:string){
   return this.request<{id?:string}>(op==='cache-clear'?{op}:{op,id:id!})
  }
+ async repairLibrary(id:string,source:'origin'|'ks-cli'){return this.request<{task:{id:string}}>({op:'library-repair',id,source})}
  async settings(path:string,acceleration:boolean){return this.request({op:'settings',path,acceleration})}
  async wrap(id:string){const text=await this.request<string>({op:'wrap',id});if(typeof text!=='string'||!text.startsWith('#!/bin/sh'))throw Error('固定入口不存在，环境可能已经清理。');return text}
 }

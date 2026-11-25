@@ -1,0 +1,35 @@
+{
+  "registry": "https://dl-npm.linkease.net:5443",
+  "explicit_registry_override": false,
+  "checks": [
+    {
+      "agent": "codexcli",
+      "passed": true,
+      "fresh_metadata_through_gateway": true
+    },
+    {
+      "agent": "claude-code",
+      "passed": true,
+      "fresh_metadata_through_gateway": true
+    },
+    {
+      "agent": "opencode",
+      "passed": true,
+      "fresh_metadata_through_gateway": true
+    },
+    {
+      "agent": "kimi",
+      "passed": true,
+      "fresh_metadata_through_gateway": true
+    },
+    {
+      "agent": "reasonix",
+      "passed": true,
+      "fresh_metadata_through_gateway": true
+    }
+  ],
+  "scope": "actual fresh metadata requests through the local gateway; installed package cache retained",
+  "policy": "accelerated_network",
+  "passed": true,
+  "npm_integrity_disabled": false
+}

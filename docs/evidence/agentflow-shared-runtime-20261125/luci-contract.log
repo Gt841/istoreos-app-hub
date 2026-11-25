@@ -1,0 +1,12 @@
+test_controller_uses_local_runtime_task_without_remote_script_or_global_mise (test_agent_install_contract.AgentInstallContractTest.test_controller_uses_local_runtime_task_without_remote_script_or_global_mise) ... ok
+test_luci_loads_task_window_and_starts_whitelisted_installer (test_agent_install_contract.AgentInstallContractTest.test_luci_loads_task_window_and_starts_whitelisted_installer) ... ok
+test_modal_theme_prefers_body_attribute_then_system_theme (test_agent_install_contract.AgentInstallContractTest.test_modal_theme_prefers_body_attribute_then_system_theme) ... ok
+test_status_uses_application_owned_fixed_runtime (test_agent_install_contract.AgentInstallContractTest.test_status_uses_application_owned_fixed_runtime) ... ok
+test_app_meta_and_desktop_icons_have_single_owners (test_agentflow_luci_open_contract.AgentFlowLuciOpenContractTest.test_app_meta_and_desktop_icons_have_single_owners) ... ok
+test_app_meta_autoconfigures_agentflow_and_exposes_management_entry (test_agentflow_luci_open_contract.AgentFlowLuciOpenContractTest.test_app_meta_autoconfigures_agentflow_and_exposes_management_entry) ... ok
+test_luci_open_delegates_to_shared_apps_entry (test_agentflow_luci_open_contract.AgentFlowLuciOpenContractTest.test_luci_open_delegates_to_shared_apps_entry) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.001s
+
+OK

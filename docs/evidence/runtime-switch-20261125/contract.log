@@ -1,0 +1,54 @@
+ok 1 catalog entry
+ok 2 npm variant has distinct identity
+ok 3 library revision has distinct identity
+ok 4 artifact digest has distinct identity
+ok 5 no implicit GNU library
+ok 6 musl cannot take GNU library
+ok 7 reject path "/root/runtime"
+ok 8 reject path "/tmp/runtime"
+ok 9 reject path "/mnt"
+ok 10 reject path "/mnt/a/../b"
+ok 11 reject path "/mnt/a/./b"
+ok 12 reject path "/mnt//a"
+ok 13 reject path "/mnt/a/"
+ok 14 reject path "/mnt/a\
+b"
+ok 15 reject path "/mnt/a;touch"
+ok 16 valid persistent path
+ok 17 reject catalog mismatch
+ok 18 reject catalog mismatch
+ok 19 reject catalog mismatch
+ok 20 reject catalog mismatch
+ok 21 reject catalog mismatch
+ok 22 reject catalog mismatch
+ok 23 reject catalog mismatch
+ok 24 unknown field rejected
+ok 25 HTTP artifact rejected
+ok 26 URL userinfo rejected
+ok 27 non Node npm rejected
+ok 28 Java build identity
+ok 29 unavailable requires reason
+ok 30 explicit source required
+ok 31 pip independent choice rejected
+ok 32 global default mutation rejected
+ok 33 arbitrary shell rejected
+ok 34 boolean settings required
+ok 35 valid read request
+ok 36 valid bounded plan
+ok 37 stale plan
+ok 38 expired plan
+ok 39 future plan
+ok 40 lifetime bounded
+ok 41 binding pins app instance
+ok 42 binding does not select global
+ok 43 verified receipt
+ok 44 unknown capability cannot claim verified
+ok 45 receipt cannot alter instance
+ok 46 receipt cannot alter library
+ok 47 receipt cannot alter digest
+ok 48 receipt cannot set registry alias
+ok 49 unverified receipt records unknown probe
+ok 50 Rust registration bypasses rustup backend
+ok 51 ensure requires exact entry and explicit network source
+ok 52 library repair accepts only fixed identifiers and explicit source
+passed=52

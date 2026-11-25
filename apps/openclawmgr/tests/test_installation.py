@@ -775,7 +775,8 @@ class RuntimeChecks(unittest.TestCase):
         recipe=(APP/'luci-app-openclawmgr/Makefile').read_text()
         for dep in ['+mise-runtime','+ks-cli','+coreutils-timeout','+coreutils-stat','+libstdcpp','+libatomic','+git-http']:
             self.assertIn(dep,recipe)
-        self.assertIn('PKG_RELEASE:=4',(APP/'app-meta-openclawmgr/Makefile').read_text())
+        self.assertIn('PKG_VERSION:=0.1.13',(APP/'app-meta-openclawmgr/Makefile').read_text())
+        self.assertIn('PKG_RELEASE:=1',(APP/'app-meta-openclawmgr/Makefile').read_text())
         self.assertNotIn('+openclawmgr-glibc',recipe)
         self.assertTrue(os.access(SHARE/'cli-bin/npm',os.X_OK))
         self.assertTrue(os.access(SHARE/'npm-git.sh',os.X_OK))

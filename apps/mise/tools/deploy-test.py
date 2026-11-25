@@ -26,6 +26,7 @@ p.add_argument('--exec-user',required=True,type=Path)
 p.add_argument('--python-launch-musl',type=Path)
 p.add_argument('--python-launch-glibc',type=Path)
 p.add_argument('--with-openclaw',action='store_true')
+p.add_argument('--with-agentflow',action='store_true')
 p.add_argument('--evidence',required=True,type=Path)
 a=p.parse_args()
 assert re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9._-]*',a.label)
@@ -56,7 +57,17 @@ for name,target,mode in [('mise.sh','/lib/functions/mise.sh',0o644),
                          ('mise-istore','/usr/sbin/mise-istore',0o755),
                          ('mise-exec','/usr/sbin/mise-exec',0o755)]:
  add(legacy/name,target,mode)
-apps=['mise']+(['openclawmgr']if a.with_openclaw else [])
+apps=['mise']+(['openclawmgr']if a.with_openclaw else [])+(['agentflow']if a.with_agentflow else [])
+if a.with_agentflow:
+ package=HUB/'apps/agentflow/agentflow/files'
+ for name,target,mode,config in [
+  ('agentflow-runtime','/usr/libexec/agentflow-runtime',0o755,False),
+  ('runtime-cli.lua','/usr/share/agentflow/runtime-cli.lua',0o644,False),
+  ('agentflow-runtime.lua','/usr/share/agentflow/agentflow-runtime.lua',0o644,False),
+  ('agentflow-agents.lua','/usr/share/agentflow/agentflow-agents.lua',0o644,False),
+  ('agentflow.init','/etc/init.d/agentflow',0o755,False),
+  ('agentflow.config','/etc/config/agentflow',0o600,True)]:
+  add(package/name,target,mode,config)
 for app in apps:
  package=HUB/'apps'/app/('luci-app-'+app)
  for source in sorted((package/'luasrc').rglob('*')):

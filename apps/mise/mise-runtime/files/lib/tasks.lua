@@ -13,6 +13,7 @@ function M.phase(ctx,t,phase)
 end
 function M.cleanup(ctx,t)
   if t.phase=='committed'and t.publication then require('adapters').publish(ctx,t)end
+  require('libraries').recover(ctx,t)
   -- The work path is task-owned; never follow a symlink into another SDK.
   sys.remove(ctx.root..'/work/'..contract.key(t.id))
   if t.pending_environment and t.phase~='committed' then

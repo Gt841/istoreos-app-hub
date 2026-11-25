@@ -45,7 +45,7 @@
 1. 安装和升级都检查持久目录、架构、libc、空间和 inode。默认预留 2 GiB 工作空间，
    另外计算现有 data 快照所需空间；至少需要 30000 个可用 inode（不报告 inode 总量的文件系统除外）。
 2. `runtime-policy.json` 声明固定 Node 24.22.1/npm 11.19.1、GNU ABI 和库修订。
-   安装器通过公共 `mise-runtime request` 计划、安装或复用确切实例；SDK 和库只保存在公共存储。
+   安装器通过公共 `mise-runtime request ensure` 安装、校验或复用确切实例；SDK 和库只保存在公共存储。
    每个应用 release 的 `runtime.json` 固定存储根、实例、库和清单摘要，Node 目录仅提供小型入口脚本。
    不跟随全局默认，不复制共享 SDK，不原地升级其 npm；engines 不满足时保留原应用并报错。
 3. stable 仍是 `openclaw@2026.3.28`；latest 只解析一次。校验目标 engines，
@@ -167,3 +167,9 @@ M5 起按用户要求直接同步脚本、必要二进制与正式前端到 x86_
 
 当前逐项结果以 [M5 执行记录](../../docs/evidence/mise-runtime-execution-20261123/M5/progress.json) 为准。
 源码直部署的功能通过不代表包依赖、包归属或安装/升级钩子通过；IPK/APK 编译和包验收留待人工确认后人工进行。
+
+## 仓库切换与启动恢复
+
+切换公共 Runtime 目录不搬迁应用包或业务数据。重启时 procd 先运行 root 准备入口，在新仓库按当前 release 的准确 Node/npm/库修订准备依赖，校验成功后原子更新 runtime.json，再清空附加组并切换专用非 root UID 执行 Gateway。Gateway 启动仍执行 sqlite-vec 实际查询。
+
+准备在受监管的后台进程执行，init 不等待网络下载。手动启动/重启提交后台启动，界面显示准备状态、失败原因和运行时任务入口。同一次启动的准备失败不会被 procd 重复触发下载，显式重启可重试。旧仓库保留；依赖准备失败不回退旧仓库。配置 UCI 保持私有，非 root 入口仅读取 /var/run/mise-runtime-root.json 中的当前仓库路径。

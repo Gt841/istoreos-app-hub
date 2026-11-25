@@ -28,6 +28,7 @@ local function protected_file(path)
   need(st and st.type=='reg'and st.uid==0 and not writable_by_others(st),'Missing or writable runtime binding/receipt: '..path)
 end
 local function uci(key)
+  if key=='mise.main.storage_root'and n.getuid()~=0 then return require('active-root').current()end
   local rc,out=sys.pipe_capture({'/sbin/uci','-q','get',key})
   return rc==0 and out:gsub('%s+$','')or''
 end
@@ -50,6 +51,7 @@ local function binding(path)
   local b=need(sys.decode(path),'Invalid binding JSON')
   need(b.schema_version==1 and b.provider=='mise-runtime'and b.tool=='node','Unsupported application runtime binding')
   contract.path(b.storage_root);contract.key(b.instance);contract.key(b.library)
+  need(b.storage_root==uci('mise.main.storage_root'),'Runtime repository changed; restart OpenClaw to prepare its fixed environment')
   store.validate(b.storage_root)
   local sdk=b.storage_root..'/environments/'..b.instance
   protected_file(sdk..'/receipt.json')
@@ -86,25 +88,8 @@ local function ensure(txn,source)
   need(entry and entry.availability=='available','Pinned application SDK is not in the supported catalog')
   local library=require('libraries').definition(entry.arch,policy.library_revision).id
   local id=contract.instance_id(entry,nil,library)
-  local receipt
-  for _,r in ipairs(state.runtimes)do if r.instance==id and r.verified then receipt=r;break end end
-  if not receipt then
-    local plan=request(work,{op='plan',entry=entry.id,source=source},root)
-    need(plan.instance==id,'Public plan selected another SDK/library')
-    -- Persist plan ownership before submit detaches a worker. Cancellation can
-    -- identify it even if the client is killed before receiving the task ID.
-    sys.write(txn..'/runtime-task.json',{schema_version=1,root=state.path,plan=plan.id})
-    local task=request(work,{op='submit',id=plan.id},root)
-    local id_task=contract.key(task.id);local previous=''
-    while true do
-      local t=need(sys.decode(state.path..'/tasks/'..id_task..'/task.json'),'Shared install task disappeared')
-      if t.phase~=previous then io.stdout:write('Shared Node runtime: '..tostring(t.phase)..'\n');io.stdout:flush();previous=t.phase end
-      if t.status=='success'then break end
-      need(t.status=='running',t.error and t.error.message or('Shared install '..tostring(t.status)))
-      n.nanosleep(1)
-    end
-    receipt=sys.decode(state.path..'/environments/'..id..'/receipt.json')
-  end
+  local receipt=require('dependency-client').ensure(root,entry.id,library,source,work,txn..'/runtime-task.json')
+  need(root==uci('mise.main.storage_root'),'Runtime repository changed during installation; retry')
   contract.receipt(receipt)
   local lr=need(sys.decode(state.path..'/libraries/'..library..'/receipt.json'),'Fixed library missing')
   local b={schema_version=1,provider='mise-runtime',tool='node',storage_root=state.path,instance=id,
@@ -118,6 +103,46 @@ local function ensure(txn,source)
   end
   sys.write(candidate..'/node/.mise-runtime','1\n',420)
   print('Fixed shared Node '..b.node..', npm '..b.npm..', '..b.instance)
+end
+local function prepare(path)
+  need(n.getuid()==0,'Administrator required to prepare application dependencies')
+  path=need(fs.realpath(path),'Runtime binding is missing');protected_file(path)
+  local release=need(path:match('^(.*)/runtime.json$'),'Invalid binding path');app_path(release)
+  local old=need(sys.decode(path),'Invalid runtime binding')
+  need(old.schema_version==1 and old.provider=='mise-runtime'and old.tool=='node','Unsupported runtime binding')
+  contract.key(old.instance);contract.key(old.library);contract.digest(old.artifact_set)
+  local root=uci('mise.main.storage_root');contract.path(root);store.open(root)
+  local base=need(release:match('^(.*)/releases/[^/]+$'),'Expected an installed application release')
+  preflight(base)
+  local entry
+  for _,e in ipairs(sys.decode('/usr/share/mise-runtime/catalog.json').entries)do
+    if e.tool=='node'and e.abi=='glibc'and e.arch==n.uname().machine and e.availability=='available'and e.version==old.node and e.npm==old.npm and e.artifact_set==old.artifact_set and contract.instance_id(e,nil,old.library)==old.instance then entry=e;break end
+  end
+  need(entry,'The original fixed SDK is not in the supported catalog')
+  local work=base..'/log/runtime-prepare';sys.mkdir(work,448)
+  local generation=os.getenv('OPENCLAWMGR_START_GENERATION')
+  local previous=sys.decode(work..'/status.json')
+  need(not(generation and previous and previous.status=='failed'and previous.generation==generation and previous.storage_root==root),'Runtime preparation failed for this start attempt; inspect its task and restart to retry')
+  sys.write(work..'/status.json',{status='preparing',storage_root=root,generation=generation,started=os.time()})
+  local ok,result=pcall(function()
+    local source=uci('mise.main.acceleration')=='0'and'origin'or'ks-cli'
+    local r=require('dependency-client').ensure(root,entry.id,old.library,source,work,work..'/runtime-task.json')
+    need(root==uci('mise.main.storage_root'),'Runtime repository changed during preparation; restart again')
+    local lr=sys.decode(root..'/libraries/'..old.library..'/receipt.json')
+    need(lr and lr.verified and lr.manifest_sha256==old.library_manifest_sha256,'Restored library differs from the fixed application binding')
+    local fresh={};for k,v in pairs(old)do fresh[k]=v end;fresh.storage_root=root
+    local candidate=work..'/binding';sys.mkdir(candidate,493)
+    sys.write(candidate..'/runtime.json',fresh,420);binding(candidate..'/runtime.json')
+    need(fs.rename(candidate..'/runtime.json',path),'Cannot activate the prepared runtime binding')
+    require('active-root').publish(root)
+    sys.write(work..'/status.json',{status='ready',storage_root=root,generation=generation,finished=os.time()})
+    return r
+  end)
+  if not ok then
+    sys.write(work..'/status.json',{status='failed',storage_root=root,generation=generation,error=type(result)=='table'and result.message or tostring(result),finished=os.time()})
+    error(result,0)
+  end
+  return result
 end
 local function cancel(txn)
   need(n.getuid()==0,'Administrator required')
@@ -162,7 +187,7 @@ local function as_app(base,kind,argv)
   need(release:match('^(.*)/releases/[^/]+$')==base,'Release belongs to another application directory')
   local args
   if kind=='native'then args={share..'/runtime-check.cjs','native',release..'/global',release..'/receipt.json'}
-  elseif kind=='cli'then
+  elseif kind=='cli'or kind=='gateway'then
     local prefix=release..'/global/lib/node_modules/openclaw/'
     local entry=fs.stat(prefix..'openclaw.mjs')and prefix..'openclaw.mjs'or prefix..'dist/cli.js'
     protected_file(entry);args={entry};for _,value in ipairs(argv)do args[#args+1]=value end
@@ -174,7 +199,10 @@ local function as_app(base,kind,argv)
   n.setenv('MISE_RUNTIME_ROOT',b.storage_root);n.setenv('ISTORE_RUNTIME_ACCELERATION','origin')
   need(n.chdir(base..'/data'),'Application data directory is unavailable')
   local program={'/usr/share/mise-runtime/native/bin/exec-user',tostring(user.uid),tostring(user.gid),b.instance,'node'}
-  for _,value in ipairs(args)do program[#program+1]=value end
+  if kind=='gateway'then
+    program={'/usr/share/mise-runtime/native/bin/exec-user',tostring(user.uid),tostring(user.gid),b.instance,'--shell',share..'/gateway.sh',base}
+    for _,value in ipairs(args)do program[#program+1]=value end
+  else for _,value in ipairs(args)do program[#program+1]=value end end
   n.exec(unpack(program));need(false,'Cannot start the application UID runtime')
 end
 local function main()
@@ -184,6 +212,11 @@ local function main()
   elseif action=='cancel'then cancel(arg[2])
   elseif action=='exec'then local args={};for i=4,#arg do args[#args+1]=arg[i]end;execute(arg[2],arg[3],args)
   elseif action=='as-app'then local args={};for i=4,#arg do args[#args+1]=arg[i]end;as_app(arg[2],arg[3],args)
+  elseif action=='prepare'then prepare(arg[2])
+  elseif action=='service'then
+    local base=arg[2];prepare(base..'/current/runtime.json')
+    local args={};for i=3,#arg do args[#args+1]=arg[i]end
+    as_app(base,'gateway',args)
   elseif action=='inspect'then local b=binding(arg[2]);print(sys.json.stringify(b))
   elseif action=='describe'then
     local b,r=binding(arg[2])

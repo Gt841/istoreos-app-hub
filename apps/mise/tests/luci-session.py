@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Root-SSH-created ephemeral real rpcd sessions; credentials never enter evidence."""
-import argparse,json,os,secrets,subprocess
+import argparse,json,os,secrets,subprocess,urllib.request
 from pathlib import Path
 p=argparse.ArgumentParser();p.add_argument('host');p.add_argument('file',type=Path);p.add_argument('--destroy',action='store_true');a=p.parse_args()
 def ubus(method,value):
@@ -20,6 +20,18 @@ else:
  for name in ('admin','readonly','denied'):
   sid=ubus('create',{'timeout':7200})['ubus_rpc_session'];token=secrets.token_hex(16)
   ubus('set',{'ubus_rpc_session':sid,'values':{'username':'root','token':token}})
+  # This firmware seeds root-created sessions with ACLs. Adding read grants
+  # does not remove inherited write grants; revoke each explicit seeded rule.
+  if name!='admin':
+   # Warm LuCI once: this firmware lazily imports the username's ACLs.
+   ubus('grant',{'ubus_rpc_session':sid,'scope':'access-group','objects':[['luci-base','read'],['luci-app-mise','read']]})
+   request=urllib.request.Request('http://'+a.host+'/cgi-bin/luci/admin/services/mise',headers={'Cookie':'sysauth_http='+sid})
+   with urllib.request.urlopen(request,timeout=30)as response:response.read()
+   seeded=ubus('list',{'ubus_rpc_session':sid}).get('acls',{})
+   if not isinstance(seeded,dict):seeded={}
+   for scope,rules in seeded.items():
+    objects=[[obj,method]for obj,methods in rules.items()for method in methods]
+    if objects:ubus('revoke',{'ubus_rpc_session':sid,'scope':scope,'objects':objects})
   objects=[['luci-base','read']]
   if name!='denied':objects.append(['luci-app-mise','read'])
   if name=='admin':objects.extend([['luci-base','write'],['luci-app-mise','write']])
