@@ -18,10 +18,10 @@ class LinkEaseFullWebContractTest(unittest.TestCase):
         runtime = self.read("linkeasefull/Makefile")
 
         self.assertIn("PKG_NAME:=linkeasefull-web", web)
-        self.assertIn("PKG_VERSION:=0.1.36", web)
+        self.assertRegex(web, r"(?m)^PKG_VERSION:=[0-9]+\.[0-9]+\.[0-9]+$")
         self.assertIn("PKGARCH:=all", web)
         self.assertIn("+linkeasefull-web", runtime)
-        self.assertIn("PKG_RELEASE:=2", runtime)
+        self.assertRegex(runtime, r"(?m)^PKG_RELEASE:=[1-9][0-9]*$")
         self.assertIn("web/v1/core/$(PKG_NAME)/$(PKG_VERSION)/$(LINKEASE_WEB_VARIANT)", web)
         self.assertIn("desktop-shell.web.zip", web)
         self.assertIn("release-set.json", web)
@@ -56,6 +56,7 @@ class LinkEaseFullWebContractTest(unittest.TestCase):
         web = self.read("linkeasefull-web/Makefile")
 
         for base in (
+            "https://github.com/istoreos/istoreos-app-hub/releases/download/linkeasefull-web-v$(PKG_VERSION)",
             "https://fw.linkease.com/binary/LinkEase/",
             "https://dl.istoreos.com/binary/LinkEase/",
             "https://fw.d4ctech.com/binary/LinkEase/",

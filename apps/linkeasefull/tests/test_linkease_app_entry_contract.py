@@ -30,8 +30,8 @@ class LinkEaseAppEntryContractTest(unittest.TestCase):
         self.assertNotIn("define Package/linkease-app-entry", full_makefile)
         self.assertNotIn("linkease-app-entryd", full_makefile)
         self.assertNotIn("linkease-app-gateway", full_makefile)
-        self.assertIn("PKG_VERSION:=3.0.23", makefile)
-        self.assertIn("PKG_RELEASE:=2", makefile)
+        self.assertIn("PKG_VERSION:=3.0.24", makefile)
+        self.assertIn("PKG_RELEASE:=1", makefile)
         self.assertIn(
             "PKG_SOURCE:=linkease-app-entry-runtime-$(PKG_VERSION)-linux-$(LINKEASE_RUNTIME_ARCH).tar.gz",
             makefile,
@@ -41,11 +41,11 @@ class LinkEaseAppEntryContractTest(unittest.TestCase):
             makefile,
         )
         self.assertIn(
-            "f5a974187ca1c50f043459150e52195c85799673f9ebc18221e9f5d206a4fb3c",
+            "72cbaa9df83899467223d1812204f198d9fdd9d51f821f2c203936ecbce79440",
             makefile,
         )
         self.assertIn(
-            "ef4a48e999339bdd6c2a802ce1c1fbcb885ad28c7ed63315a21d4034d1e66a2c",
+            "07d1bf936cda0f2c81fbb32ea75f526393eaf39437bc8ae1d7737cfba35fe431",
             makefile,
         )
         self.assertNotIn(
