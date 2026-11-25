@@ -50,12 +50,19 @@ end
 
 function M.launch(base,dir,args)
  local entry=M.entry(base,dir);local binding=R.binding(base,dir..'/runtime.json')
- local home=R.home(base);local uid,gid=R.account()
+	local orchestrator_home=R.orchestrator_home()
+	local home=orchestrator_home or R.home(base)
  n.setenv('HOME',home);n.setenv('ISTORE_RUNTIME_HOME',home);n.setenv('MISE_RUNTIME_ROOT',binding.storage_root)
  n.setenv('CODEX_HOME',home..'/.codex');n.setenv('USER','codex');n.setenv('LOGNAME','codex')
  local argv
- if n.getuid()==0 then argv={'/usr/share/mise-runtime/native/bin/exec-user',tostring(uid),tostring(gid),binding.instance,'node',entry}
- else
+	if orchestrator_home then
+		n.setenv('USER','root');n.setenv('LOGNAME','root')
+		argv={'/usr/sbin/mise-runtime','exec',binding.instance,'node',entry}
+	elseif n.getuid()==0 then
+		local uid,gid=R.account()
+		argv={'/usr/share/mise-runtime/native/bin/exec-user',tostring(uid),tostring(gid),binding.instance,'node',entry}
+	else
+		local uid=R.account()
   R.need(n.getuid()==uid,'Codex must run as its dedicated account')
   argv={'/usr/sbin/mise-runtime','exec',binding.instance,'node',entry}
  end
@@ -130,6 +137,16 @@ function M.recover(value)
  end
  R.need(fs.unlink(lock..'/owner.json')and fs.rmdir(lock),'Cannot recover the install lock')
  return {recovered=true}
+end
+
+function M.provider_status(value)
+	local result={configured=false,installed=false,version=R.version}
+	local ok,base=pcall(function()return R.base(value)end)
+	if not ok then return result end
+	result.configured=true
+	local installed,_,receipt=pcall(M.current,base)
+	if installed then result.installed=true;result.version=receipt.version end
+	return result
 end
 
 function M.status(value)

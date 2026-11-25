@@ -237,7 +237,7 @@ listener is a valid internal adapter; its port is not an external fallback.
 | --- | --- | --- |
 | Docker Manager | `/var/run/dockermanager.sock` | backend-owned OpenWrt auth, targets/Compose/LinkSpace |
 | KaiPlus | `/var/run/kaiplus.sock` | backend-owned OpenWrt auth, backup directory, changeguard and sessions |
-| AgentFlow | `127.0.0.1:<configured internal port>` | its runtime preparation and agent management |
+| AgentFlow | `127.0.0.1:<configured internal port>` | own login, project/task orchestration and independently installed coding-agent providers |
 | BaiduDrive | `127.0.0.1:<configured internal Web port>` | Baidu NAS SDK/P2P listeners and credentials remain unchanged |
 | Codex, OpenCode, Kimi, Claude Code | loopback ttyd, each under its unprivileged user | gateway authentication and WebSocket terminal traffic |
 

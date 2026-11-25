@@ -17,6 +17,7 @@ class CodexContractTest(unittest.TestCase):
         runtime = self.read("codex/files/codex-runtime.lua")
         package = self.read("codex/files/codex-package.lua")
         self.assertIn("PKG_VERSION:=0.172.0", recipe)
+        self.assertIn("PKG_RELEASE:=3", recipe)
         self.assertIn("+mise-runtime", recipe)
         self.assertIn("group_add_next codex", recipe)
         self.assertIn("version='0.172.0'", runtime)
@@ -28,6 +29,12 @@ class CodexContractTest(unittest.TestCase):
         self.assertIn("fs.chmod(path,'755')", package)
         self.assertIn("define Build/Compile", recipe)
         self.assertNotIn("@latest", package)
+        self.assertIn("function M.orchestrator_home()", runtime)
+        self.assertIn("R.orchestrator_home()", package)
+        self.assertIn("AGENTFLOW_PROVIDER_MODE", runtime)
+        self.assertIn("home .. '/.codex'", runtime)
+        self.assertIn("function M.provider_status(value)", package)
+        self.assertIn("action=='provider-status'", self.read("codex/files/runtime-cli.lua"))
 
     def test_terminal_is_loopback_and_unprivileged(self):
         init = self.read("codex/files/codex.init")
@@ -76,6 +83,7 @@ class CodexContractTest(unittest.TestCase):
         self.assertIn("?id=agentflow", view)
         self.assertIn("安装 AgentFlow 后使用", view)
         self.assertEqual(agent["command"], "/usr/bin/codex")
+        self.assertEqual(agent["manageUrl"], "/cgi-bin/luci/admin/services/codex")
 
     def test_registration_is_owned_by_runtime(self):
         recipe = self.read("codex/Makefile")

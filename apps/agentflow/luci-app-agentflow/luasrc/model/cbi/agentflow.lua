@@ -1,6 +1,6 @@
 local m, s
 
-m = Map("agentflow", translate("AgentFlow"), translate("AgentFlow provides a Web UI for orchestrating coding agents and workflows."))
+m = Map("agentflow", translate("AgentFlow"), translate("AgentFlow orchestrates projects and independently installed coding agents."))
 m:section(SimpleSection).template = "agentflow/status"
 
 s = m:section(TypedSection, "agentflow", translate("Global settings"))
@@ -33,5 +33,20 @@ for _, val in pairs(paths) do
 	data_dir:value(val, val)
 end
 data_dir.default = default_path
+
+local home_dir = s:option(Value, "home_dir", translate("AgentFlow home directory"))
+home_dir.rmempty = true
+home_dir.description = translate("Optional. New installations use <data directory>/home. An upgraded installation may retain its previous HOME so credentials are not moved silently.")
+
+function home_dir.validate(self, value, section)
+	value = (value or ""):match("^%s*(.-)%s*$")
+	if value == "" then
+		return value
+	end
+	if not value:match("^/mnt/[^/]+/") or value:find("//", 1, true) or value:match("/%.%.?/") then
+		return nil, translate("Please select a disk as the home directory.")
+	end
+	return value:gsub("/+$", "")
+end
 
 return m

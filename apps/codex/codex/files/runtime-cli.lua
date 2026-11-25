@@ -8,6 +8,7 @@ local function admin()R.need(s.nixio.getuid()==0,'Codex runtime management requi
 local ok,value=pcall(function()
  local action,base=arg[1],arg[2]
  if action=='status'then admin();return C.status(base)
+ elseif action=='provider-status'then admin();return C.provider_status(base)
  elseif action=='prepare'then admin();return {data_dir=R.prepare(base)}
  elseif action=='install'then admin();return C.install(base)
  elseif action=='recover'then admin();return C.recover(base)

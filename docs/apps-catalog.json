@@ -2,8 +2,8 @@
   {
     "id": "agentflow",
     "title": "AgentFlow",
-    "description": "AgentFlow 提供 OpenCode、Codex、Claude 编码代理与工作流编排 Web UI。",
-    "description_en": "AgentFlow provides a Web UI for coding agents and workflow orchestration.",
+    "description": "AgentFlow 提供项目、编码代理与工程工作流编排 Web UI。",
+    "description_en": "AgentFlow provides a Web UI for project, coding-agent and engineering workflow orchestration.",
     "tags": [
       "ai",
       "development",
@@ -12,7 +12,7 @@
     "website": "https://agentflow.geili.ai/",
     "author": "geiliai",
     "version": "0.3.5",
-    "release": "7",
+    "release": "9",
     "depends": "+agentflow +luci-app-agentflow",
     "luci_entry": "/cgi-bin/luci/admin/services/agentflow",
     "meta_dir": "apps/agentflow/app-meta-agentflow"
@@ -80,7 +80,7 @@
     "website": "https://pan.baidu.com",
     "author": "linkease",
     "version": "1.0.6",
-    "release": "6",
+    "release": "7",
     "depends": "+luci-i18n-baidudrive-zh-cn +luci-app-baidudrive +baidudrive",
     "luci_entry": "/cgi-bin/luci/admin/services/baidudrive",
     "meta_dir": "apps/baidudrive/app-meta-baidudrive"
@@ -114,7 +114,7 @@
     "website": "https://code.claude.com/docs/",
     "author": "LinkEase",
     "version": "2.1.326",
-    "release": "1",
+    "release": "3",
     "depends": "+claude-code +luci-app-claude-code +luci-app-mise",
     "luci_entry": "/cgi-bin/luci/admin/services/claude",
     "meta_dir": "apps/claude-code/app-meta-claude-code"
@@ -165,7 +165,7 @@
     "website": "https://developers.openai.com/codex/cli",
     "author": "LinkEase",
     "version": "0.172.0",
-    "release": "1",
+    "release": "3",
     "depends": "+codex +luci-app-codex +luci-app-mise",
     "luci_entry": "/cgi-bin/luci/admin/services/codex",
     "meta_dir": "apps/codex/app-meta-codex"
@@ -566,8 +566,8 @@
     ],
     "website": "https://ai.koolcenter.com",
     "author": "koolcenter",
-    "version": "1.0.22",
-    "release": "11",
+    "version": "1.0.25",
+    "release": "12",
     "depends": "+luci-app-kaiplus +kaiplus +luci-i18n-kaiplus-zh-cn",
     "luci_entry": "/cgi-bin/luci/admin/services/kaiplus",
     "meta_dir": "apps/kaiplus/app-meta-kaiplus"
@@ -584,7 +584,7 @@
     "website": "https://www.kimi.com/code/docs/en/",
     "author": "LinkEase",
     "version": "2.7.3",
-    "release": "1",
+    "release": "3",
     "depends": "+kimi +luci-app-kimi +luci-app-mise",
     "luci_entry": "/cgi-bin/luci/admin/services/kimi",
     "meta_dir": "apps/kimi/app-meta-kimi"
@@ -651,7 +651,7 @@
     "website": "https://www.linkease.com/",
     "author": "xiaobao",
     "version": "3.0.23",
-    "release": "5",
+    "release": "6",
     "depends": "+linkease-runtime-transition +linkease +linkeasefull +luci-app-linkeasefull +luci-app-linkeasefull-embed +luci-lib-linkeasefile +luci-i18n-linkeasefull-zh-cn",
     "luci_entry": "/cgi-bin/luci/admin/services/linkeasefull",
     "meta_dir": "apps/linkeasefull/app-meta-linkeasefull"
@@ -834,7 +834,7 @@
     "website": "https://opencode.ai/docs/",
     "author": "LinkEase",
     "version": "2.4.1",
-    "release": "1",
+    "release": "3",
     "depends": "+opencode +luci-app-opencode +luci-app-mise",
     "luci_entry": "/cgi-bin/luci/admin/services/opencode",
     "meta_dir": "apps/opencode/app-meta-opencode"

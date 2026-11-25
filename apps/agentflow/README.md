@@ -1,86 +1,64 @@
-# AgentFlow 与共享运行时
+# AgentFlow for iStoreOS
 
-## 应用访问
+AgentFlow 是项目与开发流程编排应用。它负责项目、任务、Git 工作区、日志、
+it-runner 和远端节点控制，不负责下载或升级 Codex、Claude Code、OpenCode、
+Kimi 等编码工具。
 
-Web 后端固定监听 `127.0.0.1`，配置中的 port 仅是内部传输参数，不再作为浏览器入口。
-LuCI 和软件中心的打开动作统一使用 `linkease_apps/open?id=agentflow`，由公共层选择
-uhttpd 同源代理或共享 19290。网关不可用时报告不可用，不回退到 9000。
-运行时准备、代理安装、业务认证、工作区和现有数据目录保持各自原合同。
-升级仅重启原先已运行的服务；停止状态不会被打开动作或升级隐式启动。
+## 产品边界
 
-AgentFlow 使用 `mise-runtime` 提供的固定 GNU Node/npm 和私有 glibc。AgentFlow 自身是预编译程序；代理包、运行时绑定和安装记录由本插件管理，不在共享 SDK 内安装 npm 包，也不执行 `mise use --global` 或 `mise reshim`。
+- `agentflow` 安装预编译 Web 后端，并通过 `/apps/agentflow/` 的同源入口访问。
+- Codex、Claude Code、OpenCode、Kimi 由各自独立插件安装、升级和管理运行时。
+- 独立插件把提供方描述发布到 `/usr/share/coding-agents.d/*.json`，AgentFlow
+  管理页只读取状态并跳转到对应插件，不执行安装。
+- AgentFlow 从系统 `PATH` 调用已经安装的 CLI。启动环境不包含旧的
+  `<data_dir>/.runtime/bin`，因此旧私有版本不会遮蔽独立插件。
+- AgentFlow 不直接依赖 `mise-runtime`；需要 Node 或原生运行环境的 CLI 插件
+  自己声明该依赖。
 
-## 配置
+## 存储与访问
 
-1. 在“运行时环境”选择持久目录，默认 `/mnt/<硬盘>/Configs/Runtime`。不要选择系统 `/root`。
-2. 在 AgentFlow 选择数据目录，例如 `/mnt/<硬盘>/Configs/AgentFlow`。应用数据和共享 Runtime 不得互相包含。
-3. 在 AgentFlow 页面安装所需代理。尚未安装对应 SDK 时，任务通过公共 runtime 的 plan/submit 流程准备固定环境；已有环境直接复用。
+Web 后端固定监听 `127.0.0.1`。配置中的端口仅用于内部同源代理，不应直接暴露
+到局域网。AgentFlow 保留自己的登录体系，因此应用清单使用 passthrough 认证模式。
 
-AgentFlow 的启动环境显式设置 HOME：优先保留旧 `mise.main.runtime_dir`，否则使用 `<storage_root>/home`。XDG 目录随 HOME 设置。服务 PATH 优先使用应用自己的 `.runtime/bin`，代理未安装时对应命令链接不可执行，不会误报为可用。
-
-状态查询不会下载 SDK。只要持久 HOME 可用，AgentFlow 的 Go 后端独立启动；procd 另起一次性准备进程，为已安装代理确保固定 SDK，并更新各 active release 的绑定。准备失败不会隐藏 Web UI，重启服务可重试。
-
-## 固定版本与目录
-
-当前应用策略为 Node **24.22.1**、npm **11.19.1**、GNU/glibc **2.39 r1**，与 OpenClaw 使用相同的共享实例。不是跟随 `node@lts` 或全局默认。
-
-| 代理 | npm 包 | 固定版本 |
-| --- | --- | --- |
-| Codex | `@openai/codex` | 0.153.4 |
-| Claude Code | `@anthropic-ai/claude-code` | 2.1.331 |
-| OpenCode | `opencode-ai` | 1.19.6 |
-| Kimi | `@moonshot-ai/kimi-code` | 2.7.3 |
-| Reasonix | `reasonix` | 2.61.0 |
-
-这些是经过本轮命令启动验证的版本，不宣称为最新版本。后续升级需要更新策略、重新验证并发布插件。
+默认目录：
 
 ```text
 <AgentFlow 数据目录>/
-  data/                              AgentFlow 自身的数据
-  .runtime/
-    runtime.json                     固定 SDK、库与收据摘要
-    bin/                             node/npm/npx/git 和已安装代理的入口
-    npm/                             应用内其他 npm 操作的默认 prefix
-    agents/<id>/releases/<事务>/      各代理独立的包、启动器及验证记录
-    agents/<id>/current              原子切换到已验证版本
-    work/                            小型任务脚本和查询输出
+  data/       AgentFlow 数据库、项目和任务数据
+  home/       AgentFlow 的 HOME、Git/SSH 与编码工具登录状态
+  .runtime/   旧版本遗留目录；新版本不读取，也不自动删除
 ```
 
-代理 npm 安装经固定 SDK wrap 调用 ks-cli，遵循运行时的加速设置。安装器不硬编码 `--registry` 覆盖 ks-cli 的网关，不关闭 npm 完整性校验。本地程序运行和版本探测不要求加速服务可用。
+新安装默认使用 `<data_dir>/home`。升级时，如果检测到旧 `.runtime`，安装脚本会把
+原来的 mise runtime HOME 写入 `agentflow.@agentflow[0].home_dir`，避免静默移动凭据。
+用户确认不再需要旧 CLI release 后，可以自行备份并清理 `.runtime`；升级不会自动删除。
 
-GNU 原生程序使用当前绑定私有 glibc 的 loader，不向系统导出全局 `LD_LIBRARY_PATH`。应用安装目录内的 GNU ELF 保存为 `.agentflow-real` 并生成私有 loader 入口；静态/musl 程序和 `.node` 库不改写。OpenCode 的上游 postinstall 会根据宿主 `ldd` 错选 musl，因此本插件明确选择已经安装的 GNU optional package；x86_64 优先使用 baseline CPU 构建。
+AgentFlow 服务设置 `AGENTFLOW_PROVIDER_MODE=1`。独立 CLI 包装器仅在 AgentFlow
+以 root 编排任务时继承当前工作目录和 AgentFlow HOME；浏览器终端和普通调用仍使用
+各插件的低权限专用账号。这避免修改任意 Git 仓库的所有权或权限。
 
-安装在新的独立 release 中进行。只有真实 `--version` 成功并匹配包版本才发布；失败不会覆盖当前可用版本。中断安装可通过页面“恢复中断安装”处理，或者：
+## 提供方接口
 
-```sh
-/usr/libexec/agentflow-runtime recover /mnt/data/Configs/AgentFlow
+提供方描述至少包含：
+
+```json
+{
+  "schemaVersion": 1,
+  "id": "codex",
+  "kind": "cli",
+  "command": "/usr/bin/codex",
+  "statusCommand": ["/usr/libexec/codex-runtime", "provider-status"],
+  "manageUrl": "/cgi-bin/luci/admin/services/codex"
+}
 ```
 
-恢复会核对 PID/start/boot 身份，拒绝操作仍在运行的任务，只恢复本应用创建的共享安装任务，保留现有版本和失败现场。未知锁需要人工检查。
+AgentFlow LuCI 只接受受限的绝对命令路径，并只调用轻量的 `provider-status`；该查询
+不探测登录状态或访问模型服务。提供方安装、认证、
+版本固定、回滚和终端均属于独立插件实现。
 
-旧的全局 npm/mise 代理目录、配置和凭据不会自动搬迁或删除。升级后请通过此页面重新安装需要的代理到应用目录；旧全局 shim 不作为固定 runtime 的回退入口。
+## 发布与测试
 
-## 本轮人工编译版本
-
-| 包 | 版本 |
-| --- | --- |
-| mise | 2026.8.14-r28 |
-| mise-runtime / luci-app-mise / app-meta-mise | 0.1.1-r1 |
-| luci-app-openclawmgr / app-meta-openclawmgr | 0.1.13-r1 |
-| agentflow | 0.3.5-r6 |
-| luci-app-agentflow | 1.0.1-r7 |
-| app-meta-agentflow | 0.3.5-r7 |
-
-先编译并安装 mise/runtime，再安装 AgentFlow 相关包。运行包声明最低 runtime 依赖，兼顾 IPK/APK 的 release 格式；元包不增加最低版本约束。
-
-AgentFlow 二进制固定到官方发布目录中的 `0.3.5-20261123-bbd3dcf5` 构建，x86_64 和 ARM64 摘要已同步。固定下载名包含摘要；若上游覆盖发布文件，校验会失败，需要重新核对正式构建，不能禁用校验。
-
-安装独立 `codex` 插件后，AgentFlow 状态页优先把该插件报告为 Codex 提供方，并拒绝在 AgentFlow 私有目录重复安装 Codex；AgentFlow 的系统 PATH 仍可发现 `/usr/bin/codex`。
-
-本轮没有编译 IPK/APK。x86_64 直接文件测试、五个代理命令、回滚/恢复和 AgentFlow 健康检查见 [验证记录](../../docs/evidence/agentflow-shared-runtime-20261125/verification.md)。代理模型调用、ARM64 实机及最终软件包安装仍需后续验收。
-
-## 切换运行时仓库
-
-运行时页面切换 storage_root 只保留旧仓库，不复制环境或 HOME。重启 AgentFlow 后，后台准备进程在当前仓库按原准确版本安装或校验 SDK/glibc，再更新顶层和各代理 release 的绑定。旧绑定不能静默执行旧仓库；准备失败保留原绑定并显示原因。代理 npm 包和 AgentFlow 数据库保留在应用目录。默认 HOME 跟随仓库；旧 HOME 的登录信息不复制，可能需要重新登录。明确设置的兼容 runtime_dir 保持不变。
-
-运行库损坏可在运行时页面“检查 / 修复”，无需删除 SDK。相关验收见 `docs/evidence/runtime-switch-20261125`。
+AgentFlow 二进制固定到官方发布目录中的 `0.3.5-20261123-bbd3dcf5` 构建，x86_64
+和 ARM64 摘要按该目录 2026-11-25 发布的 `SHA256SUMS` 校验。上游曾在同版本目录
+更新文件，因此旧摘要必须失败关闭，不能跳过校验。源码测试不需要编译 IPK；测试机可直接复制脚本、LuCI
+文件和官方二进制进行验收。

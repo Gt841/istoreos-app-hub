@@ -4,7 +4,8 @@
   "name": "OpenCode",
   "kind": "cli",
   "command": "/usr/bin/opencode",
-  "statusCommand": ["/usr/libexec/opencode-runtime", "status"],
+  "statusCommand": ["/usr/libexec/opencode-runtime", "provider-status"],
+  "manageUrl": "/cgi-bin/luci/admin/services/opencode",
   "ownerPackage": "opencode",
   "workspaceMode": "explicit",
   "capabilities": ["interactive", "exec", "resume"]

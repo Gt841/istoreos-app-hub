@@ -15,7 +15,7 @@ Codex 是第一个独立编码代理试点。`codex` 运行包拥有固定的 Co
 
 ## 安全边界
 
-- Codex 与浏览器终端以专用 `codex` UID 运行，root 入口会通过 mise-runtime 的结构化 `exec-user` 降权。
+- Codex 与浏览器终端以专用 `codex` UID 运行，普通 root 入口会通过 mise-runtime 的结构化 `exec-user` 降权。只有 AgentFlow 服务设置受控的 `AGENTFLOW_PROVIDER_MODE=1` 时，命令才继承 AgentFlow 身份、HOME 和工作目录。
 - `CODEX_HOME` 为 `<data_dir>/home/.codex`，认证文件不会由 LuCI 读取或返回。
 - ttyd 只监听 `127.0.0.1`，`/apps/codex/` 由 `linkease-app-entry` 强制验证 iStoreOS 会话后代理；清单不得使用 `passthrough`。
 - 默认工作区为 `<data_dir>/workspace`。外部工作区必须位于 `/mnt` 且归专用 `codex` 用户所有。
@@ -23,4 +23,4 @@ Codex 是第一个独立编码代理试点。`codex` 运行包拥有固定的 Co
 
 无头设备按 OpenAI 官方文档在终端运行 `codex login --device-auth`。也可以使用 API key 登录，但密钥应通过终端 stdin 交给 Codex，不保存到 UCI 或 LuCI 表单。
 
-AgentFlow 可从系统 PATH 发现 `/usr/bin/codex`；独立插件同时发布 `/usr/share/coding-agents.d/codex.json`，供后续统一代理适配器使用。
+AgentFlow 从系统 PATH 发现 `/usr/bin/codex`，并通过 `/usr/share/coding-agents.d/codex.json` 的轻量状态命令和管理入口识别该提供方。

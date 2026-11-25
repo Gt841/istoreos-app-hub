@@ -77,6 +77,18 @@ function M.home(base)
  return home
 end
 
+function M.orchestrator_home()
+	if n.getuid() ~= 0 or n.getenv('AGENTFLOW_PROVIDER_MODE') ~= '1' then return nil end
+	local home = n.getenv('HOME') or ''
+	c.path(home);M.directory(home)
+	local st = fs.lstat(home)
+	local group_write = st and math.floor((math.floor(st.modedec / 10) % 10) / 2) % 2 == 1
+	local other_write = st and math.floor((st.modedec % 10) / 2) % 2 == 1
+	M.need(st and st.type == 'dir' and st.uid == 0 and not group_write and not other_write,
+		'AgentFlow HOME is missing or has unsafe ownership')
+	return home
+end
+
 function M.file(path)
  local st=fs.lstat(path)
  M.need(st and st.type=='reg'and st.uid==0 and math.floor((math.floor(st.modedec/10)%10)/2)%2==0 and math.floor((st.modedec%10)/2)%2==0,'Missing or unsafe managed file: '..path)

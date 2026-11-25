@@ -15,7 +15,7 @@ OpenCode 是独立编码代理插件。`opencode` 运行包拥有固定发布、
 
 ## 安全边界
 
-- OpenCode 与浏览器终端以专用 `opencode` UID 运行，root 入口会通过 `su` 清除附加组后降权。
+- OpenCode 与浏览器终端以专用 `opencode` UID 运行，普通 root 入口会通过 `su` 清除附加组后降权。只有 AgentFlow 服务设置受控的 `AGENTFLOW_PROVIDER_MODE=1` 时，命令才继承 AgentFlow 身份、HOME 和工作目录。
 - OpenCode 使用专用 HOME 及 XDG 目录，认证文件不会由 LuCI 读取或返回。
 - ttyd 只监听 `127.0.0.1`，`/apps/opencode/` 由 `linkease-app-entry` 强制验证 iStoreOS 会话后代理；清单不得使用 `passthrough`。
 - 默认工作区为 `<data_dir>/workspace`。外部工作区必须位于 `/mnt` 且归专用 `opencode` 用户所有。
@@ -23,4 +23,4 @@ OpenCode 是独立编码代理插件。`opencode` 运行包拥有固定发布、
 
 无头设备按 OpenCode 官方文档在终端运行 `opencode auth login`。也可以使用 API key 登录，但密钥应通过终端 stdin 交给 OpenCode，不保存到 UCI 或 LuCI 表单。
 
-AgentFlow 可从系统 PATH 发现 `/usr/bin/opencode`；独立插件同时发布 `/usr/share/coding-agents.d/opencode.json`，供后续统一代理适配器使用。
+AgentFlow 从系统 PATH 发现 `/usr/bin/opencode`，并通过 `/usr/share/coding-agents.d/opencode.json` 的轻量状态命令和管理入口识别该提供方。

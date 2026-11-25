@@ -14,7 +14,7 @@ Lua JSON 库是宿主工具依赖，不意味着核心依赖新的 Vue 页面。
 
 ## 配置与布局
 
-旧 `/etc/config/mise` 的 `runtime_dir` 永远保持 HOME 含义。新增 `storage_root` 表示公共管理器根目录，不能把旧 HOME 当根再追加 home。`mise-istore`、`mise-exec` 和 AgentFlow 使用的 `istore_runtime_env` 优先保留显式 `runtime_dir`；未配置时使用 `<storage_root>/home`，两者都没有时拒绝执行，不回退继承的 `/root`。首次旧入口初始化仍可参考 QuickStart 的 Configs 目录，默认 `Configs/Runtime/home`。用户显式配置新根后，只建立新目录；不自动搬移、修改、接管或清理旧 SDK/HOME。
+旧 `/etc/config/mise` 的 `runtime_dir` 永远保持 HOME 含义。新增 `storage_root` 表示公共管理器根目录，不能把旧 HOME 当根再追加 home。`mise-istore`、`mise-exec` 使用的 `istore_runtime_env` 优先保留显式 `runtime_dir`；未配置时使用 `<storage_root>/home`，两者都没有时拒绝执行，不回退继承的 `/root`。首次旧入口初始化仍可参考 QuickStart 的 Configs 目录，默认 `Configs/Runtime/home`。用户显式配置新根后，只建立新目录；不自动搬移、修改、接管或清理旧 SDK/HOME。AgentFlow 自 0.3.5-r8 起不再直接绑定公共运行时；升级只把旧 HOME 固化到自身 `home_dir`，独立编码代理仍各自依赖 mise-runtime。
 
 存储选项统一为 `/mnt/<硬盘>/Configs/Runtime`，与 AgentFlow 原有 Runtime 目录兼容；可自定义其他规范目录。`read` 的 `storage_paths` 枚举直接挂载在 `/mnt` 下、可读写且可执行的持久块设备，保留当前自定义根；`storage_default` 优先参考 QuickStart 的 `conf_dir`，不回退系统 `/root`。枚举不创建目录。`storage_locked` 表示已有环境或当前根离线，不允许直接改路径；固定 wrap 和应用绑定含绝对路径，不提供自动迁移。目录尚未配置时，建议值只填入表单，用户保存后才初始化。
 

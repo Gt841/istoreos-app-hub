@@ -16,6 +16,7 @@ class ClaudeCodeContractTest(unittest.TestCase):
         runtime = self.read("claude-code/files/claude-runtime.lua")
         package = self.read("claude-code/files/claude-package.lua")
         self.assertIn("PKG_VERSION:=2.1.326", recipe)
+        self.assertIn("PKG_RELEASE:=3", recipe)
         self.assertIn("@anthropic-ai/claude-code-linux-x64-musl", runtime)
         self.assertIn("@anthropic-ai/claude-code-linux-arm64-musl", runtime)
         self.assertIn("candidate.version=='24.22.1'", runtime)
@@ -25,6 +26,11 @@ class ClaudeCodeContractTest(unittest.TestCase):
         self.assertIn("fs.chmod(entry,'755')", package)
         self.assertNotIn("R.package..'@'..R.version", package)
         self.assertNotIn("@latest", package)
+        self.assertIn("function M.orchestrator_home()", runtime)
+        self.assertIn("R.orchestrator_home()", package)
+        self.assertIn("AGENTFLOW_PROVIDER_MODE", runtime)
+        self.assertIn("function M.provider_status(value)", package)
+        self.assertIn("action=='provider-status'", self.read("claude-code/files/runtime-cli.lua"))
 
     def test_terminal_and_gateway_are_private_and_authenticated(self):
         init = self.read("claude-code/files/claude.init")
@@ -56,6 +62,7 @@ class ClaudeCodeContractTest(unittest.TestCase):
         sync = (HUB / "syncapps.yaml").read_text()
         self.assertIn("/usr/share/linkease/apps.d/36-claude-code.json", recipe)
         self.assertEqual(agent["ownerPackage"], "claude-code")
+        self.assertEqual(agent["manageUrl"], "/cgi-bin/luci/admin/services/claude")
         self.assertIn("    claude-code:\n", sync)
         self.assertIn("apps/claude-code/luci-app-claude-code", sync)
 

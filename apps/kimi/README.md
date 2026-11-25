@@ -15,7 +15,7 @@ Kimi Code 是独立编码代理插件。`kimi` 运行包拥有固定的 Kimi Cod
 
 ## 安全边界
 
-- Kimi Code 与浏览器终端以专用 `kimi` UID 运行，root 入口会通过 mise-runtime 的结构化 `exec-user` 降权。
+- Kimi Code 与浏览器终端以专用 `kimi` UID 运行，普通 root 入口会通过 mise-runtime 的结构化 `exec-user` 降权。只有 AgentFlow 服务设置受控的 `AGENTFLOW_PROVIDER_MODE=1` 时，命令才继承 AgentFlow 身份、HOME 和工作目录。
 - 配置目录为 `<data_dir>/home/.kimi-code`，认证文件不会由 LuCI 读取或返回。
 - ttyd 只监听 `127.0.0.1`，`/apps/kimi/` 由 `linkease-app-entry` 强制验证 iStoreOS 会话后代理；清单不得使用 `passthrough`。
 - 默认工作区为 `<data_dir>/workspace`。外部工作区必须位于 `/mnt` 且归专用 `kimi` 用户所有。
@@ -23,4 +23,4 @@ Kimi Code 是独立编码代理插件。`kimi` 运行包拥有固定的 Kimi Cod
 
 无头设备按 Kimi 官方文档在终端运行 `kimi login`。也可以使用 API key 登录，但密钥应通过终端 stdin 交给 Kimi Code，不保存到 UCI 或 LuCI 表单。
 
-AgentFlow 可从系统 PATH 发现 `/usr/bin/kimi`；独立插件同时发布 `/usr/share/coding-agents.d/kimi.json`，供后续统一代理适配器使用。
+AgentFlow 从系统 PATH 发现 `/usr/bin/kimi`，并通过 `/usr/share/coding-agents.d/kimi.json` 的轻量状态命令和管理入口识别该提供方。

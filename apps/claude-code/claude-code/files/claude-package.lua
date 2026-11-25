@@ -40,16 +40,19 @@ function M.current(base)
 end
 
 function M.launch(base,dir,args)
- local entry=M.entry(base,dir);local home=R.home(base);local uid=R.account()
- if n.getuid()==0 then
+	local entry=M.entry(base,dir);local orchestrator_home=R.orchestrator_home()
+	local home=orchestrator_home or R.home(base)
+	if n.getuid()==0 and not orchestrator_home then
   local argv={'/usr/bin/su','-s','/bin/sh','-c','exec /usr/libexec/claude-runtime release "$@"','claude','--','sh',base,dir}
   for _,value in ipairs(args or{})do argv[#argv+1]=value end
   n.exec(unpack(argv));R.need(false,'Cannot lower privileges for Claude Code')
  end
- R.need(n.getuid()==uid,'Claude Code must run as its dedicated account')
+	if not orchestrator_home then
+		local uid=R.account();R.need(n.getuid()==uid,'Claude Code must run as its dedicated account')
+	end
  n.setenv('HOME',home);n.setenv('XDG_CONFIG_HOME',home..'/.config');n.setenv('XDG_CACHE_HOME',home..'/.cache')
  n.setenv('XDG_DATA_HOME',home..'/.local/share');n.setenv('XDG_STATE_HOME',home..'/.local/state')
- n.setenv('USER','claude');n.setenv('LOGNAME','claude')
+	n.setenv('USER',orchestrator_home and'root'or'claude');n.setenv('LOGNAME',orchestrator_home and'root'or'claude')
  local argv={entry};for _,value in ipairs(args or{})do argv[#argv+1]=value end
  n.exec(unpack(argv));R.need(false,'Cannot execute Claude Code')
 end
@@ -116,6 +119,16 @@ function M.recover(value)
  end
  R.need(fs.unlink(lock..'/owner.json')and fs.rmdir(lock),'Cannot recover the install lock')
  return {recovered=true}
+end
+
+function M.provider_status(value)
+	local result={configured=false,installed=false,version=R.version}
+	local ok,base=pcall(function()return R.base(value)end)
+	if not ok then return result end
+	result.configured=true
+	local installed,_,receipt=pcall(M.current,base)
+	if installed then result.installed=true;result.version=receipt.version end
+	return result
 end
 
 function M.status(value)

@@ -16,12 +16,18 @@ class KimiCodeContractTest(unittest.TestCase):
         runtime = self.read("kimi/files/kimi-runtime.lua")
         package = self.read("kimi/files/kimi-package.lua")
         self.assertIn("PKG_VERSION:=2.7.3", recipe)
+        self.assertIn("PKG_RELEASE:=3", recipe)
         self.assertIn("@moonshot-ai/kimi-code", runtime)
         self.assertIn("candidate.version=='24.22.1'", runtime)
         self.assertIn("'--ignore-scripts'", package)
         self.assertIn("binding.instance,'node',entry", package)
         self.assertIn("/.kimi-code", runtime)
         self.assertNotIn("@latest", package)
+        self.assertIn("function M.orchestrator_home()", runtime)
+        self.assertIn("R.orchestrator_home()", package)
+        self.assertIn("AGENTFLOW_PROVIDER_MODE", runtime)
+        self.assertIn("function M.provider_status(value)", package)
+        self.assertIn("action=='provider-status'", self.read("kimi/files/runtime-cli.lua"))
 
     def test_terminal_and_gateway_are_private_and_authenticated(self):
         init = self.read("kimi/files/kimi.init")
@@ -46,10 +52,12 @@ class KimiCodeContractTest(unittest.TestCase):
 
     def test_registration_and_sync_are_owned_by_plugin(self):
         recipe = self.read("kimi/Makefile")
+        agent = json.loads(self.read("kimi/files/kimi-agent.json"))
         sync = (HUB / "syncapps.yaml").read_text()
         self.assertIn("/usr/share/linkease/apps.d/38-kimi.json", recipe)
         self.assertIn("    kimi:\n", sync)
         self.assertIn("apps/kimi/luci-app-kimi", sync)
+        self.assertEqual(agent["manageUrl"], "/cgi-bin/luci/admin/services/kimi")
 
 
 if __name__ == "__main__":

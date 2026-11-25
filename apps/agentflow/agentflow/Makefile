@@ -11,12 +11,12 @@ AGENTFLOW_ARCH_aarch64:=arm64
 AGENTFLOW_ARCH:=$(AGENTFLOW_ARCH_$(ARCH))
 
 # Official release: 0.3.5-20261123-bbd3dcf5
-AGENTFLOW_HASH_x86_64:=50dfe6d463487c38da2b85e52e1fa9bbe812fa10295672f8c1a5fc166a93fc1a
-AGENTFLOW_HASH_aarch64:=e852bbd388b3b66e65bfa7a62f093ce2ad65997a3bf045ccfab4026b5dcf167b
+AGENTFLOW_HASH_x86_64:=496c1c67b4a77c2dba24fba9f49f9cccc1d4e0d0fb7aa7759cf1822bc5fdfd31
+AGENTFLOW_HASH_aarch64:=4f11062649cc048b12545df635ea68c6ec3dd9113ffd34c47f21076649bfa8aa
 
 PKG_NAME:=agentflow
 PKG_VERSION:=0.3.5
-PKG_RELEASE:=7
+PKG_RELEASE:=8
 
 AGENTFLOW_URL_FILE:=agentflow-linux-$(AGENTFLOW_ARCH)
 AGENTFLOW_DOWNLOAD:=$(AGENTFLOW_URL_FILE)-$(AGENTFLOW_HASH_$(ARCH))
@@ -41,8 +41,8 @@ define Package/$(PKG_NAME)
 	CATEGORY:=Network
 	SUBMENU:=Web Servers/Proxies
 	TITLE:=AgentFlow
-	DEPENDS:=@(x86_64||aarch64) +git +git-http +mise-runtime +linkease-app-entry
-	EXTRA_DEPENDS:=mise-runtime (>=0.1.1-$(if $(CONFIG_USE_APK),r)1), luci-lib-linkeaseauth (>=1.2.1-r5)
+	DEPENDS:=@(x86_64||aarch64) +git +git-http +linkease-app-entry
+	EXTRA_DEPENDS:=luci-lib-linkeaseauth (>=1.2.1-r5)
 	URL:=https://agentflow.geili.ai/
 endef
 
@@ -96,10 +96,8 @@ define Build/Compile
 endef
 
 define Package/$(PKG_NAME)/install
-	$(INSTALL_DIR) $(1)/usr/sbin $(1)/etc/init.d $(1)/etc/uci-defaults $(1)/etc/config $(1)/usr/share/agentflow/www $(1)/usr/share/linkease/apps.d $(1)/usr/libexec
+	$(INSTALL_DIR) $(1)/usr/sbin $(1)/etc/init.d $(1)/etc/uci-defaults $(1)/etc/config $(1)/usr/share/agentflow/www $(1)/usr/share/linkease/apps.d
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/agentflow $(1)/usr/sbin/agentflow
-	$(INSTALL_BIN) ./files/agentflow-runtime $(1)/usr/libexec/agentflow-runtime
-	$(INSTALL_DATA) ./files/agentflow-runtime.lua ./files/agentflow-agents.lua ./files/runtime-cli.lua $(1)/usr/share/agentflow/
 	$(INSTALL_BIN) ./files/agentflow.init $(1)/etc/init.d/agentflow
 	$(INSTALL_BIN) ./files/agentflow.uci-default $(1)/etc/uci-defaults/09-agentflow
 	$(INSTALL_CONF) ./files/agentflow.config $(1)/etc/config/agentflow

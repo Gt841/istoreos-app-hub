@@ -107,7 +107,8 @@ config_foreach() { "$1" main; }
 config_get_bool() { eval "$1=1"; }
 config_get() {
  case "$1" in
-  data_dir) data_dir=/mnt/managed-test ;;
+  data_dir) data_dir=/mnt/managed-test/AgentFlow ;;
+  home_dir) home_dir=/mnt/managed-test/AgentFlow/home ;;
   backup_dir) backup_dir=/mnt/TimeMachine ;;
   host|bind_addr) eval "$1=0.0.0.0" ;;
   listen_mode) listen_mode=tcp ;;
@@ -126,6 +127,7 @@ ensure_macid() { macid=test-device; }
 storage_root_from_data_dir() { printf '%s' /mnt; }
 require_executable() { :; }
 require_file() { :; }
+prepare_private_dir() { :; }
 procd_open_instance() { :; }
 procd_close_instance() { :; }
 procd_set_param() { printf '%s\n' "$@"; }
@@ -140,10 +142,7 @@ start_service
                     backend = stage / "agentflow"
                     backend.write_text("#!/bin/sh\nexit 0\n")
                     backend.chmod(0o755)
-                    runtime = stage / "agentflow-runtime"
-                    runtime.write_text('#!/bin/sh\n[ "$1" != home ] || printf "%s" /mnt/test-home\nexit 0\n')
-                    runtime.chmod(0o755)
-                    source = source.replace("/usr/sbin/agentflow", str(backend)).replace("/usr/libexec/agentflow-runtime", str(runtime))
+                    source = source.replace("/usr/sbin/agentflow", str(backend))
                 init = stage / "init"
                 init.write_text(source)
                 result = subprocess.run(["sh", "-c", harness], env=dict(os.environ, TEST_INIT=str(init)), text=True, capture_output=True, check=True)
@@ -156,6 +155,9 @@ start_service
                 elif app == "agentflow":
                     self.assertIn("AGENT_FLOW_HOST=127.0.0.1", output)
                     self.assertIn("AGENT_FLOW_PORT=9380", output)
+                    self.assertIn("AGENTFLOW_PROVIDER_MODE=1", output)
+                    self.assertIn("PATH=/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin", output)
+                    self.assertNotIn("/.runtime/bin", output)
                 else:
                     self.assertIn("--host\n127.0.0.1\n--port\n9380", output)
                     self.assertIn("-ip\n127.0.0.1\n-port\n8001", output)

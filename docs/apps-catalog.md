@@ -4,7 +4,7 @@ Auto-generated from `apps/*/app-meta-*/Makefile` via `make apps-catalog`.
 
 | id | title | tags | luci | website | description |
 |---|---|---|---|---|---|
-| agentflow | AgentFlow | ai development service | /cgi-bin/luci/admin/services/agentflow | https://agentflow.geili.ai/ | AgentFlow 提供 OpenCode、Codex、Claude 编码代理与工作流编排 Web UI。 |
+| agentflow | AgentFlow | ai development service | /cgi-bin/luci/admin/services/agentflow | https://agentflow.geili.ai/ | AgentFlow 提供项目、编码代理与工程工作流编排 Web UI。 |
 | airconnect | AirConnect | multimedia net | /cgi-bin/luci/admin/services/airconnect | https://github.com/philippe44/AirConnect | 让 UPnP/Sonos 和 Chromecast 设备支持 AirPlay 音频串流 |
 | ap-modem | 访问AP/光猫 | net tool | /cgi-bin/luci/admin/network/ap_modem | https://github.com/linkease/openwrt-app-actions/tree/main/applications/luci-app-ap-modem | 让局域网客户端访问不同子网的AP或光猫（只支持 OpenWRT 21 以上） |
 | arcadia | Arcadia 一站式代码自动化运维平台 | net tool | /cgi-bin/luci/admin/services/arcadia | https://arcadia.cool | 写脚本、跑定时任务、服务托管、消息聚合、AI Agent 运行基座，一个面板搞定全流程 |
