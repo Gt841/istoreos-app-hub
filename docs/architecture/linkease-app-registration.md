@@ -13,9 +13,9 @@
 | `app-meta-*` | 软件中心元数据、软件中心图标、依赖；不得安装应用清单、应用资产副本或注册链接 |
 | 桌面、网关、Lua 解析器 | 新目录优先、旧目录兜底、按应用 ID 去重；builtin 在桌面中解析，独立网关按能力忽略 |
 
-软件中心 logo.png 是元数据图标，仍由 app-meta 拥有。供桌面页面独立使用的图标由实际插件包提供，不能链接到只有安装 app-meta 才存在的文件。
+软件中心 logo.png 由 app-meta 拥有。按 2026-11-25 用户确认，KaiPlus、FastNet 的桌面图标也复用各自元包安装的 `/www/luci-static/resources/app-icons/<id>.png`，运行包只提供 `logo.png` 软链接，不再保存一份图片。清单和注册链接仍由实际插件持有。元包升级图标后，桌面读取同一文件；不要新增运行包到元包的反向依赖，以免与元包到运行包的依赖形成循环。单独安装运行包而未安装元包时，允许没有自定义图标。
 
-应用清单的 `name` 与 `icon` 是桌面身份的权威，软件中心元数据不得覆盖。`icon` 使用相对资源名，配合 `staticRoot` 由桌面或网关提供 `/apps/<id>/<icon>`。没有声明时使用通用图标。FastNet 运行包自带 `/usr/share/fastnet/www/logo.png`，清单声明 `"icon":"logo.png"` 和 `"staticRoot":"/usr/share/fastnet/www"`；单独安装运行包即可显示图标。iStore 的 `/www/luci-static/resources/app-icons/<id>.png` 继续作为软件中心资源，Desktop 不据此推断应用图片位置。
+应用清单的 `name` 与 `icon` 是桌面身份的权威，软件中心元数据不得覆盖。`icon` 使用相对资源名，配合 `staticRoot` 由桌面或网关提供 `/apps/<id>/<icon>`。没有声明时使用通用图标。FastNet 保留 `"icon":"logo.png"` 和 `"staticRoot":"/usr/share/fastnet/www"`，其中 `logo.png` 链接到元包的 `fastnet.png`；KaiPlus 的 `/usr/share/kaiplus/logo.png` 同理链接到 `kaiplus.png`。Desktop 继续按清单读取，无须推断软件中心图标路径。其他应用现有资源保持原归属，后续按此方式迁移。
 
 ## 现有包的归属
 

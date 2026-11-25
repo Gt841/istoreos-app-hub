@@ -3,7 +3,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_VERSION:=0.8.10
-PKG_RELEASE:=23
+PKG_RELEASE:=24
 META_TITLE:=FastNet 网络测速
 META_TITLE.en:=FastNet
 META_DEPENDS:=+fastnet +luci-app-fastnet +luci-i18n-fastnet-zh-cn

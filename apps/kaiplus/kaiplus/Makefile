@@ -8,7 +8,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=kaiplus
 PKG_VERSION:=1.0.22
-PKG_RELEASE:=2
+PKG_RELEASE:=3
 
 KAIPLUS_URL_FILE:=kaiplus-binary-$(PKG_VERSION).tar.gz
 KAIPLUS_HASH:=ded5ee7d0dea8e83a68933f3fcbd2cd8bf5da995c5e12e2583e09d9156f4e6e8
@@ -108,7 +108,7 @@ define Package/$(PKG_NAME)/install
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/kaiplus.$(ARCH) $(1)/usr/sbin/kaiplus_bin
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/kaiplus-web.zip $(1)/usr/share/kaiplus/kaiplus-web.zip
 	ln -sf kaiplus_bin $(1)/usr/sbin/kaiplus
-	$(INSTALL_DATA) ./files/logo.png $(1)/usr/share/kaiplus/logo.png
+	ln -sf /www/luci-static/resources/app-icons/kaiplus.png $(1)/usr/share/kaiplus/logo.png
 	$(INSTALL_DATA) ./files/kaiplus-plugin.json $(1)/usr/share/kaiplus/kaiplus-plugin.json
 	$(INSTALL_DATA) ./files/kaiplus.json $(1)/usr/share/rpcd/acl.d/kaiplus.json
 	ln -sf /usr/share/kaiplus/kaiplus-plugin.json $(1)/usr/share/linkease/apps.d/00-kaiplus-plugin.json

@@ -64,8 +64,8 @@ success. Installation and updating share the same task ID to prevent overlap.
 
 ## Package versions and checks
 
-The pending package set uses `kaiplus 1.0.22-r2`,
-`luci-app-kaiplus 1.0.11-r4`, and `app-meta-kaiplus 1.0.22-r10`. The runtime
+The pending package set uses `kaiplus 1.0.22-r3`,
+`luci-app-kaiplus 1.0.11-r4`, and `app-meta-kaiplus 1.0.22-r11`. The runtime
 recipe consumes `kaiplus-binary-1.0.22.tar.gz` from the
 `kaiplus-runtime-v1.0.22` GitHub release. This revision increment retains the
 existing runtime archive URLs and hashes. New runtime binaries must be built
@@ -75,6 +75,15 @@ publish a GitHub release or feed packages. Device
 protection uses `changeguard 0.3.5-r2` and `linkspace 0.3.3-r2` from their
 matching runtime releases.
 Existing `syncapps.yaml` mappings cover all changed packages.
+
+The runtime owns `kaiplus-plugin.json` and the canonical and compatibility
+registration links, following the FastNet registration layout. KaiPlus keeps
+its desktop module entry and backend authentication settings. Its `logo.png`
+is a symlink to `/www/luci-static/resources/app-icons/kaiplus.png`, installed
+from `app-meta-kaiplus/logo.png`. The metadata package is the only icon owner;
+updating it updates the desktop icon without rebuilding the runtime. A runtime
+installed without its metadata package may have no custom icon. The runtime
+does not depend on its metadata package, avoiding a circular package dependency.
 
 The runtime tarball carries `kaiplus.x86_64`, `kaiplus.aarch64`, and `kaiplus-web.zip`.
 The package installs only the matching binary and the single web archive at

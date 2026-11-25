@@ -114,14 +114,43 @@ class ApplicationRegistrationTest(unittest.TestCase):
             ids.add(app)
             self.assertTrue(manifest.get('icon'), f'{app}: app must declare its own icon')
             icon = package.stage / manifest['staticRoot'].lstrip('/') / manifest['icon']
-            self.assertTrue(icon.is_file(), str(icon))
-            if app == 'fastnet':
-                self.assertEqual(icon.read_bytes()[:8], b'\x89PNG\r\n\x1a\n')
-                self.assertEqual(icon.read_bytes(), (package.source / 'files/logo.png').read_bytes())
-                self.assertFalse((package.stage / 'www/luci-static/resources/app-icons/fastnet.png').exists())
+            if app in ('kaiplus', 'fastnet'):
+                self.assertTrue(icon.is_symlink(), str(icon))
+                target = Path('/www/luci-static/resources/app-icons') / (app + '.png')
+                self.assertEqual(icon.readlink(), target)
+                # Absolute device links resolve inside the offline root, not
+                # against the test host's /www. Metadata owns the PNG payload.
+                installed_icon = package.stage / str(target).lstrip('/')
+                self.assertFalse(installed_icon.exists())
+                source = ROOT / 'apps' / app / ('app-meta-' + app) / 'logo.png'
+                self.assertEqual(source.read_bytes()[:8], b'\x89PNG\r\n\x1a\n')
+                self.assertFalse((package.source / 'files/logo.png').exists())
+            else:
+                self.assertTrue(icon.is_file(), str(icon))
             package.hook('postinst')
             self.assertEqual((package.stage / LEGACY / filename).readlink(), links[0].readlink())
             self.assertEqual(len([p for p in package.stage.rglob("*-plugin.json") if not p.is_symlink()]), 1 if app != "openwrt-luci" else 0)
+
+    def test_metadata_icon_upgrade_changes_desktop_asset_without_runtime_reinstall(self):
+        for relative, app, _ in [case for case in CASES if case[1] in ('kaiplus', 'fastnet')]:
+            with self.subTest(app=app), tempfile.TemporaryDirectory() as directory:
+                package = PackageStage(relative, Path(directory))
+                manifest = json.loads((package.stage / ('usr/share/' + app + '/' + app + '-plugin.json')).read_text())
+                icon = package.stage / manifest['staticRoot'].lstrip('/') / manifest['icon']
+                target = icon.readlink()
+                installed_icon = package.stage / str(target).lstrip('/')
+                installed_icon.parent.mkdir(parents=True)
+                original = (ROOT / 'apps' / app / ('app-meta-' + app) / 'logo.png').read_bytes()
+                installed_icon.write_bytes(original)
+                self.assertEqual((package.stage / str(icon.readlink()).lstrip('/')).read_bytes(), original)
+                # Updating only the meta-owned file changes the bytes read via
+                # the manifest's unchanged resource path and runtime symlink.
+                updated = original + b'metadata-upgrade'
+                installed_icon.write_bytes(updated)
+                self.assertEqual(icon.readlink(), target)
+                self.assertEqual((package.stage / str(icon.readlink()).lstrip('/')).read_bytes(), updated)
+                package.hook('prerm')
+                self.assertEqual(installed_icon.read_bytes(), updated)
 
     def test_upgrade_keeps_own_old_link_and_is_idempotent(self):
         for package, _, filename in self.stages():
