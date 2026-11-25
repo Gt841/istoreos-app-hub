@@ -15,6 +15,8 @@
 
 软件中心 logo.png 是元数据图标，仍由 app-meta 拥有。供桌面页面独立使用的图标由实际插件包提供，不能链接到只有安装 app-meta 才存在的文件。
 
+应用清单的 `name` 与 `icon` 是桌面身份的权威，软件中心元数据不得覆盖。`icon` 使用相对资源名，配合 `staticRoot` 由桌面或网关提供 `/apps/<id>/<icon>`。没有声明时使用通用图标。FastNet 运行包自带 `/usr/share/fastnet/www/logo.png`，清单声明 `"icon":"logo.png"` 和 `"staticRoot":"/usr/share/fastnet/www"`；单独安装运行包即可显示图标。iStore 的 `/www/luci-static/resources/app-icons/<id>.png` 继续作为软件中心资源，Desktop 不据此推断应用图片位置。
+
 ## 现有包的归属
 
 | ID | 唯一所属包 | 登记文件 |

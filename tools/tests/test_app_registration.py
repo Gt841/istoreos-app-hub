@@ -112,9 +112,13 @@ class ApplicationRegistrationTest(unittest.TestCase):
             self.assertEqual(manifest['id'], app)
             self.assertNotIn(app, ids)
             ids.add(app)
-            if manifest.get('icon'):
-                icon = package.stage / manifest['staticRoot'].lstrip('/') / manifest['icon']
-                self.assertTrue(icon.is_file(), str(icon))
+            self.assertTrue(manifest.get('icon'), f'{app}: app must declare its own icon')
+            icon = package.stage / manifest['staticRoot'].lstrip('/') / manifest['icon']
+            self.assertTrue(icon.is_file(), str(icon))
+            if app == 'fastnet':
+                self.assertEqual(icon.read_bytes()[:8], b'\x89PNG\r\n\x1a\n')
+                self.assertEqual(icon.read_bytes(), (package.source / 'files/logo.png').read_bytes())
+                self.assertFalse((package.stage / 'www/luci-static/resources/app-icons/fastnet.png').exists())
             package.hook('postinst')
             self.assertEqual((package.stage / LEGACY / filename).readlink(), links[0].readlink())
             self.assertEqual(len([p for p in package.stage.rglob("*-plugin.json") if not p.is_symlink()]), 1 if app != "openwrt-luci" else 0)
