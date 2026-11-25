@@ -2,7 +2,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=kimi
 PKG_VERSION:=2.7.3
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 PKG_LICENSE:=MIT
 PKG_MAINTAINER:=LinkEase
 
@@ -13,7 +13,7 @@ define Package/kimi
 	CATEGORY:=Utilities
 	TITLE:=Moonshot AI Kimi Code CLI for iStoreOS
 	DEPENDS:=@(x86_64||aarch64) +mise-runtime +git +git-http +ttyd +jsonfilter +linkease-app-entry
-	EXTRA_DEPENDS:=mise-runtime (>=0.1.1-$(if $(CONFIG_USE_APK),r)2)
+	EXTRA_DEPENDS:=mise-runtime (>=0.1.1-$(if $(CONFIG_USE_APK),r)2), luci-lib-linkeaseauth (>=1.2.1-r5)
 	URL:=https://www.kimi.com/code/docs/en/
 endef
 

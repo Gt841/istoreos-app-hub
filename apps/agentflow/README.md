@@ -1,5 +1,13 @@
 # AgentFlow 与共享运行时
 
+## 应用访问
+
+Web 后端固定监听 `127.0.0.1`，配置中的 port 仅是内部传输参数，不再作为浏览器入口。
+LuCI 和软件中心的打开动作统一使用 `linkease_apps/open?id=agentflow`，由公共层选择
+uhttpd 同源代理或共享 19290。网关不可用时报告不可用，不回退到 9000。
+运行时准备、代理安装、业务认证、工作区和现有数据目录保持各自原合同。
+升级仅重启原先已运行的服务；停止状态不会被打开动作或升级隐式启动。
+
 AgentFlow 使用 `mise-runtime` 提供的固定 GNU Node/npm 和私有 glibc。AgentFlow 自身是预编译程序；代理包、运行时绑定和安装记录由本插件管理，不在共享 SDK 内安装 npm 包，也不执行 `mise use --global` 或 `mise reshim`。
 
 ## 配置

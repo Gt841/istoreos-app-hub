@@ -12,7 +12,7 @@ class LinkEaseAppsPackageContractTest(unittest.TestCase):
     def test_shared_luci_package_is_versioned_as_apps_integration(self):
         makefile = self.read("linkeasefull/luci-lib-linkeaseauth/Makefile")
         self.assertIn("LUCI_TITLE:=LuCI shared integration for LinkEase apps", makefile)
-        self.assertIn("PKG_VERSION:=1.2.1-r4", makefile)
+        self.assertIn("PKG_VERSION:=1.2.1-r5", makefile)
         self.assertRegex(makefile, r"(?m)^PKG_RELEASE:=$")
 
     def test_shared_package_keeps_auth_and_adds_separate_apps_routes(self):

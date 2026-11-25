@@ -16,7 +16,7 @@ AGENTFLOW_HASH_aarch64:=e852bbd388b3b66e65bfa7a62f093ce2ad65997a3bf045ccfab4026b
 
 PKG_NAME:=agentflow
 PKG_VERSION:=0.3.5
-PKG_RELEASE:=6
+PKG_RELEASE:=7
 
 AGENTFLOW_URL_FILE:=agentflow-linux-$(AGENTFLOW_ARCH)
 AGENTFLOW_DOWNLOAD:=$(AGENTFLOW_URL_FILE)-$(AGENTFLOW_HASH_$(ARCH))
@@ -42,7 +42,7 @@ define Package/$(PKG_NAME)
 	SUBMENU:=Web Servers/Proxies
 	TITLE:=AgentFlow
 	DEPENDS:=@(x86_64||aarch64) +git +git-http +mise-runtime +linkease-app-entry
-	EXTRA_DEPENDS:=mise-runtime (>=0.1.1-$(if $(CONFIG_USE_APK),r)1)
+	EXTRA_DEPENDS:=mise-runtime (>=0.1.1-$(if $(CONFIG_USE_APK),r)1), luci-lib-linkeaseauth (>=1.2.1-r5)
 	URL:=https://agentflow.geili.ai/
 endef
 
@@ -62,6 +62,11 @@ legacy="$${root}/usr/share/linkeasefull/desktop-apps.d/30-agentflow.json"
 if [ ! -e "$${legacy}" ] && [ ! -L "$${legacy}" ]; then
 	mkdir -p "$${legacy%/*}"
 	ln -s /usr/share/agentflow/agentflow-plugin.json "$${legacy}" || exit $$?
+fi
+if [ -z "$${IPKG_INSTROOT}" ]; then
+	uci -q set agentflow.@agentflow[0].host='127.0.0.1'
+	uci -q commit agentflow || exit $$?
+	if pidof agentflow >/dev/null 2>&1; then /etc/init.d/agentflow restart || exit $$?; fi
 fi
 exit 0
 endef

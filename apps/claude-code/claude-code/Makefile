@@ -2,7 +2,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=claude-code
 PKG_VERSION:=2.1.326
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 PKG_LICENSE:=Proprietary
 PKG_MAINTAINER:=LinkEase
 
@@ -13,7 +13,7 @@ define Package/claude-code
 	CATEGORY:=Utilities
 	TITLE:=Anthropic Claude Code CLI for iStoreOS
 	DEPENDS:=@(x86_64||aarch64) +mise-runtime +git +git-http +ttyd +jsonfilter +linkease-app-entry
-	EXTRA_DEPENDS:=mise-runtime (>=0.1.1-$(if $(CONFIG_USE_APK),r)2)
+	EXTRA_DEPENDS:=mise-runtime (>=0.1.1-$(if $(CONFIG_USE_APK),r)2), luci-lib-linkeaseauth (>=1.2.1-r5)
 	URL:=https://code.claude.com/docs/
 endef
 

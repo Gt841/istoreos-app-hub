@@ -1,5 +1,7 @@
 import json
 from pathlib import Path
+import re
+import subprocess
 import unittest
 
 
@@ -22,7 +24,7 @@ class AgentFlowLuciOpenContractTest(unittest.TestCase):
 
         self.assertIn("+luci-lib-linkeaseauth", makefile)
         self.assertIn("+linkease-app-entry", makefile)
-        self.assertIn("PKG_RELEASE:=7", meta)
+        self.assertIn("PKG_RELEASE:=8", meta)
         self.assertIn("META_LUCI_ENTRY:=/cgi-bin/luci/admin/services/agentflow", meta)
         self.assertIn('entry({"admin", "services", "agentflow", "open"}', controller)
         self.assertIn("open.sysauth = false", controller)
@@ -34,7 +36,7 @@ class AgentFlowLuciOpenContractTest(unittest.TestCase):
         self.assertIn('auth_url = dispatcher.build_url("admin", "services", "linkease_auth", "auth")', controller)
         self.assertNotIn("uhttpd_apps_proxy_available", controller)
         self.assertNotIn("linkeasefull_running", controller)
-        self.assertIn('url("admin/services/agentflow/open")', status)
+        self.assertIn('url("admin/services/linkease_apps/open")', status)
         self.assertNotIn('window.location.hostname + ":" + st.port', status)
 
     def test_app_meta_autoconfigures_agentflow_and_exposes_management_entry(self):
@@ -57,13 +59,13 @@ class AgentFlowLuciOpenContractTest(unittest.TestCase):
         self.assertIn('json_add_string app "$APP"', entry)
         self.assertIn('json_add_boolean docker 0', entry)
         self.assertIn('ubus -S call service list', entry)
-        self.assertIn('env_value AGENT_FLOW_HOST', entry)
-        self.assertIn('env_value AGENT_FLOW_PORT', entry)
-        self.assertIn('tcp_target "$address" "$value" /apps/agentflow/', entry)
+        self.assertNotIn('env_value AGENT_FLOW_HOST', entry)
+        self.assertNotIn('env_value AGENT_FLOW_PORT', entry)
+        self.assertNotIn('tcp_target "$address" "$value" /apps/agentflow/', entry)
         self.assertIn('json_add_string "href" "/cgi-bin/luci/admin/services/agentflow"', entry)
         self.assertIn('ENTRY_INIT=/etc/init.d/agentflow', entry)
         self.assertIn('start|stop) "$ENTRY_INIT" "$1"', entry)
-        self.assertNotIn("linkease_apps/open", entry)
+        self.assertIn("linkease_apps/open?id=agentflow", entry)
 
     def test_app_meta_and_desktop_icons_have_single_owners(self):
         manifest = json.loads(
@@ -81,6 +83,38 @@ class AgentFlowLuciOpenContractTest(unittest.TestCase):
             (META_DIR / "root/usr/share/linkeasefull/desktop-apps.d").exists(),
             "agentflow runtime already owns the desktop manifest",
         )
+
+    def test_missing_gateway_disables_open_but_keeps_agent_management_available(self):
+        template = self.read("luasrc/view/agentflow/status.htm")
+        source = template[template.index("function agentflowAbsoluteUrl"):template.index("function agentflowRecoverRuntime")]
+        source = re.sub(r"<%:([^%]+)%>", r"\1", source)
+        harness = r'''
+const vm = require('node:vm'), assert = require('node:assert/strict');
+const elements = {
+ 'agentflow-open': {}, 'agentflow-address': {}, 'agentflow-service-description': {},
+ 'agentflow-agent-install-reasonix': {}
+};
+const context = {
+ URL, window: {location: {href: 'http://router.lan:10000/cgi-bin/luci/admin/services/agentflow'}},
+ document: {getElementById: id => elements[id] || null},
+ agentflowAgentNames: {reasonix: 'Reasonix'}, agentflowExternalUrls: {},
+ agentflowLabels: {installed:'Installed', notInstalled:'Not installed', unknown:'Unknown', install:'Install'}
+};
+vm.createContext(context); vm.runInContext(source, context);
+const status = {running:true, access:{available:false}, agents:[{id:'reasonix', installed:false}]};
+context.agentflowRenderStatus(status);
+assert.equal(elements['agentflow-open'].disabled, true);
+assert.equal(elements['agentflow-address'].value, '');
+assert.equal(elements['agentflow-agent-install-reasonix'].disabled, false);
+assert.ok(elements['agentflow-service-description'].textContent.includes('Application entry is unavailable'));
+for (const url of ['/apps/agentflow/', 'http://router.lan:19290/apps/agentflow/']) {
+ context.agentflowRenderStatus({...status, access:{available:true}, entry_url:url});
+ assert.equal(elements['agentflow-open'].disabled, false);
+ assert.equal(elements['agentflow-address'].value, new URL(url, context.window.location.href).href);
+}
+'''
+        result = subprocess.run(["node", "-e", "const source=" + json.dumps(source) + ";\n" + harness], capture_output=True, text=True, timeout=15)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
 if __name__ == "__main__":
     unittest.main()

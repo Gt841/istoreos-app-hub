@@ -11,7 +11,9 @@
       "hostMode": "request-host",
       "port": {
         "default": 7686,
-        "keys": { "uci": "kimi.main.terminal_port" }
+        "keys": {
+          "uci": "kimi.main.terminal_port"
+        }
       },
       "path": "/apps/kimi/"
     },
@@ -28,18 +30,51 @@
       "label": "打开 Kimi Code 终端"
     }
   },
-  "auth": { "mode": "default" },
+  "auth": {
+    "mode": "default"
+  },
   "backend": {
     "type": "http",
     "scheme": "http",
     "host": "127.0.0.1",
-    "portFromUci": "kimi.main.terminal_port",
-    "defaultPort": 7686,
     "upstreamBasePath": "/apps/kimi/",
     "pathMode": "preserve",
-    "proxyMode": "app-base"
+    "proxyMode": "app-base",
+    "transport": "tcp",
+    "values": {
+      "port": {
+        "default": 7686,
+        "keys": {
+          "uci": "kimi.main.terminal_port"
+        }
+      },
+      "externalPortEnabled": {
+        "default": false
+      }
+    }
   },
-  "window": { "width": 1180, "height": 760, "singleton": true },
-  "capabilities": ["coding-agent", "terminal", "development"],
-  "categories": ["development", "ai"]
+  "window": {
+    "width": 1180,
+    "height": 760,
+    "singleton": true
+  },
+  "capabilities": [
+    "coding-agent",
+    "terminal",
+    "development"
+  ],
+  "categories": [
+    "development",
+    "ai"
+  ],
+  "config": {
+    "providerOrder": [
+      "uci"
+    ],
+    "providers": {
+      "uci": {
+        "type": "uci"
+      }
+    }
+  }
 }

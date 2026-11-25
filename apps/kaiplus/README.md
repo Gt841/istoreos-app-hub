@@ -6,14 +6,30 @@ names the product line; it does not pin an obsolete KAI binary version.
 
 `luci-app-kaiplus` owns both management tabs:
 
-| Tab | Configuration | Service | Default port | Data directory suffix |
+| Tab | Configuration | Service | Internal listener | Data directory suffix |
 | --- | --- | --- | --- | --- |
-| KaiPlus | `/etc/config/kaiplus` | `/etc/init.d/kaiplus` | 8189 | `Configs/KAIPlus` |
+| KaiPlus | `/etc/config/kaiplus` | `/etc/init.d/kaiplus` | Unix `/var/run/kaiplus.sock` | `Configs/KAIPlus` |
 | CLASSIC KAI | `/etc/config/kai` | `/etc/init.d/kai` | 8197 | `Configs/KAI` |
 
 The tabs are `/admin/services/kaiplus/settings` and
 `/admin/services/kaiplus/classic` beneath the LuCI base URL. The existing
 `/admin/services/kaiplus` entry opens the KaiPlus settings tab.
+
+## Shared application entry
+
+KaiPlus's OpenWrt profile is Unix-only. The pinned 1.0.25 source already supports
+`--listen-mode unix --socket-path /var/run/kaiplus.sock`; the package and manifest
+select that path and LuCI probes it for readiness. The Open action is
+`linkease_apps/open?id=kaiplus`, selecting the uhttpd proxy or shared LAN port
+19290. KaiPlus has no public Web port or TCP fallback. Backend auth, recovery
+points and changeguard setup retain their existing owners. A package upgrade
+removes the obsolete KaiPlus port setting and restarts only an active service.
+The optional classic runtime below retains its separate TCP contract.
+The Reasonix source archive's `packaging/openwrt/kaiplus.init` follows the same
+Unix-only profile. Its OpenWrt deployment script uses the current app-hub init,
+manifest and complete LuCI sources, registers both directories, and does not
+restore obsolete public-port settings. The deployment task displays the socket
+path rather than a browser port.
 
 ## Optional classic runtime
 
@@ -35,8 +51,8 @@ Do not restore `app-meta-kai` or `luci-app-kai`.
 
 After installation, the classic tab reloads to show Enable, Data directory,
 and Access port. Save & Apply restarts `/etc/init.d/kai` when enabled and
-stops it when disabled. It does not restart KaiPlus or LinkEase. Use distinct
-ports and data directories to run both products together. Opening CLASSIC KAI
+stops it when disabled. It does not restart KaiPlus or LinkEase. The classic service retains its configured TCP port; use distinct
+data directories to run both products together. Opening CLASSIC KAI
 uses the shared `linkease_apps/open?id=kai` entry resolver, including the
 configured authentication and access URL behavior.
 
@@ -64,8 +80,8 @@ success. Installation and updating share the same task ID to prevent overlap.
 
 ## Package versions and checks
 
-The pending package set uses `kaiplus 1.0.25-r1`,
-`luci-app-kaiplus 1.0.11-r4`, and `app-meta-kaiplus 1.0.25-r12`. The runtime
+The pending package set uses `kaiplus 1.0.25-r2`,
+`luci-app-kaiplus 1.0.11-r5`, and `app-meta-kaiplus 1.0.25-r12`. The runtime
 recipe consumes `kaiplus-binary-1.0.25.tar.gz` from the
 `kaiplus-runtime-v1.0.25` GitHub release, built from Reasonix commit
 `f6913b1fb322b8b6f8e3d9795580510cb703e30d`. Its SHA-256 is

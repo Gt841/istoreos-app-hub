@@ -130,10 +130,11 @@ be `http://<host>:5003/`, not `http://<host>:5003/apps/kspeeder/`.
 
 | Pattern | Applications | Direct behavior when shared entry is absent |
 | --- | --- | --- |
-| app-base service | KAI, AgentFlow | same `/apps/<id>/` path on the app port |
+| legacy app-base service | CLASSIC KAI | same `/apps/<id>/` path on the app port |
 | module with different direct root | KSpeeder | explicit `externalOpen.path`, currently `/` |
-| module with matching direct root | BaiduDrive | backend `externalBasePath`, currently `/` |
-| Unix-only | Docker Manager | unavailable; no application TCP fallback |
+| private Web with SDK | BaiduDrive | unavailable; only the Web listener is private, SDK/P2P remains unchanged |
+| Unix-only | Docker Manager, KaiPlus | unavailable; no application TCP fallback |
+| private app-base or terminal | AgentFlow, Codex, OpenCode, Kimi, Claude Code | unavailable; loopback backend ports are never browser fallbacks |
 | existing optional application TCP | apps declaring that capability | use only an explicitly supported enabled listener |
 | browser-direct iframe | FastNet | redirect to its configured service port; do not proxy measurement traffic |
 | LinkEaseFull builtin | OpenWrt embed | no standalone fallback; requires LinkEaseFull |
@@ -286,3 +287,20 @@ already-published runtime archives.
 The shared LAN listener is HTTP. Do not present HTTPS LuCI login as HTTPS
 application transport. Remote access requires explicitly exposing the shared
 entry through the chosen remote channel; this change publishes no tunnel.
+
+## Managed module qualification and regression
+
+Run `python3 -B -m unittest discover -s apps/linkeasefull/tests -v` for the real
+manifest matrix: both workers, uhttpd proxy/no proxy, stopped worker and a private
+shared bind. It includes unchanged FastNet/KSpeeder browser-direct exceptions.
+The suite executes native init bodies with stale public host/TCP configuration
+and mocks only platform side effects; it also exercises active/inactive upgrade
+hooks and restart failure.
+
+KaiPlus now probes its Unix socket for readiness; the classic tab's TCP probe
+remains separate. Native Open buttons must be unavailable if the process is ready
+but the shared entry is not. The source checks do not replace device acceptance:
+verify KaiPlus session/event streaming, agent terminals, AgentFlow workflows and
+Baidu uploads/downloads on a target with matching entry/Desktop runtimes. Check
+that AgentFlow/Baidu Web listeners are loopback and KaiPlus has no TCP Web
+listener; do not interpret SDK/P2P ports as Web fallback listeners.

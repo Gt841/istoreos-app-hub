@@ -1,5 +1,10 @@
 # Claude Code for iStoreOS
 
+应用只通过 `linkease_apps/open?id=claude-code` 打开。ttyd 的回环端口是内部参数，
+由共享网关代理页面和 WebSocket；网关不可用时不再生成私有端口直连地址。
+LuCI 不提供端口设置，管理员仍可通过现有配置处理内部端口冲突。
+本次保留专用用户、固定版本、登录凭据、工作区和代理安装流程。
+
 Claude Code 是独立编码代理插件。`claude-code` 运行包拥有固定发布、专用用户、持久数据、浏览器终端服务、应用注册和代理发现清单；`mise-runtime` 只负责安装阶段所需的固定 Node/npm SDK。
 
 ## 软件包

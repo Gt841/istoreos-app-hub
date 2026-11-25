@@ -150,6 +150,14 @@ function M.new(dependencies)
 	end
 
 	local function external_status(app)
+		local backend = app.manifest.backend or {}
+		local values = type(backend.values) == "table" and backend.values or {}
+		-- A private backend port is not a browser destination, including for
+		-- iframe applications whose app-base route is handled by the gateway.
+		if type(values.externalPortEnabled) == "table"
+			and not bool_value(configured_value(deps.uci, values.externalPortEnabled, deps.read_uci)) then
+			return { available = false, reason = "external_disabled" }
+		end
 		local desktop = app.manifest.desktop or {}
 		local target = type(desktop.target) == "table" and desktop.target or nil
 		if desktop.mode == "iframe" and target and target.hostMode == "request-host"
@@ -172,8 +180,6 @@ function M.new(dependencies)
 			}
 		end
 
-		local backend = app.manifest.backend or {}
-		local values = type(backend.values) == "table" and backend.values or {}
 		local enabled
 		local port
 		if type(values.externalPortEnabled) == "table" then

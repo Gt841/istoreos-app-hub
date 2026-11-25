@@ -34,12 +34,6 @@ function workspace.validate(self, value)
 	return value
 end
 
-local port = s:option(Value, "terminal_port", translate("内部终端端口"))
-port.default = "7685"
-port.rmempty = false
-port.datatype = "portrange(1025,65535)"
-port.description = translate("仅监听本机回环地址，浏览器必须通过已认证的应用网关访问。")
-
 function m.on_after_commit()
 	require("luci.sys").call("/etc/init.d/opencode restart >/dev/null 2>&1")
 end

@@ -167,3 +167,6 @@ msgstr "代理使用固定的共享 Node/glibc 运行时，安装到 AgentFlow �
 
 msgid "Recover interrupted install"
 msgstr "恢复中断安装"
+
+msgid "Application entry is unavailable. Agent installation remains available."
+msgstr "应用入口不可用，仍可安装和管理代理。"

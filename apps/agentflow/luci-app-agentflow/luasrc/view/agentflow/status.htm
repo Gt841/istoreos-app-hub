@@ -250,7 +250,7 @@ body[theme="dark"] .agentflow-section-mark { background:rgba(93, 136, 255, .14);
 </style>
 
 <script type="text/javascript">//<![CDATA[
-var agentflowOpenUrl = '<%=url("admin/services/agentflow/open")%>';
+var agentflowOpenUrl = '<%=url("admin/services/linkease_apps/open")%>?id=agentflow';
 var agentflowStatusUrl = '<%=url("admin/services/agentflow_status")%>';
 var agentflowAgentInstallUrl = '<%=url("admin/services/agentflow/agent_install")%>';
 var agentflowExternalUrls = {
@@ -278,8 +278,9 @@ var agentflowLabels = {
 };
 
 function agentflowAbsoluteUrl(value) {
+	if (!value) return '';
 	try { return new URL(value, window.location.href).href; }
-	catch (e) { return value || ''; }
+	catch (e) { return ''; }
 }
 
 function agentflowRenderStatus(st) {
@@ -301,7 +302,8 @@ function agentflowRenderStatus(st) {
 	if (description) description.textContent = st.running
 		? '<%:The service is ready. You can open AgentFlow or install coding agents.%>'
 		: '<%:Start the service to use AgentFlow. Agent installation remains available.%>';
-	if (openButton) openButton.disabled = !st.running;
+	if (st.running && !(st.access && st.access.available) && description) description.textContent = '<%:Application entry is unavailable. Agent installation remains available.%>';
+	if (openButton) openButton.disabled = !(st.running && st.access && st.access.available);
 	if (address) address.value = agentflowAbsoluteUrl(st.entry_url || '');
 	var runtime = st.runtime || {};
 	var runtimeStatus = document.getElementById('agentflow-runtime-status');
