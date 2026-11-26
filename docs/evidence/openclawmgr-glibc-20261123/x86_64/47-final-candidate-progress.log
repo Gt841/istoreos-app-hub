@@ -1,0 +1,13 @@
+task=true
+== installer phases
+2026-11-23 13:44:48 [openclawmgr] Installation finished (exit=1)
+2026-11-23 13:46:34 [openclawmgr] Installation phase: preparing
+2026-11-23 13:46:41 [openclawmgr] Resolved OpenClaw 2026.3.28 with Node v24.22.1
+2026-11-23 13:46:41 [openclawmgr] Fetching package archive and verifying SHA512
+2026-11-23 13:46:46 [openclawmgr] Installing OpenClaw 2026.3.28 and dependencies
+== command tail
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m @mariozechner/pi-coding-agent@0.63.1: please use @earendil-works/pi-coding-agent instead going forward
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@mariozechner/clipboard-linux-x64-gnu/-/clipboard-linux-x64-gnu-0.3.9.tgz 32240ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@napi-rs/canvas-linux-x64-gnu/-/canvas-linux-x64-gnu-0.1.100.tgz 131496ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img/sharp-libvips-linux-x64/-/sharp-libvips-linux-x64-1.2.4.tgz 193103ms (cache miss)
+boot=8ebe0f03-3bce-4dd0-a84b-e7d29317c6ed

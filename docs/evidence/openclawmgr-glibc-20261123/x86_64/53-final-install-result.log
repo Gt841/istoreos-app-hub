@@ -1,0 +1,13 @@
+task=false
+== installer phases
+2026-11-23 13:59:21 [openclawmgr] Installation phase: backup-ready
+2026-11-23 13:59:21 [openclawmgr] Installation phase: activated
+2026-11-23 13:59:32 [openclawmgr] Installation phase: committed
+2026-11-23 13:59:32 [openclawmgr] Installation committed: 20261123134634-OKKpAM; receipt: /mnt/vio4-0/OpenClawMgr-glibc-acceptance-20261123/current/receipt.json
+2026-11-23 13:59:32 [openclawmgr] Installation finished (exit=0)
+== command tail
+[38;5;78mOK[39m (0ms)
+2026-11-23 13:59:32 [openclawmgr] Installation phase: committed
+2026-11-23 13:59:32 [openclawmgr] Installation committed: 20261123134634-OKKpAM; receipt: /mnt/vio4-0/OpenClawMgr-glibc-acceptance-20261123/current/receipt.json
+2026-11-23 13:59:32 [openclawmgr] Installation finished (exit=0)
+boot=8ebe0f03-3bce-4dd0-a84b-e7d29317c6ed

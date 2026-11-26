@@ -1,0 +1,7 @@
+{
+  "escaped_target_created": false,
+  "rc": 2,
+  "scope": "real venv site pip.conf must not redirect install target",
+  "passed": true,
+  "original_config_absent": true
+}

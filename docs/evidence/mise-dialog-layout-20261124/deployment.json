@@ -1,0 +1,967 @@
+{
+  "schema_version": 1,
+  "mode": "direct-file-development",
+  "host": "192.168.30.7",
+  "arch": "x86_64",
+  "stage": "/mnt/mise-runtime/acceptance/direct-deploy/mise-dialog-layout-20261124T152000Z",
+  "label": "mise-dialog-layout-20261124T152000Z",
+  "files": [
+    {
+      "source": "apps/mise/mise-runtime/files/catalog.json",
+      "target": "/usr/share/mise-runtime/catalog.json",
+      "mode": 420,
+      "config": false,
+      "sha256": "3f3db4afd3acfa28ae9138fad8003c6ecbb00a339464fb4d33b343f1eb749db9",
+      "key": "0000"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/execute.lua",
+      "target": "/usr/share/mise-runtime/execute.lua",
+      "mode": 493,
+      "config": false,
+      "sha256": "506527c6a9e023e360d4bbdc64a62504f1376fb832cb6e50ba7cfeb9a44c29f9",
+      "key": "0001"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/adapters.lua",
+      "target": "/usr/share/mise-runtime/lib/adapters.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "b20bb9c1b5fea2710935a261d843cc401545aa8c482f7dfac1aabd8912ea8da6",
+      "key": "0002"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/artifacts.lua",
+      "target": "/usr/share/mise-runtime/lib/artifacts.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "436424bef53ea9ab52b4463b94639cc96af55b564f8161ba62e4a0701673f61c",
+      "key": "0003"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/contract.lua",
+      "target": "/usr/share/mise-runtime/lib/contract.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "62a1f88a8faad2532cbe0b2195f1008d0aaf943ec2c2d118b9961e6caa6a60c0",
+      "key": "0004"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/defaults.lua",
+      "target": "/usr/share/mise-runtime/lib/defaults.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "5d693ea945117e39bc24ee37fe83e9e08f5367f5a72757a9d7ec6f1b41091235",
+      "key": "0005"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/execution.lua",
+      "target": "/usr/share/mise-runtime/lib/execution.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "8abb3f21050472f824cc270095b131165f380599bb6f17e9c4e92e44a605bf88",
+      "key": "0006"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/libraries.lua",
+      "target": "/usr/share/mise-runtime/lib/libraries.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "0bf2649859ac7bea035294a74cd65d3cbe38636ea90ebc5bce94a0350327e883",
+      "key": "0007"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/native.lua",
+      "target": "/usr/share/mise-runtime/lib/native.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "20dfff781071ab0dd57cc2b62065368b94518c301980213432ae1d6fd339c367",
+      "key": "0008"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/network.lua",
+      "target": "/usr/share/mise-runtime/lib/network.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "f1f3af7242de4f3e205367b6fe89c51bdc1bbea135616c62532fdad57c3ec896",
+      "key": "0009"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/python.lua",
+      "target": "/usr/share/mise-runtime/lib/python.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "eaf1e423d4079e3294d64bb64fbcd33d85dd703bd948a317a145e7d60d61697c",
+      "key": "0010"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/registration.lua",
+      "target": "/usr/share/mise-runtime/lib/registration.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "fb89bce8e8cce6ad4b1468d10a9da759d8b623c6d889394f561b6787912f4121",
+      "key": "0011"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/status.lua",
+      "target": "/usr/share/mise-runtime/lib/status.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "cc09b84e5361bb8b778b93bfb4ec47f7b18e59dc18d0d827412aa51af387fe4b",
+      "key": "0012"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/store.lua",
+      "target": "/usr/share/mise-runtime/lib/store.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "64d4dfdffc410b660505cb00e7ab95806964515e5af875f57c07e51e81a03076",
+      "key": "0013"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/system.lua",
+      "target": "/usr/share/mise-runtime/lib/system.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "6a69ae27177fe5a8f34cbb33721d3e1b216937902c37a6292d9d6ae356d3533d",
+      "key": "0014"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/tasks.lua",
+      "target": "/usr/share/mise-runtime/lib/tasks.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "353b48b589a09a3b5a5d709686b2321744692e18f4d614e0a3f843ecfdb78707",
+      "key": "0015"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/lib/wire.lua",
+      "target": "/usr/share/mise-runtime/lib/wire.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "cdec9de747339a5e12ea099fba215222e35406cab01dbfb4d930bd0fe057f027",
+      "key": "0016"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/licenses/GCC-exception-3.1.txt",
+      "target": "/usr/share/mise-runtime/licenses/GCC-exception-3.1.txt",
+      "mode": 420,
+      "config": false,
+      "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+      "key": "0017"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/licenses/GPL-3.0.txt",
+      "target": "/usr/share/mise-runtime/licenses/GPL-3.0.txt",
+      "mode": 420,
+      "config": false,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "key": "0018"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/licenses/LGPL-2.1.txt",
+      "target": "/usr/share/mise-runtime/licenses/LGPL-2.1.txt",
+      "mode": 420,
+      "config": false,
+      "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+      "key": "0019"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/licenses/sources.json",
+      "target": "/usr/share/mise-runtime/licenses/sources.json",
+      "mode": 420,
+      "config": false,
+      "sha256": "fa86560429f6f53d271cf7519dfcccd07de7ae316e14f6b25db93eaba18b0ef3",
+      "key": "0020"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/main.lua",
+      "target": "/usr/share/mise-runtime/main.lua",
+      "mode": 493,
+      "config": false,
+      "sha256": "4b8346e4f2e489747bd8b8eafcba057ff6b8a573e1ed759b5d0a1c86e93ebdcb",
+      "key": "0021"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/mise-runtime",
+      "target": "/usr/sbin/mise-runtime",
+      "mode": 493,
+      "config": false,
+      "sha256": "fef1cef5d5a255c8405d22a120c22d17ccfbfb6a0eadcf589652cd40126f1f19",
+      "key": "0022"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/native/bin/uci",
+      "target": "/usr/share/mise-runtime/native/bin/uci",
+      "mode": 493,
+      "config": false,
+      "sha256": "26d9afd173a478d1384cfdd7b9c04f0921f9b8559ec7f89956626289c471a5e7",
+      "key": "0023"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/node-loader.cjs",
+      "target": "/usr/share/mise-runtime/node-loader.cjs",
+      "mode": 420,
+      "config": false,
+      "sha256": "ddbc638299deb8f87d286ca929378302f812b957bd486ef60e3450cbef4a4e7b",
+      "key": "0024"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/npm.json",
+      "target": "/usr/share/mise-runtime/npm.json",
+      "mode": 420,
+      "config": false,
+      "sha256": "33757f6f8bed04dfc5c891ea43bb85cd5d25b23e8a1eda3f5329f47ba6789c92",
+      "key": "0025"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/python-launch.lua",
+      "target": "/usr/share/mise-runtime/python-launch.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "89f9afe659caa6c3997dabc6ff78042f63a8cc49ff81e3cb4143ef9c2d386703",
+      "key": "0026"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/python-openssl.cnf",
+      "target": "/usr/share/mise-runtime/python-openssl.cnf",
+      "mode": 420,
+      "config": false,
+      "sha256": "ef1dd56712ebddf1c3bb45d08fd3dd9432b287c1f8d56825c9cec352d47e7337",
+      "key": "0027"
+    },
+    {
+      "source": "apps/mise/mise-runtime/files/python-venv.py",
+      "target": "/usr/share/mise-runtime/python-venv.py",
+      "mode": 420,
+      "config": false,
+      "sha256": "d3eeb45de144e594f8ffe77059963fb7729fbfea751b698bd855f5a8026816cb",
+      "key": "0028"
+    },
+    {
+      "source": "/var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/mise-direct/exec-user-x64",
+      "target": "/usr/share/mise-runtime/native/bin/exec-user",
+      "mode": 493,
+      "config": false,
+      "sha256": "a225989b034be356a0ed65a3a2d2ab33ece51769e95c5ccb5908e9ace464969f",
+      "key": "0029"
+    },
+    {
+      "source": "/var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/python-launch/python-launch-musl-x64",
+      "target": "/usr/share/mise-runtime/native/bin/python-launch-musl",
+      "mode": 493,
+      "config": false,
+      "sha256": "5ad0d84e30cfa1cbb43bf28f6ad737c2dd2b2d25a1ae6e7ca1cb667347558a8b",
+      "key": "0030"
+    },
+    {
+      "source": "/var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/python-launch/python-launch-glibc-x64",
+      "target": "/usr/share/mise-runtime/native/bin/python-launch-glibc",
+      "mode": 493,
+      "config": false,
+      "sha256": "9a27fc435eff588ae344e003a193477a1f53fdf94fc93d656480f98da3835e02",
+      "key": "0031"
+    },
+    {
+      "source": "apps/mise/luci-app-mise/luasrc/controller/mise.lua",
+      "target": "/usr/lib/lua/luci/controller/mise.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "cd8e9dc062f76ceb036162c9549ba664040ca6184f99b12d4f7a72739eb0d178",
+      "key": "0032"
+    },
+    {
+      "source": "apps/mise/luci-app-mise/luasrc/model/mise/transport.lua",
+      "target": "/usr/lib/lua/luci/model/mise/transport.lua",
+      "mode": 420,
+      "config": false,
+      "sha256": "f58a0493a2f19b14767c44cb667f637e49d95739e336106137c3d5b1834a4ce7",
+      "key": "0033"
+    },
+    {
+      "source": "apps/mise/luci-app-mise/luasrc/view/mise/index.htm",
+      "target": "/usr/lib/lua/luci/view/mise/index.htm",
+      "mode": 420,
+      "config": false,
+      "sha256": "25b58d493ebf8aaf553627b051c621bd3452d7e83960606ae74acff3fec1b436",
+      "key": "0034"
+    },
+    {
+      "source": "apps/mise/luci-app-mise/htdocs/luci-static/resources/mise/LICENSE.quickstart",
+      "target": "/www/luci-static/resources/mise/LICENSE.quickstart",
+      "mode": 420,
+      "config": false,
+      "sha256": "526e92dfd56626d744ded5ba7189f9a875d2384209335225631749662eca4b74",
+      "key": "0035"
+    },
+    {
+      "source": "apps/mise/luci-app-mise/htdocs/luci-static/resources/mise/LICENSE.vue",
+      "target": "/www/luci-static/resources/mise/LICENSE.vue",
+      "mode": 420,
+      "config": false,
+      "sha256": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+      "key": "0036"
+    },
+    {
+      "source": "apps/mise/luci-app-mise/htdocs/luci-static/resources/mise/app.js",
+      "target": "/www/luci-static/resources/mise/app.js",
+      "mode": 420,
+      "config": false,
+      "sha256": "fd5d113a2511aa6b4e9e5accb2e6a5303d2d47a76cad869fc5f0a7edbea271de",
+      "key": "0037"
+    },
+    {
+      "source": "apps/mise/luci-app-mise/htdocs/luci-static/resources/mise/logo.svg",
+      "target": "/www/luci-static/resources/mise/logo.svg",
+      "mode": 420,
+      "config": false,
+      "sha256": "4ccb1ea4bf6b206cd7d43860109f02167ff986d41bbbc8409ddb1802e92910da",
+      "key": "0038"
+    },
+    {
+      "source": "apps/mise/luci-app-mise/htdocs/luci-static/resources/mise/style.css",
+      "target": "/www/luci-static/resources/mise/style.css",
+      "mode": 420,
+      "config": false,
+      "sha256": "86ec197ee5d3fddcb4ad1cfbd7089b5f7ab5173b59dfa32cc092bba7a08fefab",
+      "key": "0039"
+    },
+    {
+      "source": "apps/mise/luci-app-mise/root/usr/share/mise/mise-plugin.json",
+      "target": "/usr/share/mise/mise-plugin.json",
+      "mode": 420,
+      "config": false,
+      "sha256": "eb8c622aa873d76bc8cda8e3423773d391c7f52978bb067842ee3655c9e1a26d",
+      "key": "0040"
+    },
+    {
+      "source": "apps/mise/luci-app-mise/root/usr/share/mise/register-desktop.sh",
+      "target": "/usr/share/mise/register-desktop.sh",
+      "mode": 493,
+      "config": false,
+      "sha256": "fde7e358778369db3358328a9c14324b51b8b6fe93564285976d2e645909eb65",
+      "key": "0041"
+    },
+    {
+      "source": "apps/mise/luci-app-mise/root/usr/share/rpcd/acl.d/luci-app-mise.json",
+      "target": "/usr/share/rpcd/acl.d/luci-app-mise.json",
+      "mode": 420,
+      "config": false,
+      "sha256": "29df44f8a596df973581b548360c2ad6def5341c63740522a4c2cf91580aeb14",
+      "key": "0042"
+    }
+  ],
+  "package_database_modified": false,
+  "SDK_or_application_data_copied": false,
+  "result": {
+    "files": [
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "3f3db4afd3acfa28ae9138fad8003c6ecbb00a339464fb4d33b343f1eb749db9",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0000",
+        "target": "/usr/share/mise-runtime/catalog.json",
+        "mode": 420,
+        "sha256": "3f3db4afd3acfa28ae9138fad8003c6ecbb00a339464fb4d33b343f1eb749db9",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 755,
+          "sha256": "506527c6a9e023e360d4bbdc64a62504f1376fb832cb6e50ba7cfeb9a44c29f9",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0001",
+        "target": "/usr/share/mise-runtime/execute.lua",
+        "mode": 493,
+        "sha256": "506527c6a9e023e360d4bbdc64a62504f1376fb832cb6e50ba7cfeb9a44c29f9",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "b20bb9c1b5fea2710935a261d843cc401545aa8c482f7dfac1aabd8912ea8da6",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0002",
+        "target": "/usr/share/mise-runtime/lib/adapters.lua",
+        "mode": 420,
+        "sha256": "b20bb9c1b5fea2710935a261d843cc401545aa8c482f7dfac1aabd8912ea8da6",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "436424bef53ea9ab52b4463b94639cc96af55b564f8161ba62e4a0701673f61c",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0003",
+        "target": "/usr/share/mise-runtime/lib/artifacts.lua",
+        "mode": 420,
+        "sha256": "436424bef53ea9ab52b4463b94639cc96af55b564f8161ba62e4a0701673f61c",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "62a1f88a8faad2532cbe0b2195f1008d0aaf943ec2c2d118b9961e6caa6a60c0",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0004",
+        "target": "/usr/share/mise-runtime/lib/contract.lua",
+        "mode": 420,
+        "sha256": "62a1f88a8faad2532cbe0b2195f1008d0aaf943ec2c2d118b9961e6caa6a60c0",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "5d693ea945117e39bc24ee37fe83e9e08f5367f5a72757a9d7ec6f1b41091235",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0005",
+        "target": "/usr/share/mise-runtime/lib/defaults.lua",
+        "mode": 420,
+        "sha256": "5d693ea945117e39bc24ee37fe83e9e08f5367f5a72757a9d7ec6f1b41091235",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "8abb3f21050472f824cc270095b131165f380599bb6f17e9c4e92e44a605bf88",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0006",
+        "target": "/usr/share/mise-runtime/lib/execution.lua",
+        "mode": 420,
+        "sha256": "8abb3f21050472f824cc270095b131165f380599bb6f17e9c4e92e44a605bf88",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "0bf2649859ac7bea035294a74cd65d3cbe38636ea90ebc5bce94a0350327e883",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0007",
+        "target": "/usr/share/mise-runtime/lib/libraries.lua",
+        "mode": 420,
+        "sha256": "0bf2649859ac7bea035294a74cd65d3cbe38636ea90ebc5bce94a0350327e883",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "20dfff781071ab0dd57cc2b62065368b94518c301980213432ae1d6fd339c367",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0008",
+        "target": "/usr/share/mise-runtime/lib/native.lua",
+        "mode": 420,
+        "sha256": "20dfff781071ab0dd57cc2b62065368b94518c301980213432ae1d6fd339c367",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "f1f3af7242de4f3e205367b6fe89c51bdc1bbea135616c62532fdad57c3ec896",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0009",
+        "target": "/usr/share/mise-runtime/lib/network.lua",
+        "mode": 420,
+        "sha256": "f1f3af7242de4f3e205367b6fe89c51bdc1bbea135616c62532fdad57c3ec896",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "eaf1e423d4079e3294d64bb64fbcd33d85dd703bd948a317a145e7d60d61697c",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0010",
+        "target": "/usr/share/mise-runtime/lib/python.lua",
+        "mode": 420,
+        "sha256": "eaf1e423d4079e3294d64bb64fbcd33d85dd703bd948a317a145e7d60d61697c",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "fb89bce8e8cce6ad4b1468d10a9da759d8b623c6d889394f561b6787912f4121",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0011",
+        "target": "/usr/share/mise-runtime/lib/registration.lua",
+        "mode": 420,
+        "sha256": "fb89bce8e8cce6ad4b1468d10a9da759d8b623c6d889394f561b6787912f4121",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "cc09b84e5361bb8b778b93bfb4ec47f7b18e59dc18d0d827412aa51af387fe4b",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0012",
+        "target": "/usr/share/mise-runtime/lib/status.lua",
+        "mode": 420,
+        "sha256": "cc09b84e5361bb8b778b93bfb4ec47f7b18e59dc18d0d827412aa51af387fe4b",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "64d4dfdffc410b660505cb00e7ab95806964515e5af875f57c07e51e81a03076",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0013",
+        "target": "/usr/share/mise-runtime/lib/store.lua",
+        "mode": 420,
+        "sha256": "64d4dfdffc410b660505cb00e7ab95806964515e5af875f57c07e51e81a03076",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "6a69ae27177fe5a8f34cbb33721d3e1b216937902c37a6292d9d6ae356d3533d",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0014",
+        "target": "/usr/share/mise-runtime/lib/system.lua",
+        "mode": 420,
+        "sha256": "6a69ae27177fe5a8f34cbb33721d3e1b216937902c37a6292d9d6ae356d3533d",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "353b48b589a09a3b5a5d709686b2321744692e18f4d614e0a3f843ecfdb78707",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0015",
+        "target": "/usr/share/mise-runtime/lib/tasks.lua",
+        "mode": 420,
+        "sha256": "353b48b589a09a3b5a5d709686b2321744692e18f4d614e0a3f843ecfdb78707",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "cdec9de747339a5e12ea099fba215222e35406cab01dbfb4d930bd0fe057f027",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0016",
+        "target": "/usr/share/mise-runtime/lib/wire.lua",
+        "mode": 420,
+        "sha256": "cdec9de747339a5e12ea099fba215222e35406cab01dbfb4d930bd0fe057f027",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0017",
+        "target": "/usr/share/mise-runtime/licenses/GCC-exception-3.1.txt",
+        "mode": 420,
+        "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0018",
+        "target": "/usr/share/mise-runtime/licenses/GPL-3.0.txt",
+        "mode": 420,
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0019",
+        "target": "/usr/share/mise-runtime/licenses/LGPL-2.1.txt",
+        "mode": 420,
+        "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "fa86560429f6f53d271cf7519dfcccd07de7ae316e14f6b25db93eaba18b0ef3",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0020",
+        "target": "/usr/share/mise-runtime/licenses/sources.json",
+        "mode": 420,
+        "sha256": "fa86560429f6f53d271cf7519dfcccd07de7ae316e14f6b25db93eaba18b0ef3",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 755,
+          "sha256": "4b8346e4f2e489747bd8b8eafcba057ff6b8a573e1ed759b5d0a1c86e93ebdcb",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0021",
+        "target": "/usr/share/mise-runtime/main.lua",
+        "mode": 493,
+        "sha256": "4b8346e4f2e489747bd8b8eafcba057ff6b8a573e1ed759b5d0a1c86e93ebdcb",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 755,
+          "sha256": "fef1cef5d5a255c8405d22a120c22d17ccfbfb6a0eadcf589652cd40126f1f19",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0022",
+        "target": "/usr/sbin/mise-runtime",
+        "mode": 493,
+        "sha256": "fef1cef5d5a255c8405d22a120c22d17ccfbfb6a0eadcf589652cd40126f1f19",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 755,
+          "sha256": "26d9afd173a478d1384cfdd7b9c04f0921f9b8559ec7f89956626289c471a5e7",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0023",
+        "target": "/usr/share/mise-runtime/native/bin/uci",
+        "mode": 493,
+        "sha256": "26d9afd173a478d1384cfdd7b9c04f0921f9b8559ec7f89956626289c471a5e7",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "ddbc638299deb8f87d286ca929378302f812b957bd486ef60e3450cbef4a4e7b",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0024",
+        "target": "/usr/share/mise-runtime/node-loader.cjs",
+        "mode": 420,
+        "sha256": "ddbc638299deb8f87d286ca929378302f812b957bd486ef60e3450cbef4a4e7b",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "33757f6f8bed04dfc5c891ea43bb85cd5d25b23e8a1eda3f5329f47ba6789c92",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0025",
+        "target": "/usr/share/mise-runtime/npm.json",
+        "mode": 420,
+        "sha256": "33757f6f8bed04dfc5c891ea43bb85cd5d25b23e8a1eda3f5329f47ba6789c92",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "89f9afe659caa6c3997dabc6ff78042f63a8cc49ff81e3cb4143ef9c2d386703",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0026",
+        "target": "/usr/share/mise-runtime/python-launch.lua",
+        "mode": 420,
+        "sha256": "89f9afe659caa6c3997dabc6ff78042f63a8cc49ff81e3cb4143ef9c2d386703",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "ef1dd56712ebddf1c3bb45d08fd3dd9432b287c1f8d56825c9cec352d47e7337",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0027",
+        "target": "/usr/share/mise-runtime/python-openssl.cnf",
+        "mode": 420,
+        "sha256": "ef1dd56712ebddf1c3bb45d08fd3dd9432b287c1f8d56825c9cec352d47e7337",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "d3eeb45de144e594f8ffe77059963fb7729fbfea751b698bd855f5a8026816cb",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0028",
+        "target": "/usr/share/mise-runtime/python-venv.py",
+        "mode": 420,
+        "sha256": "d3eeb45de144e594f8ffe77059963fb7729fbfea751b698bd855f5a8026816cb",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 755,
+          "sha256": "a225989b034be356a0ed65a3a2d2ab33ece51769e95c5ccb5908e9ace464969f",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0029",
+        "target": "/usr/share/mise-runtime/native/bin/exec-user",
+        "mode": 493,
+        "sha256": "a225989b034be356a0ed65a3a2d2ab33ece51769e95c5ccb5908e9ace464969f",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 755,
+          "sha256": "5ad0d84e30cfa1cbb43bf28f6ad737c2dd2b2d25a1ae6e7ca1cb667347558a8b",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0030",
+        "target": "/usr/share/mise-runtime/native/bin/python-launch-musl",
+        "mode": 493,
+        "sha256": "5ad0d84e30cfa1cbb43bf28f6ad737c2dd2b2d25a1ae6e7ca1cb667347558a8b",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 755,
+          "sha256": "9a27fc435eff588ae344e003a193477a1f53fdf94fc93d656480f98da3835e02",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0031",
+        "target": "/usr/share/mise-runtime/native/bin/python-launch-glibc",
+        "mode": 493,
+        "sha256": "9a27fc435eff588ae344e003a193477a1f53fdf94fc93d656480f98da3835e02",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "cd8e9dc062f76ceb036162c9549ba664040ca6184f99b12d4f7a72739eb0d178",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0032",
+        "target": "/usr/lib/lua/luci/controller/mise.lua",
+        "mode": 420,
+        "sha256": "cd8e9dc062f76ceb036162c9549ba664040ca6184f99b12d4f7a72739eb0d178",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "f58a0493a2f19b14767c44cb667f637e49d95739e336106137c3d5b1834a4ce7",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0033",
+        "target": "/usr/lib/lua/luci/model/mise/transport.lua",
+        "mode": 420,
+        "sha256": "f58a0493a2f19b14767c44cb667f637e49d95739e336106137c3d5b1834a4ce7",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "888cce5cf166aca481583a88bd6321d7fe07b746c1e2d1fa5fe0e8a03669bb11",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0034",
+        "target": "/usr/lib/lua/luci/view/mise/index.htm",
+        "mode": 420,
+        "sha256": "25b58d493ebf8aaf553627b051c621bd3452d7e83960606ae74acff3fec1b436",
+        "action": "update"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "526e92dfd56626d744ded5ba7189f9a875d2384209335225631749662eca4b74",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0035",
+        "target": "/www/luci-static/resources/mise/LICENSE.quickstart",
+        "mode": 420,
+        "sha256": "526e92dfd56626d744ded5ba7189f9a875d2384209335225631749662eca4b74",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0036",
+        "target": "/www/luci-static/resources/mise/LICENSE.vue",
+        "mode": 420,
+        "sha256": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "93c73bc0522b8d05534e64ac463a374d77be3e029a26cc2f662e911058648407",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0037",
+        "target": "/www/luci-static/resources/mise/app.js",
+        "mode": 420,
+        "sha256": "fd5d113a2511aa6b4e9e5accb2e6a5303d2d47a76cad869fc5f0a7edbea271de",
+        "action": "update"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "4ccb1ea4bf6b206cd7d43860109f02167ff986d41bbbc8409ddb1802e92910da",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0038",
+        "target": "/www/luci-static/resources/mise/logo.svg",
+        "mode": 420,
+        "sha256": "4ccb1ea4bf6b206cd7d43860109f02167ff986d41bbbc8409ddb1802e92910da",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "11b72c7164b0695968a5b219fa7876565f29febc695acf8594276e2be9f378f1",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0039",
+        "target": "/www/luci-static/resources/mise/style.css",
+        "mode": 420,
+        "sha256": "86ec197ee5d3fddcb4ad1cfbd7089b5f7ab5173b59dfa32cc092bba7a08fefab",
+        "action": "update"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "eb8c622aa873d76bc8cda8e3423773d391c7f52978bb067842ee3655c9e1a26d",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0040",
+        "target": "/usr/share/mise/mise-plugin.json",
+        "mode": 420,
+        "sha256": "eb8c622aa873d76bc8cda8e3423773d391c7f52978bb067842ee3655c9e1a26d",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 755,
+          "sha256": "fde7e358778369db3358328a9c14324b51b8b6fe93564285976d2e645909eb65",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0041",
+        "target": "/usr/share/mise/register-desktop.sh",
+        "mode": 493,
+        "sha256": "fde7e358778369db3358328a9c14324b51b8b6fe93564285976d2e645909eb65",
+        "action": "unchanged"
+      },
+      {
+        "before": {
+          "uid": 0,
+          "mode": 644,
+          "sha256": "29df44f8a596df973581b548360c2ad6def5341c63740522a4c2cf91580aeb14",
+          "gid": 0
+        },
+        "config": false,
+        "key": "0042",
+        "target": "/usr/share/rpcd/acl.d/luci-app-mise.json",
+        "mode": 420,
+        "sha256": "29df44f8a596df973581b548360c2ad6def5341c63740522a4c2cf91580aeb14",
+        "action": "unchanged"
+      }
+    ],
+    "boot_id": "a9a8d183-0027-42c4-96c9-a3ad1297672e",
+    "schema_version": 1,
+    "applied": true
+  },
+  "rollback": "lua /mnt/mise-runtime/acceptance/direct-deploy/mise-dialog-layout-20261124T152000Z/apply.lua restore /mnt/mise-runtime/acceptance/direct-deploy/mise-dialog-layout-20261124T152000Z",
+  "completed": true
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "name": "mise-v2026.8.14-linux-x64-musl.tar.gz",
+    "url": "https://github.com/jdx/mise/releases/download/v2026.8.14/mise-v2026.8.14-linux-x64-musl.tar.gz",
+    "bytes": 33630935,
+    "sha256": "3832f39c325e343f81fe3d92b2447c5d1a5eea1bc85092bb7b6c25806222647e",
+    "verified": true
+  },
+  {
+    "name": "ks-cli-binary-0.9.1.tar.gz",
+    "url": "https://github.com/kspeeder/docker_kspeeder/releases/download/v0.9.1/ks-cli-binary-0.9.1.tar.gz",
+    "bytes": 26092319,
+    "sha256": "1ec1474d59767d2d5feb48c39217b8409fa16831bd87c7c777d5359c2ceb05d6",
+    "verified": true
+  }
+]

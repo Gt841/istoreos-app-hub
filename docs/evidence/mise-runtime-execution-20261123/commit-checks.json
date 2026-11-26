@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "web-types",
+      "exit_code": 0,
+      "seconds": 1.941
+    },
+    {
+      "check": "web-unit",
+      "exit_code": 0,
+      "seconds": 7.007,
+      "tests": 58
+    },
+    {
+      "check": "pip-policy",
+      "exit_code": 0,
+      "seconds": 2.081,
+      "tests": 3
+    },
+    {
+      "check": "legacy-entry",
+      "exit_code": 0,
+      "seconds": 0.06,
+      "tests": 6
+    },
+    {
+      "check": "openclaw-installer-fixed-node",
+      "exit_code": 0,
+      "seconds": 116.744,
+      "tests": 59
+    },
+    {
+      "check": "registration",
+      "exit_code": 0,
+      "seconds": 2.663,
+      "tests": 9
+    }
+  ],
+  "OpenClaw_test_node": "24.22.1",
+  "initial_test_environment_failure": "Host default Node24.15 and its npm layout caused 3 runtime-check failures; repeat with existing pinned Node24.22.1 passed without weakening validation",
+  "sqlite_vec_local_test": "Local optional extension test skipped; real x86_64 and ARM Gateway vector tests already passed, x86_64 reboot passed",
+  "package_builds": "not run; deferred for human confirmation",
+  "SSD": "wrapper loaded; dependency/tool caches and logs use SSD; existing installer test harness explicitly creates tiny disposable device fixtures under apps/openclawmgr to exercise storage-path validation, cleaned afterward"
+}

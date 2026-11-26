@@ -1,0 +1,14 @@
+{
+  "passed": false,
+  "results": [
+    {
+      "arch": "x64",
+      "passed": false,
+      "error": "x64 final-browser failed; see evidence"
+    },
+    {
+      "arch": "arm64",
+      "passed": true
+    }
+  ]
+}

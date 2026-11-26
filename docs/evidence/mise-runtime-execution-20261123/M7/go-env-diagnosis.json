@@ -1,0 +1,9 @@
+{
+	"CGO_ENABLED": "0",
+	"GOENV": "",
+	"GOHOSTARCH": "amd64",
+	"GOHOSTOS": "linux",
+	"GOROOT": "/mnt/mise-runtime/acceptance/M7/go-env-diagnosis",
+	"GOTOOLCHAIN": "local",
+	"GOVERSION": "go1.26.10"
+}

@@ -1,0 +1,169 @@
+{
+  "boot_id": "698dba48-268f-4da1-b629-c6d7a51ff9da",
+  "arch": "aarch64",
+  "scope": "real non-root fixed Python applications",
+  "passed": true,
+  "checks": [
+    {
+      "name": "prepare non-root persistent HOME",
+      "passed": true
+    },
+    {
+      "details": {
+        "wheel_abi": "manylinux",
+        "uid": 65001,
+        "prefix": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.12.16-glibc/.venv",
+        "home": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/users/65001/home",
+        "native_extension": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.12.16-glibc/.venv/lib/python3.12/site-packages/markupsafe/_speedups.cpython-312-aarch64-linux-gnu.so",
+        "pip": "26.3",
+        "base": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/environments/python-3.12.16-aarch64-glibc-20261110-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-af687164472ae949758e3f68d0b082e7f483459abca0f7eaa2fc3ab4a7c38779",
+        "executable": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.12.16-glibc/.venv/bin/python3"
+      },
+      "name": "3.12.16-glibc native extension, fixed children/console, ABI and UID/HOME",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "3.12.16-glibc application packages absent from shared base",
+      "passed": true
+    },
+    {
+      "details": "pip 26.3 from /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.12.16-glibc/.venv/lib/python3.12/site-packages/pip (python 3.12)\n",
+      "name": "3.12.16-glibc activated shell keeps selected venv",
+      "passed": true
+    },
+    {
+      "details": {
+        "untrusted_certificate_rejected": "passed",
+        "public_CA_TLS": "passed",
+        "openssl": "OpenSSL 3.5.9 29 Sep 2026",
+        "explicit_private_CA_TLS": "passed"
+      },
+      "name": "3.12.16-glibc actual trusted/untrusted TLS",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-glibc shared pip refuses package mutation",
+      "passed": true
+    },
+    {
+      "details": {
+        "wheel_abi": "musllinux",
+        "uid": 65001,
+        "prefix": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.12.16-musl/.venv",
+        "home": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/users/65001/home",
+        "native_extension": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.12.16-musl/.venv/lib/python3.12/site-packages/markupsafe/_speedups.cpython-312-aarch64-linux-musl.so",
+        "pip": "26.3",
+        "base": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/environments/python-3.12.16-aarch64-musl-20261110-5405da25ec0fe2f7c22624102f8e9c42a025b7b84d3124f8507baae9e8f8f9be",
+        "executable": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.12.16-musl/.venv/bin/python3"
+      },
+      "name": "3.12.16-musl native extension, fixed children/console, ABI and UID/HOME",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "3.12.16-musl application packages absent from shared base",
+      "passed": true
+    },
+    {
+      "details": "pip 26.3 from /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.12.16-musl/.venv/lib/python3.12/site-packages/pip (python 3.12)\n",
+      "name": "3.12.16-musl activated shell keeps selected venv",
+      "passed": true
+    },
+    {
+      "details": {
+        "untrusted_certificate_rejected": "passed",
+        "public_CA_TLS": "passed",
+        "openssl": "OpenSSL 3.5.9 29 Sep 2026",
+        "explicit_private_CA_TLS": "passed"
+      },
+      "name": "3.12.16-musl actual trusted/untrusted TLS",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-musl shared pip refuses package mutation",
+      "passed": true
+    },
+    {
+      "details": {
+        "wheel_abi": "manylinux",
+        "uid": 65001,
+        "prefix": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.13.18-glibc/.venv",
+        "home": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/users/65001/home",
+        "native_extension": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.13.18-glibc/.venv/lib/python3.13/site-packages/markupsafe/_speedups.cpython-313-aarch64-linux-gnu.so",
+        "pip": "26.3",
+        "base": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/environments/python-3.13.18-aarch64-glibc-20261110-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-2d266362f24096d611f45f029bf42e1b1081d987cf8151cb3b3ff8309975c435",
+        "executable": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.13.18-glibc/.venv/bin/python3"
+      },
+      "name": "3.13.18-glibc native extension, fixed children/console, ABI and UID/HOME",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "3.13.18-glibc application packages absent from shared base",
+      "passed": true
+    },
+    {
+      "details": "pip 26.3 from /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.13.18-glibc/.venv/lib/python3.13/site-packages/pip (python 3.13)\n",
+      "name": "3.13.18-glibc activated shell keeps selected venv",
+      "passed": true
+    },
+    {
+      "details": {
+        "untrusted_certificate_rejected": "passed",
+        "public_CA_TLS": "passed",
+        "openssl": "OpenSSL 3.5.9 29 Sep 2026",
+        "explicit_private_CA_TLS": "passed"
+      },
+      "name": "3.13.18-glibc actual trusted/untrusted TLS",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-glibc shared pip refuses package mutation",
+      "passed": true
+    },
+    {
+      "details": {
+        "wheel_abi": "musllinux",
+        "uid": 65001,
+        "prefix": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.13.18-musl/.venv",
+        "home": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/users/65001/home",
+        "native_extension": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.13.18-musl/.venv/lib/python3.13/site-packages/markupsafe/_speedups.cpython-313-aarch64-linux-musl.so",
+        "pip": "26.3",
+        "base": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/environments/python-3.13.18-aarch64-musl-20261110-54e77ae2454aafda2b139fa1a20aecd97542df5fe7e8ff71bd35cfa45b917728",
+        "executable": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.13.18-musl/.venv/bin/python3"
+      },
+      "name": "3.13.18-musl native extension, fixed children/console, ABI and UID/HOME",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "3.13.18-musl application packages absent from shared base",
+      "passed": true
+    },
+    {
+      "details": "pip 26.3 from /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.13.18-musl/.venv/lib/python3.13/site-packages/pip (python 3.13)\n",
+      "name": "3.13.18-musl activated shell keeps selected venv",
+      "passed": true
+    },
+    {
+      "details": {
+        "untrusted_certificate_rejected": "passed",
+        "public_CA_TLS": "passed",
+        "openssl": "OpenSSL 3.5.9 29 Sep 2026",
+        "explicit_private_CA_TLS": "passed"
+      },
+      "name": "3.13.18-musl actual trusted/untrusted TLS",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-musl shared pip refuses package mutation",
+      "passed": true
+    },
+    {
+      "details": 4,
+      "name": "full two-version GNU/musl installed matrix",
+      "passed": true
+    }
+  ]
+}

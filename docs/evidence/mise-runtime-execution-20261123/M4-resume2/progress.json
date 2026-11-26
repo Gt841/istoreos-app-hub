@@ -1,0 +1,56 @@
+{
+  "status": "failed-after-three-optimizations",
+  "round": 3,
+  "builder_commit": "7467d9953016a2373b089b73bea44fe45d2cae99",
+  "builder_tests": 21,
+  "fix": "verify every Git origin and immutable pin after refresh; repair/reindex before patch; check again before artifact collection",
+  "build_ids": [
+    "mise-m4s2-x64-20261124015520Z",
+    "mise-m4s2-arm64-20261124015520Z"
+  ],
+  "real_package_installation": {
+    "x64": "passed",
+    "arm64": "passed"
+  },
+  "published": false,
+  "sdk_compile": {
+    "x64": "passed",
+    "arm64": "passed"
+  },
+  "source_audit": {
+    "x64": "passed",
+    "arm64": "passed"
+  },
+  "ipk_audit": "five packages passed per architecture",
+  "browser": {
+    "x64": "functional, maintenance, host and final authentication scopes passed separately; full final extra-ABI flow pending",
+    "arm64": "same scopes passed separately; full final extra-ABI flow pending"
+  },
+  "development_overlay": "superseded by final IPKs; ARM legacy helper later restored from pre-package backup",
+  "round1_result": "real UI failed: fd0 pipe was closed after self-dup; temporary root test session lacked UCI ACL",
+  "round2_fix": "extract real transport seam and redirect through distinct descriptor when source equals standard fd; regrant faithful test sessions",
+  "transport_regression": "red on original closed fd0; green normal/closed stdin on both actual devices",
+  "round2_result": "functional six groups passed both; focus/visual followups passed; ARM maintenance three groups passed; x64 maintenance still downloading from origin",
+  "round3_fix": "scope notice background override against actual Argon !important; fresh mobile initialization in test; final SDK packaging of transport fix and stylesheet",
+  "round3_source_checks": "both architectures: six functional groups + visual followup + three maintenance groups + two host compatibility groups passed",
+  "patch_sha256": "31c1345e0d8f3cfabcc96af05d51fef8b1be6b0ae9bb28663493ebc0ebc1826d",
+  "formal_rebuild": "passed; final IPKs reinstalled on both devices",
+  "execution_status": "stopped",
+  "round3_result": "final packages built/installed and scoped UI checks passed; legacy ARM environment blocks on optional GNU Wget probe; stopped at limit",
+  "blocker": "legacy helper optional acceleration probe has no total wall-clock deadline",
+  "arm_helper_rollback": {
+    "status": "passed",
+    "sha256": "e34daa2ae450f044c58d42be3707ab5ee425aa84ce3bd24bb6f1586c17aeecde",
+    "package_database": "mise 2026.8.14-r26 retained",
+    "candidate_file_consistency": false,
+    "legacy_node": "v24.20.0",
+    "agentflow_health": "passed"
+  },
+  "test_sessions": "three known ephemeral sessions per device destroyed; local credential files removed",
+  "next": "fix bounded optional acceleration probe, reinstall exact candidate and rerun compatibility before M5",
+  "updated_at": "2026-11-24T03:07:53.710949+00:00",
+  "final_build_ids": [
+    "mise-m4final-x64-20261124023813Z",
+    "mise-m4final-arm64-20261124023813Z"
+  ]
+}

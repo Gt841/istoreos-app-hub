@@ -1,0 +1,8 @@
+{
+  "host": "192.168.30.93",
+  "command": "setsid timeout -k 5 40 lua /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M2/timeout-cancel.lua /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M2/share /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M2/selfcheck-opt3",
+  "exit": 1,
+  "stdout": "{\"reported_status\":\"canceled\",\"child_pid\":2228,\"child_survived\":true,\"worker_group\":2220,\"cleanup_group\":2227,\"candidate_removed\":true,\"lock_removed\":true,\"task\":\"task-1795445272-03184b3ea0696e14cd84dab1\",\"child_group\":2227}\n",
+  "stderr": "",
+  "scope": "optimization-3 extended acceptance"
+}

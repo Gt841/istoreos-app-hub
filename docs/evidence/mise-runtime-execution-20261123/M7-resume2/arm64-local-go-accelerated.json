@@ -1,0 +1,72 @@
+{
+  "exit_code": 0,
+  "elapsed_seconds": 2.13,
+  "report": {
+    "module": {
+      "go_mod_sum": "h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=",
+      "path": "github.com/google/uuid",
+      "version": "v1.6.0",
+      "sum": "h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0="
+    },
+    "checks": [
+      {
+        "name": "prepare dedicated persistent HOME",
+        "passed": true
+      },
+      {
+        "name": "fresh client module and sumdb caches",
+        "passed": true
+      },
+      {
+        "details": "sum.golang.org\n\n\n",
+        "name": "official checksum database enabled without bypasses",
+        "passed": true
+      },
+      {
+        "name": "real accelerated Go download succeeds",
+        "passed": true
+      },
+      {
+        "name": "module and go.mod hashes reported",
+        "passed": true
+      },
+      {
+        "name": "module cache stays in caller HOME",
+        "passed": true
+      },
+      {
+        "name": "sumdb protocol traverses KSpeeder",
+        "passed": true
+      },
+      {
+        "name": "no direct sum.golang.org request",
+        "passed": true
+      },
+      {
+        "name": "project records both verified hashes",
+        "passed": true
+      },
+      {
+        "details": "all modules verified\n",
+        "name": "native Go verifies cached module contents",
+        "passed": true
+      },
+      {
+        "name": "host service and mise configurations unchanged",
+        "passed": true
+      }
+    ],
+    "instance": "go-1.26.10-aarch64-native-upstream1-0d73063e9c03cf5a1cf158f60f5803bf7aa6c8e7ac8d2e7187cb2f537854b3d3",
+    "download_exit": 0,
+    "config_sha256": {
+      "agentflow": "3f2e6ba1d3b44cfda11e458b2aefbde804e2f10ad0ae34d9e6fab38f02760548",
+      "istoreenhance": "b582d00c458adca175864ed0c31aa244d63b7828ce6d76bd634775cd3e64b6eb",
+      "mise": "7704196d4d42658e6e0898a041e6de309ee2df46143ab083383fbbbded5f350e"
+    },
+    "passed": true,
+    "uid": 65004,
+    "arch": "aarch64",
+    "scope": "real public wrap -> ks-cli -> KSpeeder -> module + signed sumdb"
+  },
+  "stderr": ""
+}

@@ -1,0 +1,15 @@
+{
+  "command": [
+    "python3",
+    "apps/mise/tests/audit-ipk.py",
+    "/projects/workspace-linkease-ubuntu/openwrt-apps/openwrt-sdk-builder/artifacts/mise-m4ks-arm64-20261124040156Z",
+    "--arch",
+    "aarch64_generic",
+    "--output",
+    "/projects/workspace-linkease-ubuntu/openwrt-apps/istoreos-app-hub/docs/evidence/mise-runtime-execution-20261123/M4-resume3/arm64-ipk-audit.json"
+  ],
+  "exit": 0,
+  "seconds": 1.143,
+  "stdout": "five actual IPKs passed metadata, dependencies, payload, modes, registry and architecture audit\n",
+  "stderr": ""
+}

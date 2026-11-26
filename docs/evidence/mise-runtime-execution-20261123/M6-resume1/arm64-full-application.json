@@ -1,0 +1,350 @@
+{
+  "boot_id": "6dda18fd-f437-4407-8630-b5427cd41570",
+  "arch": "aarch64",
+  "scope": "real non-root fixed Python applications",
+  "passed": true,
+  "checks": [
+    {
+      "name": "prepare non-root persistent HOME",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-glibc reuse own previous test venv",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "3.12.16-glibc create console wheel fixture",
+      "passed": true
+    },
+    {
+      "details": "Processing ./applications/65001/3.12.16-glibc/istore_runtime_probe-1.0-py3-none-any.whl\nistore-runtime-probe is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.\n",
+      "name": "3.12.16-glibc real pip installs console wheel",
+      "passed": true
+    },
+    {
+      "details": "Requirement already satisfied: MarkupSafe==3.0.3 in ./applications/65001/3.12.16-glibc/.venv/lib/python3.12/site-packages (3.0.3)\n",
+      "name": "3.12.16-glibc real native wheel install via origin",
+      "passed": true
+    },
+    {
+      "details": {
+        "wheel_abi": "manylinux",
+        "uid": 65001,
+        "prefix": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.12.16-glibc/.venv",
+        "home": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/users/65001/home",
+        "native_extension": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.12.16-glibc/.venv/lib/python3.12/site-packages/markupsafe/_speedups.cpython-312-aarch64-linux-gnu.so",
+        "pip": "26.3",
+        "base": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/environments/python-3.12.16-aarch64-glibc-20261110-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-af687164472ae949758e3f68d0b082e7f483459abca0f7eaa2fc3ab4a7c38779",
+        "executable": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.12.16-glibc/.venv/bin/python3"
+      },
+      "name": "3.12.16-glibc native extension, fixed children/console, ABI and UID/HOME",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "3.12.16-glibc application packages absent from shared base",
+      "passed": true
+    },
+    {
+      "details": "pip 26.3 from /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.12.16-glibc/.venv/lib/python3.12/site-packages/pip (python 3.12)\n",
+      "name": "3.12.16-glibc activated shell keeps selected venv",
+      "passed": true
+    },
+    {
+      "details": {
+        "untrusted_certificate_rejected": "passed",
+        "public_CA_TLS": "passed",
+        "openssl": "OpenSSL 3.5.9 29 Sep 2026",
+        "explicit_private_CA_TLS": "passed"
+      },
+      "name": "3.12.16-glibc actual trusted/untrusted TLS",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-glibc shared pip refuses package mutation",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-glibc existing target preserved",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-glibc pip target escape refused",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-glibc traversal refused",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-glibc foreign local receipt refused",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-glibc changed venv configuration refused",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-glibc missing local receipt has no fallback",
+      "passed": true
+    },
+    {
+      "details": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/environments/python-3.12.16-aarch64-glibc-20261110-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-af687164472ae949758e3f68d0b082e7f483459abca0f7eaa2fc3ab4a7c38779/lib/python3.12/ensurepip/__main__.py\", line 5, in <module>\n    sys.exit(ensurepip._main())\n             ^^^^^^^^^^^^^^^^^\n  File \"/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/environments/python-3.12.16-aarch64-glibc-20261110-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-af687164472ae949758e3f68d0b082e7f483459abca0f7eaa2fc3ab4a7c38779/lib/python3.12/ensurepip/__init__.py\", line 284, in _main\n    return _bootstrap(\n           ^^^^^^^^^^^\n  File \"/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/environments/python-3.12.16-aarch64-glibc-20261110-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-af687164472ae949758e3f68d0b082e7f483459abca0f7eaa2fc3ab4a7c38779/lib/python3.12/ensurepip/__init__.py\", line 176, in _bootstrap\n    whl = wheel_path.read_bytes()\n          ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/environments/python-3.12.16-aarch64-glibc-20261110-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-af687164472ae949758e3f68d0b082e7f483459abca0f7eaa2fc3ab4a7c38779/lib/python3.12/pathlib.py\", line 1019, in read_bytes\n    with self.open(mode='rb') as f:\n         ^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/environments/python-3.12.16-aarch64-glibc-20261110-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-af687164472ae949758e3f68d0b082e7f483459abca0f7eaa2fc3ab4a7c38779/lib/python3.12/pathlib.py\", line 1013, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/environments/python-3.12.16-aarch64-glibc-20261110-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-af687164472ae949758e3f68d0b082e7f483459abca0f7eaa2fc3ab4a7c38779/lib/python3.12/ensurepip/_bundled/pip-26.3-py3-none-any.whl'\nCommand '['/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.12.16-glibc/ensurepip-failure/bin/python3', '-m', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1.\n",
+      "name": "3.12.16-glibc ensurepip failure cleans only new target",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-glibc missing SDK launcher identity has no fallback",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-musl reuse own previous test venv",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "3.12.16-musl create console wheel fixture",
+      "passed": true
+    },
+    {
+      "details": "Processing ./applications/65001/3.12.16-musl/istore_runtime_probe-1.0-py3-none-any.whl\nistore-runtime-probe is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.\n",
+      "name": "3.12.16-musl real pip installs console wheel",
+      "passed": true
+    },
+    {
+      "details": "Looking in indexes: https://dl-pypi.linkease.net:5443/simple/\nRequirement already satisfied: MarkupSafe==3.0.3 in ./applications/65001/3.12.16-musl/.venv/lib/python3.12/site-packages (3.0.3)\n",
+      "name": "3.12.16-musl real native wheel install via ks-cli",
+      "passed": true
+    },
+    {
+      "details": {
+        "wheel_abi": "musllinux",
+        "uid": 65001,
+        "prefix": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.12.16-musl/.venv",
+        "home": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/users/65001/home",
+        "native_extension": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.12.16-musl/.venv/lib/python3.12/site-packages/markupsafe/_speedups.cpython-312-aarch64-linux-musl.so",
+        "pip": "26.3",
+        "base": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/environments/python-3.12.16-aarch64-musl-20261110-5405da25ec0fe2f7c22624102f8e9c42a025b7b84d3124f8507baae9e8f8f9be",
+        "executable": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.12.16-musl/.venv/bin/python3"
+      },
+      "name": "3.12.16-musl native extension, fixed children/console, ABI and UID/HOME",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "3.12.16-musl application packages absent from shared base",
+      "passed": true
+    },
+    {
+      "details": "pip 26.3 from /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.12.16-musl/.venv/lib/python3.12/site-packages/pip (python 3.12)\n",
+      "name": "3.12.16-musl activated shell keeps selected venv",
+      "passed": true
+    },
+    {
+      "details": {
+        "untrusted_certificate_rejected": "passed",
+        "public_CA_TLS": "passed",
+        "openssl": "OpenSSL 3.5.9 29 Sep 2026",
+        "explicit_private_CA_TLS": "passed"
+      },
+      "name": "3.12.16-musl actual trusted/untrusted TLS",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-musl shared pip refuses package mutation",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-musl existing target preserved",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-musl pip target escape refused",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-musl traversal refused",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-musl foreign local receipt refused",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-musl changed venv configuration refused",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-musl missing local receipt has no fallback",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-glibc reuse own previous test venv",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "3.13.18-glibc create console wheel fixture",
+      "passed": true
+    },
+    {
+      "details": "Processing ./applications/65001/3.13.18-glibc/istore_runtime_probe-1.0-py3-none-any.whl\nistore-runtime-probe is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.\n",
+      "name": "3.13.18-glibc real pip installs console wheel",
+      "passed": true
+    },
+    {
+      "details": "Requirement already satisfied: MarkupSafe==3.0.3 in ./applications/65001/3.13.18-glibc/.venv/lib/python3.13/site-packages (3.0.3)\n",
+      "name": "3.13.18-glibc real native wheel install via origin",
+      "passed": true
+    },
+    {
+      "details": {
+        "wheel_abi": "manylinux",
+        "uid": 65001,
+        "prefix": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.13.18-glibc/.venv",
+        "home": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/users/65001/home",
+        "native_extension": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.13.18-glibc/.venv/lib/python3.13/site-packages/markupsafe/_speedups.cpython-313-aarch64-linux-gnu.so",
+        "pip": "26.3",
+        "base": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/environments/python-3.13.18-aarch64-glibc-20261110-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-2d266362f24096d611f45f029bf42e1b1081d987cf8151cb3b3ff8309975c435",
+        "executable": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.13.18-glibc/.venv/bin/python3"
+      },
+      "name": "3.13.18-glibc native extension, fixed children/console, ABI and UID/HOME",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "3.13.18-glibc application packages absent from shared base",
+      "passed": true
+    },
+    {
+      "details": "pip 26.3 from /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.13.18-glibc/.venv/lib/python3.13/site-packages/pip (python 3.13)\n",
+      "name": "3.13.18-glibc activated shell keeps selected venv",
+      "passed": true
+    },
+    {
+      "details": {
+        "untrusted_certificate_rejected": "passed",
+        "public_CA_TLS": "passed",
+        "openssl": "OpenSSL 3.5.9 29 Sep 2026",
+        "explicit_private_CA_TLS": "passed"
+      },
+      "name": "3.13.18-glibc actual trusted/untrusted TLS",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-glibc shared pip refuses package mutation",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-glibc existing target preserved",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-glibc pip target escape refused",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-glibc traversal refused",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-glibc foreign local receipt refused",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-glibc changed venv configuration refused",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-glibc missing local receipt has no fallback",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-musl reuse own previous test venv",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "3.13.18-musl create console wheel fixture",
+      "passed": true
+    },
+    {
+      "details": "Processing ./applications/65001/3.13.18-musl/istore_runtime_probe-1.0-py3-none-any.whl\nistore-runtime-probe is already installed with the same version as the provided wheel. Use --force-reinstall to force an installation of the wheel.\n",
+      "name": "3.13.18-musl real pip installs console wheel",
+      "passed": true
+    },
+    {
+      "details": "Looking in indexes: https://dl-pypi.linkease.net:5443/simple/\nRequirement already satisfied: MarkupSafe==3.0.3 in ./applications/65001/3.13.18-musl/.venv/lib/python3.13/site-packages (3.0.3)\n",
+      "name": "3.13.18-musl real native wheel install via ks-cli",
+      "passed": true
+    },
+    {
+      "details": {
+        "wheel_abi": "musllinux",
+        "uid": 65001,
+        "prefix": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.13.18-musl/.venv",
+        "home": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/users/65001/home",
+        "native_extension": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.13.18-musl/.venv/lib/python3.13/site-packages/markupsafe/_speedups.cpython-313-aarch64-linux-musl.so",
+        "pip": "26.3",
+        "base": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/environments/python-3.13.18-aarch64-musl-20261110-54e77ae2454aafda2b139fa1a20aecd97542df5fe7e8ff71bd35cfa45b917728",
+        "executable": "/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.13.18-musl/.venv/bin/python3"
+      },
+      "name": "3.13.18-musl native extension, fixed children/console, ABI and UID/HOME",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "3.13.18-musl application packages absent from shared base",
+      "passed": true
+    },
+    {
+      "details": "pip 26.3 from /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M6/applications/65001/3.13.18-musl/.venv/lib/python3.13/site-packages/pip (python 3.13)\n",
+      "name": "3.13.18-musl activated shell keeps selected venv",
+      "passed": true
+    },
+    {
+      "details": {
+        "untrusted_certificate_rejected": "passed",
+        "public_CA_TLS": "passed",
+        "openssl": "OpenSSL 3.5.9 29 Sep 2026",
+        "explicit_private_CA_TLS": "passed"
+      },
+      "name": "3.13.18-musl actual trusted/untrusted TLS",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-musl shared pip refuses package mutation",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-musl existing target preserved",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-musl pip target escape refused",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-musl traversal refused",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-musl foreign local receipt refused",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-musl changed venv configuration refused",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-musl missing local receipt has no fallback",
+      "passed": true
+    },
+    {
+      "details": 4,
+      "name": "full two-version GNU/musl installed matrix",
+      "passed": true
+    }
+  ]
+}

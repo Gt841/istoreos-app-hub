@@ -1,0 +1,6 @@
+{
+  "exit": 0,
+  "stdout": "{\"enabled\":false,\"app\":\"\\/mnt\\/nvme0n1-1\\/Configs\\/mise-runtime-acceptance-20261123\\/M5\\/OpenClawMgr\",\"bind\":\"loopback\",\"free\":50897633280,\"uid\":32771,\"acceleration\":\"1\",\"port\":18794}\n",
+  "stderr": "",
+  "scope": "dedicated test application directory; original UCI backup retained only on device"
+}

@@ -1,0 +1,14 @@
+task=false
+Source: cli --url
+Config: /mnt/vio4-0/OpenClawMgr-acceptance-20261123/data/.openclaw/openclaw.json
+[0m[?25h[?1000l[?1002l[?1003l[?1006l[?2004l
+[1m[38;5;209m🦞 OpenClaw[39m[22m [38;5;216m2026.3.28[39m [38;5;138m(f9b1079)[39m [38;5;138m—[39m [38;5;167mHot reload for config, cold sweat for deploys.[39m
+
+[?25l[90m│[39m
+[35m◒[39m  [38;5;209mGateway health[39m[1G[J[32m◇[39m  
+[?25h
+[2K[1m[38;5;209mGateway Health[39m[22m
+[38;5;78mOK[39m (0ms)
+2026-11-23 10:31:06 [openclawmgr] Installation phase: committed
+2026-11-23 10:31:06 [openclawmgr] Installation committed: 20261123102511-fIeKBo; receipt: /mnt/vio4-0/OpenClawMgr-acceptance-20261123/current/receipt.json
+2026-11-23 10:31:06 [openclawmgr] Installation finished (exit=0)

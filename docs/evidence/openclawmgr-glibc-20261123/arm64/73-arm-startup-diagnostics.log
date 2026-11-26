@@ -1,0 +1,9 @@
+== service state
+true
+17546
+Name:	openclaw
+State:	S (sleeping)
+Uid:	999	999	999	999
+VmRSS:	   71872 kB
+== redacted startup diagnostics
+

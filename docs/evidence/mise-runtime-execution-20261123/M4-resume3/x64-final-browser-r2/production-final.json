@@ -1,0 +1,15 @@
+{
+  "scope": "final real SDK IPKs after reinstall and installed-file verification",
+  "passed": true,
+  "results": [
+    {
+      "name": "final installed package authentication/ACL/CSRF reject side effects",
+      "passed": true
+    },
+    {
+      "name": "final UI installs a second ABI through a fixed, verified archive cache",
+      "passed": true
+    }
+  ],
+  "pageErrors": []
+}

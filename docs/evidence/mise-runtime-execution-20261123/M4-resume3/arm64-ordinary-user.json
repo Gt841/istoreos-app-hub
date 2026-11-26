@@ -1,0 +1,11 @@
+{
+  "command": [
+    "ssh",
+    "root@192.168.30.93",
+    "lua /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M4/resume3/installed-user.lua /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M4/resume3/ordinary-user.json"
+  ],
+  "exit": 0,
+  "seconds": 1.435,
+  "stdout": "{\"uid\":65001,\"home\":\"/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/users/65001/home\",\"tmp\":\"/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/users/65001/home/.cache/runtime/node-24.21.0-aarch64-glibc-upstream1-npm11.19.0-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-c5381d67a2fc8268ee973d2262f592fd3e53262d5950bd8a9c65bdd766346544/tmp\",\"node\":\"v24.21.0\",\"execPath\":\"/mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live/environments/node-24.21.0-aarch64-glibc-upstream1-npm11.19.0-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-c5381d67a2fc8268ee973d2262f592fd3e53262d5950bd8a9c65bdd766346544/bin/node\"}\n\nPASS installed package ordinary UID HOME/TMP, fixed execPath/child and npm\n",
+  "stderr": ""
+}

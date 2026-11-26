@@ -1,0 +1,7 @@
+PASS copied desktop host complete menu, current service, dimensions and no old chrome
+PASS real copied menu search, fold, module selection and destination boundary
+PASS copied theme icon, menu, persistence and live system theme
+PASS copied mobile navigation opens, traps focus, closes by Escape and returns focus
+PASS native mise dialog locks copied host controls, closes and preserves wrap functionality
+PASS home URL resolves to mise, only mock API and no browser errors
+{"checks":6,"passed":6}

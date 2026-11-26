@@ -1,0 +1,8 @@
+{
+  "host": "192.168.30.93",
+  "command": "lua /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M2/transaction-faults.lua /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M2/share /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M2/selfcheck-resume1",
+  "exit": 0,
+  "stdout": "PASS 1 preparing cancel preserves old data and stops owned commands\nPASS 2 preparing kill preserves old data and stops owned commands\nPASS 3 download cancel preserves old data and stops owned commands\nPASS 4 download kill preserves old data and stops owned commands\nPASS 5 extract cancel preserves old data and stops owned commands\nPASS 6 extract kill preserves old data and stops owned commands\nPASS 7 probe cancel preserves old data and stops owned commands\nPASS 8 probe kill preserves old data and stops owned commands\nPASS 9 committed cancel preserves old data and stops owned commands\nPASS 10 committed kill preserves old data and stops owned commands\npassed=10\n",
+  "stderr": "",
+  "round": "resume optimization 1 phase fault acceptance"
+}

@@ -1,0 +1,9 @@
+{
+  "host": "192.168.30.93",
+  "command": "timeout -k 2 15 env -u MISE_NODE_VERIFY /bin/sh -c '. /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M3/legacy-mise.sh; istore_runtime_env || exit 1; printf \"HOME=%s\\n\" \"$HOME\"; /usr/bin/mise --version; command -v node; node --version'",
+  "exit": 0,
+  "elapsed": 4.6,
+  "stdout": "HOME=/mnt/nvme0n1-1/Configs/Runtime/home\n2026.8.14 linux-arm64 (2026-08-25)\n/mnt/nvme0n1-1/Configs/Runtime/home/.local/share/mise/shims/node\nv24.20.0\n",
+  "stderr": "mise WARN  mise version 2026.11.13 available\nmise WARN  To update, run mise self-update\n",
+  "scope": "bounded original legacy helper probe"
+}

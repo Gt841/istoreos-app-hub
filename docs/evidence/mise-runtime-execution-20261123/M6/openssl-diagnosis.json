@@ -1,0 +1,20 @@
+[
+  {
+    "environment": "",
+    "rc": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/mnt/mise-runtime/acceptance/M6/openssl-repro/lib/python3.12/ssl.py\", line 710, in create_default_context\n    context = SSLContext(PROTOCOL_TLS_CLIENT)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/mise-runtime/acceptance/M6/openssl-repro/lib/python3.12/ssl.py\", line 440, in __new__\n    self = _SSLContext.__new__(cls, protocol)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nssl.SSLError: [CONF: UNKNOWN_MODULE_NAME] unknown module name (_ssl.c:3094)\n"
+  },
+  {
+    "environment": "SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt ",
+    "rc": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/mnt/mise-runtime/acceptance/M6/openssl-repro/lib/python3.12/ssl.py\", line 710, in create_default_context\n    context = SSLContext(PROTOCOL_TLS_CLIENT)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/mise-runtime/acceptance/M6/openssl-repro/lib/python3.12/ssl.py\", line 440, in __new__\n    self = _SSLContext.__new__(cls, protocol)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nssl.SSLError: [CONF: UNKNOWN_MODULE_NAME] unknown module name (_ssl.c:3094)\n"
+  },
+  {
+    "environment": "OPENSSL_CONF=/dev/null SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt ",
+    "rc": 0,
+    "stdout": "OpenSSL 3.5.9 29 Sep 2026 {'x509': 121, 'crl': 0, 'x509_ca': 121}\n",
+    "stderr": ""
+  }
+]

@@ -76,7 +76,8 @@ class FastNetPackageContractTest(unittest.TestCase):
         self.assertEqual(luci_version.group(1), f"{source_version.group(1)}-r1")
         self.assertEqual(luci_release.group(1), "")
         self.assertEqual(meta_version.group(1), source_version.group(1))
-        self.assertEqual(meta_release.group(1), "22")
+        self.assertEqual(source_release.group(1), "3")
+        self.assertEqual(meta_release.group(1), "24")
         self.assertIn(
             "istoreos-app-hub/releases/download/fastnet-runtime-v$(PKG_VERSION)/",
             runtime,
@@ -93,7 +94,8 @@ class FastNetPackageContractTest(unittest.TestCase):
 
         self.assertEqual(manifest["schemaVersion"], 1)
         self.assertEqual(manifest["id"], "fastnet")
-        self.assertNotIn("staticRoot", manifest)
+        self.assertEqual(manifest["staticRoot"], "/usr/share/fastnet/www")
+        self.assertEqual(manifest["icon"], "logo.png")
         self.assertEqual(manifest["backend"], {
             "type": "http", "scheme": "http", "host": "127.0.0.1",
             "portFromUci": "fastnet.@fastnet[0].port", "defaultPort": 3200,

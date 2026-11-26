@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "round": 1,
+  "scope": "replace legacy network probes with selective ks-cli delegation, exact package reinstall and M4 completion",
+  "root_cause": "helper probes ran even for local execution and ignored acceleration=0; GNU Wget retries lack total deadline",
+  "fix": "no environment-time network calls; only explicit acquisition verbs delegate to ks-cli when enabled and no user mirror overrides",
+  "final_packages": "real dual-architecture SDK IPKs installed and exact files verified",
+  "published": false,
+  "builder_commit": "a4cf9d0ded21db195f6d2be4e1b8f2d9c4428182",
+  "builder_tests": 21,
+  "patch_sha256": "07e15dbe563be846ebd990241000f673ed1c9820ad4a0a6854428e82d3803e52",
+  "build_ids": [
+    "mise-m4ks-x64-20261124040156Z",
+    "mise-m4ks-arm64-20261124040156Z"
+  ],
+  "device_checks": "passed",
+  "browser": "final package flow and host checks passed both architectures",
+  "arm_helper_rollback_active": false,
+  "remaining_blockers": [],
+  "updated_at": "2026-11-24T04:21:24.060077+00:00",
+  "report": "verification.md"
+}

@@ -1,0 +1,6 @@
+{
+  "gateway": false,
+  "acceleration": false,
+  "expected_gateway": true,
+  "passed": false
+}

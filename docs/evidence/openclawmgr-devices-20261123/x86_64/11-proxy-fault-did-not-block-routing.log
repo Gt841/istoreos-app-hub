@@ -1,0 +1,8 @@
+2026-11-23 10:46:30 [openclawmgr] Installation phase: preparing
+24.22.1
+2026-11-23 10:46:56 [openclawmgr] Resolved OpenClaw 2026.3.28 with Node v24.22.1
+2026-11-23 10:46:56 [openclawmgr] Fetching package archive and verifying SHA512
+2026-11-23 10:47:03 [openclawmgr] Installing OpenClaw 2026.3.28 and dependencies
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/@napi-rs%2fcanvas 923ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/@agentclientprotocol%2fsdk 633ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/@anthropic-ai%2fvertex-sdk 411ms (cache miss)

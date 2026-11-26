@@ -1,0 +1,5 @@
+{
+  "exit": 0,
+  "stdout": "squashfs-errors-before=8 after=8\narm-filesystem-exec-ok\n/usr/sbin/iStoreEnhance: OK\n/usr/bin/ks-cli: OK\n/usr/sbin/agentflow: OK\n/etc/config/mise: OK\n/lib/functions/mise.sh: OK\n10046 7047\nFilesystem           1024-blocks    Used Available Capacity Mounted on\n/dev/nvme0n1p1       122471024  64230904  51972780  55% /mnt/nvme0n1-1\ninodes=7815168 free_inodes=7503799\nfstab.mise_ignore_usb_x86=mount\nfstab.mise_ignore_usb_x86.uuid='46d83bcb-66a09746-c6d8e97f-c3841042'\nfstab.mise_ignore_usb_x86.target='/mnt/usb8-2'\nfstab.mise_ignore_usb_x86.fstype='squashfs'\nfstab.mise_ignore_usb_x86.enabled='0'\n",
+  "stderr": ""
+}

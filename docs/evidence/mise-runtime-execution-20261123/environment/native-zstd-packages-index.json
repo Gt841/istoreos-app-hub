@@ -1,0 +1,74 @@
+[
+  {
+    "arch": "x86_64",
+    "index_url": "https://downloads.openwrt.org/releases/24.10.8/packages/x86_64/packages/Packages.gz",
+    "packages": [
+      {
+        "Package": "libzstd",
+        "Version": "1.5.7-r1",
+        "Depends": "libc",
+        "License": "GPL-2.0-or-later",
+        "Section": "libs",
+        "URL": "https://github.com/facebook/zstd",
+        "CPE-ID": "cpe:/a:facebook:zstandard",
+        "Architecture": "x86_64",
+        "Installed-Size": "901120",
+        "Filename": "libzstd_1.5.7-r1_x86_64.ipk",
+        "Size": "385729",
+        "SHA256sum": "d5d0c9b0ae85afaba106095e25dad417be41581cf9bbc3a95547824f5b63d834",
+        "Description": " Zstandard - Fast real-time compression algorithm."
+      },
+      {
+        "Package": "zstd",
+        "Version": "1.5.7-r1",
+        "Depends": "libc, libzstd",
+        "License": "GPL-2.0-or-later",
+        "Section": "utils",
+        "URL": "https://github.com/facebook/zstd",
+        "CPE-ID": "cpe:/a:facebook:zstandard",
+        "Architecture": "x86_64",
+        "Installed-Size": "194560",
+        "Filename": "zstd_1.5.7-r1_x86_64.ipk",
+        "Size": "81828",
+        "SHA256sum": "f2f81c75157add9da1cfc54eab1be20f7f345736558177426cf873da6a15daf9",
+        "Description": " Zstandard - Fast real-time compression algorithm."
+      }
+    ]
+  },
+  {
+    "arch": "aarch64_generic",
+    "index_url": "https://downloads.openwrt.org/releases/24.10.8/packages/aarch64_generic/packages/Packages.gz",
+    "packages": [
+      {
+        "Package": "libzstd",
+        "Version": "1.5.7-r1",
+        "Depends": "libc",
+        "License": "GPL-2.0-or-later",
+        "Section": "libs",
+        "URL": "https://github.com/facebook/zstd",
+        "CPE-ID": "cpe:/a:facebook:zstandard",
+        "Architecture": "aarch64_generic",
+        "Installed-Size": "798720",
+        "Filename": "libzstd_1.5.7-r1_aarch64_generic.ipk",
+        "Size": "341061",
+        "SHA256sum": "9c8183e512c10a7befabbe62b9613db33c0352fea99ab72dfd963ff768d7cf98",
+        "Description": " Zstandard - Fast real-time compression algorithm."
+      },
+      {
+        "Package": "zstd",
+        "Version": "1.5.7-r1",
+        "Depends": "libc, libzstd",
+        "License": "GPL-2.0-or-later",
+        "Section": "utils",
+        "URL": "https://github.com/facebook/zstd",
+        "CPE-ID": "cpe:/a:facebook:zstandard",
+        "Architecture": "aarch64_generic",
+        "Installed-Size": "215040",
+        "Filename": "zstd_1.5.7-r1_aarch64_generic.ipk",
+        "Size": "78983",
+        "SHA256sum": "307af94d38e9b18458e6a5c5781ecdd4d9dc096cc8519d38194a02bf4f9b1b9a",
+        "Description": " Zstandard - Fast real-time compression algorithm."
+      }
+    ]
+  }
+]

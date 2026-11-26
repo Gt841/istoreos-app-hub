@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-23T07:25:12.534Z",
+  "url": "http://127.0.0.1:5180/mise",
+  "oldQuickstartStopped": true,
+  "oldMisePort": 5181,
+  "currentPort": 5180,
+  "health": {
+    "owner": "/projects/workspace-linkease-ubuntu/openwrt-apps/istoreos-app-hub",
+    "app": "mise",
+    "pid": 27917,
+    "mode": "design-fixtures"
+  },
+  "browserMountAndNavigation": true,
+  "pageErrors": []
+}

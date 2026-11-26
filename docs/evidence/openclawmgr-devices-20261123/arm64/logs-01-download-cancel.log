@@ -1,0 +1,47 @@
+2026-11-23 09:40:41 [openclawmgr] Installation phase: preparing
+2026-11-23 09:40:41 [openclawmgr] Downloading: https://unofficial-builds.nodejs.org/download/release/v24.22.1/node-v24.22.1-linux-arm64-musl.tar.xz
+[plan] supported=true candidates=origin,admin_proxy origin is supported by domainfold
+[race] origin 95.5KB/s
+[fallback] direct_probe_slow direct probe did not meet auto speed threshold
+[race] origin 27.7KB/s
+[race] admin_proxy failed: unexpected HTTP status 502 Bad Gateway
+[race] selected origin
+[download] 832.0KB avg 27.7KB/s
+[download] 64.0KB avg 2.1KB/s
+[download] 128.0KB avg 3.9KB/s
+[download] 192.0KB avg 5.7KB/s
+[download] 256.0KB avg 7.3KB/s
+[download] 320.0KB avg 8.8KB/s
+[download] 384.0KB avg 10.0KB/s
+[download] 416.0KB avg 10.4KB/s
+[download] 448.0KB avg 10.9KB/s
+[download] 480.0KB avg 11.1KB/s
+[download] 512.0KB avg 11.5KB/s
+[download] 544.0KB avg 11.9KB/s
+[download] 608.0KB avg 12.8KB/s
+[download] 672.0KB avg 13.6KB/s
+[download] 736.0KB avg 14.5KB/s
+[download] 800.0KB avg 15.3KB/s
+[download] 864.0KB avg 16.2KB/s
+[download] 928.0KB avg 16.9KB/s
+[download] 992.0KB avg 17.7KB/s
+[download] 1.0MB avg 18.0KB/s
+[download] 1.1MB avg 18.4KB/s
+[download] 1.1MB avg 18.8KB/s
+[download] 1.2MB avg 18.9KB/s
+[download] 1.2MB avg 19.4KB/s
+[download] 1.3MB avg 20.1KB/s
+[download] 1.3MB avg 20.6KB/s
+[download] 1.4MB avg 20.9KB/s
+[download] 1.5MB avg 21.3KB/s
+[download] 1.5MB avg 21.9KB/s
+[download] 1.6MB avg 22.3KB/s
+[download] 1.6MB avg 22.4KB/s
+[download] 1.7MB avg 22.1KB/s
+[download] 1.7MB avg 22.2KB/s
+[download] 1.8MB avg 22.5KB/s
+[download] 1.8MB avg 22.9KB/s
+[download] 1.8MB avg 22.9KB/s
+[download] 1.9MB avg 23.2KB/s
+[download] 2.0MB avg 23.6KB/s
+2026-11-23 09:42:18 [openclawmgr] Installation finished (exit=143)

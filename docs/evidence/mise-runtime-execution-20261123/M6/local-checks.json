@@ -1,0 +1,11 @@
+{
+  "typecheck": "passed",
+  "web_tests": {
+    "passed": 58,
+    "failed": 0,
+    "skip": 0
+  },
+  "production_build": "passed",
+  "Lua_syntax_files": 17,
+  "mode": "no IPK/APK build"
+}

@@ -1,0 +1,7 @@
+{
+  "command": "lua /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M5/shared-binding-device.lua /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M5/shared-runtime.lua /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M5",
+  "exit": 1,
+  "stdout": "",
+  "stderr": "lua: ...ime-acceptance-20261123/M5/shared-binding-device.lua:11: reject group/world writable binding: {\"storage_root\":\"\\/mnt\\/nvme0n1-1\\/Configs\\/mise-runtime-acceptance-20261123\\/Runtime-live\",\"instance\":\"node-24.21.0-aarch64-glibc-upstream1-npm11.19.0-glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64-c5381d67a2fc8268ee973d2262f592fd3e53262d5950bd8a9c65bdd766346544\",\"schema_version\":1,\"npm\":\"11.19.0\",\"library\":\"glibc-2.39-ubuntu8-gcc12-legal1-r1-aarch64\",\"node\":\"24.21.0\",\"library_manifest_sha256\":\"bd86e6ced8b3097347b11c82dcfa9ce0d5b78212660136bd90ba6cef89af6bc6\",\"artifact_set\":\"c5381d67a2fc8268ee973d2262f592fd3e53262d5950bd8a9c65bdd766346544\",\"tool\":\"node\",\"provider\":\"mise-runtime\"}\n\nstack traceback:\n\t[C]: in function 'assert'\n\t...ime-acceptance-20261123/M5/shared-binding-device.lua:11: in function 'probe'\n\t...ime-acceptance-20261123/M5/shared-binding-device.lua:20: in main chunk\n\t[C]: ?\n",
+  "scope": "real installed SDK and libraries; staged application binding module; no OpenClaw deployment yet"
+}

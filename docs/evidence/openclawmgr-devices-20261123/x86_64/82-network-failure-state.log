@@ -1,0 +1,6 @@
+task=true
+2026-11-23 10:45:44 [openclawmgr] Installation phase: preparing
+24.22.1
+2026-11-23 10:45:52 [openclawmgr] Resolved OpenClaw 2026.3.28 with Node v24.22.1
+2026-11-23 10:45:52 [openclawmgr] Fetching package archive and verifying SHA512
+2026-11-23 10:46:01 [openclawmgr] Installing OpenClaw 2026.3.28 and dependencies

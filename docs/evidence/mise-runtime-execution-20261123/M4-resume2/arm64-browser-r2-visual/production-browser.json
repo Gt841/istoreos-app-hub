@@ -1,0 +1,11 @@
+{
+  "scope": "visual followup only; functional setup evidence retained separately",
+  "passed": true,
+  "results": [
+    {
+      "name": "desktop and mobile QuickStart styles, theme, dialog focus and browser errors",
+      "passed": true
+    }
+  ],
+  "pageErrors": []
+}

@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "real API discovers both persistent disks and retains the configured custom root",
+      "passed": true
+    },
+    {
+      "name": "current real installation is selected and protected; other disks are visible",
+      "passed": true
+    },
+    {
+      "name": "backend refuses moving existing SDKs without changing the active storage root",
+      "passed": true
+    },
+    {
+      "name": "first-use form offers each real disk and submits the chosen path (save intercepted)",
+      "passed": true
+    },
+    {
+      "name": "custom folder name is serialized as its actual path (save intercepted)",
+      "passed": true
+    },
+    {
+      "name": "mobile custom-path form fits and no-disk state never defaults to /root",
+      "passed": true
+    },
+    {
+      "name": "read-only permission cannot edit storage; real SDKs and configuration remain unchanged",
+      "passed": true
+    }
+  ],
+  "pageErrors": [],
+  "storage_paths": [
+    "/mnt/mise-runtime/Runtime-live",
+    "/mnt/mise-runtime/Configs/MiseRuntime",
+    "/mnt/vio4-0/Configs/MiseRuntime"
+  ],
+  "storage_default": "/mnt/mise-runtime/Configs/MiseRuntime"
+}

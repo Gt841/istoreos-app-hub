@@ -1,0 +1,63 @@
+
+$ npm --prefix apps/mise/web run typecheck
+
+> istore-mise-web@0.1.0 typecheck
+> vue-tsc --noEmit
+
+
+$ npm --prefix apps/mise/web test
+
+> istore-mise-web@0.1.0 test
+> node --test tests/model.test.ts tests/wrap.test.ts
+
+✔ first use requires persistent storage; invalid and temporary paths rejected (3.75927ms)
+✔ version/architecture/libc identities are distinct and existing environments rejected (0.312182ms)
+✔ npm must be compatible with chosen Node (0.164361ms)
+✔ install completion preserves defaults without tracking application usage (0.852832ms)
+✔ double submit and parallel plans cannot start duplicate tasks (0.213951ms)
+✔ expired or revised plans cannot submit (0.230172ms)
+✔ non-default runtime may be removed; glibc library remains protected by installed environments (0.210435ms)
+✔ failed native and integrity checks never commit candidates (0.336471ms)
+✔ cancel cleans candidate; interrupted task requires explicit recovery (0.350061ms)
+✔ offline storage prevents mutation and required acceleration can fall back explicitly (0.234734ms)
+✔ storage switch cannot pretend to migrate existing environments (0.150631ms)
+✔ unreferenced library can be cleaned after its environments are removed (0.149907ms)
+✔ failure injection is one shot and retry requires a new plan (0.180369ms)
+✔ application/default switches are not supported and defaults stay read-only (0.211402ms)
+✔ global defaults of all three tools are protected (0.172251ms)
+✔ Go installs as one standard toolchain on x86_64 without glibc (0.175539ms)
+✔ Go installs as one standard toolchain on aarch64 without glibc (0.179755ms)
+✔ tool-specific ABI validation rejects fabricated combinations and unknown tools (0.260654ms)
+✔ wrap rejects non-persistent/injected paths and malformed environment IDs (1.795799ms)
+✔ fixed node-24.21.0-x86_64-glibc wrapper routes tools and persists HOME/cache without changing caller (326.447411ms)
+✔ fixed node-24.22.1-x86_64-glibc wrapper routes tools and persists HOME/cache without changing caller (322.057566ms)
+✔ fixed node-24.21.0-x86_64-musl wrapper routes tools and persists HOME/cache without changing caller (320.815966ms)
+✔ fixed python-3.12.10-x86_64-musl wrapper routes tools and persists HOME/cache without changing caller (321.564576ms)
+✔ fixed python-3.13.3-x86_64-glibc wrapper routes tools and persists HOME/cache without changing caller (322.245809ms)
+✔ fixed go-1.27.4-x86_64-native wrapper routes tools and persists HOME/cache without changing caller (403.778056ms)
+✔ fixed go-1.27.4-aarch64-native wrapper routes tools and persists HOME/cache without changing caller (404.368108ms)
+✔ missing runtime fails before creating the requested HOME (1.684461ms)
+✔ wrap validates complete identity and language-specific ABI (0.340097ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2515.898617
+
+$ npm --prefix apps/mise/web run build
+
+> istore-mise-web@0.1.0 build
+> vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 50 modules transformed.
+rendering chunks...
+computing gzip size...
+../../../../../../../var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/mise-design-dist/index.html                   0.42 kB │ gzip:  0.32 kB
+../../../../../../../var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/mise-design-dist/assets/index-P5pFYoCA.css   56.27 kB │ gzip: 11.10 kB
+../../../../../../../var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/mise-design-dist/assets/index-CD7B8CDq.js   137.68 kB │ gzip: 52.93 kB
+✓ built in 793ms

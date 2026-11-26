@@ -1,0 +1,7 @@
+{
+  "command": "lua /mnt/mise-runtime/acceptance/M4/resume3/installed-user.lua /mnt/mise-runtime/Runtime-live /mnt/mise-runtime/acceptance/M4/resume3/ordinary-user.json",
+  "exit": 0,
+  "seconds": 0.6030548830749467,
+  "stdout": "{\"uid\":65001,\"home\":\"/mnt/mise-runtime/Runtime-live/users/65001/home\",\"tmp\":\"/mnt/mise-runtime/Runtime-live/users/65001/home/.cache/runtime/node-24.21.0-x86_64-glibc-upstream1-npm11.19.0-glibc-2.39-ubuntu8-gcc12-legal1-r1-x86_64-3c978e5d25a3a081a1b08f661b79fe92eb2c95f10b625b981a43b56b40eb4463/tmp\",\"node\":\"v24.21.0\",\"execPath\":\"/mnt/mise-runtime/Runtime-live/environments/node-24.21.0-x86_64-glibc-upstream1-npm11.19.0-glibc-2.39-ubuntu8-gcc12-legal1-r1-x86_64-3c978e5d25a3a081a1b08f661b79fe92eb2c95f10b625b981a43b56b40eb4463/bin/node\"}\n\nPASS installed package ordinary UID HOME/TMP, fixed execPath/child and npm\n",
+  "stderr": ""
+}

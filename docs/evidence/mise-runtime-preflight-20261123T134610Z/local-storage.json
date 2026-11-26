@@ -1,0 +1,10 @@
+{
+  "command": [
+    "bash",
+    "-lc",
+    "date -u; df -kP /projects /config /var/cache/build-cache; df -iP /projects /var/cache/build-cache; free -m; uptime; node --version; npm --version; python3 --version"
+  ],
+  "exit": 0,
+  "stdout": "Mon Nov 23 13:48:07 UTC 2026\nFilesystem     1024-blocks      Used Available Capacity Mounted on\n/dev/sdb1       1280846556 968057368 247655928      80% /projects\n/dev/sdb1       1280846556 968057368 247655928      80% /config\n/dev/nvme0n1p4   464471808 211139908 229714980      48% /var/cache/build-cache\nFilesystem       Inodes   IUsed    IFree IUse% Mounted on\n/dev/sdb1      81403904 9305310 72098594   12% /projects\n/dev/nvme0n1p4 29507584 3057091 26450493   11% /var/cache/build-cache\n               total        used        free      shared  buff/cache   available\nMem:           32101        3763        1667          36       27032       28338\nSwap:          15623         105       15518\n 13:48:07 up 5 days, 21:49,  0 user,  load average: 1.20, 1.20, 1.33\nv24.15.0\n11.12.1\nPython 3.12.3\n",
+  "stderr": ""
+}

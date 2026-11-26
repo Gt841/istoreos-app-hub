@@ -1,0 +1,16 @@
+{
+  "files": {
+    "/etc/config/istoreenhance": "3296304d82133206bf761533606754175a91e87db6ef2934af91a64361dc5fc6",
+    "/usr/sbin/iStoreEnhance": "0c555344a635028ac38ad2ab3ef2d110855f7b7f60f39f8db990e70ae5e3ba1d",
+    "/etc/config/agentflow": false,
+    "/etc/config/mise": "10176a3adca0d449c840ed66a14e606d26e5b03059fd328a99302a63a76d758d",
+    "/etc/init.d/istoreenhance": "bc42d1f49ac574b6f41e47d69f94c3ee34f3040fcd9eb695468e1eed202fb7ae"
+  },
+  "boot_id": "8c08d91f-949e-45b5-b277-e21c4575fec3",
+  "go_route": true,
+  "service": {
+    "commit": "",
+    "version": "0.9.1",
+    "build_number": ""
+  }
+}

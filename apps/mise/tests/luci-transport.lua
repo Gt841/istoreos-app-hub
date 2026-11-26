@@ -1,0 +1,6 @@
+local json=require('luci.jsonc')
+local body,message=require('luci.model.mise.transport').request([[{"op":"catalog"}]])
+assert(body,message)
+local response=json.parse(body)
+io.write(json.stringify({ok=response and response.ok,error=response and response.error})..'\n')
+assert(response and response.ok and #response.value.entries>=44,'real LuCI transport lost request input')

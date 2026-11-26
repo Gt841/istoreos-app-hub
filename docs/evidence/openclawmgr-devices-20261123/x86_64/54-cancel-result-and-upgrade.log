@@ -1,0 +1,2 @@
+cancel passed; task_del removes task log as expected; old current and Gateway pid preserved
+{"ok":true,"task_id":"openclawmgr"}

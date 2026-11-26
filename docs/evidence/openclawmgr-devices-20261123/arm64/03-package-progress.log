@@ -1,0 +1,13 @@
+== recent task log
+2026-11-23 09:43:27 [openclawmgr] Installation phase: preparing
+/mnt/nvme0n1-1/OpenClawMgr-acceptance-20261123/npm-cache/node-24.22.1-arm64-musl.tar.xz: OK
+24.22.1
+11.19.1
+2026-11-23 09:43:52 [openclawmgr] Resolved OpenClaw 2026.3.28 with Node v24.22.1
+== package and ownership
+-rw-r--r--    1 root     root       44.2M Nov 23 09:45 /mnt/nvme0n1-1/OpenClawMgr-acceptance-20261123/.install.BknLID/openclaw-2026.3.28.tgz
+-rw-r--r--    1 root     root           0 Nov 23 09:43 /mnt/nvme0n1-1/OpenClawMgr-acceptance-20261123/.install.BknLID/pack.json
+0:0 755 /mnt/nvme0n1-1/OpenClawMgr-acceptance-20261123/.install.BknLID/candidate/node
+1000:1000 755 /mnt/nvme0n1-1/OpenClawMgr-acceptance-20261123/.install.BknLID/candidate/node/bin/node
+== node gateway state
+true

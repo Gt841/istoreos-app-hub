@@ -1,0 +1,157 @@
+[
+  {
+    "name": "sh:openclawmgr.sh",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "ash:openclawmgr.sh",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "sh:openclawmgr",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "ash:openclawmgr",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "sh:glibc-node.sh",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "ash:glibc-node.sh",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "sh:install-runtime.sh",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "ash:install-runtime.sh",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "sh:node-pins.sh",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "ash:node-pins.sh",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "sh:npm-env.sh",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "ash:npm-env.sh",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "sh:npm-git.sh",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "ash:npm-git.sh",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "sh:oc-config.sh",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "ash:oc-config.sh",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "sh:openclawmgr-cli.sh",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "ash:openclawmgr-cli.sh",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "sh:npm",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "ash:npm",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "sh:stage-runtime.sh",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "ash:stage-runtime.sh",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "shellcheck",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "lua:luasrc/controller/openclawmgr.lua",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "lua:luasrc/model/openclawmgr.lua",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "lua:luasrc/model/cbi/openclawmgr/cli.lua",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "embedded-lua:0",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "embedded-lua:1",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "js:runtime-check.cjs",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "js:node-loader.cjs",
+    "exit_code": 0,
+    "output": ""
+  },
+  {
+    "name": "whitespace",
+    "exit_code": 0,
+    "output": ""
+  }
+]

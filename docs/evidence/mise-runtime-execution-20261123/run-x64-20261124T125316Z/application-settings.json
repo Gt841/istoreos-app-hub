@@ -1,0 +1,6 @@
+{
+  "config_sha256": "948fc98381d874613c8796b243abb0a1e2f0be4b5b6d91ada67e1049f2de3fcf",
+  "port": 18793,
+  "bind": "loopback",
+  "provider_count": 0
+}

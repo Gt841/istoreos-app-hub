@@ -1,0 +1,13 @@
+{
+  "passed": false,
+  "results": [
+    {
+      "name": "authenticated real LuCI bootstrap and unconfigured status",
+      "passed": false,
+      "error": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByText('先为运行环境选择存放位置', { exact: true }) to be visible\u001b[22m\n"
+    }
+  ],
+  "pageErrors": [
+    "RPC call to uci/get failed with ubus code 6: 没有权限\n  at ClassConstructor.handleCallReply (http://192.168.30.93/luci-static/resources/rpc.js?v=26.209.18626~2e45965-1795486328:15:3)"
+  ]
+}

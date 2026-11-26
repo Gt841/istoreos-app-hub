@@ -1,0 +1,23 @@
+{
+  "enumeration_policy": {
+    "passed": true,
+    "tests": 7
+  },
+  "typecheck": {
+    "passed": true,
+    "command": "/var/cache/build-cache/run.sh -- npm --prefix apps/mise/web run typecheck"
+  },
+  "live_build": {
+    "passed": true,
+    "output": "/var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/mise-live-dist"
+  },
+  "diff_check": {
+    "passed": true
+  },
+  "releases": {
+    "mise-runtime": 2,
+    "luci-app-mise": 2,
+    "app-meta-mise": 2,
+    "pending_candidate_no_duplicate_meta_bump": true
+  }
+}

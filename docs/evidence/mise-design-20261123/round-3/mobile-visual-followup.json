@@ -1,0 +1,38 @@
+[
+  {
+    "theme": "light",
+    "rows": [
+      {
+        "nameWidth": 200,
+        "usageOwnRow": true
+      },
+      {
+        "nameWidth": 200,
+        "usageOwnRow": true
+      },
+      {
+        "nameWidth": 200,
+        "usageOwnRow": true
+      }
+    ],
+    "passed": true
+  },
+  {
+    "theme": "dark",
+    "rows": [
+      {
+        "nameWidth": 200,
+        "usageOwnRow": true
+      },
+      {
+        "nameWidth": 200,
+        "usageOwnRow": true
+      },
+      {
+        "nameWidth": 200,
+        "usageOwnRow": true
+      }
+    ],
+    "passed": true
+  }
+]

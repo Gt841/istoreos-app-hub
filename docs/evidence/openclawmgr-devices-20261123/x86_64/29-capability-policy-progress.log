@@ -1,0 +1,17 @@
+running=true
+http_200_count=37
+http_error_count=1
+== last progress
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/hono 7708ms (cache updated)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/ipaddr.js 1705ms (cache updated)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/jiti 3502ms (cache updated)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/json5 1774ms (cache updated)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/jszip 1738ms (cache updated)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/linkedom 6206ms (cache updated)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/long 1004ms (cache updated)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/markdown-it 2028ms (cache updated)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/matrix-js-sdk 7487ms (cache updated)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/node-edge-tts 914ms (cache updated)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/osc-progress 633ms (cache updated)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/pdfjs-dist 9154ms (cache updated)
+== committed runtime

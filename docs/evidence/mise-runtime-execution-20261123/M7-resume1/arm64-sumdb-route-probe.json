@@ -1,0 +1,8 @@
+{
+  "host": "192.168.30.93",
+  "target_service": "existing ARM KSpeeder; TLS hostname preserved",
+  "path": "/sumdb/sum.golang.org/supported",
+  "rc": 0,
+  "stdout": "\nHTTP=200 TLS=0 SECONDS=0.370642\n",
+  "stderr": ""
+}

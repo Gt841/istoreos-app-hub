@@ -1,0 +1,289 @@
+{
+  "date": "2026-11-23",
+  "status": "partial-device-acceptance",
+  "all_architectures_gateway_passed": false,
+  "suites": [
+    {
+      "name": "default",
+      "tests": 53,
+      "seconds": 79.1,
+      "passed": true
+    },
+    {
+      "name": "busybox",
+      "tests": 53,
+      "seconds": 93.736,
+      "passed": true
+    }
+  ],
+  "static_checks": [
+    {
+      "name": "sh:openclawmgr.sh",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "ash:openclawmgr.sh",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "sh:openclawmgr",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "ash:openclawmgr",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "sh:glibc-node.sh",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "ash:glibc-node.sh",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "sh:install-runtime.sh",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "ash:install-runtime.sh",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "sh:node-pins.sh",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "ash:node-pins.sh",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "sh:npm-env.sh",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "ash:npm-env.sh",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "sh:npm-git.sh",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "ash:npm-git.sh",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "sh:oc-config.sh",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "ash:oc-config.sh",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "sh:openclawmgr-cli.sh",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "ash:openclawmgr-cli.sh",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "sh:npm",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "ash:npm",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "sh:stage-runtime.sh",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "ash:stage-runtime.sh",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "shellcheck",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "lua:luasrc/controller/openclawmgr.lua",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "lua:luasrc/model/openclawmgr.lua",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "lua:luasrc/model/cbi/openclawmgr/cli.lua",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "embedded-lua:0",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "embedded-lua:1",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "js:runtime-check.cjs",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "js:node-loader.cjs",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "whitespace",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "package_recipe_check": {
+    "scope": "SDK macros stubbed; real Prepare/install with pinned downloads; not an SDK ipk build",
+    "results": [
+      {
+        "arch": "x86_64",
+        "prepare_install_exit": 0,
+        "payload_matches_deployed": true,
+        "manifestSha256": "05878b3941c45bb67f8435b3d3d0b4250a487bcc038b379f3cc8b61c4658c364"
+      },
+      {
+        "arch": "aarch64",
+        "prepare_install_exit": 0,
+        "payload_matches_deployed": true,
+        "manifestSha256": "b3750943e6e0ebca085a1c3a678e6c16bc139a69cb0df2fc8e9e01f9846013c5"
+      }
+    ]
+  },
+  "devices": {
+    "x86_64": {
+      "host": "192.168.30.7",
+      "mode": "upgrade-from-musl-legacy",
+      "initial_install": "timeout-124-before-activation",
+      "old_gateway_pid_after_timeout": 21947,
+      "old_gateway_health_after_timeout": "OK",
+      "retry": "completed-third-candidate",
+      "second_candidate": "native-sharp-gate-rejected-wrong-musl-optionals-before-activation",
+      "third_candidate": "passed-committed-exit-0",
+      "third_receipt_release": "20261123134634-OKKpAM",
+      "gateway_health": "OK",
+      "actual_gateway_uid": 998,
+      "previous_runtime": "musl",
+      "current_runtime_glibc": "2.39",
+      "openclaw_own_vector_loader_under_service_uid": "passed-true",
+      "nearest_neighbor": {
+        "rowid": 1,
+        "distance": 0.141421377658844
+      },
+      "missing_vec_startup_gate": "passed-no-gateway-instance",
+      "init_outer_rc_on_refusal": 0,
+      "public_manager_restart_after_restoration": "passed-health-OK-vector-rechecked",
+      "embedding_provider": "none",
+      "semantic_memory_end_to_end": "not-tested",
+      "receipt": "x86_64/committed-receipt.json",
+      "restoration": "baseline-restored-and-verified"
+    },
+    "arm64": {
+      "host": "192.168.30.93",
+      "full_install": "interrupted-by-device-reboot",
+      "gateway": "not-passed-authenticated-health",
+      "preparing_recovery": "passed-exit-0",
+      "standalone_vec": "v0.1.7 nearest-neighbor passed",
+      "unprivileged_vec_uid": 999,
+      "real_fork_vec_probe": "passed-exit-0",
+      "glibc": "2.39",
+      "private_linker_resolution": "passed",
+      "restoration": "baseline-restored-and-verified",
+      "final_corrected_full_install": "native-and-cli-passed-gateway-listening-health-failed-rolled-back-exit-1",
+      "final_entry_npm_config_libc": "glibc",
+      "final_attempt_reboot": false,
+      "final_attempt_boot_id": "15109b6a-9070-49ea-88e0-6ba2e17a5545",
+      "final_candidate_native_vec": "available:true version:v0.1.7 nearestNeighbor:true",
+      "gateway_listening_at": "2026-11-23 14:26:33 CST",
+      "rollback_started_at": "2026-11-23 14:28:32 CST",
+      "protected_kspeeder_hashes": "matched-baseline"
+    }
+  },
+  "scope": {
+    "SDK_ipk_build": false,
+    "package_prepare_install_commands": true,
+    "browser_UI": false,
+    "paid_model_calls": false,
+    "committed": false,
+    "published": false
+  },
+  "npm_libc_policy": "Node launcher and shared npm environment force glibc; host /usr/bin/ldd otherwise causes wrong optional dependency selection",
+  "final_health_policy": {
+    "seconds_per_try": 60,
+    "attempts": 3,
+    "previous_seconds_per_try": 10,
+    "local_delayed_health_ms": 11000,
+    "local_regression": "passed",
+    "device_reverification": false,
+    "root_cause": "CLI cold-start timeout suspected; authenticated ARM health was not observed"
+  },
+  "loop_limit": {
+    "max_check_rounds": 3,
+    "used_check_rounds": 3,
+    "x86_full_candidates": 3,
+    "arm_full_candidates": 2,
+    "further_full_install_submitted": false
+  },
+  "final_followup_checks": [
+    {
+      "name": "sh-final-health",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "ash-final-health",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "shellcheck-final-health",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "whitespace",
+      "exit_code": 0,
+      "output": ""
+    }
+  ]
+}

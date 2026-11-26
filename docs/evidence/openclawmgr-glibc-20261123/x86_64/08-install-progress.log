@@ -1,0 +1,14 @@
+task=true
+== install progress
+2026-11-23 13:14:04 [openclawmgr] Installing OpenClaw 2026.3.28 and dependencies
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sqlite-vec 287ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sqlite-vec-linux-x64 819ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sqlite-vec-darwin-x64 956ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sqlite-vec-linux-arm64 365ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sqlite-vec-windows-x64 1435ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sqlite-vec-darwin-arm64 710ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/@modelcontextprotocol%2fsdk 29ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://registry.npmjs.org/zod 11ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@aws-sdk%2fmiddleware-websocket 789ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@aws-sdk%2fmiddleware-eventstream 1412ms (cache miss)
+boot=8ebe0f03-3bce-4dd0-a84b-e7d29317c6ed

@@ -4,8 +4,8 @@
 
 This runbook records the KAI routing incident as a reusable contract for every
 LinkEase application. A plugin's LuCI button must express an application ID;
-the shared resolver decides whether to use the uhttpd `/apps` route or a direct
-listener. Individual controllers must not duplicate proxy detection, host, or
+the shared resolver selects the uhttpd `/apps` route, the shared LAN entry, or
+an application-declared direct listener. Individual controllers must not duplicate proxy detection, host, or
 authentication URL construction.
 
 Every LuCI package that exposes this launch flow directly depends on both
@@ -98,7 +98,8 @@ Expected resolution:
 | uhttpd `/apps` proxy and worker | Result |
 | --- | --- |
 | available | `http://<current-authority>/apps/kai/` |
-| unavailable | `http://<current-host>:<kai-port>/apps/kai/` |
+| unavailable, shared LAN worker available | `http://<current-host>:19290/apps/kai/` (worker redirects to KAI) |
+| both shared routes unavailable | `http://<current-host>:<kai-port>/apps/kai/` |
 
 For the test router those are respectively
 `http://192.168.30.7:10000/apps/kai/` and
@@ -110,8 +111,10 @@ The resolver in `luci.model.linkease.apps_openwrt` uses this order:
 
 1. choose `/apps/<id>/` only when uhttpd proxy support, its `/apps` mapping,
    and an active LinkEase entry worker are all present;
-2. otherwise choose a manifest-enabled direct listener;
-3. otherwise return `503` without enabling a port or starting a process.
+2. otherwise choose the LAN-capable shared listener reported by the running
+   supervisor, normally `http://<request-host>:19290/apps/<id>/`;
+3. otherwise choose a manifest-enabled application direct listener;
+4. otherwise return `503` without enabling a port or starting a process.
 
 For a direct URL, the path precedence is:
 
@@ -127,10 +130,12 @@ be `http://<host>:5003/`, not `http://<host>:5003/apps/kspeeder/`.
 
 | Pattern | Applications | Direct behavior when shared entry is absent |
 | --- | --- | --- |
-| app-base service | KAI, AgentFlow | same `/apps/<id>/` path on the app port |
+| legacy app-base service | CLASSIC KAI | same `/apps/<id>/` path on the app port |
 | module with different direct root | KSpeeder | explicit `externalOpen.path`, currently `/` |
-| module with matching direct root | BaiduDrive | backend `externalBasePath`, currently `/` |
-| Unix-first, optional TCP | Docker Manager, KaiPlus | unavailable unless the user enabled the external port |
+| private Web with SDK | BaiduDrive | unavailable; only the Web listener is private, SDK/P2P remains unchanged |
+| Unix-only | Docker Manager, KaiPlus | unavailable; no application TCP fallback |
+| private app-base or terminal | AgentFlow, Codex, OpenCode, Kimi, Claude Code | unavailable; loopback backend ports are never browser fallbacks |
+| existing optional application TCP | apps declaring that capability | use only an explicitly supported enabled listener |
 | browser-direct iframe | FastNet | redirect to its configured service port; do not proxy measurement traffic |
 | LinkEaseFull builtin | OpenWrt embed | no standalone fallback; requires LinkEaseFull |
 
@@ -254,3 +259,48 @@ router is expected to return to proxy mode.
 
 Never store LuCI cookies, passwords, auth state, or session-bearing URLs in
 test logs or this repository.
+
+
+## Unix-only Docker Manager acceptance
+
+Use matching new entry and desktop binaries; old state files without `listen`
+do not prove LAN entry availability. Package recipe revisions do not replace
+already-published runtime archives.
+
+1. On ordinary uhttpd without `proxy_prefix`, open
+   `linkease_apps/open?id=dockermanager`. With either active worker, the resolved
+   target must be `http://<device>:19290/apps/dockermanager/`.
+2. Restore the supported `/apps` proxy and verify the same action keeps the
+   current uhttpd authority, including a non-default port.
+3. Confirm the Docker Manager process has `DOCKER_MANAGER_LISTEN_MODE=unix`,
+   owns its Unix socket, and has no port 8192 listener, including after upgrade
+   from `listen_mode=tcp` / `external_port_enabled=1`.
+4. Expire the login session while using the shared LAN port. Navigate through
+   the application's relative login action; it must reach LuCI's actual port
+   and return to the original application, preserving the query. Test both
+   workers, LAN hostname and address access, and a non-default LuCI port.
+5. Verify listing, upload, terminal/WebSocket and event streaming through the
+   Unix backend. Stopping Desktop must leave the gateway path usable.
+6. A custom loopback-only shared listener must not be advertised as LAN-ready.
+   Missing both shared routes must report unavailable without changing config.
+
+The shared LAN listener is HTTP. Do not present HTTPS LuCI login as HTTPS
+application transport. Remote access requires explicitly exposing the shared
+entry through the chosen remote channel; this change publishes no tunnel.
+
+## Managed module qualification and regression
+
+Run `python3 -B -m unittest discover -s apps/linkeasefull/tests -v` for the real
+manifest matrix: both workers, uhttpd proxy/no proxy, stopped worker and a private
+shared bind. It includes unchanged FastNet/KSpeeder browser-direct exceptions.
+The suite executes native init bodies with stale public host/TCP configuration
+and mocks only platform side effects; it also exercises active/inactive upgrade
+hooks and restart failure.
+
+KaiPlus now probes its Unix socket for readiness; the classic tab's TCP probe
+remains separate. Native Open buttons must be unavailable if the process is ready
+but the shared entry is not. The source checks do not replace device acceptance:
+verify KaiPlus session/event streaming, agent terminals, AgentFlow workflows and
+Baidu uploads/downloads on a target with matching entry/Desktop runtimes. Check
+that AgentFlow/Baidu Web listeners are loopback and KaiPlus has no TCP Web
+listener; do not interpret SDK/P2P ports as Web fallback listeners.

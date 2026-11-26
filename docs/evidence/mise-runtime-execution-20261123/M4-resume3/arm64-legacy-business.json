@@ -1,0 +1,8 @@
+{
+  "command": "set -e\ncd /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M4/resume3\ntimeout -k 2 15 /usr/sbin/mise-istore exec -- node --version\nprintf 'node --version\\n' | timeout -k 2 15 /usr/sbin/mise-exec\ncurl -fsS --max-time 5 http://127.0.0.1:9000/healthz\nprintf '\\n'\ngrep -E '  /usr/sbin/(iStoreEnhance|agentflow)$' /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/baseline/protected.sha256 | sha256sum -c -\npidof iStoreEnhance agentflow\nsha256sum /lib/functions/mise.sh /etc/config/istoreenhance /etc/config/agentflow\ncat /proc/sys/kernel/random/boot_id\n",
+  "exit": 0,
+  "seconds": 1.253654329921119,
+  "stdout": "v24.20.0\nv24.20.0\n{\"success\":true,\"data\":{\"status\":\"ok\"},\"error_data\":null,\"message\":null}\n\n/usr/sbin/iStoreEnhance: OK\n/usr/sbin/agentflow: OK\n9766 6852\n40022def3ec421028d09f2851231b8dec5dee3699ec6301888abc09e13a78083  /lib/functions/mise.sh\nb582d00c458adca175864ed0c31aa244d63b7828ce6d76bd634775cd3e64b6eb  /etc/config/istoreenhance\n3f2e6ba1d3b44cfda11e458b2aefbde804e2f10ad0ae34d9e6fab38f02760548  /etc/config/agentflow\ne3eba56b-888b-44bf-a282-99e059afc7b5\n",
+  "stderr": "",
+  "scope": "actual system UCI and actual old default; candidate helper restored by final package, no temporary helper overlay"
+}

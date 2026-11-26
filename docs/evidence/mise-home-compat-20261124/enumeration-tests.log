@@ -1,0 +1,8 @@
+PASS no disks has no /root or invented fallback
+PASS one sorted option per usable disk; no containers or system overlay
+PASS QuickStart configured folder is preferred on a usable disk
+PASS existing custom directory is retained without changing recommendation
+PASS current directory and proposed path are deduplicated
+PASS invalid or unmounted preference cannot replace safe disk recommendation
+PASS canonical storage validator can reject unsafe parent directories
+passed=7

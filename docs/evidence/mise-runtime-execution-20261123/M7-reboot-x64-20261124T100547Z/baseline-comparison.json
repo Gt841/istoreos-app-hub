@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "checks": {
+    "boot_id_changed": true,
+    "configs_unchanged": true,
+    "binaries_unchanged": true,
+    "application_binding_unchanged": true,
+    "legacy_defaults_unchanged": true,
+    "openclaw_settings_unchanged": true,
+    "agentflow_baseline_preserved": true,
+    "same_persistent_mount": true,
+    "expected_persistent_disk_uuid": true,
+    "local_acceleration_autostart": true,
+    "gateway_autostart": true
+  },
+  "before_boot": "8c08d91f-949e-45b5-b277-e21c4575fec3",
+  "after_boot": "a9a8d183-0027-42c4-96c9-a3ad1297672e",
+  "agentflow_note": "Not installed/healthy on x64 before reboot; absence baseline preserved",
+  "host": "192.168.30.7",
+  "ARM_operations": false
+}

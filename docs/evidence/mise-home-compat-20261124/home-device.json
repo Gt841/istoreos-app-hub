@@ -1,0 +1,86 @@
+{
+  "system_configuration_unchanged": true,
+  "passed": true,
+  "checks": [
+    {
+      "name": "AgentFlow environment helper explicitly replaces inherited HOME",
+      "passed": true
+    },
+    {
+      "name": "mise-istore real mise exec inherits the persistent HOME",
+      "passed": true
+    },
+    {
+      "name": "mise-exec interactive shell inherits the persistent HOME",
+      "passed": true
+    },
+    {
+      "name": "fixed go-1.26.10-x86_64-native-upstream1-d0421aa2fa11b520c016df6c286638afbdc2228f93742e0f54fcf5000ce10861 Go caches",
+      "passed": true
+    },
+    {
+      "name": "fixed go-1.27.4-x86_64-native-upstream1-51d304294ca856b1bd2349f1a4e5f6967fa34546b5fa82405d72cacfb75a56e1 Go caches",
+      "passed": true
+    },
+    {
+      "name": "fixed node-24.21.0-x86_64-glibc-upstream1-npm11.12.1-npm11.12.1-glibc-2.39-ubuntu8-gcc12-legal1-r1-x86_64-c52b848b52f1a7edd508540b368a79e267d4fc47bdbdf1bbcfca5201f2584135 root HOME and child inheritance",
+      "passed": true
+    },
+    {
+      "name": "npm cache uses the same persistent HOME",
+      "passed": true
+    },
+    {
+      "name": "fixed node-24.21.0-x86_64-glibc-upstream1-npm11.19.0-glibc-2.39-ubuntu8-gcc12-legal1-r1-x86_64-3c978e5d25a3a081a1b08f661b79fe92eb2c95f10b625b981a43b56b40eb4463 root HOME and child inheritance",
+      "passed": true
+    },
+    {
+      "name": "npm cache uses the same persistent HOME",
+      "passed": true
+    },
+    {
+      "name": "fixed node-24.22.1-x86_64-glibc-upstream1-npm11.19.1-glibc-2.39-ubuntu8-gcc12-legal1-r1-x86_64-0d690d21c67e40c7f93503fcc295185cc357f5d09916918abb48ea6c02d37a56 root HOME and child inheritance",
+      "passed": true
+    },
+    {
+      "name": "npm cache uses the same persistent HOME",
+      "passed": true
+    },
+    {
+      "name": "fixed python-3.12.16-x86_64-glibc-20261110-glibc-2.39-ubuntu8-gcc12-legal1-r1-x86_64-bd7515480840de31b9c6f5f0130da155ff73cb9479a06781b6180a5bfc7be73a Python HOME",
+      "passed": true
+    },
+    {
+      "name": "fixed python-3.12.16-x86_64-musl-20261110-9f7206ff1d57fb1ea6587f5aac13d9d3c00401793ba96145c0983a7e5755cd9e Python HOME",
+      "passed": true
+    },
+    {
+      "name": "fixed python-3.13.18-x86_64-glibc-20261110-glibc-2.39-ubuntu8-gcc12-legal1-r1-x86_64-b4f14d514744a94d118e3b789e75bcf85e23c379fb711c19cdc9c83d640d4d9d Python HOME",
+      "passed": true
+    },
+    {
+      "name": "fixed python-3.13.18-x86_64-musl-20261110-e9f316056f3efb9bd18467f472377cce25eeca0a238be45dd02761ea27d3f49a Python HOME",
+      "passed": true
+    },
+    {
+      "name": "fixed zig-0.15.2-x86_64-native-upstream1-8804576e11ae9ac29e71a12c5bf3fd580ac4349b9ae07983ac531a42935bf54b Zig caches",
+      "passed": true
+    },
+    {
+      "name": "fixed zig-0.17.1-x86_64-native-upstream1-1bc9b21d287a4bcf62e8a36c3dc7781901d19ffe7ee3d199c4d9e12fbcae1c61 Zig caches",
+      "passed": true
+    },
+    {
+      "name": "non-root default HOME remains isolated",
+      "passed": true
+    },
+    {
+      "name": "explicit old root HOME remains supported",
+      "passed": true
+    },
+    {
+      "name": "OpenClaw explicit HOME remains private to its service UID",
+      "passed": true
+    }
+  ]
+}

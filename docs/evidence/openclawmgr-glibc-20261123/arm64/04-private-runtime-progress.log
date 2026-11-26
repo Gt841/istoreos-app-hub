@@ -1,0 +1,9 @@
+task=true
+== phase tail
+2026-11-23 13:13:19 [openclawmgr] Installation phase: preparing
+/mnt/nvme0n1-1/OpenClawMgr-glibc-acceptance-20261123/npm-cache/node-24.22.1-arm64-glibc.tar.xz: OK
+24.22.1
+11.19.1
+2026-11-23 13:13:52 [openclawmgr] Resolved OpenClaw 2026.3.28 with Node v24.22.1
+2026-11-23 13:13:52 [openclawmgr] Fetching package archive and verifying SHA512
+{"arch":"arm64","glibc":"2.39","execPath":"/mnt/nvme0n1-1/OpenClawMgr-glibc-acceptance-20261123/.install.HfpkiF/candidate/node/bin/node"}

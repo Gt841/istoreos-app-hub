@@ -1,0 +1,10 @@
+task=true
+== phase tail
+2026-11-23 13:13:31 [openclawmgr] Installation phase: preparing
+/mnt/vio4-0/OpenClawMgr-glibc-acceptance-20261123/npm-cache/node-24.22.1-x64-glibc.tar.xz: OK
+24.22.1
+11.19.1
+2026-11-23 13:13:47 [openclawmgr] Resolved OpenClaw 2026.3.28 with Node v24.22.1
+2026-11-23 13:13:47 [openclawmgr] Fetching package archive and verifying SHA512
+2026-11-23 13:14:04 [openclawmgr] Installing OpenClaw 2026.3.28 and dependencies
+{"arch":"x64","glibc":"2.39","execPath":"/mnt/vio4-0/OpenClawMgr-glibc-acceptance-20261123/.install.LEOdAP/candidate/node/bin/node"}

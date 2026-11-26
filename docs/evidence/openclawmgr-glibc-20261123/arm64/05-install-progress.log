@@ -1,0 +1,9 @@
+task=true
+== install progress
+2026-11-23 13:13:19 [openclawmgr] Installation phase: preparing
+2026-11-23 13:14:16 [openclawmgr] Installing OpenClaw 2026.3.28 and dependencies
+11.19.1
+2026-11-23 13:13:52 [openclawmgr] Resolved OpenClaw 2026.3.28 with Node v24.22.1
+2026-11-23 13:13:52 [openclawmgr] Fetching package archive and verifying SHA512
+2026-11-23 13:14:16 [openclawmgr] Installing OpenClaw 2026.3.28 and dependencies
+boot=f039b600-93fd-4760-ac6c-a5c6e9e70867

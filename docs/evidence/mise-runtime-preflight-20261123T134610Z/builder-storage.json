@@ -1,0 +1,18 @@
+{
+  "command": [
+    "ssh",
+    "-p",
+    "7022",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "ConnectTimeout=8",
+    "abc@192.168.9.19",
+    "df -kP /builders /tmp; df -iP /builders; readlink /builders/projects/openwrt-sdk-builder/current; find /builders/projects/openwrt-sdk-builder/state/sdk -maxdepth 3 -name rules.mk -print; ls /builders/projects/openwrt-sdk-builder/current/configs/profiles"
+  ],
+  "exit": 0,
+  "stdout": "Filesystem     1024-blocks       Used Available Capacity Mounted on\n/dev/sdb2       1281771012 1022027480 194610220      85% /builders\nnone             464471808  211139908 229714980      48% /\nFilesystem       Inodes    IUsed    IFree IUse% Mounted on\n/dev/sdb2      81403904 11943386 69460518   15% /builders\ndeployments/runtime-95148c90f2d8\n/builders/projects/openwrt-sdk-builder/state/sdk/apk/openwrt-sdk-25.12.2-x86-64_gcc-14.3.0_musl.Linux-x86_64/rules.mk\n/builders/projects/openwrt-sdk-builder/state/sdk/apk/openwrt-sdk-25.12.2-rockchip-armv8_gcc-14.3.0_musl.Linux-x86_64/rules.mk\n/builders/projects/openwrt-sdk-builder/state/sdk/ipk/openwrt-sdk-24.10.1-ipq40xx-generic_gcc-13.3.0_musl_eabi.Linux-x86_64/rules.mk\n/builders/projects/openwrt-sdk-builder/state/sdk/ipk/openwrt-sdk-21.02.3-x86-64_gcc-8.4.0_musl.Linux-x86_64/rules.mk\n/builders/projects/openwrt-sdk-builder/state/sdk/ipk/openwrt-sdk-24.10.1-rockchip-armv8_gcc-13.3.0_musl.Linux-x86_64/rules.mk\n/builders/projects/openwrt-sdk-builder/state/sdk/ipk/openwrt-sdk-24.10.1-x86-64_gcc-13.3.0_musl.Linux-x86_64/rules.mk\n/builders/projects/openwrt-sdk-builder/state/sdk/ipk/openwrt-sdk-24.10.8-rockchip-armv8_gcc-13.3.0_musl.Linux-x86_64/rules.mk\nlinkease-176-arm.env\nlinkease-176-arm64.env\nlinkease-176-x64.env\nquickstart-arm64-test.env\nquickstart-test.env\n",
+  "stderr": ""
+}

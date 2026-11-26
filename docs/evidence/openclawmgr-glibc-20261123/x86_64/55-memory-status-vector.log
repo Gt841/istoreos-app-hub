@@ -1,0 +1,2 @@
+memory_status_exit=0
+[{"agentId":"main","backend":"builtin","provider":"none","vector":{"enabled":true}}]

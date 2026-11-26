@@ -1,0 +1,8 @@
+{
+  "exit": 0,
+  "source": "/mnt/vio4-0/Configs/openclawmgr-glibc-acceptance-20261123/completed-runtime/npm-cache/_cacache",
+  "target": "/mnt/mise-runtime/acceptance/M5/OpenClawMgr/npm-cache",
+  "stdout": "480332\t/mnt/mise-runtime/acceptance/M5/OpenClawMgr/npm-cache\n",
+  "stderr": "",
+  "scope": "content-addressed npm cache only; no SDK, global modules, config, npmrc or debug logs copied; npm integrity verification retained"
+}

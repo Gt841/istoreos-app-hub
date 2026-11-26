@@ -1,0 +1,11 @@
+{
+  "pid": 5833,
+  "purpose": "remove only the task-owned temporary SSH forwarding after retry limit",
+  "signal": "TERM",
+  "process_remaining": false,
+  "remote_listener_check": {
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+}

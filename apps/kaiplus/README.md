@@ -6,14 +6,30 @@ names the product line; it does not pin an obsolete KAI binary version.
 
 `luci-app-kaiplus` owns both management tabs:
 
-| Tab | Configuration | Service | Default port | Data directory suffix |
+| Tab | Configuration | Service | Internal listener | Data directory suffix |
 | --- | --- | --- | --- | --- |
-| KaiPlus | `/etc/config/kaiplus` | `/etc/init.d/kaiplus` | 8189 | `Configs/KAIPlus` |
+| KaiPlus | `/etc/config/kaiplus` | `/etc/init.d/kaiplus` | Unix `/var/run/kaiplus.sock` | `Configs/KAIPlus` |
 | CLASSIC KAI | `/etc/config/kai` | `/etc/init.d/kai` | 8197 | `Configs/KAI` |
 
 The tabs are `/admin/services/kaiplus/settings` and
 `/admin/services/kaiplus/classic` beneath the LuCI base URL. The existing
 `/admin/services/kaiplus` entry opens the KaiPlus settings tab.
+
+## Shared application entry
+
+KaiPlus's OpenWrt profile is Unix-only. The pinned 1.0.25 source already supports
+`--listen-mode unix --socket-path /var/run/kaiplus.sock`; the package and manifest
+select that path and LuCI probes it for readiness. The Open action is
+`linkease_apps/open?id=kaiplus`, selecting the uhttpd proxy or shared LAN port
+19290. KaiPlus has no public Web port or TCP fallback. Backend auth, recovery
+points and changeguard setup retain their existing owners. A package upgrade
+removes the obsolete KaiPlus port setting and restarts only an active service.
+The optional classic runtime below retains its separate TCP contract.
+The Reasonix source archive's `packaging/openwrt/kaiplus.init` follows the same
+Unix-only profile. Its OpenWrt deployment script uses the current app-hub init,
+manifest and complete LuCI sources, registers both directories, and does not
+restore obsolete public-port settings. The deployment task displays the socket
+path rather than a browser port.
 
 ## Optional classic runtime
 
@@ -35,8 +51,8 @@ Do not restore `app-meta-kai` or `luci-app-kai`.
 
 After installation, the classic tab reloads to show Enable, Data directory,
 and Access port. Save & Apply restarts `/etc/init.d/kai` when enabled and
-stops it when disabled. It does not restart KaiPlus or LinkEase. Use distinct
-ports and data directories to run both products together. Opening CLASSIC KAI
+stops it when disabled. It does not restart KaiPlus or LinkEase. The classic service retains its configured TCP port; use distinct
+data directories to run both products together. Opening CLASSIC KAI
 uses the shared `linkease_apps/open?id=kai` entry resolver, including the
 configured authentication and access URL behavior.
 
@@ -64,28 +80,60 @@ success. Installation and updating share the same task ID to prevent overlap.
 
 ## Package versions and checks
 
-The current package set uses `kaiplus 1.0.19-r1`,
-`luci-app-kaiplus 1.0.11-r4`, and `app-meta-kaiplus 1.0.19-r4`. The runtime
-binaries come from Reasonix commit `b64248ed993a5cff9b131b872861126605dee94f`
-and are published by the `kaiplus-runtime-v1.0.19` GitHub release. Device
-protection uses `changeguard 0.3.4-r1` and `linkspace 0.3.2-r2` from their
+The pending package set uses `kaiplus 1.0.25-r2`,
+`luci-app-kaiplus 1.0.11-r5`, and `app-meta-kaiplus 1.0.25-r12`. The runtime
+recipe consumes `kaiplus-binary-1.0.25.tar.gz` from the
+`kaiplus-runtime-v1.0.25` GitHub release, built from Reasonix commit
+`f6913b1fb322b8b6f8e3d9795580510cb703e30d`. Its SHA-256 is
+`13d31810ca6dd861515a683a1c7710868cba2895c515295eb064753eada1c628`.
+If the candidate is rebuilt, refresh `KAIPLUS_HASH` from the new tarball.
+OpenWrt IPK/APK compilation and feed publication remain separate steps. Device
+protection uses `changeguard 0.3.5-r2` and `linkspace 0.3.3-r2` from their
 matching runtime releases.
 Existing `syncapps.yaml` mappings cover all changed packages.
 
-The KaiPlus runtime requires ChangeGuard >= 0.3.4, and ChangeGuard requires
-Linkspace >= 0.3.2. These minimum versions belong to runtime package dependencies
-so an installation cannot silently reuse incompatible protection components.
-The market `config.sh` saves the KaiPlus data directory and starts the service;
-KaiPlus owns automatic sibling `TimeMachine` initialization. A service-start
-failure is returned to the installer. The focused first-install check is
+The runtime owns `kaiplus-plugin.json` and the canonical and compatibility
+registration links, following the FastNet registration layout. KaiPlus keeps
+its desktop module entry and backend authentication settings. Its `logo.png`
+is a symlink to `/www/luci-static/resources/app-icons/kaiplus.png`, installed
+from `app-meta-kaiplus/logo.png`. The metadata package is the only icon owner;
+updating it updates the desktop icon without rebuilding the runtime. A runtime
+installed without its metadata package may have no custom icon. The runtime
+does not depend on its metadata package, avoiding a circular package dependency.
+
+The runtime tarball carries `kaiplus.x86_64`, `kaiplus.aarch64`, and `kaiplus-web.zip`.
+The package installs only the matching binary and the single web archive at
+`/usr/share/kaiplus/kaiplus-web.zip`; it does not unpack a `www` directory or duplicate
+the web assets inside the binary. The init script passes `--web-zip` explicitly.
+The server uses zipserve to send individually precompressed Brotli entries to
+clients accepting `br`, with streaming identity fallback for other clients.
+HTML stays uncompressed for runtime base-path injection and SPA routing.
+Publish the tarball, `kaiplus-web.zip`, and `release.json` together from the
+same Reasonix release build. Standalone binaries continue to embed the ZIP.
+
+The KaiPlus runtime requires ChangeGuard >= 0.3.5-r2, and ChangeGuard requires
+Linkspace >= 0.3.3-r2 (OPKG uses the equivalent `-2` suffix). These minimum
+versions belong to runtime package dependencies so an installation cannot
+silently reuse incompatible protection components.
+The market `config.sh` saves the KaiPlus data and backup directories and starts
+the service. The default backup directory is the disk-root `TimeMachine`
+folder beside `Configs`; KaiPlus applies that global value to ChangeGuard. A
+service-start failure is returned to the installer. The focused first-install check is
 `python3 apps/kaiplus/tests/test_fresh_install.py`.
 
-Verify the published binaries against the recipe (downloads both architectures,
+Verify the published runtime archive against the recipe (checks both architectures,
 checks the hashes and ELF targets, and runs the matching native version command):
 
 ```sh
 KAI_VERIFY_PUBLIC_RELEASE=1 python3 apps/kaiplus/tests/test_fresh_install.py
 CG_VERIFY_PUBLIC_RELEASE=1 python3 apps/changeguard/tests/test_package_contract.py
+```
+
+Before upload, verify the exact local candidate instead:
+
+```sh
+KAI_RUNTIME_RELEASE_DIR=/absolute/path/to/reasonix-kai/releases/build \
+  python3 apps/kaiplus/tests/test_fresh_install.py -v
 ```
 
 Run the focused checks without downloading an OpenWrt SDK:

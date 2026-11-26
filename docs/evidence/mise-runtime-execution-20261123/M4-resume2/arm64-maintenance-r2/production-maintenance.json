@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "scope": "real installed backend with controlled cache/worker fault injection under explicit acceptance storage",
+  "results": [
+    {
+      "name": "real failed install from an unsafe cache entry; UI error and retry",
+      "passed": true
+    },
+    {
+      "name": "actual worker interruption, reload and UI recovery collects task processes",
+      "passed": true
+    },
+    {
+      "name": "remove new nondefault SDK through UI, preserve original receipt and clear cache",
+      "passed": true
+    }
+  ]
+}

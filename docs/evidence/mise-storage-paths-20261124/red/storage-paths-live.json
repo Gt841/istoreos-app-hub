@@ -1,0 +1,6 @@
+{
+  "passed": false,
+  "checks": [],
+  "error": "Storage read must expose disk choices",
+  "pageErrors": []
+}

@@ -1,0 +1,6 @@
+{
+  "host": "192.168.30.7",
+  "exit": 0,
+  "stdout": "[time]\nMon Nov 23 13:48:33 UTC 2026\n0c198f00-4a81-411b-b49b-8caf83f2c6ae\n[kernel-alerts]\nmatched_lines=0\n[physical-block-capacity]\n/sys/block/sda/size sectors=4988928\n/sys/block/sdb/size sectors=33554432\n/sys/block/sdc/size sectors=33554432\n/sys/block/sdd/size sectors=134217728\n[load-and-memory]\n 21:48:33 up  3:17,  load average: 1.03, 1.11, 1.16\nMemAvailable:    1423628 kB\nSwapTotal:             0 kB\n",
+  "stderr": ""
+}

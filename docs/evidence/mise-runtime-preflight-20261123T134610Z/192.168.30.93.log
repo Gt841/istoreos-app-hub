@@ -1,0 +1,182 @@
+[identity]
+Mon Nov 23 13:46:10 UTC 2026
+Linux iStoreOS 6.6.144 #0 SMP Wed Jul 29 05:40:29 2026 aarch64 GNU/Linux
+DISTRIB_ID='iStoreOS'
+DISTRIB_RELEASE='24.10.8'
+DISTRIB_REVISION='2026073111'
+DISTRIB_TARGET='rockchip/armv8'
+DISTRIB_ARCH='aarch64_generic'
+DISTRIB_DESCRIPTION='iStoreOS 24.10.8 2026073111'
+DISTRIB_TAINTS='busybox'
+15109b6a-9070-49ea-88e0-6ba2e17a5545
+ 21:46:10 up  8:25,  load average: 1.81, 1.81, 1.79
+[memory]
+MemTotal:        4022024 kB
+MemAvailable:    3075436 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+[storage-config]
+mise.main.runtime_dir=/mnt/nvme0n1-1/Configs/Runtime/home
+quickstart.main.conf_dir=/mnt/nvme0n1-1/Configs
+quickstart.main.main_dir=/mnt/nvme0n1-1
+openclawmgr.main.base_dir=
+agentflow.main.data_dir=
+[mounts]
+/dev/mmcblk1p3 /overlay ext4 rw,relatime
+overlayfs:/overlay / overlay rw,noatime,lowerdir=/,upperdir=/overlay/upper,workdir=/overlay/work
+/dev/mmcblk1p4 /mnt/mmc1-4 ext4 rw,relatime
+/dev/sda1 /mnt/usb8-1 vfat rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro
+/dev/sda3 /mnt/usb8-3 ext4 rw,relatime
+/dev/nvme0n1p1 /mnt/nvme0n1-1 ext4 rw,relatime
+[disk-kib]
+Filesystem           1024-blocks    Used Available Capacity Mounted on
+/dev/root               164096    164096         0 100% /rom
+tmpfs                  2011012     63124   1947888   3% /tmp
+/dev/mmcblk1p3         1992552   1498924    473148  76% /overlay
+overlayfs:/overlay     1992552   1498924    473148  76% /
+tmpfs                     4096         0      4096   0% /mnt
+/dev/mmcblk1p1           64468     25556     37604  40% /boot
+tmpfs                      512         0       512   0% /dev
+/dev/mmcblk1p4        12634620   6154940   5816080  51% /mnt/mmc1-4
+/dev/sda1               130798      5842    124956   4% /mnt/usb8-1
+/dev/sda3              1992552   1050940    921132  53% /mnt/usb8-3
+/dev/nvme0n1p1       122471024  64230068  51973616  55% /mnt/nvme0n1-1
+overlay              122471024  64230068  51973616  55% /mnt/nvme0n1-1/docker/overlay2/13814a74302669414dfcf6c605edababc6e6d7cbaec095ece2d408a241403a9d/merged
+overlay              122471024  64230068  51973616  55% /mnt/nvme0n1-1/docker/overlay2/78d6655b6d56eef4f3ed261ecfbbea6f5bb2d24c5297c309c09b5437d2c781b8/merged
+[inode-stat]
+path=/ type=overlayfs block=4096 total=498138 free=118287 inodes=131072 free_inodes=115817
+access-writable=yes
+path=/overlay type=ext2/ext3 block=4096 total=498138 free=118287 inodes=131072 free_inodes=115817
+access-writable=yes
+path=/mnt/mmc1-4 type=ext2/ext3 block=4096 total=3158655 free=1454020 inodes=809424 free_inodes=743515
+access-writable=yes
+path=/mnt/nvme0n1-1 type=ext2/ext3 block=4096 total=30617756 free=12993404 inodes=7815168 free_inodes=7503805
+access-writable=yes
+[tools]
+/bin/opkg
+missing=apk
+/bin/ubus
+/sbin/uci
+/usr/bin/jsonfilter
+/usr/bin/jshn
+/usr/bin/lua
+/usr/sbin/curl
+/usr/bin/wget
+/bin/tar
+/usr/bin/xz
+missing=zstd
+/usr/bin/sha256sum
+/usr/bin/timeout
+/bin/stat
+/usr/bin/setsid
+/usr/bin/git
+/usr/bin/ks-cli
+/usr/bin/mise
+missing=node
+missing=npm
+missing=python3
+missing=gcc
+missing=cc
+missing=readelf
+[package-versions]
+agentflow - 0.3.1-1
+ca-bundle - 20260601-r1
+coreutils-stat - 9.7-r1
+coreutils-timeout - 9.7-r1
+curl - 8.19.0-r2
+git - 2.50.2-r1
+git-http - 2.50.2-r1
+istoreenhance - 0.9.0-aa64-3
+jshn - 2025.07.23~49056d17-r1
+jsonfilter - 2025.04.18~8a86fb78-r1
+ks-cli - 0.9.0-1
+lua - 5.1.5-r11
+luci-app-agentflow - 1.0.0
+luci-lib-taskd - 1.0.26
+mise - 2026.8.14-23
+tar - 1.35-r1
+xz-utils - 5.6.2-r2
+[service-presence]
+kspeeder=not-running
+iStoreEnhance=10046
+agentflow=7047
+openclawmgr=not-running
+uhttpd=9050 5294
+rpcd=3020
+dockerd=9896
+incusd=not-running
+agentflow-autostart-exit=0
+istoreenhance-autostart-exit=0
+[installer-locks]
+absent=/tmp/openclawmgr-installer.lock
+absent=/tmp/mise-runtime.lock
+[configured-storage-summary]
+key=mise.main.runtime_dir path=/mnt/nvme0n1-1/Configs/Runtime/home
+Filesystem           1024-blocks    Used Available Capacity Mounted on
+/dev/nvme0n1p1       122471024  64230068  51973616  55% /mnt/nvme0n1-1
+2684176	/mnt/nvme0n1-1/Configs/Runtime/home
+key=quickstart.main.conf_dir path=/mnt/nvme0n1-1/Configs
+Filesystem           1024-blocks    Used Available Capacity Mounted on
+/dev/nvme0n1p1       122471024  64230068  51973616  55% /mnt/nvme0n1-1
+15917852	/mnt/nvme0n1-1/Configs
+[prior-acceptance-directories]
+drwx------    9 root     root          4096 Nov 23 10:39 /mnt/nvme0n1-1/Configs/openclawmgr-acceptance-20261123
+1566084	/mnt/nvme0n1-1/Configs/openclawmgr-acceptance-20261123
+drwx------    8 root     root          4096 Nov 23 14:33 /mnt/nvme0n1-1/Configs/openclawmgr-glibc-acceptance-20261123
+1002900	/mnt/nvme0n1-1/Configs/openclawmgr-glibc-acceptance-20261123
+drwxr-xr-x    5 root     root          4096 Sep  5 13:59 /mnt/nvme0n1-1/Configs/Runtime
+3018888	/mnt/nvme0n1-1/Configs/Runtime
+[kernel-alert-counts]
+[   20.212639] SQUASHFS error: xz decompression failed, data probably corrupt
+[   20.213292] SQUASHFS error: Failed to read block 0xaabab64: -5
+[   20.213809] SQUASHFS error: Unable to read metadata cache entry [aabab62]
+[   20.214407] SQUASHFS error: Unable to read inode 0xeeac0d3e
+[   22.151802] SQUASHFS error: xz decompression failed, data probably corrupt
+[   22.152431] SQUASHFS error: Failed to read block 0xaabab64: -5
+[   22.152994] SQUASHFS error: Unable to read metadata cache entry [aabab62]
+[   22.153600] SQUASHFS error: Unable to read inode 0xeeac0d3e
+matched_lines=8
+[network-head]
+url=https://nodejs.org/dist/index.json http=200 verify=0 seconds=0.831369
+curl-exit=0
+url=https://registry.npmjs.org/openclaw http=200 verify=0 seconds=0.951348
+curl-exit=0
+url=https://github.com/jdx/mise/releases http=200 verify=0 seconds=0.885795
+curl-exit=0
+url=https://go.dev/dl/ http=000 verify=1 seconds=5.001718
+curl-exit=28
+[ks-cli-version]
+0.9.0
+[ks-cli-capability]
+{
+  "schema_version": 1,
+  "command": [
+    "npm",
+    "--version"
+  ],
+  "service_requirement": "never",
+  "environment": {
+    "npm_config_registry": "https://dl-npm.linkease.net:5443"
+  },
+  "url_replacements": [
+    {
+      "source": "https://registry.npmjs.org/<path>",
+      "target": "https://dl-npm.linkease.net:5443/<path>"
+    }
+  ],
+  "integrity_verification": "tool_default",
+  "next_action": "ks-cli npm --version",
+  "next_command": [
+    "ks-cli",
+    "npm",
+    "--version"
+  ],
+  "policy": "local_passthrough",
+  "stages": [
+    "execute"
+  ]
+}
+
+
+[stderr]
+curl: (28) Connection timed out after 5001 milliseconds

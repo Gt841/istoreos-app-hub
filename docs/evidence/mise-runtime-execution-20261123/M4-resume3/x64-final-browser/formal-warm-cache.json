@@ -1,0 +1,19 @@
+{
+  "scope": "verified raw archives only; fresh package-managed SDK and library installation still required",
+  "target": "/mnt/mise-runtime/Runtime-live",
+  "source": "/mnt/mise-runtime/Runtime",
+  "artifacts": [
+    {
+      "sha256": "af36c7ac770770fe3d3c10e85d6bc538e76e57570ba7db7d397fb9f654783ef3",
+      "bytes": 3264806
+    },
+    {
+      "sha256": "2cc12327dbe08f0b9906c6213e7f14c0cdc09cae5a5c64e353639e7bd3d34a01",
+      "bytes": 32114713
+    },
+    {
+      "sha256": "c9c0685740bbb89e836ff81af64d8582db53916cdf09131db482d1dc20f59c70",
+      "bytes": 33396200
+    }
+  ]
+}

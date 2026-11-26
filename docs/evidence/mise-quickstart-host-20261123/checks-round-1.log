@@ -1,0 +1,52 @@
+
+> istore-mise-web@0.1.0 typecheck
+> vue-tsc --noEmit
+
+
+> istore-mise-web@0.1.0 test
+> node --test tests/model.test.ts tests/wrap.test.ts
+
+✔ first use requires persistent storage; invalid and temporary paths rejected (3.803483ms)
+✔ version/architecture/libc identities are distinct and existing environments rejected (0.281531ms)
+✔ npm must be compatible with chosen Node (0.227767ms)
+✔ install completion does not alter application bindings (0.970978ms)
+✔ double submit and parallel plans cannot start duplicate tasks (0.196925ms)
+✔ expired or revised plans cannot submit (0.214792ms)
+✔ referenced runtime and glibc library cannot be removed (0.246926ms)
+✔ OpenClaw disallows musl while generic Node consumer allows it (0.20302ms)
+✔ failed native and integrity checks never commit candidates (0.333024ms)
+✔ cancel cleans candidate; interrupted task requires explicit recovery (0.359821ms)
+✔ offline storage prevents mutation and required acceleration can fall back explicitly (0.161523ms)
+✔ storage switch cannot pretend to migrate existing environments (0.138548ms)
+✔ unreferenced library can be cleaned after its environments are removed (0.139139ms)
+✔ failure injection is one shot and retry requires a new plan (0.209195ms)
+✔ application/default switches are not supported and defaults stay read-only (0.208394ms)
+✔ global default is protected even when no application references it (0.145559ms)
+✔ wrap rejects non-persistent/injected paths and malformed environment IDs (1.184765ms)
+✔ fixed node-24.21.0-x86_64-glibc wrapper routes tools and persists HOME/cache without changing caller (315.140265ms)
+✔ fixed node-24.22.1-x86_64-glibc wrapper routes tools and persists HOME/cache without changing caller (304.37407ms)
+✔ fixed node-24.21.0-x86_64-musl wrapper routes tools and persists HOME/cache without changing caller (303.772657ms)
+✔ fixed python-3.12.10-x86_64-musl wrapper routes tools and persists HOME/cache without changing caller (304.652575ms)
+✔ fixed python-3.13.3-x86_64-glibc wrapper routes tools and persists HOME/cache without changing caller (303.926898ms)
+✔ missing runtime fails before creating the requested HOME (1.38737ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1614.787716
+
+> istore-mise-web@0.1.0 build
+> vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 49 modules transformed.
+rendering chunks...
+computing gzip size...
+../../../../../../../var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/mise-design-dist/index.html                   0.42 kB │ gzip:  0.32 kB
+../../../../../../../var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/mise-design-dist/assets/index-D5oReuFS.css   56.27 kB │ gzip: 11.11 kB
+../../../../../../../var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/mise-design-dist/assets/index-DZFNAEEN.js   137.70 kB │ gzip: 52.70 kB
+✓ built in 1.47s

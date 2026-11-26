@@ -1,0 +1,14 @@
+task=true
+== install progress
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/sqlite-vec-linux-x64 100ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/sqlite-vec-darwin-x64 105ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/sqlite-vec-linux-arm64 73ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/sqlite-vec-windows-x64 55ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/sqlite-vec-darwin-arm64 61ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mcache[39m sqlite-vec-linux-arm64@https://dl-npm.linkease.net:5443/sqlite-vec-linux-arm64/-/sqlite-vec-linux-arm64-0.1.7.tgz 1ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m sqlite-vec@https://dl-npm.linkease.net:5443/sqlite-vec/-/sqlite-vec-0.1.7.tgz 0ms (cache hit)
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m uuid@9.0.1: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m @mariozechner/pi-tui@0.63.1: please use @earendil-works/pi-tui instead going forward
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m @mariozechner/pi-ai@0.63.1: please use @earendil-works/pi-ai instead going forward
+[1mnpm[22m [33mwarn[39m [94mdeprecated[39m @mariozechner/pi-coding-agent@0.63.1: please use @earendil-works/pi-coding-agent instead going forward
+boot=f039b600-93fd-4760-ac6c-a5c6e9e70867

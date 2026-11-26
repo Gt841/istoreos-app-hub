@@ -1,0 +1,8 @@
+{
+  "host": "192.168.30.7",
+  "command": "setsid timeout -k 5 40 lua /mnt/mise-runtime/acceptance/M2/timeout-cancel.lua /mnt/mise-runtime/acceptance/M2/share /mnt/mise-runtime/acceptance/M2/selfcheck-opt3",
+  "exit": 1,
+  "stdout": "{\"reported_status\":\"canceled\",\"child_pid\":29505,\"child_survived\":true,\"worker_group\":29503,\"cleanup_group\":29504,\"candidate_removed\":true,\"lock_removed\":true,\"task\":\"task-1795445272-4d22ccd8a95bbc0819533bec\",\"child_group\":29504}\n",
+  "stderr": "",
+  "scope": "optimization-3 extended acceptance"
+}

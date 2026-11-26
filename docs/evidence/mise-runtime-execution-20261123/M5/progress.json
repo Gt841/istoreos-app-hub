@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "optimization": 2,
+  "goal": "OpenClaw releases bind exact public mise-runtime instances; actual nonroot Gateway/vector queries and rollback on both architectures",
+  "task_tree": [
+    "shared binding resolver and app policy",
+    "installer/CLI/procd/status/dependency migration",
+    "native vector and receipt checks",
+    "legacy migration/failure/cancel/uninstall boundaries",
+    "real dual-arch direct deployment/Gateway/reboot verification; packaging deferred"
+  ],
+  "acceptance": "M5 criteria in runtime-milestones.md; no Gateway/vector pass inherited from M4",
+  "published": false,
+  "validation_mode": "dual-arch actual direct deployment; normal reboot; real LuCI",
+  "package_build": "deferred for manual confirmation",
+  "source_self_check": {
+    "application_tests": 59,
+    "passed": 58,
+    "skipped": 1,
+    "device_binding_checks_per_arch": 16,
+    "source_scope": "staged application bridge with real M4-installed SDK; Gateway/actual vectors still pending",
+    "duration_seconds": 117.235,
+    "note": "Actual shipped shell transaction with fixture public provisioning; real host Node tests; device Gateway acceptance pending.",
+    "latest_delta": "14 RuntimeChecks:13 pass1skipped;3 installation cases pass after lifecycle env change"
+  },
+  "updated_at": "2026-11-24T05:10:59.292237+00:00",
+  "optimization_scope": "Actual SIGKILL orphan npm recovery; ARM npm transitive Github lifecycle download timeout",
+  "actual_gateway": {
+    "x64": "passed including OpenClaw loader vector query",
+    "arm64": "passed after fresh direct install, nonroot UID32771, actual OpenClaw loader vec0 query; serial boundary rerun pending after harness overlap"
+  },
+  "actual_legacy": {
+    "x64": "passed: real private GNU legacy fixture upgrade/uninstall and independent caller preserved",
+    "arm64": "passed: real private GNU legacy fixture upgrade/uninstall, data/auth and independent caller preserved"
+  },
+  "remaining": [],
+  "actual_hardware": "Both architectures passed fresh Gateway/own-loader vector, legacy upgrade/uninstall, cutover failure rollback, missing SDK/vector refusal, cancellation/SIGKILL/owned shared SDK cancel, runtime/library independence"
+}

@@ -1,0 +1,8 @@
+{
+  "host": "192.168.30.93",
+  "command": "lua /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M3/node-engines.lua /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M3/share /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime /usr/bin/mise /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M3/engines-entry.json",
+  "exit": 0,
+  "stdout": "PASS incompatible actual npm engines rejects candidate and preserves existing Node, state and lock\n",
+  "stderr": "",
+  "round": "optimization 3 nonroot ks-cli compatibility and completion checks"
+}

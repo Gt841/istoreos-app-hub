@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://go.dev/dl/?mode=json",
+    "exit": 22,
+    "http": "405",
+    "stderr": " Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0    19    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\ncurl: (22) The requested URL returned error: 405\n"
+  },
+  {
+    "url": "https://dl.google.com/go/go1.27.4.linux-amd64.tar.gz",
+    "exit": 0,
+    "http": "200",
+    "stderr": "                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n  0 67.4M    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n"
+  },
+  {
+    "url": "https://static.rust-lang.org/dist/channel-rust-1.91.1.toml",
+    "exit": 0,
+    "http": "200",
+    "stderr": "                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n  0 1009k    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n"
+  },
+  {
+    "url": "https://github.com/astral-sh/python-build-standalone/releases",
+    "exit": 0,
+    "http": "200",
+    "stderr": "   0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n"
+  }
+]

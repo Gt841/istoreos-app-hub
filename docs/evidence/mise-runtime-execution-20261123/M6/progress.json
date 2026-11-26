@@ -1,0 +1,33 @@
+{
+  "status": "failed-after-three-optimizations",
+  "optimization": 3,
+  "goal": "Fixed dual-arch GNU/musl Python with bundled verified pip/venv and isolated application environments",
+  "task_tree": [
+    "SDK install/probe and GNU/musl launcher",
+    "bundled pip/ensurepip/venv",
+    "private venv ownership and fixed subprocess/console scripts",
+    "pip acceleration and production UI",
+    "dual-arch full matrix, failures, TLS/native wheels and reboot"
+  ],
+  "acceptance": "M6 in runtime-milestones.md; actual devices mandatory; packaging deferred per user",
+  "raw_cache_ready": [
+    "../python-prefetch-x64.json",
+    "../python-prefetch-arm64.json"
+  ],
+  "initial_failure": "musl bundled OpenSSL reads incompatible OpenWrt engine/provider config; both failed candidates cleaned",
+  "fix": "private bundled-default OpenSSL config; preserve explicit override and system CA trust",
+  "second_failure": "nonroot ks-cli cannot read protected host UCI; pip PATH missing already-shipped non-secret UCI adapter",
+  "second_fix": "pip acceleration prepends common native/bin like Node, keeping original root UCI private",
+  "third_failure": "real venv site pip.conf target bypass reproduced: pip rc0 and escaped target created",
+  "third_fix": "validate pip configuration in selected venv so sys.prefix and site config match eventual pip command",
+  "blocker": "Both actual venv site pip.conf target escape regressions still fail after third optimization; no M7/M8 start",
+  "remaining": [
+    "pip configuration isolation defect",
+    "final full application regression",
+    "real LuCI Python install/usage flow",
+    "Python reboot acceptance"
+  ],
+  "package_policy": "no automatic IPK/APK compilation; direct file/binary/frontend deployment",
+  "historical_record": true,
+  "superseded_by": "../M6-resume1/verification.md"
+}

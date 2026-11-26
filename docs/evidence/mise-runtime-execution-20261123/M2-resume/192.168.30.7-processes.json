@@ -1,0 +1,8 @@
+{
+  "host": "192.168.30.7",
+  "command": "lua /mnt/mise-runtime/acceptance/M2/timeout-cancel.lua /mnt/mise-runtime/acceptance/M2/share /mnt/mise-runtime/acceptance/M2/selfcheck-opt3 && lua /mnt/mise-runtime/acceptance/M2/process-lifecycle.lua /mnt/mise-runtime/acceptance/M2/share /mnt/mise-runtime/acceptance/M2/selfcheck-opt3",
+  "exit": 0,
+  "stdout": "{\"candidate_removed\":true,\"reported_status\":\"canceled\",\"worker_group\":4667,\"lock_removed\":true,\"child_survived\":false,\"child_group\":4668,\"task\":\"task-1795445844-55affd1fcda33e80e59d911b\",\"child_pid\":4668}\nPASS 1 cancel reaps timed command and TERM-ignoring grandchild\nPASS 2 natural deadline reaps grandchild before failed terminal state\nPASS 3 SIGKILL worker recovery uses persisted command ownership\nPASS 4 successful command cannot leak background process\nPASS 5 PID identity mismatch refuses signaling\nPASS 6 commit publication recovery preserves a subsequent lock\npassed=6\n",
+  "stderr": "",
+  "round": "resume optimization 1 focused"
+}

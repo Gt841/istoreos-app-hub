@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "scope": "local sandbox, real helper source, not package install",
+  "checks": [
+    "idempotent compatibility registration",
+    "idempotent owned-link removal",
+    "custom regular file preserved",
+    "custom symlink preserved"
+  ]
+}

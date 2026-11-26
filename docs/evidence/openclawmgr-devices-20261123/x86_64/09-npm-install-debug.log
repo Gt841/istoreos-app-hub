@@ -1,0 +1,30 @@
+== original npm install debug tail
+log=/mnt/vio4-0/OpenClawMgr-acceptance-20261123/npm-cache/_logs/2026-11-23T01_43_55_258Z-debug-0.log
+1 info using npm@11.19.1
+2 info using node@v24.22.1
+3 silly config load:file:/mnt/vio4-0/OpenClawMgr-acceptance-20261123/.install.HjHmhe/candidate/node/lib/node_modules/npm/npmrc
+4 silly config load:file:/mnt/vio4-0/OpenClawMgr-acceptance-20261123/.install.HjHmhe/npm-home/.npmrc
+5 silly config load:file:/mnt/vio4-0/OpenClawMgr-acceptance-20261123/.install.HjHmhe/candidate/global/etc/npmrc
+6 verbose title npm install /mnt/vio4-0/OpenClawMgr-acceptance-20261123/.install.HjHmhe/openclaw-2026.3.28.tgz
+7 verbose argv "install" "--global" "/mnt/vio4-0/OpenClawMgr-acceptance-20261123/.install.HjHmhe/openclaw-2026.3.28.tgz" "--prefix" "/mnt/vio4-0/OpenClawMgr-acceptance-20261123/.install.HjHmhe/candidate/global" "--allow-scripts" "openclaw" "--no-audit" "--no-fund" "--no-progress" "--foreground-scripts"
+8 verbose logfile logs-max:10 dir:/mnt/vio4-0/OpenClawMgr-acceptance-20261123/npm-cache/_logs/2026-11-23T01_43_55_258Z-
+9 verbose logfile /mnt/vio4-0/OpenClawMgr-acceptance-20261123/npm-cache/_logs/2026-11-23T01_43_55_258Z-debug-0.log
+10 silly packumentCache heap:1129578496 maxSize:282394624 maxEntrySize:141197312
+11 silly logfile done cleaning log files
+12 silly idealTree buildDeps
+13 silly fetch manifest openclaw@file:../../../openclaw-2026.3.28.tgz
+14 silly placeDep ROOT openclaw@2026.3.28 OK for:  want: file:../../../openclaw-2026.3.28.tgz
+15 silly fetch manifest @napi-rs/canvas@^0.1.89
+16 silly packumentCache full:https://dl-npm.linkease.net:55443/@napi-rs%2fcanvas cache-miss
+17 http fetch GET https://dl-npm.linkease.net:55443/@napi-rs%2fcanvas attempt 1 failed with 502
+18 http fetch GET https://dl-npm.linkease.net:55443/@napi-rs%2fcanvas attempt 2 failed with 502
+19 http fetch GET https://dl-npm.linkease.net:55443/@napi-rs%2fcanvas attempt 3 failed with ECONNRESET
+20 silly fetch manifest @agentclientprotocol/sdk@0.17.0
+21 silly packumentCache full:https://dl-npm.linkease.net:55443/@agentclientprotocol%2fsdk cache-miss
+22 http fetch GET https://dl-npm.linkease.net:55443/@agentclientprotocol%2fsdk attempt 1 failed with ECONNREFUSED
+23 http fetch GET https://dl-npm.linkease.net:55443/@agentclientprotocol%2fsdk attempt 2 failed with ECONNREFUSED
+24 http fetch GET https://dl-npm.linkease.net:55443/@agentclientprotocol%2fsdk attempt 3 failed with ECONNREFUSED
+25 silly fetch manifest @anthropic-ai/vertex-sdk@^0.14.4
+26 silly packumentCache full:https://dl-npm.linkease.net:55443/@anthropic-ai%2fvertex-sdk cache-miss
+27 http fetch GET https://dl-npm.linkease.net:55443/@anthropic-ai%2fvertex-sdk attempt 1 failed with ECONNREFUSED
+28 http fetch GET https://dl-npm.linkease.net:55443/@anthropic-ai%2fvertex-sdk attempt 2 failed with ECONNREFUSED

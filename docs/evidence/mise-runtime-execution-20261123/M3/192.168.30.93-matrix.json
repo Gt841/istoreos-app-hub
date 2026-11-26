@@ -1,0 +1,8 @@
+{
+  "host": "192.168.30.93",
+  "command": "lua /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M3/node-install.lua /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M3/share /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime /usr/bin/mise /usr/bin/ks-cli http://127.0.0.1:5003 all",
+  "exit": 0,
+  "stdout": "REUSE node-24.21.0-aarch64-glibc-upstream1\nSTART node-24.21.0-aarch64-glibc-upstream1-npm11.12.1 task-1795447195-2002b07123a42e2fb0014296\nPASS node-24.21.0-aarch64-glibc-upstream1-npm11.12.1\nSTART node-24.21.0-aarch64-musl-upstream1 task-1795447236-7293c25ac95b0bc32b2f2d22\nPASS node-24.21.0-aarch64-musl-upstream1\nSTART node-24.22.1-aarch64-glibc-upstream1 task-1795447336-9bf3697ff9b164ae2db3bca9\nPASS node-24.22.1-aarch64-glibc-upstream1\nSTART node-24.22.1-aarch64-musl-upstream1 task-1795447394-1e99e243d0b614e1a919e743\nPASS node-24.22.1-aarch64-musl-upstream1\ninstalled=5\n",
+  "stderr": "",
+  "round": "optimization 1 full Node matrix"
+}

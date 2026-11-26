@@ -1,0 +1,8 @@
+running=true
+== native/script progress
+2026-11-23 10:17:37 [openclawmgr] Installation phase: preparing
+== tail
+2026-11-23 10:17:37 [openclawmgr] Installation phase: preparing
+/mnt/vio4-0/OpenClawMgr-acceptance-20261123/npm-cache/node-24.22.1-x64-musl.tar.xz: OK
+24.22.1
+11.19.1

@@ -1,0 +1,24 @@
+{
+  "sqlite_vec": {
+    "nearestNeighbor": true,
+    "loader": "openclaw-memory-host",
+    "version": "v0.1.7",
+    "available": true
+  },
+  "pid": 6936,
+  "checks": {
+    "sqlite_vec": true,
+    "authenticated_health": true,
+    "preparation_ready": true,
+    "dedicated_uid": true,
+    "current_repository": true,
+    "procd_running": true,
+    "application_home": true
+  },
+  "npm": "11.19.1",
+  "passed": true,
+  "base_dir": "/mnt/vio4-0/Configs/OpenClawMgr",
+  "uid": 32771,
+  "node": "24.22.1",
+  "storage_root": "/mnt/vio4-0/Configs/Runtime"
+}

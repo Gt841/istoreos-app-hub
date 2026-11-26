@@ -1,0 +1,80 @@
+{
+  "status": "not-ready-for-complete-device-acceptance",
+  "implementation_started": false,
+  "router_mutations": false,
+  "preflight_date_utc": "2026-11-23",
+  "development": {
+    "ssd_free_gib": 219.1,
+    "source_disk_free_gib": 236.2,
+    "ssd_free_inodes": 26450493,
+    "available_ram_gib": 27.7,
+    "node": "24.15.0",
+    "npm": "11.12.1",
+    "python": "3.12.3",
+    "frontend_dependencies_present": true,
+    "playwright_browser_present": true
+  },
+  "builder": {
+    "host": "abc@192.168.9.19:7022",
+    "preflight_passed": true,
+    "free_gib": 185.6,
+    "free_inodes": 69460518,
+    "cpus": 8,
+    "mise_profiles_present": false,
+    "source_mode": "feeds-only",
+    "full_build_executed": false
+  },
+  "x86_64": {
+    "host": "192.168.30.7",
+    "ssh": true,
+    "data_mount": "/mnt/vio4-0",
+    "data_free_gib": 7.65,
+    "data_free_inodes": 766513,
+    "available_ram_gib": 1.36,
+    "swap": false,
+    "kernel_alerts_observed": 0,
+    "mise_installed": false,
+    "ks_cli_installed": false,
+    "additional_disk": {
+      "path": "/dev/sdd",
+      "capacity_gib": 64,
+      "mounted": false,
+      "partition_or_filesystem_signature_detected": false,
+      "data_absence_proven": false
+    }
+  },
+  "aarch64": {
+    "host": "192.168.30.93",
+    "ssh": true,
+    "data_mount": "/mnt/nvme0n1-1",
+    "data_free_gib": 49.57,
+    "data_free_inodes": 7503805,
+    "available_ram_gib": 2.93,
+    "root_free_mib": 462.1,
+    "swap": false,
+    "squashfs_error_lines_observed": 8,
+    "error_timestamps_seconds_after_boot": [
+      20,
+      22
+    ],
+    "alerts_increased_during_probe": false,
+    "root_cause_known": false,
+    "mise_installed": "2026.8.14-23",
+    "ks_cli_installed": "0.9.0",
+    "gateway_routes_http": 200,
+    "agentflow_running": true
+  },
+  "capacity_budget": {
+    "recommended_free_gib_per_router_for_full_matrix": 30,
+    "kind": "planning-reserve-not-measured-artifact-sum",
+    "recommendation": "Allocate isolated persistent storage; do not reclaim unrelated mounts or old evidence automatically."
+  },
+  "gates_before_full_execution": [
+    "prepare independent x86 persistent filesystem, considering unmounted 64 GiB disk without assuming it is empty",
+    "resolve ARM SquashFS errors and recheck after reboot or use a healthy explicitly selected ARM device",
+    "complete x86 mise/ks-cli and acceleration prerequisite preparation",
+    "validate actual pinned artifact downloads for all tools, including Go and ARM Rust",
+    "add reproducible mise/OpenClaw build profiles and feed/candidate input strategy"
+  ],
+  "recommendation": "Allow M1 contract/local development after user chooses to start; defer full device execution until prerequisite gates pass."
+}

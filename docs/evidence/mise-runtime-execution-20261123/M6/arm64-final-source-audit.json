@@ -1,0 +1,301 @@
+{
+  "boot_id": "6dda18fd-f437-4407-8630-b5427cd41570",
+  "configs_preserved": 1,
+  "arch": "aarch64",
+  "files": [
+    {
+      "target": "/usr/share/mise-runtime/catalog.json",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/execute.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/lib/adapters.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/lib/artifacts.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/lib/contract.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/lib/defaults.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/lib/execution.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/lib/libraries.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/lib/network.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/lib/python.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/lib/registration.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/lib/status.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/lib/store.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/lib/system.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/lib/tasks.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/lib/wire.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/licenses/GCC-exception-3.1.txt",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/licenses/GPL-3.0.txt",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/licenses/LGPL-2.1.txt",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/licenses/sources.json",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/main.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/sbin/mise-runtime",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/native/bin/uci",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/node-loader.cjs",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/npm.json",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/python-launch.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/python-openssl.cnf",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/python-venv.py",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/native/bin/exec-user",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/native/bin/python-launch-musl",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise-runtime/native/bin/python-launch-glibc",
+      "passed": true
+    },
+    {
+      "target": "/usr/lib/lua/luci/controller/mise.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/lib/lua/luci/model/mise/transport.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/lib/lua/luci/view/mise/index.htm",
+      "passed": true
+    },
+    {
+      "target": "/www/luci-static/resources/mise/LICENSE.quickstart",
+      "passed": true
+    },
+    {
+      "target": "/www/luci-static/resources/mise/LICENSE.vue",
+      "passed": true
+    },
+    {
+      "target": "/www/luci-static/resources/mise/app.js",
+      "passed": true
+    },
+    {
+      "target": "/www/luci-static/resources/mise/logo.svg",
+      "passed": true
+    },
+    {
+      "target": "/www/luci-static/resources/mise/style.css",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise/mise-plugin.json",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/mise/register-desktop.sh",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/rpcd/acl.d/luci-app-mise.json",
+      "passed": true
+    },
+    {
+      "target": "/usr/lib/lua/luci/controller/openclawmgr.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/lib/lua/luci/model/cbi/openclawmgr/cli.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/lib/lua/luci/model/openclawmgr.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/lib/lua/luci/view/openclawmgr/app.htm",
+      "passed": true
+    },
+    {
+      "target": "/usr/lib/lua/luci/view/openclawmgr/cli.htm",
+      "passed": true
+    },
+    {
+      "target": "/usr/lib/lua/luci/view/openclawmgr/diag.htm",
+      "passed": true
+    },
+    {
+      "target": "/usr/lib/lua/luci/view/openclawmgr/logs.htm",
+      "passed": true
+    },
+    {
+      "target": "/www/luci-static/resources/openclawmgr/app.css",
+      "passed": true
+    },
+    {
+      "target": "/www/luci-static/resources/openclawmgr/app.js",
+      "passed": true
+    },
+    {
+      "target": "/www/luci-static/resources/openclawmgr/openclaw.svg",
+      "passed": true
+    },
+    {
+      "target": "/etc/init.d/openclawmgr",
+      "passed": true
+    },
+    {
+      "target": "/usr/libexec/istorec/openclawmgr.sh",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/openclawmgr/cli-bin/npm",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/openclawmgr/env-value.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/openclawmgr/gateway.sh",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/openclawmgr/glibc-node.sh",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/openclawmgr/install-runtime.sh",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/openclawmgr/native-downloads.json",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/openclawmgr/node-loader.cjs",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/openclawmgr/node-pins.sh",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/openclawmgr/npm-env.sh",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/openclawmgr/npm-git.sh",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/openclawmgr/npm-lifecycle.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/openclawmgr/npm-lifecycle.sh",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/openclawmgr/oc-config.sh",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/openclawmgr/openclawmgr-cli.sh",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/openclawmgr/processes.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/openclawmgr/runtime-check.cjs",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/openclawmgr/runtime-policy.json",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/openclawmgr/shared-runtime.lua",
+      "passed": true
+    },
+    {
+      "target": "/usr/share/rpcd/acl.d/luci-app-openclawmgr.json",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "scope": "exact bytes/modes from explicit development deployment; not package ownership/dependency verification"
+}

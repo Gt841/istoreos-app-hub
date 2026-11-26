@@ -1,0 +1,40 @@
+{
+  "artifact_set": "1bc9b21d287a4bcf62e8a36c3dc7781901d19ffe7ee3d199c4d9e12fbcae1c61",
+  "entry": {
+    "abi": "native",
+    "arch": "x86_64",
+    "artifact_set": "1bc9b21d287a4bcf62e8a36c3dc7781901d19ffe7ee3d199c4d9e12fbcae1c61",
+    "artifacts": [
+      {
+        "bytes": 57411036,
+        "format": "tar.xz",
+        "sha256": "3581863e3cbcfd0fce0efc682ce7e9e93da96668a977791d356a26d2a7e9b17a",
+        "strip": 1,
+        "url": "https://ziglang.org/download/0.17.1/zig-x86_64-linux-0.17.1.tar.xz"
+      }
+    ],
+    "availability": "available",
+    "build": "upstream1",
+    "id": "zig-0.17.1-x86_64-native-upstream1",
+    "layout": "zig",
+    "source": "https://ziglang.org/download/index.json",
+    "tool": "zig",
+    "version": "0.17.1"
+  },
+  "installed_at": 1795514389,
+  "instance": "zig-0.17.1-x86_64-native-upstream1-1bc9b21d287a4bcf62e8a36c3dc7781901d19ffe7ee3d199c4d9e12fbcae1c61",
+  "mise_key": "istore-zig-0.17.1-x86_64-native-upstream1-1bc9b21d287a4bcf62e8a36c3dc7781901d19ffe7ee3d199c4d9e12fbcae1c61",
+  "probes": {
+    "abi": "passed",
+    "arch": "passed",
+    "compile": "passed",
+    "complete_library": "passed",
+    "environment": "passed",
+    "execute": "passed",
+    "launcher": "passed",
+    "version": "passed"
+  },
+  "root": "/mnt/mise-runtime/Runtime-live",
+  "schema_version": 1,
+  "verified": true
+}

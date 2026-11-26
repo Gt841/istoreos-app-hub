@@ -1,0 +1,10 @@
+task=true
+== install progress
+2026-11-23 13:13:19 [openclawmgr] Installation phase: preparing
+2026-11-23 13:14:16 [openclawmgr] Installing OpenClaw 2026.3.28 and dependencies
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/sqlite-vec 1023ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@aws-sdk%2ftypes 240ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/sisteransi 46ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@smithy%2ffetch-http-handler 180ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@aws-sdk%2fcredential-provider-node 143ms (cache stale)
+boot=f039b600-93fd-4760-ac6c-a5c6e9e70867

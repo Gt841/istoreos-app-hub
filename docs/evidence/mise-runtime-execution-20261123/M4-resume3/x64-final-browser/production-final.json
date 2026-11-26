@@ -1,0 +1,16 @@
+{
+  "scope": "final real SDK IPKs after reinstall and installed-file verification",
+  "passed": false,
+  "results": [
+    {
+      "name": "final installed package authentication/ACL/CSRF reject side effects",
+      "passed": true
+    },
+    {
+      "name": "final UI installs a second ABI through a fixed, verified archive cache",
+      "passed": false,
+      "error": "locator.waitFor: Error: strict mode violation: getByRole('heading', { name: '安装 Node.js 24.22.1', exact: true }) resolved to 5 elements:\n    1) <h3 data-v-27ad71be=\"\">安装 Node.js 24.22.1</h3> aka getByRole('article').filter({ hasText: '安装 Node.js 24.22.1解包环境进行中查看任务' }).getByRole('heading')\n    2) <h3 data-v-27ad71be=\"\">安装 Node.js 24.22.1</h3> aka getByRole('article').filter({ hasText: '安装 Node.js 24.22.1任务已取消，候选已清理已取消查看任务' }).getByRole('heading')\n    3) <h3 data-v-27ad71be=\"\">安装 Node.js 24.22.1</h3> aka getByRole('article').filter({ hasText: '安装 Node.js 24.22.1安装完成已完成查看任务' }).getByRole('heading')\n    4) <h3 data-v-27ad71be=\"\">安装 Node.js 24.22.1</h3> aka getByRole('article').filter({ hasText: '安装 Node.js 24.22.1Unsafe' }).getByRole('heading')\n    5) <h2 id=\"v-1\" data-v-52124332=\"\">安装 Node.js 24.22.1</h2> aka getByLabel('安装 Node.js').getByRole('heading', { name: '安装 Node.js 24.22.1' })\n\nCall log:\n\u001b[2m  - waiting for getByRole('heading', { name: '安装 Node.js 24.22.1', exact: true }) to be visible\u001b[22m\n"
+    }
+  ],
+  "pageErrors": []
+}

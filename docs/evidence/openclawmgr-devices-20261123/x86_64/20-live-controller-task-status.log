@@ -1,0 +1,6 @@
+lua: ...-acceptance-20261123/assets/candidate-controller.lua:72: attempt to call field 'write_json' (a nil value)
+stack traceback:
+	...-acceptance-20261123/assets/candidate-controller.lua:72: in function 'write_json'
+	...-acceptance-20261123/assets/candidate-controller.lua:815: in function 'action_status'
+	stdin:13: in main chunk
+	[C]: ?

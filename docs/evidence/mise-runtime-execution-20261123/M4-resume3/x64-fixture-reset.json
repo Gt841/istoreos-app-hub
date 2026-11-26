@@ -1,0 +1,7 @@
+{
+  "reason": "heading matched historical tasks; wait for this real install, remove only the test musl SDK, rerun complete scenario",
+  "removed": "node-24.22.1-x86_64-musl-upstream1-npm11.19.1-d68ada2cc482a7089cccf37fa713377ba34d3f9c28402f0c964fcec50ad385f5",
+  "remaining": [
+    "node-24.21.0-x86_64-glibc-upstream1-npm11.19.0-glibc-2.39-ubuntu8-gcc12-legal1-r1-x86_64-3c978e5d25a3a081a1b08f661b79fe92eb2c95f10b625b981a43b56b40eb4463"
+  ]
+}

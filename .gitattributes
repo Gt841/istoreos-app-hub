@@ -1,0 +1,4 @@
+# Preserve upstream license text and captured evidence bytes verbatim.
+apps/mise/mise-runtime/files/licenses/*.txt -whitespace
+docs/evidence/mise*/**/*.json -whitespace
+docs/evidence/mise*/**/*.log -whitespace

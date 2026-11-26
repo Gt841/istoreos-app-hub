@@ -1,0 +1,47 @@
+{
+  "milestone": "M4",
+  "status": "failed-after-three-optimizations",
+  "checks": {
+    "frontend_typecheck": "passed",
+    "production_build_no_design_imports": "passed",
+    "device_wire_online_unconfigured_offline_both_architectures": "passed",
+    "builder_tests": "11 passed",
+    "builder_preflight": "passed",
+    "patch_application_byte_hashes": "45 passed",
+    "runtime_deploy_verify": "passed",
+    "real_sdk_builds": "stopped: failed status, no packages",
+    "package_installation": "pending",
+    "real_luci_browser": "pending",
+    "mirror_profile_membership": "failed"
+  },
+  "optimization_history": [
+    {
+      "round": 1,
+      "failure": "Vue click handler event type incompatible with optional boolean argument",
+      "change": "call refresh() explicitly",
+      "check": "typecheck and production Vite build passed"
+    },
+    {
+      "round": 2,
+      "failure": "text feed patch malformed because license lacks final newline",
+      "change": "emit GNU patch no-newline markers",
+      "check": "still failed: Python splitlines also treats license form-feed as newline"
+    },
+    {
+      "round": 3,
+      "change": "split only actual newline via StringIO; GNU patch byte-exact verification and regression test",
+      "check": "45 input hashes and 11 builder tests passed; real SDK/device acceptance pending"
+    }
+  ],
+  "builder_commit": "c802be5a0ddd4ad1c1994ebfc5d3dac225aef36f",
+  "patch_sha256": "6182b1728aa1dedfb26e8d3a783a143dd26b998bee4604c96511ffcff34ee6c7",
+  "build_ids": [
+    "mise-m4-x64-20261124T014500Z",
+    "mise-m4-arm64-20261124T014500Z"
+  ],
+  "published": false,
+  "real_packages_installed": false,
+  "failure": "Mise profiles reused a mirror file that references disabled nas/nas_luci/istore feeds; seed_feed_checkouts rejects this configuration",
+  "build_termination": "Intentionally stopped only the two verified BUILD_ID containers before package compilation; exit137; real build.status=failed",
+  "next_fix": "Create dedicated mise mirror configuration containing only enabled feeds, then rerun new immutable builds after continuation authorization"
+}

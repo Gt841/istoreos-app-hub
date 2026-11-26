@@ -1,0 +1,16 @@
+{
+  "source": "https://fw.koolcenter.com/binary/geili/agentflow/build/version.json",
+  "version": "0.3.5-20261019-101caed9",
+  "linux": {
+    "amd64": {
+      "file": "agentflow-linux-amd64",
+      "sha256": "213d44adfde5537eada6ed24bc1d90dfc6e955f103d3650d3d6876d644dfbb48",
+      "url": "https://fw.koolcenter.com/binary/geili/agentflow/build/agentflow-linux-amd64"
+    },
+    "arm64": {
+      "file": "agentflow-linux-arm64",
+      "sha256": "70ed6061ad7d324df58d7262580da83ec23b5af3a45370ee10f97387fdec45da",
+      "url": "https://fw.koolcenter.com/binary/geili/agentflow/build/agentflow-linux-arm64"
+    }
+  }
+}

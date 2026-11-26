@@ -1,0 +1,14 @@
+[
+  {
+    "device": "mmcblk1p2",
+    "exit": 0,
+    "release": "DISTRIB_ID='iStoreOS'\nDISTRIB_RELEASE='24.10.8'\nDISTRIB_REVISION='2026073111'\nDISTRIB_TARGET='rockchip/armv8'\nDISTRIB_ARCH='aarch64_generic'\nDISTRIB_DESCRIPTION='iStoreOS 24.10.8 2026073111'\nDISTRIB_TAINTS='busybox'\n",
+    "stderr": ""
+  },
+  {
+    "device": "sda2",
+    "exit": 0,
+    "release": "DISTRIB_ID='iStoreOS'\nDISTRIB_RELEASE='22.03.7'\nDISTRIB_REVISION='2025051615'\nDISTRIB_TARGET='x86/64'\nDISTRIB_ARCH='x86_64'\nDISTRIB_DESCRIPTION='iStoreOS 22.03.7 2025051615'\nDISTRIB_TAINTS='busybox'\n",
+    "stderr": ""
+  }
+]

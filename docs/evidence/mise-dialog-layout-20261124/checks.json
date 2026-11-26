@@ -1,0 +1,19 @@
+{
+  "typecheck": {
+    "passed": true,
+    "command": "/var/cache/build-cache/run.sh -- npm --prefix apps/mise/web run typecheck"
+  },
+  "unit_tests": {
+    "passed": true,
+    "tests": 58,
+    "command": "/var/cache/build-cache/run.sh -- npm --prefix apps/mise/web test"
+  },
+  "live_build": {
+    "passed": true,
+    "output": "/var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/mise-live-dist",
+    "command": "/var/cache/build-cache/run.sh -- bash apps/mise/tools/build-web.sh"
+  },
+  "diff_check": {
+    "passed": true
+  }
+}

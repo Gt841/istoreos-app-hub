@@ -1,0 +1,35 @@
+{
+  "source": "quickstart/web",
+  "files": [
+    {
+      "path": "web/src/home/homeSemanticColors.css",
+      "sha256": "a072474a8efa3f8bdb7f42889346b912e04a91f3949c8f5885a945f314d8e95f"
+    },
+    {
+      "path": "web/src/pages/device/index.vue",
+      "sha256": "0fe1a63e15bfa8fe4ef18762dfb1919eafb3ba002f4686c2616502287bbd91f5"
+    },
+    {
+      "path": "web/src/pages/index/components/Card.vue",
+      "sha256": "7bafbbceb4574f7cef43c173feec3b960633deac99e7934ee7be224b3e33430f"
+    },
+    {
+      "path": "web/src/home/NetworkWidgetDialog.vue",
+      "sha256": "12a9351c40036f313bca3052b591c665d95d4b511c1c010481f75b70d961a918"
+    },
+    {
+      "path": "web/src/pages/device/deviceVisualTokens.css",
+      "sha256": "7cbf55db448277186580ed432ab429b6058fbc7d6fb982acd143cac572797f10"
+    },
+    {
+      "path": "web/src/pages/device/deviceCenterList.vue",
+      "sha256": "2aa5643b904fa902dcca334992eef0849d73c38e735a8080f11d05db88f7ea12"
+    },
+    {
+      "path": "web/src/design/istoreHostShellPrototype.css",
+      "sha256": "40b4a6c3543f28060cee1e0f500392f26e14b8fe04df333386291ecdccba6f09"
+    }
+  ],
+  "policy": "Declarations copied verbatim. Only selector scope/aliases adapted; build has no checkout dependency.",
+  "commit": "ae57186b79ccb3d039fa3bf9f1f473772165c2a3"
+}

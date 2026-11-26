@@ -1,0 +1,6 @@
+== npm target libc
+glibc
+== selected Sharp packages
+colour
+sharp-libvips-linux-x64
+sharp-linux-x64

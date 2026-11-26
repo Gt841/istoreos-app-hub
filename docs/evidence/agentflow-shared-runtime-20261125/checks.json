@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "manual_build_versions": {
+    "mise": {
+      "version": "2026.8.14",
+      "release": "28"
+    },
+    "mise-runtime": {
+      "version": "0.1.1",
+      "release": "1"
+    },
+    "luci-app-mise": {
+      "version": "0.1.1",
+      "release": "1"
+    },
+    "app-meta-mise": {
+      "version": "0.1.1",
+      "release": "1"
+    },
+    "luci-app-openclawmgr": {
+      "version": "0.1.13",
+      "release": "1"
+    },
+    "app-meta-openclawmgr": {
+      "version": "0.1.13",
+      "release": "1"
+    },
+    "agentflow": {
+      "version": "0.3.5",
+      "release": "4"
+    },
+    "luci-app-agentflow": {
+      "version": "1.0.1-r6",
+      "release": ""
+    },
+    "app-meta-agentflow": {
+      "version": "0.3.5",
+      "release": "5"
+    }
+  },
+  "local_tests": {
+    "runtime_and_controller": 13,
+    "luci_contracts": 7
+  },
+  "lua_shell_javascript_gettext_checks": "passed (gettext emitted existing header warnings)",
+  "device": "192.168.30.7",
+  "hardware_architecture": "x86_64",
+  "packages_built": false,
+  "package_database_changed": false,
+  "arm64_device_tested": false,
+  "model_calls_tested": false
+}

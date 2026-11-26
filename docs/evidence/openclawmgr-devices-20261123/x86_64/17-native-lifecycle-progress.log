@@ -1,0 +1,25 @@
+== native lifecycle events
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/es-errors 301ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/is-network-error 248ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m is-network-error@https://dl-npm.linkease.net:55443/is-network-error/-/is-network-error-1.3.2.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m es-errors@https://dl-npm.linkease.net:55443/es-errors/-/es-errors-1.3.0.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m http-errors@https://dl-npm.linkease.net:55443/http-errors/-/http-errors-2.0.1.tgz 0ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/is-network-error/-/is-network-error-1.3.2.tgz 1680ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/es-errors/-/es-errors-1.3.0.tgz 3784ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/http-errors/-/http-errors-2.0.1.tgz 4141ms (cache miss)
+> @google/genai@1.52.0 preinstall
+> echo 'preinstall: no-op'
+preinstall: no-op
+> koffi@2.16.4 install
+> node src/cnoke/cnoke.js -P . -D src/koffi --prebuild
+> sharp@0.34.5 install
+> node install/check.js || npm run build
+> @matrix-org/matrix-sdk-crypto-nodejs@0.4.0 postinstall
+> node download-lib.js
+Downloading lib matrix-sdk-crypto.linux-x64-musl.node from https://github.com/matrix-org/matrix-rust-sdk-crypto-nodejs/releases/download/v0.4.0/matrix-sdk-crypto.linux-x64-musl.node
+== latest
+80.0 kB/s - 56.5% [11.0 MB/19.5 MB]
+48.0 kB/s - 56.7% [11.1 MB/19.5 MB]
+78.6 kB/s - 57.1% [11.1 MB/19.5 MB]
+112.0 kB/s - 57.7% [11.2 MB/19.5 MB]
+112.0 kB/s - 58.2% [11.4 MB/19.5 MB]

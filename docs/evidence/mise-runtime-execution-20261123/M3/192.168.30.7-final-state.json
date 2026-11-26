@@ -1,0 +1,12 @@
+{
+  "host": "192.168.30.7",
+  "exit": 0,
+  "stdout": "BOOT_ID\n6d49212a-fe54-4478-8075-2d5d10fcabd4\nCAPACITY\nFilesystem           1K-blocks      Used Available Use% Mounted on\n/dev/sdd              65478188   1689104  63101612   3% /mnt/mise-runtime\nSERVICE_PIDS\nCONFIG_HASHES\nPROXY_VARIABLE_PRESENCE\nHTTP_PROXY=unset\nHTTPS_PROXY=unset\nALL_PROXY=unset\nhttp_proxy=unset\nhttps_proxy=unset\nall_proxy=unset\nNO_PROXY=unset\nno_proxy=unset\nDIRECT_LOOPBACK_GATEWAY_HTTP\n403\nDIRECT_RESPONSE_DIGEST\nbbff9abf19f8df6f67a4aade3fd66e2cfda4c159fd9e19b4e1fb07bf5fdf7bc0  /mnt/mise-runtime/acceptance/M3/direct-gateway-response\nPUBLIC_KS_CONFIG_PERMISSIONS\n-rw-r--r--    1 root     root           103 Nov 23 23:41 /mnt/mise-runtime/Runtime/network/uci/istoreenhance\nverified-published-instances=5\nlock-present=false\nuid-home-present=65001\nuid-home-present=65002\n",
+  "stderr": "sha256sum: can't open '/etc/config/mise': No such file or directory\nsha256sum: can't open '/lib/functions/mise.sh': No such file or directory\nsh: printenv: not found\nsh: printenv: not found\nsh: printenv: not found\nsh: printenv: not found\nsh: printenv: not found\nsh: printenv: not found\nsh: printenv: not found\nsh: printenv: not found\n",
+  "scope": "read-only diagnosis and final state; not a fourth optimization",
+  "limitations": [
+    "printenv missing: proxy variable section is invalid; use final-verification.json",
+    "system mise files absent on this host by baseline design"
+  ],
+  "gateway_rejection_body": "mirror route is only available from localhost\n"
+}

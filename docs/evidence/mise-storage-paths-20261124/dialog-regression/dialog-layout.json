@@ -1,0 +1,934 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "install-1382-751-light",
+      "passed": true,
+      "geometry": {
+        "x": 411,
+        "y": 16,
+        "width": 560,
+        "height": 719,
+        "vw": 1382,
+        "vh": 751,
+        "scrollWidth": 558,
+        "clientWidth": 558,
+        "header": {
+          "x": 412,
+          "y": 17,
+          "width": 558,
+          "height": 93,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 734,
+        "css": {
+          "position": "fixed",
+          "margin": "16px 411px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "usage-1382-751-light",
+      "passed": true,
+      "geometry": {
+        "x": 411,
+        "y": 28.328125,
+        "width": 560,
+        "height": 694.34375,
+        "vw": 1382,
+        "vh": 751,
+        "scrollWidth": 558,
+        "clientWidth": 558,
+        "header": {
+          "x": 412,
+          "y": 29.328125,
+          "width": 558,
+          "height": 93,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 721.671875,
+        "css": {
+          "position": "fixed",
+          "margin": "28.3281px 411px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "detail-1382-751-light",
+      "passed": true,
+      "geometry": {
+        "x": 411,
+        "y": 160.109375,
+        "width": 560,
+        "height": 430.78125,
+        "vw": 1382,
+        "vh": 751,
+        "scrollWidth": 558,
+        "clientWidth": 558,
+        "header": {
+          "x": 412,
+          "y": 161.109375,
+          "width": 558,
+          "height": 93,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 589.890625,
+        "css": {
+          "position": "fixed",
+          "margin": "160.109px 411px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "confirm-1382-751-light",
+      "passed": true,
+      "geometry": {
+        "x": 411,
+        "y": 242.703125,
+        "width": 560,
+        "height": 265.59375,
+        "vw": 1382,
+        "vh": 751,
+        "scrollWidth": 558,
+        "clientWidth": 558,
+        "header": {
+          "x": 412,
+          "y": 243.703125,
+          "width": 558,
+          "height": 93,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 507.296875,
+        "css": {
+          "position": "fixed",
+          "margin": "242.703px 411px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "install-1382-751-dark",
+      "passed": true,
+      "geometry": {
+        "x": 411,
+        "y": 16,
+        "width": 560,
+        "height": 719,
+        "vw": 1382,
+        "vh": 751,
+        "scrollWidth": 558,
+        "clientWidth": 558,
+        "header": {
+          "x": 412,
+          "y": 17,
+          "width": 558,
+          "height": 93,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 734,
+        "css": {
+          "position": "fixed",
+          "margin": "16px 411px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "usage-1382-751-dark",
+      "passed": true,
+      "geometry": {
+        "x": 411,
+        "y": 28.328125,
+        "width": 560,
+        "height": 694.34375,
+        "vw": 1382,
+        "vh": 751,
+        "scrollWidth": 558,
+        "clientWidth": 558,
+        "header": {
+          "x": 412,
+          "y": 29.328125,
+          "width": 558,
+          "height": 93,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 721.671875,
+        "css": {
+          "position": "fixed",
+          "margin": "28.3281px 411px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "detail-1382-751-dark",
+      "passed": true,
+      "geometry": {
+        "x": 411,
+        "y": 160.109375,
+        "width": 560,
+        "height": 430.78125,
+        "vw": 1382,
+        "vh": 751,
+        "scrollWidth": 558,
+        "clientWidth": 558,
+        "header": {
+          "x": 412,
+          "y": 161.109375,
+          "width": 558,
+          "height": 93,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 589.890625,
+        "css": {
+          "position": "fixed",
+          "margin": "160.109px 411px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "confirm-1382-751-dark",
+      "passed": true,
+      "geometry": {
+        "x": 411,
+        "y": 242.703125,
+        "width": 560,
+        "height": 265.59375,
+        "vw": 1382,
+        "vh": 751,
+        "scrollWidth": 558,
+        "clientWidth": 558,
+        "header": {
+          "x": 412,
+          "y": 243.703125,
+          "width": 558,
+          "height": 93,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 507.296875,
+        "css": {
+          "position": "fixed",
+          "margin": "242.703px 411px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "install-390-751-light",
+      "passed": true,
+      "geometry": {
+        "x": 16,
+        "y": 16,
+        "width": 358,
+        "height": 719,
+        "vw": 390,
+        "vh": 751,
+        "scrollWidth": 356,
+        "clientWidth": 356,
+        "header": {
+          "x": 17,
+          "y": 17,
+          "width": 356,
+          "height": 89,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 734,
+        "css": {
+          "position": "fixed",
+          "margin": "16px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "usage-390-751-light",
+      "passed": true,
+      "geometry": {
+        "x": 16,
+        "y": 24.734375,
+        "width": 358,
+        "height": 701.53125,
+        "vw": 390,
+        "vh": 751,
+        "scrollWidth": 356,
+        "clientWidth": 356,
+        "header": {
+          "x": 17,
+          "y": 25.734375,
+          "width": 356,
+          "height": 89,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 725.265625,
+        "css": {
+          "position": "fixed",
+          "margin": "24.7344px 16px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "detail-390-751-light",
+      "passed": true,
+      "geometry": {
+        "x": 16,
+        "y": 170.109375,
+        "width": 358,
+        "height": 410.78125,
+        "vw": 390,
+        "vh": 751,
+        "scrollWidth": 356,
+        "clientWidth": 356,
+        "header": {
+          "x": 17,
+          "y": 171.109375,
+          "width": 356,
+          "height": 89,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 579.890625,
+        "css": {
+          "position": "fixed",
+          "margin": "170.109px 16px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "confirm-390-751-light",
+      "passed": true,
+      "geometry": {
+        "x": 16,
+        "y": 238.296875,
+        "width": 358,
+        "height": 274.390625,
+        "vw": 390,
+        "vh": 751,
+        "scrollWidth": 356,
+        "clientWidth": 356,
+        "header": {
+          "x": 17,
+          "y": 239.296875,
+          "width": 356,
+          "height": 89,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 511.6875,
+        "css": {
+          "position": "fixed",
+          "margin": "238.297px 16px 238.312px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "install-390-751-dark",
+      "passed": true,
+      "geometry": {
+        "x": 16,
+        "y": 16,
+        "width": 358,
+        "height": 719,
+        "vw": 390,
+        "vh": 751,
+        "scrollWidth": 356,
+        "clientWidth": 356,
+        "header": {
+          "x": 17,
+          "y": 17,
+          "width": 356,
+          "height": 89,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 734,
+        "css": {
+          "position": "fixed",
+          "margin": "16px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "usage-390-751-dark",
+      "passed": true,
+      "geometry": {
+        "x": 16,
+        "y": 24.734375,
+        "width": 358,
+        "height": 701.53125,
+        "vw": 390,
+        "vh": 751,
+        "scrollWidth": 356,
+        "clientWidth": 356,
+        "header": {
+          "x": 17,
+          "y": 25.734375,
+          "width": 356,
+          "height": 89,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 725.265625,
+        "css": {
+          "position": "fixed",
+          "margin": "24.7344px 16px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "detail-390-751-dark",
+      "passed": true,
+      "geometry": {
+        "x": 16,
+        "y": 170.109375,
+        "width": 358,
+        "height": 410.78125,
+        "vw": 390,
+        "vh": 751,
+        "scrollWidth": 356,
+        "clientWidth": 356,
+        "header": {
+          "x": 17,
+          "y": 171.109375,
+          "width": 356,
+          "height": 89,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 579.890625,
+        "css": {
+          "position": "fixed",
+          "margin": "170.109px 16px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "confirm-390-751-dark",
+      "passed": true,
+      "geometry": {
+        "x": 16,
+        "y": 238.296875,
+        "width": 358,
+        "height": 274.390625,
+        "vw": 390,
+        "vh": 751,
+        "scrollWidth": 356,
+        "clientWidth": 356,
+        "header": {
+          "x": 17,
+          "y": 239.296875,
+          "width": 356,
+          "height": 89,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 511.6875,
+        "css": {
+          "position": "fixed",
+          "margin": "238.297px 16px 238.312px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "install-320-751-light",
+      "passed": true,
+      "geometry": {
+        "x": 16,
+        "y": 16,
+        "width": 288,
+        "height": 719,
+        "vw": 320,
+        "vh": 751,
+        "scrollWidth": 286,
+        "clientWidth": 286,
+        "header": {
+          "x": 17,
+          "y": 17,
+          "width": 286,
+          "height": 89,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 734,
+        "css": {
+          "position": "fixed",
+          "margin": "16px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "usage-320-751-light",
+      "passed": true,
+      "geometry": {
+        "x": 16,
+        "y": 16,
+        "width": 288,
+        "height": 719,
+        "vw": 320,
+        "vh": 751,
+        "scrollWidth": 286,
+        "clientWidth": 286,
+        "header": {
+          "x": 17,
+          "y": 17,
+          "width": 286,
+          "height": 89,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 734,
+        "css": {
+          "position": "fixed",
+          "margin": "16px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "detail-320-751-light",
+      "passed": true,
+      "geometry": {
+        "x": 16,
+        "y": 170.109375,
+        "width": 288,
+        "height": 410.78125,
+        "vw": 320,
+        "vh": 751,
+        "scrollWidth": 286,
+        "clientWidth": 286,
+        "header": {
+          "x": 17,
+          "y": 171.109375,
+          "width": 286,
+          "height": 89,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 579.890625,
+        "css": {
+          "position": "fixed",
+          "margin": "170.109px 16px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "confirm-320-751-light",
+      "passed": true,
+      "geometry": {
+        "x": 16,
+        "y": 227.90625,
+        "width": 288,
+        "height": 295.1875,
+        "vw": 320,
+        "vh": 751,
+        "scrollWidth": 286,
+        "clientWidth": 286,
+        "header": {
+          "x": 17,
+          "y": 228.90625,
+          "width": 286,
+          "height": 89,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 522.09375,
+        "css": {
+          "position": "fixed",
+          "margin": "227.906px 16px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "install-320-751-dark",
+      "passed": true,
+      "geometry": {
+        "x": 16,
+        "y": 16,
+        "width": 288,
+        "height": 719,
+        "vw": 320,
+        "vh": 751,
+        "scrollWidth": 286,
+        "clientWidth": 286,
+        "header": {
+          "x": 17,
+          "y": 17,
+          "width": 286,
+          "height": 89,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 734,
+        "css": {
+          "position": "fixed",
+          "margin": "16px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "usage-320-751-dark",
+      "passed": true,
+      "geometry": {
+        "x": 16,
+        "y": 16,
+        "width": 288,
+        "height": 719,
+        "vw": 320,
+        "vh": 751,
+        "scrollWidth": 286,
+        "clientWidth": 286,
+        "header": {
+          "x": 17,
+          "y": 17,
+          "width": 286,
+          "height": 89,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 734,
+        "css": {
+          "position": "fixed",
+          "margin": "16px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "detail-320-751-dark",
+      "passed": true,
+      "geometry": {
+        "x": 16,
+        "y": 170.109375,
+        "width": 288,
+        "height": 410.78125,
+        "vw": 320,
+        "vh": 751,
+        "scrollWidth": 286,
+        "clientWidth": 286,
+        "header": {
+          "x": 17,
+          "y": 171.109375,
+          "width": 286,
+          "height": 89,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 579.890625,
+        "css": {
+          "position": "fixed",
+          "margin": "170.109px 16px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "confirm-320-751-dark",
+      "passed": true,
+      "geometry": {
+        "x": 16,
+        "y": 227.90625,
+        "width": 288,
+        "height": 295.1875,
+        "vw": 320,
+        "vh": 751,
+        "scrollWidth": 286,
+        "clientWidth": 286,
+        "header": {
+          "x": 17,
+          "y": 228.90625,
+          "width": 286,
+          "height": 89,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 522.09375,
+        "css": {
+          "position": "fixed",
+          "margin": "227.906px 16px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "install-1024-480-light",
+      "passed": true,
+      "geometry": {
+        "x": 232,
+        "y": 16,
+        "width": 560,
+        "height": 448,
+        "vw": 1024,
+        "vh": 480,
+        "scrollWidth": 558,
+        "clientWidth": 558,
+        "header": {
+          "x": 233,
+          "y": 17,
+          "width": 558,
+          "height": 93,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 463,
+        "css": {
+          "position": "fixed",
+          "margin": "16px 232px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "usage-1024-480-light",
+      "passed": true,
+      "geometry": {
+        "x": 232,
+        "y": 16,
+        "width": 560,
+        "height": 448,
+        "vw": 1024,
+        "vh": 480,
+        "scrollWidth": 558,
+        "clientWidth": 558,
+        "header": {
+          "x": 233,
+          "y": 17,
+          "width": 558,
+          "height": 93,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 463,
+        "css": {
+          "position": "fixed",
+          "margin": "16px 232px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "detail-1024-480-light",
+      "passed": true,
+      "geometry": {
+        "x": 232,
+        "y": 24.609375,
+        "width": 560,
+        "height": 430.78125,
+        "vw": 1024,
+        "vh": 480,
+        "scrollWidth": 558,
+        "clientWidth": 558,
+        "header": {
+          "x": 233,
+          "y": 25.609375,
+          "width": 558,
+          "height": 93,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 454.390625,
+        "css": {
+          "position": "fixed",
+          "margin": "24.6094px 232px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "confirm-1024-480-light",
+      "passed": true,
+      "geometry": {
+        "x": 232,
+        "y": 107.203125,
+        "width": 560,
+        "height": 265.59375,
+        "vw": 1024,
+        "vh": 480,
+        "scrollWidth": 558,
+        "clientWidth": 558,
+        "header": {
+          "x": 233,
+          "y": 108.203125,
+          "width": 558,
+          "height": 93,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 371.796875,
+        "css": {
+          "position": "fixed",
+          "margin": "107.203px 232px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "install-1024-480-dark",
+      "passed": true,
+      "geometry": {
+        "x": 232,
+        "y": 16,
+        "width": 560,
+        "height": 448,
+        "vw": 1024,
+        "vh": 480,
+        "scrollWidth": 558,
+        "clientWidth": 558,
+        "header": {
+          "x": 233,
+          "y": 17,
+          "width": 558,
+          "height": 93,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 463,
+        "css": {
+          "position": "fixed",
+          "margin": "16px 232px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "usage-1024-480-dark",
+      "passed": true,
+      "geometry": {
+        "x": 232,
+        "y": 16,
+        "width": 560,
+        "height": 448,
+        "vw": 1024,
+        "vh": 480,
+        "scrollWidth": 558,
+        "clientWidth": 558,
+        "header": {
+          "x": 233,
+          "y": 17,
+          "width": 558,
+          "height": 93,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 463,
+        "css": {
+          "position": "fixed",
+          "margin": "16px 232px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "detail-1024-480-dark",
+      "passed": true,
+      "geometry": {
+        "x": 232,
+        "y": 24.609375,
+        "width": 560,
+        "height": 430.78125,
+        "vw": 1024,
+        "vh": 480,
+        "scrollWidth": 558,
+        "clientWidth": 558,
+        "header": {
+          "x": 233,
+          "y": 25.609375,
+          "width": 558,
+          "height": 93,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 454.390625,
+        "css": {
+          "position": "fixed",
+          "margin": "24.6094px 232px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    },
+    {
+      "name": "confirm-1024-480-dark",
+      "passed": true,
+      "geometry": {
+        "x": 232,
+        "y": 107.203125,
+        "width": 560,
+        "height": 265.59375,
+        "vw": 1024,
+        "vh": 480,
+        "scrollWidth": 558,
+        "clientWidth": 558,
+        "header": {
+          "x": 233,
+          "y": 108.203125,
+          "width": 558,
+          "height": 93,
+          "position": "relative"
+        },
+        "titleUncovered": true,
+        "footerBottom": 371.796875,
+        "css": {
+          "position": "fixed",
+          "margin": "107.203px 232px",
+          "inset": "0px",
+          "transform": "none"
+        }
+      }
+    }
+  ],
+  "errors": []
+}

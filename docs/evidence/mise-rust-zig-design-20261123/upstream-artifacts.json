@@ -1,0 +1,82 @@
+{
+  "rust-1.91.1": {
+    "source": "https://static.rust-lang.org/dist/channel-rust-1.91.1.toml",
+    "targets": {
+      "x86_64-unknown-linux-gnu": {
+        "rustc": true,
+        "cargo": true,
+        "rust-std": true
+      },
+      "x86_64-unknown-linux-musl": {
+        "rustc": true,
+        "cargo": true,
+        "rust-std": true
+      },
+      "aarch64-unknown-linux-gnu": {
+        "rustc": true,
+        "cargo": true,
+        "rust-std": true
+      },
+      "aarch64-unknown-linux-musl": {
+        "rustc": true,
+        "cargo": true,
+        "rust-std": true
+      }
+    }
+  },
+  "rust-1.90.0": {
+    "source": "https://static.rust-lang.org/dist/channel-rust-1.90.0.toml",
+    "targets": {
+      "x86_64-unknown-linux-gnu": {
+        "rustc": true,
+        "cargo": true,
+        "rust-std": true
+      },
+      "x86_64-unknown-linux-musl": {
+        "rustc": true,
+        "cargo": true,
+        "rust-std": true
+      },
+      "aarch64-unknown-linux-gnu": {
+        "rustc": true,
+        "cargo": true,
+        "rust-std": true
+      },
+      "aarch64-unknown-linux-musl": {
+        "rustc": true,
+        "cargo": true,
+        "rust-std": true
+      }
+    }
+  },
+  "zig-0.17.1": {
+    "source": "https://ziglang.org/download/index.json",
+    "assets": {
+      "x86_64-linux": {
+        "tarball": "https://ziglang.org/download/0.17.1/zig-x86_64-linux-0.17.1.tar.xz",
+        "shasum": "3581863e3cbcfd0fce0efc682ce7e9e93da96668a977791d356a26d2a7e9b17a",
+        "size": "57411036"
+      },
+      "aarch64-linux": {
+        "tarball": "https://ziglang.org/download/0.17.1/zig-aarch64-linux-0.17.1.tar.xz",
+        "shasum": "a1546d5646eb184437918d6635ca6b762a0e889eac09cef720ee7a1ed3fe7795",
+        "size": "52977364"
+      }
+    }
+  },
+  "zig-0.15.2": {
+    "source": "https://ziglang.org/download/index.json",
+    "assets": {
+      "x86_64-linux": {
+        "tarball": "https://ziglang.org/download/0.15.2/zig-x86_64-linux-0.15.2.tar.xz",
+        "shasum": "02aa270f183da276e5b5920b1dac44a63f1a49e55050ebde3aecc9eb82f93239",
+        "size": "53733924"
+      },
+      "aarch64-linux": {
+        "tarball": "https://ziglang.org/download/0.15.2/zig-aarch64-linux-0.15.2.tar.xz",
+        "shasum": "958ed7d1e00d0ea76590d27666efbf7a932281b3d7ba0c6b01b0ff26498f667f",
+        "size": "49471996"
+      }
+    }
+  }
+}

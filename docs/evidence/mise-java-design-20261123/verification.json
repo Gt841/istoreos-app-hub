@@ -1,0 +1,28 @@
+{
+  "status": "passed-design-preview",
+  "date": "2026-11-23T10:01:31.298816+00:00",
+  "tools": [
+    "node",
+    "python",
+    "go",
+    "rust",
+    "zig",
+    "java"
+  ],
+  "javaScope": "Temurin JDK 21/25 fixed build, glibc only, x86_64/aarch64 mock design",
+  "modelWrapTests": 49,
+  "browserChecks": 37,
+  "reportFiles": [
+    "round-2/browser.json",
+    "round-1/compilers-browser.json",
+    "round-1/host-browser.json",
+    "round-2/java-browser.json"
+  ],
+  "rounds": 2,
+  "pageErrors": [],
+  "limitations": [
+    "No real JDK install, JVM execution or device verification",
+    "Wrap sandbox uses fake interpreters to inspect environment/arguments",
+    "Versions are historical published design examples, not current production recommendations"
+  ]
+}

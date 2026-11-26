@@ -4,14 +4,16 @@ Auto-generated from `apps/*/app-meta-*/Makefile` via `make apps-catalog`.
 
 | id | title | tags | luci | website | description |
 |---|---|---|---|---|---|
-| agentflow | AgentFlow | ai development service | /cgi-bin/luci/admin/services/agentflow | https://agentflow.geili.ai/ | AgentFlow 提供 OpenCode、Codex、Claude 编码代理与工作流编排 Web UI。 |
+| agentflow | AgentFlow | ai development service | /cgi-bin/luci/admin/services/agentflow | https://agentflow.geili.ai/ | AgentFlow 提供项目、编码代理与工程工作流编排 Web UI。 |
 | airconnect | AirConnect | multimedia net | /cgi-bin/luci/admin/services/airconnect | https://github.com/philippe44/AirConnect | 让 UPnP/Sonos 和 Chromecast 设备支持 AirPlay 音频串流 |
 | ap-modem | 访问AP/光猫 | net tool | /cgi-bin/luci/admin/network/ap_modem | https://github.com/linkease/openwrt-app-actions/tree/main/applications/luci-app-ap-modem | 让局域网客户端访问不同子网的AP或光猫（只支持 OpenWRT 21 以上） |
 | arcadia | Arcadia 一站式代码自动化运维平台 | net tool | /cgi-bin/luci/admin/services/arcadia | https://arcadia.cool | 写脚本、跑定时任务、服务托管、消息聚合、AI Agent 运行基座，一个面板搞定全流程 |
 | baidudrive | 百度网盘 | nas service | /cgi-bin/luci/admin/services/baidudrive | https://pan.baidu.com | 百度网盘 iStoreOS 版 |
 | chinesesubfinder | ChineseSubFinder中文字幕 | multimedia net | /cgi-bin/luci/admin/services/chinesesubfinder | https://github.com/allanpk716/ChineseSubFinder | ChineseSubFinder是一个中文字幕平台。 |
+| claude-code | Claude Code | ai development | /cgi-bin/luci/admin/services/claude | https://code.claude.com/docs/ | 在 iStoreOS 上安装并通过浏览器终端运行 Anthropic Claude Code 编码代理。 |
 | clouddrive2 | CloudDrive2 | service tool | /cgi-bin/luci/admin/services/clouddrive2 | https://www.clouddrive2.com/ | CloudDrive 是一个强大的多云盘管理工具，为用户提供包含云盘本地挂载的一站式的多云盘解决方案。 |
 | codeserver | CodeServer | net tool | /cgi-bin/luci/admin/services/codeserver | https://coder.com/ | 一个在线版本的VSCode，可以在线开发。 |
+| codex | Codex | ai development | /cgi-bin/luci/admin/services/codex | https://developers.openai.com/codex/cli | 在 iStoreOS 上安装并通过浏览器终端运行 OpenAI Codex 编码代理。 |
 | ddnsto | DDNSTO路由远程 | networking service | /cgi-bin/luci/admin/services/ddnsto | https://www.ddnsto.com/ | DDNSTO内网穿透，可以外网远程你的路由器 |
 | demon | 容器魔王 | net | /cgi-bin/luci/admin/services/demon | https://www.onethingcloud.com/ | 【魔王现世】为 iStoreOS 特制，收益更高。每月至高可赚「千元」，现在上线秒领「30天20%收益加成」，挂机托管自动赚米，拿到手软！替代网心云的「容器魔方」。 |
 | dockermanager | Docker管理 | docker system | /cgi-bin/luci/admin/services/dockermanager | https://github.com/linkease/linkease-docker-manager | 更简单专业的 Docker 管理器，加速更快更方便. |
@@ -36,11 +38,13 @@ Auto-generated from `apps/*/app-meta-*/Makefile` via `make apps-catalog`.
 | jackett | Jackett | download nas | /cgi-bin/luci/admin/services/jackett | https://github.com/Jackett/Jackett | Jackett 是维护索引器抓取和翻译逻辑的单一存储库 - 消除了其他应用程序的负担。 |
 | jellyfin | Jellyfin私有影院 | multimedia net | /cgi-bin/luci/admin/services/jellyfin | https://jellyfin.org | Jellyfin是一个免费自由的媒体系统软件，可以让您方便地管理和串流您的媒体。部分机型无需配置即可支持硬件转码：Easepi ARS2；RK35xx 系列。 |
 | kaiplus | 酷友社KAI | ai system | /cgi-bin/luci/admin/services/kaiplus | https://ai.koolcenter.com | 酷友社KAI 解决各种问题，加速软件安装 |
+| kimi | Kimi Code | ai development | /cgi-bin/luci/admin/services/kimi | https://www.kimi.com/code/docs/en/ | 在 iStoreOS 上安装并通过浏览器终端运行 Moonshot AI Kimi Code 编码代理。 |
 | kodexplorer | 可道云 | nas service | /cgi-bin/luci/admin/services/kodexplorer | https://kodcloud.com | 一款快捷高效的私有云和在线文档管理系统，为个人网站、企业私有云部署、网络存储、在线文档管理、在线办公等提供安全可控，简便易用、可高度定制的私有云产品。采用windows风格界面、操作习惯，无需适应即可快速上手，支持几百种常用文件格式的在线预览，可扩展易定制。 |
 | lanraragi | LANraragi电子书 | multimedia net | /cgi-bin/luci/admin/services/lanraragi | https://lrr.tvc-16.science/ | LANraragi是一个开源的电子书、漫画管理平台。 |
 | linkease | 易有云 | nas service | /cgi-bin/luci/admin/services/linkease | https://www.linkease.com/ | 易有云提供远程访问、文件管理、相册备份、文件同步和备份仓库能力。 |
 | linkeasefull | 易有云完整版 | nas service | /cgi-bin/luci/admin/services/linkeasefull | https://www.linkease.com/ | 易有云完整版提供本地 Web 桌面、内置 OpenWrt 管理和 8897 兼容入口，复用独立的易有云文件管理入口，运行时会停用标准版易有云。 |
 | memos | Memos知识管理 | net tool | /cgi-bin/luci/admin/services/memos | https://usememos.com/ | 开源的极简的碎片化知识管理工具。 |
+| mise | 运行时环境 | development | /cgi-bin/luci/admin/services/mise | https://mise.jdx.dev/ | 在持久磁盘管理多个固定版本的开发运行时及私有运行库。 |
 | mtphotos | MTPhotos相册 | net tool | /cgi-bin/luci/admin/services/mtphotos | https://mtmt.tech/ | MTPhotos是一款简单、好用的照片管理系统。 |
 | multiaccountdial | 多账号多拨 | net tool | /cgi-bin/luci/admin/network/multiaccountdial | https://github.com/linkease/openwrt-app-actions/tree/main/applications/luci-app-multiaccountdial | 支持多账号的多拨插件 |
 | mymind | MyMind思维导图 | net tool | /cgi-bin/luci/admin/services/mymind | https://github.com/ondras/my-mind | MyMind 是一个在线思维导图编辑器。 |
@@ -49,6 +53,7 @@ Auto-generated from `apps/*/app-meta-*/Makefile` via `make apps-catalog`.
 | nextcloud | nextcloud | nas service | /cgi-bin/luci/admin/services/nextcloud | https://nextcloud.com/ | 数据的安全之家。根据您的设置，从任何设备访问和共享您的文件、日历、联系人、邮件等 |
 | oneapi | OneAPI | ai net | /cgi-bin/luci/admin/services/oneapi | https://openai.justsong.cn | OneAPI 是LLM API 管理 & 分发系统，支持 OpenAI、Azure、Anthropic Claude、Google Gemini、DeepSeek。 |
 | openclawmgr | OpenClaw Launcher | ai | /cgi-bin/luci/admin/services/openclawmgr | https://github.com/openclaw/openclaw | 在 OpenWrt 上原生安装、启动并管理官方 OpenClaw。 |
+| opencode | OpenCode | ai development | /cgi-bin/luci/admin/services/opencode | https://opencode.ai/docs/ | 在 iStoreOS 上安装并通过浏览器终端运行 OpenCode 编码代理。 |
 | openwebui | OpenWebUI | ai net | /cgi-bin/luci/admin/services/openwebui | https://openwebui.com/ | Open WebUI 是一款可扩展、自托管的 AI 界面，能够无缝适配您的工作流程，且所有操作均可完全离线运行。 |
 | owntone | Owntone音乐平台 | multimedia net | /cgi-bin/luci/admin/services/owntone | https://owntone.github.io/owntone-server/ | Owntone是一个支持iTunes, AirPlay, Chromecast等的音乐串流平台。 |
 | penpot | Penpot设计平台 | net tool | /cgi-bin/luci/admin/services/penpot | https://penpot.app/ | Penpot是第一个开源的便于团队协作的在线设计平台。 |

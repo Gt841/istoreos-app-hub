@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "name": "Rust x86_64/glibc 复核、后台任务、固定 wrap 与清理",
+      "passed": true
+    },
+    {
+      "name": "Rust x86_64/musl 复核、后台任务、固定 wrap 与清理",
+      "passed": true
+    },
+    {
+      "name": "Rust aarch64/glibc 复核、后台任务、固定 wrap 与清理",
+      "passed": true
+    },
+    {
+      "name": "Rust aarch64/musl 复核、后台任务、固定 wrap 与清理",
+      "passed": true
+    },
+    {
+      "name": "Zig x86_64 标准工具链、固定 wrap 与清理",
+      "passed": true
+    },
+    {
+      "name": "Zig aarch64 标准工具链、固定 wrap 与清理",
+      "passed": true
+    },
+    {
+      "name": "语言切换重置 ABI/npm；五种默认环境只读且禁止删除",
+      "passed": true
+    },
+    {
+      "name": "五种语言在桌面及 320/390 手机深浅主题下可用且无溢出",
+      "passed": true
+    }
+  ],
+  "pageErrors": []
+}

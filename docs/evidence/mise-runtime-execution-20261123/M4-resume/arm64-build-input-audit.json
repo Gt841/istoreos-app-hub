@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "build_id": "mise-m4r3-arm64-20261124T011600Z",
+  "sdk_build_status": "status=success",
+  "source_checks": [
+    {
+      "feed": "base",
+      "expected": {
+        "commit": "0b795ce79e23b553aa184080c390f9ce92a2b6d4",
+        "origin": "https://git.openwrt.org/openwrt/openwrt.git"
+      },
+      "actual": {
+        "commit": "0b795ce79e23b553aa184080c390f9ce92a2b6d4",
+        "origin": "https://git.openwrt.org/openwrt/openwrt.git"
+      },
+      "passed": true
+    },
+    {
+      "feed": "luci",
+      "expected": {
+        "commit": "cac97ed67cfbcad90db49f5f3b1245c2c4cbfae5",
+        "origin": "https://git.openwrt.org/project/luci.git"
+      },
+      "actual": {
+        "commit": "cac97ed67cfbcad90db49f5f3b1245c2c4cbfae5",
+        "origin": "https://git.openwrt.org/project/luci.git"
+      },
+      "passed": true
+    },
+    {
+      "feed": "packages",
+      "expected": {
+        "origin": "https://git.openwrt.org/feed/packages.git",
+        "commit": "23abaa6f3b0fdfd76b570031107e5718476ff0c8"
+      },
+      "actual": {
+        "commit": "23abaa6f3b0fdfd76b570031107e5718476ff0c8",
+        "origin": "https://git.openwrt.org/feed/packages.git"
+      },
+      "passed": true
+    },
+    {
+      "feed": "istore_actions",
+      "expected": {
+        "origin": "https://github.com/linkease/openwrt-app-actions.git",
+        "commit": "582d70db42a4ebd78a9f253b3262bd9ba6c66b53"
+      },
+      "actual": {
+        "commit": "582d70db42a4ebd78a9f253b3262bd9ba6c66b53",
+        "origin": "https://github.com/linkease/openwrt-app-actions.git"
+      },
+      "passed": true
+    },
+    {
+      "feed": "istore_meta",
+      "expected": {
+        "origin": "https://github.com/linkease/openwrt-app-meta.git",
+        "commit": "4ead788a91cf95c23ff47396f6f81923142d9907"
+      },
+      "actual": {
+        "commit": "4ead788a91cf95c23ff47396f6f81923142d9907",
+        "origin": "https://github.com/linkease/openwrt-app-meta.git"
+      },
+      "passed": true
+    }
+  ],
+  "patch_sha256": "21802448ef73a747ffa290df35912b5c170127c97b8ed27b8f8c6c6f05236bf2",
+  "sdk_candidate_files": "five IPKs audited separately; no device installation"
+}

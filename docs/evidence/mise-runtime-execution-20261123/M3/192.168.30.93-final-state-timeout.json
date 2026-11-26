@@ -1,0 +1,7 @@
+{
+  "host": "192.168.30.93",
+  "exit": "timeout",
+  "seconds": 45,
+  "scope": "mixed read-only diagnostic including legacy helper network check",
+  "result": "Not passed; diagnostic subtree cleaned in final-verification.json"
+}

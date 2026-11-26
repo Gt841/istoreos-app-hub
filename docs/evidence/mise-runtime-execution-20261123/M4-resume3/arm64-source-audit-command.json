@@ -1,0 +1,19 @@
+{
+  "command": [
+    "python3",
+    "apps/mise/tests/audit-build.py",
+    "/projects/workspace-linkease-ubuntu/openwrt-apps/openwrt-sdk-builder/artifacts/mise-m4ks-arm64-20261124040156Z",
+    "--arch",
+    "arm64",
+    "--sdk-defaults",
+    "/projects/workspace-linkease-ubuntu/openwrt-apps/istoreos-app-hub/docs/evidence/mise-runtime-execution-20261123/M4-resume2/arm64-sdk-defaults.conf",
+    "--patch-sha",
+    "07e15dbe563be846ebd990241000f673ed1c9820ad4a0a6854428e82d3803e52",
+    "--output",
+    "/projects/workspace-linkease-ubuntu/openwrt-apps/istoreos-app-hub/docs/evidence/mise-runtime-execution-20261123/M4-resume3/arm64-build-audit.json"
+  ],
+  "exit": 0,
+  "seconds": 0.03,
+  "stdout": "{\"build_id\": \"mise-m4ks-arm64-20261124040156Z\", \"passed\": true, \"failed\": []}\n",
+  "stderr": ""
+}

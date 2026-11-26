@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "devices": [
+    {
+      "arch": "x64",
+      "passed": true,
+      "before_boot": "290c4092-c9f2-45bc-98ac-addb6dd920dc",
+      "after_boot": "7c32b9b6-0a31-4cf4-9142-276a9e89a8b8",
+      "checks": {
+        "boot_id_changed": true,
+        "configs_unchanged": true,
+        "binaries_unchanged": true,
+        "legacy_default_unchanged": true,
+        "runtime_binding_unchanged": true,
+        "same_persistent_mount": true,
+        "agentflow_health_preserved": true,
+        "Gateway_nonroot_vector_passed": true
+      }
+    },
+    {
+      "arch": "arm64",
+      "passed": true,
+      "before_boot": "e3eba56b-888b-44bf-a282-99e059afc7b5",
+      "after_boot": "6dda18fd-f437-4407-8630-b5427cd41570",
+      "checks": {
+        "boot_id_changed": true,
+        "configs_unchanged": true,
+        "binaries_unchanged": true,
+        "legacy_default_unchanged": true,
+        "runtime_binding_unchanged": true,
+        "same_persistent_mount": true,
+        "agentflow_health_preserved": true,
+        "Gateway_nonroot_vector_passed": true
+      }
+    }
+  ]
+}

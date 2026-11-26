@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "host": "192.168.30.7",
+  "arch": "x86_64",
+  "target": "/mnt/mise-runtime/Runtime-live",
+  "tools": [
+    "python"
+  ],
+  "catalog_sha256": "3f3db4afd3acfa28ae9138fad8003c6ecbb00a339464fb4d33b343f1eb749db9",
+  "scope": "developer-origin download and verified raw archive transfer only; SDK installation and target network acceptance separate",
+  "artifacts": [
+    {
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.12.16%2B20261110-x86_64-unknown-linux-musl-install_only_stripped.tar.gz",
+      "sha256": "e32685cf248d2f33b249816120774143b4b57578cb30de5b8dba3e54963765c3",
+      "format": "tar.gz",
+      "strip": 1,
+      "bytes": 28193015,
+      "entries": [
+        "python-3.12.16-x86_64-musl-20261110"
+      ],
+      "developer_cache_reused": true,
+      "target_verified": true
+    },
+    {
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.12.16%2B20261110-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz",
+      "sha256": "6a9e62dad033790aef722dbd370e0ce76ce17b73627ba3ae679f537049350b39",
+      "format": "tar.gz",
+      "strip": 1,
+      "bytes": 34709145,
+      "entries": [
+        "python-3.12.16-x86_64-glibc-20261110"
+      ],
+      "developer_cache_reused": true,
+      "target_verified": true
+    },
+    {
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.13.18%2B20261110-x86_64-unknown-linux-musl-install_only_stripped.tar.gz",
+      "sha256": "a75bf409606303deed964d4769544f98b74e7b53d4efb44f4a95cb38e86ff403",
+      "format": "tar.gz",
+      "strip": 1,
+      "bytes": 27932517,
+      "entries": [
+        "python-3.13.18-x86_64-musl-20261110"
+      ],
+      "developer_cache_reused": true,
+      "target_verified": true
+    },
+    {
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261110/cpython-3.13.18%2B20261110-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz",
+      "sha256": "f2d2199eb25880e07863b391cf7124e7ffa1338b0d65600dfcec117c4223a7fb",
+      "format": "tar.gz",
+      "strip": 1,
+      "bytes": 35596130,
+      "entries": [
+        "python-3.13.18-x86_64-glibc-20261110"
+      ],
+      "developer_cache_reused": true,
+      "target_verified": true
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,10 @@
+task=true
+== install progress
+2026-11-23 13:13:31 [openclawmgr] Installation phase: preparing
+2026-11-23 13:14:04 [openclawmgr] Installing OpenClaw 2026.3.28 and dependencies
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/sqlite-vec 287ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-linux-arm64 712ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-linux-ppc64 481ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-linux-s390x 814ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://registry.npmjs.org/@img%2fsharp-win32-arm64 581ms (cache miss)
+boot=8ebe0f03-3bce-4dd0-a84b-e7d29317c6ed

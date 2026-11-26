@@ -1,0 +1,23 @@
+{
+  "command": [
+    "python3",
+    "apps/mise/tests/install-candidate.py",
+    "192.168.30.7",
+    "--audit",
+    "/projects/workspace-linkease-ubuntu/openwrt-apps/istoreos-app-hub/docs/evidence/mise-runtime-execution-20261123/M4-resume3/x64-ipk-audit.json",
+    "--source-audit",
+    "/projects/workspace-linkease-ubuntu/openwrt-apps/istoreos-app-hub/docs/evidence/mise-runtime-execution-20261123/M4-resume3/x64-build-audit.json",
+    "--destination",
+    "/mnt/mise-runtime/acceptance/M4/packages/mise-m4ks-x64-20261124040156Z",
+    "--expected-boot",
+    "290c4092-c9f2-45bc-98ac-addb6dd920dc",
+    "--expect-storage",
+    "/mnt/mise-runtime/Runtime-live",
+    "--evidence",
+    "/projects/workspace-linkease-ubuntu/openwrt-apps/istoreos-app-hub/docs/evidence/mise-runtime-execution-20261123/M4-resume3/x64-package-install.json"
+  ],
+  "exit": 0,
+  "seconds": 15.525,
+  "stdout": "five audited packages installed; exact versions, both registrations and backend storage state verified\n",
+  "stderr": ""
+}

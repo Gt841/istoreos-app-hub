@@ -1,0 +1,5 @@
+/usr/bin/ks-cli: OK
+/usr/sbin/iStoreEnhance: OK
+/etc/config/istoreenhance: OK
+ARM final test baseline restored; rollback logs/runtime retained privately
+Command failed: ubus call service delete { "name": "openclawmgr" } (Not found)

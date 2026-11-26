@@ -1,0 +1,6 @@
+{
+  "host": "192.168.30.7",
+  "exit": 0,
+  "stdout": "BOOT_ID\n6d49212a-fe54-4478-8075-2d5d10fcabd4\nSTORAGE\nFilesystem           1K-blocks      Used Available Use% Mounted on\n/dev/sdd              65478188    430636  64360080   1% /mnt/mise-runtime\nKERNEL_ALERTS\nBASELINE_SERVICES\nM2_REMAINING_PROCESSES\nprivate-library-post-reboot=passed\n",
+  "stderr": ""
+}

@@ -1,0 +1,10 @@
+{
+  "entry": "node-24.21.0-x86_64-musl-upstream1",
+  "source": "https://unofficial-builds.nodejs.org/download/release/v24.21.0/node-v24.21.0-linux-x64-musl.tar.xz",
+  "exit": 0,
+  "expected_sha256": "dd5ca647e656c8200c873f45098a16623129c47f2387829f0a15a6de1dac1220",
+  "elapsed": 8.61,
+  "log_tail": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n  1 31.7M    1  447k    0     0   223k      0  0:02:25  0:00:02  0:02:23  223k\n 16 31.7M   16 5295k    0     0  1765k      0  0:00:18  0:00:03  0:00:15 1765k\n 33 31.7M   33 10.7M    0     0  2756k      0  0:00:11  0:00:03  0:00:08 2755k\n 47 31.7M   47 15.1M    0     0  3097k      0  0:00:10  0:00:04  0:00:06 3097k\n 62 31.7M   62 19.7M    0     0  3376k      0  0:00:09  0:00:05  0:00:04 4064k\n 74 31.7M   74 23.7M    0     0  3470k      0  0:00:09  0:00:07  0:00:02 4771k\n 90 31.7M   90 28.7M    0     0  3674k      0  0:00:08  0:00:07  0:00:01 4820k\n100 31.7M  100 31.7M    0     0  3773k      0  0:00:08  0:00:08 --:--:-- 4656k\n",
+  "actual_sha256": "dd5ca647e656c8200c873f45098a16623129c47f2387829f0a15a6de1dac1220",
+  "device_sha256": "dd5ca647e656c8200c873f45098a16623129c47f2387829f0a15a6de1dac1220"
+}

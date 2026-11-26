@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "host": "192.168.30.7",
+  "arch": "x86_64",
+  "target": "/mnt/mise-runtime/Runtime-live",
+  "tools": [
+    "python"
+  ],
+  "catalog_sha256": "3f3db4afd3acfa28ae9138fad8003c6ecbb00a339464fb4d33b343f1eb749db9",
+  "scope": "developer-origin download and verified raw archive transfer only; SDK installation and target network acceptance separate",
+  "artifacts": [],
+  "passed": false,
+  "error": "Command '['ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=10', 'root@192.168.30.7', 'lua -e \\'package.path=\\'\"\\'\"\\'/usr/share/mise-runtime/lib/?.lua;\\'\"\\'\"\\'..package.path\\nlocal s=require(\\'\"\\'\"\\'system\\'\"\\'\"\\');local store=require(\\'\"\\'\"\\'store\\'\"\\'\"\\');local root,stage,size=arg[1],arg[2],tonumber(arg[3]);require(\\'\"\\'\"\\'contract\\'\"\\'\"\\').path(root)\\nstore.validate(root,size+2*1024*1024*1024,30000);s.mkdir(stage,448);assert(s.fs.realpath(stage)==stage and s.fs.stat(stage).uid==0)\\n\\' -- /mnt/mise-runtime/Runtime-live /mnt/mise-runtime/Runtime-live/work/prefetch-c7c6b6cc02dc4f97a43cb28cf8d14356 28193015']' returned non-zero exit status 1.",
+  "preserved_stage": "/mnt/mise-runtime/Runtime-live/work/prefetch-c7c6b6cc02dc4f97a43cb28cf8d14356"
+}

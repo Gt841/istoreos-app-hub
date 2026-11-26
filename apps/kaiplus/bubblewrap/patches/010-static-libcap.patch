@@ -1,0 +1,7 @@
+--- a/meson.build
++++ b/meson.build
+@@ -68,1 +68,3 @@
+-libcap_dep = dependency('libcap', required : true)
++# Firmware images may trim symbols from shared libcap. Use the SDK's full
++# static library so cap_from_name is also available on the target.
++libcap_dep = dependency('libcap', required : true, static : true)

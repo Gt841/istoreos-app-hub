@@ -1,0 +1,31 @@
+{
+  "scope": "tiny target launchers only; no package build",
+  "source_sha256": "16f50ee80b05ec9e0aab6aae08cdc2d1b1d96dcbd8b9050a5deb0469cbd094e7",
+  "compiler": "Zig 0.15.2",
+  "binaries": [
+    {
+      "path": "/var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/python-launch/python-launch-glibc-arm64",
+      "bytes": 16256,
+      "sha256": "fc09808d40da171668331d07bafb59ecf5e9fd66bef46f1535ae93761bcd33a2",
+      "linkage": "static-musl dispatcher for GNU Python"
+    },
+    {
+      "path": "/var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/python-launch/python-launch-glibc-x64",
+      "bytes": 15128,
+      "sha256": "9a27fc435eff588ae344e003a193477a1f53fdf94fc93d656480f98da3835e02",
+      "linkage": "static-musl dispatcher for GNU Python"
+    },
+    {
+      "path": "/var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/python-launch/python-launch-musl-arm64",
+      "bytes": 4096,
+      "sha256": "521e53309aea1bb90c623520745ea35fcedcb0cb94b05e7a2d0524033f689867",
+      "linkage": "dynamic-musl"
+    },
+    {
+      "path": "/var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/python-launch/python-launch-musl-x64",
+      "bytes": 4072,
+      "sha256": "5ad0d84e30cfa1cbb43bf28f6ad737c2dd2b2d25a1ae6e7ca1cb667347558a8b",
+      "linkage": "dynamic-musl"
+    }
+  ]
+}

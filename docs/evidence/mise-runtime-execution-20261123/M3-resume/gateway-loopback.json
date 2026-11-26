@@ -1,0 +1,7 @@
+{
+  "host": "192.168.30.7",
+  "exit": 0,
+  "stdout": "200\n",
+  "stderr": "",
+  "route": "x86 loopback \u2192 developer loopback \u2192 ARM loopback"
+}

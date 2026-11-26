@@ -1,0 +1,38 @@
+[
+  {
+    "name": "web/src/home/homeSemanticColors.css",
+    "source_sha256_matches": true
+  },
+  {
+    "name": "web/src/pages/device/index.vue",
+    "source_sha256_matches": true
+  },
+  {
+    "name": "web/src/pages/index/components/Card.vue",
+    "source_sha256_matches": true
+  },
+  {
+    "name": "web/src/home/NetworkWidgetDialog.vue",
+    "source_sha256_matches": true
+  },
+  {
+    "name": "web/src/pages/device/deviceVisualTokens.css",
+    "source_sha256_matches": true
+  },
+  {
+    "name": "web/src/pages/device/deviceCenterList.vue",
+    "source_sha256_matches": true
+  },
+  {
+    "name": "web/src/design/istoreHostShellPrototype.css",
+    "source_sha256_matches": true
+  },
+  {
+    "name": "workspace declarations unchanged except selectors",
+    "source_sha256_matches": true
+  },
+  {
+    "name": "dialog declarations unchanged except selectors",
+    "source_sha256_matches": true
+  }
+]

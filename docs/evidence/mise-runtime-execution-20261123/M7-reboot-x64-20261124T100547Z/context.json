@@ -1,0 +1,10 @@
+{
+  "host": "192.168.30.7",
+  "stage": "/mnt/mise-runtime/acceptance/M7-reboot-x64-20261124T100547Z",
+  "scope": "x64 only; ARM untouched",
+  "before_boot": "8c08d91f-949e-45b5-b277-e21c4575fec3",
+  "evidence": "/projects/workspace-linkease-ubuntu/openwrt-apps/istoreos-app-hub/docs/evidence/mise-runtime-execution-20261123/M7-reboot-x64-20261124T100547Z",
+  "normal_reboot_requested": true,
+  "after_boot": "a9a8d183-0027-42c4-96c9-a3ad1297672e",
+  "reboot_acceptance": "passed"
+}

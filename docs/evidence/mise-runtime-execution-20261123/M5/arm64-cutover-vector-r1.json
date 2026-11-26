@@ -1,0 +1,54 @@
+{
+  "exit": 1,
+  "boot_id": "e3eba56b-888b-44bf-a282-99e059afc7b5",
+  "arch": "aarch64",
+  "checks": [
+    {
+      "name": "fault reached actual new release after cutover",
+      "passed": true
+    },
+    {
+      "name": "unhealthy upgraded Gateway fails transaction",
+      "passed": true
+    },
+    {
+      "name": "old current pointer restored",
+      "passed": true
+    },
+    {
+      "name": "old previous pointer restored",
+      "passed": true
+    },
+    {
+      "name": "original authentication/config restored",
+      "passed": true
+    },
+    {
+      "name": "original release receipt unchanged",
+      "passed": true
+    },
+    {
+      "name": "application data snapshot restored",
+      "passed": true
+    },
+    {
+      "name": "failed new release removed",
+      "passed": true
+    },
+    {
+      "name": "shared SDK preserved",
+      "passed": true
+    },
+    {
+      "name": "old application vector capability restored",
+      "passed": true
+    },
+    {
+      "name": "original authenticated Gateway restored",
+      "passed": true
+    }
+  ],
+  "previous_release": "releases/20261124140137-CaNpaE",
+  "passed": true,
+  "failed_release": "releases/20261124143709-gBCDOG"
+}

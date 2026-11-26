@@ -1,0 +1,13 @@
+running=true
+== native/script progress
+2026-11-23 10:17:37 [openclawmgr] Installation phase: preparing
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/on-finished 2ms (cache stale)
+[1mnpm[22m [32mhttp[39m [94mcache[39m on-finished@https://dl-npm.linkease.net:55443/on-finished/-/on-finished-2.4.2.tgz 0ms (cache hit)
+> @matrix-org/matrix-sdk-crypto-nodejs@0.4.0 postinstall
+Downloading lib matrix-sdk-crypto.linux-x64-musl.node from https://github.com/matrix-org/matrix-rust-sdk-crypto-nodejs/releases/download/v0.4.0/matrix-sdk-crypto.linux-x64-musl.node
+== tail
+
+> @matrix-org/matrix-sdk-crypto-nodejs@0.4.0 postinstall
+> node download-lib.js
+
+Downloading lib matrix-sdk-crypto.linux-x64-musl.node from https://github.com/matrix-org/matrix-rust-sdk-crypto-nodejs/releases/download/v0.4.0/matrix-sdk-crypto.linux-x64-musl.node

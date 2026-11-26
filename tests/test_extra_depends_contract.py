@@ -11,9 +11,9 @@ ROOT = Path(__file__).resolve().parents[1]
 # revision; release-coupled runtime floors use the CONFIG_USE_APK selector.
 EXPECTED = {
     "apps/changeguard/changeguard/Makefile": (
-        "linkspace (>=0.3.2-$(if $(CONFIG_USE_APK),r)2)",
-        "linkspace (>=0.3.2-2)",
-        "linkspace (>=0.3.2-r2)",
+        "linkspace (>=0.3.3-$(if $(CONFIG_USE_APK),r)1)",
+        "linkspace (>=0.3.3-1)",
+        "linkspace (>=0.3.3-r1)",
     ),
     "apps/dockermanager/luci-app-dockermanager/Makefile": (
         "luci-lib-linkeaseauth (>=1.2.1)",
@@ -36,9 +36,9 @@ EXPECTED = {
         "luci-lib-taskd (>=1.0.15)",
     ),
     "apps/kaiplus/kaiplus/Makefile": (
-        "changeguard (>=0.3.3-$(if $(CONFIG_USE_APK),r)2)",
-        "changeguard (>=0.3.3-2)",
-        "changeguard (>=0.3.3-r2)",
+        "changeguard (>=0.3.5-$(if $(CONFIG_USE_APK),r)1)",
+        "changeguard (>=0.3.5-1)",
+        "changeguard (>=0.3.5-r1)",
     ),
     "apps/linkease/linkease-runtime-transition/Makefile": (
         "linkease (>=1.7.6~0), luci-lib-linkeasefile (>=2.1.70-r4)",

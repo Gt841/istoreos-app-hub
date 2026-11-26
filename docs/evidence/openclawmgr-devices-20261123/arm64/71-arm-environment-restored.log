@@ -1,0 +1,8 @@
+/etc/config/istoreenhance: OK
+/usr/bin/ks-cli: OK
+/usr/sbin/iStoreEnhance: OK
+ARM original protected files restored; test service/account removed; interrupted runtime preserved privately
+ks_cli=0.9.0
+KSpeeder_running=true
+== residual boot links
+Command failed: ubus call service delete { "name": "openclawmgr" } (Not found)

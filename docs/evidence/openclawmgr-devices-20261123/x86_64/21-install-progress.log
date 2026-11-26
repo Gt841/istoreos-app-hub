@@ -1,0 +1,17 @@
+running=false
+http_200_count=866
+http_error_count=2
+== last progress
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m 6 packages have install scripts not yet covered by allowScripts:
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m   openclaw@2026.3.28 (prepare: command -v git >/dev/null 2>&1 && git rev-parse --is-inside-work-tree >/dev/null 2>&1 && git config core.hooksPath git-hooks || exit 0)
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m   @matrix-org/matrix-sdk-crypto-nodejs@0.4.0 (postinstall: node download-lib.js)
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m   sharp@0.34.5 (install: node install/check.js || npm run build)
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m   @google/genai@1.52.0 (preinstall: echo 'preinstall: no-op')
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m   protobufjs@7.6.6 (postinstall: node scripts/postinstall)
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m   koffi@2.16.4 (install: node src/cnoke/cnoke.js -P . -D src/koffi --prebuild)
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m Run `npm install -g --allow-scripts=openclaw,@matrix-org/matrix-sdk-crypto-nodejs,sharp,@google/genai,protobufjs,koffi` to allow these scripts once, or `npm config set allow-scripts=openclaw,@matrix-org/matrix-sdk-crypto-nodejs,sharp,@google/genai,protobufjs,koffi --location=user` to allow them for all global installs.
+2026-11-23 10:00:25 [openclawmgr] Checking required native modules
+Error loading shared library /mnt/vio4-0/OpenClawMgr-acceptance-20261123/.install.EPadDH/candidate/global/lib/node_modules/openclaw/node_modules/sqlite-vec-linux-x64/vec0.so.so: No such file or directory
+2026-11-23 10:00:28 [openclawmgr] Installation finished (exit=1)
+== committed runtime

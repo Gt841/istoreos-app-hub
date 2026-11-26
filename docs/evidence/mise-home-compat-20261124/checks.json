@@ -1,0 +1,29 @@
+{
+  "local_tests": {
+    "passed": true,
+    "web": 59,
+    "legacy_helper": 10,
+    "storage_enumeration": 7
+  },
+  "typecheck": {
+    "passed": true
+  },
+  "production_build": {
+    "passed": true,
+    "output": "/var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/mise-live-dist"
+  },
+  "syntax": {
+    "passed": true,
+    "lua_files": 18,
+    "shell": true
+  },
+  "diff_check": {
+    "passed": true
+  },
+  "releases": {
+    "mise": "2026.8.14-r27",
+    "mise-runtime": "0.1.0-r2",
+    "luci-app-mise": "0.1.0-r2",
+    "app-meta-mise": "0.1.0-r2"
+  }
+}

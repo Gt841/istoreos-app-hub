@@ -1,0 +1,19 @@
+node:internal/modules/package_json_reader:126
+  const parsed = modulesBinding.readPackageJSON(
+                                ^
+
+Error: Cannot read package config /mnt/nvme0n1-1/OpenClawMgr-glibc-acceptance-20261123/probe_modules/node_modules/sqlite-vec/package.json: permission denied.
+    at Object.read (node:internal/modules/package_json_reader:126:33)
+    at _readPackage (node:internal/modules/cjs/loader:524:55)
+    at resolveExports (node:internal/modules/cjs/loader:750:15)
+    at Module._findPath (node:internal/modules/cjs/loader:821:31)
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1557:27)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1118:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1142:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1169:12)
+    at Module._load (node:internal/modules/cjs/loader:1341:5)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19) {
+  code: 'ERR_INVALID_PACKAGE_CONFIG'
+}
+
+Node.js v24.22.1

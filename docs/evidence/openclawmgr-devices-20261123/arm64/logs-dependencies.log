@@ -1,0 +1,16 @@
+Installing coreutils-timeout (9.7-r1) to root...
+Collected errors:
+ * opkg_install_pkg: Checksum or size mismatch for package coreutils-timeout. Either the opkg or the package index are corrupt. Try 'opkg update'.
+ * opkg_install_cmd: Cannot install package coreutils-timeout.
+Downloading https://mirrors.cernet.edu.cn/openwrt/releases/24.10.8/packages/aarch64_generic/packages/coreutils-timeout_9.7-r1_aarch64_generic.ipk
+Package git (2.50.1-r1) installed in root is up to date.
+Package git-http (2.50.1-r1) installed in root is up to date.
+Installing coreutils-timeout (9.7-r1) to root...
+Downloading https://mirrors.cernet.edu.cn/openwrt/releases/24.10.8/packages/aarch64_generic/packages/coreutils-timeout_9.7-r1_aarch64_generic.ipk
+Upgrading git on root from 2.50.1-r1 to 2.50.2-r1...
+Downloading https://mirrors.cernet.edu.cn/openwrt/releases/24.10.8/packages/aarch64_generic/packages/git_2.50.2-r1_aarch64_generic.ipk
+Upgrading git-http on root from 2.50.1-r1 to 2.50.2-r1...
+Downloading https://mirrors.cernet.edu.cn/openwrt/releases/24.10.8/packages/aarch64_generic/packages/git-http_2.50.2-r1_aarch64_generic.ipk
+Configuring git.
+Configuring git-http.
+Configuring coreutils-timeout.

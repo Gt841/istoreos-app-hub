@@ -1,0 +1,2 @@
+{"ok":true,"canceled":true,"task_id":"openclawmgr"}
+Original npm cache restored; old runtime/PID preserved. Proxy fault did not block ks-cli routing and is not counted as a network failure test.

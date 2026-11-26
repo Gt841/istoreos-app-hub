@@ -1,0 +1,45 @@
+
+> sharp@0.34.5 install
+> node install/check.js || npm run build
+
+
+> @matrix-org/matrix-sdk-crypto-nodejs@0.4.0 postinstall
+> node download-lib.js
+
+/mnt/nvme0n1-1/OpenClawMgr-acceptance-20261123/.install.HOBgfC/candidate/global/lib/node_modules/openclaw/node_modules/@matrix-org/matrix-sdk-crypto-nodejs/download-lib.js:111
+                    throw new Error("Linux for arm64 musl isn't support at the moment");
+                    ^
+
+Error: Linux for arm64 musl isn't support at the moment
+    at Object.<anonymous> (/mnt/nvme0n1-1/OpenClawMgr-acceptance-20261123/.install.HOBgfC/candidate/global/lib/node_modules/[4mopenclaw[24m/node_modules/[4m@matrix-org/matrix-sdk-crypto-nodejs[24m/download-lib.js:111:27)
+[90m    at Module._compile (node:internal/modules/cjs/loader:1929:14)[39m
+[90m    at Module._extensions..js (node:internal/modules/cjs/loader:2060:10)[39m
+[90m    at Module.load (node:internal/modules/cjs/loader:1651:32)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1443:12)[39m
+[90m    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)[39m
+[90m    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)[39m
+[90m    at node:internal/main/run_main_module:33:47[39m
+
+Node.js v24.22.1
+
+> protobufjs@7.6.6 postinstall
+> node scripts/postinstall
+
+
+added 429 packages in 4m
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m 4 packages have install scripts not yet covered by allowScripts:
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m   openclaw@2026.3.28 (prepare: command -v git >/dev/null 2>&1 && git rev-parse --is-inside-work-tree >/dev/null 2>&1 && git config core.hooksPath git-hooks || exit 0)
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m   sharp@0.34.5 (install: node install/check.js || npm run build)
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m   @google/genai@1.52.0 (preinstall: echo 'preinstall: no-op')
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m   protobufjs@7.6.6 (postinstall: node scripts/postinstall)
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m
+[1mnpm[22m [33mwarn[39m [94minstall-scripts[39m Run `npm install -g --allow-scripts=openclaw,sharp,@google/genai,protobufjs` to allow these scripts once, or `npm config set allow-scripts=openclaw,sharp,@google/genai,protobufjs --location=user` to allow them for all global installs.
+2026-11-23 10:22:54 [openclawmgr] Checking native modules and fallback capabilities
+sqlite-vec unavailable; verified OpenClaw 2026.3.28 built-in/FTS5 fallback. Vector extension acceleration is unavailable.
+Failed to load native module: pty.node, checked: build/Release, build/Debug, prebuilds/linux-arm64: Error: Cannot find module './prebuilds/linux-arm64/pty.node'
+Require stack:
+- /mnt/nvme0n1-1/OpenClawMgr-acceptance-20261123/.install.HOBgfC/candidate/global/lib/node_modules/openclaw/node_modules/@lydell/node-pty-linux-arm64/lib/utils.js
+- /mnt/nvme0n1-1/OpenClawMgr-acceptance-20261123/.install.HOBgfC/candidate/global/lib/node_modules/openclaw/node_modules/@lydell/node-pty-linux-arm64/lib/index.js
+- /mnt/nvme0n1-1/OpenClawMgr-acceptance-20261123/.install.HOBgfC/candidate/global/lib/node_modules/openclaw/node_modules/@lydell/node-pty/index.js
+- /mnt/nvme0n1-1/OpenClawMgr-acceptance-20261123/.install.HOBgfC/candidate/global/lib/node_modules/openclaw/package.json
+2026-11-23 10:23:01 [openclawmgr] Installation finished (exit=1)

@@ -1,0 +1,8 @@
+{
+  "port": 19035,
+  "home": "/mnt/mise-runtime/Runtime-live/home",
+  "scope": "actual init environment captured; pinned binary health tested with isolated DB; no global service enable or package install",
+  "uses_application_wrap_path": true,
+  "passed": true,
+  "process_stopped": true
+}

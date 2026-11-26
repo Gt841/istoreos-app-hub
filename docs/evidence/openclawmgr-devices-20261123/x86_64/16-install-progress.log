@@ -1,0 +1,17 @@
+running=true
+http_200_count=866
+http_error_count=2
+== last progress
+112.0 kB/s - 35.8% [7.0 MB/19.5 MB]
+112.0 kB/s - 36.3% [7.1 MB/19.5 MB]
+176.0 kB/s - 37.2% [7.3 MB/19.5 MB]
+176.0 kB/s - 38.1% [7.4 MB/19.5 MB]
+96.0 kB/s - 38.6% [7.5 MB/19.5 MB]
+110.6 kB/s - 39.1% [7.6 MB/19.5 MB]
+144.0 kB/s - 39.8% [7.8 MB/19.5 MB]
+96.0 kB/s - 40.3% [7.9 MB/19.5 MB]
+144.0 kB/s - 41.0% [8.0 MB/19.5 MB]
+229.1 kB/s - 42.2% [8.2 MB/19.5 MB]
+224.0 kB/s - 43.3% [8.4 MB/19.5 MB]
+64.0 kB/s - 43.6% [8.5 MB/19.5 MB]
+== committed runtime

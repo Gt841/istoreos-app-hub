@@ -1,0 +1,5 @@
+{
+  "exit": 0,
+  "stdout": "/usr/sbin/iStoreEnhance: OK\n/usr/bin/ks-cli: OK\n/usr/sbin/agentflow: OK\n/etc/config/mise: OK\n/lib/functions/mise.sh: OK\n9766 6852\n",
+  "stderr": ""
+}

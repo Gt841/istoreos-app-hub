@@ -1,0 +1,95 @@
+{
+  "scope": "environment then M1-M8",
+  "goal_status": "active",
+  "environment": {
+    "x86_storage": "passed",
+    "arm_active_rom": "passed",
+    "arm_usb_image_automount_quarantine": "passed",
+    "bootstrap": "passed",
+    "status": "passed-with-recorded-limits"
+  },
+  "milestones": {
+    "M1": "passed",
+    "M2": "passed",
+    "M3": "passed",
+    "M4": "passed",
+    "M5": "passed",
+    "M6": "passed",
+    "M7": "in-progress-user-resumed",
+    "M8": "pending"
+  },
+  "optimization_rule": "initial self-check plus up to three optimizations per milestone",
+  "stop_conditions": [
+    "three optimizations still fail",
+    "product semantics decision needed"
+  ],
+  "published": false,
+  "optimizations": {
+    "M1": 1,
+    "M2": 3,
+    "M3": 3,
+    "M4": 3,
+    "M5": 2,
+    "M6": 3,
+    "M7": 3
+  },
+  "execution_status": "M7-x64-reboot-passed-ARM64-reboot-pending",
+  "next_milestone": "M7",
+  "evidence": "M7-reboot-x64-20261124T100547Z/verification.md",
+  "committed": true,
+  "production_packages_installed": true,
+  "resumed_by_user": true,
+  "resume_optimizations": {
+    "M2": 1,
+    "M3": 2,
+    "M4": 3,
+    "M6": 1,
+    "M7": 2
+  },
+  "resume2_optimizations": {
+    "M4": 3
+  },
+  "package_installation_scope": "Historical M4 real IPKs passed both architectures; current M5 source/assets/binary overlays are explicit direct deployments with per-file manifests and backups. Current bytes are not claimed to match M4 IPKs.",
+  "blocker": null,
+  "resume3_optimizations": {
+    "M4": 1
+  },
+  "validation_mode": "direct source/assets/binary deployment to both test hosts",
+  "package_build_policy": "IPK/APK compilation deferred until explicit human confirmation; no more automatic package builds",
+  "M5_builds_superseded": [
+    "openclaw-m5-x64-20261124050610Z",
+    "openclaw-m5-arm64-20261124050610Z"
+  ],
+  "M7_network_probe": {
+    "status": "passed",
+    "evidence": "M7-resume1/verification.md",
+    "mode": "ARM existing service; x64 temporary authenticated loopback SSH forwarding",
+    "full_M7_acceptance": "pending",
+    "x64_durable_KSpeeder_service": "absent during historical tunnel probe; now provisioned, see M7_local_acceleration"
+  },
+  "M7_local_acceleration": {
+    "status": "passed",
+    "evidence": "M7-resume2/verification.md",
+    "mode": "both hosts use their own local istoreenhance service through ks-cli; no SSH forwarding",
+    "x64_service": "direct-deployed official pinned 0.9.1 binary + plugin procd init, enabled",
+    "full_M7_acceptance": "x64 reboot passed; ARM64 reboot pending",
+    "runtime_gateway_status": "passed actual regression red then green on both hosts",
+    "native_device_matrix": "61 checks passed each architecture",
+    "production_LuCI": "Go/Zig, both hosts, each 5 checks passed including enabled local acceleration option"
+  },
+  "M7_reboot_acceptance": {
+    "x86_64": {
+      "status": "passed",
+      "host": "192.168.30.7",
+      "before_boot": "8c08d91f-949e-45b5-b277-e21c4575fec3",
+      "after_boot": "a9a8d183-0027-42c4-96c9-a3ad1297672e",
+      "evidence": "M7-reboot-x64-20261124T100547Z/verification.md"
+    },
+    "arm64": {
+      "status": "pending",
+      "reason": "User requested x64 only; ARM host untouched"
+    }
+  },
+  "commit_scope": "mise UI/shared Node-Python-Go-Zig runtime and OpenClaw migration, evidence through x64 M7 reboot; ARM reboot and M8 pending",
+  "implementation_commit": "24b1bae927d0f0048096d8744c63bf37f33ea2f6"
+}

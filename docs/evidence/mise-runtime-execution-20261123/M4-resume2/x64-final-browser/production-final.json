@@ -1,0 +1,12 @@
+{
+  "scope": "final real SDK IPKs after reinstall and installed-file verification",
+  "passed": false,
+  "results": [
+    {
+      "name": "final installed package authentication/ACL/CSRF reject side effects",
+      "passed": false,
+      "error": "Expected values to be strictly equal:\n\n200 !== 403\n"
+    }
+  ],
+  "pageErrors": []
+}

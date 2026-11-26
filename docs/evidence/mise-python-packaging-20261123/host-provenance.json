@@ -1,0 +1,30 @@
+[
+  {
+    "path": "design/IStoreHostShellPrototype.vue",
+    "matches": true
+  },
+  {
+    "path": "design/istoreHostShellPrototype.css",
+    "matches": true
+  },
+  {
+    "path": "design/shell.css",
+    "matches": true
+  },
+  {
+    "path": "home/ThemeSelector.vue",
+    "matches": true
+  },
+  {
+    "path": "utils/theme.ts",
+    "matches": true
+  },
+  {
+    "path": "home/homeSemanticColors.css",
+    "matches": true
+  },
+  {
+    "path": "home/homeTypography.css",
+    "matches": true
+  }
+]

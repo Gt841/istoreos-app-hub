@@ -1,0 +1,16 @@
+{
+  "source": "https://api.github.com/repos/matrix-org/matrix-rust-sdk-crypto-nodejs/releases/tags/v0.4.0",
+  "method": "HTTPS GitHub release API; web reader failed so local urllib read primary JSON",
+  "assets": {
+    "x86_64": {
+      "filename": "matrix-sdk-crypto.linux-x64-gnu.node",
+      "sha256": "7078d4dd987128f79afd192c4f621f64adece37e43f2a8756f1d0a9f034de718",
+      "bytes": 22027000
+    },
+    "aarch64": {
+      "filename": "matrix-sdk-crypto.linux-arm64-gnu.node",
+      "sha256": "0dc1c58315580cd0cef39c2e1ec28e1e38856a3376f2597da1ae20388f24d0f4",
+      "bytes": 19818560
+    }
+  }
+}

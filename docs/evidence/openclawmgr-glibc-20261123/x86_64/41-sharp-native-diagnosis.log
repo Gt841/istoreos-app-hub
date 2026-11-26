@@ -1,0 +1,8 @@
+== selected sharp platform packages
+colour
+sharp-libvips-linuxmusl-x64
+sharp-linuxmusl-x64
+@img/sharp-linux-x64/sharp.node: Cannot find module '@img/sharp-linux-x64/sharp.node'
+Require stack:
+- /mnt/vio4-0/OpenClawMgr-glibc-acceptance-20261123/.install.JKAFFA/candidate/global/lib/node_modules/openclaw/node_modules/../package.json
+@img/sharp-linuxmusl-x64/sharp.node: libc.musl-x86_64.so.1: cannot open shared object file: No such file or directory

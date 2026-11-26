@@ -1,0 +1,8 @@
+{
+  "host": "192.168.30.7",
+  "command": "lua /mnt/mise-runtime/acceptance/M3/node-install.lua /mnt/mise-runtime/acceptance/M3/share /mnt/mise-runtime/Runtime /mnt/mise-runtime/bootstrap/mise/bin/mise /mnt/mise-runtime/bootstrap/ks-cli-binary-0.9.1/ks-cli.x86_64 http://192.168.30.93:5003 one",
+  "exit": 0,
+  "stdout": "START node-24.21.0-x86_64-glibc-upstream1 task-1795447081-af627bf90e0ad1a258d41592\nPASS node-24.21.0-x86_64-glibc-upstream1\ninstalled=1\n",
+  "stderr": "",
+  "round": "optimization 1 sticky parent handling"
+}

@@ -1,0 +1,5 @@
+{
+  "exit": 0,
+  "stdout": "[sdd-identity]\n/sys/block/sdd/size=134217728\n/sys/block/sdd/ro=0\n/sys/block/sdd/device/model=QEMU HARDDISK   \n[sdd-partitions]\nmajor minor  #blocks  name\n\n   8       48   67108864 sdd\n[sdd-holders]\n[sdd-mounted]\n[sdd-signatures]\n[sdd-layout]\nDisk /dev/sdd: 64 GiB, 68719476736 bytes, 134217728 sectors\nDisk model: QEMU HARDDISK   \nUnits: sectors of 1 * 512 = 512 bytes\nSector size (logical/physical): 512 bytes / 512 bytes\nI/O size (minimum/optimal): 512 bytes / 512 bytes\n",
+  "stderr": ""
+}

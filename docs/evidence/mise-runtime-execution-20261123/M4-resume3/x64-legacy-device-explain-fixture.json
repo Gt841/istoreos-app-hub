@@ -1,0 +1,7 @@
+{
+  "command": "lua /mnt/mise-runtime/acceptance/M4/resume3/legacy-entry-device.lua /mnt/mise-runtime/Runtime-live /mnt/mise-runtime/acceptance/M4/resume3/legacy-fixture-home-protocol",
+  "exit": 1,
+  "seconds": 0.5527242940152064,
+  "stdout": "",
+  "stderr": "lua: ...untime/acceptance/M4/resume3/legacy-entry-device.lua:35: acquisition delegates to actual ks-cli plan without service mutation: 1 {\"schema_version\":1,\"code\":\"SERVICE_CONFIGURATION_ERROR\",\"message\":\"cannot resolve KSpeeder gateway port: \u8bfb\u53d6 OpenWrt KSpeeder UCI \u914d\u7f6e\u8282\u5931\u8d25: exit status 1\",\"next_action\":\"inspect the installed KSpeeder configuration and retry\",\"next_command\":[],\"exit_code\":1}\n\nstack traceback:\n\t[C]: in function 'assert'\n\t...untime/acceptance/M4/resume3/legacy-entry-device.lua:35: in function 'run'\n\t...untime/acceptance/M4/resume3/legacy-entry-device.lua:47: in main chunk\n\t[C]: ?\n"
+}

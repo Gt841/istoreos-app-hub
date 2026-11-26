@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-23T07:15:33.895Z",
+  "base": "http://127.0.0.1:5181",
+  "results": [
+    {
+      "name": "A1 首次存储引导、非法目录和有效目录",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nfalse !== true\n\n    at file:///projects/workspace-linkease-ubuntu/openwrt-apps/istoreos-app-hub/apps/mise/web/tests/browser.mjs:32:73\n    at async check (file:///projects/workspace-linkease-ubuntu/openwrt-apps/istoreos-app-hub/apps/mise/web/tests/browser.mjs:12:35)\n    at async file:///projects/workspace-linkease-ubuntu/openwrt-apps/istoreos-app-hub/apps/mise/web/tests/browser.mjs:32:1"
+    },
+    {
+      "name": "A2 安装复核、取消不写入、刷新后后台续看及不自动绑定",
+      "passed": false,
+      "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '＋ 安装环境', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button disabled class=\"primary\">＋ 安装环境</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not enabled\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at install (/projects/workspace-linkease-ubuntu/openwrt-apps/istoreos-app-hub/apps/mise/web/tests/browser.mjs:24:60)\n    at /projects/workspace-linkease-ubuntu/openwrt-apps/istoreos-app-hub/apps/mise/web/tests/browser.mjs:33:59\n    at check (/projects/workspace-linkease-ubuntu/openwrt-apps/istoreos-app-hub/apps/mise/web/tests/browser.mjs:12:41)\n    at /projects/workspace-linkease-ubuntu/openwrt-apps/istoreos-app-hub/apps/mise/web/tests/browser.mjs:33:7"
+    },
+    {
+      "name": "A3 同版本多 libc、已有版本禁重复、引用环境禁删除",
+      "passed": true
+    },
+    {
+      "name": "A4 应用兼容性、复核及成功切换保留旧环境",
+      "passed": true
+    },
+    {
+      "name": "A4 应用检查失败后恢复绑定与运行状态",
+      "passed": true
+    },
+    {
+      "name": "A5 摘要失败不提交、明确重试后可完成",
+      "passed": true
+    },
+    {
+      "name": "A5 原生模块失败与安全取消不改原有环境",
+      "passed": true
+    },
+    {
+      "name": "A5 中断恢复需要显式动作且不自动重放",
+      "passed": true
+    },
+    {
+      "name": "A6 闲置环境清理与缓存清理确认",
+      "passed": true
+    },
+    {
+      "name": "A7 加速故障可显式使用源站、离线目录禁止安装",
+      "passed": true
+    },
+    {
+      "name": "A2 ARM64 未提供组合显示原因",
+      "passed": true
+    },
+    {
+      "name": "A8 弹窗主题实时响应、键盘约束与 Esc 恢复焦点",
+      "passed": true
+    },
+    {
+      "name": "A8 桌面与手机深浅主题、四页无横向溢出及截图",
+      "passed": true
+    },
+    {
+      "name": "A9 设备请求被拒绝、无运行错误、预览请求仅同源",
+      "passed": true
+    }
+  ],
+  "passed": false,
+  "pageErrors": [],
+  "screenshots": [
+    "desktop-dark-0.png",
+    "desktop-dark-1.png",
+    "desktop-dark-2.png",
+    "desktop-dark-3.png",
+    "desktop-dark-install.png",
+    "desktop-light-0.png",
+    "desktop-light-1.png",
+    "desktop-light-2.png",
+    "desktop-light-3.png",
+    "desktop-light-install.png",
+    "failure-1.png",
+    "failure-2.png",
+    "mobile-dark-0.png",
+    "mobile-dark-1.png",
+    "mobile-dark-2.png",
+    "mobile-dark-3.png",
+    "mobile-dark-install.png",
+    "mobile-light-0.png",
+    "mobile-light-1.png",
+    "mobile-light-2.png",
+    "mobile-light-3.png",
+    "mobile-light-install.png"
+  ]
+}

@@ -1,0 +1,19 @@
+== data snapshot sizes
+-rw-r--r--    1 root     root             0 Nov 23 10:32 /mnt/nvme0n1-1/OpenClawMgr-acceptance-20261123/data/.openclaw/openclaw.json
+-rw-r--r--    1 root     root             0 Nov 23 10:32 /mnt/nvme0n1-1/OpenClawMgr-acceptance-20261123/backups/20261123102511-maOLPJ/data.tar
+== current boot errors
+[    1.854149] VFS: Mounted root (squashfs filesystem) readonly on device 179:2.
+[    1.990041] init: - watchdog -
+[    9.645843] procd: - watchdog -
+[   10.216700] procd: - watchdog -
+[   19.766391] SQUASHFS error: xz decompression failed, data probably corrupt
+[   19.767021] SQUASHFS error: Failed to read block 0xaabab64: -5
+[   19.767538] SQUASHFS error: Unable to read metadata cache entry [aabab62]
+[   19.768135] SQUASHFS error: Unable to read inode 0xeeac0d3e
+[   21.061332] EXT4-fs (mmcblk1p4): recovery complete
+[   21.357883] SQUASHFS error: xz decompression failed, data probably corrupt
+[   21.358520] SQUASHFS error: Failed to read block 0xaabab64: -5
+[   21.359036] SQUASHFS error: Unable to read metadata cache entry [aabab62]
+[   21.359637] SQUASHFS error: Unable to read inode 0xeeac0d3e
+[   21.616286] EXT4-fs (sda3): recovery complete
+[   21.783959] EXT4-fs (nvme0n1p1): recovery complete

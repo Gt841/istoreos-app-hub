@@ -1,0 +1,5 @@
+{
+  "rc": 0,
+  "stdout": "",
+  "stderr": "warning: go env -w GOTOOLCHAIN=... does not override conflicting OS environment variable\n"
+}

@@ -1,0 +1,9 @@
+{
+  "command": [
+    "make",
+    "ops-preflight"
+  ],
+  "exit": 0,
+  "stdout": "[sdk-builder] checking abc@192.168.9.19:7022 without changing remote state\nhost=builder\ncpus=8\n               total        used        free      shared  buff/cache   available\nMem:            31Gi       3.7Gi       1.6Gi        36Mi        26Gi        27Gi\nFilesystem      Size  Used Avail Use% Mounted on\n/dev/sdb2       1.2T  975G  186G  85% /builders\ndocker=20.10.7\n[sdk-builder] preflight passed\n",
+  "stderr": "WARNING: No swap limit support\nWARNING: the aufs storage-driver is deprecated, and will be removed in a future release.\n"
+}

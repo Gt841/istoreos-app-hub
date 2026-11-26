@@ -1,0 +1,26 @@
+{
+  "glibc": {
+    "version": "2.39-0ubuntu8",
+    "amd64": {
+      "url": "https://archive.ubuntu.com/ubuntu/pool/main/g/glibc/libc6_2.39-0ubuntu8_amd64.deb",
+      "sha256": "af36c7ac770770fe3d3c10e85d6bc538e76e57570ba7db7d397fb9f654783ef3"
+    },
+    "arm64": {
+      "url": "https://ports.ubuntu.com/ubuntu-ports/pool/main/g/glibc/libc6_2.39-0ubuntu8_arm64.deb",
+      "sha256": "04d7cb73e608b41713b63ef915577f7f5d75e95b1b33174e82e05687fdb6cfaf"
+    }
+  },
+  "gcc_runtime": {
+    "source": "baidudrive-runtime-v1.0.6",
+    "sha256": "2cc12327dbe08f0b9906c6213e7f14c0cdc09cae5a5c64e353639e7bd3d34a01"
+  },
+  "node": {
+    "version": "24.22.1",
+    "x64_sha256": "6c172a9ab6718f7b801fb5a7bd486af2ee5e32758086a04b84fcce2aa77095e6",
+    "arm64_sha256": "dbabf7a1cbf947e6059ffad2c27b80041db97dea1e553b62afdee7f13fca336e"
+  },
+  "local_probe": {
+    "old_x86_glibc_2_36": "Node exits SIGSEGV before JS; not used in final runtime",
+    "private_glibc_2_39": "Node, child exec, npm and sqlite-vec nearest-neighbor passed"
+  }
+}

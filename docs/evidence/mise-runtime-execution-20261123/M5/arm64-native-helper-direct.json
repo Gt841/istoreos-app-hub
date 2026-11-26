@@ -1,0 +1,7 @@
+{
+  "command": "lua /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M5/native-helper-device.lua /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/Runtime-live /mnt/nvme0n1-1/Configs/mise-runtime-acceptance-20261123/M5",
+  "exit": 0,
+  "stdout": "{\"identity\":{\"uid\":65001,\"groups\":[65001],\"gid\":65001,\"node\":\"v24.21.0\",\"home\":\"\\/mnt\\/nvme0n1-1\\/Configs\\/mise-runtime-acceptance-20261123\\/Runtime-live\\/users\\/65001\\/home\"},\"passed\":true,\"results\":[{\"exit\":0,\"name\":\"real UID\\/GID, no inherited root groups, argv\\/stdin\",\"passed\":true},{\"exit\":37,\"name\":\"exact native exit status\",\"passed\":true},{\"exit\":126,\"name\":\"reject UID zero\",\"passed\":true},{\"exit\":126,\"name\":\"reject GID zero\",\"passed\":true},{\"exit\":126,\"name\":\"reject signed\\/invalid identity\",\"passed\":true},{\"exit\":126,\"name\":\"non-root caller cannot select another UID\",\"passed\":true},{\"exit\":0,\"name\":\"application env is literal data, not root shell code\",\"passed\":true},{\"exit\":1,\"name\":\"reject credential symlink\",\"passed\":true}]}\n",
+  "stderr": "",
+  "mode": "direct binary/source deployment; not IPK installation"
+}

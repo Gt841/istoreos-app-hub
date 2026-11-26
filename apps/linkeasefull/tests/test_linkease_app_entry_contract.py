@@ -1,4 +1,7 @@
 from pathlib import Path
+import os
+import subprocess
+import tempfile
 import unittest
 
 
@@ -27,7 +30,7 @@ class LinkEaseAppEntryContractTest(unittest.TestCase):
         self.assertNotIn("define Package/linkease-app-entry", full_makefile)
         self.assertNotIn("linkease-app-entryd", full_makefile)
         self.assertNotIn("linkease-app-gateway", full_makefile)
-        self.assertIn("PKG_VERSION:=3.0.23", makefile)
+        self.assertIn("PKG_VERSION:=3.0.24", makefile)
         self.assertIn("PKG_RELEASE:=1", makefile)
         self.assertIn(
             "PKG_SOURCE:=linkease-app-entry-runtime-$(PKG_VERSION)-linux-$(LINKEASE_RUNTIME_ARCH).tar.gz",
@@ -38,11 +41,11 @@ class LinkEaseAppEntryContractTest(unittest.TestCase):
             makefile,
         )
         self.assertIn(
-            "f5a974187ca1c50f043459150e52195c85799673f9ebc18221e9f5d206a4fb3c",
+            "72cbaa9df83899467223d1812204f198d9fdd9d51f821f2c203936ecbce79440",
             makefile,
         )
         self.assertIn(
-            "ef4a48e999339bdd6c2a802ce1c1fbcb885ad28c7ed63315a21d4034d1e66a2c",
+            "07d1bf936cda0f2c81fbb32ea75f526393eaf39437bc8ae1d7737cfba35fe431",
             makefile,
         )
         self.assertNotIn(
@@ -83,6 +86,40 @@ class LinkEaseAppEntryContractTest(unittest.TestCase):
         self.assertIn("/apps=http://127.0.0.1:19290", defaults)
         self.assertIn("add_list", defaults)
         self.assertIn("found", defaults)
+
+    def test_install_on_stock_uhttpd_migrates_only_the_shipped_listener(self):
+        for listen in ("127.0.0.1:19290", "127.0.0.2:19290"):
+            for supported in (False, True):
+                with self.subTest(listen=listen, supported=supported), tempfile.TemporaryDirectory() as directory:
+                    stage = Path(directory)
+                    init = stage / "init"
+                    init.mkdir()
+                    for name in ("linkease-app-entry", "uhttpd"):
+                        path = init / name
+                        path.write_text('#!/bin/sh\nexit 0\n')
+                        path.chmod(0o755)
+                    defaults = self.read("linkease-app-entry/files/linkease-app-entry.uci-default")
+                    defaults = defaults.replace(". /lib/functions.sh", ":").replace("/etc/init.d/", str(init) + "/")
+                    harness = r'''
+config_load() { :; }
+config_list_foreach() { :; }
+uci() {
+    if [ "$*" = '-q get linkease_app_entry.main.listen' ]; then
+        printf '%s' "$TEST_LISTEN"
+        return
+    fi
+    printf '%s\n' "$*" >> "$TEST_LOG"
+}
+grep() {
+    [ "$1" = -qr ] && [ "$TEST_PROXY_SUPPORT" = 1 ]
+}
+''' + defaults
+                    log = stage / "uci.log"
+                    env = dict(os.environ, TEST_LISTEN=listen, TEST_LOG=str(log), TEST_PROXY_SUPPORT=str(int(supported)))
+                    subprocess.run(["sh", "-c", harness], env=env, check=True, capture_output=True, text=True)
+                    calls = log.read_text() if log.exists() else ""
+                    self.assertEqual("set linkease_app_entry.main.listen=0.0.0.0:19290" in calls, listen == "127.0.0.1:19290")
+                    self.assertEqual("add_list uhttpd.main.proxy_prefix=" in calls, supported)
 
     def test_product_meta_packages_keep_core_and_bundle_boundaries(self):
         apps_root = ROOT.parent

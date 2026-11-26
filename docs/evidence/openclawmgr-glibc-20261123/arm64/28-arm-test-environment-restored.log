@@ -1,0 +1,5 @@
+/usr/bin/ks-cli: OK
+/usr/sbin/iStoreEnhance: OK
+/etc/config/istoreenhance: OK
+ARM test files/account removed; KSpeeder preserved; vector probe and recovery evidence retained privately
+Command failed: ubus call service delete { "name": "openclawmgr" } (Not found)

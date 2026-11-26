@@ -1,0 +1,46 @@
+
+> istore-mise-web@0.1.0 typecheck
+> vue-tsc --noEmit
+
+
+> istore-mise-web@0.1.0 test
+> node --test tests/model.test.ts
+
+✔ first use requires persistent storage; invalid and temporary paths rejected (3.469992ms)
+✔ version/architecture/libc identities are distinct and existing environments rejected (0.27672ms)
+✔ npm must be compatible with chosen Node (0.157441ms)
+✔ install completion does not alter application bindings (0.840179ms)
+✔ double submit and parallel plans cannot start duplicate tasks (0.196217ms)
+✔ expired or revised plans cannot submit (0.209843ms)
+✔ referenced runtime and glibc library cannot be removed (0.221717ms)
+✔ OpenClaw disallows musl while generic Node consumer allows it (0.196941ms)
+✔ failed native and integrity checks never commit candidates (0.316282ms)
+✔ application failure restores original binding and running state (0.269074ms)
+✔ successful application switch keeps old environment and stopped state (0.177154ms)
+✔ cancel cleans candidate; interrupted task requires explicit recovery (0.270647ms)
+✔ offline storage prevents mutation and required acceleration can fall back explicitly (0.132007ms)
+✔ storage switch cannot pretend to migrate existing environments (0.107019ms)
+✔ cancel during switched binding restores the original service (0.154389ms)
+✔ unreferenced library can be cleaned after its environments are removed (0.126282ms)
+✔ failure injection is one shot and retry requires a new plan (0.188891ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 86.496862
+
+> istore-mise-web@0.1.0 build
+> vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 18 modules transformed.
+rendering chunks...
+computing gzip size...
+../../../../../../../var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/mise-design-dist/index.html                  0.42 kB │ gzip:  0.32 kB
+../../../../../../../var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/mise-design-dist/assets/index-BsBOHNq0.css  16.12 kB │ gzip:  4.06 kB
+../../../../../../../var/cache/build-cache/users/911/projects/istoreos-app-hub-84579ea4b917/work/mise-design-dist/assets/index-BPwuGdEr.js   98.71 kB │ gzip: 37.77 kB
+✓ built in 587ms

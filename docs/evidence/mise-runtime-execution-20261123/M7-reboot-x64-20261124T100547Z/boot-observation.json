@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "before_boot": "8c08d91f-949e-45b5-b277-e21c4575fec3",
+  "after_boot": "a9a8d183-0027-42c4-96c9-a3ad1297672e",
+  "connected_at_utc": "2026-11-24T10:06:33.063495+00:00",
+  "observations": [
+    {
+      "seconds_since_poll_start": 4.01,
+      "ssh_exit": 255,
+      "boot_id": null
+    },
+    {
+      "seconds_since_poll_start": 11.57,
+      "ssh_exit": 255,
+      "boot_id": null
+    },
+    {
+      "seconds_since_poll_start": 17.81,
+      "ssh_exit": 255,
+      "boot_id": null
+    },
+    {
+      "seconds_since_poll_start": 22.9,
+      "ssh_exit": 0,
+      "boot_id": "a9a8d183-0027-42c4-96c9-a3ad1297672e"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "scope": "M7 x86_64 normal system reboot acceptance only",
+  "host": "192.168.30.7",
+  "passed": true,
+  "before_boot": "8c08d91f-949e-45b5-b277-e21c4575fec3",
+  "after_boot": "a9a8d183-0027-42c4-96c9-a3ad1297672e",
+  "checks": {
+    "native-existing-postboot": {
+      "passed": true,
+      "checks": 39
+    },
+    "native-recompile-postboot": {
+      "passed": true,
+      "checks": 61
+    },
+    "go-accelerated-postboot": {
+      "passed": true,
+      "checks": 11
+    },
+    "gateway-postboot": {
+      "passed": true,
+      "checks": 12
+    },
+    "baseline-comparison": {
+      "passed": true
+    },
+    "source-audit-postboot": {
+      "passed": true
+    },
+    "acceleration-status-postboot": {
+      "passed": true
+    }
+  },
+  "ARM_operations": false,
+  "M7_dual_architecture_status": "ARM64 reboot remains pending; user requested x64 only",
+  "packages_built": false,
+  "manual_service_start_or_restart": false
+}

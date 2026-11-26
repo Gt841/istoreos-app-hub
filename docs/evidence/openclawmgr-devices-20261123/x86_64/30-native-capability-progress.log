@@ -1,0 +1,9 @@
+running=true
+== native/script progress
+2026-11-23 10:08:28 [openclawmgr] Installation phase: preparing
+== tail
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/google-auth-library 7849ms (cache updated)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/tslib 2964ms (cache updated)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/@smithy%2fcore 4462ms (cache updated)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/@aws-sdk%2fcore 6590ms (cache updated)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:55443/@smithy%2ftypes 2320ms (cache updated)

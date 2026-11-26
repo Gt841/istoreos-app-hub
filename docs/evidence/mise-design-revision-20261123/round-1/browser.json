@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-23T07:47:37.605Z",
+  "base": "http://127.0.0.1:5180",
+  "results": [
+    {
+      "name": "A1 首次存储引导、非法目录和有效目录",
+      "passed": true
+    },
+    {
+      "name": "A2 安装复核、取消不写入、刷新后后台续看及不自动绑定",
+      "passed": true
+    },
+    {
+      "name": "A3 同版本多 libc、已有版本禁重复、引用环境禁删除",
+      "passed": true
+    },
+    {
+      "name": "R1 全局默认只读、应用自己管理且拒绝应用/默认切换 API",
+      "passed": true
+    },
+    {
+      "name": "R2 版本 wrap 使用入口、复制命令与脚本下载",
+      "passed": true
+    },
+    {
+      "name": "A5 摘要失败不提交、明确重试后可完成",
+      "passed": true
+    },
+    {
+      "name": "A5 原生模块失败与安全取消不改原有环境",
+      "passed": true
+    },
+    {
+      "name": "A5 中断恢复需要显式动作且不自动重放",
+      "passed": true
+    },
+    {
+      "name": "A6 闲置环境清理与缓存清理确认",
+      "passed": true
+    },
+    {
+      "name": "A7 加速故障可显式使用源站、离线目录禁止安装",
+      "passed": true
+    },
+    {
+      "name": "A2 ARM64 未提供组合显示原因",
+      "passed": true
+    },
+    {
+      "name": "A8 弹窗主题实时响应、键盘约束与 Esc 恢复焦点",
+      "passed": true
+    },
+    {
+      "name": "A8 桌面与手机深浅主题、四页无横向溢出及截图",
+      "passed": true
+    },
+    {
+      "name": "R3 QuickStart 精确语义色、字体、标题、按钮与弹窗样式",
+      "passed": true
+    },
+    {
+      "name": "A9 设备请求被拒绝、无运行错误、预览请求仅同源",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "pageErrors": [],
+  "screenshots": [
+    "desktop-dark-0.png",
+    "desktop-dark-1.png",
+    "desktop-dark-2.png",
+    "desktop-dark-3.png",
+    "desktop-dark-install.png",
+    "desktop-light-0.png",
+    "desktop-light-1.png",
+    "desktop-light-2.png",
+    "desktop-light-3.png",
+    "desktop-light-install.png",
+    "mobile-dark-0.png",
+    "mobile-dark-1.png",
+    "mobile-dark-2.png",
+    "mobile-dark-3.png",
+    "mobile-dark-install.png",
+    "mobile-light-0.png",
+    "mobile-light-1.png",
+    "mobile-light-2.png",
+    "mobile-light-3.png",
+    "mobile-light-install.png",
+    "quickstart-dark-install.png",
+    "quickstart-light-install.png"
+  ]
+}

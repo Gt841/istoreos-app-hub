@@ -1,0 +1,13 @@
+task=false
+== installer phases
+2026-11-23 13:30:50 [openclawmgr] Resolved OpenClaw 2026.3.28 with Node v24.22.1
+2026-11-23 13:30:50 [openclawmgr] Fetching package archive and verifying SHA512
+2026-11-23 13:30:53 [openclawmgr] Installing OpenClaw 2026.3.28 and dependencies
+2026-11-23 13:44:45 [openclawmgr] Checking native modules and required sqlite-vec vector queries
+2026-11-23 13:44:48 [openclawmgr] Installation finished (exit=1)
+== command tail
+    npm install --os=linux --cpu=x64 sharp
+- Consult the installation documentation:
+    See https://sharp.pixelplumbing.com/install
+2026-11-23 13:44:48 [openclawmgr] Installation finished (exit=1)
+boot=8ebe0f03-3bce-4dd0-a84b-e7d29317c6ed

@@ -1,0 +1,81 @@
+{
+  "entries": 36,
+  "revision": "1a5aadb2236726ce053948134204aaaaccd3366714bf709d0ce302014995020b",
+  "sources": {
+    "node-npm-24.22.1.json": {
+      "url": "https://raw.githubusercontent.com/nodejs/node/v24.22.1/deps/npm/package.json",
+      "sha256": "f6478d5600180a23f73e4217610c7709a71cedb4ae13f6c3e15ecb457f5d4fd6"
+    },
+    "node-24.22.1": {
+      "url": "https://nodejs.org/dist/v24.22.1/SHASUMS256.txt",
+      "sha256": "fdfbffc969c0f604beff0124d409b33a43b53f5c681d6220f80023e0d6df9dc4"
+    },
+    "node-musl-24.22.1": {
+      "url": "https://unofficial-builds.nodejs.org/download/release/v24.22.1/SHASUMS256.txt",
+      "sha256": "7e4ca1d9b069e6682bffd7550083697a96e11f8436c8d6da33d7562a3e054b8f"
+    },
+    "node-npm-24.21.0.json": {
+      "url": "https://raw.githubusercontent.com/nodejs/node/v24.21.0/deps/npm/package.json",
+      "sha256": "09dfcf187178ce1ab3ea6194c80d3ae082ad2a86dc1269ac963f94429e718122"
+    },
+    "node-24.21.0": {
+      "url": "https://nodejs.org/dist/v24.21.0/SHASUMS256.txt",
+      "sha256": "f410428039e2c922a14058df067a4482691c9304a5c01a75847f9f3f2d3307f6"
+    },
+    "node-musl-24.21.0": {
+      "url": "https://unofficial-builds.nodejs.org/download/release/v24.21.0/SHASUMS256.txt",
+      "sha256": "87707a4c86a61d9f67ec149ac778c49e70cdfb6c78401f385a936346468aa961"
+    },
+    "python-latest": {
+      "url": "https://api.github.com/repos/astral-sh/python-build-standalone/releases/latest",
+      "sha256": "307699ea7fbf59f722292f9f3e506ee2d89d44f18d6aa24ddeb30cf4da3b16f7"
+    },
+    "go": {
+      "url": "https://go.dev/dl/?mode=json&include=all",
+      "sha256": "dff81fa9170d1a7c6a1f38b6cec38c0e3a9e67fd0354419c123ab7c8b8f3c3eb"
+    },
+    "rust-1.91.1": {
+      "url": "https://static.rust-lang.org/dist/channel-rust-1.91.1.toml",
+      "sha256": "483bb8b271168ee654e3be4f111beefa23b9d0c8b7f4a563a8278978dbe982e5"
+    },
+    "rust-1.90.0": {
+      "url": "https://static.rust-lang.org/dist/channel-rust-1.90.0.toml",
+      "sha256": "489c19f20d331765ab2835661eb546de90f6446a107a8db83045e7371e45cae2"
+    },
+    "zig": {
+      "url": "https://ziglang.org/download/index.json",
+      "sha256": "0305a535b82cb52c4e462904ad8999e1bb7ed77a0b39e51e80d0a6aeec6a39de"
+    },
+    "java-baseline": {
+      "path": "docs/evidence/mise-java-design-20261123/upstream-fixed-artifacts.json",
+      "sha256": "ab30dabbf1043a668bdc9e74c602de8769afaf5c712f333dfc9d78c4ed4d53c2"
+    }
+  },
+  "versions": {
+    "node": [
+      "24.21.0",
+      "24.22.1"
+    ],
+    "python": [
+      "3.12.16",
+      "3.13.18"
+    ],
+    "go": [
+      "1.26.10",
+      "1.27.4"
+    ],
+    "rust": [
+      "1.90.0",
+      "1.91.1"
+    ],
+    "zig": [
+      "0.15.2",
+      "0.17.1"
+    ],
+    "java": [
+      "temurin-21.0.9+10",
+      "temurin-25.0.1+8"
+    ]
+  },
+  "availability_is_not_device_verification": true
+}

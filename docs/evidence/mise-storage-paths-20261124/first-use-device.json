@@ -1,0 +1,16 @@
+{
+  "system_configuration_unchanged": true,
+  "passed": true,
+  "checks": [
+    {
+      "mount": "/mnt/mise-runtime",
+      "passed": true,
+      "probe_removed": true
+    },
+    {
+      "mount": "/mnt/vio4-0",
+      "passed": true,
+      "probe_removed": true
+    }
+  ]
+}

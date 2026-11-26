@@ -1,0 +1,17 @@
+== preserved probe content
+drwxr-xr-x    8 root     root          4096 Nov 23 13:23 .
+drwx------    7 root     root          4096 Nov 23 13:30 ..
+drwx------    2 root     root          4096 Nov 23 13:13 backups
+drwx------    2 root     root          4096 Nov 23 13:13 log
+drwx------    4 root     root          4096 Nov 23 13:13 npm-cache
+drwxr-xr-x    7 root     root          4096 Nov 23 13:23 probe-node
+drwxr-xr-x    3 root     root          4096 Nov 23 13:24 probe_modules
+drwxr-xr-x    2 root     root          4096 Nov 23 13:13 releases
+== service logs include successful listening before rollback
+Mon Nov 23 14:26:33 2026 daemon.info node[17546]: [90m2026-11-23T06:26:33.080+00:00[39m [36m[gateway][39m [36mlistening on ws://127.0.0.1:19189, ws://[::1]:19189 (PID 17646)[39m
+Mon Nov 23 14:28:32 2026 daemon.info node[17546]: [90m2026-11-23T06:28:32.504+00:00[39m [36m[gateway][39m [36msignal SIGTERM received[39m
+Mon Nov 23 14:28:32 2026 daemon.info node[17546]: [90m2026-11-23T06:28:32.514+00:00[39m [36m[gateway][39m [36mreceived SIGTERM; shutting down[39m
+== protection
+/usr/bin/ks-cli: OK
+/usr/sbin/iStoreEnhance: OK
+/etc/config/istoreenhance: OK

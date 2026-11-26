@@ -1,0 +1,9 @@
+{
+  "scope": "build dependency transport only; unchanged candidate source and pinned hashes",
+  "openldap": {
+    "url": "https://sources.openwrt.org/openldap-2.6.8.tgz",
+    "sha256": "48969323e94e3be3b03c6a132942dcba7ef8d545f2ad35401709019f696c3c4e",
+    "action": "verified locally and remotely, atomic no-overwrite publication, stop only exact matching slow curl in verified x64 build container; downloader retains final verified cache"
+  },
+  "icu": "original SDK download completed normally; local duplicate timed out and was not published"
+}

@@ -1,0 +1,17 @@
+test_offline_environment_setup_never_probes (test_legacy_entry.LegacyEntry.test_offline_environment_setup_never_probes) ... FAIL
+
+======================================================================
+FAIL: test_offline_environment_setup_never_probes (test_legacy_entry.LegacyEntry.test_offline_environment_setup_never_probes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/projects/workspace-linkease-ubuntu/openwrt-apps/istoreos-app-hub/apps/mise/tests/test_legacy_entry.py", line 57, in test_offline_environment_setup_never_probes
+    r = self.run_helper('istore_runtime_env; printf "HOME=%s\n" "$HOME"')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/projects/workspace-linkease-ubuntu/openwrt-apps/istoreos-app-hub/apps/mise/tests/test_legacy_entry.py", line 52, in run_helper
+    raise AssertionError("legacy environment blocked on an optional network probe") from None
+AssertionError: legacy environment blocked on an optional network probe
+
+----------------------------------------------------------------------
+Ran 1 test in 1.003s
+
+FAILED (failures=1)

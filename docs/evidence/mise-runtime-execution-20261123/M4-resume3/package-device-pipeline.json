@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "arch": "x64",
+      "passed": true,
+      "build_id": "mise-m4ks-x64-20261124040156Z",
+      "followup": "x64-legacy-device.json and x64-ordinary-user.json passed after fixture HOME/port correction"
+    },
+    {
+      "arch": "arm64",
+      "passed": true,
+      "build_id": "mise-m4ks-arm64-20261124040156Z"
+    }
+  ],
+  "passed": true
+}

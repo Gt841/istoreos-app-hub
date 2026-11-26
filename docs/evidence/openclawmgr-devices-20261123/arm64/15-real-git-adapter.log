@@ -1,0 +1,11 @@
+== readonly real Git adapter probe
+4d9a54cc616bd044752d0bdd719a683cd0a22f18	refs/tags/v2026.3.28
+git_adapter_rc=0
+== current install tail
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@lydell%2fnode-pty-linux-x64 1039ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/debug 4586ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@lydell%2fnode-pty-win32-x64 941ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@lydell%2fnode-pty-darwin-x64 826ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mfetch[39m GET 200 https://dl-npm.linkease.net:5443/@lydell%2fnode-pty-linux-arm64 821ms (cache miss)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://dl-npm.linkease.net:5443/@mariozechner%2fpi-ai 27ms (cache hit)
+[1mnpm[22m [32mhttp[39m [94mcache[39m https://dl-npm.linkease.net:5443/ajv 19ms (cache hit)

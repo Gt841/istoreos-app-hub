@@ -1,0 +1,30 @@
+{
+  "host": "192.168.30.7",
+  "stage": "/mnt/mise-runtime/acceptance/M7-local-istoreenhance",
+  "version": "0.9.1",
+  "mode": "direct-test-files",
+  "package_database_modified": false,
+  "official_archive_sha256": "d117d3529ce4ae170f7ba284ce89112535337c97ce86997275b93dcf373b0ce9",
+  "files": [
+    {
+      "target": "/usr/sbin/iStoreEnhance",
+      "key": "0",
+      "sha256": "0c555344a635028ac38ad2ab3ef2d110855f7b7f60f39f8db990e70ae5e3ba1d",
+      "mode": 493
+    },
+    {
+      "target": "/etc/init.d/istoreenhance",
+      "key": "1",
+      "sha256": "bc42d1f49ac574b6f41e47d69f94c3ee34f3040fcd9eb695468e1eed202fb7ae",
+      "mode": 493
+    },
+    {
+      "target": "/etc/config/istoreenhance",
+      "key": "2",
+      "sha256": "3296304d82133206bf761533606754175a91e87db6ef2934af91a64361dc5fc6",
+      "mode": 384
+    }
+  ],
+  "rollback": "lua /mnt/mise-runtime/acceptance/M7-local-istoreenhance/apply.lua rollback /mnt/mise-runtime/acceptance/M7-local-istoreenhance",
+  "applied": true
+}

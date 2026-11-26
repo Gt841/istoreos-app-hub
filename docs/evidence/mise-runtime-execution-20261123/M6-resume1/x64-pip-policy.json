@@ -1,0 +1,219 @@
+{
+  "scope": "actual pip config isolation across installed Python matrix",
+  "checks": [
+    {
+      "name": "3.12.16-glibc refuses global.target",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-glibc refuses global.prefix",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-glibc refuses global.root",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-glibc refuses global.python",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-glibc refuses global.user",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-glibc refuses install.target",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-glibc refuses install.prefix",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-glibc refuses install.root",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-glibc refuses install.python",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-glibc refuses install.user",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-glibc respects explicit config path but rejects target",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-glibc preserves permitted config and clears inherited destinations",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-glibc all temporary config restored",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-musl refuses global.target",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-musl refuses global.prefix",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-musl refuses global.root",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-musl refuses global.python",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-musl refuses global.user",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-musl refuses install.target",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-musl refuses install.prefix",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-musl refuses install.root",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-musl refuses install.python",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-musl refuses install.user",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-musl respects explicit config path but rejects target",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-musl preserves permitted config and clears inherited destinations",
+      "passed": true
+    },
+    {
+      "name": "3.12.16-musl all temporary config restored",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-glibc refuses global.target",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-glibc refuses global.prefix",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-glibc refuses global.root",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-glibc refuses global.python",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-glibc refuses global.user",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-glibc refuses install.target",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-glibc refuses install.prefix",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-glibc refuses install.root",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-glibc refuses install.python",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-glibc refuses install.user",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-glibc respects explicit config path but rejects target",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-glibc preserves permitted config and clears inherited destinations",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-glibc all temporary config restored",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-musl refuses global.target",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-musl refuses global.prefix",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-musl refuses global.root",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-musl refuses global.python",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-musl refuses global.user",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-musl refuses install.target",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-musl refuses install.prefix",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-musl refuses install.root",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-musl refuses install.python",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-musl refuses install.user",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-musl respects explicit config path but rejects target",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-musl preserves permitted config and clears inherited destinations",
+      "passed": true
+    },
+    {
+      "name": "3.13.18-musl all temporary config restored",
+      "passed": true
+    },
+    {
+      "name": "four Python version/ABI instances tested",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "arch": "x86_64"
+}

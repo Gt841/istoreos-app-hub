@@ -1,0 +1,10 @@
+{
+	"Path": "github.com/google/uuid",
+	"Version": "v1.6.0",
+	"Info": "/mnt/mise-runtime/Runtime-live/users/65005/home/.cache/go/mod/cache/download/github.com/google/uuid/@v/v1.6.0.info",
+	"GoMod": "/mnt/mise-runtime/Runtime-live/users/65005/home/.cache/go/mod/cache/download/github.com/google/uuid/@v/v1.6.0.mod",
+	"Zip": "/mnt/mise-runtime/Runtime-live/users/65005/home/.cache/go/mod/cache/download/github.com/google/uuid/@v/v1.6.0.zip",
+	"Dir": "/mnt/mise-runtime/Runtime-live/users/65005/home/.cache/go/mod/github.com/google/uuid@v1.6.0",
+	"Sum": "h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=",
+	"GoModSum": "h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo="
+}

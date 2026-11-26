@@ -1,0 +1,72 @@
+{
+  "exit_code": 0,
+  "elapsed_seconds": 1.038,
+  "report": {
+    "module": {
+      "go_mod_sum": "h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=",
+      "path": "github.com/google/uuid",
+      "version": "v1.6.0",
+      "sum": "h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0="
+    },
+    "checks": [
+      {
+        "name": "prepare dedicated persistent HOME",
+        "passed": true
+      },
+      {
+        "name": "fresh client module and sumdb caches",
+        "passed": true
+      },
+      {
+        "details": "sum.golang.org\n\n\n",
+        "name": "official checksum database enabled without bypasses",
+        "passed": true
+      },
+      {
+        "name": "real accelerated Go download succeeds",
+        "passed": true
+      },
+      {
+        "name": "module and go.mod hashes reported",
+        "passed": true
+      },
+      {
+        "name": "module cache stays in caller HOME",
+        "passed": true
+      },
+      {
+        "name": "sumdb protocol traverses KSpeeder",
+        "passed": true
+      },
+      {
+        "name": "no direct sum.golang.org request",
+        "passed": true
+      },
+      {
+        "name": "project records both verified hashes",
+        "passed": true
+      },
+      {
+        "details": "all modules verified\n",
+        "name": "native Go verifies cached module contents",
+        "passed": true
+      },
+      {
+        "name": "host service and mise configurations unchanged",
+        "passed": true
+      }
+    ],
+    "instance": "go-1.26.10-x86_64-native-upstream1-d0421aa2fa11b520c016df6c286638afbdc2228f93742e0f54fcf5000ce10861",
+    "download_exit": 0,
+    "config_sha256": {
+      "agentflow": false,
+      "istoreenhance": "3296304d82133206bf761533606754175a91e87db6ef2934af91a64361dc5fc6",
+      "mise": "10176a3adca0d449c840ed66a14e606d26e5b03059fd328a99302a63a76d758d"
+    },
+    "passed": true,
+    "uid": 65004,
+    "arch": "x86_64",
+    "scope": "real public wrap -> ks-cli -> KSpeeder -> module + signed sumdb"
+  },
+  "stderr": ""
+}

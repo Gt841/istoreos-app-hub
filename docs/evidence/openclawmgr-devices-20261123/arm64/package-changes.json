@@ -1,0 +1,14 @@
+{
+  "coreutils-timeout": {
+    "before": null,
+    "after": "9.7-r1"
+  },
+  "git": {
+    "before": "2.50.1-r1",
+    "after": "2.50.2-r1"
+  },
+  "git-http": {
+    "before": "2.50.1-r1",
+    "after": "2.50.2-r1"
+  }
+}

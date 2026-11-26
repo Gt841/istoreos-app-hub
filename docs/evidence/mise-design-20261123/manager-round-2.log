@@ -1,0 +1,47 @@
+[
+  {
+    "name": "occupied port refused without stopping listener",
+    "passed": true,
+    "details": "Port 34507 is occupied; no process was stopped.\n"
+  },
+  {
+    "name": "stale PID pointing to unrelated process is not killed",
+    "passed": true,
+    "details": "Not running.\n"
+  },
+  {
+    "name": "owned secondary preview starts",
+    "passed": true,
+    "details": "Started: PID=20835 http://127.0.0.1:54627/mise\nLog: /tmp/istore-ui-design-911-84579ea4b917/mise-54627.log\n"
+  },
+  {
+    "name": "health identifies exact project and app",
+    "passed": true,
+    "details": ""
+  },
+  {
+    "name": "repeated start reuses owned process",
+    "passed": true,
+    "details": "Already running: PID=20835 http://127.0.0.1:54627/mise\n"
+  },
+  {
+    "name": "status reports owned process",
+    "passed": true,
+    "details": ""
+  },
+  {
+    "name": "logs show design server",
+    "passed": true,
+    "details": ""
+  },
+  {
+    "name": "stop shuts down only owned preview",
+    "passed": true,
+    "details": "Stopped.\n"
+  },
+  {
+    "name": "stopped status clear",
+    "passed": true,
+    "details": "Not running.\n"
+  }
+]

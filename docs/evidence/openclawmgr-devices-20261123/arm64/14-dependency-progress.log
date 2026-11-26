@@ -1,0 +1,21 @@
+== latest npm install debug
+59 silly fetch manifest @modelcontextprotocol/sdk@1.28.0
+60 silly packumentCache full:https://dl-npm.linkease.net:5443/@modelcontextprotocol%2fsdk cache-miss
+61 http fetch GET 200 https://dl-npm.linkease.net:5443/@modelcontextprotocol%2fsdk 1333ms (cache updated)
+62 silly packumentCache full:https://dl-npm.linkease.net:5443/@modelcontextprotocol%2fsdk set size:undefined disposed:false
+63 silly fetch manifest @mozilla/readability@^0.6.0
+64 silly packumentCache full:https://dl-npm.linkease.net:5443/@mozilla%2freadability cache-miss
+65 http fetch GET 200 https://dl-npm.linkease.net:5443/@mariozechner%2fpi-coding-agent 1986ms (cache updated)
+66 silly packumentCache full:https://dl-npm.linkease.net:5443/@mariozechner%2fpi-coding-agent set size:undefined disposed:false
+67 silly fetch manifest @sinclair/typebox@0.34.48
+68 silly packumentCache full:https://dl-npm.linkease.net:5443/@sinclair%2ftypebox cache-miss
+69 http fetch GET 200 https://dl-npm.linkease.net:5443/@mariozechner%2fpi-tui 1935ms (cache updated)
+70 silly packumentCache full:https://dl-npm.linkease.net:5443/@mariozechner%2fpi-tui set size:undefined disposed:false
+71 silly fetch manifest ajv@^8.18.0
+72 silly packumentCache full:https://dl-npm.linkease.net:5443/ajv cache-miss
+73 http fetch GET 200 https://dl-npm.linkease.net:5443/@mozilla%2freadability 1080ms (cache updated)
+74 silly packumentCache full:https://dl-npm.linkease.net:5443/@mozilla%2freadability set size:undefined disposed:false
+75 silly fetch manifest chalk@^5.6.2
+76 silly packumentCache full:https://dl-npm.linkease.net:5443/chalk cache-miss
+== root task
+true

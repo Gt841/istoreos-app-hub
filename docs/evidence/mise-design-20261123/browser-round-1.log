@@ -1,0 +1,39 @@
+PASS A1 首次存储引导、非法目录和有效目录
+FAIL A2 安装复核、取消不写入、刷新后后台续看及不自动绑定: locator.selectOption: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('dialog').getByLabel('语言', { exact: true })[22m
+
+PASS A3 同版本多 libc、已有版本禁重复、引用环境禁删除
+FAIL A4 应用兼容性、复核及成功切换保留旧环境: Expected values to be strictly equal:
++ actual - expected
+
++ 'node-24.21.0-x86_64-glibc'
+- 'node-24.22.1-x86_64-glibc'
+            ^
+
+PASS A4 应用检查失败后恢复绑定与运行状态
+FAIL A5 摘要失败不提交、明确重试后可完成: locator.selectOption: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('dialog').getByLabel('语言', { exact: true })[22m
+
+FAIL A5 原生模块失败与安全取消不改原有环境: locator.selectOption: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('dialog').getByLabel('语言', { exact: true })[22m
+
+PASS A5 中断恢复需要显式动作且不自动重放
+PASS A6 闲置环境清理与缓存清理确认
+FAIL A7 加速故障可显式使用源站、离线目录禁止安装: locator.selectOption: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('dialog').getByLabel('语言', { exact: true })[22m
+
+FAIL A2 ARM64 未提供组合显示原因: locator.selectOption: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('dialog').getByLabel('版本', { exact: true })[22m
+
+PASS A8 弹窗主题实时响应、键盘约束与 Esc 恢复焦点
+FAIL A8 桌面与手机深浅主题、四页无横向溢出及截图: Expected values to be strictly equal:
+
+'light' !== 'dark'
+
+PASS A9 设备请求被拒绝、无运行错误、预览请求仅同源
+{"checks":14,"passed":7,"failed":["A2 安装复核、取消不写入、刷新后后台续看及不自动绑定","A4 应用兼容性、复核及成功切换保留旧环境","A5 摘要失败不提交、明确重试后可完成","A5 原生模块失败与安全取消不改原有环境","A7 加速故障可显式使用源站、离线目录禁止安装","A2 ARM64 未提供组合显示原因","A8 桌面与手机深浅主题、四页无横向溢出及截图"]}

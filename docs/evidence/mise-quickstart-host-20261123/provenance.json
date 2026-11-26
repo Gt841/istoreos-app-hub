@@ -1,0 +1,48 @@
+[
+  {
+    "path": "design/IStoreHostShellPrototype.vue",
+    "sourceMatches": true,
+    "byteIdentical": false,
+    "navigationAdaptations": 3
+  },
+  {
+    "path": "design/istoreHostShellPrototype.css",
+    "sourceMatches": true,
+    "byteIdentical": true,
+    "navigationAdaptations": 0
+  },
+  {
+    "path": "design/shell.css",
+    "sourceMatches": true,
+    "byteIdentical": true,
+    "navigationAdaptations": 0
+  },
+  {
+    "path": "home/ThemeSelector.vue",
+    "sourceMatches": true,
+    "byteIdentical": true,
+    "navigationAdaptations": 0
+  },
+  {
+    "path": "utils/theme.ts",
+    "sourceMatches": true,
+    "byteIdentical": true,
+    "navigationAdaptations": 0
+  },
+  {
+    "path": "home/homeSemanticColors.css",
+    "sourceMatches": true,
+    "byteIdentical": true,
+    "navigationAdaptations": 0
+  },
+  {
+    "path": "home/homeTypography.css",
+    "sourceMatches": true,
+    "byteIdentical": true,
+    "navigationAdaptations": 0
+  },
+  {
+    "path": "design/host.css",
+    "noHostChromeOverrides": true
+  }
+]

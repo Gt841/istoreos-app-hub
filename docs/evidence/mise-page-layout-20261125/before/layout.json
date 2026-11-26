@@ -1,0 +1,142 @@
+{
+  "passed": false,
+  "checks": [],
+  "measurements": [
+    {
+      "width": 2048,
+      "surface": {
+        "x": 260,
+        "y": 57.59375,
+        "width": 1768,
+        "height": 1340.8125
+      },
+      "content": {
+        "x": 260,
+        "y": 57.59375,
+        "width": 1240,
+        "height": 1340.8125
+      },
+      "panel": {
+        "x": 296,
+        "y": 126.390625,
+        "width": 1168,
+        "height": 1208.015625
+      },
+      "ancestors": [
+        {
+          "tag": "DIV",
+          "class": "mise-surface",
+          "box": {
+            "x": 260,
+            "y": 57.59375,
+            "width": 1768,
+            "height": 1340.8125
+          }
+        },
+        {
+          "tag": "DIV",
+          "class": "container",
+          "box": {
+            "x": 260,
+            "y": 57.59375,
+            "width": 1768,
+            "height": 1340.8125
+          }
+        },
+        {
+          "tag": "DIV",
+          "class": "",
+          "box": {
+            "x": 240,
+            "y": 57.59375,
+            "width": 1808,
+            "height": 1403.515625
+          }
+        },
+        {
+          "tag": "DIV",
+          "class": "main-right",
+          "box": {
+            "x": 240,
+            "y": 0,
+            "width": 1808,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "DIV",
+          "class": "main",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 2048,
+            "height": 1000
+          }
+        },
+        {
+          "tag": "BODY",
+          "class": "lang_en  logged-in",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 2048,
+            "height": 1000
+          }
+        }
+      ],
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "运行时环境",
+          "after": {
+            "content": "none",
+            "display": "inline"
+          }
+        },
+        {
+          "tag": "H2",
+          "text": "存储与下载",
+          "after": {
+            "content": "none",
+            "display": "inline"
+          }
+        },
+        {
+          "tag": "H2",
+          "text": "公共运行库",
+          "after": {
+            "content": "none",
+            "display": "inline"
+          }
+        },
+        {
+          "tag": "H3",
+          "text": "glibc 2.39 x86_64 · r1",
+          "after": {
+            "content": "none",
+            "display": "inline"
+          }
+        },
+        {
+          "tag": "H3",
+          "text": "glibc 2.39 x86_64 · r2",
+          "after": {
+            "content": "none",
+            "display": "inline"
+          }
+        },
+        {
+          "tag": "H2",
+          "text": "下载缓存",
+          "after": {
+            "content": "none",
+            "display": "inline"
+          }
+        }
+      ],
+      "overflow": false
+    }
+  ],
+  "error": "At 2048px content uses only 70.1% of available width",
+  "pageErrors": []
+}

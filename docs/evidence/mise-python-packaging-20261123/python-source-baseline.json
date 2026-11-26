@@ -1,0 +1,17 @@
+{
+  "ensurepip": {
+    "3.12.10": {
+      "source": "https://raw.githubusercontent.com/python/cpython/v3.12.10/Lib/ensurepip/__init__.py",
+      "pip": [
+        "_PIP_VERSION = \"25.0.1\""
+      ]
+    },
+    "3.13.3": {
+      "source": "https://raw.githubusercontent.com/python/cpython/v3.13.3/Lib/ensurepip/__init__.py",
+      "pip": [
+        "_PIP_VERSION = \"25.0.1\""
+      ]
+    }
+  },
+  "localPython": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]"
+}

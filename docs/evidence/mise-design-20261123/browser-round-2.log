@@ -1,0 +1,35 @@
+FAIL A1 首次存储引导、非法目录和有效目录: Expected values to be strictly equal:
+
+false !== true
+
+FAIL A2 安装复核、取消不写入、刷新后后台续看及不自动绑定: locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('button', { name: '＋ 安装环境', exact: true })[22m
+[2m    - locator resolved to <button disabled class="primary">＋ 安装环境</button>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not enabled[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not enabled[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    58 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is not enabled[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+
+PASS A3 同版本多 libc、已有版本禁重复、引用环境禁删除
+PASS A4 应用兼容性、复核及成功切换保留旧环境
+PASS A4 应用检查失败后恢复绑定与运行状态
+PASS A5 摘要失败不提交、明确重试后可完成
+PASS A5 原生模块失败与安全取消不改原有环境
+PASS A5 中断恢复需要显式动作且不自动重放
+PASS A6 闲置环境清理与缓存清理确认
+PASS A7 加速故障可显式使用源站、离线目录禁止安装
+PASS A2 ARM64 未提供组合显示原因
+PASS A8 弹窗主题实时响应、键盘约束与 Esc 恢复焦点
+PASS A8 桌面与手机深浅主题、四页无横向溢出及截图
+PASS A9 设备请求被拒绝、无运行错误、预览请求仅同源
+{"checks":14,"passed":12,"failed":["A1 首次存储引导、非法目录和有效目录","A2 安装复核、取消不写入、刷新后后台续看及不自动绑定"]}

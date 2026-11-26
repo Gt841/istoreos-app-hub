@@ -1,0 +1,42 @@
+{
+  "boot_id": "290c4092-c9f2-45bc-98ac-addb6dd920dc",
+  "recovery_exit": 0,
+  "arch": "x86_64",
+  "owned_session": {
+    "state": "R",
+    "pid": 25310,
+    "boot": "290c4092-c9f2-45bc-98ac-addb6dd920dc",
+    "parent": 25309,
+    "start": "2027889",
+    "session": 25310,
+    "group": 25310
+  },
+  "mode": "cancel",
+  "passed": true,
+  "checks": [
+    {
+      "name": "concurrent upgrade is rejected",
+      "passed": true
+    },
+    {
+      "name": "public cancel recovery succeeds",
+      "passed": true
+    },
+    {
+      "name": "control action reaps actual npm session",
+      "passed": true
+    },
+    {
+      "name": "transaction and lock cleaned",
+      "passed": true
+    },
+    {
+      "name": "old release remains selected",
+      "passed": true
+    },
+    {
+      "name": "old authentication/config unchanged",
+      "passed": true
+    }
+  ]
+}

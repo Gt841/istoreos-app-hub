@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "fixed GNU Node binding and private glibc identity",
+      "passed": true
+    },
+    {
+      "name": "generated Node and npm commands use persistent HOME and application prefix",
+      "passed": true
+    },
+    {
+      "name": "codexcli actual command and package version agree",
+      "passed": true
+    },
+    {
+      "name": "claude-code actual command and package version agree",
+      "passed": true
+    },
+    {
+      "name": "opencode actual command and package version agree",
+      "passed": true
+    },
+    {
+      "name": "kimi actual command and package version agree",
+      "passed": true
+    },
+    {
+      "name": "reasonix actual command and package version agree",
+      "passed": true
+    },
+    {
+      "name": "failed accelerated install preserves the current verified release",
+      "passed": true
+    },
+    {
+      "name": "live non-session-leader lock cannot be recovered; stale identity can",
+      "passed": true
+    },
+    {
+      "name": "application data cannot be placed in shared SDK storage",
+      "passed": true
+    },
+    {
+      "name": "system mise configuration and shared SDK receipt remain unchanged",
+      "passed": true
+    }
+  ]
+}

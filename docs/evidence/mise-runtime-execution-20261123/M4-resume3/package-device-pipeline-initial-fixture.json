@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "arch": "x64",
+      "passed": false,
+      "build_id": "mise-m4ks-x64-20261124040156Z",
+      "error": "x64 legacy-device failed; see evidence"
+    },
+    {
+      "arch": "arm64",
+      "passed": true,
+      "build_id": "mise-m4ks-arm64-20261124040156Z"
+    }
+  ],
+  "passed": false
+}

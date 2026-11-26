@@ -1,0 +1,11 @@
+{
+  "command": [
+    "ssh",
+    "root@192.168.30.7",
+    "lua /mnt/mise-runtime/acceptance/M4/resume3/legacy-entry-device.lua /mnt/mise-runtime/Runtime-live /mnt/mise-runtime/acceptance/M4/resume3/legacy-fixture"
+  ],
+  "exit": 1,
+  "seconds": 0.257,
+  "stdout": "",
+  "stderr": "lua: ...untime/acceptance/M4/resume3/legacy-entry-device.lua:34: local exec with accelerator installed and unresponsive: 1 node:assert:152\n  throw new AssertionError(obj);\n  ^\n\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ '/mnt/mise-runtime/Runtime-live/users/0/home'\n- '/mnt/mise-runtime/acceptance/M4/resume3/legacy-fixture/home'\n\n    at [eval]:1:149\n    at runScriptInThisContext (node:internal/vm:219:10)\n    at node:internal/process/execution:451:12\n    at [eval]-wrapper:6:24\n    at runScriptInContext (node:internal/process/execution:449:60)\n    at evalFunction (node:internal/process/execution:283:30)\n    at evalTypeScript (node:internal/process/execution:295:3)\n    at node:internal/main/eval_string:71:3 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: '/mnt/mise-runtime/Runtime-live/users/0/home',\n  expected: '/mnt/mise-runtime/acceptance/M4/resume3/legacy-fixture/home',\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.21.0\n\nstack traceback:\n\t[C]: in function 'assert'\n\t...untime/acceptance/M4/resume3/legacy-entry-device.lua:34: in function 'run'\n\t...untime/acceptance/M4/resume3/legacy-entry-device.lua:41: in main chunk\n\t[C]: ?\n"
+}

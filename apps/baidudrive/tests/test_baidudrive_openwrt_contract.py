@@ -22,12 +22,12 @@ class BaiduDriveOpenWrtContractTest(unittest.TestCase):
         self.assertEqual(manifest["desktop"]["entry"], "desktop-entry.js")
         self.assertEqual(manifest["desktop"]["isolation"], "shadow-dom")
         self.assertEqual(manifest["standalone"]["basePath"], "/apps/baidudrive/")
-        self.assertEqual(manifest["backend"]["portFromUci"], "baidudrive.@baidudrive[0].port")
-        self.assertEqual(manifest["backend"]["defaultPort"], 10780)
+        self.assertEqual(manifest["backend"]["values"]["port"]["keys"]["uci"], "baidudrive.@baidudrive[0].port")
+        self.assertEqual(manifest["backend"]["values"]["port"]["default"], 10780)
         self.assertEqual(manifest["backend"]["upstreamBasePath"], "/apps/baidudrive/")
         self.assertEqual(manifest["backend"]["apiPath"], "api/")
         self.assertEqual(manifest["backend"]["pathMode"], "preserve")
-        self.assertEqual(manifest["backend"]["externalBasePath"], "/")
+        self.assertEqual(manifest["backend"]["values"]["externalPortEnabled"], {"default": False})
         self.assertTrue(manifest["window"]["singleton"])
         self.assertNotIn("desktopPriority", manifest)
 
@@ -73,12 +73,12 @@ class BaiduDriveOpenWrtContractTest(unittest.TestCase):
         self.assertIn('entry({"admin", "services", "baidudrive", "open"}', controller)
         self.assertIn('compat():open("baidudrive")', controller)
         self.assertIn('compat():legacy_status("baidudrive"', controller)
-        self.assertIn('url("admin/services/baidudrive/open")', status)
+        self.assertIn('url("admin/services/linkease_apps/open")', status)
         self.assertNotIn('window.location.hostname + ":" + st.port', status)
-        self.assertIn("PKG_RELEASE:=6", meta)
+        self.assertIn("PKG_RELEASE:=7", meta)
         self.assertIn("META_LUCI_ENTRY:=/cgi-bin/luci/admin/services/baidudrive", meta)
         self.assertIn('/cgi-bin/luci/admin/services/baidudrive', entry)
-        self.assertNotIn('linkease_apps/open?id=baidudrive', entry)
+        self.assertIn('linkease_apps/open?id=baidudrive', entry)
 
 
 if __name__ == "__main__":

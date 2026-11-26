@@ -1,0 +1,10 @@
+== owned candidate process state
+pid=23542 executable=/mnt/vio4-0/OpenClawMgr-glibc-acceptance-20261123/.install.LEOdAP/candidate/node/glibc/ld.so
+Name:	npm install /mn
+State:	S (sleeping)
+VmRSS:	  444864 kB
+cpu_ticks=3031
+== filesystem activity
+Filesystem                Size      Used Available Use% Mounted on
+/dev/sdc                 15.6G      6.5G      8.3G  44% /mnt/vio4-0
+sed: /proc/23542/io: No such file or directory

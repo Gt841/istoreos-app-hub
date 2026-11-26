@@ -1,0 +1,11 @@
+test_absent_optional_ks_cli_keeps_native_mise_usable (test_legacy_entry.LegacyEntry.test_absent_optional_ks_cli_keeps_native_mise_usable) ... ok
+test_disabled_acceleration_executes_native_mise (test_legacy_entry.LegacyEntry.test_disabled_acceleration_executes_native_mise) ... ok
+test_enabled_entry_delegates_to_ks_cli_preserving_arguments_stdin_exit (test_legacy_entry.LegacyEntry.test_enabled_entry_delegates_to_ks_cli_preserving_arguments_stdin_exit) ... ok
+test_explicit_mirror_is_preserved_without_ks_cli_override (test_legacy_entry.LegacyEntry.test_explicit_mirror_is_preserved_without_ks_cli_override) ... ok
+test_local_exec_never_requires_accelerator (test_legacy_entry.LegacyEntry.test_local_exec_never_requires_accelerator) ... ok
+test_offline_environment_setup_never_probes (test_legacy_entry.LegacyEntry.test_offline_environment_setup_never_probes) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.025s
+
+OK
